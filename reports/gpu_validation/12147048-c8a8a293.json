@@ -1,0 +1,564 @@
+{
+  "pmc_id": "12147048",
+  "identity": "afef1147f55a3e042cb4390fcb45d372fccab29e86e440cae7c2b08895d3ef42",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 31671,
+    "covered_source_characters": 31671,
+    "source_is_excerpted": false,
+    "candidate_windows": 50,
+    "selected_windows": 50,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 37290,
+    "candidate_concepts": 32,
+    "patient_count": 3
+  },
+  "prompt": {
+    "pmc_id": "12147048",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "Patient 1",
+            "offset": 10901
+          }
+        ]
+      },
+      {
+        "patient_id": "P2",
+        "mentions": [
+          {
+            "text": "Patient 2",
+            "offset": 12079
+          },
+          {
+            "text": "proband 2",
+            "offset": 13505
+          }
+        ]
+      },
+      {
+        "patient_id": "P3",
+        "mentions": [
+          {
+            "text": "Patient 3",
+            "offset": 14285
+          },
+          {
+            "text": "proband 3",
+            "offset": 16536
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0000488": [
+        "Retinopathy",
+        "retinopathies",
+        "retinopathy"
+      ],
+      "HP:0000556": [
+        "Retinal Dystrophy",
+        "retinal dystrophy",
+        "RD"
+      ],
+      "HP:0007875": [
+        "congenital amaurosis"
+      ],
+      "HP:0001141": [
+        "severe visual loss"
+      ],
+      "HP:0000572": [
+        "loss of vision",
+        "visual loss",
+        "vision loss"
+      ],
+      "HP:0000639": [
+        "nystagmus"
+      ],
+      "HP:0000618": [
+        "blindness"
+      ],
+      "HP:0000510": [
+        "retinitis pigmentosa",
+        "RP",
+        "rod-cone dystrophy"
+      ],
+      "HP:0000505": [
+        "poor vision"
+      ],
+      "HP:0000662": [
+        "nyctalopia"
+      ],
+      "HP:0008043": [
+        "Retinal arteriolar narrowing"
+      ],
+      "HP:0000980": [
+        "pallor"
+      ],
+      "HP:0000822": [
+        "hypertension"
+      ],
+      "HP:0001000": [
+        "pigmentation"
+      ],
+      "HP:0000666": [
+        "horizontal nystagmus"
+      ],
+      "HP:0000518": [
+        "cataracts"
+      ],
+      "HP:0007401": [
+        "macular atrophy"
+      ],
+      "HP:0000543": [
+        "optic disc pallor"
+      ],
+      "HP:0001105": [
+        "retinal atrophy"
+      ],
+      "HP:0007754": [
+        "macular dystrophy"
+      ],
+      "HP:0500041": [
+        "myopic astigmatism"
+      ],
+      "HP:0000575": [
+        "scotomas"
+      ],
+      "HP:0001583": [
+        "rotatory nystagmus"
+      ],
+      "HP:0025010": [
+        "foveal atrophy"
+      ],
+      "HP:0004322": [
+        "short stature"
+      ],
+      "HP:0000648": [
+        "optic atrophy"
+      ],
+      "HP:0030637": [
+        "Cone dysfunction"
+      ],
+      "HP:0000551": [
+        "color vision defects"
+      ],
+      "HP:0007814": [
+        "retinal pigment epithelium"
+      ],
+      "HP:0002172": [
+        "imbalance"
+      ],
+      "HP:0011516": [
+        "achromatopsia"
+      ],
+      "HP:0008020": [
+        "cone dystrophy"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0000556",
+          "HP:0000639",
+          "HP:0000510",
+          "HP:0000505",
+          "HP:0000662",
+          "HP:0008043",
+          "HP:0000980",
+          "HP:0000822",
+          "HP:0001000",
+          "HP:0007754",
+          "HP:0011516",
+          "HP:0008020"
+        ]
+      },
+      {
+        "patient_id": "P2",
+        "phenotype": [
+          "HP:0000572",
+          "HP:0000639",
+          "HP:0000505",
+          "HP:0001000",
+          "HP:0000666",
+          "HP:0000518",
+          "HP:0007401",
+          "HP:0000543",
+          "HP:0001105",
+          "HP:0007754",
+          "HP:0500041",
+          "HP:0000575",
+          "HP:0001583"
+        ]
+      },
+      {
+        "patient_id": "P3",
+        "phenotype": [
+          "HP:0000618",
+          "HP:0000510",
+          "HP:0000980",
+          "HP:0025010",
+          "HP:0004322",
+          "HP:0000648",
+          "HP:0030637",
+          "HP:0000551",
+          "HP:0007814",
+          "HP:0011516"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Expansion of the ABCA4-Associated Retinopathy Spectrum: Severe Variants Can be Associated With Early-Onset Severe Retinal Dystrophy"
+      },
+      {
+        "offset": 132,
+        "section": "ABSTRACT",
+        "text": "Purpose"
+      },
+      {
+        "offset": 140,
+        "section": "ABSTRACT",
+        "text": "Leber congenital amaurosis (LCA) and early-onset severe retinal dystrophy (EOSRD) are inherited retinal diseases that are characterized by severe visual loss very early in life. Whereas LCA is characterized by loss of vision in the first year of life, nystagmus, and absent or abnormal electrical signals on electroretinogram, persons with EOSRD show onset of disease between 1 and 5 years of age, with better preserved visual acuity and some signals on an electroretinogram. We investigated the genetic cause of disease and clinical characteristics in three probands with EOSRD."
+      },
+      {
+        "offset": 720,
+        "section": "ABSTRACT",
+        "text": "Methods"
+      },
+      {
+        "offset": 728,
+        "section": "ABSTRACT",
+        "text": "All patients were examined by at least two ophthalmologists to reach a clinical diagnosis. APEX microarray screening, smMIP-based sequencing, and whole exome and whole genome sequencing were used to obtain a genetic diagnosis and investigate potential modifiers."
+      },
+      {
+        "offset": 991,
+        "section": "ABSTRACT",
+        "text": "Results"
+      },
+      {
+        "offset": 999,
+        "section": "ABSTRACT",
+        "text": "The EOSRD phenotype of these three probands was established through ophthalmological investigation. Biallelic severe ABCA4 variants were identified after the phenotypic diagnosis of EOSRD in these probands. We then asked whether additional gene defects may be involved and worsen the phenotype. Through whole genome sequencing we identified two NBAS variants in patient 1 and a well-known homozygous, hypomorphic missense variant in CNGB3 in patient 3."
+      },
+      {
+        "offset": 1452,
+        "section": "ABSTRACT",
+        "text": "Conclusions"
+      },
+      {
+        "offset": 1464,
+        "section": "ABSTRACT",
+        "text": "We propose that biallelic severe ABCA4 variants can be implicated in EOSRD. We hypothesize that the ABCA4 and CNGB3 variants could have an additive effect given the colocalization of the encoded proteins in cone photoreceptors cell membranes. Whether the CNGB3 and NBAS variants play a modifying role remains to be investigated."
+      },
+      {
+        "offset": 1793,
+        "section": "INTRO",
+        "text": "Leber congenital amaurosis (LCA) and early-onset severe retinal dystrophy (EOSRD) are inherited retinal diseases (IRDs) that are characterized by severe visual loss early in life. Whereas LCA presents itself in the first year of life with sensory nystagmus, amaurotic pupils, and absent or abnormal electrical signals on electroretinogram (ERG), EOSRD is on the milder end of this spectrum and presents before the age of 5 years with relatively milder symptoms and often some residual visual acuity and abnormal signals on an ERG. With a prevalence ranging from 1 in 30,000 to 1 in 81,000, LCA/EOSRD is a rare form of hereditary blindness that accounts for approximately 5% of all IRDs. Genetic diagnosis of IRDs is challenging because more than 300 genes can be involved. Currently, 26 genes have been implicated in LCA/EOSRD, the majority of which were discovered more than 10 years ago (https://web.sph.uth.edu/RetNet/). The proteins encoded by these genes play an important role in different facets of the function and development of the human retina such as retinal morphogenesis and differentiation, ciliary transport processes, phototransduction, nicotinamide adenine dinucleotide (NAD+) production, and components of the retinoid cycle. LCA-associated genes can be expressed in photoreceptor cells, Muller cells, or retinal pigment epithelial (RPE) cells, or in several of these cells."
+      },
+      {
+        "offset": 3188,
+        "section": "INTRO",
+        "text": "Many of the genes implicated in LCA/EOSRD are being targeted in therapeutic studies and preclinical investigations. Currently, the LUXTURNA RPE65 gene augmentation therapy (Spark Therapeutics, Philadelphia, PA, USA) is being used to treat probands with EOSRD and retinitis pigmentosa (RP) carrying RPE65 variants. Furthermore, an antisense oligonucleotide-based treatment targeting the c.2991+1655A>G variant in CEP290 demonstrated therapeutic and safe effects in phase I/II clinical trials. Preclinical work on the treatment of LCA caused by variants in AIPL1, CRB1, LCA5, and RPGRIP1 has shown promising results."
+      },
+      {
+        "offset": 3803,
+        "section": "INTRO",
+        "text": "Our recent effort to cost-effectively sequence all genes associated with RP and LCA using single-molecule molecular inversion probes (smMIPs), in combination with a genotype-first analysis approach, suggested that pathogenic variants in ABCA4 could be associated with LCA or EOSRD in one proband. Here, we provide a detailed ophthalmological description of three probands with EOSRD that carry at least two severe variants in ABCA4. To rule out other genetic causes underlying EOSRD and to identify putative genetic modifiers, we performed additional whole genome sequencing (WGS)."
+      },
+      {
+        "offset": 4385,
+        "section": "METHODS",
+        "text": "Materials and Methods"
+      },
+      {
+        "offset": 4407,
+        "section": "METHODS",
+        "text": "Arrayed Primer Extension Analysis"
+      },
+      {
+        "offset": 4441,
+        "section": "METHODS",
+        "text": "Arrayed primer extension (APEX) technology was used to screen known LCA-associated variants in proband 1 and known autosomal recessive rod-cone dystrophy (RCD) variants in proband 3. As described previously, target amplicons were PCR amplified, after which the products were concentrated and purified. After fragmentation, the products were hybridized to the microarray to perform the primer extension reaction. Subsequently, the slides were washed and imaged, after which the sequence variants were identified. Both APEX screenings were performed through Asper Biotech (Tartu, Estonia). The LCA gene-panel targeted 297 variants in AIPL1, CRB1, CRX, GUCY2D, and RPE65. The RCD panel targeted more than 700 disease-causing variants in ABCA4, AIPL1, CERKL, CNGA1, CNGA3, CNGB3, CRB1, EYS, GRK1, IMPG2, LRAT, MERTK, PDE6A, PDE6B, NR2E3, PROM1, RBP3, RDH12, RGR, RHO, RLBP1, RP1, RPE65, SAG, TULP1, CLRN1, and USH2A."
+      },
+      {
+        "offset": 5356,
+        "section": "METHODS",
+        "text": "Whole Exome Sequencing"
+      },
+      {
+        "offset": 5379,
+        "section": "METHODS",
+        "text": "Whole exome sequencing (WES) was performed as previously described. In brief, Illumina (San Diego, CA, USA) paired-end libraries were generated according to the manufacturer's protocols, sheared into 300- to 500-bp fragments, and subsequently ligated with Illumina index adaptors and amplified before 3 microg of pre-capture library was used for whole exome capture. Captured libraries were quantified and sequenced according to manufacturer's instructions on the Illumina HiSeq 2000 as 100-bp paired-end reads. Sequencing data were analyzed using the data analysis pipeline as previously described."
+      },
+      {
+        "offset": 5979,
+        "section": "METHODS",
+        "text": "smMIP-Based Sequencing"
+      },
+      {
+        "offset": 6002,
+        "section": "METHODS",
+        "text": "The smMIP-based sequencing using the RP-LCA smMIP panel and subsequent analyses were performed as previously described. In short, 360 samples were sequenced in parallel using the Illumina NovaSeq 6000 platform using smMIPs that target the exons and pseudo-exons due to causal deep-intronic variants, as well as all flanking intronic regions, in all 113 genes associated with RP and LCA. An in-house pipeline was used to annotate all single nucleotide variants (SNVs), which were subsequently filtered for a minor allele frequency (MAF) of <=0.5% or <=0.1% for variants in genes associated with autosomal-recessive or autosomal-dominant inheritance, respectively. All variants with an American College of Medical Genetics and Genomics (ACMG) classification of class 3, 4, or 5 (variant of uncertain significance [VUS], likely pathogenic, or pathogenic, respectively) according to Franklin (https://franklin.genoox.com) were prioritized."
+      },
+      {
+        "offset": 6942,
+        "section": "METHODS",
+        "text": "Whole Genome Sequencing"
+      },
+      {
+        "offset": 6966,
+        "section": "METHODS",
+        "text": "WGS was performed for all probands as described before. In short, sequencing was performed by BGI (Beijing, China) on a BGISeq-500 using 2 x 100-bp paired-end module. Burrows-Wheeler Aligner 0.7814 and Genome Analysis Toolkit HaplotypeCaller (Broad Institute, Cambridge, MA, USA) were used for read mapping to the Human Reference Genome (GRCh38/hg38) and SNV calling, respectively. Structural variants (SVs) and copy number variants (CNVs) were called using Manta structural variant callers and Canvas Copy Number Variant Caller, respectively. SNVs were filtered based on a MAF < 1% (gnomAD 2.1.121 and our in-house SNV database consisting of +-1400 alleles). Missense variants were prioritized using two in silico prediction tools, REVEL (>=0.3; range, 0-1) and CADD-PRHED (>=15; range, 0-48). SpliceAI was used to assess potential effects on splicing resulting from missense, synonymous, and intronic variants using standard settings (>0.2; range, 0-1). All SNVs in one of the listed IRD-associated genes were evaluated (https://web.sph.uth.edu/RetNet/), and all variants with an ACMG classification class 3, 4, or 5 (VUS, likely pathogenic, or pathogenic, respectively) according to Franklin (https://franklin.genoox.com) were prioritized. SVs and CNVs in all IRD-associated genes were extracted based on a MAF of <1% in DECIPHER and the 1000 Genomes database. Furthermore, for inversions and duplications, events were only investigated when at least one of the breakpoints resided within a currently known IRD gene."
+      },
+      {
+        "offset": 8495,
+        "section": "METHODS",
+        "text": "Minigene Analysis"
+      },
+      {
+        "offset": 8513,
+        "section": "METHODS",
+        "text": "Minigene analysis was performed as previously described. In short, the regions of interest of the genomic DNA samples were amplified by primers that contain attB1 and attB2 tags at their 5' end to facilitate Gateway cloning. After obtaining the entry clone, the wild-type and mutant constructs (with or without the EYS:c.5645-30689G>T and the NBAS:c.3817+1754G>A variants) were separately inserted into the pCI-NEO-RHO Gateway-adapted vector to generate wild-type and mutant minigenes. Both minigenes were independently transfected into HEK293T cells, and, after 48 hours of incubation, mRNA was isolated and amplified by real-time PCR with primers in the flanking RHO exon 3 and 5 regions. All primers used for this splice assay are available upon request. Fragment sizes were assessed using gel electrophoresis and were identified using Sanger sequencing."
+      },
+      {
+        "offset": 9381,
+        "section": "METHODS",
+        "text": "Ethical Considerations"
+      },
+      {
+        "offset": 9404,
+        "section": "METHODS",
+        "text": "This study adhered to the tenets of the Declaration of Helsinki and was approved by the local ethics committee of the Radboud University Medical Center (Nijmegen, the Netherlands). Written informed consent was obtained from patients prior to DNA analysis and inclusion in this study."
+      },
+      {
+        "offset": 9688,
+        "section": "RESULTS",
+        "text": "Results"
+      },
+      {
+        "offset": 9696,
+        "section": "RESULTS",
+        "text": "Case Presentations"
+      },
+      {
+        "offset": 9715,
+        "section": "RESULTS",
+        "text": "The three patients were seen in various ocular genetics and retinal dystrophy clinics around the world: Chicago, IL, USA (patient 1 by Gerald A. Fishman, MD); Vancouver, Quebec, Canada (patient 2 by Maryam Aroichane, MD); Auckland, New Zealand (patient 3 by ALV); and Montreal, Quebec, Canada (patients 1, 2, and 3 by RKK). During these clinical exams and evaluations, the physicians were not aware of the genetic findings or final genetic results. Nonetheless, the physicians in this study all agreed with the diagnosis of EOSRD (Table 1)."
+      },
+      {
+        "offset": 10256,
+        "section": "TABLE",
+        "text": "Clinical Characteristics"
+      },
+      {
+        "offset": 10901,
+        "section": "RESULTS",
+        "text": "Patient 1 presented at age 43 years in Chicago in 1990. He reported poor vision since birth, which progressed with time. At age 26, he was diagnosed with RP at another center; however, he reported poor central and side vision and nyctalopia since birth. There was no family history or systemic disease. Distance visual acuity (VA) was counting fingers (CF) at 3 feet (oculus dexter [OD]) and CF at 4 feet (oculus sinister [OS]) with prominent horizontal and oblique nystagmus. Although the anterior segments were normal, the fundus exam revealed striking atrophic maculas with bone spicule pigment clumping for 360  in the mid-periphery. Retinal arteriolar narrowing and waxy pallor optic discs were also observed. A diagnosis of EOSRD was made at this time, and genetic testing was requested. He returned at age 57 years and was using closed-circuit television (CCTV) and a guide dog, and he had developed hypertension and high cholesterol, for which he took medications. His VA was measurable at 20/1600 (oculus uterque [OU]). The retinal exam showed increased pigmentation of the macular lesion. The family history revealed grandparents from Germany and the United Kingdom."
+      },
+      {
+        "offset": 12079,
+        "section": "RESULTS",
+        "text": "Patient 2 was seen in Canada at age 28 years in 2012. She was originally from Punjab, India, from a non-consanguineous marriage. She never saw normally and had nystagmus since birth. Her review of systems for other diseases was negative, as was her family history. Her husband was her first cousin, and they had one young son with normal vision. She had 20/400 VA (OD and OS) and marked horizontal nystagmus, plano refractions, and small cataracts OU on anterior segment exam. On dilated retinal exam, marked macular atrophy and pigmentation OU were documented. In addition, there was arteriolar narrowing and optic disc pallor. A diagnosis of EOSRD was made. She returned at age 40 (in 2023) for follow-up appointments and testing in Montreal. Her VA had decreased to hand movement (HM) OD and light perception (LP) OS, and she reconfirmed that she had never seen properly or normally. She exhibited marked horizontal nystagmus and poor pupil reaction to light. Her Humphrey visual field (Estermann protocol with both eyes open) was non-recordable. The fundus autofluorescence (FAF) imaging was highly unusual with an alternating pattern of small hypo- and hyperfluorescent lesions (Figs. 1A, 1B). These lesions did not correlate with any visual perception. FAF and optical coherence tomography (OCT) images showed a marked thinning of the entire retina and loss of the elliptical zone (EZ) (Figs. 1C, 1D)."
+      },
+      {
+        "offset": 13490,
+        "section": "FIG",
+        "text": "FAF and OCT of proband 2. (A, B) Heidelberg SPECTRALIS spectral-domain OCT images of the retinal FAF of OD (A) and OS (B) at age 40 years. These unusual images show extensive loss of normal fluorescence (left worse than right), with small linear and \"honeycomb\"-shaped islands of hyperfluorescence. (C', D') En face images of the right and left retinas, respectively, showing the extensive narrowing of the vessels and the marked retinal atrophy, alternating with hyperpigmented islands that appear like the \"honeycomb\"-shaped lesions on FAF. (C'', D'') OCT images show the extensive thinning of all the layers of the retina, including the outer and inner retinas, and complete absence of the foveal structures. There is no peripapillary sparing in this patient at this age."
+      },
+      {
+        "offset": 14285,
+        "section": "RESULTS",
+        "text": "Patient 3 was first seen in 2010 in New Zealand at the age of 12 years. She was originally from India, with a Sikh cultural background, without consanguinity, but also from the Punjab, like patient 2. Her family reported that she never saw well and had poor vision and nystagmus before the age of one year. Her family's history and review of systems for other diseases were negative. On her exam at age 12, she had CF in the OD and 20/420 in the OS. The nystagmus was found to be coarse with horizontal and vertical components. Anterior segments were normal, but the retinal exam revealed attenuated vasculature, pale optic nerves, and a very marked atrophic macula OU, with glial changes, plus marked bone spicule pigmentation in the mid-periphery (Fig. 2). The peripapillary sparing, often seen in intermediate Stargardt macular dystrophy, was also found in this patient. Because of the very early visual loss and nystagmus before the age of 1 year old, the diagnosis of EOSRD was made. She was then seen in Vancouver in 2011 at age 13. On exam, she was very photosensitive, with VA of CF OD and 20/400 OS. She was found to have paradoxical pupils, with a very slow photomotor reaction. The nystagmus was coarse, binocular, conjugate, horizontal, and multivectorial. Her retinal picture was unchanged compared to 2010. Her cycloplegic refraction was mild myopic astigmatism (OU). In 2012, she was seen in Montreal at age 14 years old. The history of poor vision and nystagmus before the age of 1 year old was confirmed. The exam revealed an unchanged VA of CF and 20/400 (OD and OS) with a mild myopic astigmatic prescription OU. Her visual fields were documented with the Goldmann perimeter and the V4e target (Supplementary Fig. S1). She did not see the smaller targets, but the V4e isopter testing was very reliable. In both eyes, a tiny central island of sensitivity to the V5e isopter (5  in OD and 10  in OS) was found surrounded by large symmetrical and dense 360  scotomas of ~50 , in turn surrounded by a ring of sensitivity to the V4e target at around 80  (Supplementary Fig. S1). The observed rotatory nystagmus and anterior segment and posterior segments were similar to the exams in New Zealand and Vancouver."
+      },
+      {
+        "offset": 16517,
+        "section": "FIG",
+        "text": "Fundus pictures of proband 3. (A, B) Color fundus photography of OD and OS, respectively, reveals temporal pallor of the optic discs, narrowing of the vessels, greater prominence in the arterioles, dense bone spicules in the periphery, and marked macular and foveal atrophy. Of interest is the relative sparing of the peripapillary retina, on both the temporal and nasal sides."
+      },
+      {
+        "offset": 16895,
+        "section": "RESULTS",
+        "text": "Genetic Screening"
+      },
+      {
+        "offset": 16913,
+        "section": "RESULTS",
+        "text": "For patient 1, an APEX microarray-based variant identification was carried out for 297 variants identified in five LCA-associated genes, and no causal variants were identified. Later, WES identified two severe ABCA4 variants, c.1622T>C, p.(Leu541Pro) and c.4326C>A, p.(Asn1442Lys), and one mild ABCA4 variant, c.3113C>T, p.(Ala1038Val) (Table 2). The variants c.1622T>C and c.3113C>T are very likely in the same gene copy, as this is the most frequent \"complex\" ABCA4 allele (i.e., two variants that reside in the same ABCA4 gene copy). However, no DNA from any family member was available; therefore, no segregation analysis could be performed, and we cannot rule out that these three variants are, in fact, on the same allele. For patient 2, WES identified the severe ABCA4 c.6729+5_6729+19del variant in a homozygous state. Using an in vitro splice assay in HEK293T cells, it was previously shown to result in exon 48 skipping, a frameshift, and thereby constitutes a protein-truncating variant p.Phe2161Cysfs*3. For patient 3, an APEX microarray-based variant identification targeting all RCD variants was carried out in New Zealand. This screening identified the c.6729+5_6729+19del ABCA4 variant in a homozygous state. In 2012, this patient was seen in Montreal. At that time, the clinician (RKK) was unaware of the genetic diagnosis obtained in New Zealand, and DNA was submitted for RP-LCA smMIP sequencing. This panel also identified the c.6729+5_6729+19del ABCA4 variant in a homozygous state, which was then confirmed, in parallel, by WES."
+      },
+      {
+        "offset": 18470,
+        "section": "TABLE",
+        "text": "Genetic Findings in ABCA4 for Probands 1, 2, and 3"
+      },
+      {
+        "offset": 19080,
+        "section": "RESULTS",
+        "text": "WGS was performed to confirm these findings, rule out putative causal variants in other currently known IRD-associated genes, and potentially identify genetic modifiers. SNV, SV, and CNV analysis in all probands confirmed the variants in ABCA4 described above as disease-causing variants. Moreover, all heterozygous and homozygous variants in genes associated with non-syndromic IRDs and genes associated with other types of inherited blindness or syndromic phenotypes were assigned an ACMG classification through Franklin. Variants that were classified as VUS, likely pathogenic, or pathogenic were assessed and are listed in Supplementary Tables S1 to S3. In proband 1, we detected two NBAS variants: a known pathogenic frameshift variant, c.500_501del, p.Phe167Cysfs*7, and a putative pathogenic deep-intronic variant (DIV), c.3817+1754G>A, based on SpliceAI predictions (see Supplemental Table S1). Patients with two NBAS variants show a short stature syndrome with optic atrophy and Pelger-Huet anomaly (SOPH syndrome; OMIM: 614800). Cone dysfunction, color vision defects, bull's-eye maculae, and mottled retinal pigment epithelium have been described. The DIV did not show any effect on splicing when assessed using a minigene splice assay (Fig. 3A). In proband 3, we detected the well-known c.1208G>A, p.(Arg403Gln) variant in CNGB3 in a homozygous state alongside the previously identified homozygous, severe variant in ABCA4. Furthermore, we detected the c.5645-30689G>T variant in EYS, a gene known to cause RP when mutated, in a heterozygous state in this patient. Using a minigene assay, we observed the inclusion of a 271-nucleotide pseudo-exon and no residual wild-type transcript (Fig. 3B). However, we also observed the inclusion of this pseudo-exon in the transcripts of the wild-type construct. Here, almost no wild-type transcript was observed. Because we could not test this variant in a wider genetic context that also included the exonic sequence, we cannot draw any final conclusions on the effect of this variant."
+      },
+      {
+        "offset": 21122,
+        "section": "FIG",
+        "text": "Minigene splice assays to test deep intronic variants in NBAS and EYS. A minigene construct containing the wild-type sequences, the mutant EYS:c.5645-30689G>T variant in intron 8, and the mutant NBAS:c.3817+1754G>A in intron 32 was generated. All constructs were flanked by exons 3 and 5 of the RHO gene in the pCI-NEO-RHO vectors. RHO ex5 and ACTB were amplified as a transfection control and positive control, respectively. (A) In the WT NBAS construct, we detected both wild-type transcript and transcript with the inclusion of a 60-nucleotide pseudo-exon before exon 32. Transcript levels of both transcripts were equal in both the wild-type and MUT construct, indicating that the NBAS:c.3817+1754G>A variant does not alter splicing. (B) Both the wild-type EYS construct and the EYS:c.5645-30689G>T construct (MUT) showed inclusion of a 271-nucleotide pseudo-exon (c.5645-30931 to c.5645-30695). In the MUT construct, no wild-type transcript was present."
+      },
+      {
+        "offset": 22081,
+        "section": "DISCUSS",
+        "text": "Discussion"
+      },
+      {
+        "offset": 22092,
+        "section": "DISCUSS",
+        "text": "Here, we have described a new genotype-phenotype correlation identified in three EOSRD probands that carry at least two severe variants in ABCA4. Two probands carry the same pathogenic, homozygous splice site variant. Although extensive studies of the ABCA4 gene in associated conditions such as Stargardt disease (STGD1) and STGD-like macular diseases have revealed late-onset phenotypes, no link with severe early-onset IRDs such as EOSRD or LCA has been found previously. Through WGS, we identified two NBAS variants and a homozygous CNGB3 variant in probands 1 and 3, respectively."
+      },
+      {
+        "offset": 22680,
+        "section": "DISCUSS",
+        "text": "The three probands described in this study were all diagnosed with EOSRD based on ophthalmological findings together with onset of disease in the first year of life prior to the outcome of the genetic testing. Because no ophthalmological investigations were performed in the first year of life, no definitive LCA diagnosis can be made for these patients. It is clear, however, that these patients suffer from EOSRD. Early-onset cases harboring pathogenic variants in ABCA4 have been described for both STGD1 and RCD, as well as for RP, but no onset comparable to that of the patients described here has been found previously. Also, these STGD1, RCD, and RP patients did not have nystagmus. In our three patients, nystagmus was a major part of the phenotype. Investigators previously described 10 individuals with vision loss with ages of onset from 3 years of age or later that showed no abnormalities of the fundus at time of examination. The age of onset for early-onset pathologies caused by deleterious variants in ABCA4 can be difficult to determine, as the ages of onset are often self-reported by the patient or deduced from observations made by the parents."
+      },
+      {
+        "offset": 23846,
+        "section": "DISCUSS",
+        "text": "The fundus in these three probands reported here contains many hallmarks of RP, including attenuated retinal arterioles and bone spicules in the mid-periphery. Striking in all three was the very prominent pigmented and atrophic macular lesions. FAF shows widespread and marked hypofluorescence indicating retinal atrophy and degeneration of the RPE and neural retina, which is even more severe than the atrophic lesions observed in panretinal RCD due to two severe ABCA4 variants. The lipofuscin flecks that are very typical for intermediate STGD1 were not observed, which suggests that the molecular defect results in the loss of photoreceptor cells and RPE cells at such an early phase that lipid accumulation in the RPE does not occur."
+      },
+      {
+        "offset": 24585,
+        "section": "DISCUSS",
+        "text": "In recent years, data have been obtained that strongly suggest that genetic and/or non-genetic modifiers are involved in ABCA4 retinopathies. For example, in three families, symptomatic and asymptomatic siblings were identified with c.5603A>T, p.(Asn1868Ile) in combination with a severe/null allele. In a complementary study, in which the frequency of severe ABCA4 variants in the general population was taken into consideration, the penetrance of the c.5603A>T variant with a severe/null allele in trans (i.e., on the other allele) was calculated to be 2.3%. These findings were debated. More recently, non-penetrance has also been proposed for c.2588G>C, c.3113C>T, c.5882G>A, c.5714+5G>A, and c.6089G>A, when in combination with a severe ABCA4 allele in trans. Together, these findings suggest that ~25% of STGD1 cases do not show autosomal-recessive inheritance but rather polygenic or multifactorial disease. In addition to the five additional mild ABCA4 variants suspected to show reduced penetrance, Runhart et al. described a sex imbalance for the c.5603A>T and c.5882G>A variants. A significant overrepresentation of women compared to men was detected for both variants (1.7 to 1 for the c.5603A>T subgroup and 2.1 to 1 for the c.5882G>A subgroup), suggesting that sex should be taken into account as a variable that could modify disease. An independent analysis of this phenomenon in a larger cohort of STGD1 patients found no sex-associated effects. In a meta-analysis, an overrepresentation of women compared to men was shown for mild ABCA4 variants. Differences between siblings in terms of clinical presentation have been described previously. In a more recent study, investigators found variability of clinical presentation in 11 out of 17 families when studying siblings with an identical genetic diagnosis; for example, in five families, the age of onset between the siblings was greater than 10 years. Furthermore, there is preliminary evidence for the presence of rare ROM1 variants in eight of 622 biallelic STGD1 cases, as well as underrepresentation of the common p.(Asn1868Ile) variant in ABCA4 in 83 of 622 and 60 of 408 biallelic STGD1 cases carrying c.5603A>T. Collectively, these studies provide strong evidence that genetic and/or non-genetic modifiers play a significant role in ABCA4 retinopathy for individuals with intermediate (onset between 10 and 40 years) and late-onset (>40 years) disease."
+      },
+      {
+        "offset": 27016,
+        "section": "DISCUSS",
+        "text": "In this study, we identified biallelic severe ABCA4 variants in two patients and two severe ABCA4 variants in one other patient with EOSRD. The diagnosis of EOSRD was made by experienced clinicians before the genetic diagnosis was established. Considering that modifiers play a significant role in disease expression or penetrance in intermediate and late-onset STGD1, respectively, it stands to reason that they can also influence the expression of disease at the severe end of the ABCA4-associated retinopathy spectrum. True digenic inheritance models are rare in IRDs. Digenic inheritance of heterozygous PRPH2 and ROM1 variants was reported in vertically transmitted RP. Digenic inheritance of two alleles in one Bardet-Biedl syndrome-associated gene and one allele in another Bardet-Biedl syndrome-associated gene, the so-called digenic triallelic model, has also been described. Modifiers for retinal disease have also been proposed, such as for biallelic CEP290 cases in which a single MERTK variant seemed to act as a modifier. The latter findings may suggest an additive disease model (Fig. 4)."
+      },
+      {
+        "offset": 28129,
+        "section": "FIG",
+        "text": "Schematic representation of the spectrum of digenic disease models from true digenic inheritance to genes with additive effects on disease. From left (true digenic inheritance) to right (proposed additive disease model): RP caused by heterozygous variants in ROM1 and PHPH2; achromatopsia (ACHM) caused by heterozygous and homozygous variants in CNGA3 and CNGB3, respectively; retinal dystrophy (RD) caused by heterozygous variants in C2orf71 and RP1L1; Bardet-Biedl syndrome (BBS) caused by heterozygous and compound heterozygous variants in BBSx and BBSy; RP caused by compound heterozygous and heterozygous variants in CEP290 and MERTK, respectively; and EOSRD caused by homozygous variants in ABCA4 and CNGB3 (this paper). In the respective studies, only one case was presented, marked with an asterisk. Note that the CNGB3 variant in the ACHM and EOSRD cases was the same, c.1208G>A, p.(Arg403Gln)."
+      },
+      {
+        "offset": 29035,
+        "section": "DISCUSS",
+        "text": "Our additional findings in proband 1 (two NBAS variants) and proband 3 (homozygous CNGB3 variant) suggest that an additive disease model is plausible. This should be further investigated through a more comprehensive screening of LCA, EOSRD, early-onset STGD1, and, perhaps, atypical early-onset achromatopsia probands. NBAS variants were previously associated with syndromic retinal disease. However, the NBAS DIV detected in patient 1 showed no effect on splicing, rendering it unlikely to be pathogenic. Interestingly, probands homozygous or compound heterozygous for CNGB3, p.(Arg403Gln) showed not only achromatopsia but also macular dystrophy, cone dystrophy, and Stargardt disease. The high allele frequencies of CNGB3 c.1208G>A in non-Finnish European and South Asian populations (0.0042 and 0.0273, respectively) strongly suggest that this variant, when present in a homozygous manner, is not fully penetrant. It is therefore not surprising that there are 24 homozygous individuals for c.1208G>A among the 30,606 South-Asian \"healthy persons\" in gnomAD 2.1.1. Moreover, c.1208G>A was detected in a homozygous manner in one of 96 healthy individuals. Considering both the high allele frequency and the occurrence of homozygotes in the population database gnomAD, Franklin suggested a benign ACMG classification (Supplementary Table S3). However, because the c.1208G>A variant in CNGB3 was previously shown to be causative in probands diagnosed with achromatopsia and macular dystrophy, we included this variant as a variant of interest. Because ABCA4 and CNGB3 are both cone cell transmembrane proteins, an additive disease model seems plausible. We hypothesize that their presence in the cone cell membrane may be important for the integrity of this cellular domain, so their combined absence or abnormal structure may impact the stability of the mature cell membrane or may destabilize its morphogenesis. Whether the NBAS and CNGB3 variants play a modifying role in the EOSRD cases presented here also remains to be investigated, and functional studies are required to provide evidence for this hypothesis. Additionally, there could be other pathogenic variants in currently unknown disease genes and/or modifiers at play that are not detected by WGS and not prioritized by our variant filtering protocol."
+      },
+      {
+        "offset": 31354,
+        "section": "DISCUSS",
+        "text": "It is surprising that this new association of EOSRD with ABCA4 variants was not made previously (i.e., 26 years after the discovery of ABCA4 as the gene underlying STGD1). One explanation can be that this is a very rare event. In fact, we found one proband in 163 LCA/EOSRD cases with two severe ABCA4 variants screened with the RP-LCA smMIPs panel. The occurrence of two severe alleles in ABCA4 in STGD1 is rather uncommon. In 395 out of 6240 biallelic probands (6.3%) that are registered in the ABCA4-LOVD (Leiden Open Variant Database, www.lovd.nl/ABCA4), probands carry two severe alleles. Another explanation could be that genetic screening for LCA/EOSRD has largely been performed by sequencing of LCA/EOSRD-associated disease genes, gene panel sequencing, or APEX-based microarray analyses of LCA/EOSRD-associated genes, thereby missing variants in ABCA4."
+      },
+      {
+        "offset": 32219,
+        "section": "DISCUSS",
+        "text": "Our results expand the phenotypic spectrum of disorders associated with variants in ABCA4 that now spans ages of onset between 0 and 80 years, with prominent roles for genetic or non-genetic modifiers (Fig. 5). In conclusion, we propose that biallelic severe ABCA4 variants can be implicated in EOSRD and that follow-up studies may reveal which other factors aggravate the regularly observed STGD1 phenotypes."
+      },
+      {
+        "offset": 32629,
+        "section": "FIG",
+        "text": "The spectrum of ABCA4 retinopathy. Representative FAF images are shown for each stage. Individuals with a normal fundus can carry any of these alleles: WT/WT, WT/severe, WT/mild, severe/mildIP, mild/mild, mild/mildIP, or mildIP/mildIP. MildIP, mild with incomplete penetrance; WT, wild type. Images were obtained and modified from reference (CC-BY license)."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-ac9dc26ea39cbb05",
+    "object": "chat.completion",
+    "created": 1790522060,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0000556\",\"HP:0000639\",\"HP:0000510\",\"HP:0000505\",\"HP:0000662\",\"HP:0008043\",\"HP:0000980\",\"HP:0000822\",\"HP:0001000\",\"HP:0007754\",\"HP:0011516\",\"HP:0008020\"]},{\"patient_id\":\"P2\",\"phenotype\":[\"HP:0000572\",\"HP:0000639\",\"HP:0000505\",\"HP:0001000\",\"HP:0000666\",\"HP:0000518\",\"HP:0007401\",\"HP:0000543\",\"HP:0001105\",\"HP:0007754\",\"HP:0500041\",\"HP:0000575\",\"HP:0001583\"]},{\"patient_id\":\"P3\",\"phenotype\":[\"HP:0000618\",\"HP:0000510\",\"HP:0000980\",\"HP:0025010\",\"HP:0004322\",\"HP:0000648\",\"HP:0030637\",\"HP:0000551\",\"HP:0007814\",\"HP:0011516\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 9899,
+      "total_tokens": 10283,
+      "completion_tokens": 384,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0000556",
+        "HP:0000639",
+        "HP:0000510",
+        "HP:0000505",
+        "HP:0000662",
+        "HP:0008043",
+        "HP:0000980",
+        "HP:0000822",
+        "HP:0001000",
+        "HP:0007754",
+        "HP:0011516",
+        "HP:0008020"
+      ]
+    },
+    {
+      "patient_id": "P2",
+      "phenotype": [
+        "HP:0000572",
+        "HP:0000639",
+        "HP:0000505",
+        "HP:0001000",
+        "HP:0000666",
+        "HP:0000518",
+        "HP:0007401",
+        "HP:0000543",
+        "HP:0001105",
+        "HP:0007754",
+        "HP:0500041",
+        "HP:0000575",
+        "HP:0001583"
+      ]
+    },
+    {
+      "patient_id": "P3",
+      "phenotype": [
+        "HP:0000618",
+        "HP:0000510",
+        "HP:0000980",
+        "HP:0025010",
+        "HP:0004322",
+        "HP:0000648",
+        "HP:0030637",
+        "HP:0000551",
+        "HP:0007814",
+        "HP:0011516"
+      ]
+    }
+  ],
+  "elapsed_seconds": 15.746,
+  "usage": {
+    "prompt_tokens": 9899,
+    "total_tokens": 10283,
+    "completion_tokens": 384,
+    "prompt_tokens_details": null
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "pmc_id": "5885039",
+  "identity": "5cd307584ac5fe5fe223a196a32287ecfa967445505e8bd94c23a45b3c515412",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 8703,
+    "covered_source_characters": 8703,
+    "source_is_excerpted": false,
+    "candidate_windows": 10,
+    "selected_windows": 10,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 11768,
+    "candidate_concepts": 15,
+    "patient_count": 3
+  },
+  "prompt": {
+    "pmc_id": "5885039",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "male",
+            "offset": 367
+          },
+          {
+            "text": "patient",
+            "offset": 2018
+          },
+          {
+            "text": "a 5-year-old male",
+            "offset": 2030
+          },
+          {
+            "text": "patient",
+            "offset": 2728
+          },
+          {
+            "text": "patient",
+            "offset": 3818
+          },
+          {
+            "text": "patient",
+            "offset": 5248
+          },
+          {
+            "text": "patient",
+            "offset": 5883
+          },
+          {
+            "text": "patient",
+            "offset": 6083
+          }
+        ]
+      },
+      {
+        "patient_id": "P2",
+        "mentions": [
+          {
+            "text": "father",
+            "offset": 5258
+          }
+        ]
+      },
+      {
+        "patient_id": "P3",
+        "mentions": [
+          {
+            "text": "mother",
+            "offset": 5269
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0011451": [
+        "Primary microcephaly",
+        "primary microcephaly"
+      ],
+      "HP:0000252": [
+        "microcephaly",
+        "Microcephaly"
+      ],
+      "HP:0012443": [
+        "abnormal brain"
+      ],
+      "HP:0001249": [
+        "intellectual disability"
+      ],
+      "HP:0001276": [
+        "hypertonicity"
+      ],
+      "HP:0002360": [
+        "sleep disturbance"
+      ],
+      "HP:0009879": [
+        "simplified gyral pattern"
+      ],
+      "HP:0006956": [
+        "enlarged lateral ventricle"
+      ],
+      "HP:0001270": [
+        "Delayed motor development"
+      ],
+      "HP:0010864": [
+        "severe intellectual disability"
+      ],
+      "HP:0001999": [
+        "dysmorphic features"
+      ],
+      "HP:0000286": [
+        "epicanthus"
+      ],
+      "HP:0000218": [
+        "high-arched palate"
+      ],
+      "HP:0040196": [
+        "mild microcephaly"
+      ],
+      "HP:0033725": [
+        "thin corpus callosum"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0011451",
+          "HP:0000252",
+          "HP:0012443",
+          "HP:0001249",
+          "HP:0001276",
+          "HP:0002360",
+          "HP:0009879",
+          "HP:0006956",
+          "HP:0001270",
+          "HP:0010864",
+          "HP:0001999",
+          "HP:0000286",
+          "HP:0000218"
+        ]
+      },
+      {
+        "patient_id": "P2",
+        "phenotype": []
+      },
+      {
+        "patient_id": "P3",
+        "phenotype": []
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Primary microcephaly caused by novel compound heterozygous mutations in ASPM"
+      },
+      {
+        "offset": 77,
+        "section": "ABSTRACT",
+        "text": "Autosomal recessive primary microcephaly (microcephaly primary hereditary, MCPH) is a genetically heterogeneous rare developmental disorder that is characterized by prenatal onset of abnormal brain growth, which leads to intellectual disability of variable severity. We report a 5-year-old male who presented with a severe form of primary microcephaly. Targeted panel sequencing revealed compound heterozygous truncating mutations of the abnormal spindle-like microcephaly-associated (ASPM) gene, which confirmed the MCPH5 diagnosis. A novel NM_018136.4: c.9742_9745del (p.Lys3248Serfs*13) deletion mutation was identified."
+      },
+      {
+        "offset": 701,
+        "section": "INTRO",
+        "text": "Autosomal recessive primary microcephaly (microcephaly primary hereditary, MCPH, MIM#251200) is a genetically heterogeneous developmental disorder that is characterized by prenatal onset of abnormal brain growth, resulting in a reduced brain volume, which is indirectly measured as an occipitofrontal circumference (OFC) that is equal to or greater than 2 standard deviations (SDs) and 3 SDs below the age- and sex-matched means at birth and 6 months, respectively. These physical abnormalities lead to varying degrees of non-progressive intellectual disability in the absence of any significant neurological deficit. Eighteen MCPH loci are implicated in MCPH (MCPH1-18). Mutations of abnormal spindle-like microcephaly-associated (ASPM) gene (MIM#605481) are the most common cause of MCPH accounting for up to 40% in consanguineous and non-consanguineous families, followed in frequency by mutations in WDR62. The phenotypic similarity between patients with MCPH-causing genes is remarkable. Therefore, whole-exome sequencing or targeted panel sequencing (TPS) as a genetic screening technique is mandatory to delineate the etiology and obtain the proper prenatal diagnosis. We report a severe form of primary microcephaly exhibiting compound heterozygous ASPM mutations that included a novel deletion mutation."
+      },
+      {
+        "offset": 2014,
+        "section": "INTRO",
+        "text": "The patient was a 5-year-old male who was the first child of Japanese non-consanguineous parents. Microcephaly was noted prenatally on ultrasonography. He was delivered at 38 weeks of gestation, with a birth weight of 2058 g (-2.3 SD), body length of 43 cm (-2.3 SD) and OFC of 27 cm (-4.2 SD). He exhibited hypertonicity, opisthotonic posture and sleep disturbance. Trembling was noted in his body and neck. Brain magnetic resonance imaging (MRI) revealed a global reduction in the size of his cerebral structures, including the cortex and white matter, simplified gyral pattern and enlarged lateral ventricle with clear laterality (Figure 1a). Delayed motor development was marked from the infantile period. The patient sat with support at 1 year of age and began to walk independently at 3 years of age. He spoke incohesive words and exhibited a severe intellectual disability. His recognition and ability to communicate with others developed slowly. Routine laboratory investigations and metabolic surveys revealed normal results. Standard karyotyping and array-based comparative genomic hybridization using peripheral blood revealed no abnormalities. His body weight at 8 years of age was 12.5 kg (-1.8 SD), height was 90 cm (-3.0 SD) and OFC was 41.5 cm (-5.2 SD). Craniofacial dysmorphic features, including up-slanting palpebral fissures, epicanthus, high-arched palate and micrognathism, were noted. The clinical picture was typical of primary microcephaly, particularly MCPH. However, TPS with a panel of multiple potential disease-causing genes was used as the genetic screening test because of the absence of parental consanguinity."
+      },
+      {
+        "offset": 3695,
+        "section": "INTRO",
+        "text": "Informed consent was obtained from the parents, and molecular diagnosis was performed using genomic DNA extracted from the patient's blood. The ethics committees of Tokushima University and Osaka Medical Center and Research Institute for Maternal and Child Health approved the study. The TruSight One Sequencing Panel (Illumina, San Diego, CA, USA) was used with an MiSeq sequencer (Illumina), followed by analysis using our pipeline for NGS data as described previously with a minor modification of a software update specific to the bioinformatics pipeline. Sequence variants with higher allele frequencies (i.e., >0.01) in the following databases were excluded to identify presumably pathogenic single nucleotide variants: 1000 Genomes Project database (http://www.1000genomes.org), National Heart, Lung, and Blood Institute Grand Opportunity (NHLBI GO) Exome Sequencing Project (ESP6500, http://evs.gs.washington.edu/EVS), Human Genetic Variation Database (http://www.genome.med.kyoto-u.ac.jp/SnpDB) and integrative Japanese Genome Variation Database (iJGVD, https://ijgvd.megabank.tohoku.ac.jp). Copy-number variation analysis using TPS data was also performed as described previously. These analyses detected two different 2- and 4-nucleotide deletions in exons 18 and 24 of the ASPM gene, namely, [NM_018136.4(ASPM_v001)], c.7782_7783del and c.9742_9745del, respectively, which caused reading frameshifts that ended with premature stop codons, p.Lys2595Serfs*6 and p.Lys3248Serfs*13, respectively. Sanger sequencing confirmed these deletions. The patient's father and mother were heterozygous carriers of the c.7782_7783del and c.9742_9745del variants, respectively, which suggested the presence of these variations in the patient in a compound heterozygous state (Figure 1b). c.7782_7783del was present in the Human Gene Mutation Database (HGMD, Professional 2017.4, http://www.hgmd.org/) and ClinVar (http://www.ncbi.nlm.nih.gov/clinvar/) as a pathogenic variant, but c.9742_9745del was not present in any database. No other possibly pathogenic variants or gross deletions were detected in the coding regions of other MCPH-related genes in the panel for TPS (data not shown). The patient was diagnosed with MCPH5 caused by one known and one novel deletion of ASPM in a compound heterozygous state based on the results of this molecular diagnosis and re-evaluation of the affected patient's clinical features."
+      },
+      {
+        "offset": 6118,
+        "section": "INTRO",
+        "text": "The ASPM protein plays a crucial role in the maintenance of the cleavage plane orientation, which allows for the symmetric proliferative division of neuroepithelial cells during brain development. A total of 167 ASPM pathogenic variants have been reported in cases with microcephaly in HGMD professional 2017.4. Most of these mutations are nonsense (69 variants), frameshift (small deletions and insertions, 79 variants) or splice-site mutations (15 variants), which are predicted to result in unstable RNA that is degraded by nonsense-mediated RNA decay (NMD) or truncated protein synthesis. Therefore, most of the pathogenic variations of ASPM that are responsible for microcephaly reduce protein synthesis or produce partially or wholly non-functional short proteins. However, few experiments have verified this hypothesis. The mutations were spread throughout the coding sequence of the ASPM gene, with no apparent hotspots, and there were no clear cut genotype-phenotype correlations between the head size centile, degree of intellectual disability or presence of epileptic fits and mutation type or position within the gene, which suggests that NMD is the major mechanism through which ASPM gene mutations cause reduced fetal brain growth and result in MCPH5. However, mice homozygously expressing truncated forms of ASPM similar to ASPM mutants that cause microcephaly in humans exhibit mild microcephaly associated with a reduced relative brain weight and cortical thickness, likely due to a reduced number of neural stem cells. Therefore, the precise mechanisms that underlie the microcephaly caused by ASPM mutations in humans are not known."
+      },
+      {
+        "offset": 7772,
+        "section": "INTRO",
+        "text": "Publisher's Note"
+      },
+      {
+        "offset": 7789,
+        "section": "INTRO",
+        "text": "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations."
+      },
+      {
+        "offset": 8887,
+        "section": "INTRO",
+        "text": "Data Citations"
+      },
+      {
+        "offset": 8903,
+        "section": "FIG",
+        "text": "(a) Brain MRI in the proband at 5 years of age. Axial (left) and sagittal (right) T1-weighted images reveal a global reduction in the size of the cerebral structures, including the cortex and white matter, simplified gyral pattern, enlarged lateral ventricle and fully formed but diffusely thin corpus callosum. Notably, the right side is more remarkably affected than the left side. The sloping of the forehead reflects a severe decrease in the cranial-to-facial proportions. (b) Partial sequence chromatograms around codons 2595 and 3248 on exons 18 and 24, respectively, of ASPM in the patient and his parents. Red boxes denote deleted bases, and red arrows denote the start sites of heterozygous sequences due to these deletions. DNA and corresponding amino acid sequences of the wild-type and mutant ASPM alleles are also shown."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-9a6f2db0970ed2d6",
+    "object": "chat.completion",
+    "created": 1790521826,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0011451\",\"HP:0000252\",\"HP:0012443\",\"HP:0001249\",\"HP:0001276\",\"HP:0002360\",\"HP:0009879\",\"HP:0006956\",\"HP:0001270\",\"HP:0010864\",\"HP:0001999\",\"HP:0000286\",\"HP:0000218\"]},{\"patient_id\":\"P2\",\"phenotype\":[]},{\"patient_id\":\"P3\",\"phenotype\":[]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 2968,
+      "total_tokens": 3135,
+      "completion_tokens": 167,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0011451",
+        "HP:0000252",
+        "HP:0012443",
+        "HP:0001249",
+        "HP:0001276",
+        "HP:0002360",
+        "HP:0009879",
+        "HP:0006956",
+        "HP:0001270",
+        "HP:0010864",
+        "HP:0001999",
+        "HP:0000286",
+        "HP:0000218"
+      ]
+    },
+    {
+      "patient_id": "P2",
+      "phenotype": []
+    },
+    {
+      "patient_id": "P3",
+      "phenotype": []
+    }
+  ],
+  "elapsed_seconds": 4.516,
+  "usage": {
+    "prompt_tokens": 2968,
+    "total_tokens": 3135,
+    "completion_tokens": 167,
+    "prompt_tokens_details": null
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "pmc_id": "5773845",
+  "identity": "9f6557b03f1fd1c8297b2102e470cb218eec76aed794a4088af4fe4c66cd6211",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 5475,
+    "covered_source_characters": 5475,
+    "source_is_excerpted": false,
+    "candidate_windows": 12,
+    "selected_windows": 12,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 9047,
+    "candidate_concepts": 21,
+    "patient_count": 5
+  },
+  "prompt": {
+    "pmc_id": "5773845",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "A 37-year-old woman",
+            "offset": 933
+          }
+        ]
+      },
+      {
+        "patient_id": "P2",
+        "mentions": [
+          {
+            "text": "A 54-year-old female",
+            "offset": 2229
+          },
+          {
+            "text": "patient",
+            "offset": 3230
+          }
+        ]
+      },
+      {
+        "patient_id": "P3",
+        "mentions": [
+          {
+            "text": "her younger sisters",
+            "offset": 3064
+          },
+          {
+            "text": "sister",
+            "offset": 3255
+          }
+        ]
+      },
+      {
+        "patient_id": "P4",
+        "mentions": [
+          {
+            "text": "patient",
+            "offset": 4087
+          }
+        ]
+      },
+      {
+        "patient_id": "P5",
+        "mentions": [
+          {
+            "text": "a 16-year-old patient",
+            "offset": 4589
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0002497": [
+        "spastic-ataxia phenotype",
+        "spastic ataxia",
+        "progressive spastic ataxia"
+      ],
+      "HP:0001258": [
+        "spastic paraplegias",
+        "spastic paraplegia"
+      ],
+      "HP:0001251": [
+        "ataxias",
+        "ataxia",
+        "cerebellar ataxia"
+      ],
+      "HP:0002061": [
+        "lower limb spasticity"
+      ],
+      "HP:0001288": [
+        "gait difficulty"
+      ],
+      "HP:0001260": [
+        "dysarthria"
+      ],
+      "HP:0002540": [
+        "unable to walk"
+      ],
+      "HP:0001257": [
+        "spasticity"
+      ],
+      "HP:0025406": [
+        "weakness"
+      ],
+      "HP:0001771": [
+        "Achilles tendon contracture"
+      ],
+      "HP:0001310": [
+        "dysmetria"
+      ],
+      "HP:0002075": [
+        "dysdiadochokinesia"
+      ],
+      "HP:0002066": [
+        "ataxic gait"
+      ],
+      "HP:0002136": [
+        "wide-based gait"
+      ],
+      "HP:0006801": [
+        "hyperactive deep tendon reflexes"
+      ],
+      "HP:0003487": [
+        "extensor plantar responses"
+      ],
+      "HP:0011449": [
+        "patellar clonus"
+      ],
+      "HP:0031993": [
+        "Hoffmann sign"
+      ],
+      "HP:0002313": [
+        "spastic paraparesis"
+      ],
+      "HP:0007256": [
+        "pyramidal signs"
+      ],
+      "HP:0000514": [
+        "Slow saccades"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0002497",
+          "HP:0001288",
+          "HP:0001260",
+          "HP:0002540",
+          "HP:0001257",
+          "HP:0025406",
+          "HP:0001771",
+          "HP:0001310",
+          "HP:0002075",
+          "HP:0002066"
+        ]
+      },
+      {
+        "patient_id": "P2",
+        "phenotype": [
+          "HP:0001257",
+          "HP:0001310",
+          "HP:0002075",
+          "HP:0002136",
+          "HP:0006801",
+          "HP:0003487",
+          "HP:0011449",
+          "HP:0031993"
+        ]
+      },
+      {
+        "patient_id": "P3",
+        "phenotype": []
+      },
+      {
+        "patient_id": "P4",
+        "phenotype": [
+          "HP:0002497",
+          "HP:0002313",
+          "HP:0007256"
+        ]
+      },
+      {
+        "patient_id": "P5",
+        "phenotype": [
+          "HP:0001258"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Homozygous CAPN1 mutations causing a spastic-ataxia phenotype in 2 families"
+      },
+      {
+        "offset": 76,
+        "section": "INTRO",
+        "text": "Hereditary spastic paraplegias (HSPs) and ataxias are genetically heterogeneous disorders, with more than 70 genes implicated in each group. A smaller fraction of disorders from both groups manifest both with spastic paresis and ataxia, and recognizing this phenotype helps narrowing down the differential diagnosis. Recently, homozygous and compound heterozygous mutations in CAPN1, which encode for the neuronal cysteine protease calpain, have been described as a cause of HSP (SPG76, MIM#616907). Here, we report 3 patients from 2 families with homozygous CAPN1 mutations who are characterized with slowly progressive lower limb spasticity with mild ataxia. Review of all patients with CAPN1 mutations so far supports the strong association of cerebellar involvement with this disorder and delineates several additional disease characteristics."
+      },
+      {
+        "offset": 924,
+        "section": "INTRO",
+        "text": "Family 1"
+      },
+      {
+        "offset": 933,
+        "section": "INTRO",
+        "text": "A 37-year-old woman was referred to our laboratory with spastic ataxia. Her symptoms started with gait difficulty at 21 years, followed by dysarthria 8 years later, and eventually, she was unable to walk without aid at age 32 years (table and figure e-1, http://links.lww.com/NXG/A23). Neurologic examination revealed dysarthria, spasticity in lower >> upper extremities, mild weakness in proximal leg muscles, Achilles tendon contracture, mild dysmetria, dysdiadochokinesia, and a spastic-ataxic gait. Cranial MRI and nerve conduction studies were unremarkable."
+      },
+      {
+        "offset": 1496,
+        "section": "TABLE",
+        "text": "Clinical features and mutations of 3 Turkish patients with CAPN1 mutations"
+      },
+      {
+        "offset": 1571,
+        "section": "INTRO",
+        "text": "Whole-exome sequencing revealed a homozygous p.Gly332Arg mutation in the CAPN1 gene (e-Methods, http://links.lww.com/NXG/A26). The variation is located at a conserved site, with a GERP++ score of 4.63 (figure e-2, http://links.lww.com/NXG/A24), next to the start of the beta-strand of the protease domain of calpain-1 protein, conformationally in proximity to the active site at position 296, the critical Ca2+ binding site (figure e-2). The variation was not present in the Exome Aggregation Consortium (ExAC) browser and was seen twice in a heterozygous state in the Genome Aggregation Database (gnomAD) (minor allele frequency [MAF] = 8.204e-6)."
+      },
+      {
+        "offset": 2220,
+        "section": "INTRO",
+        "text": "Family 2"
+      },
+      {
+        "offset": 2229,
+        "section": "INTRO",
+        "text": "A 54-year-old female proband presented with slowly progressive walking difficulty and extreme stiffness in the legs (table). She could not tolerate exercise since teen age, but her symptoms started to affect her daily life after her thirties. She had a scissoring and wide-based gait and needed unilateral support to walk. Her speech was explosive. Neurologic examination revealed severe spasticity in the lower and mild spasticity in the upper extremities, hyperactive deep tendon reflexes, bilateral extensor plantar responses, and patellar clonus. The Hoffmann sign was positive. She had bilateral mild dysmetria and dysdiadochokinesia. Nerve conduction studies, EMG, sensory evoked potential tests, and MRI did not reveal any pathology (figure e-3, http://links.lww.com/NXG/A25). Her parents were second-degree cousins, and one of her younger sisters had similar complaints and also a slow disease progression (figure e-1, http://links.lww.com/NXG/A23)."
+      },
+      {
+        "offset": 3187,
+        "section": "INTRO",
+        "text": "Among 18 homozygous variants shared by the patient and her affected sister, a single nucleotide substitution in exon 10 of the CAPN1 gene leading to a premature stop codon at position 392 was detected (e-Methods, http://links.lww.com/NXG/A26, figure e-2, http://links.lww.com/NXG/A24). The p.Trp392* variant was seen heterozygously once in the ExAC database (MAF = 8.513e-06) and was not present in the gnomAD."
+      },
+      {
+        "offset": 3598,
+        "section": "DISCUSS",
+        "text": "Discussion"
+      },
+      {
+        "offset": 3609,
+        "section": "DISCUSS",
+        "text": "We report 3 adult-onset patients from 2 families who have disease onset with spastic paraparesis, emergence of cerebellar symptoms during disease course, slow disease progression, and homozygous mutations in the CAPN1 gene. These characteristics are in accordance with the previous reports and point out to a characteristic phenotype. The first study reported 8 patients from 3 families with pyramidal signs starting during young adulthood (range 19-39 years). All except for 1 patient had cerebellar findings during follow-up, and 1 patient required walking aid at the age of 40. In the second study, 6 patients from 4 families had slowly progressive spastic ataxia starting at young adulthood. One patient was using a wheelchair at the age of 30, and 2 patients needed walking aid in their forties. In a third report, 2 patients had a similar spastic-ataxia phenotype with onset around thirties. It is important that the range of age at onset was expanded by a recent report of a 16-year-old patient with congenital onset and pure spastic paraplegia."
+      },
+      {
+        "offset": 4664,
+        "section": "DISCUSS",
+        "text": "Our study, together with the rapidly expanding number of reported cases, validates the observation that homozygous or compound heterozygous mutations in calpain-1 cause a spasticity-dominant phenotype and emphasize its association with cerebellar symptoms. Accordingly, calpain-1 deficiency in mice disrupts cerebellar development causing cerebellar ataxia, and missense mutations in CAPN1 are associated with spinocerebellar ataxia in Parson Russell Terrier dogs. The cerebellar findings in CAPN1 patients reported so far include ataxic gait, dysarthria, and mild dysmetria/dysdiadochokinesia. Slow saccades were remarkable in 2 patients. In light of these observations, we suggest that CAPN1-based disease should be considered among the emerging group of ataxia-spasticity spectrum disorders, especially in adult patients."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-91eba89fd3b298c3",
+    "object": "chat.completion",
+    "created": 1790521735,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0002497\",\"HP:0001288\",\"HP:0001260\",\"HP:0002540\",\"HP:0001257\",\"HP:0025406\",\"HP:0001771\",\"HP:0001310\",\"HP:0002075\",\"HP:0002066\"]},{\"patient_id\":\"P2\",\"phenotype\":[\"HP:0001257\",\"HP:0001310\",\"HP:0002075\",\"HP:0002136\",\"HP:0006801\",\"HP:0003487\",\"HP:0011449\",\"HP:0031993\"]},{\"patient_id\":\"P3\",\"phenotype\":[]},{\"patient_id\":\"P4\",\"phenotype\":[\"HP:0002497\",\"HP:0002313\",\"HP:0007256\"]},{\"patient_id\":\"P5\",\"phenotype\":[\"HP:0001258\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 2562,
+      "total_tokens": 2837,
+      "completion_tokens": 275,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0002497",
+        "HP:0001288",
+        "HP:0001260",
+        "HP:0002540",
+        "HP:0001257",
+        "HP:0025406",
+        "HP:0001771",
+        "HP:0001310",
+        "HP:0002075",
+        "HP:0002066"
+      ]
+    },
+    {
+      "patient_id": "P2",
+      "phenotype": [
+        "HP:0001257",
+        "HP:0001310",
+        "HP:0002075",
+        "HP:0002136",
+        "HP:0006801",
+        "HP:0003487",
+        "HP:0011449",
+        "HP:0031993"
+      ]
+    },
+    {
+      "patient_id": "P3",
+      "phenotype": []
+    },
+    {
+      "patient_id": "P4",
+      "phenotype": [
+        "HP:0002497",
+        "HP:0002313",
+        "HP:0007256"
+      ]
+    },
+    {
+      "patient_id": "P5",
+      "phenotype": [
+        "HP:0001258"
+      ]
+    }
+  ],
+  "elapsed_seconds": 4.562,
+  "usage": {
+    "prompt_tokens": 2562,
+    "total_tokens": 2837,
+    "completion_tokens": 275,
+    "prompt_tokens_details": null
+  }
+}

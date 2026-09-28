@@ -1,0 +1,424 @@
+{
+  "pmc_id": "12118522",
+  "identity": "8de34a4109373742bb09b954c0d9a13806ab866371527803df560024510ddd72",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 9276,
+    "covered_source_characters": 9276,
+    "source_is_excerpted": false,
+    "candidate_windows": 18,
+    "selected_windows": 18,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 13774,
+    "candidate_concepts": 41,
+    "patient_count": 1
+  },
+  "prompt": {
+    "pmc_id": "12118522",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "an 8-Month-Old Boy",
+            "offset": 64
+          },
+          {
+            "text": "an 8-month-old boy",
+            "offset": 657
+          },
+          {
+            "text": "8-month-old boy",
+            "offset": 1906
+          },
+          {
+            "text": "8-month-old boy",
+            "offset": 2099
+          },
+          {
+            "text": "patient",
+            "offset": 2946
+          },
+          {
+            "text": "patient",
+            "offset": 3949
+          },
+          {
+            "text": "patient",
+            "offset": 4485
+          },
+          {
+            "text": "He",
+            "offset": 5291
+          },
+          {
+            "text": "patient",
+            "offset": 6882
+          },
+          {
+            "text": "patient",
+            "offset": 7734
+          },
+          {
+            "text": "patient",
+            "offset": 8507
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0012115": [
+        "inflammation"
+      ],
+      "HP:0000975": [
+        "increased sweating",
+        "hyperhidrosis"
+      ],
+      "HP:0200034": [
+        "papules"
+      ],
+      "HP:0002835": [
+        "aspiration"
+      ],
+      "HP:0002901": [
+        "hypocalcemia"
+      ],
+      "HP:0001250": [
+        "seizures"
+      ],
+      "HP:0001629": [
+        "ventricular septal defect",
+        "VSD"
+      ],
+      "HP:0000822": [
+        "hypertension"
+      ],
+      "HP:0001635": [
+        "congestive heart failure"
+      ],
+      "HP:0011344": [
+        "severe developmental delay"
+      ],
+      "HP:0001508": [
+        "failure to thrive"
+      ],
+      "HP:0025084": [
+        "hair follicles"
+      ],
+      "HP:0000989": [
+        "pruritus"
+      ],
+      "HP:0011968": [
+        "feeding problems"
+      ],
+      "HP:0001263": [
+        "developmental delay"
+      ],
+      "HP:0004482": [
+        "relative macrocephaly"
+      ],
+      "HP:0002007": [
+        "frontal bossing"
+      ],
+      "HP:0001252": [
+        "hypotonia"
+      ],
+      "HP:0004484": [
+        "craniofacial dysmorphism",
+        "distinctive craniofacial features"
+      ],
+      "HP:0002212": [
+        "Curly hair"
+      ],
+      "HP:0009890": [
+        "high anterior hairline"
+      ],
+      "HP:0045059": [
+        "hyperkeratotic papules"
+      ],
+      "HP:0006610": [
+        "widely spaced nipples"
+      ],
+      "HP:6001166": [
+        "spongiosis"
+      ],
+      "HP:0001945": [
+        "fevers",
+        "Fevers"
+      ],
+      "HP:0000821": [
+        "hypothyroidism",
+        "Hypothyroidism"
+      ],
+      "HP:0000737": [
+        "irritable"
+      ],
+      "HP:0001627": [
+        "cardiac abnormalities"
+      ],
+      "HP:0001671": [
+        "septal defects"
+      ],
+      "HP:0001639": [
+        "hypertrophic cardiomyopathy"
+      ],
+      "HP:0011675": [
+        "arrhythmias"
+      ],
+      "HP:0001249": [
+        "intellectual disability"
+      ],
+      "HP:0004523": [
+        "eyebrows"
+      ],
+      "HP:0032152": [
+        "keratosis pilaris"
+      ],
+      "HP:0008064": [
+        "ichthyosis"
+      ],
+      "HP:0000962": [
+        "hyperkeratosis"
+      ],
+      "HP:0000995": [
+        "melanocytic nevi"
+      ],
+      "HP:0001028": [
+        "hemangiomas"
+      ],
+      "HP:0000256": [
+        "macrocephaly"
+      ],
+      "HP:0002046": [
+        "heat intolerance"
+      ],
+      "HP:0032252": [
+        "granulomas"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0000975",
+          "HP:0200034",
+          "HP:0002835",
+          "HP:0002901",
+          "HP:0001250",
+          "HP:0001629",
+          "HP:0000822",
+          "HP:0001635",
+          "HP:0011344",
+          "HP:0001508",
+          "HP:0025084",
+          "HP:0000989",
+          "HP:0011968",
+          "HP:0001263",
+          "HP:0004482",
+          "HP:0002007",
+          "HP:0001252",
+          "HP:0004484",
+          "HP:0002212",
+          "HP:0009890",
+          "HP:0045059",
+          "HP:0006610",
+          "HP:0001627",
+          "HP:0001671",
+          "HP:0001639",
+          "HP:0011675",
+          "HP:0001249",
+          "HP:0004523",
+          "HP:0032152",
+          "HP:0008064",
+          "HP:0000962",
+          "HP:0000995",
+          "HP:0001028",
+          "HP:0000256",
+          "HP:0002046",
+          "HP:0032252"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Granulomatous Variant of Giant Centrifugal Miliaria Profunda in an 8-Month-Old Boy: Expanding the Dermatologic Phenotype of Cardiofaciocutaneous Syndrome"
+      },
+      {
+        "offset": 158,
+        "section": "ABSTRACT",
+        "text": "ABSTRACT"
+      },
+      {
+        "offset": 167,
+        "section": "ABSTRACT",
+        "text": "Miliarias are a group of eccrine disorders characterized by sweat retention due to the occlusion of eccrine ducts. Miliaria profunda is the rarest form of miliaria and occurs when eccrine ducts are obstructed at the dermal-epidermal junction. A granulomatous variant of centrifugal miliaria profunda classic findings of granulomatous infiltrate on histology and centrifugal expansion of deep nodules or plaques. We report a rare case of the granulomatous variant of centrifugal miliaria in an 8-month-old boy, with associated cardiofaciocutaneous syndrome (CFCS) due to a pathogenic MAP2K1 germline variant."
+      },
+      {
+        "offset": 781,
+        "section": "INTRO",
+        "text": "Introduction"
+      },
+      {
+        "offset": 794,
+        "section": "INTRO",
+        "text": "Miliarias are a group of eccrine disorders characterized by sweat retention due to the occlusion of eccrine ducts. Miliaria profunda is the rarest form of miliaria and occurs when eccrine ducts are obstructed at the dermal-epidermal junction. Centrifugal expansion on histology refers to uniform expansion around a central axis, while granulomatous inflammation refers to histopathologic findings of focal clusters of epithelioid histiocytes, multinucleated giant cells, and mononuclear leukocytes. The granulomatous variant of centrifugal miliaria profunda (GV-CMP) is an exceedingly rare granulomatous dermatosis caused by obstruction of eccrine ducts, resulting in rupture of the eccrine glands and a reactive granulomatous infiltrate. These pathologic changes occur in rare cases due to mechanical obstruction of the eccrine duct from occlusive tape or alterations in the eccrine apparatus from increased sweating. Clinically, GV-CMP presents as large, skin-colored expanding annular plaques or nodules. To date, there are only four other reports of GV-CMP in the English literature. We present a case of an 8-month-old boy with cardiofaciocutaneous syndrome (CFCS) due to a MAP2K pathogenic variant and provide a molecular pathophysiologic basis for his skin findings."
+      },
+      {
+        "offset": 2084,
+        "section": "CASE",
+        "text": "Case Report"
+      },
+      {
+        "offset": 2096,
+        "section": "CASE",
+        "text": "An 8-month-old boy developed a non-pruritic skin eruption present for 4 months, which appeared as annular edematous dermal plaques on the bilateral forearms, knees, buttocks, and inguinal creases (Figure 1A,B). Koebnerization was noted at the puncture site of a blood draw on the left dorsal hand and incidental pruritic papules over the elbows, knees, and scapula."
+      },
+      {
+        "offset": 2471,
+        "section": "FIG",
+        "text": "Skin findings at presentation: edematous dermal plaques on the buttocks (A) and the left forearm (B)."
+      },
+      {
+        "offset": 2574,
+        "section": "CASE",
+        "text": "He had a complex medical history, including meconium aspiration, hypocalcemia-induced seizures at birth, white matter injury in the frontal and parietal lobes bilaterally, a ventricular septal defect (VSD) with secondary pulmonary hypertension, congestive heart failure, severe developmental delay, and failure to thrive. Family history was non-contributory. Notably, the patient had a normal thyroid stimulating hormone level and elevated free T4 of 1.7 ng/dL (normal range 0.9-1.4 ng/dL) as well as a prolonged neonatal intensive care unit (NICU) course."
+      },
+      {
+        "offset": 3141,
+        "section": "CASE",
+        "text": "A biopsy of the left forearm was performed, initially concerning for a histiocytic process, as there was a robust histiocytic response in the dermis, seemingly around destroyed hair follicles with a vague granulomatous response and associated neutrophilic infiltrate (Figure 2A,B). An additional biopsy of a plaque on the left knee better demonstrated robust histiocytic/granulomatous inflammatory infiltrate with multinucleate giant cells around keratin-plugged hyperplastic acrosyringia, dermal eccrine ducts, and infundibula, suggestive of duct rupture and not hair follicles. Surrounding this was a mixed inflammatory infiltrate including neutrophils (Figure 3). This similar clinical/pathologic picture has been described in rare cases of the granulomatous variant of centrifugal miliaria profunda. The patient was treated with triamcinolone 0.1% ointment twice a day for pruritus and avoidance of occlusive dressings."
+      },
+      {
+        "offset": 4069,
+        "section": "FIG",
+        "text": "Hematoxylin and eosin (H&E) demonstrating seemingly destroyed hair follicles with a vague granulomatous response and associated neutrophilic infiltrate at 10x (A) and 240x (B)."
+      },
+      {
+        "offset": 4248,
+        "section": "FIG",
+        "text": "H&E demonstrating histiocytic/granulomatous inflammatory infiltrate with multinucleate giant cells around keratin-plugged hyperplastic acrosyringia, dermal eccrine ducts, and infundibula at 24x magnification."
+      },
+      {
+        "offset": 4460,
+        "section": "CASE",
+        "text": "At 15 months of age, the patient was evaluated in a multidisciplinary genetic skin disease clinic. He was noted to have a complex phenotype, including a VSD, failure to thrive, feeding problems, developmental delay, relative macrocephaly and frontal bossing, hypotonia, and mild craniofacial dysmorphism. Curly hair with a high anterior hairline, abnormal ears with a double interior crus, fine hyperkeratotic papules, and widely spaced nipples were noted on skin examination. His constellation of findings was consistent with a disorder of the RAS/MAPK pathway, specifically CFCS. A RASopathy gene panel was performed, which revealed a de novo pathogenic variant, c.389A>G (p.Tyr130Cys), in MAP2K1, confirming the diagnosis. This missense variant is present in population databases and has been observed in individuals with CFCS. He later developed seizures and was started on anticonvulsant medication with improvement of his symptoms. The family noted a lack of improvement of his miliaria lesions with triamcinolone; however, these lesions tended to slowly self-resolve over the course of 10 months."
+      },
+      {
+        "offset": 5570,
+        "section": "DISCUSS",
+        "text": "Discussion"
+      },
+      {
+        "offset": 5581,
+        "section": "DISCUSS",
+        "text": "Miliaria profunda is a rare variant with the eccrine sweat glands and ducts blocked at or below the dermal-epidermal junction, and histologically exhibits intradermal spongiosis of the eccrine gland and rupture of the eccrine gland with lymphocytic inflammation. Miliaria profunda is periodic acid-Schiff (PAS)-positive and diastase resistant by microscopy. GV-CMP presents additionally with significant granulomatous infiltrate on histology and centrifugal expansion of the lesions before spontaneously regressing. To our knowledge, there appear to be only four reported cases of GV-CMP reported in the English literature. Several authors mention proposed risk factors for GV-CMP, including the use of occlusive tape, fevers, and hypothyroidism. Occlusive tape causes mechanical obstruction of the eccrine glands. Fevers cause increased sweating, which results in changes to the eccrine gland horny plug and alterations in the tonicity of sweat. Hypothyroidism may also result in cytological alterations in the eccrine apparatus. In our case, the child's mother described him as being \"sweaty and irritable, and not needing to wear an onesie\" presumably due elevated body temperature, in the first several weeks of life, which may have contributed to his development of GV-CMP."
+      },
+      {
+        "offset": 6878,
+        "section": "DISCUSS",
+        "text": "Our patient was found to have CFCS, which belongs to the group of autosomal dominant disorders characterized by gene mutations in the mitogen-activated protein (MAP) kinase pathway, also known as \"Rasopathies.\" CFCS is characterized by multiple congenital anomalies including cardiac abnormalities (valve, septal defects, hypertrophic cardiomyopathy, arrhythmias), distinctive craniofacial features, gastrointestinal dysfunction, seizures, hypotonia, and variable intellectual disability. The hair is typically sparse, curly, fine or thick, and woolly or brittle; eyelashes and eyebrows may be absent or thin. Cutaneous manifestations are common in patients with RASopathies, and specific skin findings described in CFCS include ulerythema ophryogenes, keratosis pilaris, ichthyosis, hyperkeratosis, melanocytic nevi, and infantile hemangiomas. Due to our patient's complex phenotype including a VSD, failure to thrive, macrocephaly and frontal bossing, hypotonia, and mild craniofacial dysmorphism, CFCS was suspected. While no reports of miliaria disorders exist to date as cutaneous features of those individuals living with CFCS, there is mention of \"ectoderm abnormalities,\" \"heat intolerance,\" \"overheating,\" and \"hyperhidrosis\". A child with CFCS, eccrine squamous metaplasia and periadenexal granulomas, which improved with heat avoidance, was reported from our institution in 2007. We hypothesize that dysregulation of the Ras-MAPK pathway results in epidermal dysregulation, hyperkeratosis, and a predisposition to overheating and sweat duct occlusion, especially during periods of stress, as seen early in life in our patient."
+      },
+      {
+        "offset": 8540,
+        "section": "CONCL",
+        "text": "Conclusion"
+      },
+      {
+        "offset": 8551,
+        "section": "CONCL",
+        "text": "We present a novel case of an infant with CFCS and GV-CMP, a granulomatous dermatosis rarely reported to date. There is no established treatment for GV-CMP and lesions often resolve spontaneously. Solicitation for risk factors early in life should be sought, along with histopathologic evaluation and typical clinical findings. Miliaria profunda has not been previously reported in CFCS. Dysregulation of the Ras-MAPK pathway results in hyperkeratosis, possible overheating, and resultant sequelae, especially during the newborn period. Therefore, a formal dermatology evaluation should be considered for all individuals with RASopathies, and genetic testing should be considered in all individuals with GV-CMP and related skin disorders especially during the infantile period, along with avoidance of overheating and use of occlusive dressings."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-ab6235f26d1b2312",
+    "object": "chat.completion",
+    "created": 1790522029,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0000975\",\"HP:0200034\",\"HP:0002835\",\"HP:0002901\",\"HP:0001250\",\"HP:0001629\",\"HP:0000822\",\"HP:0001635\",\"HP:0011344\",\"HP:0001508\",\"HP:0025084\",\"HP:0000989\",\"HP:0011968\",\"HP:0001263\",\"HP:0004482\",\"HP:0002007\",\"HP:0001252\",\"HP:0004484\",\"HP:0002212\",\"HP:0009890\",\"HP:0045059\",\"HP:0006610\",\"HP:0001627\",\"HP:0001671\",\"HP:0001639\",\"HP:0011675\",\"HP:0001249\",\"HP:0004523\",\"HP:0032152\",\"HP:0008064\",\"HP:0000962\",\"HP:0000995\",\"HP:0001028\",\"HP:0000256\",\"HP:0002046\",\"HP:0032252\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 3775,
+      "total_tokens": 4149,
+      "completion_tokens": 374,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0000975",
+        "HP:0200034",
+        "HP:0002835",
+        "HP:0002901",
+        "HP:0001250",
+        "HP:0001629",
+        "HP:0000822",
+        "HP:0001635",
+        "HP:0011344",
+        "HP:0001508",
+        "HP:0025084",
+        "HP:0000989",
+        "HP:0011968",
+        "HP:0001263",
+        "HP:0004482",
+        "HP:0002007",
+        "HP:0001252",
+        "HP:0004484",
+        "HP:0002212",
+        "HP:0009890",
+        "HP:0045059",
+        "HP:0006610",
+        "HP:0001627",
+        "HP:0001671",
+        "HP:0001639",
+        "HP:0011675",
+        "HP:0001249",
+        "HP:0004523",
+        "HP:0032152",
+        "HP:0008064",
+        "HP:0000962",
+        "HP:0000995",
+        "HP:0001028",
+        "HP:0000256",
+        "HP:0002046",
+        "HP:0032252"
+      ]
+    }
+  ],
+  "elapsed_seconds": 12.187,
+  "usage": {
+    "prompt_tokens": 3775,
+    "total_tokens": 4149,
+    "completion_tokens": 374,
+    "prompt_tokens_details": null
+  }
+}

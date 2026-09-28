@@ -1,0 +1,331 @@
+{
+  "pmc_id": "10111794",
+  "identity": "552532644cbf63a3634e7517940f6cbaea4a6d4fb8556a90cf725d4eff603c25",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 10393,
+    "covered_source_characters": 10393,
+    "source_is_excerpted": false,
+    "candidate_windows": 35,
+    "selected_windows": 35,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 13957,
+    "candidate_concepts": 12,
+    "patient_count": 1
+  },
+  "prompt": {
+    "pmc_id": "10111794",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "A 27-yr-old male",
+            "offset": 1364
+          },
+          {
+            "text": "The proband",
+            "offset": 2208
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0000519": [
+        "congenital cataracts",
+        "Bilateral cataracts"
+      ],
+      "HP:0001324": [
+        "muscle weakness"
+      ],
+      "HP:0000639": [
+        "nystagmus"
+      ],
+      "HP:0000486": [
+        "strabismus"
+      ],
+      "HP:0001132": [
+        "lens subluxations"
+      ],
+      "HP:0000518": [
+        "cataracts"
+      ],
+      "HP:0003323": [
+        "progressive muscle weakness"
+      ],
+      "HP:0025406": [
+        "weakness"
+      ],
+      "HP:0003236": [
+        "serum creatine kinase",
+        "CK"
+      ],
+      "HP:0003198": [
+        "myopathy"
+      ],
+      "HP:0000739": [
+        "anxiety"
+      ],
+      "HP:5200049": [
+        "ordering"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0000519",
+          "HP:0001324",
+          "HP:0000639",
+          "HP:0000486",
+          "HP:0001132",
+          "HP:0000518",
+          "HP:0003323",
+          "HP:0025406",
+          "HP:0003236",
+          "HP:0003198"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "A novel WFS1 variant associated with isolated congenital cataracts"
+      },
+      {
+        "offset": 67,
+        "section": "ABSTRACT",
+        "text": "Biallelic variants in the WFS1 gene are associated with Wolfram syndrome. However, recent publications document that heterozygous variants can lead to a variety of phenotypes, such as Wolfram-like syndrome or isolated features of Wolfram syndrome. In this case report, we present a male patient with a history of congenital cataracts and subjective complaints of muscle weakness. Clinical assessment demonstrated normal muscle strength, and genomic, biochemical, electrophysiologic, and muscle biopsy studies did not identify a potential cause of the proband's perceived muscle weakness. Whole-exome sequencing identified a novel de novo variant in the WFS1 gene (c.1243G > T), representing one of only several patients in the published literature with isolated congenital cataracts and a heterozygous WFS1 variant. The variety of phenotypes associated with heterozygous variants in WFS1 suggests that this gene should be considered as a cause of both dominant and biallelic/recessive forms of disease. Future research should focus on elucidating the mechanism(s) of disease and variable expressivity in WFS1 in order to improve our ability to provide patients and families with anticipatory guidance about the disease, including appropriate screening and medical interventions."
+      },
+      {
+        "offset": 1346,
+        "section": "CASE",
+        "text": "CASE PRESENTATION"
+      },
+      {
+        "offset": 1364,
+        "section": "CASE",
+        "text": "A 27-yr-old male with congenital cataracts and subjective complaints of muscle weakness was referred for genetic investigations. He was born at term to a 30-yr-old gravida 2, para 1 mother. The pregnancy and delivery were unremarkable. There were no exposures to known teratogens. Bilateral cataracts were first noted at 3 mo of age, when he presented with nystagmus and strabismus, and were surgically extracted. At 9 yr of age, bilateral secondary intraocular lens implants were inserted, and since then he has experienced multiple intraocular lens subluxations. The strabismus was surgically treated at 1 yr of age; however, he continues to have dissociated horizontal divergence and fusional maldevelopment nystagmus, which are due to visual deprivation by the cataracts early in infancy. Optic discs are normal and color vision is intact."
+      },
+      {
+        "offset": 2208,
+        "section": "CASE",
+        "text": "The proband reported progressive muscle weakness beginning in his mid-20s, characterized by burning discomfort in the thighs with exertion, weakness in the hip and shoulder girdles, and decreased endurance. Biochemical investigations revealed mild elevation of serum creatine kinase (CK) (186 and 273 U/L, ref 52-175 U/L) on two occasions, whereas four other CK measurements were normal. On examination, there were no objective signs of muscle weakness and deep tendon reflexes were normal. Physical examination, along with extensive investigations (including magnetic resonance imaging [MRI] of the brain, cervical spine, and whole body, electromyography [EMG], nerve conduction study [NCS], echocardiogram, and muscle biopsy), did not identify any objective evidence of an underlying neuromuscular disorder. Myotonic dystrophy type 1 was ruled out molecularly. A diagnostic myopathy molecular panel (MNG Laboratories) identified a heterozygous variant of uncertain significance in the FLNC gene (c.4970G > A, p.Arg1657Gln), which was shown to be inherited from the proband's healthy father."
+      },
+      {
+        "offset": 3301,
+        "section": "CASE",
+        "text": "The proband has normal development and is excelling academically. The parents are nonconsanguineous and are of French Canadian, Polish, Scottish, and English ancestry. The proband has three healthy siblings. There is no known family history of cataracts or neuromuscular disease."
+      },
+      {
+        "offset": 3581,
+        "section": "METHODS",
+        "text": "TECHNICAL ANALYSIS"
+      },
+      {
+        "offset": 3600,
+        "section": "METHODS",
+        "text": "The proband's genomic DNA was extracted from an oral sponge sample for nuclear and mitochondrial DNA sequencing using methods previously described. Sequencing was performed by Discovery DNA, Inc. The average read depth was 75.5x and the uniformity of coverage was 95.6% for whole-exome sequencing (WES). The average coverage was greater than 100x for mitochondrial DNA sequencing. The filtering workflow for the WES data considered quality assurance measures, minor allele frequency, in combination with in silico predictors, ClinVar interpretations, and ACMG classification criteria to reduce the number of variants in the variant call file."
+      },
+      {
+        "offset": 4245,
+        "section": "METHODS",
+        "text": "Targeted testing for the proband's parents was performed by Sanger sequencing at Prevention Genetics using genomic DNA extracted from whole-blood samples. Maternity and paternity were not confirmed any further via identity testing as the father was found to carry the same FLNC variant as the proband."
+      },
+      {
+        "offset": 4547,
+        "section": "METHODS",
+        "text": "VARIANT INTERPRETATION"
+      },
+      {
+        "offset": 4570,
+        "section": "METHODS",
+        "text": "The filtering workflow revealed a heterozygous missense variant (NM_006005.3: c.1243G > T, p.Val415Phe) in the WFS1 gene to be a variant of interest (Table 1). Parental testing demonstrated that the variant is de novo (PM6). The variant affects the same amino acid residue as another variant that was previously reported to be pathogenic (p.V415del, ClinVar accession VCV000215406.12) (PM5). The variant is absent from the gnomAD v2.1.1 and v3.1.2 (PM2_Supporting) and has not been previously reported. In silico data support a deleterious effect of this variant on the WFS1 gene (PP3). Specifically, (i) it is predicted to be damaging by SIFT and PolyPhen-2, (ii) the nucleotide at position 1243 is predicted to be conserved across 100 vertebrates by GERP++ and PhyloP, and (iii) the amino acid at codon 415 is conserved across mammalian species. Taking these criteria together, the WFS1 c.1243G > T variant is classified as likely pathogenic based on the 2015 ACMG variant classification guidelines."
+      },
+      {
+        "offset": 5572,
+        "section": "TABLE",
+        "text": "Genomic findings"
+      },
+      {
+        "offset": 5818,
+        "section": "METHODS",
+        "text": "Whole-exome and mitochondrial DNA sequencing did not identify any variants associated with a neuromuscular phenotype."
+      },
+      {
+        "offset": 5936,
+        "section": "CONCL",
+        "text": "SUMMARY"
+      },
+      {
+        "offset": 5944,
+        "section": "CONCL",
+        "text": "The WFS1 gene is classically associated with Wolfram syndrome, which follows a biallelic pattern of inheritance. However, Wolfram-like syndrome and isolated features of Wolfram syndrome can occur as a result of heterozygous variants in WFS1. Several studies have identified heterozygous variants in WFS1 in individuals with isolated congenital cataracts; however, one variant, p.Val412Ala, had insufficient evidence for pathogenicity and is found at an allele frequency in gnomAD that is incompatible with the disease prevalence (Table 2). Given that our patient recently had a normal hearing assessment, does not have history of diabetes mellitus or insipidus, and does not have clinical evidence of optic atrophy, the present study adds to the literature an additional patient in support of the association between isolated congenital cataracts and heterozygous variants in the WFS1 gene. Although our investigations did not include copy-number variant detection or detection of intronic variants and thus cannot rule out the presence of a second variant, other patients with a single feature of Wolfram syndrome have generally not been found to carry biallelic variants."
+      },
+      {
+        "offset": 7118,
+        "section": "TABLE",
+        "text": "WFS1 variants previously reported in cases of isolated congenital cataracts"
+      },
+      {
+        "offset": 7534,
+        "section": "CONCL",
+        "text": "It is apparent that the WFS1 gene exhibits variable expressivity and reduced penetrance, as individuals with heterozygous variants reported in the literature display a variety of phenotypes. This increases the complexity of genetic counseling for WFS1 variants and may contribute to parental anxiety, as well as increased medicalization and screening/testing for an affected child. Given that at least three unique heterozygous variants have been identified in association with isolated congenital cataracts (all of which are located in exon 8), functional studies may be of benefit to generate further evidence in support of the relationship between this phenotype and specific variants in WFS1. Additional biologic studies may help to elucidate the factors that drive phenotypic expression in patients with heterozygous variants in WFS1."
+      },
+      {
+        "offset": 8374,
+        "section": "CONCL",
+        "text": "Other genes that were originally thought to cause only autosomal recessive disorders are now being found to cause milder phenotypes in the presence of a single variant. It is important to note that genomic laboratories may not automatically report heterozygous variants for biallelic conditions. Accordingly, a collaborative process termed \"dynamic phenotyping\" (which can include detailed review of genomic findings with the ordering physician and/or refinement of the clinical description and associated HPO terms) may be beneficial when clinical suspicion remains high after uninformative exome studies."
+      },
+      {
+        "offset": 8985,
+        "section": "CONCL",
+        "text": "Ultimately, the increased availability of next-generation sequencing and the identification of new variants associated with congenital cataracts will allow practitioners to deliver a more timely diagnosis and anticipate future care needs for their patients. However, a better understanding of the biological mechanisms that drive the phenotypes associated with variants in the WFS1 gene is crucial for practitioners to provide anticipatory guidance to families."
+      },
+      {
+        "offset": 9447,
+        "section": "CONCL",
+        "text": "ADDITIONAL INFORMATION"
+      },
+      {
+        "offset": 9470,
+        "section": "CONCL",
+        "text": "Data Deposition and Access"
+      },
+      {
+        "offset": 9497,
+        "section": "CONCL",
+        "text": "The variant was submitted to ClinVar  and can be found under accession number SCV002564669.1."
+      },
+      {
+        "offset": 9593,
+        "section": "CONCL",
+        "text": "Ethics Statement"
+      },
+      {
+        "offset": 9610,
+        "section": "CONCL",
+        "text": "Molecular testing was performed as part of the Canadian Prairie Metabolic Network research study, which was approved by the Bannatyne Campus Biomedical Research Ethics Board at the University of Manitoba (HS25127). Verbal consent was obtained from the patient and the family for publication."
+      },
+      {
+        "offset": 9902,
+        "section": "CONCL",
+        "text": "Acknowledgments"
+      },
+      {
+        "offset": 9918,
+        "section": "CONCL",
+        "text": "Foremost, we thank the patient and family for their interest and collaboration. We acknowledge all contributors to the Canadian Prairie Metabolic Network research study , especially Erika Bloomfield for administrative assistance, Dr. Aneal Khan and Discovery DNA, Inc. for providing the whole-exome sequencing, and Dr. Beth Spriggs and Shared Health Genomics for providing the Sanger sequencing."
+      },
+      {
+        "offset": 10316,
+        "section": "CONCL",
+        "text": "Author Contributions"
+      },
+      {
+        "offset": 10337,
+        "section": "CONCL",
+        "text": "A.Kr. and J.E. prepared the original draft. W.I., J.L.J., and A.A.M. oversaw patient care. A.Kr., J.E., M.K., D.H., A.Kh., C.R.-G., and A.A.M. participated in genomic data collection, data analysis, and genetic interpretation. All authors read, revised, and approved the manuscript and its submission to CSH Molecular Case Studies."
+      },
+      {
+        "offset": 10669,
+        "section": "CONCL",
+        "text": "Funding"
+      },
+      {
+        "offset": 10677,
+        "section": "CONCL",
+        "text": "The Canadian Prairie Metabolic Network (CPMN) is supported by a Genome Canada Genomic Applied Partnership Program Grant and in-kind contributions from Discovery DNA, Inc., and Shared Health Manitoba/University of Manitoba."
+      },
+      {
+        "offset": 10900,
+        "section": "CONCL",
+        "text": "Competing Interest Statement"
+      },
+      {
+        "offset": 10929,
+        "section": "CONCL",
+        "text": "The authors have declared no competing interest."
+      },
+      {
+        "offset": 10978,
+        "section": "CONCL",
+        "text": "Referees"
+      },
+      {
+        "offset": 10987,
+        "section": "CONCL",
+        "text": "Qian Wang"
+      },
+      {
+        "offset": 10997,
+        "section": "CONCL",
+        "text": "Anonymous"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-a97998b7f7a4316d",
+    "object": "chat.completion",
+    "created": 1790521744,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0000519\",\"HP:0001324\",\"HP:0000639\",\"HP:0000486\",\"HP:0001132\",\"HP:0000518\",\"HP:0003323\",\"HP:0025406\",\"HP:0003236\",\"HP:0003198\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 3362,
+      "total_tokens": 3476,
+      "completion_tokens": 114,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0000519",
+        "HP:0001324",
+        "HP:0000639",
+        "HP:0000486",
+        "HP:0001132",
+        "HP:0000518",
+        "HP:0003323",
+        "HP:0025406",
+        "HP:0003236",
+        "HP:0003198"
+      ]
+    }
+  ],
+  "elapsed_seconds": 2.167,
+  "usage": {
+    "prompt_tokens": 3362,
+    "total_tokens": 3476,
+    "completion_tokens": 114,
+    "prompt_tokens_details": null
+  }
+}

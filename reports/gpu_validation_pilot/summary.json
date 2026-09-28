@@ -1,0 +1,201 @@
+{
+  "input": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\validation_input.jsonl",
+  "data": "D:\\Projects\\20260927_CHIP2026\\PatientPheX-V1-A\\PatientPheX-train.jsonl",
+  "output": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\validation_gpu.jsonl",
+  "input_sha256": "b23812ae5b9f2f16f7905ec0bff18f8c70c713adc9eebcbbcaabdebfc0655b69",
+  "model": "Qwen3-8B",
+  "documents": 8,
+  "new_requests": 8,
+  "gpu_documents": 8,
+  "cpu_documents": 0,
+  "all_documents_refined": true,
+  "elapsed_seconds": 40.287,
+  "entities_unchanged": true,
+  "source_gold_annotations_used": false,
+  "status": [
+    {
+      "pmc_id": "5574094",
+      "source": "gpu",
+      "elapsed_seconds": 4.755,
+      "prompt_report": {
+        "source_characters": 13313,
+        "covered_source_characters": 13313,
+        "source_is_excerpted": false,
+        "candidate_windows": 24,
+        "selected_windows": 24,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 17795,
+        "candidate_concepts": 32,
+        "patient_count": 1
+      },
+      "usage": {
+        "prompt_tokens": 4804,
+        "total_tokens": 5068,
+        "completion_tokens": 264,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "pmc_id": "5415817",
+      "source": "gpu",
+      "elapsed_seconds": 4.594,
+      "prompt_report": {
+        "source_characters": 15326,
+        "covered_source_characters": 15326,
+        "source_is_excerpted": false,
+        "candidate_windows": 27,
+        "selected_windows": 27,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 20198,
+        "candidate_concepts": 42,
+        "patient_count": 1
+      },
+      "usage": {
+        "prompt_tokens": 5144,
+        "total_tokens": 5398,
+        "completion_tokens": 254,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "pmc_id": "6491447",
+      "source": "gpu",
+      "elapsed_seconds": 1.756,
+      "prompt_report": {
+        "source_characters": 13504,
+        "covered_source_characters": 13504,
+        "source_is_excerpted": false,
+        "candidate_windows": 31,
+        "selected_windows": 31,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 16967,
+        "candidate_concepts": 12,
+        "patient_count": 1
+      },
+      "usage": {
+        "prompt_tokens": 4107,
+        "total_tokens": 4191,
+        "completion_tokens": 84,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "pmc_id": "10789033",
+      "source": "gpu",
+      "elapsed_seconds": 3.457,
+      "prompt_report": {
+        "source_characters": 15968,
+        "covered_source_characters": 15968,
+        "source_is_excerpted": false,
+        "candidate_windows": 46,
+        "selected_windows": 46,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 20998,
+        "candidate_concepts": 30,
+        "patient_count": 1
+      },
+      "usage": {
+        "prompt_tokens": 5261,
+        "total_tokens": 5445,
+        "completion_tokens": 184,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "pmc_id": "6063015",
+      "source": "gpu",
+      "elapsed_seconds": 8.416,
+      "prompt_report": {
+        "source_characters": 16951,
+        "covered_source_characters": 16951,
+        "source_is_excerpted": false,
+        "candidate_windows": 33,
+        "selected_windows": 33,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 22143,
+        "candidate_concepts": 32,
+        "patient_count": 4
+      },
+      "usage": {
+        "prompt_tokens": 6032,
+        "total_tokens": 6516,
+        "completion_tokens": 484,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "pmc_id": "12405443",
+      "source": "gpu",
+      "elapsed_seconds": 8.623,
+      "prompt_report": {
+        "source_characters": 16224,
+        "covered_source_characters": 16224,
+        "source_is_excerpted": false,
+        "candidate_windows": 29,
+        "selected_windows": 29,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 21181,
+        "candidate_concepts": 31,
+        "patient_count": 4
+      },
+      "usage": {
+        "prompt_tokens": 5548,
+        "total_tokens": 6050,
+        "completion_tokens": 502,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "pmc_id": "5866036",
+      "source": "gpu",
+      "elapsed_seconds": 3.787,
+      "prompt_report": {
+        "source_characters": 31518,
+        "covered_source_characters": 31518,
+        "source_is_excerpted": false,
+        "candidate_windows": 55,
+        "selected_windows": 55,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 36655,
+        "candidate_concepts": 14,
+        "patient_count": 3
+      },
+      "usage": {
+        "prompt_tokens": 9389,
+        "total_tokens": 9555,
+        "completion_tokens": 166,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "pmc_id": "5773845",
+      "source": "gpu",
+      "elapsed_seconds": 4.562,
+      "prompt_report": {
+        "source_characters": 5475,
+        "covered_source_characters": 5475,
+        "source_is_excerpted": false,
+        "candidate_windows": 12,
+        "selected_windows": 12,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 9047,
+        "candidate_concepts": 21,
+        "patient_count": 5
+      },
+      "usage": {
+        "prompt_tokens": 2562,
+        "total_tokens": 2837,
+        "completion_tokens": 275,
+        "prompt_tokens_details": null
+      }
+    }
+  ]
+}

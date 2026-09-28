@@ -1,0 +1,665 @@
+{
+  "pmc_id": "11235872",
+  "identity": "7957202ba9ffdee7b3f8ecf045c479738b80f373e519729ad40a9b69dd38278b",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 13649,
+    "covered_source_characters": 13649,
+    "source_is_excerpted": false,
+    "candidate_windows": 35,
+    "selected_windows": 35,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 19682,
+    "candidate_concepts": 24,
+    "patient_count": 14
+  },
+  "prompt": {
+    "pmc_id": "11235872",
+    "patients": [
+      {
+        "patient_id": "OI-1",
+        "mentions": [
+          {
+            "text": "Individual I-1",
+            "offset": 9332
+          }
+        ]
+      },
+      {
+        "patient_id": "OII-1",
+        "mentions": [
+          {
+            "text": "Individual II-1",
+            "offset": 9435
+          }
+        ]
+      },
+      {
+        "patient_id": "OII-2",
+        "mentions": [
+          {
+            "text": "II-2",
+            "offset": 9507
+          }
+        ]
+      },
+      {
+        "patient_id": "OII-3",
+        "mentions": [
+          {
+            "text": "II-3",
+            "offset": 9513
+          },
+          {
+            "text": "individual II-3",
+            "offset": 9736
+          }
+        ]
+      },
+      {
+        "patient_id": "OII-4",
+        "mentions": [
+          {
+            "text": "II-4",
+            "offset": 9523
+          }
+        ]
+      },
+      {
+        "patient_id": "OIII-1",
+        "mentions": [
+          {
+            "text": "Individuals III-1",
+            "offset": 9862
+          }
+        ]
+      },
+      {
+        "patient_id": "OIII-2",
+        "mentions": [
+          {
+            "text": "III-2",
+            "offset": 9903
+          }
+        ]
+      },
+      {
+        "patient_id": "OIII-3",
+        "mentions": [
+          {
+            "text": "52-year-old father",
+            "offset": 1023
+          },
+          {
+            "text": "The 51-year-old father",
+            "offset": 8186
+          }
+        ]
+      },
+      {
+        "patient_id": "OIII-4",
+        "mentions": [
+          {
+            "text": "Individual III-4",
+            "offset": 10237
+          }
+        ]
+      },
+      {
+        "patient_id": "OIII-5",
+        "mentions": [
+          {
+            "text": "III-5",
+            "offset": 9910
+          }
+        ]
+      },
+      {
+        "patient_id": "OIII-6",
+        "mentions": [
+          {
+            "text": "III-6",
+            "offset": 9921
+          }
+        ]
+      },
+      {
+        "patient_id": "OIV-1",
+        "mentions": [
+          {
+            "text": "the 8-year-old proband",
+            "offset": 899
+          },
+          {
+            "text": "proband",
+            "offset": 7681
+          },
+          {
+            "text": "IV-1",
+            "offset": 10862
+          }
+        ]
+      },
+      {
+        "patient_id": "OIV-2",
+        "mentions": [
+          {
+            "text": "Individual IV-2",
+            "offset": 10730
+          }
+        ]
+      },
+      {
+        "patient_id": "OIV-3",
+        "mentions": [
+          {
+            "text": "12-year-old daughter",
+            "offset": 10477
+          },
+          {
+            "text": "IV-3",
+            "offset": 10871
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0001939": [
+        "metabolic disorder"
+      ],
+      "HP:0001250": [
+        "seizures",
+        "epilepsy",
+        "Epilepsy"
+      ],
+      "HP:0000708": [
+        "behavioral disturbances",
+        "psychiatric disturbances"
+      ],
+      "HP:0001256": [
+        "mild intellectual disability"
+      ],
+      "HP:0004302": [
+        "disabilities"
+      ],
+      "HP:0033715": [
+        "hippocampal sclerosis"
+      ],
+      "HP:0007018": [
+        "attention-deficit/hyperactivity disorder",
+        "ADHD"
+      ],
+      "HP:0002385": [
+        "paraparesis"
+      ],
+      "HP:0012486": [
+        "myelitis"
+      ],
+      "HP:0011972": [
+        "hypoglycorrhachia"
+      ],
+      "HP:0001263": [
+        "developmental delay"
+      ],
+      "HP:0001249": [
+        "intellectual disability",
+        "ID",
+        "intelligence quotient"
+      ],
+      "HP:0100022": [
+        "movement disorders"
+      ],
+      "HP:0001251": [
+        "ataxia"
+      ],
+      "HP:0000252": [
+        "microcephaly"
+      ],
+      "HP:0001288": [
+        "gait disturbance",
+        "gait disturbances"
+      ],
+      "HP:0001268": [
+        "cognitive decline"
+      ],
+      "HP:0007359": [
+        "focal seizures"
+      ],
+      "HP:0011147": [
+        "typical absences"
+      ],
+      "HP:0002373": [
+        "febrile seizures"
+      ],
+      "HP:0002133": [
+        "status epilepticus"
+      ],
+      "HP:0002313": [
+        "spastic paraparesis"
+      ],
+      "HP:0100660": [
+        "dyskinesia"
+      ],
+      "HP:0000707": [
+        "neurological symptoms"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "OI-1",
+        "phenotype": [
+          "HP:0001249",
+          "HP:0001268"
+        ]
+      },
+      {
+        "patient_id": "OII-1",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OII-2",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OII-3",
+        "phenotype": [
+          "HP:0001249"
+        ]
+      },
+      {
+        "patient_id": "OII-4",
+        "phenotype": [
+          "HP:0001250"
+        ]
+      },
+      {
+        "patient_id": "OIII-1",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OIII-2",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OIII-3",
+        "phenotype": [
+          "HP:0001250",
+          "HP:0007018",
+          "HP:0002385",
+          "HP:0012486",
+          "HP:0011972",
+          "HP:0001249",
+          "HP:0001288",
+          "HP:0002313",
+          "HP:0100660",
+          "HP:0000707"
+        ]
+      },
+      {
+        "patient_id": "OIII-4",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OIII-5",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OIII-6",
+        "phenotype": [
+          "HP:0000708",
+          "HP:0007359"
+        ]
+      },
+      {
+        "patient_id": "OIV-1",
+        "phenotype": [
+          "HP:0001250",
+          "HP:0000708",
+          "HP:0001256",
+          "HP:0004302",
+          "HP:0033715",
+          "HP:0007018",
+          "HP:0001249",
+          "HP:0001288",
+          "HP:0007359",
+          "HP:0011147",
+          "HP:0002373",
+          "HP:0002133"
+        ]
+      },
+      {
+        "patient_id": "OIV-2",
+        "phenotype": [
+          "HP:0001288"
+        ]
+      },
+      {
+        "patient_id": "OIV-3",
+        "phenotype": [
+          "HP:0001250",
+          "HP:0001249"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Glucose transporter-1 deficiency syndrome with extreme phenotypic variability in a five-generation family carrying a novel  SLC2A1  variant"
+      },
+      {
+        "offset": 144,
+        "section": "ABSTRACT",
+        "text": "Abstract"
+      },
+      {
+        "offset": 153,
+        "section": "ABSTRACT",
+        "text": "Background and purpose"
+      },
+      {
+        "offset": 176,
+        "section": "ABSTRACT",
+        "text": "Glucose transporter-1 (GLUT1) deficiency syndrome (GLUT1-DS) is a metabolic disorder due to reduced expression of GLUT1, a glucose transporter of the central nervous system. GLUT1-DS is caused by heterozygous SLC2A1 variants that mostly arise de novo. Here, we report a large family with heterogeneous phenotypes related to a novel SLC2A1 variant."
+      },
+      {
+        "offset": 530,
+        "section": "ABSTRACT",
+        "text": "Methods"
+      },
+      {
+        "offset": 538,
+        "section": "ABSTRACT",
+        "text": "We present clinical and genetic features of a five-generation family with GLUT1-DS."
+      },
+      {
+        "offset": 626,
+        "section": "ABSTRACT",
+        "text": "Results"
+      },
+      {
+        "offset": 634,
+        "section": "ABSTRACT",
+        "text": "The 14 (nine living) affected members had heterogeneous phenotypes, including seizures (11/14), behavioral disturbances (5/14), mild intellectual disability (3/14), and/or gait disabilities (2/14). Brain magnetic resonance imaging revealed hippocampal sclerosis in the 8-year-old proband, who also had drug-responsive absences associated with attention-deficit/hyperactivity disorder. His 52-year-old father, who had focal epilepsy since childhood, developed paraparesis related to a reversible myelitis associated with hypoglycorrhachia. Molecular study detected a novel heterozygous missense variant (c.446C>T) in exon 4 of SLC2A1 (NM: 006516.2) that cosegregated with the illness. This variant causes an amino acid replacement (p.Pro149Leu) at the fourth transmembrane segment of GLUT1, an important domain located at its catalytic core."
+      },
+      {
+        "offset": 1487,
+        "section": "ABSTRACT",
+        "text": "Conclusions"
+      },
+      {
+        "offset": 1499,
+        "section": "ABSTRACT",
+        "text": "Our study illustrates the extremely heterogenous phenotypes in familial GLUT1-DS, ranging from milder classic phenotypes to more subtle neurological disorder including paraparesis. This novel SLC2A1 variant (c.446C>T) provides new insight into the pathophysiology of GLUT1-DS."
+      },
+      {
+        "offset": 1780,
+        "section": "INTRO",
+        "text": "INTRODUCTION"
+      },
+      {
+        "offset": 1793,
+        "section": "INTRO",
+        "text": "Glucose transporter 1 (GLUT1) deficiency syndrome (GLUT1-DS) results from impaired glucose transport into the brain, due to mutations of the SLC2A1 gene on chromosome 1, encoding GLUT1. The GLUT1-DS \"classical phenotype\" includes developmental delay, intellectual disability (ID), movement disorders, ataxia, epilepsy, and microcephaly. Since its first description, a broader spectrum of GLUT1-DS phenotypes has increasingly been recognized, and hypoglycorrhachia is a key diagnostic feature. In GLUT1-DS patients, especially those with epilepsy or movement disorders, ketogenic diet may achieve clinical benefit."
+      },
+      {
+        "offset": 2419,
+        "section": "INTRO",
+        "text": "GLUT1-DS usually presents as sporadic disease, with de novo SLC2A1 variants leading to haploinsufficiency and conferring symptomatic heterozygosity. Approximately 10% of them are inherited in an autosomal dominant pattern, whereas an autosomal recessive pattern was described rarely."
+      },
+      {
+        "offset": 2705,
+        "section": "INTRO",
+        "text": "Among SLC2A1 pathogenic variants, approximately 300 nonsense, frameshift, and splice-sites variants result in 50% loss of function of GLUT1 and determine classical phenotype. Conversely, missense variants with 50%-70% GLUT1 residual function lead more often to mild-to-moderate phenotypes. However, the genotype-phenotype correlation remained elusive."
+      },
+      {
+        "offset": 3067,
+        "section": "INTRO",
+        "text": "Here, we report a large five-generation family segregating a novel SLC2A1 missense variant and aim to better define mild heterogeneous and atypical presentations consistent with GLUT1-DS."
+      },
+      {
+        "offset": 3259,
+        "section": "METHODS",
+        "text": "MATERIALS AND METHODS"
+      },
+      {
+        "offset": 3281,
+        "section": "METHODS",
+        "text": "The family (Figure 1a) originated in Calabria, southern Italy, and contained 14 (nine living) affected members (six men, mean age = 38.66 +- 28.05 years). The clinical data were compiled from detailed accounts given by family members at the time of investigation and from the patients' medical records (Table 1). Six of nine living affected members underwent a comprehensive evaluation, the procedures of which were reported elsewhere. The diagnosis of epilepsy was based on the criteria of the International League Against Epilepsy."
+      },
+      {
+        "offset": 3827,
+        "section": "FIG",
+        "text": "(a) Pedigree of the family. (b-e) In the proband, brain magnetic resonance imaging (MRI) gave evidence of atrophy (b) and hyperintensities (c) of the right hippocampal formation. In the father, spinal cord MRI demonstrated hyperintense lesion at T8/T9 level on short tau inversion recovery (STIR) sequences (d) with contrast enhancement on T1 sequences (e). (f) Visual presentation of MutScore prediction for SLC2A1 (https://iob-genetic.shinyapps.io/mutscore). All variants detected in ClinVar were reported: pathogenic and likely pathogenic (PLP), benign and likely benign (BLB), uncertain significance (VUS), and conflicting interpretation (CI). Our c.446C>T (p.P149L) variant is highlighted with red. aa, aminoacid; ADHD, attention-deficit/hyperactivity disorder; AF, allelic frequency; FLAIR, fluid-attenuated inversion recovery; LoF, loss of function."
+      },
+      {
+        "offset": 4692,
+        "section": "TABLE",
+        "text": "Clinical characterization of family members with glucose transporter 1 deficiency syndrome."
+      },
+      {
+        "offset": 6414,
+        "section": "METHODS",
+        "text": "Genetic analysis"
+      },
+      {
+        "offset": 6431,
+        "section": "METHODS",
+        "text": "Genetic analysis is summarized in Appendix S1. Molecular karyotyping (array comparative genomic hybridization [array-CGH]) was conducted on peripheral blood DNA from the proband. Afterward, an exome sequencing panel (ES) of 72 genes for epilepsy was applied for the secondary bioinformatic analysis on the Sophia DDM online platform for automatic annotation and variant filtering."
+      },
+      {
+        "offset": 6815,
+        "section": "METHODS",
+        "text": "We interpreted the identified variants according to several in silico tools (Sophia, VarSome), population databases (gnomAD v4.0), and disease database (ClinVar). Thus, we applied American College of Medical Genetics and Genomics (ACMG) criteria to classify the variant. Sanger sequencing confirmed the variant in the proband, parents, and other family members."
+      },
+      {
+        "offset": 7177,
+        "section": "METHODS",
+        "text": "Standard protocol approvals, registrations, and patient consents"
+      },
+      {
+        "offset": 7242,
+        "section": "METHODS",
+        "text": "This study was approved by our institution's ethics committee and performed in accordance with the ethical standards laid down in the 1964 Declaration of Helsinki and its later amendments. We obtained patients' informed consent. Data were treated according to the European regulation General Data Protection Regulation n. 2016/679."
+      },
+      {
+        "offset": 7574,
+        "section": "RESULTS",
+        "text": "RESULTS"
+      },
+      {
+        "offset": 7582,
+        "section": "RESULTS",
+        "text": "Pregnancy, delivery, and the neonatal period were uneventful in all living members. The 8-year-old proband (IV-1) developed, at age 4 years, childhood absence epilepsy (CAE) with attention-deficit/hyperactivity disorder (ADHD) and mild ID (Wechsler Intelligence Scale for Children edition IV total intelligence quotient [IQ] = 85-95). Electroencephalography (EEG) revealed 3-Hz generalized spike-wave discharges on normal background activity. Brain magnetic resonance imaging (MRI) detected right hippocampal sclerosis (HS; Figure 1b,c). In the past 18 months, ethosuximide (1 g/day) had been effective. The 51-year-old father (Patient III-3) developed focal occipital epilepsy at age 12 years, well treated with carbamazepine (600 mg/day). At the age of 46 years, he developed acute self-limiting paraparesis. He had no other comorbidities or prodromal illness. Spine MRI revealed increased T2 signal in the spinal cord with contrast enhancement at the T8-T9 level (Figure 1d,e). An extensive laboratory and cerebrospinal fluid (CSF) workup ruled out infectious, toxic, metabolic, and immune-mediated disorders. Oligoclonal bands, anti-aquaporin-4-IgG, and anti-myelin-oligodendrocyte-glycoprotein-IgG were absent on serum and CSF. Brain MRI, electromyography, and nerve conduction studies were not contributory. At 38-month follow-up, neurological examination showed a mild gait disturbance; EEG, and brain and spine MRI were all unremarkable. We retrospectively calculated the glucose CSF-to-blood ratio and found a value of 0.40 (fasting glucose = 106 mg/dL, normal range = 74-106 mg/dL; CSF glucose = 45 mg/dL, normal range = 40-75), with normal lactate."
+      },
+      {
+        "offset": 9332,
+        "section": "RESULTS",
+        "text": "Individual I-1 died at the age 83 years; he had mild ID and developed cognitive decline later in life. Individual II-1 is still alive at the age 80 years, whereas individuals II-2, II-3, and II-4 died at the ages of 78, 77, and 82 years respectively. All had an almost identical epilepsy phenotype consisting of focal (head and eye version) to bilateral tonic-clonic attacks, starting in adulthood. Only individual II-3 had mild ID. The remaining three had normal intelligence (based on the clinical impression of the relatives). Individuals III-1, who died at 47 years, III-2, III-5, and III-6, aged 53, 60, and 62 years respectively, had focal seizures with head and eye version, viscerosensory auras, and occasional evolution into bilateral tonic-clonic attacks, starting in adulthood, with mild-to-moderate psychiatric disturbances in all but individual III-2."
+      },
+      {
+        "offset": 10237,
+        "section": "RESULTS",
+        "text": "Individual III-4, aged 50 years, had mild short-term and working-memory deficits on cognitive assessment with no impact on daily life activities and unremarkable remaining neurological examination. He also had normal EEG and brain MRI. His 12-year-old daughter (IV-3) presented CAE at age 8 years, with mild ID (IQ = 90) and unremarkable neurological examination and brain MRI. EEG showed generalized sharp waves at 3 Hz on normal background activity. Ethosuximide (500 mg/day) was effective. Individual IV-2, 16 years of age, developed gait disturbances since age 5 years with no ID or psychiatric disturbances. In patients IV-1 and IV-3, the ketogenic diet improved behavior and seizures, but it was stopped after 4 months because of noncompliance."
+      },
+      {
+        "offset": 11024,
+        "section": "RESULTS",
+        "text": "Genetic analysis"
+      },
+      {
+        "offset": 11041,
+        "section": "RESULTS",
+        "text": "In the proband, array-CGH was unremarkable. The ES panel revealed a heterozygous missense variant c.446C>T (p. Pro149Leu) in exon 4 of SLC2A1 (NM_006516.2), inherited from his father (III-3) and confirmed by Sanger sequencing. Exon 4 is a mutational hotspot, harboring approximately one third of SLC2A1 mutations in GLUT1-DS. It encodes for a highly conserved domain, among all known sugar transporters from different species, TM4, at the catalytic core. The subsequent aminoacidic substitution from a proline to a leucine alters GLUT1 structure and function. This c.446C>T variant has not been previously reported in ClinVar, in Genome Aggregation Database version 4.0, or in population studies (ESP5400: NHLBI Exome Sequencing Project and 1000 Genomes Project)."
+      },
+      {
+        "offset": 11811,
+        "section": "RESULTS",
+        "text": "Thus, according to the ACMG, its location in a mutational hotspot with critical and well-established functional domain (PM1), the absence from controls (PM2_Supporting), its cosegregation with disease in multiple affected family members (PP1_Moderate), and in silico tools (aggregated metaRNN score = 0.9918, pathogenic strong) that unanimously support the deleterious effects of the aminoacidic replacement on GLUT1 structure and function (PP3) demonstrated that this novel variant can be classified as a likely pathogenic variant (Figure 1f, Appendix S1)."
+      },
+      {
+        "offset": 12377,
+        "section": "DISCUSS",
+        "text": "DISCUSSION"
+      },
+      {
+        "offset": 12388,
+        "section": "DISCUSS",
+        "text": "This family extends the clinical spectrum of GLUT1-DS, ranging from milder classic phenotypes to more subtle neurological disorder carriers, further strengthening the idea that familial GLUT1-DS is less severe than the sporadic form. Different from the classical phenotype, our family depicted heterogeneous association of mild, drug-responsive epilepsies and subtle cognitive, psychiatric, and gait disturbances. In the proband who developed typical absences and ADHD, MRI revealed HS. We are unaware of other reports of HS in GLUT1-DS. Several factors may contribute to HS, such as prolonged febrile seizures, and repetitive generalized or focal seizures, especially during status epilepticus. In our case, we have no definite explanation of this finding, as the proband did not experience febrile, prolonged, or repetitive seizures. Interestingly, other than brain-blood barrier, GLUT1 receptors are widely but heterogeneously expressed in neurons, astrocytes, and oligodendroglial and microglial cells. Both preclinical and human studies demonstrated a susceptibility of mesial temporal cortex to GLUT1 defect. The transgenic mouse model of GLUT1-DS showed decreased hippocampal volume, whereas 18F-fluorodeoxyglucose positron emission tomography quantitative analysis demonstrated a more prominent hypometabolism over the mesial temporal cortex, suggesting its susceptibility to GLUT1 defect. Thus, these findings suggest a direct causal relationship between HS and GLUT1 defect."
+      },
+      {
+        "offset": 13887,
+        "section": "DISCUSS",
+        "text": "Overall, appreciation of atypical GLUT1-DS phenotypes is important from a diagnostic perspective and might also offer insights into the mechanisms by which different variants cause disease. In this regard, the proband's father developed an unusual phenotype with focal epilepsy and self-limiting acute paraparesis. Only few reports have addressed the causative role of SLC2A1 mutations in spastic paraparesis, direct or more often combined with complex phenotype, including paroxysmal exercise-induced dyskinesia, ID, and epilepsy. To our knowledge, this is the first case of self-limiting paraparesis in a subject carrying an SLC2A1 missense variant. Thus, these findings emphasize the importance of considering GLUT1-DS in the diagnostic workup of patients with transient acute neurological symptoms, especially if associated with prior epilepsy. Although we cannot rule out the incidental nature of this evidence, the glucose CSF-to-blood ratio below the cutoff and genetic analysis are convincing that the acute paraparesis is part of GLUT1-DS."
+      },
+      {
+        "offset": 14952,
+        "section": "DISCUSS",
+        "text": "The heterozygous missense variant (c.446C>T) is in a critical domain at the catalytic core of GLUT1 and has a deleterious effect on structure and function. Missense variants constitute approximately 40% of SLC2A1 mutations and are often related to mild-to-moderate phenotype. Probably, the extremely heterogeneous phenotypes of family members carrying the same mutation indicate that secondary genes and other modifying factors may modulate the expression level of GLUT1. It is also possible that the wild-type SLC2A1 allele might modify the phenotypic expression of the mutant allele and thus contribute to heterogeneity in affected GLUT1-DS families."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-a33ef834628e4f29",
+    "object": "chat.completion",
+    "created": 1790521866,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"association\": [\n    {\n      \"patient_id\": \"OI-1\",\n      \"phenotype\": [\"HP:0001249\", \"HP:0001268\"]\n    },\n    {\n      \"patient_id\": \"OII-1\",\n      \"phenotype\": []\n    },\n    {\n      \"patient_id\": \"OII-2\",\n      \"phenotype\": []\n    },\n    {\n      \"patient_id\": \"OII-3\",\n      \"phenotype\": [\"HP:0001249\"]\n    },\n    {\n      \"patient_id\": \"OII-4\",\n      \"phenotype\": [\"HP:0001250\"]\n    },\n    {\n      \"patient_id\": \"OIII-1\",\n      \"phenotype\": []\n    },\n    {\n      \"patient_id\": \"OIII-2\",\n      \"phenotype\": []\n    },\n    {\n      \"patient_id\": \"OIII-3\",\n      \"phenotype\": [\"HP:0001250\", \"HP:0007018\", \"HP:0002385\", \"HP:0012486\", \"HP:0011972\", \"HP:0001249\", \"HP:0001288\", \"HP:0002313\", \"HP:0100660\", \"HP:0000707\"]\n    },\n    {\n      \"patient_id\": \"OIII-4\",\n      \"phenotype\": []\n    },\n    {\n      \"patient_id\": \"OIII-5\",\n      \"phenotype\": []\n    },\n    {\n      \"patient_id\": \"OIII-6\",\n      \"phenotype\": [\"HP:0000708\", \"HP:0007359\"]\n    },\n    {\n      \"patient_id\": \"OIV-1\",\n      \"phenotype\": [\"HP:0001250\", \"HP:0000708\", \"HP:0001256\", \"HP:0004302\", \"HP:0033715\", \"HP:0007018\", \"HP:0001249\", \"HP:0001288\", \"HP:0007359\", \"HP:0011147\", \"HP:0002373\", \"HP:0002133\"]\n    },\n    {\n      \"patient_id\": \"OIV-2\",\n      \"phenotype\": [\"HP:0001288\"]\n    },\n    {\n      \"patient_id\": \"OIV-3\",\n      \"phenotype\": [\"HP:0001250\", \"HP:0001249\"]\n    }\n  ]\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 5250,
+      "total_tokens": 5886,
+      "completion_tokens": 636,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "OI-1",
+      "phenotype": [
+        "HP:0001249",
+        "HP:0001268"
+      ]
+    },
+    {
+      "patient_id": "OII-1",
+      "phenotype": []
+    },
+    {
+      "patient_id": "OII-2",
+      "phenotype": []
+    },
+    {
+      "patient_id": "OII-3",
+      "phenotype": [
+        "HP:0001249"
+      ]
+    },
+    {
+      "patient_id": "OII-4",
+      "phenotype": [
+        "HP:0001250"
+      ]
+    },
+    {
+      "patient_id": "OIII-1",
+      "phenotype": []
+    },
+    {
+      "patient_id": "OIII-2",
+      "phenotype": []
+    },
+    {
+      "patient_id": "OIII-3",
+      "phenotype": [
+        "HP:0001250",
+        "HP:0007018",
+        "HP:0002385",
+        "HP:0012486",
+        "HP:0011972",
+        "HP:0001249",
+        "HP:0001288",
+        "HP:0002313",
+        "HP:0100660",
+        "HP:0000707"
+      ]
+    },
+    {
+      "patient_id": "OIII-4",
+      "phenotype": []
+    },
+    {
+      "patient_id": "OIII-5",
+      "phenotype": []
+    },
+    {
+      "patient_id": "OIII-6",
+      "phenotype": [
+        "HP:0000708",
+        "HP:0007359"
+      ]
+    },
+    {
+      "patient_id": "OIV-1",
+      "phenotype": [
+        "HP:0001250",
+        "HP:0000708",
+        "HP:0001256",
+        "HP:0004302",
+        "HP:0033715",
+        "HP:0007018",
+        "HP:0001249",
+        "HP:0001288",
+        "HP:0007359",
+        "HP:0011147",
+        "HP:0002373",
+        "HP:0002133"
+      ]
+    },
+    {
+      "patient_id": "OIV-2",
+      "phenotype": [
+        "HP:0001288"
+      ]
+    },
+    {
+      "patient_id": "OIV-3",
+      "phenotype": [
+        "HP:0001250",
+        "HP:0001249"
+      ]
+    }
+  ],
+  "elapsed_seconds": 22.338,
+  "usage": {
+    "prompt_tokens": 5250,
+    "total_tokens": 5886,
+    "completion_tokens": 636,
+    "prompt_tokens_details": null
+  }
+}

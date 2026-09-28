@@ -1,0 +1,651 @@
+{
+  "pmc_id": "12273622",
+  "identity": "9bc2e85b3c5a5cc4d79f50a6ee9624db669046121b298edaa99455d71b9c8591",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 39217,
+    "covered_source_characters": 39217,
+    "source_is_excerpted": false,
+    "candidate_windows": 58,
+    "selected_windows": 58,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 45598,
+    "candidate_concepts": 30,
+    "patient_count": 5
+  },
+  "prompt": {
+    "pmc_id": "12273622",
+    "patients": [
+      {
+        "patient_id": "OP1",
+        "mentions": [
+          {
+            "text": "patient",
+            "offset": 873
+          },
+          {
+            "text": "patient 1",
+            "offset": 6359
+          },
+          {
+            "text": "Patient",
+            "offset": 18890
+          },
+          {
+            "text": "P1",
+            "offset": 18898
+          }
+        ]
+      },
+      {
+        "patient_id": "OP2",
+        "mentions": [
+          {
+            "text": "P2",
+            "offset": 20254
+          },
+          {
+            "text": "woman",
+            "offset": 20284
+          },
+          {
+            "text": "Patient",
+            "offset": 22290
+          }
+        ]
+      },
+      {
+        "patient_id": "OP3",
+        "mentions": [
+          {
+            "text": "P3",
+            "offset": 20741
+          },
+          {
+            "text": "woman",
+            "offset": 20762
+          }
+        ]
+      },
+      {
+        "patient_id": "OP4",
+        "mentions": [
+          {
+            "text": "mother",
+            "offset": 20974
+          },
+          {
+            "text": "P4",
+            "offset": 20982
+          }
+        ]
+      },
+      {
+        "patient_id": "OP5",
+        "mentions": [
+          {
+            "text": "Patient",
+            "offset": 24536
+          },
+          {
+            "text": "P5",
+            "offset": 35546
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0100022": [
+        "Movement Disorders",
+        "abnormal movements",
+        "movement disorders"
+      ],
+      "HP:0031500": [
+        "mass",
+        "Mass"
+      ],
+      "HP:0001263": [
+        "developmental delay"
+      ],
+      "HP:0001332": [
+        "dystonia"
+      ],
+      "HP:0001257": [
+        "spasticity"
+      ],
+      "HP:0001258": [
+        "spastic paraplegia"
+      ],
+      "HP:0100021": [
+        "cerebral palsy",
+        "CP"
+      ],
+      "HP:0007325": [
+        "generalized dystonia"
+      ],
+      "HP:0012759": [
+        "neurodevelopmental impairment",
+        "neurodevelopmental impairments",
+        "neurodevelopmental abnormalities"
+      ],
+      "HP:0002061": [
+        "lower-limb spasticity",
+        "lower-extremity spasticity"
+      ],
+      "HP:0100543": [
+        "cognitive impairment"
+      ],
+      "HP:0001252": [
+        "hypotonia"
+      ],
+      "HP:0001270": [
+        "delayed motor milestones",
+        "motor delay"
+      ],
+      "HP:0001336": [
+        "myoclonus"
+      ],
+      "HP:0007256": [
+        "pyramidal syndrome",
+        "pyramidal signs"
+      ],
+      "HP:0002064": [
+        "spastic gait"
+      ],
+      "HP:0002191": [
+        "progressive spasticity"
+      ],
+      "HP:0002527": [
+        "falls"
+      ],
+      "HP:0001256": [
+        "mild intellectual disability"
+      ],
+      "HP:0009734": [
+        "optic glioma"
+      ],
+      "HP:0002313": [
+        "spastic paraparesis"
+      ],
+      "HP:0000750": [
+        "delayed language development"
+      ],
+      "HP:0006889": [
+        "borderline intellectual disability"
+      ],
+      "HP:0000729": [
+        "autism spectrum disorder"
+      ],
+      "HP:0002540": [
+        "able to walk"
+      ],
+      "HP:0002530": [
+        "truncal dystonia"
+      ],
+      "HP:0000473": [
+        "cervical dystonia"
+      ],
+      "HP:0001298": [
+        "encephalopathies"
+      ],
+      "HP:0004302": [
+        "disability"
+      ],
+      "HP:0003287": [
+        "mitochondrial dysfunction"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "OP1",
+        "phenotype": [
+          "HP:0001263",
+          "HP:0001332",
+          "HP:0001257",
+          "HP:0001258",
+          "HP:0100021",
+          "HP:0007325"
+        ]
+      },
+      {
+        "patient_id": "OP2",
+        "phenotype": [
+          "HP:0001258",
+          "HP:0001270",
+          "HP:0007256",
+          "HP:0002064",
+          "HP:0002191",
+          "HP:0002527",
+          "HP:0001256",
+          "HP:0009734"
+        ]
+      },
+      {
+        "patient_id": "OP3",
+        "phenotype": [
+          "HP:0012759",
+          "HP:0002313",
+          "HP:0000750",
+          "HP:0006889",
+          "HP:0000729"
+        ]
+      },
+      {
+        "patient_id": "OP4",
+        "phenotype": [
+          "HP:0100022",
+          "HP:0001332",
+          "HP:0100021",
+          "HP:0002061",
+          "HP:0001270",
+          "HP:0002540",
+          "HP:0002530",
+          "HP:0000473",
+          "HP:0003287"
+        ]
+      },
+      {
+        "patient_id": "OP5",
+        "phenotype": [
+          "HP:0100021",
+          "HP:0007325"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Expanding the Allelic and Clinical Heterogeneity of Movement Disorders Linked to Defects of Mitochondrial Adenosine Triphosphate Synthase"
+      },
+      {
+        "offset": 138,
+        "section": "ABSTRACT",
+        "text": "Abstract"
+      },
+      {
+        "offset": 147,
+        "section": "ABSTRACT",
+        "text": "Background"
+      },
+      {
+        "offset": 158,
+        "section": "ABSTRACT",
+        "text": "Defects of mitochondrial ATP synthase (ATPase) represent an emerging, yet incompletely understood group of neurodevelopmental diseases with abnormal movements."
+      },
+      {
+        "offset": 318,
+        "section": "ABSTRACT",
+        "text": "Objective"
+      },
+      {
+        "offset": 328,
+        "section": "ABSTRACT",
+        "text": "The aim of this study was to redefine the phenotypic and mutational spectrum of movement disorders linked to the ATPase subunit-encoding genes ATP5F1A and ATP5F1B."
+      },
+      {
+        "offset": 494,
+        "section": "ABSTRACT",
+        "text": "Methods"
+      },
+      {
+        "offset": 502,
+        "section": "ABSTRACT",
+        "text": "We recruited regionally distant patients who had been genome or exome sequenced. Fibroblast cultures from two patients were established to perform RNA sequencing, immunoblotting, mass spectrometry-based high-throughput quantitative proteomics, and ATPase activity assays. In silico three-dimensional missense variant modeling was performed."
+      },
+      {
+        "offset": 849,
+        "section": "ABSTRACT",
+        "text": "Results"
+      },
+      {
+        "offset": 857,
+        "section": "ABSTRACT",
+        "text": "We identified a patient with developmental delay, myoclonic dystonia, and spasticity who carried a heterozygous frameshift c.1404del (p.Glu469Serfs*3) variant in ATP5F1A. The patient's cells exhibited significant reductions in ATP5F1A mRNA, underexpression of the alpha-subunit of ATPase in association with other aberrantly expressed ATPase components, and compromised ATPase activity. In addition, a novel deleterious heterozygous ATP5F1A missense c.1252G>A (p.Gly418Arg) variant was discovered, shared by three patients from two families with hereditary spastic paraplegia (HSP). This variant mapped to a functionally important intersubunit communication site. A third heterozygous variant, c.1074+1G>T, affected a canonical donor splice site of ATP5F1B and resulted in exon skipping with significantly diminished ATP5F1B mRNA levels, as well as impaired ATPase activity. The associated phenotype consisted of cerebral palsy (CP) with prominent generalized dystonia."
+      },
+      {
+        "offset": 1827,
+        "section": "ABSTRACT",
+        "text": "Conclusions"
+      },
+      {
+        "offset": 1839,
+        "section": "ABSTRACT",
+        "text": "Our data confirm and expand the role of dominant ATP5F1A and ATP5F1B variants in neurodevelopmental movement disorders. ATP5F1A/ATP5F1B-related ATPase diseases should be considered as a cause of dystonia, HSP, and CP.   2025 The Author(s). Movement Disorders published by Wiley Periodicals LLC on behalf of International Parkinson and Movement Disorder Society."
+      },
+      {
+        "offset": 2204,
+        "section": "INTRO",
+        "text": "Adenosine triphosphate (ATP) production in the nervous system is tightly controlled and vital for neuronal integrity. Central to this process is mitochondrial ATP synthase (ATPase), a macromolecular complex conserved across most eukaryotic lineages. ATPase encompasses 17 different structural subunits, organized into a membrane-embedded FO sector and the membrane-extrinsic F1 domain. There are only a modest number of reports linking variants in ATPase-subunit genes to heritable human disorders, likely because of the essential function of the complex for cellular bioenergetic requirements and the resulting mutation constraint. Elsewhere, we have identified a group of three unrelated patients harboring variants in ATP5F1A, which codes for the alpha-subunit of ATPase, and also have begun to show that the associated clinical outcomes are heterogeneous, ranging from transient neurodevelopmental impairment to chronic movement disorder syndromes with dystonia and spasticity. Although rare, these ATPase-related phenotypes reinforced a connection between mitochondrial defects and movement disorders, and highlighted new opportunities to study clinically relevant mechanisms of ATPase dysfunction. In addition, our group contributed to the description of two families affected by isolated dystonia who carried candidate variants in the ATPase beta-subunit gene ATP5F1B, but this gene-disease relationship awaits further confirmation. "
+      },
+      {
+        "offset": 3654,
+        "section": "INTRO",
+        "text": "As interaction partners in the F1 part of ATPase, the alpha- and beta-subunits directly catalyze the synthesis of ATP. Unsurprisingly, both ATP5F1A and ATP5F1B are variant-intolerant genes, statistically depleted of missense and loss-of-function (LoF) changes (gnomAD-v4.1.0: missense Z scores > 3; LoF observed/expected upper bound fraction [LOEUF] scores < 0.6). Disease-related ATP5F1A/ATP5F1B alleles implicated in movement disorders to date were monoallelic missense variants, variably causing compromised ATPase activity and/or reductions in subunit expression levels. In extremely rare cases, ATP5F1A missense variants have also been detected in an autosomal-recessive disease context, implying the existence of allelic heterogeneity. Heterozygous LoF variants in ATP5F1A or ATP5F1B have not yet been found in published patients."
+      },
+      {
+        "offset": 4506,
+        "section": "INTRO",
+        "text": "In this study, we combined whole-genome/exome sequencing (WGS/WES), international data sharing, RNA sequencing (RNAseq), immunoblotting, high-throughput proteomics, enzymatic studies, and in silico predictions to expand the genotypical and clinical spectrum of ATPase-related disorders caused by variants in ATP5F1A and ATP5F1B. We now provide evidence that (1) heterozygous LoF mutations can be causative for ATP5F1A/ATP5F1B-associated dystonia; (2) a novel ATP5F1A missense substitution, occurring recurrently in independent subjects, leads to lower-limb spasticity mimicking other classical genetic forms of hereditary spastic paraplegia (HSP); and (3) a canonical splice-site alteration in ATP5F1B is linked to the diagnosis of dystonic cerebral palsy (CP), differently from previously reported missense variant-associated isolated dystonia."
+      },
+      {
+        "offset": 5366,
+        "section": "METHODS",
+        "text": "Subjects and Methods"
+      },
+      {
+        "offset": 5387,
+        "section": "METHODS",
+        "text": "Participants"
+      },
+      {
+        "offset": 5400,
+        "section": "METHODS",
+        "text": "Previously unreported patients with variants in ATP5F1A (patient 1 [P1]-P4, families A-C) or ATP5F1B (P5, family D) and healthy relatives were evaluated for this study (Fig. 1, Table S1). Affected subjects included four females and one male, and ranged from 14 to 61 years of age (Table S1). The families were recruited via collaborations enabled by GeneMatcher and direct communications from neurological and neuropediatric specialty centers in four countries (Austria, France, Poland, and Slovakia). All participants or their parents/caretakers provided informed consent for research and/or diagnostic studies according to the Declaration of Helsinki and institutional review board requirements at their care centers. The clinical enrollment procedures involved retrospective review of medical records, history taking, and prospective examinations."
+      },
+      {
+        "offset": 6260,
+        "section": "FIG",
+        "text": "Pedigree drawings for families with heterozygous variants in ATP5F1A or ATP5F1B. (A) Family A with patient 1 (P1). (B) Family B with P2. (C) Family C with P3 (daughter) and P4 (mother). (D) Family D with P5. Closed symbols indicate the individuals affected by movement disorders; mut/wt denotes the reported ATP5F1A/ATP5F1B variants in the heterozygous state; and wt/wt denotes a homozygous wild-type allele. Index patients are marked with arrows. The variant in P2 was confirmed to be de novo by targeted Sanger testing of the parents."
+      },
+      {
+        "offset": 6799,
+        "section": "METHODS",
+        "text": "Genomic Sequencing"
+      },
+      {
+        "offset": 6818,
+        "section": "METHODS",
+        "text": "Genomic DNA was extracted from peripheral blood and analyzed by WGS (P1, family A; P5, family D) or WES (P2, family B; P3/P4, family C). Details of the WGS and WES methods have been described elsewhere. Paired-end 150-bp (WGS) or 100-bp (WES) sequencing was performed on Illumina machines, and the output was processed with published pipelines according to accredited standards. Annotated variants were filtered and classified following recommended guidelines. Sequencing data from P1, P2, and P5 were evaluated within a large dataset of rare movement disorders of suspected Mendelian inheritance on the Munich WES/WGS analysis platform (https://github.com/mri-ihg/EVAdb; Munich, Germany), facilitating the discovery of shared genetic etiologies. WES variant profiles from P3/P4 were assessed with an established in-house protocol, integrating queries of ClinVar-listed likely pathogenic/pathogenic variants. ATP5F1A/ATP5F1B variants were Sanger validated and tested in samples of relatives, whenever available. The variants were classified according to criteria of the American College of Medical Genetics and Genomics (ACMG). "
+      },
+      {
+        "offset": 7957,
+        "section": "METHODS",
+        "text": "Fibroblast Culture"
+      },
+      {
+        "offset": 7976,
+        "section": "METHODS",
+        "text": "Primary fibroblast lines were established in-house from skin biopsy specimens from P1 (family A) and P5 (family D), as previously reported. "
+      },
+      {
+        "offset": 8119,
+        "section": "METHODS",
+        "text": " RNAseq "
+      },
+      {
+        "offset": 8128,
+        "section": "METHODS",
+        "text": "RNA isolated from cultured fibroblasts from P1 and P5 was subjected to RNAseq using the TruSeq Stranded mRNA Sample Prep LS Protocol following the manufacturer's instructions. Quality control was done as described, and libraries were processed on a NovaSeq6000. The resulting data were studied using an in-house-established pipeline specifically designed to monitor aberrant expression. As controls, a large set of >750 fibroblasts from individuals with unrelated monogenic conditions was used. An ATP5F1B mRNA splicing defect was visualized with the Integrative Genomics Viewer (https://igv.org/)."
+      },
+      {
+        "offset": 8731,
+        "section": "METHODS",
+        "text": "Immunoblotting"
+      },
+      {
+        "offset": 8746,
+        "section": "METHODS",
+        "text": "Total protein extracts were prepared from fibroblast lysates for P1, P5, and three control subjects. Immunoblot membranes were probed with anti-ATP5F1A (459240, 1:2000; Invitrogen), anti-ATP5F1B (ab14730, 1:2000; Abcam), anti-ATP5PD (ab110275, 1:1000; Abcam), anti-ATP5PO (ab110276, 1:1000; Abcam), anti-ATP5F1C (NBP2-15525, 1:1000; Novus), and anti-ATP5F1D (PA5-21361, 1:1000; Invitrogen) as primary antibodies. The blots were then incubated with the appropriate secondary antibodies anti-GAPDH (2118, 1:10,000; Cell Signaling), mouse anti-beta-Tubulin (66240-1-Ig, 1:10,000; Proteintech), or rabbit anti-beta-Tubulin (11-13002, 1:10,000; Abeomics). Results were quantified with Bio-Rad Image Lab. Three biological replicates were analyzed for each subject. Statistical significance was determined by Student's t test using R."
+      },
+      {
+        "offset": 9604,
+        "section": "METHODS",
+        "text": "Tandem Mass Tag-Labeled Quantitative Proteomics"
+      },
+      {
+        "offset": 9654,
+        "section": "METHODS",
+        "text": "Quantitative tandem mass tag proteomics analysis was conducted at the BayBioMS core facility of Technical University of Munich (Freising, Germany) on a Fusion Lumos Tribrid mass spectrometer (Thermo Scientific), as reported in our recent work. In brief, cell pellets derived from cultured primary fibroblasts (0.5 million cells per pellet) were lysed under denaturing conditions in a buffer containing urea and quantified using the BCA Protein Assay Kit (Thermo Fisher Scientific, Waltham, MA, USA). Protein extract (15 mug) was reduced and alkylated. Tryptic digestion was done by using Trypsin Gold (Promega, Madison, WI, USA). Following mass-spectrometry measurements, the MaxQuant platform was used for peptide identification, and protein groups were determined. Standardized protein expression outlier discovery was performed by using an in-house-established bioinformatics processing pipeline (https://github.com/gagneurlab/py_outrider), which provided for each sample a catalog of aberrantly expressed proteins with corresponding multiple testing-corrected P values and fold-change information. The overall proteomics test cohort comprised 213 proteomes (100 from patients with dystonia, 113 from independent research subjects with rare disorders). We focused on underexpressed proteins with adjusted P < 0.05."
+      },
+      {
+        "offset": 10988,
+        "section": "METHODS",
+        "text": " ATPase Enzymatic Testing"
+      },
+      {
+        "offset": 11014,
+        "section": "METHODS",
+        "text": "The ATPase Activity Microplate Assay Kit (ab109716; Abcam) was used to determine the activity of ATPase in cultured fibroblasts from P1, P5, and two age- and sex-matched control subjects, in accordance with the manufacturer's specifications. Three biological replicates with three technical replicates per biological replicate were analyzed for each subject. To determine statistical significance, we used the mean of the three technical replicates for each biological replicate. Significance was calculated by Student's t test using R."
+      },
+      {
+        "offset": 11555,
+        "section": "METHODS",
+        "text": "In Silico Analysis"
+      },
+      {
+        "offset": 11574,
+        "section": "METHODS",
+        "text": "An array of computational tools was used to predict the consequence of identified missense and splice-site variants in ATP5F1A/ATP5F1B, including CADD, REVEL, AlphaMissense, and SpliceAI. A model of ATPase was created using the Protein Data Bank (PDB) template 8H9I, and the three-dimensional location of a missense variant in ATP5F1A was analyzed in relation to functional protein structures. In addition, the missense variant was modeled with SWISS-MODEL using the PDB template 6ZPO and visualized using Mol* Viewer. "
+      },
+      {
+        "offset": 12100,
+        "section": "RESULTS",
+        "text": "Results"
+      },
+      {
+        "offset": 12108,
+        "section": "RESULTS",
+        "text": " ATP5F1A c.1404del (p.Glu469Serfs*3)"
+      },
+      {
+        "offset": 12145,
+        "section": "RESULTS",
+        "text": "In P1 (family A; Fig. 1, Table S1), WGS uncovered a heterozygous c.1404del variant in ATP5F1A (NM_004046.6), predicted to result in a shift of the open reading frame and insertion of a premature stop codon in exon 10 (of 12 total exons; p.Glu469Serfs*3). Relatives were unavailable for segregation analysis. The variant was not reported in either gnomAD (v4.1.0) or our in-house databases (>30,000 WES/WGS datasets). We used RNAseq in fibroblasts to assess the impact of c.1404del on ATP5F1A mRNA abundance. As shown in Figure 2A, ATP5F1A was a significant underexpression outlier in P1's transcriptome (fold change = 0.59), and this patient exhibited the lowest ATP5F1A-mRNA expression among in-house-sequenced fibroblast samples. Immunoblotting indicated that ATP5F1A protein was significantly downregulated in P1 when compared with normal expression (Fig. 3A,B); this effect was accompanied by a trend toward reduced levels of other examined ATPase subunits (ATP5F1B, ATP5PD, and ATP5PO; Fig. 3A,B) on immunoblotting, consistent with the prior observation that nonassembled ATPase components are subject to proteolytic degradation. To verify and expand these observations, we further undertook unbiased proteomic analysis on P1's fibroblasts using a previously described experimental setting based on mass spectrometry. This profiling demonstrated a remarkably consistent decrease in steady-state expression levels across several protein subunits of ATPase, suggesting that c.1404del profoundly impacted the integrity of the complex in P1 (Fig. 3C); P1's cells displayed the lowest abundance of ATP5F1A (fold change = 0.77) and five other significantly underexpressed ATPase subunits in comparison with a cohort of 212 individuals with available fibroblast proteomes (ATP5F1B, fold change = 0.74; ATP5PD, fold change = 0.73; ATP5PO, fold change = 0.78; ATP5PB, fold change = 0.72; ATP5ME, fold change = 0.62) (Fig. S1). In addition, enzymatic testing showed markedly decreased total ATPase activity in P1's fibroblasts relative to control cells (Fig. 4A,B). Following ACMG rules, we classified ATP5F1A c.1404del as \"likely pathogenic\" (Table S1); we applied the PS3 criterion to reflect the results of our functional studies including mRNA and protein expression profiling, as well as testing of ATPase enzymatic function. P1 was a Slovak man with developmental delay, combined dystonia, and cognitive impairment (Table S1). He presented at 12 months of age with hypotonia and delayed motor milestones. At 3 years of age, he developed limb dystonic posturing; the disease progressed, and at the age of 43 years he had a mixed movement phenotype with generalized dystonia, myoclonus, and a pyramidal syndrome involving predominantly the legs (Video 1). His brain magnetic resonance imaging (MRI) scan was normal, and his family history was negative."
+      },
+      {
+        "offset": 15056,
+        "section": "FIG",
+        "text": "RNA sequencing (RNAseq) studies showing reduced expression of ATP5F1A and ATP5F1B. (A) Significantly reduced ATP5F1A mRNA levels in patient 1 (P1; family A) affected by the heterozygous frameshift variant c.1404del (p.Glu469Serfs*3). Transcriptomics volcano and sample rank plots are shown. In the volcano plot, the underexpression outlier ATP5F1A is indicated in blue; the horizontal line represents a P value of 2.5 x 10-6 (corrected P value for 20,000 hypotheses corresponding to the number of theoretically identifiable gene-derived RNAs), and the vertical line represents log2fold changes of +-1. In comparison with all in-house RNAseq control samples (n > 750), P1 had the lowest amounts of ATP5F1A mRNA (blue data point in the sample rank plot). (B) Missplicing and significantly reduced ATP5F1B mRNA levels in P5 (family D) affected by the heterozygous splice-site variant c.1074+1G>T. Transcriptomics sashimi, volcano, and sample rank plots are shown. Sashimi plots for P5 and a representative control subject demonstrate the occurrence of exon skipping (exon 7, exons 6 plus 7) as a result of the patient-specific G>T substitution at the donor splice site of exon 7. The number of reads spanning each junction is highlighted by the size of the sashimi-plot curve. In the volcano plot, the underexpression outlier ATP5F1B is indicated in pink; the horizontal line represents a P value of 2.5 x 10-6 (corrected P value for 20,000 hypotheses corresponding to the number of theoretically identifiable gene-derived RNAs), and the vertical line represents log2fold changes of +-1. In comparison with all in-house RNAseq control samples (n > 750), P5 had the lowest amounts of ATP5F1B mRNA (pink data point in the sample rank plot). [Color figure can be viewed at wileyonlinelibrary.com]"
+      },
+      {
+        "offset": 16881,
+        "section": "FIG",
+        "text": "Effect of variants in ATP5F1A and ATP5F1B on ATP synthase subunit expression. Immunoblot analysis of ATP5F1A, ATP5F1B, ATP5PD, ATP5PO, ATP5F1C, and ATP5F1D was performed in fibroblast lysates from three unrelated control subjects (CTRL), patient 1 (P1; family A) affected by the heterozygous ATP5F1A frameshift variant c.1404del (p.Glu469Serfs*3), and P5 (family D) affected by the heterozygous ATP5F1B splice-site variant c.1074+1G>T. Three biological replicates were analyzed, and representative images are shown in (A). In the quantifications (B), the values shown represent means +- standard deviations. Significances were assessed by Student's t test; *P <= 0.05, **P <= 0.01. (C) Proteomics volcano plot for P1 (family A) is shown. Darker gray dots represent proteins whose expression was significantly altered (adjusted P value threshold of 0.05), and lighter gray dots represent proteins whose expression was not significantly altered (adjusted P > 0.05). The significant underexpression outliers ATP5F1A, ATP5F1B, ATP5PD, ATP5PO, ATP5PB, and ATP5ME are highlighted in different colors, as indicated. [Color figure can be viewed at wileyonlinelibrary.com]"
+      },
+      {
+        "offset": 18061,
+        "section": "FIG",
+        "text": "ATP synthase activity studies using fibroblasts from patients with variants in ATP5F1A and ATP5F1B. (A) Representation of ATPase activity, evaluated by the ATP synthase Activity Microplate Assay Kit (Abcam), in the fibroblasts from two age- and sex-matched control subjects (CTRL 1/2), patient 1 (P1; family A) affected by the heterozygous ATP5F1A frameshift variant c.1404del (p.Glu469Serfs*3), and P5 (family D) affected by the heterozygous ATP5F1B splice-site variant c.1074+1G>T. Data represent three biological replicates with three technical replicates per biological replicate. Boxplots (B) represent the median, first quartile, and third quartile, and whiskers extend to a maximum of 1.5x interquartile range. Significances were assessed by Student's t test. [Color figure can be viewed at wileyonlinelibrary.com]"
+      },
+      {
+        "offset": 18890,
+        "section": "FIG",
+        "text": "Patient P1 (family A) at the age of 43 years. Examination shows generalized dystonia involving the limbs, trunk, and craniocervical region, accompanied by a prominent myoclonic component."
+      },
+      {
+        "offset": 19080,
+        "section": "RESULTS",
+        "text": " ATP5F1A c.1252G>A (p.Gly418Arg)"
+      },
+      {
+        "offset": 19113,
+        "section": "RESULTS",
+        "text": "WES detected the heterozygous ATP5F1A missense variant c.1252G>A (p.Gly418Arg) in P2 (family B; Fig. 1, Table S1). A de novo origin of the variant was demonstrated by Sanger testing of the parents. The same c.1252G>A substitution was shown by duo WES in the independent mother-daughter pair P3/P4 (family C; Fig. 1, Table S1). Control databases (gnomAD v4.1.0, in-house collections) did not contain the variant, and conservation analysis showed that the mutated amino acid site was invariant across all examined species (data not shown), suggesting functional importance. In silico predictions of the variant highlighted its likely deleterious nature (Table S1). To assess how the variant could impair ATP5F1A function, we investigated structural and physicochemical properties of Gly418; the residue was positioned in the vicinity of ATP5F1A's beta-subunit-communication interface, indicating that replacement of the nonpolar glycine with a positively charged arginine may alter the ability of ATP5F1A to interact with ATP5F1B (Fig. 5A,B). We classified ATP5F1A c.1252G>A as \"likely pathogenic\" (Table S1). At the time of last examination, P2 was a 22-year-old Austrian woman with spastic gait impairment and without any relevant family history (Table S1). She had motor delay during childhood, and by the age of 14 years she developed slowly progressive spasticity of the legs (Video 2). This led to recurrent falls since adulthood. A diagnosis of HSP was given. Psychometric tests disclosed mild intellectual disability. Brain MRI was normal except for presence of an optic glioma. In family C with familial HSP from France, P3 was a 32-year-old woman who exhibited spastic paraparesis and mild neurodevelopmental impairments (Table S1); she had delayed language development, borderline intellectual disability, and autism spectrum disorder. Her 61-year-old mother (P4) displayed a phenotype dominated by bilateral lower-extremity spasticity, but without recognizable developmental comorbidity. Both individuals had unremarkable brain MRI results."
+      },
+      {
+        "offset": 21200,
+        "section": "FIG",
+        "text": "Location and structural modeling of the ATP5F1A missense variant p.Gly418Arg. (A) A three-dimensional representation of the human ATPase F1 domain (PDB: 8H9I) is shown, with major subunits highlighted in the indicated colors. The residue Gly418 mutated in families B and C is situated at the alpha-beta intersubunit interaction space (ATP5F1A-ATP5F1B). Moreover, Gly418 is in close proximity to the ADP binding site, as highlighted in the magnified view of the sequence containing this amino acid; ADP is shown in stick-and-ball representation (gray). (B) Model of ATPase and magnified view of the predicted p.Gly418Arg substitution in the alpha-beta communication space (PDB: 6ZPO). Substitution of the nonpolar Gly418 by a positively charged arginine may perturb functionally important subunit interactions and/or structural features that sustain binding (or nonbinding) behaviors. As illustrated by blue dashed lines, Arg418 may introduce new intermolecular bonding interactions (H-bonds) involving the alpha- and beta-subunits. [Color figure can be viewed at wileyonlinelibrary.com]"
+      },
+      {
+        "offset": 22290,
+        "section": "FIG",
+        "text": "Patient P2 (family B) at the age of 22 years. Examination shows a bilateral pyramidal syndrome in the lower limbs consistent with a clinical diagnosis of hereditary spastic paraplegia."
+      },
+      {
+        "offset": 22477,
+        "section": "RESULTS",
+        "text": " ATP5F1B c.1074+1G>T"
+      },
+      {
+        "offset": 22498,
+        "section": "RESULTS",
+        "text": "A heterozygous c.1074+1G>T variant in ATP5F1B (NM_001686.4) was discovered by WGS in P5 (family D; Fig. 1, Table S1). Sanger sequencing demonstrated that P5's healthy mother also carried this variant heterozygously, whereas her two triplet brothers were homozygous for the wild-type allele. The variant was unobserved in the gnomAD v4.1.0 and in-house control cohorts. SpliceAI predicted that the variant would weaken the canonical donor splice site of exon 7 (donor loss with high confidence; score of 1.0). RNAseq data from fibroblasts confirmed the presence of a splice defect with skipping of exon 7 and exons 6 plus 7 (Fig. 2B); ATP5F1B mRNA levels were significantly decreased (fold change = 0.67; Fig. 2B). The polypeptide encoded by exon 7 included Thr334, the residue mutated in a recently reported family with isolated dystonia. Immunoblot analysis on P5's fibroblasts showed that the cells contained significantly reduced amounts of the ATPase component ATP5F1A, whereas ATP5F1B expression was not consistently altered at the protein level in the examined fibroblasts (Fig. 3A,B). Total ATPase activity was significantly diminished in these fibroblasts (Fig. 4A,B). Given the validated effect of c.1074+1G>T on ATP5F1B mRNA splicing with observable impairment of ATPase function, the variant was classified as \"likely pathogenic\" (Table S1); we considered the PS3 and PM4 (exon skipping with in-frame deletions) rules to upgrade the significance of the variant from uncertain to class 4 evidence. P5 was a Ukrainian girl with motor delay and a diagnosis of CP (Table S1). Family history was noncontributory. Her delivery was complicated by prolonged labor (32 weeks of gestation, APGAR score of 7), but postnatal adaption was normal. At last evaluation, she was 14 years old and able to walk only a few steps with maximum assistance; there were four-limb dystonic and distal-arm athetotiform movements, truncal dystonia, and cervical dystonia (Video 3). Brain MRI studies indicated no pathology."
+      },
+      {
+        "offset": 24536,
+        "section": "FIG",
+        "text": "Patient P5 (family D) at the age of 14 years. Examination shows generalized dystonia with involvement of the limbs, trunk, and neck. The clinical picture with infantile onset and a history of complicated birth led to a diagnosis of dystonic cerebral palsy."
+      },
+      {
+        "offset": 24795,
+        "section": "DISCUSS",
+        "text": "Discussion"
+      },
+      {
+        "offset": 24806,
+        "section": "DISCUSS",
+        "text": "Because ATPase is the major engine to generate ATP for almost all intracellular metabolic pathways, its defects may have multiple detrimental effects on neurophysiology depending on the degree of functional impairment. A severe decrease in the abundance of ATPase was found in autosomal recessively or mitochondrially inherited subunit deficiencies, typically linked to devastating encephalopathies with early lethality. Although a handful of heterozygous single amino acid substitutions in ATP5F1A and ATP5F1B, encoding the key ATP-synthesizing subunits of ATPase, have recently been associated with different types of dystonic-spastic syndromes (for details, see Table S1), the implication of these genes in movement disorders is not well characterized. In this study, we have gathered a set of five patients from four unrelated families with autosomal dominant variants in ATP5F1A or ATP5F1B, further defining the genetic, molecular, and phenotypic profile of ATPase-related diseases with dystonia and spasticity."
+      },
+      {
+        "offset": 25830,
+        "section": "DISCUSS",
+        "text": "We describe a heterozygous frameshift variant in ATP5F1A resulting in reduced mRNA and ATP5F1A-protein levels, consistent with haploinsufficiency. The disorder combining features of early-onset dystonia, pyramidal signs, and neurodevelopmental disability of the individual carrying this alteration resembled the clinical picture of two published patients with missense ATP5F1A mutations. Several lines of evidence support that the lack of normal ATP5F1A expression in individual P1 was disease related. First, decreased amounts of other subunits, including ATP5F1A's F1 interaction partners, were seen in P1 on immunoblot analysis, indicative of overall diminished abundance of functional ATPase. Importantly, we were able to significantly replicate this finding by performing proteomic analysis on the patient-derived primary fibroblast cell line. In this experiment, we observed markedly changed levels of six ATPase protein subunits, confirming that the identified heterozygous ATP5F1A frameshift variant deleteriously affected the normal composition of the ATPase complex in P1. Besides ATP5F1A, proteomics also detected significant reduction (adjusted P < 0.05) in the expression levels of ATP5F1B, ATP5PD, ATP5PO, ATP5PB, and ATP5ME in this cell line (Fig. 3C, Fig. S1). Notably, partial loss of normal ATPase expression was previously shown to be causative of mitochondrial dysfunction syndromes with neurological disturbances. Published studies demonstrated that biallelic variants in ATP5F1A cause considerably more severe phenotypes in affected individuals, whereas the parents of these patients were reported to be neurologically normal. Although the alleles described in this context were expected to result in reduced ATPase amounts, the variants were missense changes; no clear-cut LoF (ie, frameshift, nonsense, or splice site) variants have been reported in the recessive form of ATP5F1A-related disease. In one recessive family, the defect of ATP5F1A was associated with a missense mutation on the paternal allele and an unidentified second variant causing nonexpression of the maternal allele; however, it remained unclear whether the unknown maternal genotype produced underexpression of ATP5F1A protein and/or other ATPase protein subunits in the unaffected mother, as seen in our individual P1."
+      },
+      {
+        "offset": 28162,
+        "section": "DISCUSS",
+        "text": "Second, P1's cells exhibited an ATPase activity deficit, highlighting that the complex formed in the presence of the heterozygous ATP5F1A frameshift variant is not adequately functional. ATPase amount in mitochondria is closely maintained to guarantee the cell's core bioenergetic supply, and failure to sustain controlled functionality of this complex is a well-known mechanism in many neurodevelopmental and neurodegenerative syndromes. Third, a similar ATP5F1A protein reduction was reported for a pathogenic missense ATP5F1A variant causing ATPase-related neurodevelopmental symptoms. Specifically, the heterozygous c.620G>A (p.Arg207His) substitution, which has been recurrently identified in patients with an autosomal dominant ATP5F1A-linked syndrome (Table S1), was demonstrated to lead to decreased ATP5F1A subunit protein levels on immunoblot studies, a result comparable with the outcome of our evaluation shown in Figure 3. The authors of this prior study concluded that it was unclear whether the disease-causal nature of the ATP5F1A c.620G>A (p.Arg207His) variant resulted from an LoF or from a dominant-negative effect. Based on the data presented in this work, we would argue that the loss of ATP5F1A expression observed in association with ATP5F1A c.620G>A (p.Arg207His) and P1's frameshift alteration is probably linked to the phenotypic abnormalities, and that this should be further investigated in suitable in vivo model systems. Despite the evidence provided, we acknowledge that there is currently no experimental data that would clearly establish the inability of a single functional copy of ATP5F1A to prevent the manifestation of disease. This would need to be proven in future functional work that implements methodology for accurate demonstration of individual ATP5F1A dose-dependent effects on phenotypic outcomes. Moreover, a shortcoming of the characterization of our individual P1 is that we were unable to provide insights into familial segregation of the ATP5F1A variant because the parents were deceased and other relatives were unavailable for genetic analysis. Extended family segregation studies should be done in follow-up assessments of other individuals with rare ATP5F1A variants, recruited via collaborations globally."
+      },
+      {
+        "offset": 30440,
+        "section": "DISCUSS",
+        "text": "Furthermore, we identified a new recurrent missense mutation underlying dominant ATP5F1A-related disease. By studying patients with this variant (individuals P2-P4), we determined that their clinical manifestations were less complicated than those of previously described patients and more similar to typical forms of HSP, such as SPG3A or SPG4. Despite the lack of functional data, pathogenicity of the missense variant is very likely given its predicted deleteriousness, absence from controls, familial segregation/de novo mutagenesis, and recurrence in affected subjects; interestingly, the same variant is listed as likely pathogenic/pathogenic in two additional ClinVar entries without phenotype availability (accessed September 2024, variation ID: 2572074). It remains to be determined whether this particular missense variant acts as an LoF or dominant-negative allele. Dominant-negative effects have been discussed for ATP5F1A missense variants located on alpha-/beta-subunit interaction surfaces of ATPase. "
+      },
+      {
+        "offset": 31464,
+        "section": "DISCUSS",
+        "text": "Finally, this study offers the first report of an ATP5F1B splice-site mutation in a patient with infantile-onset dystonic features. The two reported monoallelic dystonia-associated ATP5F1B variants resulted in substitutions of single amino acid residues, and no other predicted LoF alleles in ATP5F1B have been clinically documented as pathogenic until today. Individual P5 was diagnosed with CP, in contrast with recently published patients with isolated dystonia. The observed loss of correctly spliced exons with accompanying significant reduction in ATP5F1B mRNA levels and the activity defect of ATPase in P5's cells were strongly suggestive of a disease-causing character of the variant. Moreover, the finding that both the ATP5F1B splice-site variant (individual P5) and the ATP5F1A frameshift variant (individual P1) compromised the enzymatic activity of ATPase in a similar fashion (Fig. 4) may suggest that the mutations could lead to functionally similar pathological outcomes. Nevertheless, we emphasize that additional experimental studies are warranted to further dissect the mechanism of action of ATP5F1B variants; because a cell line of P5's mother, who also carried the splice-site variant, was not available, we could not perform a comparison of the relative levels of ATP5F1B mRNA, ATPase protein subunits, and ATPase activity between this subject and her affected daughter. Lack of functional workup for the variant-harboring mother represents another limitation of this study."
+      },
+      {
+        "offset": 32978,
+        "section": "DISCUSS",
+        "text": "The mechanisms that cause movement disorders and neurodevelopmental abnormalities in dominantly inherited defects of ATPase have not yet been established. In addition to bioenergetic impairments, defective ATPase function can lead to increased generation of reactive oxygen species (ROS), by-products of oxidative metabolism with diverse modulatory roles in neurodevelopment. Thus, aberrant ROS regulation may alter the control of redox-sensitive molecules such as transcription factors and signaling effectors, including those expressed in dopaminergic neurons. Our observations underscore the importance of anticipating a broad phenotypic spectrum for such potential molecular alterations in ATP5F1A/ATP5F1B-related conditions, ranging from isolated or complex dystonia to HSP and CP."
+      },
+      {
+        "offset": 33771,
+        "section": "DISCUSS",
+        "text": " ATP5F1A/ATP5F1B-related diseases display reduced penetrance. Like relatives in two published dystonia-affected families, the mother of P5 carried a disease-associated ATP5F1B variant but was asymptomatic. Moreover, several control individuals with putative ATP5F1A/ATP5F1B LoF alleles exist in the newest gnomAD v4.1.0 version (https://gnomad.broadinstitute.org/). Based on metrics from gnomAD v2.1.1, for which still most experience exists in the use for gene and variant prioritization, ATP5F1A and ATP5F1B are severely constrained against LoF variants (probability of being LoF intolerant [pLI] scores of 1.0 and 0.98, respectively; LOEUF scores of 0.18 and 0.31, respectively). Notably, it is an increasingly recognized phenomenon that LoF constraints for individual genes can be less pronounced in gnomAD v4.1.0 compared with v2.1.1, especially in the context of hereditary movement disorders that are associated with reduced penetrance, because of inclusion of larger fractions of individuals from clinically ascertained cohorts and disease biobanks. Altogether, data from both gnomAD versions are, with robust statistical significance (pLI and/or LOEUF), clearly in favor of LoF intolerance of ATP5F1A and ATP5F1B. The explanations for potential nonmanifestation of disease in heterozygous carriers of ATP5F1A/ATP5F1B LoF variants still need to be elucidated, particularly in the context of different metabolic scenarios and other intrinsic or extrinsic influences. It is possible that environmental factors or other adverse secondary effects may affect the penetrance of ATP5F1A/ATP5F1B-related conditions by further increasing energy demands and/or ROS production. Although fully speculative, we mention that such a trigger could have been the complicated birth of P5, similarly to what has been postulated for other CP-affected subjects with combined mitochondrial and perinatal injuries. Evidence from this and prior work suggests that the disease mechanism for heterozygous variants in ATP5F1A/ATP5F1B could be insufficient protein production (LoF/missense alleles) and dominant negative (missense alleles) and, for biallelic variants, (near-)complete loss of protein function. Interestingly, there are several additional one-gene, two-mechanism examples of monogenic mitochondrial disorders. For example, SLC25A4 variants are known to underlie a remarkable spectrum of clinically distinct mitochondrial defect syndromes that can be associated with dominantly transmitted, de novo, and biallelic recessive variants, operating via different mechanisms of pathogenicity. In clinical practice, we advise the implementation of clinicogenetic correlation and segregation analyses, the assessment of functional assay outcomes (eg, enzymatic measurements) whenever possible, as well as the application of sequence interpretation standards to evaluate the significance of an identified rare variant in ATP5F1A/ATP5F1B. "
+      },
+      {
+        "offset": 36712,
+        "section": "DISCUSS",
+        "text": "Overall, this study confirms heterozygous variants in ATP5F1A and ATP5F1B as an underreported cause of a wider range of neurological phenotypes with prominent movement disorders and permits the determination of an expanded mutational spectrum. We highlight the need for future investigations of independent cohorts and functional outcomes to better define the impact and penetrance of different heterozygous variant types in these genes. In light of emerging therapeutic drug-repurposing strategies targeting ATPase-related encephalopathies, it will be crucial to further understand downstream mechanisms and the role of LoF and dominant-negative variants in these disorders."
+      },
+      {
+        "offset": 37394,
+        "section": "DISCUSS",
+        "text": "Author Roles"
+      },
+      {
+        "offset": 37407,
+        "section": "DISCUSS",
+        "text": "Philip Harrer: study design and concept, acquisition of data, analysis and interpretation of data, and revision of manuscript for critical intellectual content. Magdalena Krygier: acquisition of data, analysis and interpretation of data, and revision of manuscript for critical intellectual content. Martin Krenn: acquisition of data, analysis and interpretation of data, and revision of manuscript for critical intellectual content. Volker Kittke: acquisition of data and revision of manuscript for critical intellectual content. Alice Saparov: acquisition of data and revision of manuscript for critical intellectual content. Virginie Pichon: acquisition of data and revision of manuscript for critical intellectual content. Marlene Malbos: acquisition of data and revision of manuscript for critical intellectual content. Clarisse Scherer: acquisition of data and revision of manuscript for critical intellectual content. Ivana Dzinovic: acquisition of data and revision of manuscript for critical intellectual content. Matej Skorvanek: acquisition of data and revision of manuscript for critical intellectual content. Robert Kopajtich: acquisition of data and revision of manuscript for critical intellectual content. Holger Prokisch: acquisition of data and revision of manuscript for critical intellectual content. Sara Silvaieh: acquisition of data and revision of manuscript for critical intellectual content. Anna Grisold: acquisition of data and revision of manuscript for critical intellectual content. Maria Mazurkiewicz-Beldzinska: acquisition of data and revision of manuscript for critical intellectual content. Jean-Madeleine de Sainte Agathe: acquisition of data and revision of manuscript for critical intellectual content. Juliane Winkelmann: study supervision, and analysis and interpretation of data. Jan Necpal: study supervision, and analysis and interpretation of data. Robert Jech: study supervision, and analysis and interpretation of data. Michael Zech: study design and concept, study supervision, analysis and interpretation of data, and wrote the manuscript. Martin Danis: acquisition of data and revision of manuscript for critical intellectual content. Georgi Krastev: acquisition of data and revision of manuscript for critical intellectual content."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-9952d6b90a361db1",
+    "object": "chat.completion",
+    "created": 1790521775,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"association\": [\n    {\n      \"patient_id\": \"OP1\",\n      \"phenotype\": [\n        \"HP:0001263\",\n        \"HP:0001332\",\n        \"HP:0001257\",\n        \"HP:0001258\",\n        \"HP:0100021\",\n        \"HP:0007325\"\n      ]\n    },\n    {\n      \"patient_id\": \"OP2\",\n      \"phenotype\": [\n        \"HP:0001258\",\n        \"HP:0001270\",\n        \"HP:0007256\",\n        \"HP:0002064\",\n        \"HP:0002191\",\n        \"HP:0002527\",\n        \"HP:0001256\",\n        \"HP:0009734\"\n      ]\n    },\n    {\n      \"patient_id\": \"OP3\",\n      \"phenotype\": [\n        \"HP:0012759\",\n        \"HP:0002313\",\n        \"HP:0000750\",\n        \"HP:0006889\",\n        \"HP:0000729\"\n      ]\n    },\n    {\n      \"patient_id\": \"OP4\",\n      \"phenotype\": [\n        \"HP:0100022\",\n        \"HP:0001332\",\n        \"HP:0100021\",\n        \"HP:0002061\",\n        \"HP:0001270\",\n        \"HP:0002540\",\n        \"HP:0002530\",\n        \"HP:0000473\",\n        \"HP:0003287\"\n      ]\n    },\n    {\n      \"patient_id\": \"OP5\",\n      \"phenotype\": [\n        \"HP:0100021\",\n        \"HP:0007325\"\n      ]\n    }\n  ]\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 11360,
+      "total_tokens": 11835,
+      "completion_tokens": 475,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "OP1",
+      "phenotype": [
+        "HP:0001263",
+        "HP:0001332",
+        "HP:0001257",
+        "HP:0001258",
+        "HP:0100021",
+        "HP:0007325"
+      ]
+    },
+    {
+      "patient_id": "OP2",
+      "phenotype": [
+        "HP:0001258",
+        "HP:0001270",
+        "HP:0007256",
+        "HP:0002064",
+        "HP:0002191",
+        "HP:0002527",
+        "HP:0001256",
+        "HP:0009734"
+      ]
+    },
+    {
+      "patient_id": "OP3",
+      "phenotype": [
+        "HP:0012759",
+        "HP:0002313",
+        "HP:0000750",
+        "HP:0006889",
+        "HP:0000729"
+      ]
+    },
+    {
+      "patient_id": "OP4",
+      "phenotype": [
+        "HP:0100022",
+        "HP:0001332",
+        "HP:0100021",
+        "HP:0002061",
+        "HP:0001270",
+        "HP:0002540",
+        "HP:0002530",
+        "HP:0000473",
+        "HP:0003287"
+      ]
+    },
+    {
+      "patient_id": "OP5",
+      "phenotype": [
+        "HP:0100021",
+        "HP:0007325"
+      ]
+    }
+  ],
+  "elapsed_seconds": 11.17,
+  "usage": {
+    "prompt_tokens": 11360,
+    "total_tokens": 11835,
+    "completion_tokens": 475,
+    "prompt_tokens_details": null
+  }
+}

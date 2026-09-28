@@ -1,0 +1,675 @@
+{
+  "pmc_id": "11988866",
+  "identity": "a436e442abe620735eadac16c9492d53235e2181c094938dd6b26f019397ce55",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 27528,
+    "covered_source_characters": 27528,
+    "source_is_excerpted": false,
+    "candidate_windows": 44,
+    "selected_windows": 44,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 34223,
+    "candidate_concepts": 50,
+    "patient_count": 5
+  },
+  "prompt": {
+    "pmc_id": "11988866",
+    "patients": [
+      {
+        "patient_id": "O1",
+        "mentions": [
+          {
+            "text": "11-year-old child",
+            "offset": 8637
+          }
+        ]
+      },
+      {
+        "patient_id": "O2",
+        "mentions": [
+          {
+            "text": "9-year-old child",
+            "offset": 9920
+          }
+        ]
+      },
+      {
+        "patient_id": "O3",
+        "mentions": [
+          {
+            "text": "6-year-old child",
+            "offset": 11190
+          }
+        ]
+      },
+      {
+        "patient_id": "O4",
+        "mentions": [
+          {
+            "text": "6-year-old child",
+            "offset": 12214
+          }
+        ]
+      },
+      {
+        "patient_id": "O5",
+        "mentions": [
+          {
+            "text": "triplet 3",
+            "offset": 13174
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0000717": [
+        "autism",
+        "Autism"
+      ],
+      "HP:0000729": [
+        "ASD",
+        "autism spectrum disorder",
+        "autistic features"
+      ],
+      "HP:0000708": [
+        "behavioral problems",
+        "psychiatric symptoms",
+        "behavioral deficits"
+      ],
+      "HP:0000718": [
+        "aggression"
+      ],
+      "HP:0000739": [
+        "anxiety"
+      ],
+      "HP:0001249": [
+        "intellectual disability",
+        "ID"
+      ],
+      "HP:0001999": [
+        "facial dysmorphology",
+        "facial features",
+        "facial dysmorphism"
+      ],
+      "HP:0000337": [
+        "broad forehead"
+      ],
+      "HP:0000411": [
+        "prominent ears"
+      ],
+      "HP:0100962": [
+        "shyness"
+      ],
+      "HP:0007018": [
+        "attention deficit",
+        "ADHD"
+      ],
+      "HP:0000752": [
+        "hyperactivity"
+      ],
+      "HP:0000737": [
+        "irritability"
+      ],
+      "HP:0100543": [
+        "cognitive impairments",
+        "cognitive impairment"
+      ],
+      "HP:0033667": [
+        "Mental Disorders"
+      ],
+      "HP:0030955": [
+        "alcohol syndrome"
+      ],
+      "HP:0012759": [
+        "neurodevelopmental disorder",
+        "neurodevelopmental disorders",
+        "Neurodevelopmental Disorders"
+      ],
+      "HP:0000271": [
+        "facial abnormalities"
+      ],
+      "HP:0012745": [
+        "short palpebral fissures"
+      ],
+      "HP:0000319": [
+        "smooth philtrum"
+      ],
+      "HP:0001510": [
+        "growth restriction",
+        "growth deficiency",
+        "Growth restriction"
+      ],
+      "HP:0001328": [
+        "learning"
+      ],
+      "HP:0002354": [
+        "memory problems"
+      ],
+      "HP:0004302": [
+        "disability"
+      ],
+      "HP:0100710": [
+        "impulsivity"
+      ],
+      "HP:5200329": [
+        "excessive alcohol consumption"
+      ],
+      "HP:5200125": [
+        "aggression towards other",
+        "aggression toward others",
+        "aggression towards others"
+      ],
+      "HP:0000817": [
+        "reduced eye contact",
+        "poor eye contact"
+      ],
+      "HP:0000734": [
+        "disinhibition"
+      ],
+      "HP:0000218": [
+        "high palate"
+      ],
+      "HP:0001763": [
+        "flat feet"
+      ],
+      "HP:0100716": [
+        "self-injurious behavior",
+        "self-injury"
+      ],
+      "HP:0001543": [
+        "gastroschisis"
+      ],
+      "HP:0012168": [
+        "head-banging"
+      ],
+      "HP:0002360": [
+        "trouble sleeping",
+        "sleep disturbance"
+      ],
+      "HP:0000378": [
+        "cupped ears"
+      ],
+      "HP:0000286": [
+        "epicanthal folds"
+      ],
+      "HP:0000577": [
+        "exotropia"
+      ],
+      "HP:0000954": [
+        "single palmar crease"
+      ],
+      "HP:0000098": [
+        "height gain"
+      ],
+      "HP:0001518": [
+        "low birth weight"
+      ],
+      "HP:0410018": [
+        "recurrent ear infections"
+      ],
+      "HP:0030084": [
+        "clinodactyly"
+      ],
+      "HP:0000023": [
+        "inguinal hernia"
+      ],
+      "HP:0001263": [
+        "developmental delay",
+        "developmental disabilities"
+      ],
+      "HP:0000750": [
+        "language delay"
+      ],
+      "HP:0000289": [
+        "broad philtrum"
+      ],
+      "HP:0000233": [
+        "thin lips"
+      ],
+      "HP:0000716": [
+        "depression"
+      ],
+      "HP:0001344": [
+        "nonverbal"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "O1",
+        "phenotype": [
+          "HP:0000729",
+          "HP:0000411",
+          "HP:0000752",
+          "HP:0012759",
+          "HP:0001510",
+          "HP:5200125",
+          "HP:0000817",
+          "HP:0000734",
+          "HP:0000218",
+          "HP:0001763"
+        ]
+      },
+      {
+        "patient_id": "O2",
+        "phenotype": [
+          "HP:0000729",
+          "HP:0000739",
+          "HP:0000737",
+          "HP:0001510",
+          "HP:0000817",
+          "HP:0001763",
+          "HP:0100716",
+          "HP:0001543",
+          "HP:0012168",
+          "HP:0002360",
+          "HP:0000378",
+          "HP:0000286",
+          "HP:0000577",
+          "HP:0000954",
+          "HP:0000098"
+        ]
+      },
+      {
+        "patient_id": "O3",
+        "phenotype": [
+          "HP:0000729",
+          "HP:0000718",
+          "HP:0000739",
+          "HP:0007018",
+          "HP:0000752",
+          "HP:0001510",
+          "HP:0002360",
+          "HP:0001518",
+          "HP:0410018",
+          "HP:0030084"
+        ]
+      },
+      {
+        "patient_id": "O4",
+        "phenotype": [
+          "HP:0000729",
+          "HP:0000739",
+          "HP:0007018",
+          "HP:0000752",
+          "HP:5200125",
+          "HP:0000023",
+          "HP:0001263"
+        ]
+      },
+      {
+        "patient_id": "O5",
+        "phenotype": [
+          "HP:0000729",
+          "HP:0000718",
+          "HP:0000739",
+          "HP:0007018",
+          "HP:0000752",
+          "HP:0030955",
+          "HP:0001328",
+          "HP:0000817",
+          "HP:0002360",
+          "HP:0000286",
+          "HP:0001518",
+          "HP:0030084",
+          "HP:0001263",
+          "HP:0000750",
+          "HP:0000289",
+          "HP:0000233"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "In Utero Alcohol and Unsuitable Home Environmental Exposure Combined with FMR1 Full Mutation Allele Cause Severe Fragile X Syndrome Phenotypes"
+      },
+      {
+        "offset": 143,
+        "section": "ABSTRACT",
+        "text": "We investigated the molecular and clinical profile of five boys carrying the fragile X messenger ribonucleoprotein 1 (FMR1) mutation and who suffered from the effects of prenatal alcohol exposure. Fragile X syndrome (FXS) testing was performed using PCR and Southern Blot analysis, and fragile X messenger ribonucleoprotein protein (FMRP) expression levels were measured by Western blot analysis. Clinical evaluation included cognitive functions, adaptive skills, autism phenotype, and severity of behavior measures. Fetal Alcohol Spectrum Disorder (FASD) was also assessed. Five adopted male siblings were investigated, four of which (cases 1, 2, 3, and 4) were diagnosed with FXS, FASD, and ASD, and one, the fraternal triplet (case 5), was diagnosed with FASD and ASD and no FXS. The molecular profile of case 1 and 2 showed the presence of a hypermethylated full mutation (FM) and the resulting absence of FMRP. Cases 3 and 4 (identical twins) were FM-size mosaics (for the presence of an FM and a deleted allele), resulting in 16% and 50% FMRP expression levels, respectively. FMRP expression level was normal in case 5 (fraternal twin). Severe behavioral problems were observed in all cases, including aggression, tantrum, self-harming, anxiety, and defiant behavior, due to different mutations of the FMR1 gene, in addition to biological exposure, home environmental factors, and potentially to additional background gene effects."
+      },
+      {
+        "offset": 1581,
+        "section": "INTRO",
+        "text": "1. Introduction"
+      },
+      {
+        "offset": 1597,
+        "section": "INTRO",
+        "text": "Fragile X syndrome (FXS) is the most common cause of inherited intellectual disability (ID) and a single genetic cause of autism spectrum disorder (ASD) which is observed in 60% of males and 20% of females with FXS. Affecting approximately 1: 2500 males and 1: 8000 females, it is mostly caused by the loss of the encoded product (FMRP) of the fragile X messenger ribonucleoprotein 1 (FMR1) gene located at Xq27.3. The presence of an allele harboring a CGG repeat number greater than 200, called a full mutation (FM), leads to hypermethylation and the inhibition of the transcription of the fragile X messenger ribonucleic acid 1 gene (FMR1), resulting in the absence of FMRP "
+      },
+      {
+        "offset": 2274,
+        "section": "INTRO",
+        "text": "The lack of FMRP, an mRNA-binding protein with functions in mRNA transport, localization, and translational control in synapses, leads to dysregulation of translation and abnormal neuronal signaling, which associates with the cognitive and behavioral impairments observed in FXS. Clinical phenotypes of FXS include facial dysmorphology, consisting of an elongated face, broad forehead, and large and prominent ears, and neurobehavioral impairment such as shyness, social avoidance and anxiety, attention deficit, hyperactivity, irritability, and aggression."
+      },
+      {
+        "offset": 2832,
+        "section": "INTRO",
+        "text": "The methylation profile of the FMR1 gene in individuals with FXS can vary even across cell types, and the completion of methylation appears to correlate with clinical phenotypes, especially with autistic features. Incomplete silencing and mosaicism of FM, premutation (PM), or normal alleles are seen in most FXS cases."
+      },
+      {
+        "offset": 3152,
+        "section": "INTRO",
+        "text": "Depending on the CGG repeat number and the methylation status, FXS individuals who have incomplete methylation and/or size mosaicism can present with lower FMRP and elevated FMR1 mRNA, experiencing a double-hit mechanism, which correlates with cognitive impairments, psychiatric symptoms, and with co-occurring ASD. In short, the behavioral phenotype of FXS exhibits a wide spectrum, in which fragile X molecular measures at the FMR1 locus:such as CGG repeat size, methylation mosaicism, activation ratio (in females), and FMR1 mRNA and FMRP expression levels:are known to be contributing factors for the variability of FXS phenotypes. However, environmental factors from pregnancy (toxins such as alcohol exposure) to developmental age (home environment, maternal/paternal psychopathology, educational/therapeutic services) can also contribute to the variability and heterogeneity of the behavioral phenotype."
+      },
+      {
+        "offset": 4067,
+        "section": "INTRO",
+        "text": "Fetal alcohol spectrum disorder (FASD) is an umbrella term defining the range of adverse effects resulting from prenatal alcohol exposure. There are various diagnostic criteria for fetal alcohol spectrum disorders (FASDs), such as the University of Washington 4-digit Code, the 2016 Updated Clinical Guideline for FASD Diagnosis, the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5), and Canadian 2015 diagnostic systems. FASD is classified into different subtypes based on the features identified and the diagnostic system used. Some of the diagnostic categories include fetal alcohol syndrome (FAS), partial fetal alcohol syndrome (PFAS), alcohol-related neurodevelopmental disorder (ARND), alcohol-related birth defects (ARBD), and neurobehavioral disorders associated with prenatal alcohol exposure (ND-PAE). The diagnosis of FASD involves a history of prenatal alcohol exposure and findings of facial abnormalities (i.e., short palpebral fissures, thin upper lips, and smooth philtrum), growth restriction, brain growth deficiency, and neurobehavioral impairments. Children with FASD often struggle with neurocognitive issues (such as executive function deficits, and learning and memory problems), self-regulation challenges, and impairments in adaptive skills. FASD is often considered a hidden disability, as many children have average cognitive abilities and verbal skills, and only 10% exhibit the classic facial features described earlier. In addition to the low prevalence of distinctive features that often lead to underdiagnosis, FASD shares several behavioral similarities with other neurodevelopmental disorders, including ASD, with approximately 72% of children with FASD meeting ASD criteria. Epigenetic reprogramming and alteration of the glutamatergic pathway plays an important role in both FASD and FXS, resulting in facial dysmorphism and neurobehavioral impairments, which share a set of symptoms of behavioral deficits such as attention deficit, hyperactivity, irritability, and impulsivity in both FASD and FXS. The estimated global prevalence of FASD is approximately 8 in 1000 individuals, and 1 in every 13 women who consumed alcohol during pregnancy will give birth to a child with FASD. The prevalence of FASD in the U.S. population ranges from 11 to 50 per 1000 children. Although there is no direct evidence estimating the prevalence of alcohol consumption among premutation carriers, some studies have reported that excessive alcohol consumption is relatively common in these individuals. Therefore, children born to mothers with the premutation could be at high risk of being affected by both FXS and FASD. Additionally, prenatal alcohol exposure may have an additive effect, potentially affecting the severity of the clinical presentation in individuals with FXS."
+      },
+      {
+        "offset": 6895,
+        "section": "INTRO",
+        "text": "Here, we present five siblings, two brothers with FXS and FASD and a triplet, two twins with FXS and FASD, and one fraternal triplet with FASD and no FXS. The mother was a carrier of an FMR1 premutation allele and had a history of substance and alcohol use disorder. In this study, we compared the neurobehavioral characteristics of the five cases, and discuss the underpinning molecular pathways and the possible neurochemical alteration observed between FXS and FASD."
+      },
+      {
+        "offset": 7365,
+        "section": "RESULTS",
+        "text": "2. Results"
+      },
+      {
+        "offset": 7376,
+        "section": "RESULTS",
+        "text": "The five male adopted siblings were the children of a mother with the FMR1 premutation (Pedigree Figure 1)."
+      },
+      {
+        "offset": 7484,
+        "section": "RESULTS",
+        "text": "All children experienced multiple foster homes before being adopted by the current family. Thus, details of the prenatal and postnatal history of all cases are limited. In addition to the history of alcohol and substance (cocaine and opioid) usage by the biological mother during pregnancy, all cases experienced neglect, especially during the developmental age, that could have contributed to exacerbate their behavioral conditions. The cognitive, neuropsychiatric, and neurobehavioral evaluations of all cases are shown in Table 1."
+      },
+      {
+        "offset": 8018,
+        "section": "RESULTS",
+        "text": "DNA testing showed that case 1 and case 2 had fully methylated FM alleles of >200 CGG repeats, with a consequent absence of FMRP. The two identical-twin triplets (cases 3 and 4) were FM:size mosaics, showing the presence of an FM (>200 CGG repeats) and the deletion (Figure 2) of a 107 bp genomic region upstream of a 48-CGG-repeat tract; methylation was observed in 70% and 60% of the cells, respectively, resulting in a low FMRP expression level (Figure 3). The fraternal triplet (case 5) showed a normal allele with 30 CGG repeats and an FMRP expression level in the normal range; see Figure 3."
+      },
+      {
+        "offset": 8618,
+        "section": "RESULTS",
+        "text": "Cases"
+      },
+      {
+        "offset": 8624,
+        "section": "RESULTS",
+        "text": "Case 1 is an 11-year-old child with a fully methylated FXS full mutation presenting with FXS, ASD, and FASD; specifically, he met the diagnostic criteria for alcohol-related neurodevelopmental disorder (ARND). Birth and early childhood information are unknown because he was taken away from his biological mother, who had history of drug and alcohol use disorder. His current behavioral phenotype includes self-harming, aggression towards other family members, low compliance, hyperactivity, and tantrums. He has a flat affect and appears depressed and anxious with reduced eye contact; he has a history of psychiatric hospitalization at 7 years of age, although suicidal behavior has not been noted. He is not yet toilet trained but has awareness of bladder and bowel movements. He has difficulties with sleep and displays socially inappropriate disinhibition. Physical examination shows FXS features including prominent ears, a mildly high palate, and flat feet with pronation. He does not have a long and narrow face or hyper-extensible joints. He has a history of growth restriction for weight and height (<10th percentile for his age). His current medications include guanfacine ER 4 mg, risperidone 4 mg, quetiapine 25 mg, and Adderall ER (amphetamine/dextroamphetamine) 30 mg."
+      },
+      {
+        "offset": 9908,
+        "section": "RESULTS",
+        "text": "Case 2 is a 9-year-old child with a fully methylated FXS full mutation presenting with FXS, ASD, and FASD; specifically, he met the diagnostic criteria for ARND, with significant self-injurious behavior. His medical history includes the surgical correction of gastroschisis at birth. Current challenging behaviors include head-banging and daily meltdowns. He has no history of suicidal behavior or seizures. He is also aggressive towards others and has trouble sleeping. He has poor eye contact and displays severe anxiety and irritability. Physical features include prominent and cupped ears, mishappened ear pinnae, epicanthal folds, right exotropia, hyper-extensible finger joints, a single palmar crease on the right hand, and flat feet. Physical measures are normal, with a remarkable low BMI of 15.6, and with growth restriction for weight and height (<10th percentile for his age) with poor weight and height gain. He is currently in a mainstream education class and receives a special pull-out class for math and English. Current daily medications include quetiapine 25 mg, guanfacine ER 4 mg, aripiprazole 7.5 mg am/10 mg pm, and risperidone 4 mg. He was tried on sertraline in the past but he became more aggressive, so sertraline was discontinued."
+      },
+      {
+        "offset": 11167,
+        "section": "RESULTS",
+        "text": "Case 3 is triplet 1, a 6-year-old child, full mutation-size mosaic, with FMR1 alleles with >200 CGG repeats (60% methylation) and a deleted allele with 48 CGG repeats, but with 107 bp deletion upstream of the repeat present, presenting with FXS, ASD, and FASD, and meeting the diagnostic criteria for ARND. He was premature, with a low birth weight (3 pounds, 6 ounces). He had recurrent ear infections during early childhood, with no other known medical conditions. His current behavioral phenotype is notable for its aggression and he has limited language skills. He also has sleep disturbance, hyperactivity and problems with attention (ADHD), and severe anxiety. He is not yet toilet trained. Physical features include a broad and wide palate, slight clinodactyly of the fifth finger of his right hand, and hyper-extensible finger joints. Growth restriction is found for height and weight (<3rd percentile for his age). His current medications include clonidine, sertraline, trazadone, risperidone, and methylphenidate."
+      },
+      {
+        "offset": 12191,
+        "section": "RESULTS",
+        "text": "Case 4 is triplet 2, a 6-year-old child, full mutation-size mosaic, with FMR1 alleles with >200 CGG repeats (70% methylation) and a deleted allele with 48 CGG repeats but with 107 bp deletion upstream of the repeat, presenting with FXS, ASD, and FASD, and meeting the diagnostic criteria for ARND. His birth weight was 3 pounds, 15 ounces. His medical history includes the surgical repair of an inguinal hernia at 3 years of age. Currently, his main behavioral difficulties include self-harming and aggression toward others, developmental delay, and delayed communication skills. He has problems with sleep and hyperactivity and attention (ADHD), and separation anxiety is also a concern for caregivers. He has repetitive speech and other stereotypic behavior. He is partially toilet trained. His physical exam was normal: he has a low height and weight (<3rd percentile for his age). His current medications include clonidine, trazadone, risperidone, and methylphenidate."
+      },
+      {
+        "offset": 13164,
+        "section": "RESULTS",
+        "text": "Case 5 is triplet 3, a 6-year-old with a normal FMR1 allele with 30 CGG repeats, who presents with ASD and FASD, and meets the diagnostic criteria for partial fetal alcohol syndrome (PFAS). He has a history of language delay and is described as a picky eater. He had an extremely low birth weight (~2 pounds). He is currently of a small build, showing restrictions in growth (<3rd percentile for height and weight for his age) and not yet toilet trained. His current challenges include developmental delay, deficits in social communication, sleep disturbance, aggression, hyperactivity and attention (ADHD), anxiety, and recurrent tantrums. He has repetitive speech and poor eye contact. He has good learning skills. Physical exam reveals a flat and broad philtrum with thin lips, absent epicanthal folds, a broad palate, and slight clinodactyly in the fifth finger bilaterally. His current medications include clonidine, trazodone, and guanfacine."
+      },
+      {
+        "offset": 14113,
+        "section": "DISCUSS",
+        "text": "3. Discussion"
+      },
+      {
+        "offset": 14127,
+        "section": "DISCUSS",
+        "text": "An expansion of the FMR1 CGG repeat to greater than 200, called the FM allele, leads to FMR1 methylation, gene silences, and the absence of gene transcription and translation and, thus, a lack of FMRP production. FMRP is a critical protein for typical brain function, functioning as a translational repressor at the synapses by inhibiting elongating ribosomes. Its absence leads to increased protein translation in the brain, which leads to the FXS phenotype. In this study, we report on the clinical and molecular features of five siblings. The older brothers (cases 1 and 2) have FXS with fully methylated FM alleles and no FMRP production, while the two identical-twin triplets (cases 3 and 4) are FM-size mosaics with low FMRP expression levels. The fraternal triplet has a normal FMR1 allele and normal FMRP expression levels. All participants with FXS (cases 1, 2, 3, and 4) and with FASD (case 5) have ASD, with higher total ADOS scores (>=7) in all siblings who had FXS (cases 1, 2, 3, and 4) compared to case 5 (ADOS score 4)."
+      },
+      {
+        "offset": 15164,
+        "section": "DISCUSS",
+        "text": "The beginning of pregnancy is particularly vulnerable to environmental factor toxicity, which can lead to long-term effects for development. Several factors can contribute to the complex phenotype of FASD, and the toxic effect of alcohol can be caused by genetic factors for susceptibility or resistance, which could ultimately affect the alcohol-induced phenotype, which means that mothers with a certain genotype could consume more alcohol. In this study, all siblings were removed from their biological mother in early childhood and were in multiple foster homes and abusive situations that impacted their behavior before they were adopted together. The fact that case 5 did not have FXS but still had severe behavioral problems is related to both his FASD and his severe environmental exposures:including abuse in his biological and foster homes, in addition to his constant exposure to his severely affected siblings. He often copied his brother's behaviors and yet he had the highest IQ because of his normal FMRP expression level. Since FASD can worsen in subsequent siblings as the mother ages because of ongoing damage to her liver leading to higher alcohol levels in blood, the triplets are likely the most affected by FASD; however, their higher FMRP levels could protect their IQ, most remarkably seen in case 5."
+      },
+      {
+        "offset": 16493,
+        "section": "DISCUSS",
+        "text": "There is a significant variability in the behavioral phenotype and autistic features of individuals who have a fully methylated FM compared to those with FM mosaicism who carry unmethylated and methylated FM alleles, where some cells have a methylated allele that do not express FMRP and FMR1 mRNA, and others carry unmethylated alleles which express FMRP and FMR1 mRNA. Further, elevated levels of FMR1 mRNA lead to RNA gaining a toxic function, which may contribute to an increased risk of neurodevelopmental problems, including autism. Cases 1 and 2 carry a fully methylated FM allele, and both have a high ADOS score, low non-verbal IQ, severe behavioral problems:especially irritability and hyperactivity -and a low adaptive behavioral score, in addition to externalizing behavior, i.e., aggression towards others, and tantrums. These severe clinical and behavioral problems are caused by accelerated conditions: in utero alcohol exposure during pregnancy (their brother, case 5, has FASD) combined with unfavorable environmental conditions (foster home environments, caregiver psychopathology, lack of stimulation/neglect), which may lead to modifying gene effects and potentially to epigenetic changes."
+      },
+      {
+        "offset": 17707,
+        "section": "DISCUSS",
+        "text": "FMRP is an RNA-binding protein encoded by the FMR1 gene that controls specific neuronal mRNA localization and translation, which is essential for proper synaptic plasticity and architecture. The lack or absence of FMRP can cause the imbalanced release of glutamate and GABA from astrocyte cells, which may be involved in the neuropathology and underlying symptoms of FXS, such as cognitive impairment and the ASD phenotype."
+      },
+      {
+        "offset": 18131,
+        "section": "DISCUSS",
+        "text": "Although several studies have reported on the presence of a small deletion in the genomic region spanning the CGG repeat in subjects with FXS, only a few have provided data on FMR1 mRNA and FMRP expression levels. In our study, case 3 and 4 carry a deleted allele which includes a 107 bp genomic region upstream of the CGG repeats in approximately 30 and 40% of the cells, allowing the expression of 50% FMRP and 16% FMRP in case 3 and case 4, respectively. The small deletion upstream of the region of the CGG repeats did not cause gene silencing, and preserved both the transcription start sites and the translation start site, thus producing FMRP in the cells carrying the deleted allele in both triplet twins. Although the deletion of the entire CGG repeat region does not abolish expression, if both the transcription and translation start sites are unaffected by the deletion, the role of these deletions relative to FMR1 gene activity (transcription and translation) is not completely clear and requires additional investigations."
+      },
+      {
+        "offset": 19169,
+        "section": "DISCUSS",
+        "text": "FMRP is essential for synaptic plasticity, which is critical for brain function. Some studies have been concerned to discover the relationship between protein levels and the phenotypic characteristics of FXS, and lower FMRP levels have been documented in samples of individuals with FXS and ASD compared to patients with FXS only."
+      },
+      {
+        "offset": 19500,
+        "section": "DISCUSS",
+        "text": "Glutamate, the most important excitatory neuron which plays an important role in synaptic plasticity and brain function, is the most affected neurotransmission system in ethanol-induced developmental disabilities, which work through a dual mechanism: the blockade of NMDA glutamate receptors and excessive activation of GABAA receptors, where ethanol has both NMDA antagonist and GABA mimetic properties. The lack of FMRP in FXS individuals activates excitatory neurons, specifically metabotropic glutamate receptors (mGluR); thus, combined with excessive exposure to alcohol, it may cause individuals who carry a fully methylated FM allele to have severe behavioral concerns in addition to the classic FXS phenotypes, as seen in the cases reported here."
+      },
+      {
+        "offset": 20255,
+        "section": "DISCUSS",
+        "text": "Alcohol use disorder is more common in males who carry the premutation (55-200 CGG repeats) as compared to the general population, possibly due to attempts to self-treat neuropsychiatric conditions like depression and anxiety. Similarly, individuals with FXS have relatively high rates of anxiety and may be at higher risk for alcohol use disorder, especially in places where alcohol is consumed socially and limited psychiatric medications are available. One study reported on 20 men with FXS in Ricaurte, Columbia, 8 of whom showed significant alcohol consumption and 6 of whom met criteria for alcohol dependence syndrome. In this study, exacerbating behavioral problems, including aggression and impulsivity leading to self-injury, was reported in the cases who met criteria for alcohol dependence syndrome. FXS is highly associated with intellectual disability and impulsivity, and these factors may also predispose individuals to alcohol dependence. Premutation carriers have an increased likelihood of alcohol consumption, which may increase the risk of FASD occurrence in children of female carriers, although further research in this area is needed. In this study, the biological mother is a premutation carrier who used alcohol and other substances during pregnancy. Female premutation carriers can experience the early onset of fragile X-associated neuropsychiatric conditions (FXAND), as compared to males, which may lead to self-medicating with excessive alcohol consumption."
+      },
+      {
+        "offset": 21746,
+        "section": "DISCUSS",
+        "text": "The five siblings consist of two older siblings (cases 1 and 2) and the triplets, including two identical triplets (cases 3 and 4) and one fraternal triplet (case 5). All five siblings were diagnosed with FASD and were found to have significant growth restriction for both weight and height, which is not common in children with FXS. Thus, this is likely related to excessive alcohol exposure. In addition to having ASD, the two identical-twin triplets (cases 3 and 4) also had FXS and a higher ADOS score compared to the fraternal triplet (case 5), who also had the highest score for nonverbal IQ. The aberrant behavior and adaptive behavior were similar between triplets."
+      },
+      {
+        "offset": 22420,
+        "section": "METHODS",
+        "text": "4. Materials and Methods"
+      },
+      {
+        "offset": 22445,
+        "section": "METHODS",
+        "text": "4.1. Subjects"
+      },
+      {
+        "offset": 22459,
+        "section": "METHODS",
+        "text": "All participants of this study were seen at the Fragile X Research and Treatment Center at the Medical Investigation of Neurodevelopmental Disorders (MIND) Institute, UC Davis Health Center, Sacramento, CA, USA. Legal guardians signed a consent form for the publication of this manuscript with their clinical details, evaluation findings, and photograph. Thorough evaluation included a clinical history and physical examination, assessed by an experienced developmental-behavioral pediatrician, and standardized neuropsychological testing by a qualified psychologist; parents completed standardized questionnaires."
+      },
+      {
+        "offset": 23074,
+        "section": "METHODS",
+        "text": "4.2. Molecular Measures"
+      },
+      {
+        "offset": 23098,
+        "section": "METHODS",
+        "text": "Molecular analysis included DNA testing for the FMR1 mutations by Southern Blot and PCR carried out on genomic DNA isolated from whole blood samples. The fragile X messenger ribonucleoprotein (FMRP) expression level was measured using Western blot analysis in peripheral blood mononuclear cells (PBMCs) derived from participants as described in Zafarullah et al.. Sequencing analysis was conducted by Sanger sequencing on gel-purified PCR amplicons obtained by PCR using primers C5 and F, as depicted in Figure 2. The primers' sequence was as follows: C5: 5' ATT TCC CAC GCC ACT GAG TG 3'; F: 5' AGC CCC GCA CTT CCA CCA CCA GCT CCT CCA 3'."
+      },
+      {
+        "offset": 23748,
+        "section": "METHODS",
+        "text": "4.3. Clinical Measures"
+      },
+      {
+        "offset": 23771,
+        "section": "METHODS",
+        "text": "The Leiter-3 test was administered to assess non-verbal cognitive functions. The Autism Diagnostic Observation Schedule (ADOS-2) module was used to diagnose and classify the ASD. FASD diagnosis was based on the 2016 Updated Clinical Guidelines for FASD Diagnosis, which includes four diagnostic categories, including FAS, PFAS, ARND, and ARBD. The Vineland Adaptive Behavior Scales, Second Edition (VABS-2) was administered to diagnose intellectual and developmental disabilities, while the severity of behaviors' problems were rated using Aberrant Behavior Checklist-Community (ABC-C), a 58-item questionnaire for caregivers used to assess maladaptive behaviors. Clinical details of the triplets, cases 3, 4, and 5, have been reported previously."
+      },
+      {
+        "offset": 24521,
+        "section": "CONCL",
+        "text": "5. Conclusions"
+      },
+      {
+        "offset": 24536,
+        "section": "CONCL",
+        "text": "The phenotypic variability in the intellectual and behavioral phenotypes observed in the five siblings included in this study derived from a combination of the variability of the FMR1 mutation characterized in the participants and environmental factors such as in utero alcohol exposure, which has likely played a role in worsening the behavioral phenotype."
+      },
+      {
+        "offset": 24894,
+        "section": "CONCL",
+        "text": "All of the boys have severe behavioral problems compared to typical children with FXS, and these problems are likely exacerbated by their FASD, in addition to abuse from multiple foster homes."
+      },
+      {
+        "offset": 25087,
+        "section": "CONCL",
+        "text": "Future direction: This study shows the impact of environmental factors, especially in utero and in early life, on behavioral phenotypes in individuals with FXS. Both FASD and FXS are risk factors of behavioral problems and ASD; therefore, having both may cause a double hit in the development of behavioral problems. In addition, previous reports demonstrate an increased rate of excessive alcohol use in premutation individuals, perhaps as a treatment for fragile X-associated neuropsychiatric conditions such as depression or anxiety. Accordingly, the education of family members, especially of carriers of a fragile X mutation, regarding background gene effects and lifestyle recommendations should be carried out, so that favorable lifestyle decisions can be made in adult life, in addition to avoiding excessive alcohol intake."
+      },
+      {
+        "offset": 33824,
+        "section": "FIG",
+        "text": "Pedigree including the five participants. FM = full mutation; FM:mosaic= full mutation mosaic; N = normal."
+      },
+      {
+        "offset": 33933,
+        "section": "FIG",
+        "text": "Graphical representation of the DNA sequencing results. Zoomed in electropherogram shows the sequence of the FMR1 PCR amplicon (of 532 bp obtained using primer C5 and f) containing a de-letion of 107 base pairs upstream of the CGG repeat, observed in both the twin brothers with FXS (cases 3 and 4). The sequence in base pairs is displayed on the top of the image and different colored peaks show data for different bases (red for thymine, blue for cytosine, green for adenine and black for guanine). The presence of a deleted allele was demonstrated by PCR and visualized by gel electrophoresis (on the left of the figure) using primers C5 and f (also used for sequencing analysis). On the top, the exact locations, in bp, of deletion within the FMR1 gene (L29074.1) is specified. The deleted allele retained the trinucleotide repeat of 48 CGG."
+      },
+      {
+        "offset": 34779,
+        "section": "FIG",
+        "text": "Western Blot analysis of fragile X messenger ribonucleoprotein of five cases. Western blot of FMRP and of loading control vinculin are shown on top. Histogram of FMRP levels is shown on bottom. Lane/bar 1 is case 5 (fraternal triplet, FASD), who shows normal FMRP level; lane/bar 2 is case 1 (FXS), with absent FMRP expression; lane/bar 3 is case 4 (triplet, mosaic FXS), with lower FMRP expression level; lane/bar 4 is case 2 (FXS), with absence of FMRP expression; and lane/bar 5 is case 3 (triplet, mosaic FXS) with low FMRP expression level, and lane/bar 5 is a 60 years old male control with 30-CGG repeat allele who shows normal FMRP expression level."
+      },
+      {
+        "offset": 35437,
+        "section": "TABLE",
+        "text": "Summary of neuropsychological evaluations of five study participants."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-8eb48b1626e3e6d9",
+    "object": "chat.completion",
+    "created": 1790521751,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"O1\",\"phenotype\":[\"HP:0000729\",\"HP:0000411\",\"HP:0000752\",\"HP:0012759\",\"HP:5200125\",\"HP:0000817\",\"HP:0000734\",\"HP:0000218\",\"HP:0001763\"]},{\"patient_id\":\"O2\",\"phenotype\":[\"HP:0000729\",\"HP:0000739\",\"HP:0000737\",\"HP:0001510\",\"HP:0000817\",\"HP:0001763\",\"HP:0100716\",\"HP:0001543\",\"HP:0012168\",\"HP:0002360\",\"HP:0000378\",\"HP:0000286\",\"HP:0000577\",\"HP:0000954\",\"HP:0000098\"]},{\"patient_id\":\"O3\",\"phenotype\":[\"HP:0000729\",\"HP:0000718\",\"HP:0000739\",\"HP:0007018\",\"HP:0000752\",\"HP:0001510\",\"HP:0002360\",\"HP:0001518\",\"HP:0410018\",\"HP:0030084\"]},{\"patient_id\":\"O4\",\"phenotype\":[\"HP:0000729\",\"HP:0000739\",\"HP:0007018\",\"HP:0000752\",\"HP:5200125\",\"HP:0000023\",\"HP:0001263\"]},{\"patient_id\":\"O5\",\"phenotype\":[\"HP:0000729\",\"HP:0000718\",\"HP:0000739\",\"HP:0007018\",\"HP:0000752\",\"HP:0030955\",\"HP:0001328\",\"HP:0000817\",\"HP:0002360\",\"HP:0000286\",\"HP:0001518\",\"HP:0030084\",\"HP:0001263\",\"HP:0000750\",\"HP:0000289\",\"HP:0000233\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 8509,
+      "total_tokens": 9133,
+      "completion_tokens": 624,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "O1",
+      "phenotype": [
+        "HP:0000729",
+        "HP:0000411",
+        "HP:0000752",
+        "HP:0012759",
+        "HP:5200125",
+        "HP:0000817",
+        "HP:0000734",
+        "HP:0000218",
+        "HP:0001763"
+      ]
+    },
+    {
+      "patient_id": "O2",
+      "phenotype": [
+        "HP:0000729",
+        "HP:0000739",
+        "HP:0000737",
+        "HP:0001510",
+        "HP:0000817",
+        "HP:0001763",
+        "HP:0100716",
+        "HP:0001543",
+        "HP:0012168",
+        "HP:0002360",
+        "HP:0000378",
+        "HP:0000286",
+        "HP:0000577",
+        "HP:0000954",
+        "HP:0000098"
+      ]
+    },
+    {
+      "patient_id": "O3",
+      "phenotype": [
+        "HP:0000729",
+        "HP:0000718",
+        "HP:0000739",
+        "HP:0007018",
+        "HP:0000752",
+        "HP:0001510",
+        "HP:0002360",
+        "HP:0001518",
+        "HP:0410018",
+        "HP:0030084"
+      ]
+    },
+    {
+      "patient_id": "O4",
+      "phenotype": [
+        "HP:0000729",
+        "HP:0000739",
+        "HP:0007018",
+        "HP:0000752",
+        "HP:5200125",
+        "HP:0000023",
+        "HP:0001263"
+      ]
+    },
+    {
+      "patient_id": "O5",
+      "phenotype": [
+        "HP:0000729",
+        "HP:0000718",
+        "HP:0000739",
+        "HP:0007018",
+        "HP:0000752",
+        "HP:0030955",
+        "HP:0001328",
+        "HP:0000817",
+        "HP:0002360",
+        "HP:0000286",
+        "HP:0001518",
+        "HP:0030084",
+        "HP:0001263",
+        "HP:0000750",
+        "HP:0000289",
+        "HP:0000233"
+      ]
+    }
+  ],
+  "elapsed_seconds": 11.261,
+  "usage": {
+    "prompt_tokens": 8509,
+    "total_tokens": 9133,
+    "completion_tokens": 624,
+    "prompt_tokens_details": null
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "generated_at": "2026-09-27T23:53:23+08:00",
+  "recommended_submission": "patientphex_a_fusion.jsonl",
+  "method": "cpu_union_gpu",
+  "multi_patient_only": true,
+  "independent_rule_recomputation_equal": true,
+  "entities_pmid_order_preserved": true,
+  "UMLS_used": false,
+  "is_independent_test": false,
+  "official_A_score_known": false,
+  "validation": {
+    "valid": true,
+    "path": "D:\\Projects\\20260927_CHIP2026\\submissions\\patientphex_a_cpu_gpu_union_multi.jsonl",
+    "bytes": 156077,
+    "limit_bytes_exclusive": 100000000,
+    "sha256": "66a1ddb7910dd2f06d35470cd1b65e2df65054819bad730350b5dd0ef32f3b50",
+    "documents": 20,
+    "patients": 53,
+    "entities": 1335,
+    "association_pairs": 514,
+    "negated_entities": 43,
+    "unmapped_entities": 2,
+    "compound_entities": 2,
+    "document_order_preserved": true,
+    "empty_entity_documents": [],
+    "warnings": []
+  },
+  "artifacts": [
+    {
+      "name": "patientphex_a_cpu.jsonl",
+      "path": "D:\\Cache\\Codex\\2026-09-27\\cha-xu\\outputs\\patientphex_a_cpu.jsonl",
+      "bytes": 155621,
+      "sha256": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+    },
+    {
+      "name": "patientphex_a_gpu.jsonl",
+      "path": "D:\\Cache\\Codex\\2026-09-27\\cha-xu\\outputs\\patientphex_a_gpu.jsonl",
+      "bytes": 155901,
+      "sha256": "b6de947bc85d0d8820f1c8dbc0bec68a536f134edefffb6fa56404bd0358846b"
+    },
+    {
+      "name": "patientphex_a_rag.jsonl",
+      "path": "D:\\Cache\\Codex\\2026-09-27\\cha-xu\\outputs\\patientphex_a_rag.jsonl",
+      "bytes": 155529,
+      "sha256": "7b333e81189485097ec8bf0a70160ff16bbf384270ab2779c041b1a5fba07f3a"
+    },
+    {
+      "name": "patientphex_a_fusion.jsonl",
+      "path": "D:\\Cache\\Codex\\2026-09-27\\cha-xu\\outputs\\patientphex_a_fusion.jsonl",
+      "bytes": 156077,
+      "sha256": "66a1ddb7910dd2f06d35470cd1b65e2df65054819bad730350b5dd0ef32f3b50"
+    },
+    {
+      "name": "patientphex_comparison_report.md",
+      "path": "D:\\Cache\\Codex\\2026-09-27\\cha-xu\\outputs\\patientphex_comparison_report.md",
+      "bytes": 18879,
+      "sha256": "0859098a90898c4bca2a2c1c51a4d99f4d3b2fe00ab1b4406ac0d9d8a8d94451"
+    }
+  ],
+  "completion_audit": {
+    "plain80": {
+      "documents": 80,
+      "all_documents_refined": true,
+      "cpu_fallback_documents": 0,
+      "excerpted_documents": 0
+    },
+    "plainA": {
+      "documents": 20,
+      "all_documents_refined": true,
+      "cpu_fallback_documents": 0,
+      "excerpted_documents": 0
+    },
+    "rag80": {
+      "documents": 80,
+      "all_documents_refined": true,
+      "cpu_fallback_documents": 0,
+      "excerpted_documents": 0
+    },
+    "ragA": {
+      "documents": 20,
+      "all_documents_refined": true,
+      "cpu_fallback_documents": 0,
+      "excerpted_documents": 0
+    }
+  },
+  "timings": [
+    {
+      "stage": "CPU完整5折",
+      "seconds": 87.34,
+      "new_requests": null,
+      "source": "work/gpu_route/cpu_metrics_input.json"
+    },
+    {
+      "stage": "普通GPU pilot",
+      "seconds": 40.287,
+      "new_requests": 8,
+      "source": "reports/gpu_validation_pilot/summary.json"
+    },
+    {
+      "stage": "普通GPU全80续跑",
+      "seconds": 831.26,
+      "new_requests": 72,
+      "source": "reports/gpu_validation/summary.json"
+    },
+    {
+      "stage": "普通GPU A集最终修复",
+      "seconds": 12.055,
+      "new_requests": 1,
+      "source": "reports/gpu_a/summary.json"
+    },
+    {
+      "stage": "RAG pilot",
+      "seconds": 101.732,
+      "new_requests": 8,
+      "source": "reports/gpu_rag_pilot/summary.json"
+    },
+    {
+      "stage": "RAG全80续跑",
+      "seconds": 879.817,
+      "new_requests": 72,
+      "source": "reports/gpu_rag_validation/summary.json"
+    },
+    {
+      "stage": "RAG A集",
+      "seconds": 299.801,
+      "new_requests": 20,
+      "source": "reports/gpu_rag_a/summary.json"
+    }
+  ],
+  "project_report": "D:\\Projects\\20260927_CHIP2026\\reports\\gpu_comparison\\final_report.md",
+  "fusion_diagnostics": "D:\\Projects\\20260927_CHIP2026\\reports\\fusion_search\\comparison.json",
+  "scores": {
+    "all_80": {
+      "cpu": 0.6397270845646355,
+      "fusion": 0.6409830657573126
+    },
+    "non_pilot_72": {
+      "cpu": 0.6336880738849895,
+      "fusion": 0.635221915562879
+    }
+  }
+}

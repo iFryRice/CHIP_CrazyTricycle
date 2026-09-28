@@ -1,0 +1,318 @@
+{
+  "pmc_id": "6338757",
+  "identity": "10ec717909c08220b543bd7a99bfb08dafff131f2f1207a82a52bf1936355812",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 12605,
+    "covered_source_characters": 12605,
+    "source_is_excerpted": false,
+    "candidate_windows": 13,
+    "selected_windows": 13,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 16084,
+    "candidate_concepts": 27,
+    "patient_count": 1
+  },
+  "prompt": {
+    "pmc_id": "6338757",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "patient",
+            "offset": 60
+          },
+          {
+            "text": "patient",
+            "offset": 329
+          },
+          {
+            "text": "patient",
+            "offset": 1843
+          },
+          {
+            "text": "a 70-year-old patient",
+            "offset": 2246
+          },
+          {
+            "text": "patient",
+            "offset": 2827
+          },
+          {
+            "text": "patient",
+            "offset": 8786
+          },
+          {
+            "text": "patient",
+            "offset": 11897
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0004942": [
+        "aortic aneurysm",
+        "aortic aneurysms"
+      ],
+      "HP:0001083": [
+        "ectopia lentis"
+      ],
+      "HP:0005116": [
+        "arterial tortuosity"
+      ],
+      "HP:0000316": [
+        "hypertelorism"
+      ],
+      "HP:0000193": [
+        "bifid uvula"
+      ],
+      "HP:0012727": [
+        "thoracic aortic aneurysm",
+        "TAA"
+      ],
+      "HP:0012180": [
+        "cystic medial necrosis"
+      ],
+      "HP:0000098": [
+        "tall stature"
+      ],
+      "HP:0001533": [
+        "thin body habitus"
+      ],
+      "HP:0002650": [
+        "scoliosis"
+      ],
+      "HP:0002616": [
+        "aortic root"
+      ],
+      "HP:6001274": [
+        "thumb sign"
+      ],
+      "HP:0000767": [
+        "pectus excavatum"
+      ],
+      "HP:5210430": [
+        "hindfoot deformity"
+      ],
+      "HP:0100775": [
+        "dural ectasia"
+      ],
+      "HP:0003179": [
+        "protrusio acetabuli"
+      ],
+      "HP:0002751": [
+        "kyphoscoliosis"
+      ],
+      "HP:0001999": [
+        "facial features"
+      ],
+      "HP:0000268": [
+        "dolichocephaly"
+      ],
+      "HP:0000494": [
+        "downslanting palpebral fissures"
+      ],
+      "HP:0000272": [
+        "malar hypoplasia"
+      ],
+      "HP:0001065": [
+        "striae"
+      ],
+      "HP:0011003": [
+        "high myopia"
+      ],
+      "HP:0001634": [
+        "mitral valve prolapse"
+      ],
+      "HP:0004938": [
+        "tortuous cerebral arteries"
+      ],
+      "HP:0010646": [
+        "cervical spine instability"
+      ],
+      "HP:0001249": [
+        "ID"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0004942",
+          "HP:0001083",
+          "HP:0005116",
+          "HP:0000316",
+          "HP:0000193",
+          "HP:0012727",
+          "HP:0012180",
+          "HP:0000098",
+          "HP:0001533",
+          "HP:0002650",
+          "HP:0002616",
+          "HP:6001274",
+          "HP:0000767",
+          "HP:5210430",
+          "HP:0100775",
+          "HP:0003179",
+          "HP:0002751",
+          "HP:0001999",
+          "HP:0000268",
+          "HP:0000494",
+          "HP:0000272",
+          "HP:0001065",
+          "HP:0011003",
+          "HP:0001634",
+          "HP:0004938",
+          "HP:0010646"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Activation of TGF-beta signaling in an aortic aneurysm in a patient with Loeys-Dietz syndrome caused by a novel loss-of-function variant of TGFBR1"
+      },
+      {
+        "offset": 147,
+        "section": "ABSTRACT",
+        "text": "Loeys-Dietz syndrome (LDS) is caused by variants of transforming growth factor-beta (TGF-beta)-related genes and is characterized by aortic aneurysm and dissection. We report an LDS patient with a de novo missense variant of TGFBR1 [c.1126A>G, p.(Lys376Glu)] in which active TGF-beta signaling was observed in the aorta, despite the in vitro demonstration that the loss-of-function mutation lies within the serine/threonine kinase domain. The mechanism underlying this TGF-beta paradox in LDS aortopathy should be further investigated."
+      },
+      {
+        "offset": 683,
+        "section": "INTRO",
+        "text": "Loeys-Dietz syndrome (LDS) is an autosomal dominant genetic connective tissue disorder that is caused by pathogenic variants of genes that encode components of the transforming growth factor-beta (TGF-beta) signaling pathway. TGFBR1 and TGFBR2, which encode serine/threonine protein kinase (STK) receptors, are examples of such causative genes. LDS patients have several features that overlap symptoms seen in Marfan syndrome (MFS) patients, including an increased prevalence of aortic aneurysm and dissection. However, LDS patients do not develop ectopia lentis, which is a hallmark feature of MFS patients, and are further characterized by the diagnostic clinical triad of arterial tortuosity and aneurysms, hypertelorism, and a bifid uvula. The TGF-beta signaling pathway in the aortic wall is upregulated in LDS patients, although the causative variants of TGFBR1 and TGFBR2 are missense variants predicted to reduce their STK activities. To understand the crucial roles played by TGF-beta signaling in LDS patients, in vitro and in vivo functional characterization of the genetic variants responsible for LDS is important. Here we report a case of an LDS patient with a de novo loss-of-function variant in the STK domain of TGFBR1 (c.1126A>G; NG_007461.1), in which a paradoxical upregulation of TGF-beta signaling was observed in the resected aortic tissue."
+      },
+      {
+        "offset": 2047,
+        "section": "FIG",
+        "text": "Histological and TGFBR1 genomic analyses."
+      },
+      {
+        "offset": 2089,
+        "section": "FIG",
+        "text": "a, b Histological analyses of surgically dissected aortic tissue samples from the proband with LDS and from a non-familial thoracic aortic aneurysm (TAA) in a 70-year-old patient. a Elastica van Gieson (EVG) staining revealed severely disorganized and fragmented elastic fibers (arrowhead) in the proband's aortic media with cyst-like lesions (cystic medial necrosis, arrow). Scale bars: 500 microm; 100 microm in the inset. b Immunohistochemical (IHC) staining against phosphorylated SMAD2 (Cell Signaling, Danvers, MA, USA) and smooth muscle alpha-actin (Sigma, St. Louis, MO, USA). Scale bars: 200 microm; 25 microm in the inset. c Genomic DNA sequencing revealed a heterozygous single-base substitution (c.1126A>G) in the proband"
+      },
+      {
+        "offset": 2823,
+        "section": "INTRO",
+        "text": "The patient was a Japanese man with no apparent relevant family history of thoracic aortic aneurysm and/or dissection. It was thought that he suffered from an MFS-related disorder because of his tall stature, thin body habitus (height, 182 cm; weight, 43.6 kg), and scoliosis at the age of 15 years. Echocardiography revealed an enlargement of the sinus of Valsalva (36 mm; aortic root Z-score, 5.87), for which he had been followed up at a local hospital. At the age of 27 years, his aortic root diameter was 41 mm (188 cm; 50 kg; Z-score, 5.17), and he was referred to the Marfan clinic at the University of Tokyo Hospital. He had a positive wrist and thumb sign and presented with pectus excavatum, a hindfoot deformity, lumbosacral dural ectasia, protrusio acetabuli, kyphoscoliosis, facial features (dolichocephaly, downslanting palpebral fissures, and malar hypoplasia), skin striae, high myopia, and mitral valve prolapse (15 points, according to the 2010 revised Ghent nosology). Furthermore, he had a bifid uvula, hypertelorism, tortuous cerebral arteries, and cervical spine instability. At the age of 31, his aortic root diameter was 48 mm (Z-score, 8.08), and his aneurysm was treated using the David valve-sparing root replacement procedure. Extended histological examinations revealed elastin degradation, cystic medial necrosis, and increased SMAD2 phosphorylation, indicating active TGF-beta signaling in the aortic wall (Fig. 1a, b)."
+      },
+      {
+        "offset": 4287,
+        "section": "FIG",
+        "text": "Functional assay of the Lys376Glu variant of the TGFBR1 gene."
+      },
+      {
+        "offset": 4349,
+        "section": "FIG",
+        "text": "a Western blot analysis for TGFBR1 expression from the newly generated TGFBR1 constructs. b, c SBE-firefly luciferase activity in HEK293T cells. b HEK293T cells transfected with the indicated constructs were cultured for 36 h; after 4 h of starvation in FCS-free DMEM, the cells were exposed to recombinant human TGF-beta1 (Wako, Osaka, Japan) at 5 ng/ml for 8 h. n = 11. c HEK293T cells were transfected with the indicated constructs and harvested 48 h after transfection. n = 11 or 12. CA, constitutively active form. Data are shown as the mean +- SD. The statistical significance of the differences between the means was evaluated using one-way analysis of variance followed by the Tukey-Kramer test. n.s. p > 0.05, **p < 0.01, ***p <0.001. d Dysregulated TGF-beta signaling elicited by the LDS-causing TGFBR1 mutation. Left: The TGFBR1 (gray receptor) and TGFBR2 (white receptor) STKs acts as homodimers on the cell membrane in a normal aorta. TGF-beta ligands binds to TGFBR2, inducing its dimerization and enabling the TGFBR2 homodimer to form a stable hetero-tetrameric complex with the TGFBR1 homodimer. This process leads to subsequent activation of SMAD2 and SMAD3, and SMAD-independent pathways (including ERK). Middle: An in vitro functional assay using the overexpressed variant TGFBR1 (blue receptor). The pathogenic missense mutation in the STK domain leads to a loss-of-function phenotype, as demonstrated in the present study (b, c). Right: In the impaired LDS aortic wall, which carries the loss-of-function variant, oversecreted TGF-beta can be transmitted through the remaining wild-type TGFBR1 homodimers, which is believed to promote aortic aneurysm formation. White receptors, wild-type TGFBR2; gray receptors, wild-type TGFBR1; blue receptors, variant TGFBR1"
+      },
+      {
+        "offset": 6158,
+        "section": "INTRO",
+        "text": "Genetic analyses of thoracic aortic aneurysm-related genes (FBN1, TGFBR1, TGFBR2, TGFB2, TGFB3, SMAD3, ACTA2, and MYH11) were conducted. A novel missense variant was identified within exon 6 of TGFBR1 [c.1126A>G, p.(Lys376Glu); Fig. 1c], and this variant was located in the evolutionarily well-conserved STK domain (data not shown). To examine the impact of the STK domain variant on TGFBR1 function, an in vitro functional assay was performed using wild-type and variant TGFBR1 expression vectors. A plasmid encoding human TGFBR1 with a C-terminal HA-tag (pCMV5-TBR1-HA, abbreviated as WT) was generated from a plasmid encoding a genetically altered human TGFBR1 mutant with intrinsic constitutive activity and a C-terminal HA-tag (pCMV5-TBR1-T204D-HA, abbreviated as CA; Addgene #19162, a gift from Joan Massague) by site-directed mutagenesis. Plasmids with the LDS missense variant (pCMV5-TBR1-LDS-HA and pCMV5-TBR1-T204D4-LDS-HA, abbreviated as constructs LDS and LDS-CA, respectively) were generated from the WT and CA constructs, respectively, through site-directed mutagenesis. The plasmid-encoded wild-type and variant TGFBR1 proteins were expressed at uniformly high levels in HEK293T cells (Fig. 2a), and there was low endogenous TGFBR1 expression. Using these constructs, luciferase assays were performed to assess the activity of the SMAD-responsive Smad-binding element (SBE) reporter in HEK293T cells co-transfected with the TGFBR1 expression vectors and either the pGL4.48 (luc2P/SBE/Hygro) vector (Promega, Madison, WI, USA) or the pRL-SV40 control vector (Promega, Madison, WI, USA). After treatment with recombinant human TGF-beta1 (Wako, Osaka, Japan), the increased SBE luciferase activity seen in the WT-transfected HEK293T cells was abolished in the LDS-transfected cells (Fig. 2b). The high constitutive STK activity observed in the CA-transfected HEK293T cells was significantly inhibited in the LDS-CA-transfected cells (Fig. 2c). These results indicate that, at least in vitro, the Lys376Glu variant is a loss-of-function mutation. From these results, we concluded that this variant could be classified as likely pathogenic without confirmation of paternity and maternity based on the classification guidelines of the American College of Medical Genetics and Genomics-Association for Molecular Pathology. The patient was finally diagnosed with LDS based on a constellation of clinical features and the results of the genetic analysis. The TGFBR1 variant data were submitted to the Leiden Open Variant Database (www.LOVD.nl/TGFBR1; Individual ID: #00151836)."
+      },
+      {
+        "offset": 8746,
+        "section": "INTRO",
+        "text": "Here, we report a Japanese sporadic LDS patient characterized by aortic aneurysm and a heterozygous missense TGFBR1 variant (c.1126 A>G). In LDS patients, most of the TGFBR1/2 variants are missense mutations that have been verified and/or predicted to disrupt the activity of the wild-type proteins upon in vitro overexpression. As expected, overexpression of the missense variant TGFBR1 (c.1126 A>G) showed a loss-of-function phenotype in vitro; however, a paradoxical increase in TGF-beta activity was observed in the aortic wall. The mechanism through which loss-of-function TGFBR1/2 variants cause the paradoxical in vivo activation of TGF-beta signaling in LDS aortopathy remains unknown. Heterozygous Tgfbr1 and Tgfbr2 knockout mice do not develop LDS phenotypes; however, complete deletion of Tgfbr2 in postnatal smooth muscles (Myh11-CreERT2;Tgfbr2f/f), along with the resulting decrease in phospho-SMAD2 expression, induces rapidly progressing aortic aneurysms and dissections. These data indicate that basal TGF-beta signaling in smooth muscles promotes postnatal aortic wall homeostasis and hinders aortic dilatation. Conversely, TGF-beta signaling in LDS-associated aortic aneurysms is upregulated, as reported both in LDS patients and Tgfbr1M318R/+ and Tgfbr2G357W/+ LDS knock-in mice, despite their loss-of-function phenotypes shown by in vitro experiments. Based on the following points, we (and others) speculate that augmented TGF-beta signaling via the remaining homodimers of each TGFBR protein plays active roles in disease progression in LDS patients: (1) Expression of TGF-beta ligands was increased in the impaired aortas of Tgfbr1M318R/+ and Tgfbr2G357W/+ mice; (2) TGFBR1 and TGFBR2 act as homodimers on the plasma membrane, which allows TGF-beta signaling to be transmitted through the wild-type/wild-type homodimers in vivo in LDS; (3) increased phosphorylation of SMAD2 was observed in in vitro-cultured fibroblasts from LDS patients following TGF-beta stimulation. Furthermore, cultured aortic vascular smooth muscle cells from Tgfbr2G357W/+ mice showed normal steady-state SMAD2 phosphorylation levels and in response to stimulation with 10 ng/ml of TGF-beta1, but showed reduced activation capacity in response to stimulation with 1 ng/ml of TGF-beta1, suggesting that excessive activation of TGF-beta signaling plays a pivotal role in the pathogenesis of LDS aortopathy (Fig. 2d). On the other hand, we also suspect that the complete ablation of genes encoding TGF-beta signaling molecules in Myh11-CreERT2;Tgfbr2f/f mice and in homozygous Smad3 knockout mice (Smad3-/-) may cause aortic aneurysm via other mechanisms different from those underlying LDS, as the canonical SMAD target genes are generally not upregulated. Angiotensin II receptor signaling is also activated in LDS aortic walls, and the type I receptor blocker losartan inhibits SMAD2 phosphorylation and improves aortic root dilatation in Tgfbr2G357W/+ LDS knock-in mice; thus, further studies on the relationships between the TGF-beta and angiotensin II receptor signaling pathways in LDS patients are also required."
+      },
+      {
+        "offset": 11862,
+        "section": "INTRO",
+        "text": "In conclusion, we have described a patient with a sporadic case of LDS due to a novel TGFBR1 variant (c.1126A>G) who presented with Marfan-like habitus, a bifid uvula, hypertelorism, and an aortic aneurysm. The loss of STK activity in the missense variant protein caused a paradoxical increase in aortic TGF-beta signaling; however, the precise mechanism remains to be elucidated. We suspect that secondarily activated TGF-beta signaling via wild-type TGFBR1 homodimers underlies the discrepancy between the in vitro and in vivo STK activities. Further investigation is crucial to clarify the molecular mechanism underlying the \"TGF-beta paradox\" in LDS aortopathy."
+      },
+      {
+        "offset": 12733,
+        "section": "INTRO",
+        "text": "HGV database"
+      },
+      {
+        "offset": 12746,
+        "section": "INTRO",
+        "text": "The relevant data from this Data Report are hosted at the Human Genome Variation Database at 10.6084/m9./share.hgv.2516"
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-8caa5601427f626e",
+    "object": "chat.completion",
+    "created": 1790522620,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0004942\",\"HP:0001083\",\"HP:0005116\",\"HP:0000316\",\"HP:0000193\",\"HP:0012727\",\"HP:0012180\",\"HP:0000098\",\"HP:0001533\",\"HP:0002650\",\"HP:0002616\",\"HP:6001274\",\"HP:0000767\",\"HP:5210430\",\"HP:0100775\",\"HP:0003179\",\"HP:0002751\",\"HP:0001999\",\"HP:0000268\",\"HP:0000494\",\"HP:0000272\",\"HP:0001065\",\"HP:0011003\",\"HP:0001634\",\"HP:0004938\",\"HP:0010646\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 4522,
+      "total_tokens": 4796,
+      "completion_tokens": 274,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0004942",
+        "HP:0001083",
+        "HP:0005116",
+        "HP:0000316",
+        "HP:0000193",
+        "HP:0012727",
+        "HP:0012180",
+        "HP:0000098",
+        "HP:0001533",
+        "HP:0002650",
+        "HP:0002616",
+        "HP:6001274",
+        "HP:0000767",
+        "HP:5210430",
+        "HP:0100775",
+        "HP:0003179",
+        "HP:0002751",
+        "HP:0001999",
+        "HP:0000268",
+        "HP:0000494",
+        "HP:0000272",
+        "HP:0001065",
+        "HP:0011003",
+        "HP:0001634",
+        "HP:0004938",
+        "HP:0010646"
+      ]
+    }
+  ],
+  "elapsed_seconds": 14.631,
+  "usage": {
+    "prompt_tokens": 4522,
+    "total_tokens": 4796,
+    "completion_tokens": 274,
+    "prompt_tokens_details": null
+  }
+}

@@ -1,0 +1,873 @@
+{
+  "pmc_id": "12059664",
+  "identity": "3703e2adb21debe6287015b8e9d8f4cbfa28c633b09da84cd31b5ca1cc25f71b",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 21584,
+    "covered_source_characters": 21584,
+    "source_is_excerpted": false,
+    "candidate_windows": 42,
+    "selected_windows": 42,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 30267,
+    "candidate_concepts": 88,
+    "patient_count": 4
+  },
+  "prompt": {
+    "pmc_id": "12059664",
+    "patients": [
+      {
+        "patient_id": "O1",
+        "mentions": [
+          {
+            "text": "a nearly 7-year-old Puerto Rican female",
+            "offset": 16976
+          }
+        ]
+      },
+      {
+        "patient_id": "O2",
+        "mentions": [
+          {
+            "text": "an 11-year-old Puerto Rican female",
+            "offset": 18206
+          }
+        ]
+      },
+      {
+        "patient_id": "O3",
+        "mentions": [
+          {
+            "text": "a 19-year-old Puerto Rican female",
+            "offset": 19510
+          }
+        ]
+      },
+      {
+        "patient_id": "O4",
+        "mentions": [
+          {
+            "text": "individual 4",
+            "offset": 21411
+          },
+          {
+            "text": "6-month-old male",
+            "offset": 21570
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0012758": [
+        "neurodevelopmental delay"
+      ],
+      "HP:0000252": [
+        "microcephaly"
+      ],
+      "HP:0001510": [
+        "growth retardation",
+        "Growth retardation"
+      ],
+      "HP:0001263": [
+        "global developmental delay",
+        "developmental delays",
+        "intellectual developmental disorder"
+      ],
+      "HP:0003508": [
+        "proportionate short stature"
+      ],
+      "HP:0001627": [
+        "cardiac anomaly",
+        "congenital heart defect"
+      ],
+      "HP:0001643": [
+        "patent ductus arteriosus",
+        "PDA"
+      ],
+      "HP:0008619": [
+        "bilateral sensorineural hearing loss",
+        "B-SNHL"
+      ],
+      "HP:0012759": [
+        "neurodevelopmental disorder",
+        "neurodevelopmental phenotype"
+      ],
+      "HP:0000729": [
+        "autism spectrum disorder"
+      ],
+      "HP:0000365": [
+        "hearing impairment",
+        "hearing loss"
+      ],
+      "HP:0000811": [
+        "abnormal external genitalia morphology"
+      ],
+      "HP:0011968": [
+        "feeding difficulties"
+      ],
+      "HP:0002835": [
+        "aspiration"
+      ],
+      "HP:0001508": [
+        "failure to thrive",
+        "poor weight gain"
+      ],
+      "HP:0012450": [
+        "chronic constipation"
+      ],
+      "HP:0002020": [
+        "gastroesophageal reflux"
+      ],
+      "HP:0100633": [
+        "esophagitis"
+      ],
+      "HP:5201016": [
+        "submucous cleft palate"
+      ],
+      "HP:0011220": [
+        "prominent forehead"
+      ],
+      "HP:0000347": [
+        "micrognathia"
+      ],
+      "HP:0001999": [
+        "abnormal facial shape"
+      ],
+      "HP:0002553": [
+        "highly arched eyebrows"
+      ],
+      "HP:0002714": [
+        "downturned corners of the mouth"
+      ],
+      "HP:0009765": [
+        "low-hanging columella"
+      ],
+      "HP:0012385": [
+        "camptodactyly"
+      ],
+      "HP:0001181": [
+        "adducted thumb"
+      ],
+      "HP:0000478": [
+        "Ocular abnormalities"
+      ],
+      "HP:0000577": [
+        "exotropia"
+      ],
+      "HP:0000639": [
+        "nystagmus"
+      ],
+      "HP:0000483": [
+        "astigmatism"
+      ],
+      "HP:0001344": [
+        "nonverbal"
+      ],
+      "HP:0000717": [
+        "Autism",
+        "autism"
+      ],
+      "HP:0001511": [
+        "intrauterine growth restriction",
+        "IUGR"
+      ],
+      "HP:0011451": [
+        "Congenital microcephaly"
+      ],
+      "HP:0002119": [
+        "ventriculomegaly"
+      ],
+      "HP:0000272": [
+        "malar flattening"
+      ],
+      "HP:0000154": [
+        "wide mouth"
+      ],
+      "HP:0000286": [
+        "epicanthus",
+        "epicanthal folds"
+      ],
+      "HP:0000494": [
+        "downslanted palpebral fissures"
+      ],
+      "HP:0000463": [
+        "anteverted nares"
+      ],
+      "HP:0000288": [
+        "abnormality of the philtrum"
+      ],
+      "HP:0000396": [
+        "overfolded helix",
+        "overfolded helices"
+      ],
+      "HP:0001845": [
+        "overlapping toes",
+        "overlapping toe"
+      ],
+      "HP:0001249": [
+        "intellectual disability"
+      ],
+      "HP:0002136": [
+        "wide-based gait"
+      ],
+      "HP:0000752": [
+        "hyperactivity"
+      ],
+      "HP:0100710": [
+        "impulsivity"
+      ],
+      "HP:0100716": [
+        "self-injurious behaviors"
+      ],
+      "HP:0005616": [
+        "advanced bone age"
+      ],
+      "HP:0000821": [
+        "hypothyroidism"
+      ],
+      "HP:0008665": [
+        "clitoromegaly"
+      ],
+      "HP:0001622": [
+        "premature birth"
+      ],
+      "HP:0002104": [
+        "apnea"
+      ],
+      "HP:0001252": [
+        "hypotonia",
+        "muscular hypotonia"
+      ],
+      "HP:0000407": [
+        "SNHL"
+      ],
+      "HP:0033725": [
+        "thin corpus callosum"
+      ],
+      "HP:0007018": [
+        "attention-deficit/hyperactivity disorder",
+        "ADHD"
+      ],
+      "HP:0034392": [
+        "mild contracture"
+      ],
+      "HP:0000508": [
+        "ptosis"
+      ],
+      "HP:0008551": [
+        "small ears"
+      ],
+      "HP:0000426": [
+        "prominent nasal bridge",
+        "nasal bridge"
+      ],
+      "HP:0000218": [
+        "high palate"
+      ],
+      "HP:0001250": [
+        "seizure",
+        "epilepsy"
+      ],
+      "HP:0002133": [
+        "status epilepticus"
+      ],
+      "HP:0000358": [
+        "posteriorly rotated ears"
+      ],
+      "HP:0000664": [
+        "synophrys"
+      ],
+      "HP:0000581": [
+        "blepharophimosis"
+      ],
+      "HP:0009933": [
+        "narrow nares"
+      ],
+      "HP:0002000": [
+        "short columella"
+      ],
+      "HP:0000343": [
+        "long philtrum"
+      ],
+      "HP:0000219": [
+        "thin upper lip"
+      ],
+      "HP:0001800": [
+        "hypoplastic toenails"
+      ],
+      "HP:0000238": [
+        "hydrocephalus"
+      ],
+      "HP:0011410": [
+        "cesarean section"
+      ],
+      "HP:0001518": [
+        "low birth weight"
+      ],
+      "HP:0002098": [
+        "respiratory distress"
+      ],
+      "HP:0001631": [
+        "atrial septal defect"
+      ],
+      "HP:0004484": [
+        "distinctive craniofacial features"
+      ],
+      "HP:0001357": [
+        "plagiocephaly"
+      ],
+      "HP:0005617": [
+        "bilateral camptodactyly"
+      ],
+      "HP:0008689": [
+        "bilateral cryptorchidism"
+      ],
+      "HP:0000047": [
+        "hypospadias"
+      ],
+      "HP:0000750": [
+        "language delay"
+      ],
+      "HP:0410263": [
+        "abnormal brain imaging"
+      ],
+      "HP:0001276": [
+        "hypertonia"
+      ],
+      "HP:0004322": [
+        "short stature"
+      ],
+      "HP:0031546": [
+        "cardiac defects"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "O1",
+        "phenotype": [
+          "HP:0001510",
+          "HP:0001263",
+          "HP:0001643",
+          "HP:0008619",
+          "HP:0011968",
+          "HP:0002835",
+          "HP:0001508",
+          "HP:0012450",
+          "HP:0002020",
+          "HP:0100633",
+          "HP:5201016",
+          "HP:0011220",
+          "HP:0000347",
+          "HP:0001999",
+          "HP:0002553",
+          "HP:0002714",
+          "HP:0009765",
+          "HP:0012385",
+          "HP:0001181",
+          "HP:0000478",
+          "HP:0000577",
+          "HP:0000639",
+          "HP:0000483",
+          "HP:0001344",
+          "HP:0000717"
+        ]
+      },
+      {
+        "patient_id": "O2",
+        "phenotype": [
+          "HP:0001510",
+          "HP:0001263",
+          "HP:0001643",
+          "HP:0008619",
+          "HP:0001508",
+          "HP:0001999",
+          "HP:0001344",
+          "HP:0000717",
+          "HP:0001511",
+          "HP:0011451",
+          "HP:0002119",
+          "HP:0000272",
+          "HP:0000154",
+          "HP:0000286",
+          "HP:0000494",
+          "HP:0000463",
+          "HP:0000288",
+          "HP:0000396",
+          "HP:0001845",
+          "HP:0001249",
+          "HP:0002136",
+          "HP:0000752",
+          "HP:0100710",
+          "HP:0100716",
+          "HP:0005616",
+          "HP:0000821",
+          "HP:0008665"
+        ]
+      },
+      {
+        "patient_id": "O3",
+        "phenotype": [
+          "HP:0000252",
+          "HP:0001263",
+          "HP:0001643",
+          "HP:0000365",
+          "HP:0012450",
+          "HP:0001344",
+          "HP:0001511",
+          "HP:0000286",
+          "HP:0001249",
+          "HP:0001622",
+          "HP:0002104",
+          "HP:0001252",
+          "HP:0000407",
+          "HP:0033725",
+          "HP:0007018",
+          "HP:0034392",
+          "HP:0000508",
+          "HP:0008551",
+          "HP:0000426",
+          "HP:0000218",
+          "HP:0001250",
+          "HP:0002133"
+        ]
+      },
+      {
+        "patient_id": "O4",
+        "phenotype": [
+          "HP:0000252",
+          "HP:0001510",
+          "HP:0001263",
+          "HP:0003508",
+          "HP:0001627",
+          "HP:0001643",
+          "HP:0012759",
+          "HP:0000811",
+          "HP:0011220",
+          "HP:0000347",
+          "HP:0002553",
+          "HP:0012385",
+          "HP:0000494",
+          "HP:0000396",
+          "HP:0001845",
+          "HP:0000508",
+          "HP:0000426",
+          "HP:0000218",
+          "HP:0001250",
+          "HP:0000358",
+          "HP:0000664",
+          "HP:0000581",
+          "HP:0009933",
+          "HP:0002000",
+          "HP:0000343",
+          "HP:0000219",
+          "HP:0001800",
+          "HP:0000238",
+          "HP:0011410",
+          "HP:0001518",
+          "HP:0002098",
+          "HP:0001631",
+          "HP:0004484",
+          "HP:0001357",
+          "HP:0005617",
+          "HP:0008689",
+          "HP:0000047",
+          "HP:0000750",
+          "HP:0410263"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Homozygous variants in EIF3K associated with neurodevelopmental delay, microcephaly, and growth retardation"
+      },
+      {
+        "offset": 108,
+        "section": "ABSTRACT",
+        "text": "Summary"
+      },
+      {
+        "offset": 116,
+        "section": "ABSTRACT",
+        "text": "We report two rare homozygous variants, including a recurrent missense and intronic variant, in the EIF3K gene in four unrelated individuals with global developmental delay, microcephaly, proportionate short stature, dysmorphic craniofacial features, digit flexion deformities, and the cardiac anomaly, patent ductus arteriosus. Three individuals, who were all of Puerto Rican descent, were homozygous for the NM_013234.3:c.128A>G; p.(Asp43Gly) variant in EIF3K and homozygous for a missense variant in SYNE4 (NM_001039876.2:c.355C>T; p.(Arg119Trp)). SYNE4 is associated with autosomal recessive bilateral sensorineural hearing loss, which was also reported in these probands. Analysis of our dataset confirmed these EIF3K and SYNE4 variants were in linkage disequilibrium in affected individuals, suggesting a possible common ancestor and founder event. A fourth individual from Egypt harbored the homozygous intronic variant c.355-13A>G in EIF3K, which segregated with the phenotype in the family and led to aberrant splicing of EIF3K pre-mRNAs, as shown by insertion of 12 intronic base pairs, skipping of 2 exons, and significantly reduced EIF3K protein levels in skin fibroblasts. Through genetic and functional approaches, we suggest that biallelic EIF3K variants are associated with an autosomal recessive syndromic neurodevelopmental disorder with growth retardation, microcephaly, congenital heart defect, and other anomalies."
+      },
+      {
+        "offset": 1552,
+        "section": "ABSTRACT",
+        "text": "We report two rare homozygous variants in EIF3K in similarly affected individuals. Three Puerto Rican individuals had a recurrent missense variant. A fourth individual harbored an intronic variant, which led to aberrant splicing. Biallelic EIF3K variants were reported with a syndromic neurodevelopmental disorder with microcephaly, growth retardation, and other features."
+      },
+      {
+        "offset": 1925,
+        "section": "INTRO",
+        "text": "Introduction"
+      },
+      {
+        "offset": 1938,
+        "section": "INTRO",
+        "text": "Eukaryotic translation initiation factor 3 (eIF3) is the largest of the eukaryotic initiation factors, containing 13 subunits important for coordinating the assembly of the 43S pre-initiation complex. The function of the smallest subunit, eIF3k, is not well defined, but it might serve as a structural scaffold with surfaces for binding to other eIF3 subunits and to RNA itself. Although eIF3k is not essential for the assembly of the active mammalian eIF3 complex, it is expected to play a regulatory role as suggested by its conservation in higher organisms and ubiquitous expression in human tissues. Multiple studies propose that eIF3k might have a role in autophagy, endoplasmic reticulum stress, cellular aging, and/or apoptosis."
+      },
+      {
+        "offset": 2674,
+        "section": "INTRO",
+        "text": "Clinical reports of individuals with variants in the EIF3K gene are limited. Several de novo heterozygous variants were reported from large cohorts of individuals with autism spectrum disorder. To our knowledge, no individuals with biallelic EIF3K variants have been reported."
+      },
+      {
+        "offset": 2951,
+        "section": "INTRO",
+        "text": "Here, we describe case-level details of three unrelated Puerto Rican individuals with a syndromic neurodevelopmental phenotype, hearing impairment, and recurrent homozygous missense variants in EIF3K and SYNE4, which were shown to be in linkage disequilibrium (LD) in affected individuals in our dataset. Biallelic loss-of-function variants in SYNE4 are associated with nonsyndromic autosomal recessive hearing loss reported as progressive and high frequency, with onset before early childhood (MIM: 615535). We report significantly overlapping phenotypic information for a fourth individual from Egypt with a homozygous intronic variant in EIF3K. Functional fibroblast studies showed altered EIF3K pre-mRNA splicing and significantly reduced EIF3K protein levels. Collectively, our data provide promising evidence for EIF3K as a novel disease gene for an autosomal recessive neurodevelopmental disorder."
+      },
+      {
+        "offset": 3856,
+        "section": "METHODS",
+        "text": "Subjects, material, and methods"
+      },
+      {
+        "offset": 3888,
+        "section": "METHODS",
+        "text": "The study was conducted under GeneDx protocol Research to Expand the Understanding of Genetic Variants: Clinical and Genetic Correlations, in accordance with the Western Institutional Review Board (WIRB) (protocol 20171030). Individuals not available to consent for case-level publication were presented as aggregate data under GeneDx WIRB protocol 20162523, which states that this research meets the requirements for waiver of consent. Genetic studies for individual 4 were performed as approved by the Ethics Committee of the Hamburg Medical Chamber (PV7038-4438-BO-ff; Hamburg, Germany). The parents of individual 4 provided written informed consent for study participation, clinical data, sample collection, genetic analysis, and publication of results, including publication of photographs (see supplemental methods)."
+      },
+      {
+        "offset": 4711,
+        "section": "RESULTS",
+        "text": "Results"
+      },
+      {
+        "offset": 4719,
+        "section": "FIG",
+        "text": "Aggregate clinical findings reported in individuals homozygous for variants in EIF3K"
+      },
+      {
+        "offset": 4804,
+        "section": "FIG",
+        "text": "Data from individuals 1-4 and <5 additional Puerto Rican individuals identified in the GeneDx genome/exome database who were homozygous for the recurrent missense variant c.128A>G in EIF3K and c.355C>T in SYNE4. The X axis is the proportion of individuals with each clinical finding reported. For individuals who were not available for consent to case-level inclusion in the study, clinical information is based solely on the information provided at the time of genetic testing."
+      },
+      {
+        "offset": 5285,
+        "section": "TABLE",
+        "text": "Clinical details of individuals 1-4 with homozygous EIF3K variants who consented to case-level publication"
+      },
+      {
+        "offset": 11377,
+        "section": "RESULTS",
+        "text": "Within GeneDx's database of over 665,000 individuals with genome/exome sequencing (ES), we identified multiple individuals (<10) with similar phenotypes and the same seemingly recurrent homozygous missense variants c.128A>G; p.(Asp43Gly) in EIF3K and c.355C>T; p.(Arg119Trp) in SYNE4 (Table S1). These unrelated individuals, all of whom were of Puerto Rican descent, had no other causative genetic findings and had overlapping phenotypes, including neurodevelopmental delay, microcephaly, short stature, dysmorphic craniofacial features, congenital anomalies, and hearing loss. Three of the fewer than 10 individuals (individuals 1-3) consented to case-level study participation, and their clinical findings are summarized in Figure 1 and Table 1. Other individuals (<5) with these variants who were not available for case-level consent are summarized in aggregate (Figure 1)."
+      },
+      {
+        "offset": 12262,
+        "section": "RESULTS",
+        "text": "Although clinically classified as a variant of uncertain significance (VUS), various in silico models (queried on a research basis) support the potential pathogenicity of the rare EIF3K c.128A>G missense variant (Table S1). It occurs in the proteasome component (PCI) domain of EIF3K, which mediates and stabilizes protein-protein interactions (UniProt). There are mixed in silico predictions for the potential pathogenicity of the SYNE4 c.355C>T missense variant (Table S1). Our analysis showed LD for these variants within affected population groups in internal GeneDx ES/genome sequencing data as shown by normalized LD values (Table S2)."
+      },
+      {
+        "offset": 12909,
+        "section": "RESULTS",
+        "text": "Through GeneMatcher, individual 4 was identified with a homozygous intronic variant c.355-13A>G in EIF3K (Table S1). Sanger sequencing showed both parents and a healthy sibling to be heterozygous carriers (Figure S1A). For the c.355-13A>G variant, splice site prediction programs predicted loss or weakening of the downstream splice acceptor site in intron 4; one program predicted the creation of a new splice acceptor site (Table S1). The phenotype was similar to that of the other individuals and included global developmental delay, growth retardation, dysmorphic craniofacial features, congenital heart defect, and abnormal external genitalia morphology (Figure 1; Table 1)."
+      },
+      {
+        "offset": 13594,
+        "section": "FIG",
+        "text": "EIF3K transcript and protein analysis in fibroblasts from individual 4 with the homozygous c.355-13A>G variant"
+      },
+      {
+        "offset": 13705,
+        "section": "FIG",
+        "text": "(A) Agarose gel showing EIF3K RT-PCR amplicons generated with primers located in exons 4 and 7 using fibroblast-derived cDNA from individual 4 and two controls. The 273-bp amplicon represents wild-type EIF3K transcripts with exon 4 spliced to exon 5 (B, upper left sequence), the 285-bp amplicon represents EIF3K transcripts with an insertion of the last 12 bp of intron 4 between exons 4 and 5 (B, lower sequence), and the 128-bp amplicon represents transcripts lacking exons 5 and 6 (B, upper right sequence)."
+      },
+      {
+        "offset": 14219,
+        "section": "FIG",
+        "text": "(B) Sequence traces of single-colony PCR products from cloned RT-PCR amplicons of individual 4."
+      },
+      {
+        "offset": 14315,
+        "section": "FIG",
+        "text": "(C) Representative immunoblot of whole-cell lysates obtained from individual 4 and control fibroblasts. Endogenous EIF3K levels were monitored with an anti-EIF3K antibody. An anti-glyceraldehyde 3-phosphate dehydrogenase antibody was used to demonstrate equal loading."
+      },
+      {
+        "offset": 14584,
+        "section": "FIG",
+        "text": "(D) Quantification of EIF3K protein levels. Band intensities of fluorescence signals were quantified using the ChemiDoc imaging system. The mean +- SD of four independent experiments is shown Individual data points are shown. One-way ANOVA with Dunnett's correction was used for statistical analysis. ****, p <= 0.0001; Ctrl, control; I4, individual 4."
+      },
+      {
+        "offset": 14951,
+        "section": "RESULTS",
+        "text": "To analyze whether the EIF3K c.355-13A>G variant affected splicing of EIF3K pre-mRNAs, we cultivated primary fibroblasts from a skin biopsy of individual 4 and confirmed the homozygous EIF3K variant in fibroblast-derived DNA (Figure S1B). Next, we performed EIF3K transcript analysis. The RT-PCR product amplified from control cells had the expected size (273 bp) (Figure 2A) and reference sequence (Figure S1C). A larger and a smaller product were amplified from individual 4 cells (Figure 2A). After cloning amplicons from individual 4, we analyzed 51 clones. In 27 clones, we detected an insertion of the last 12 bp of intron 4 between exons 4 and 5 (r.354_355ins355-12_355-1), which is predicted to lead to an insertion of 4 amino acid residues [p.(Trp118_Gln119insPheProSerGln)] (Figure 2B). Nineteen clones contained the reference sequence (Figure 2B). In 5 clones, exon 4 was directly spliced to exon 7, leading to the loss of 145 bp (r.355_499del), which is predicted to cause a frameshift and an introduction of a premature stop codon [p.(Gln119Thrfs*4)] (Figure 2B). The data show that the homozygous c.355-13A>G variant causes aberrant splicing of the EIF3K pre-mRNA. However, canonically spliced EIF3K transcripts are also produced."
+      },
+      {
+        "offset": 16214,
+        "section": "RESULTS",
+        "text": "Next, we studied whether aberrant splicing influences the EIF3K protein in individual 4's fibroblasts. EIF3K (expected molecular weight of 25 kDa) was detected at a molecular weight of ~23 kDa in control fibroblasts. In individual 4's fibroblasts, we observed a very faint 23-kDa EIF3K band (Figure 2C). Quantification of EIF3K levels revealed a significant reduction to ~15% compared to control fibroblasts (Figure 2D). The remaining EIF3K protein could represent EIF3K wild type and/or mutant [p.(Trp118_Gln119insPheProSerGln)]. Our functional data demonstrate that the homozygous EIF3K c.355-13A>G variant caused aberrant splicing and drastically reduced EIF3K protein levels in the fibroblasts of individual 4."
+      },
+      {
+        "offset": 16946,
+        "section": "RESULTS",
+        "text": "Individual 1"
+      },
+      {
+        "offset": 16959,
+        "section": "RESULTS",
+        "text": "Individual 1 was a nearly 7-year-old Puerto Rican female born full term. She had an echocardiogram after birth, which noted a small patent ductus arteriosus (PDA). She was diagnosed with severe to profound bilateral sensorineural hearing loss (B-SNHL) at <1 year old. Growth retardation was noted with weight, height, and head circumference <1st percentile. She had feeding difficulties, including aspiration of liquids, slow weight gain, failure to thrive, chronic constipation, and gastroesophageal reflux with esophagitis, as well as submucous cleft palate. Dysmorphic craniofacial features were noted and included large, sloping, prominent forehead, micrognathia, low-set, cupped ears, abnormal facial shape, highly arched eyebrows, downturned corners of the mouth, and low-hanging columella. She also had camptodactyly and an adducted thumb. Ocular abnormalities included exotropia, nystagmus, and astigmatism. She had global developmental delay and was nonverbal, with some sign language. Autism was diagnosed at age 2 years, 9 months, with details of the diagnostic criteria not available. Around age 4 years, a brain MRI was done and was atypical (Table 1). Brain images were not available for publication."
+      },
+      {
+        "offset": 18176,
+        "section": "RESULTS",
+        "text": "Individual 2"
+      },
+      {
+        "offset": 18189,
+        "section": "RESULTS",
+        "text": "Individual 2 was an 11-year-old Puerto Rican female born at 36 weeks via induction for intrauterine growth restriction (IUGR) noted at 25 weeks. Individual 2 was diagnosed with severe to profound B-SNHL through newborn screen. Congenital microcephaly and growth retardation were noted at growth parameters <2nd percentile. She spent 6 weeks in a neonatal intensive care unit (NICU) due to poor weight gain. An echocardiogram showed PDA, and the brain MRI showed ventriculomegaly. Dysmorphic craniofacial features included abnormal facial shape, malar flattening, wide mouth, epicanthus, downslanted palpebral fissures, anteverted nares, abnormality of the philtrum, and overfolded helix of the outer ear. Bilateral overlapping toes were noted. She had global developmental delay, intellectual disability, wide-based gait, and was nonverbal, with about 100 communicative signs. She was diagnosed with autism at age 6 (diagnostic criteria not available) and had behavioral concerns including hyperactivity, attention difficulties, impulsivity, and dangerous and self-injurious behaviors. She was found to have advanced bone age and protruding vertebrae in the lumbar spine. Other findings included Hashimoto hypothyroidism and abnormal morphology of the external genitalia (clitoromegaly)."
+      },
+      {
+        "offset": 19480,
+        "section": "RESULTS",
+        "text": "Individual 3"
+      },
+      {
+        "offset": 19493,
+        "section": "RESULTS",
+        "text": "Individual 3 was a 19-year-old Puerto Rican female with a history of nonverbal intellectual disability, dysmorphic craniofacial features, hearing loss, and global developmental delay. The pregnancy was notable for IUGR and premature birth at 31 weeks. She had apnea, hypotonia, microcephaly, and PDA, which required surgery. Moderate to severe SNHL was diagnosed at age 2 years. Head imaging showed thin corpus callosum and unilateral left deficiency of the modiolus and apical turn of the cochlea. She sat at 10 months, walked at 18 months, and had 6 words at age 3 years, when she was referred to genetics, who noted her height and weight <5th percentile and head circumference <3rd percentile. At 8 years of age, she had attention-deficit/hyperactivity disorder (ADHD), mild contracture of the 5th fingers, small toes, ptosis, epicanthal folds, low-set small ears with irregular edge of lobes, prominent nasal bridge, and high palate. Around 10 years of age, she had a seizure with status epilepticus and was hospitalized, but the electroencephalogram did not show any ongoing seizure tendency, so no ongoing anticonvulsants were prescribed. She had a history of behavioral outbursts. Evaluation at age 14 years found chronic constipation, with weight at the 18th percentile and height at the 0 percentile. On a recent visit, low platelets were noted. A paternal aunt had intellectual disability, hearing loss, and unspecified cardiac issues."
+      },
+      {
+        "offset": 20942,
+        "section": "RESULTS",
+        "text": "Individual 4"
+      },
+      {
+        "offset": 20955,
+        "section": "FIG",
+        "text": "Photographs of individual 4"
+      },
+      {
+        "offset": 20983,
+        "section": "FIG",
+        "text": "Facial photographs of individual 4 at 5 weeks (A and B) and 2 years, 6 months (C and D) show a prominent forehead, low-set posteriorly rotated ears with overfolded helices, highly arched eyebrows with synophrys, blepharophimosis, ptosis, downslanted palpebral fissures, a pronounced nasal bridge and tip, narrow nares, short columella, long philtrum, thin upper lip vermillion, and micrognathia. (E and F) At 2 years, 6 months, individual 4 showed camptodactyly of the 2nd-5th fingers (E) and overlapping toe and hypoplastic toenails of the left foot (F)."
+      },
+      {
+        "offset": 21546,
+        "section": "RESULTS",
+        "text": "Individual 4, a 2-year, 6-month-old male, was the fourth child born to consanguineous healthy Egyptian parents. He had two healthy siblings and one sibling who showed overlapping clinical features but also had additional features of congenital hydrocephalus and refractory epilepsy and passed away at age 14 months. The pregnancy of individual 4 was uncomplicated, and he was delivered at full term by cesarean section, with a low birth weight of 2.5 kg. He was admitted to the NICU for 23 days due to respiratory distress. An echocardiogram at 1 week of age showed PDA and atrial septal defect. Clinical examinations at age 5 weeks and 2.5 years revealed distinctive craniofacial features, including plagiocephaly, prominent forehead, highly arched eyebrows with synophrys, blepharophimosis, ptosis, and downslanted palpebral fissures (Figures 3A-3D). Additionally, he had low-set, posteriorly rotated ears with overfolded helices, a prominent nasal bridge and tip, narrow nares, a short columella, long philtrum, thin upper lip vermillion, high palate, and micrognathia. He had bilateral camptodactyly of the 2nd-5th fingers, bilateral overlapping toes, hypoplastic toenails (Figures 3E and 3F), bilateral cryptorchidism, and hypospadias. At the age of 2.5 years, growth retardation was noted with weight of 7.5 kg (-3.00 SD), length of 80 cm (-2.70 SD), and head circumference of 42.5 cm (-3.00 SD). He had global developmental delay with partial neck support and spoke only two words, consistent with language delay. Fundoscopy, hearing examination, and brain imaging were normal."
+      },
+      {
+        "offset": 23151,
+        "section": "DISCUSS",
+        "text": "Discussion"
+      },
+      {
+        "offset": 23162,
+        "section": "DISCUSS",
+        "text": "The present report suggests that biallelic EIF3K variants are associated with an autosomal recessive syndromic neurodevelopmental disorder. All individuals with homozygous EIF3K variants showed developmental delays, microcephaly, dysmorphic craniofacial features (Figure 3), digit flexion anomalies, PDA, and genitourinary malformations in males. Nearly all individuals had proportionate short stature and abnormal brain imaging. Our cohort included individuals 1-3, an aggregate cohort of <5 additional Puerto Rican individuals with the recurrent homozygous EIF3K missense variant c.128A>G, and individual 4 with the homozygous non-coding variant c.355-13A>G."
+      },
+      {
+        "offset": 23826,
+        "section": "DISCUSS",
+        "text": "There is precedence for autosomal recessive Mendelian disease related to an eIF3 subunit, specifically EIF3F, in which biallelic variants cause intellectual developmental disorder 67 (MIM: 618295). EIF3F-related neurodevelopmental disorder is characterized by global developmental delay, microcephaly, epilepsy, muscular hypotonia or hypertonia, hearing loss, ophthalmologic anomalies, and short stature. Interestingly, a recurrent homozygous missense variant in EIF3F has been recognized as a founder variant in 15 families of European/west Asian descent."
+      },
+      {
+        "offset": 24383,
+        "section": "DISCUSS",
+        "text": "All individuals with the recurrent homozygous missense variant c.128A>G in EIF3K were homozygous for c.355C>T in SYNE4. Nearly all individuals with this haplotype had severe to profound congenital B-SNHL (Figure 2). They were not known to be related to one another, were all of Puerto Rican descent, and the ES did not indicate evidence of consanguinity. This report raises the possibility that the dual homozygosity of these EIF3K and SYNE4 missense variants may lead to the dual diagnosis of neurodevelopmental disorder and hearing loss. A case-level analysis of additional individuals with EIF3K variants is needed to determine the gene associated with the hearing loss phenotype."
+      },
+      {
+        "offset": 25068,
+        "section": "DISCUSS",
+        "text": "Statistical analysis within the GeneDx ES database demonstrated that the EIF3K c.128A>G and SYNE4 c.355C>T variants showed LD among affected individuals (Table S2). The co-occurrence of the homozygous variants suggests a potential population founder effect, which has been documented in affected individuals of Puerto Rican descent. The early ancestral population of Puerto Rico shows very low genetic diversity, implying an early founder effect that could predate European contact with the island. This linkage analysis provided valuable insight into the rare occurrence of these variants, their relationship to each other, and the increased prevalence of the homozygous pair in affected individuals."
+      },
+      {
+        "offset": 25771,
+        "section": "DISCUSS",
+        "text": "Through GeneMatcher, we also report clinical details of individual 4, harboring the homozygous intronic variant c.355-13A>G in EIF3K (Table S1). This proband contributes significantly to the GeneDx cohort with striking phenotypic overlap, disease by variant segregation in his family, and convincing functional evidence that this non-coding variant adversely affects pre-mRNA splicing and drastically reduces EIF3K protein levels in fibroblast cells (Figure 2). While further studies are necessary to prove that partial loss of function is a mechanism of disease for variants in EIF3K, the inclusion of individual 4 in this report contributes considerably to potential pathogenicity."
+      },
+      {
+        "offset": 26457,
+        "section": "DISCUSS",
+        "text": "The limitations of our report include only four individuals who consented to case-level publication. There are also limitations to clinical findings, including the 16p11.2 duplication syndrome (MIM# 611913) in individual 1, which could have contributed to her phenotype, lack of detailed audiometric evaluations to know whether the B-SNHL was consistent with the type reported in SYNE4, and lack of photographs for the majority of the cohort, making it difficult to determine whether there was a typical facial gestalt."
+      },
+      {
+        "offset": 26977,
+        "section": "DISCUSS",
+        "text": "In summary, we provide initial evidence that biallelic EIF3K variants are associated with neurodevelopmental delay, microcephaly, growth retardation, dysmorphic craniofacial features, digit anomalies, cardiac defects, and male genitourinary malformations. Individuals with the recurrent missense c.128A>G EIF3K variant shared Puerto Rican ancestry and LD, raising the possibility of a founder effect. Functional studies showed aberrant splicing and significant EIF3K protein reduction for the variant c.355-13A>G, suggesting a potential (partial) loss-of-function mechanism. Our findings support the value of ES, a large clinical laboratory database, and GeneMatcher as important approaches to new gene discovery in undiagnosed and rare diseases."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-806edc46bda28800",
+    "object": "chat.completion",
+    "created": 1790521950,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"O1\",\"phenotype\":[\"HP:0001510\",\"HP:0001263\",\"HP:0001643\",\"HP:0008619\",\"HP:0011968\",\"HP:0002835\",\"HP:0001508\",\"HP:0012450\",\"HP:0002020\",\"HP:0100633\",\"HP:5201016\",\"HP:0011220\",\"HP:0000347\",\"HP:0001999\",\"HP:0002553\",\"HP:0002714\",\"HP:0009765\",\"HP:0012385\",\"HP:0001181\",\"HP:0000478\",\"HP:0000577\",\"HP:0000639\",\"HP:0000483\",\"HP:0001344\",\"HP:0000717\"]},{\"patient_id\":\"O2\",\"phenotype\":[\"HP:0001510\",\"HP:0001263\",\"HP:0001643\",\"HP:0008619\",\"HP:0001508\",\"HP:0001999\",\"HP:0001344\",\"HP:0000717\",\"HP:0001511\",\"HP:0011451\",\"HP:0002119\",\"HP:0000272\",\"HP:0000154\",\"HP:0000286\",\"HP:0000494\",\"HP:0000463\",\"HP:0000288\",\"HP:0000396\",\"HP:0001845\",\"HP:0001249\",\"HP:0002136\",\"HP:0000752\",\"HP:0100710\",\"HP:0100716\",\"HP:0005616\",\"HP:0000821\",\"HP:0008665\"]},{\"patient_id\":\"O3\",\"phenotype\":[\"HP:0000252\",\"HP:0001263\",\"HP:0001643\",\"HP:0000365\",\"HP:0012450\",\"HP:0001344\",\"HP:0001511\",\"HP:0000286\",\"HP:0001249\",\"HP:0001622\",\"HP:0002104\",\"HP:0001252\",\"HP:0000407\",\"HP:0033725\",\"HP:0007018\",\"HP:0034392\",\"HP:0000508\",\"HP:0008551\",\"HP:0000426\",\"HP:0000218\",\"HP:0001250\",\"HP:0002133\"]},{\"patient_id\":\"O4\",\"phenotype\":[\"HP:0000252\",\"HP:0001510\",\"HP:0001263\",\"HP:0003508\",\"HP:0001627\",\"HP:0001643\",\"HP:0012759\",\"HP:0000811\",\"HP:0011220\",\"HP:0000347\",\"HP:0002553\",\"HP:0012385\",\"HP:0000494\",\"HP:0000396\",\"HP:0001845\",\"HP:0000508\",\"HP:0000426\",\"HP:0000218\",\"HP:0001250\",\"HP:0000358\",\"HP:0000664\",\"HP:0000581\",\"HP:0009933\",\"HP:0002000\",\"HP:0000343\",\"HP:0000219\",\"HP:0001800\",\"HP:0000238\",\"HP:0011410\",\"HP:0001518\",\"HP:0002098\",\"HP:0001631\",\"HP:0004484\",\"HP:0001357\",\"HP:0005617\",\"HP:0008689\",\"HP:0000047\",\"HP:0000750\",\"HP:0410263\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 8803,
+      "total_tokens": 9977,
+      "completion_tokens": 1174,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "O1",
+      "phenotype": [
+        "HP:0001510",
+        "HP:0001263",
+        "HP:0001643",
+        "HP:0008619",
+        "HP:0011968",
+        "HP:0002835",
+        "HP:0001508",
+        "HP:0012450",
+        "HP:0002020",
+        "HP:0100633",
+        "HP:5201016",
+        "HP:0011220",
+        "HP:0000347",
+        "HP:0001999",
+        "HP:0002553",
+        "HP:0002714",
+        "HP:0009765",
+        "HP:0012385",
+        "HP:0001181",
+        "HP:0000478",
+        "HP:0000577",
+        "HP:0000639",
+        "HP:0000483",
+        "HP:0001344",
+        "HP:0000717"
+      ]
+    },
+    {
+      "patient_id": "O2",
+      "phenotype": [
+        "HP:0001510",
+        "HP:0001263",
+        "HP:0001643",
+        "HP:0008619",
+        "HP:0001508",
+        "HP:0001999",
+        "HP:0001344",
+        "HP:0000717",
+        "HP:0001511",
+        "HP:0011451",
+        "HP:0002119",
+        "HP:0000272",
+        "HP:0000154",
+        "HP:0000286",
+        "HP:0000494",
+        "HP:0000463",
+        "HP:0000288",
+        "HP:0000396",
+        "HP:0001845",
+        "HP:0001249",
+        "HP:0002136",
+        "HP:0000752",
+        "HP:0100710",
+        "HP:0100716",
+        "HP:0005616",
+        "HP:0000821",
+        "HP:0008665"
+      ]
+    },
+    {
+      "patient_id": "O3",
+      "phenotype": [
+        "HP:0000252",
+        "HP:0001263",
+        "HP:0001643",
+        "HP:0000365",
+        "HP:0012450",
+        "HP:0001344",
+        "HP:0001511",
+        "HP:0000286",
+        "HP:0001249",
+        "HP:0001622",
+        "HP:0002104",
+        "HP:0001252",
+        "HP:0000407",
+        "HP:0033725",
+        "HP:0007018",
+        "HP:0034392",
+        "HP:0000508",
+        "HP:0008551",
+        "HP:0000426",
+        "HP:0000218",
+        "HP:0001250",
+        "HP:0002133"
+      ]
+    },
+    {
+      "patient_id": "O4",
+      "phenotype": [
+        "HP:0000252",
+        "HP:0001510",
+        "HP:0001263",
+        "HP:0003508",
+        "HP:0001627",
+        "HP:0001643",
+        "HP:0012759",
+        "HP:0000811",
+        "HP:0011220",
+        "HP:0000347",
+        "HP:0002553",
+        "HP:0012385",
+        "HP:0000494",
+        "HP:0000396",
+        "HP:0001845",
+        "HP:0000508",
+        "HP:0000426",
+        "HP:0000218",
+        "HP:0001250",
+        "HP:0000358",
+        "HP:0000664",
+        "HP:0000581",
+        "HP:0009933",
+        "HP:0002000",
+        "HP:0000343",
+        "HP:0000219",
+        "HP:0001800",
+        "HP:0000238",
+        "HP:0011410",
+        "HP:0001518",
+        "HP:0002098",
+        "HP:0001631",
+        "HP:0004484",
+        "HP:0001357",
+        "HP:0005617",
+        "HP:0008689",
+        "HP:0000047",
+        "HP:0000750",
+        "HP:0410263"
+      ]
+    }
+  ],
+  "elapsed_seconds": 37.355,
+  "usage": {
+    "prompt_tokens": 8803,
+    "total_tokens": 9977,
+    "completion_tokens": 1174,
+    "prompt_tokens_details": null
+  }
+}

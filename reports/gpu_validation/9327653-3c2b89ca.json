@@ -1,0 +1,281 @@
+{
+  "pmc_id": "9327653",
+  "identity": "02838872cc9d4fc8366029463409a6d58043089fae85d374033aa44ebead0b5f",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 11836,
+    "covered_source_characters": 11836,
+    "source_is_excerpted": false,
+    "candidate_windows": 25,
+    "selected_windows": 25,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 14960,
+    "candidate_concepts": 9,
+    "patient_count": 1
+  },
+  "prompt": {
+    "pmc_id": "9327653",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "patient",
+            "offset": 946
+          },
+          {
+            "text": "10-month old boy",
+            "offset": 3682
+          },
+          {
+            "text": "patient",
+            "offset": 5678
+          },
+          {
+            "text": "patient",
+            "offset": 5727
+          },
+          {
+            "text": "patient",
+            "offset": 5816
+          },
+          {
+            "text": "patient",
+            "offset": 5988
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0001909": [
+        "leukemia"
+      ],
+      "HP:0002665": [
+        "lymphoma"
+      ],
+      "HP:0030080": [
+        "Burkitt lymphoma"
+      ],
+      "HP:0001945": [
+        "fever"
+      ],
+      "HP:0001873": [
+        "thrombocytopenia"
+      ],
+      "HP:0002240": [
+        "hepatomegaly"
+      ],
+      "HP:0001744": [
+        "splenomegaly"
+      ],
+      "HP:0002664": [
+        "tumor",
+        "cancer",
+        "Cancer"
+      ],
+      "HP:0012191": [
+        "B-cell lymphomas",
+        "B-cell lymphoma"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0001909",
+          "HP:0002665",
+          "HP:0001945",
+          "HP:0001873",
+          "HP:0002240",
+          "HP:0001744",
+          "HP:0002664"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Genetic features of precursor B-cell phenotype Burkitt leukemia with IGH- MYC rearrangement"
+      },
+      {
+        "offset": 96,
+        "section": "ABSTRACT",
+        "text": "Abstract"
+      },
+      {
+        "offset": 105,
+        "section": "ABSTRACT",
+        "text": "Background"
+      },
+      {
+        "offset": 116,
+        "section": "ABSTRACT",
+        "text": "An atypical form of Burkitt leukemia/lymphoma (BL), BL with a phenotype of precursor B-cells (preBLL), is listed in the WHO Classification. Recent reports suggested that preBLL and classical BL could be distinguished by the differences in IG-MYC translocation architecture and an additional mutated genes profile. The characteristics of classical BL are IG-MYC by aberrant somatic hypermutation or class switch recombination, and BL-specific gene mutations such as MYC, ID3, and CCND3. Meanwhile, preBLL is characterized by IG-MYC due to aberrant VDJ recombination and mutations in NRAS and KRAS. However, it is not clear whether all preBLL cases can be differentiated. This report investigated the molecular characteristics of an infant preBLL case, with a more advanced stage of maturity than typical preBLL."
+      },
+      {
+        "offset": 937,
+        "section": "ABSTRACT",
+        "text": "Case"
+      },
+      {
+        "offset": 942,
+        "section": "ABSTRACT",
+        "text": "The patient showed BL-like morphology with IGH-MYC rearrangement. In the immunophenotyping, CD20 and surface immunoglobulin were negative, whereas other markers were consistent with BL. To evaluate the genetic contribution, we performed whole-exome sequencing. The breakpoint analysis revealed the IG-MYC occurred due to an aberrant VDJ recombination. Meanwhile, additional somatic mutations were detected in FBXO11, one of the mutant genes specific to BL. In the analysis of the specimen in complete remission, mutation in KRAS, frequently mutated in preBLL, was detected with low frequency, suggesting somatic mosaicism."
+      },
+      {
+        "offset": 1573,
+        "section": "ABSTRACT",
+        "text": "Conclusion"
+      },
+      {
+        "offset": 1584,
+        "section": "ABSTRACT",
+        "text": "The present case showed the characteristics of both typical preBLL and classical BL. Because preBLL includes atypical cases such as the present case, further studies are required to elucidate preBLL features."
+      },
+      {
+        "offset": 1793,
+        "section": "INTRO",
+        "text": "INTRODUCTION"
+      },
+      {
+        "offset": 1806,
+        "section": "INTRO",
+        "text": "IGH and MYC translocation is one of the representative genetic abnormalities in Burkitt lymphoma/leukemia (BL). Generally, BL shows a mature B-cell phenotype. However, in the WHO Classification, a more immature phenotype of BL (preBLL) is listed as a phenotype of precursor B-cells, with expression of terminal deoxynucleotidyl transferase (TdT), and sometimes CD34, and absence of CD20 and surface immunoglobulin expression. Recently, Wagener et al. reported that preBLL and classical BL could be distinguished from each other by differences in the translocation architecture of IGH-MYC. They reported that aberrant V (variable), D (diversity), and J (joining) gene segments recombination resulting in IG-MYC characterized by N-sequences and loss of some bases at the breakpoint are features of preBLL. They also revealed a difference in mutation profile between preBLL and BL. PreBLL was associated with NRAS and/or KRAS mutations whereas BL was associated with MYC, ID3, and CCND3. Subsequently, Yoon et al. showed that IGH-MYC translocations due to the aberrant VDJ recombination were also detected in the TdT-negative cases, which indicated that these cases were at a more advanced maturation stage than those of Wagener et al. Their cases were associated with mutations in MYC and/or TP53, which are often mutated genes in BL."
+      },
+      {
+        "offset": 3153,
+        "section": "INTRO",
+        "text": "Therefore, preBLL and BL have been found to have different genetic features, including IGH-MYC translocation architecture. Meanwhile, it is still unclear at which maturation stage preBLL and BL can be distinguished, due to the limited number of reported cases. We here present an infant preBLL case with IGH-MYC translocations due to the aberrant VDJ recombination despite revealing BL-specific genetic abnormalities, suggesting a more advanced maturation stage than previous reports."
+      },
+      {
+        "offset": 3644,
+        "section": "RESULTS",
+        "text": "RESULTS"
+      },
+      {
+        "offset": 3652,
+        "section": "RESULTS",
+        "text": "Clinical course of the case"
+      },
+      {
+        "offset": 3680,
+        "section": "RESULTS",
+        "text": "A 10-month old boy was admitted with a 2-week history of ill complexion and fever. Physical examination showed head masses and bilateral renal swelling. A laboratory examination revealed thrombocytopenia (5.5 x 104 platelets/mul) and total leukocyte count of 11 400/mul with blast cells with basophilic cytoplasm containing vacuoles. Flow cytometric immunophenotyping of blast cells was positive for cyCD22 (98.6%), cCD79a (99.7%), CD19 (99.0%), CD10 (97.9%), CD24 (99.1%), cymu (91.5%), CD22 (98.8%), HLA-DR (99.5%), and CD38 (99.8%), and negative for CD20, mu, kappa, lambda, CD34, and TdT (Table S1). The expression of CD45 was bright. Karyotyping analysis showed 46, XY, dup(1)(q21q32)x2,t(8;14)(q24;q32) [3]/46, XY [17]. Fluorescence in situ hybridization analysis on blast cells identified the fusion signal of IGH-MYC, leading to a diagnosis of Burkitt leukemia with B-cell phenotype (detailed in Figure S1). Morphological findings, negativity for CD34 and TdT, and positivity for cymu and CD45 were suggestive of mature B-cell phenotype, whereas negative for CD20 and surface globulins were immature B-cell features (preBLL). Cerebrospinal fluid examination showed an increase in the number of dysmorphic cells (40/mul) with a high N/C ratio, nucleus with irregular shapes, and distinct nucleoli, and was cytologically determined as class V. Computed tomography revealed bilateral renal swelling, hepatomegaly, and splenomegaly. As the present case had both B-cell precursor and mature B-cell features of ALL, we considered that both lymphoma-oriented intensive block-type chemotherapy and ALL-oriented chemotherapy, including maintenance therapy, should be adopted. Although the present case was infant ALL, we did not adopt infant-specific chemotherapy such as in MLL-10, which did not include block-type treatment. Therefore, the present case was treated according to AIEOP-BFM ALL 2000 high-risk chemotherapy. Despite suspending prednisolone for 2 days due to tumor lysis syndrome, the patient showed a good prednisolone response. The patient achieved a complete remission (CR) after induction therapy. Considering that the patient was an infant, intensification of intrathecal chemotherapy was adopted to avoid the late complications of cranial radiotherapy. As of 38 months from diagnosis, the patient is alive without disease relapse."
+      },
+      {
+        "offset": 6070,
+        "section": "RESULTS",
+        "text": "Identification of additional somatic mutations and IGH-MYC  translocation architecture"
+      },
+      {
+        "offset": 6159,
+        "section": "RESULTS",
+        "text": "To reveal the present case's genetic characteristics, we further performed whole-exome sequencing of tumor-normal pairs (detailed in Data S1). We filtered out the variants that were present in normal sample, and identified two somatic mutations in FBXO11 and one in TNIK (Table 1). Visual screening using the integrative genomics viewer (IGV) viewer (IGV 2.3.97) revealed that the two mutations in FBXO11 were located on different alleles (Figure S2). Next, we focused on the breakpoint junction of the IGH-MYC translocation using the IGV. The breakpoint mapped to the 5' end of IGHJ4, with loss of some bases from the 5' end, and 1.7 kbp upstream of MYC (Figure 1A). As the breakpoint was close to recombination signal sequences and nucleotides resembling N-sequences were added at the breakpoint, the translocation most likely occurred through an aberrant VDJ recombination."
+      },
+      {
+        "offset": 7051,
+        "section": "TABLE",
+        "text": "Somatic mutations detected by whole-exome sequencing"
+      },
+      {
+        "offset": 7424,
+        "section": "FIG",
+        "text": "Genetic characterization of the case. (A) Translocation architecture of IGH-MYC breakpoint junctions. The breakpoint mapped to the 5' end of IGHJ4, with loss of three bases from the 5' end, and 1.7 kbp upstream of MYC. Nucleotides resembling N-sequences were added at the breakpoint. (B) The summary of the present case's characteristics along with a comparison with typical preBLL and BL characteristics with the reference to previous report of Wagener et al. The findings of typical preBLL and classical BL that are consistent with the present case are marked in bordeaux color. The recurrent mutated genes were listed with reference to previous genetic analysis of preBLL and classical BL. BL, Burkitt lymphoma/leukemia; CSR, class switch recombination; preBLL, B-cell phenotype Burkitt leukemia; SHM, somatic hypermutation"
+      },
+      {
+        "offset": 8262,
+        "section": "RESULTS",
+        "text": "Identification of germline variants of cancer-predisposing genes"
+      },
+      {
+        "offset": 8329,
+        "section": "RESULTS",
+        "text": "As the present case developed atypical leukemia in infancy, we further searched for germline pathogenic variants of cancer-associated genes (detailed in Data S1). As a result, a pathogenic variant of KRAS (c.G34C, p.G12R), which has been registered as a somatic mutation in NCBI ClinVar and Catalog of Somatic Mutations in Cancer (COSMIC), was identified with a suspected mosaic mutation frequency (variant allele frequency = 19%) in a peripheral blood sample during CR. This KRAS variant was also identified in tumor samples. To obtain the precise frequency of mutation alleles, droplet digital PCR procedures were performed using QX-200 and ddPCR  Mutation Assay: KRAS p.G12R (Bio-Rad, Hercules, CA). The mutation allele frequency was 9.5% in the CR sample and 46% in the tumor sample, respectively. The mosaicism could not be validated in any other organ due to the lack of available samples. The summary of the present case's characteristics is shown in Figure 1B, along with a comparison with typical preBLL and BL characteristics."
+      },
+      {
+        "offset": 9377,
+        "section": "DISCUSS",
+        "text": "DISCUSSION"
+      },
+      {
+        "offset": 9388,
+        "section": "DISCUSS",
+        "text": "Wagener et al. and Lopez et al. recently reported the features of IG-MYC translocation architecture in preBLL and BL, respectively. They showed that preBLL and BLL were well distinguished from each other by IG-MYC translocation architecture and mutated genes. However, more recently, Yoon et al. reported TdT-negative preBLL cases carrying IG-MYC due to aberrant VDJ and additional mutations in BL-specific genes."
+      },
+      {
+        "offset": 9813,
+        "section": "DISCUSS",
+        "text": "In addition to being negative for TdT and CD34, the present case was positive for cymu, and expression of CD45 was bright. These immunophenotypic profiles indicated a more advanced maturation stage of preBLL than in those of Yoon et al. The translocation architecture of IGH-MYC in the present case showed the characteristics of preBLL, whereas additional mutations were identified in FBXO11. FBXO11 is considered as a tumor suppressor gene in the pathogenesis of B-cell lymphomas. Mutation in FBXO11 was identified in diffuse large B-cell lymphoma and BL. Additionally, a point mutation in TNIK was also identified. TNIK is one of the enzymes associated with Wnt signaling and is associated with its activation. As the TNIK mutation identified in the present case was not previously reported, the pathogenicity is unknown. It might have contributed to the oncogenesis. Meanwhile, mutations in other BL-specified genes, such as MYC and ID3, were not detected in the present case. These atypical patterns of additional mutated genes might be responsible for the differences in the maturation stages of preBLL."
+      },
+      {
+        "offset": 10930,
+        "section": "DISCUSS",
+        "text": "As another genetic abnormality, KRAS mutation, p.G12R, was detected in a CR sample with a suspected mosaic mutation frequency. p.G12R is one of the hot spot somatic mutations in KRAS registered in COSMIC. Germline and/or somatic mosaicisms of KRAS are shown to be associated with developmental disorders, such as Noonan syndrome. In the process of B-cell development, KRAS contributes to early B-cell development at the pre-B-cell stage and late B-cell maturation. As KRAS p.G12R is a gain-of-function missense mutation, the oncogenic KRAS may have been responsible for the abnormalities in preBLL development and maturation in the present case. In support of that, the percentage of KRAS mutations was greater in tumor samples than in CR samples. As the KRAS mutation was mosaic, the patient would have not showed the symptoms characterizing Noonan syndrome. This finding indicates the importance of germline specimen analysis to evaluate the effect of genetic background on the development of childhood cancer."
+      },
+      {
+        "offset": 11957,
+        "section": "DISCUSS",
+        "text": "Although our case fortunately achieved sustained remission, optimal therapeutic strategy of preBLL has not yet been established. In recent studies comparing treatment outcomes of preBLL, mature B-cell NHL type chemotherapy is encouraging because of the favorable outcome. Further genetic studies for this unique subset might provide us a clue to the best strategy against preBLL."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-b54f9b6fd924ab27",
+    "object": "chat.completion",
+    "created": 1790522660,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0002664\",\"HP:0001945\",\"HP:0001873\",\"HP:0002240\",\"HP:0001744\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 3654,
+      "total_tokens": 3718,
+      "completion_tokens": 64,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0002664",
+        "HP:0001945",
+        "HP:0001873",
+        "HP:0002240",
+        "HP:0001744"
+      ]
+    }
+  ],
+  "elapsed_seconds": 7.515,
+  "usage": {
+    "prompt_tokens": 3654,
+    "total_tokens": 3718,
+    "completion_tokens": 64,
+    "prompt_tokens_details": null
+  }
+}

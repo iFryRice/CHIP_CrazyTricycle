@@ -1,0 +1,347 @@
+{
+  "pmc_id": "6049015",
+  "identity": "8d469ea092e8f2e9d1a338a41b7e6168e331689b9cadea9883ab0157fab188f5",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 8012,
+    "covered_source_characters": 8012,
+    "source_is_excerpted": false,
+    "candidate_windows": 24,
+    "selected_windows": 24,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 11841,
+    "candidate_concepts": 29,
+    "patient_count": 1
+  },
+  "prompt": {
+    "pmc_id": "6049015",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "35-year-old female",
+            "offset": 300
+          },
+          {
+            "text": "female",
+            "offset": 2378
+          },
+          {
+            "text": "she",
+            "offset": 2945
+          },
+          {
+            "text": "She",
+            "offset": 3447
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0100774": [
+        "hyperostosis",
+        "Hyperostosis"
+      ],
+      "HP:0002653": [
+        "bone pain"
+      ],
+      "HP:0002515": [
+        "waddling gait"
+      ],
+      "HP:0001324": [
+        "muscle weakness",
+        "muscular weakness"
+      ],
+      "HP:0009763": [
+        "limb pain",
+        "limb pains"
+      ],
+      "HP:0003388": [
+        "easy fatigability"
+      ],
+      "HP:0001433": [
+        "Hepatosplenomegaly"
+      ],
+      "HP:0000098": [
+        "tall stature"
+      ],
+      "HP:0000821": [
+        "hypothyroidism"
+      ],
+      "HP:0000044": [
+        "hypogonadotrophic hypogonadism"
+      ],
+      "HP:0001939": [
+        "laboratory abnormalities"
+      ],
+      "HP:0001903": [
+        "anaemia"
+      ],
+      "HP:0003565": [
+        "raised erythrocyte sedimentation rate"
+      ],
+      "HP:0000365": [
+        "hearing loss"
+      ],
+      "HP:0007663": [
+        "reduced visual acuity"
+      ],
+      "HP:0007209": [
+        "facial paralysis"
+      ],
+      "HP:0002829": [
+        "joint pain"
+      ],
+      "HP:0025406": [
+        "weakness"
+      ],
+      "HP:0011220": [
+        "prominent forehead",
+        "Prominent forehead"
+      ],
+      "HP:0000520": [
+        "proptosis",
+        "Proptosis"
+      ],
+      "HP:0000508": [
+        "blepharoptosis"
+      ],
+      "HP:0003202": [
+        "muscle wasting"
+      ],
+      "HP:0004334": [
+        "Atrophic skin"
+      ],
+      "HP:0003155": [
+        "elevated alkaline phosphatase"
+      ],
+      "HP:0003025": [
+        "metaphyses"
+      ],
+      "HP:0012531": [
+        "pain"
+      ],
+      "HP:0003560": [
+        "muscular dystrophy"
+      ],
+      "HP:0002901": [
+        "Hypocalcaemia",
+        "hypocalcaemia"
+      ],
+      "HP:0002652": [
+        "skeletal dysplasia"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0100774",
+          "HP:0002653",
+          "HP:0002515",
+          "HP:0001324",
+          "HP:0002829",
+          "HP:0025406",
+          "HP:0011220",
+          "HP:0000520",
+          "HP:0000508",
+          "HP:0003202",
+          "HP:0004334",
+          "HP:0003155",
+          "HP:0003025",
+          "HP:0012531"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Camurati-Engelmann disease: a case report from sub-Saharan Africa"
+      },
+      {
+        "offset": 68,
+        "section": "ABSTRACT",
+        "text": "Abstract"
+      },
+      {
+        "offset": 77,
+        "section": "ABSTRACT",
+        "text": "Camurati-Engelmann disease is a rare autosomal dominant inherited condition belonging to the group of craniotubular hyperostosis with characteristic radiological features of the diaphyses of the long bones and the skull. A 35-year-old female is reported presenting with bone pain and waddling gait, since the age of 20 years. Motor activities were limited since the age of 10 years. Palpable bones, muscle weakness and protrusion of eyes were noted. Radiologically, hyperostosis of long bones was seen. Based on history, clinical and radiological features Camurati-Engelmann disease was diagnosed. Sequence analysis of the transforming growth factor beta1 (TGFB1) gene revealed a missense mutation (c.652C>T; p.Arg218Cys). She is the first molecularly confirmed case in sub-Saharan Africa. It is emphasized that Camurati-Engelmann disease is included in the differential diagnosis of persistent bone pain, but also of abnormal childhood motor development in order to avoid unnecessary investigations and inadequate management."
+      },
+      {
+        "offset": 1108,
+        "section": "INTRO",
+        "text": "INTRODUCTION"
+      },
+      {
+        "offset": 1121,
+        "section": "INTRO",
+        "text": "Camurati-Engelmann disease (OMIM #131 300; CAEND) also known as progressive diaphysealdysplasia is a rare autosomal dominant inherited condition belonging to the group of craniotubular hyperostosis with characteristic clinical and radiological features of diaphyses of long bones and skull. Age of onset is mostly during childhood and before the age of 30 years, though onset can be as late as the sixth decade. The usual presentation is limb pain, dull bone pain, waddling gait, muscular weakness and easy fatigability. Hepatosplenomegaly, tall stature, hypothyroidism and hypogonadotrophic hypogonadism as well as laboratory abnormalities, like anaemia, leucopenia, raised alkaline phosphatase and raised erythrocyte sedimentation rate (ESR) may occur occasionally. In CAEND parathyroid hormone is usually normal, while osteocalcin might be elevated. The radiological characteristics are bilateral, usually, but not always symmetrical cortical thickening of diaphyses of long bones and cranial bones with cranial nerve deficits like hearing loss, reduced visual acuity and facial paralysis.In severe cases it may involve the metaphysis, while epiphyses are rarely involved. TGFB1 is so far the only gene associated with CAEND."
+      },
+      {
+        "offset": 2352,
+        "section": "CASE",
+        "text": "CASE REPORT"
+      },
+      {
+        "offset": 2364,
+        "section": "CASE",
+        "text": "A 35-year-old female patient was referred to us. She had a 15-year history of left shoulder joint pain, bone pain, progressive enlargement of bones in the arms and legs and waddling gait, associated with general body weakness. Also protrusion of both eyes was reported. There were no associated hearing and visual problems. Her cognitive and motor development was normal, though from the age of 10 years she could not keep pace with her peers in sports activities. No close relative had the same or similar symptoms; she has a 3 years old healthy daughter."
+      },
+      {
+        "offset": 2921,
+        "section": "CASE",
+        "text": "On physical examination she had prominent forehead, proptosis and blepharoptosis (Fig. 1). Prominent palpable bones in upper limbs, humerus, ulna and radius (Fig. 2) and lower limbs (Fig. 3) were noted with muscle wasting and pseudo-atrophy of skin above affected bones. The left shoulder joint was tender, but not swollen. There were good passive and active joint movements. Cranial nerve examination was normal."
+      },
+      {
+        "offset": 3335,
+        "section": "FIG",
+        "text": "Proptosis and blepharoptosis."
+      },
+      {
+        "offset": 3365,
+        "section": "FIG",
+        "text": "Prominent forehead and proptosis."
+      },
+      {
+        "offset": 3399,
+        "section": "FIG",
+        "text": "Atrophic skin and visible subcutaneous vessels."
+      },
+      {
+        "offset": 3447,
+        "section": "CASE",
+        "text": "She had elevated alkaline phosphatase of 256 mumol/L (normal range50-150 mumol/L) and low calcium of 2.01 mmol/L (normal range 2.15-2.65 mmol/L). Full blood count, creatinine, thyroid function test and uric acid were normal. ECG and chest radiography were normal. Radiographs of left and right upper limbs (Fig. 4) showed bilateral, dense cortices of diaphyses, sparing metaphyses and epiphyses."
+      },
+      {
+        "offset": 3845,
+        "section": "FIG",
+        "text": "Hyperostosis of diaphyses of long bones of upper limbs (arrows). (A) Left humerus with irregular cortical thickening and medullary canal stenosis. (B) Right humerus with irregular cortical thickening and medullary canal stenosis. (C) Right radius and ulna with cortical thickening, medullary canal obliteration and narrowing of space between radius and ulna. (D) Left radius and ulna with cortical thickening, medullary canal obliteration and narrowing of space between radius and ulna."
+      },
+      {
+        "offset": 4332,
+        "section": "CASE",
+        "text": "Diagnosis of CAEND was entertained in view of typical clinical and radiological characteristics. She was managed with prednisolone 15mg on alternate days during a month and tramadol 50 mg bd, resulting in significant subjective relief of the bone pain."
+      },
+      {
+        "offset": 4585,
+        "section": "CASE",
+        "text": "During follow up she reported only mild pain for which she used tramadol when needed."
+      },
+      {
+        "offset": 4671,
+        "section": "CASE",
+        "text": "To confirm the diagnosis DNA was sent for TGFB1 gene analysis to the Institute for Medical Genetics and Human Genetics, ChariteUniversitatsmedizin Berlin, Germany. TGFB1 sequence analysis revealed a missense mutation (c.652C>T; p.Arg218Cys), a known disease causing mutation which is found in 40% of CAEND patients.Unfortunately, for financial and logistic reasons we were not able to do radiological and molecular investigations in the parents."
+      },
+      {
+        "offset": 5119,
+        "section": "DISCUSS",
+        "text": "DISCUSSION"
+      },
+      {
+        "offset": 5130,
+        "section": "DISCUSS",
+        "text": "Based on clinical and radiological features CAEND was diagnosed and sequence analysis of the TGFB1 gene confirmed this clinical diagnosis. Since the parents were clinically not affected, a de novo mutation is likely, though non-penetrance or germline mosaicism in one of them cannot be excluded. CAEND is a rare pan-ethnic condition with more than 300 published cases and an estimated, though likely underestimated, incidence of 1/1 000 000. An activating mutation of the TGFB1geneon chromosome 19q13 is causing CAEND and Ribbing disease which is one and the same disease with the latter being a less severe form. Phenotypic expression of CAEND is very variable, even within families. Clinical and radiological penetrance is not complete, particularly with the Tyr81His variant."
+      },
+      {
+        "offset": 5909,
+        "section": "DISCUSS",
+        "text": "In their literature review, Wallace et al. found an average age of onset of 14 years; particularly children who presented with proximal muscular weakness, were at risk to be subjected to muscular biopsies and incorrectly diagnosed with muscular dystrophy ."
+      },
+      {
+        "offset": 6166,
+        "section": "DISCUSS",
+        "text": "Our case presented as the average CAEND patient presents. Hypocalcaemia is more often seen in CAEND, but its cause is not clear. Xie et al. hypothesized that hypocalcaemia could be associated with abnormal bone metabolism."
+      },
+      {
+        "offset": 6389,
+        "section": "DISCUSS",
+        "text": "It is important to consider CAEND early in the differential diagnosis of conditions presenting with non-specific limb pains and radiological features of skeletal dysplasia. Many patients are often incorrectly diagnosed or have a delayed diagnosis, while early recognition and confirmed diagnosis play a crucial role in the management of patients with CAEND. As increased tracer uptake can be seen before clinical and/or radiological manifestations are present, scintigraphy may be useful for diagnosing CAEND at an early stage."
+      },
+      {
+        "offset": 6917,
+        "section": "DISCUSS",
+        "text": "Patients have been treated with various drugs including glucocorticoids, bisphosphonates, calcitonin and analgesics, as well as having undergone surgical procedures such as medullary reaming.We choose to treat with corticosteroids, which are cheap and have been reported to provide effective symptomatic improvement and slow down progression. Angiotensin II receptor antagonists like losartan have been reported to improve symptoms."
+      },
+      {
+        "offset": 7350,
+        "section": "DISCUSS",
+        "text": "Few cases have been described from Africa and to the best of our knowledge our case is the first molecularly confirmed patient from sub-Saharan Africa."
+      },
+      {
+        "offset": 7502,
+        "section": "DISCUSS",
+        "text": "In conclusion, we report on a patient referred to us because of bone pain and in whom we diagnosed CAEND based on history, physical examination and radiological manifestations. The clinical diagnosis was molecularly confirmed. Since bone pain is described in the majority of affected individuals we stress the importance of adding CAEND to the differential diagnosis in case of persistent bone pain, but also in case of abnormal childhood motor development in order to avoid unnecessary investigations, wrong diagnosis and inadequate management."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-8f8dea9fb411d4ed",
+    "object": "chat.completion",
+    "created": 1790522534,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0100774\",\"HP:0002653\",\"HP:0002515\",\"HP:0001324\",\"HP:0002829\",\"HP:0025406\",\"HP:0011220\",\"HP:0000520\",\"HP:0000508\",\"HP:0003202\",\"HP:0004334\",\"HP:0003155\",\"HP:0003025\",\"HP:0012531\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 3053,
+      "total_tokens": 3207,
+      "completion_tokens": 154,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0100774",
+        "HP:0002653",
+        "HP:0002515",
+        "HP:0001324",
+        "HP:0002829",
+        "HP:0025406",
+        "HP:0011220",
+        "HP:0000520",
+        "HP:0000508",
+        "HP:0003202",
+        "HP:0004334",
+        "HP:0003155",
+        "HP:0003025",
+        "HP:0012531"
+      ]
+    }
+  ],
+  "elapsed_seconds": 5.551,
+  "usage": {
+    "prompt_tokens": 3053,
+    "total_tokens": 3207,
+    "completion_tokens": 154,
+    "prompt_tokens_details": null
+  }
+}

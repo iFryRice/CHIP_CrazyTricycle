@@ -1,0 +1,370 @@
+{
+  "pmc_id": "8580093",
+  "identity": "ce86e1f2459bc5fc6e243684aa6808adcdc45a8e3bd76ccafa6e878d93e991b2",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 13735,
+    "covered_source_characters": 13735,
+    "source_is_excerpted": false,
+    "candidate_windows": 35,
+    "selected_windows": 35,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 17634,
+    "candidate_concepts": 15,
+    "patient_count": 2
+  },
+  "prompt": {
+    "pmc_id": "8580093",
+    "patients": [
+      {
+        "patient_id": "O3",
+        "mentions": [
+          {
+            "text": "patient 3",
+            "offset": 8091
+          }
+        ]
+      },
+      {
+        "patient_id": "O4",
+        "mentions": [
+          {
+            "text": "patient 4",
+            "offset": 8125
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0001297": [
+        "stroke",
+        "strokes"
+      ],
+      "HP:0002352": [
+        "leukoencephalopathy"
+      ],
+      "HP:0002140": [
+        "ischemic strokes"
+      ],
+      "HP:0003690": [
+        "limb weakness"
+      ],
+      "HP:0001288": [
+        "gait disturbances"
+      ],
+      "HP:0100543": [
+        "cognitive impairment"
+      ],
+      "HP:0001596": [
+        "Alopecia",
+        "alopecia"
+      ],
+      "HP:0000822": [
+        "hypertension"
+      ],
+      "HP:0003077": [
+        "hyperlipidemia"
+      ],
+      "HP:0000819": [
+        "diabetes mellitus"
+      ],
+      "HP:0002500": [
+        "white matter changes",
+        "white matter abnormalities"
+      ],
+      "HP:0001249": [
+        "MR"
+      ],
+      "HP:0001272": [
+        "cerebellar atrophy"
+      ],
+      "HP:0000707": [
+        "neurologic manifestations"
+      ],
+      "HP:0025012": [
+        "status cribrosum"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "O3",
+        "phenotype": [
+          "HP:0001297",
+          "HP:0003690",
+          "HP:0001288",
+          "HP:0100543",
+          "HP:0001596",
+          "HP:0000822",
+          "HP:0003077",
+          "HP:0000819",
+          "HP:0002500",
+          "HP:0001249"
+        ]
+      },
+      {
+        "patient_id": "O4",
+        "phenotype": [
+          "HP:0001297",
+          "HP:0000822",
+          "HP:0003077",
+          "HP:0000819",
+          "HP:0002500",
+          "HP:0001249",
+          "HP:0001272"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Clinicoradiographic and genetic features of cerebral small vessel disease indicate variability in mode of inheritance for monoallelic HTRA1 variants"
+      },
+      {
+        "offset": 149,
+        "section": "ABSTRACT",
+        "text": "Abstract"
+      },
+      {
+        "offset": 158,
+        "section": "ABSTRACT",
+        "text": "Background"
+      },
+      {
+        "offset": 169,
+        "section": "ABSTRACT",
+        "text": "Biallelic pathogenic variants in HTRA1 cause CARASIL. More recently, monoallelic variants have been associated with the autosomal dominant disorder CADASIL2 but not all carriers develop disease manifestations. We describe the clinicoradiologic and mutation spectrum of four new CADASIL2 individuals."
+      },
+      {
+        "offset": 469,
+        "section": "ABSTRACT",
+        "text": "Methods"
+      },
+      {
+        "offset": 477,
+        "section": "ABSTRACT",
+        "text": "Medical records at Mayo Clinic between 2013 and 2020 were retrospectively reviewed to identify patients with cerebral small vessel disease related to monoallelic HTRA1 variants."
+      },
+      {
+        "offset": 655,
+        "section": "ABSTRACT",
+        "text": "Results"
+      },
+      {
+        "offset": 663,
+        "section": "ABSTRACT",
+        "text": "Four patients met the study inclusion criteria for cerebral small vessel disease related to HTRA1 monoallelic variants. The mean age at onset of first clinical stroke was 51.25 years (range 41-64 years). The mean disease duration was 6.5 years (range 4-12). All individuals had recurrent strokes within the duration of follow-up with a mean number of strokes per patient being 5.5 (range 2-12). Three individuals had leukoencephalopathy with brain stem involvement. Microhemorrhages were seen on brain MRI in three patients. HTRA1 monoallelic variants identified in our cohort were missense variants in three patients and a novel frameshift variation in one patient. Interestingly, two of these missense variants were previously reported in an autosomal recessive pattern of inheritance and here are associated with a dominant effect."
+      },
+      {
+        "offset": 1511,
+        "section": "ABSTRACT",
+        "text": "Conclusions"
+      },
+      {
+        "offset": 1523,
+        "section": "ABSTRACT",
+        "text": "Clinicoradiologic characteristics of heterozygous HTRA1-related CSVD may overlap with sporadic CSVD. Heterozygous HTRA1 variants can contribute to dominant or recessive disease mechanisms."
+      },
+      {
+        "offset": 1714,
+        "section": "ABSTRACT",
+        "text": "Clinicoradiologic features of heterozygous HTRA1-related CSVD may overlap with sporadic CVSD. The presence of vascular risk factors and a noncontributory family history should not exclude late-onset CSVD of inherited etiology. HTRA1 variants can be disease-causing in both heterozygous and biallelic states, but so far, there are no defining variant characteristics to determine the pattern of inheritance.  "
+      },
+      {
+        "offset": 2129,
+        "section": "INTRO",
+        "text": "INTRODUCTION"
+      },
+      {
+        "offset": 2142,
+        "section": "INTRO",
+        "text": "Cerebral small vessel disease (CSVD) accounts for a significant proportion of ischemic strokes. Etiological classification is crucial for clinical management and genetic counseling. Biallelic pathogenic variants in HTRA1 cause CARASIL (MIM 600142). More recently, heterozygous carriers of pathogenic HTRA1 variants were described to have increased risk of recurrent strokes of less severe magnitude, later age at onset, and absence of extra neurologic manifestations compared with CARASIL(Verdura et al.,) and was designated CADASIL2 (MIM 616779). However, not all heterozygous carriers, like parents of CARASIL individuals, develop disease manifestations, suggesting that several factors, including the nature of the genetic variant, are at play. Haploinsufficiency (in the case of loss of function variants) and dominant-negative effects (in the case of missense variants) are the postulated genetic mechanisms(Verdura et al.,). However, there is heterogeneity in the disease severity and inheritance pattern seen for HTRA1 variants, even within the same domain(Uemura et al.,). To expand our existing knowledge on heterozygous HTRA1-related CSVD, we describe the clinicoradiographic features and the genetic variants of four new unrelated patients."
+      },
+      {
+        "offset": 3398,
+        "section": "METHODS",
+        "text": "METHODS"
+      },
+      {
+        "offset": 3406,
+        "section": "METHODS",
+        "text": "A retrospective review of medical records was performed for patients referred to the Department of Clinical Genomics at Mayo Clinic between January 2013 and March 2020 for evaluation of inherited causes of CSVD. Patients who met inclusion criteria for heterozygous HTRA1-related CSVD with recurrent stroke, with or without the presence of leukoencephalopathy or microhemorrhages were included in the study. Their demographics, clinical characteristics, imaging findings, and nature of genetic variants were analyzed."
+      },
+      {
+        "offset": 3925,
+        "section": "RESULTS",
+        "text": "RESULTS"
+      },
+      {
+        "offset": 3933,
+        "section": "RESULTS",
+        "text": "Demographic data"
+      },
+      {
+        "offset": 3950,
+        "section": "RESULTS",
+        "text": "We identified four patients (three females and one male) with heterozygous HTRA1-related small vessel disease. Further demographic details were shown in Table 1."
+      },
+      {
+        "offset": 4114,
+        "section": "TABLE",
+        "text": "Clinicoradiologic and genetic findings of patients"
+      },
+      {
+        "offset": 7455,
+        "section": "RESULTS",
+        "text": "Clinical features."
+      },
+      {
+        "offset": 7474,
+        "section": "RESULTS",
+        "text": "The mean age of onset of first clinical stroke was 51.25 years (range 41-64 years). All individuals had recurrent strokes with a mean number of strokes per patient being 5.5 (range 2-12) during the mean follow-up period of 6.5 years (4-12) amounting to 0.84% per patient-year. All individuals had recurrent strokes with progressive limb weakness, bipyramidal signs, gait disturbances, and varying degrees of cognitive impairment for the relatively short disease duration. Alopecia and spondylosis deformans were not seen in our cohort. Detailed clinical features were shown in Table 1. All patients had hypertension, patient 3 had hyperlipidemia, and patient 4 had diabetes mellitus in addition. Pedigree chart with emphasis on risk factors was presented in Figure S1. These risk factors were optimally controlled with lifestyle modification and medications. Mean blood pressure at presentation was systolic of 125.25 mmHg (117-130) and diastolic of 76 mmHg (64-85). The lipid profile of patient 3 with hyperlipidemia revealed total cholesterol of 115 mg/dl, LDL of 47 mg/dl, and triglycerides of 60 mg/dl. HbA1C at presentation for patient 4 was 6.4. However, this did not prevent stroke recurrence. All patients were managed on antiplatelet medications along with other supportive measures, such as physical therapy, occupational therapy, and antispasticity medications. Anticoagulation was tried in two patients."
+      },
+      {
+        "offset": 8914,
+        "section": "RESULTS",
+        "text": "Neuroimaging findings"
+      },
+      {
+        "offset": 8936,
+        "section": "RESULTS",
+        "text": "Illustrative MRI images are shown in Figure 1. All but one had confluent white matter changes and lacunar infarcts involving periventricular, deep white matter, external capsule, corpus callosum, and pons. Anterior temporal pole and subcortical U fibers were spared in all."
+      },
+      {
+        "offset": 9210,
+        "section": "FIG",
+        "text": "MRI brain findings: Patient 1 (a-e) reveals signal changes in pons (white arrow in a, T2W axial image), lacunar infarcts in external capsule and thalamus (white arrows in b, T2W axial), confluent white matter changes in high frontoparietal regions (c, T2 FLAIR axial), microbleeds in right frontal region (black arrows in d, SWI image), and normal CT angiogram of intracranial vessels (e). Patient 2 (f-j) showing signal changes in pons (white arrows in f, T2W axial), sparing of anterior temporal pole (g, T2 FLAIR), white matter changes in external capsule and thalamus (white arrows in h, T2W image), confluent white matter changes in high frontal region (i, T2 FLAIR), and no evidence of microbleeds in SWI images (j). Patient 3 (k:o) shows no brain stem infarcts (k, T2W axial), scattered lacunar infarcts in basal ganglia and pericallosal regions (white arrows in l, T2W and m, T2 FLAIR), small microbleed in left thalamus (black arrow in n, SWI), and normal MR angiogram (o). Patient 4 (p-t) reveals pontine infarct (white arrow in p, T2W axial), multiple infarcts in external capsule, basal ganglia, and thalamus, also note the diffuse cerebral and cerebellar atrophy (t, T2W axial), confluent white matter changes in high frontoparietal region (white arrows in r, T2 FLAIR), blooming in basal ganglia (black arrows in s, SWI image) and normal MR angiogram (t)"
+      },
+      {
+        "offset": 10587,
+        "section": "RESULTS",
+        "text": "Molecular findings"
+      },
+      {
+        "offset": 10606,
+        "section": "RESULTS",
+        "text": "All HTRA1 gene variants were detected by clinical whole-exome sequencing. Three were missense changes (patients 1, 3, and 4) all predicted to be deleterious by several in silico predictors (SIFT, Polyphen2, CADD, REVEL), whereas patient 2 carried a frameshift loss of function variant (Table 2) that is predicted to undergo nonsense-mediated decay (NMDescPredictor (Coban-Akdemir et al.,)). All variants were rare or missing in healthy populations (GnomAD)(Karczewski et al.,) and reported according to ACMG criteria(Richards et al.,) as pathogenic or likely pathogenic except for the variant NM_002775.5:c.968G>A p.(Asp320Asn) (patient 4) that was reported as a variant of uncertain significance. Missense variants were located in the linker or protease domain, similar to most of previously reported missense deleterious variants. All missense variants were previously reported in different individuals presenting a similar phenotype but the variants in patients 3 and 4 were reported in homozygous state in previous studies. This is the first time that these variants are reported to create disease dominantly. On the other hand, the frameshift variant has not been reported before and is predicted to be a loss of function variant, compatible with previous cases of dominant inheritance."
+      },
+      {
+        "offset": 11905,
+        "section": "TABLE",
+        "text": "Genetic variant interpretation"
+      },
+      {
+        "offset": 12845,
+        "section": "DISCUSS",
+        "text": "DISCUSSION"
+      },
+      {
+        "offset": 12856,
+        "section": "DISCUSS",
+        "text": "Monogenic disorders leading to late-onset strokes and advanced CSVD may not be considered in some cases due to the presence of coexisting common vascular risk factors like hypertension. Signs suggestive of an underlying genetic etiology may include continued stroke recurrence in spite of stroke-preventive therapies, extra-neurologic manifestations, positive family history, and imaging findings of confluent periventricular white matter abnormalities, microhemorrhages, and normal vessel imaging. Biallelic pathogenic variants in HTRA1 were initially described in CARASIL families in 2009(Hara et al.,). Further evaluation of autosomal dominant families with CSVD and negative NOTCH3 mutations revealed monoallelic HTRA1 gene variants. As a result, nearly 5% of familial CSVD of unknown etiology were associated with heterozygous HTRA1 mutations in the European population, becoming the second most common cause of CADASIL(Verdura et al.,)."
+      },
+      {
+        "offset": 13808,
+        "section": "DISCUSS",
+        "text": "Most patients with heterozygous HTRA1-related CSVD have their onset of symptoms in the sixth decade, though a wide age range (29-77 years) has been reported by various studies(Uemura et al.,; Verdura et al.,). The mean age at a first clinical stroke was 51 years in our cohort. All of our patients had hypertension, consistent with previous reports of symptomatic HTRA1 carriers(Nozaki et al.,; Uemura et al.,; Verdura et al.,). In a recent review, younger age at diagnosis (35.7 vs 59.8 years), higher frequency of strokes (63% vs 40.7%), and nonneurologic manifestations like alopecia and spondylosis were significantly associated with CARASIL compared with CADASIL2(Uemura et al.,). Thus, the occurrence of late-onset stroke phenotype and paucity of nonneurologic findings may be instead attributed to sporadic- and hypertension-related CSVD. Risk factors were adequately controlled in our patients, however, that did not prevent stroke recurrence, and this was in fact the main indication for referral for a genetic evaluation. Risk factors could have certainly played a significant role in the initial presentation; however, continued recurrence of strokes and the atypical course is attributed to the underlying genetic etiology."
+      },
+      {
+        "offset": 15057,
+        "section": "DISCUSS",
+        "text": "Negative family history in some patients could be explained by age-related penetrance or attributed to acquired vascular risk factors. The frequency of confluent white matter changes on brain MRI was found to be of lesser magnitude than individuals with CARASIL, though the pattern of distribution is similar(Uemura et al.,). The imaging pattern is similar to sporadic CSVDs except for the presence of status cribrosum and occurrence of microbleeds in the deep white matter and juxta cortical hemispheric areas(Uemura et al.,). In contrast with CADASIL-1, anterior temporal lobes are spared in most reported cases, while external capsule involvement appears to be common in both conditions(Uemura et al.,). All but one patient in our cohort had confluent supratentorial white matter changes and brain stem infarcts, whereas sparing of anterior temporal lobe was seen in all four patients. Frequent visualization of incidental microhemorrhages on imaging and the isolated report of hemorrhagic stroke may imply increased fragility of the blood vessels, which has obvious implications in management(Lee et al.,)."
+      },
+      {
+        "offset": 16172,
+        "section": "DISCUSS",
+        "text": "All three missense variants seen in the patients described here were located in the protease domain outside of L3/LD loop and have been described in literature before. However, the variants detected in patients 3 and 4 have only been seen as a part of biallelic insults and this is the first time reported in heterozygous symptomatic carriers. This finding suggests that variants reported previously with an autosomal recessive inheritance could also result in autosomal dominant HTRA1-related disease and should be reviewed carefully in the context of patient's phenotype. In the case of the frameshift variant, although being a novel variant, it is predicted to be a loss of function variant similar to previous reports of heterozygous symptomatic carriers(Uemura et al.,)."
+      },
+      {
+        "offset": 16951,
+        "section": "DISCUSS",
+        "text": "This case series expands the mutational landscape of symptomatic HTRA1 carriers and emphasizes the importance of stringent analysis of heterozygous variants in HTRA1 for counseling. Identification of genetic etiology would also potentially prevent the need for invasive evaluations, such as leptomeningeal or brain biopsy in a patient with cryptogenic recurrent stroke, and guide screening of at-risk family members."
+      },
+      {
+        "offset": 17370,
+        "section": "CONCL",
+        "text": "CONCLUSION"
+      },
+      {
+        "offset": 17381,
+        "section": "CONCL",
+        "text": "Clinicoradiologic features of heterozygous HTRA1-related CSVD may overlap with sporadic CVSD. The presence of vascular risk factors and noncontributory family history should not exclude late-onset CSVD of inherited etiology. Our observations agree with previous reports indicating that missense variants in the linker region or in the protease domain can be associated with disease and we report an additional case carrying a frameshift variant in which haploinsufficiency is likely the disease mechanisms. HTRA1 variants can be disease-causing in both heterozygous and biallelic states, but so far, there are no defining variant characteristics to determine the pattern of inheritance."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-a5caa1cca2a0330c",
+    "object": "chat.completion",
+    "created": 1790521919,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"O3\",\"phenotype\":[\"HP:0001297\",\"HP:0003690\",\"HP:0001288\",\"HP:0100543\",\"HP:0001596\",\"HP:0000822\",\"HP:0003077\",\"HP:0000819\",\"HP:0002500\",\"HP:0001249\"]},{\"patient_id\":\"O4\",\"phenotype\":[\"HP:0001297\",\"HP:0000822\",\"HP:0003077\",\"HP:0000819\",\"HP:0002500\",\"HP:0001249\",\"HP:0001272\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 4347,
+      "total_tokens": 4541,
+      "completion_tokens": 194,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "O3",
+      "phenotype": [
+        "HP:0001297",
+        "HP:0003690",
+        "HP:0001288",
+        "HP:0100543",
+        "HP:0001596",
+        "HP:0000822",
+        "HP:0003077",
+        "HP:0000819",
+        "HP:0002500",
+        "HP:0001249"
+      ]
+    },
+    {
+      "patient_id": "O4",
+      "phenotype": [
+        "HP:0001297",
+        "HP:0000822",
+        "HP:0003077",
+        "HP:0000819",
+        "HP:0002500",
+        "HP:0001249",
+        "HP:0001272"
+      ]
+    }
+  ],
+  "elapsed_seconds": 6.951,
+  "usage": {
+    "prompt_tokens": 4347,
+    "total_tokens": 4541,
+    "completion_tokens": 194,
+    "prompt_tokens_details": null
+  }
+}

@@ -1,0 +1,1359 @@
+{
+  "input": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\cpu_a_input.jsonl",
+  "data": "D:\\Projects\\20260927_CHIP2026\\PatientPheX-V1-A\\PatientPheX-A.jsonl",
+  "output": "D:\\Projects\\20260927_CHIP2026\\submissions\\patientphex_a_rag.jsonl",
+  "input_sha256": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a",
+  "model": "Qwen3-8B",
+  "documents": 20,
+  "new_requests": 20,
+  "gpu_documents": 20,
+  "cpu_documents": 0,
+  "all_documents_refined": true,
+  "elapsed_seconds": 299.801,
+  "entities_unchanged": true,
+  "target_gold_annotations_used": false,
+  "retrieval_training_annotations_used": true,
+  "retrieval": {
+    "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+    "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+    "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+    "metadata": {
+      "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+      "hpo_version": "hp/releases/2026-06-23",
+      "hpo_root": "HP:0000118",
+      "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+      "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+      "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+      "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+      "example_char_limit": 2500,
+      "definition_char_limit": 300,
+      "fold_sizes": [
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "source_sha256": {
+        "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+        "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+        "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+        "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+        "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+        "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+      },
+      "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+      "document_count": 100,
+      "example_count": 149
+    }
+  },
+  "status": [
+    {
+      "pmc_id": "10111794",
+      "source": "gpu",
+      "elapsed_seconds": 8.094,
+      "prompt_report": {
+        "source_characters": 10393,
+        "covered_source_characters": 10393,
+        "source_is_excerpted": false,
+        "candidate_windows": 35,
+        "selected_windows": 35,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 19492,
+        "candidate_concepts": 12,
+        "patient_count": 1,
+        "retrieval_context_characters": 4898,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 4786,
+        "total_tokens": 4854,
+        "completion_tokens": 68,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "54928a079668be7d7c2fcd2e5b49d66676e8832e17d7012040b9477a991450f6",
+        "retrieved_ids": [
+          "11986149"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "10668041",
+      "source": "gpu",
+      "elapsed_seconds": 14.929,
+      "prompt_report": {
+        "source_characters": 9414,
+        "covered_source_characters": 9414,
+        "source_is_excerpted": false,
+        "candidate_windows": 18,
+        "selected_windows": 18,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 27976,
+        "candidate_concepts": 32,
+        "patient_count": 1,
+        "retrieval_context_characters": 13813,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 6974,
+        "total_tokens": 7282,
+        "completion_tokens": 308,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "4512257f45078c5108ed6666d44b40b1de4f405f822b38b19958a0f81ce58152",
+        "retrieved_ids": [
+          "12891056",
+          "12110755"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "11988866",
+      "source": "gpu",
+      "elapsed_seconds": 35.042,
+      "prompt_report": {
+        "source_characters": 27528,
+        "covered_source_characters": 27528,
+        "source_is_excerpted": false,
+        "candidate_windows": 44,
+        "selected_windows": 44,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 53707,
+        "candidate_concepts": 50,
+        "patient_count": 5,
+        "retrieval_context_characters": 18847,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 13249,
+        "total_tokens": 13849,
+        "completion_tokens": 600,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "424a98cf07a3dbacde4a3a6f565a18bcb9639b7b1c032b9ab2791932bb74e7bf",
+        "retrieved_ids": [
+          "12811285",
+          "12386172"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "12077970",
+      "source": "gpu",
+      "elapsed_seconds": 22.989,
+      "prompt_report": {
+        "source_characters": 24296,
+        "covered_source_characters": 24296,
+        "source_is_excerpted": false,
+        "candidate_windows": 43,
+        "selected_windows": 43,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 45386,
+        "candidate_concepts": 41,
+        "patient_count": 2,
+        "retrieval_context_characters": 15073,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 11719,
+        "total_tokens": 12000,
+        "completion_tokens": 281,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "713ad93b0f49dbd2a5a9abb3128fbfbf3fe79a7980243f2e608806d4cd32f7f0",
+        "retrieved_ids": [
+          "5473715",
+          "12386172"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "12078196",
+      "source": "gpu",
+      "elapsed_seconds": 11.768,
+      "prompt_report": {
+        "source_characters": 14696,
+        "covered_source_characters": 14696,
+        "source_is_excerpted": false,
+        "candidate_windows": 51,
+        "selected_windows": 51,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 26565,
+        "candidate_concepts": 15,
+        "patient_count": 5,
+        "retrieval_context_characters": 5962,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 6971,
+        "total_tokens": 7215,
+        "completion_tokens": 244,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "5d19db9272c5fb7e2ad2746acd14a28202fd95bc704cb35912072c7451a513fd",
+        "retrieved_ids": [
+          "12250201",
+          "12640707"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "12273622",
+      "source": "gpu",
+      "elapsed_seconds": 27.339,
+      "prompt_report": {
+        "source_characters": 39217,
+        "covered_source_characters": 39217,
+        "source_is_excerpted": false,
+        "candidate_windows": 58,
+        "selected_windows": 58,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 57650,
+        "candidate_concepts": 30,
+        "patient_count": 5,
+        "retrieval_context_characters": 11415,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 14408,
+        "total_tokens": 14818,
+        "completion_tokens": 410,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "b3f47bb8f04a9b497c73c94be15d6b8c354554afb073aa37d2f36fd94f417a03",
+        "retrieved_ids": [
+          "12455887",
+          "12386172"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "12406456",
+      "source": "gpu",
+      "elapsed_seconds": 12.866,
+      "prompt_report": {
+        "source_characters": 22813,
+        "covered_source_characters": 22813,
+        "source_is_excerpted": false,
+        "candidate_windows": 54,
+        "selected_windows": 54,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 41251,
+        "candidate_concepts": 32,
+        "patient_count": 2,
+        "retrieval_context_characters": 12161,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 10165,
+        "total_tokens": 10474,
+        "completion_tokens": 309,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "0c52ae7f8984ac7042fb8bc87a4b3d7fc0b5f4b9682e7c21b0f038f10c3bc1ea",
+        "retrieved_ids": [
+          "5575846",
+          "12386172"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "12711360",
+      "source": "gpu",
+      "elapsed_seconds": 27.397,
+      "prompt_report": {
+        "source_characters": 17672,
+        "covered_source_characters": 17672,
+        "source_is_excerpted": false,
+        "candidate_windows": 38,
+        "selected_windows": 38,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 38910,
+        "candidate_concepts": 39,
+        "patient_count": 5,
+        "retrieval_context_characters": 14775,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 9794,
+        "total_tokens": 10205,
+        "completion_tokens": 411,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "f1dacb43b0ce52c2762eb5f3eb00ce78d30e9350bb78a2673e278a0df0faa973",
+        "retrieved_ids": [
+          "12640707",
+          "12386172"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "3372307",
+      "source": "gpu",
+      "elapsed_seconds": 6.099,
+      "prompt_report": {
+        "source_characters": 13192,
+        "covered_source_characters": 13192,
+        "source_is_excerpted": false,
+        "candidate_windows": 28,
+        "selected_windows": 28,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 23377,
+        "candidate_concepts": 13,
+        "patient_count": 2,
+        "retrieval_context_characters": 6101,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 5996,
+        "total_tokens": 6107,
+        "completion_tokens": 111,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "fbbb0d4a6fe3e8ae72c6ce4903f5edcf68a37bba084d1572435ea87279464659",
+        "retrieved_ids": [
+          "6491447"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "5472882",
+      "source": "gpu",
+      "elapsed_seconds": 18.108,
+      "prompt_report": {
+        "source_characters": 16023,
+        "covered_source_characters": 16023,
+        "source_is_excerpted": false,
+        "candidate_windows": 28,
+        "selected_windows": 28,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 41641,
+        "candidate_concepts": 49,
+        "patient_count": 1,
+        "retrieval_context_characters": 19045,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 10882,
+        "total_tokens": 11300,
+        "completion_tokens": 418,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "f955c05a820b552e107d189f6ac8f5b4506e64995f88b298683f37e9f6cec13b",
+        "retrieved_ids": [
+          "12059664",
+          "12640707"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "5828422",
+      "source": "gpu",
+      "elapsed_seconds": 6.213,
+      "prompt_report": {
+        "source_characters": 9899,
+        "covered_source_characters": 9899,
+        "source_is_excerpted": false,
+        "candidate_windows": 24,
+        "selected_windows": 24,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 17093,
+        "candidate_concepts": 13,
+        "patient_count": 1,
+        "retrieval_context_characters": 3349,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 4233,
+        "total_tokens": 4351,
+        "completion_tokens": 118,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "6d53fde07023c91367edd1f79e257712dd657ffcc60783b025ec890771d9f0d8",
+        "retrieved_ids": [],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "5885039",
+      "source": "gpu",
+      "elapsed_seconds": 6.927,
+      "prompt_report": {
+        "source_characters": 8703,
+        "covered_source_characters": 8703,
+        "source_is_excerpted": false,
+        "candidate_windows": 10,
+        "selected_windows": 10,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 18724,
+        "candidate_concepts": 15,
+        "patient_count": 3,
+        "retrieval_context_characters": 6319,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 4714,
+        "total_tokens": 4860,
+        "completion_tokens": 146,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "d9e64d1e795ccf1018582e38f03c29c12bb3e2d2cf8634c589f6069726e80876",
+        "retrieved_ids": [
+          "5693559"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "6112894",
+      "source": "gpu",
+      "elapsed_seconds": 9.918,
+      "prompt_report": {
+        "source_characters": 14108,
+        "covered_source_characters": 14108,
+        "source_is_excerpted": false,
+        "candidate_windows": 30,
+        "selected_windows": 30,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 29728,
+        "candidate_concepts": 28,
+        "patient_count": 1,
+        "retrieval_context_characters": 10929,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 7602,
+        "total_tokens": 7790,
+        "completion_tokens": 188,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "c18519f79a8121ad39766d1648cd4d90df48fdc5a08f90714fbb584943246de1",
+        "retrieved_ids": [
+          "5693559",
+          "12891056"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "6133598",
+      "source": "gpu",
+      "elapsed_seconds": 13.637,
+      "prompt_report": {
+        "source_characters": 15359,
+        "covered_source_characters": 15359,
+        "source_is_excerpted": false,
+        "candidate_windows": 40,
+        "selected_windows": 40,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 26594,
+        "candidate_concepts": 15,
+        "patient_count": 6,
+        "retrieval_context_characters": 6035,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 6870,
+        "total_tokens": 7124,
+        "completion_tokens": 254,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "913157e46e8bc55923099eae9313c74eb888676ca9f0c7825bd5808da52db63e",
+        "retrieved_ids": [
+          "12147048"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "6176516",
+      "source": "gpu",
+      "elapsed_seconds": 10.43,
+      "prompt_report": {
+        "source_characters": 15113,
+        "covered_source_characters": 15113,
+        "source_is_excerpted": false,
+        "candidate_windows": 32,
+        "selected_windows": 32,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 26342,
+        "candidate_concepts": 19,
+        "patient_count": 1,
+        "retrieval_context_characters": 6530,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 6389,
+        "total_tokens": 6557,
+        "completion_tokens": 168,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "1261705b2be99af1786c0ab2156fee255e416edcb6b1511e807569b6e4346c6b",
+        "retrieved_ids": [
+          "12455887"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "6358355",
+      "source": "gpu",
+      "elapsed_seconds": 8.356,
+      "prompt_report": {
+        "source_characters": 22292,
+        "covered_source_characters": 22292,
+        "source_is_excerpted": false,
+        "candidate_windows": 61,
+        "selected_windows": 61,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 37488,
+        "candidate_concepts": 24,
+        "patient_count": 4,
+        "retrieval_context_characters": 8981,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 9718,
+        "total_tokens": 9825,
+        "completion_tokens": 107,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "d80bf99b400c37bb046d25af01694cfa0a55edbe4f2e74b49f89fd9e8e6c6e53",
+        "retrieved_ids": [
+          "4899602"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "6410021",
+      "source": "gpu",
+      "elapsed_seconds": 35.389,
+      "prompt_report": {
+        "source_characters": 31150,
+        "covered_source_characters": 31150,
+        "source_is_excerpted": false,
+        "candidate_windows": 34,
+        "selected_windows": 34,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 62427,
+        "candidate_concepts": 76,
+        "patient_count": 1,
+        "retrieval_context_characters": 23920,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 16318,
+        "total_tokens": 16966,
+        "completion_tokens": 648,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "569f51fd7991718a202077c89c27e5658e8093fdb9f76fb08d7b208d51965411",
+        "retrieved_ids": [
+          "5023785",
+          "12640707"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "8045169",
+      "source": "gpu",
+      "elapsed_seconds": 4.662,
+      "prompt_report": {
+        "source_characters": 13376,
+        "covered_source_characters": 13376,
+        "source_is_excerpted": false,
+        "candidate_windows": 56,
+        "selected_windows": 56,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 24101,
+        "candidate_concepts": 15,
+        "patient_count": 4,
+        "retrieval_context_characters": 4690,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 6022,
+        "total_tokens": 6101,
+        "completion_tokens": 79,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "7879273632b6c821f44a01fa45c7a792bf3c73533f806dfc2e0de061d80701f1",
+        "retrieved_ids": [],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "8079983",
+      "source": "gpu",
+      "elapsed_seconds": 6.886,
+      "prompt_report": {
+        "source_characters": 13390,
+        "covered_source_characters": 13390,
+        "source_is_excerpted": false,
+        "candidate_windows": 32,
+        "selected_windows": 32,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 26470,
+        "candidate_concepts": 22,
+        "patient_count": 1,
+        "retrieval_context_characters": 8508,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 6671,
+        "total_tokens": 6819,
+        "completion_tokens": 148,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "72f767a95d45ebe8c54d70a17fc4e1354c5fab43528cab1dd0623bc34b893bb8",
+        "retrieved_ids": [
+          "12628480",
+          "12798528"
+        ],
+        "excluded_fold_ids": []
+      }
+    },
+    {
+      "pmc_id": "8580093",
+      "source": "gpu",
+      "elapsed_seconds": 11.921,
+      "prompt_report": {
+        "source_characters": 13735,
+        "covered_source_characters": 13735,
+        "source_is_excerpted": false,
+        "candidate_windows": 35,
+        "selected_windows": 35,
+        "budget_omitted_windows": 0,
+        "max_prompt_chars": 70000,
+        "prompt_characters_including_system": 23698,
+        "candidate_concepts": 15,
+        "patient_count": 2,
+        "retrieval_context_characters": 5427,
+        "retrieval_context_truncated": false
+      },
+      "usage": {
+        "prompt_tokens": 5862,
+        "total_tokens": 6092,
+        "completion_tokens": 230,
+        "prompt_tokens_details": null
+      },
+      "response_format_type": "json_schema",
+      "retrieval": {
+        "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\rag_contexts.json",
+        "file_sha256": "dd232d2b987179c0e026ec254eff32a76f1b96b1d092c469b1e59f010992a2e5",
+        "metadata_sha256": "a8dfc11e0e25ab0d01fbcbffd43cc4bbe79b32fe8cbc3dc376f7aacaa7973ee7",
+        "metadata": {
+          "created_at_utc": "2026-09-27T15:18:26.680465+00:00",
+          "hpo_version": "hp/releases/2026-06-23",
+          "hpo_root": "HP:0000118",
+          "fold_exclusion_rule": "For each training target, exclude all 16 documents in its heldout fold from vectorizer fitting and retrieval; A targets use all 80 training documents.",
+          "query_rule": "TF-IDF uses only original full_text; target gold entities and associations are never used. Candidate HPO IDs come only from supplied CPU prediction snapshots.",
+          "example_rule": "Retrieve the top two documents by text cosine similarity only. Include an example only if its training gold association overlaps target predicted HPO IDs and has non-negated entity evidence. No replacement by lower-ranked documents.",
+          "evidence_rule": "Gold patient-phenotype labels are authoritative; the nearby phenotype window illustrates original wording and is not separately annotated pair-level evidence.",
+          "example_char_limit": 2500,
+          "definition_char_limit": 300,
+          "fold_sizes": [
+            16,
+            16,
+            16,
+            16,
+            16
+          ],
+          "source_sha256": {
+            "train": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+            "a": "dd734837cc1f9276ca15797db6807d71464a1f698808620d418a2a46712d95cd",
+            "hpo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+            "split": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+            "cpu_oof": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+            "cpu_a": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a"
+          },
+          "script_sha256": "f56624055028808f0ff1a18a8455ad649ee67e470ee51c99db69058b16a79473",
+          "document_count": 100,
+          "example_count": 149
+        },
+        "context_sha256": "ea7fe66bf1ec925e50bb86a1e552d6b3e98cf6440936a2ec16e2816b0fe55a3a",
+        "retrieved_ids": [
+          "5473715"
+        ],
+        "excluded_fold_ids": []
+      }
+    }
+  ]
+}

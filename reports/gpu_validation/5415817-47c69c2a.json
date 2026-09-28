@@ -1,0 +1,466 @@
+{
+  "pmc_id": "5415817",
+  "identity": "5a2e635e6c6b9079be265bac693bdaf16812b7932f3e6c4096ce8b14a9f64cc6",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 15326,
+    "covered_source_characters": 15326,
+    "source_is_excerpted": false,
+    "candidate_windows": 27,
+    "selected_windows": 27,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 20198,
+    "candidate_concepts": 42,
+    "patient_count": 1
+  },
+  "prompt": {
+    "pmc_id": "5415817",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "an 8-year-old boy",
+            "offset": 1102
+          },
+          {
+            "text": "patient",
+            "offset": 1196
+          },
+          {
+            "text": "proband",
+            "offset": 1323
+          },
+          {
+            "text": "patient",
+            "offset": 1465
+          },
+          {
+            "text": "patient",
+            "offset": 1604
+          },
+          {
+            "text": "patient",
+            "offset": 1925
+          },
+          {
+            "text": "boy",
+            "offset": 4770
+          },
+          {
+            "text": "An 8-year-old boy",
+            "offset": 4812
+          },
+          {
+            "text": "proband",
+            "offset": 6240
+          },
+          {
+            "text": "patient",
+            "offset": 6466
+          },
+          {
+            "text": "patient",
+            "offset": 6840
+          },
+          {
+            "text": "patient",
+            "offset": 9637
+          },
+          {
+            "text": "patient",
+            "offset": 9939
+          },
+          {
+            "text": "patient",
+            "offset": 11200
+          },
+          {
+            "text": "patient",
+            "offset": 12136
+          },
+          {
+            "text": "patient",
+            "offset": 13053
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0002721": [
+        "immunodeficiency"
+      ],
+      "HP:0001945": [
+        "fever"
+      ],
+      "HP:0001433": [
+        "hepatosplenomegaly"
+      ],
+      "HP:5210419": [
+        "cytopenias"
+      ],
+      "HP:0001871": [
+        "hematological disorder"
+      ],
+      "HP:0002664": [
+        "tumor"
+      ],
+      "HP:0034280": [
+        "target cell",
+        "target cells"
+      ],
+      "HP:0012115": [
+        "hepatitis"
+      ],
+      "HP:0001250": [
+        "epilepsy",
+        "seizures"
+      ],
+      "HP:0001876": [
+        "pancytopenia"
+      ],
+      "HP:0001287": [
+        "meningitis"
+      ],
+      "HP:0001298": [
+        "encephalopathy"
+      ],
+      "HP:0001251": [
+        "ataxia"
+      ],
+      "HP:0002301": [
+        "hemiplegia"
+      ],
+      "HP:0006824": [
+        "cranial nerve palsies"
+      ],
+      "HP:0000737": [
+        "irritability"
+      ],
+      "HP:0032070": [
+        "leptomeningeal enhancement"
+      ],
+      "metabolic diseases": [
+        "metabolic diseases"
+      ],
+      "HP:0001744": [
+        "splenomegaly"
+      ],
+      "HP:0003281": [
+        "hyperferritinemia"
+      ],
+      "HP:0012156": [
+        "hemophagocytosis"
+      ],
+      "HP:0002155": [
+        "hypertriglyceridemia"
+      ],
+      "HP:0011900": [
+        "hypofibrinogenemia"
+      ],
+      "HP:0040219": [
+        "absent NK-cell"
+      ],
+      "HP:0000952": [
+        "jaundice"
+      ],
+      "HP:0008151": [
+        "prolonged prothrombin time",
+        "PT"
+      ],
+      "HP:0003645": [
+        "partial thromboplastin time"
+      ],
+      "HP:5210421": [
+        "autoimmune hepatitis"
+      ],
+      "HP:0002835": [
+        "aspiration"
+      ],
+      "HP:0008677": [
+        "CNS"
+      ],
+      "HP:0001892": [
+        "bleeding tendency"
+      ],
+      "HP:0011097": [
+        "convulsion"
+      ],
+      "HP:0001257": [
+        "spasticity"
+      ],
+      "HP:0001350": [
+        "slurred speech"
+      ],
+      "HP:0002960": [
+        "autoimmune diseases"
+      ],
+      "HP:0100651": [
+        "type 1 diabetes"
+      ],
+      "HP:0012539": [
+        "Non-Hodgkin lymphoma"
+      ],
+      "HP:0001909": [
+        "leukemia"
+      ],
+      "HP:0000969": [
+        "edema"
+      ],
+      "HP:0001410": [
+        "liver dysfunction"
+      ],
+      "HP:0001928": [
+        "coagulation abnormalities"
+      ],
+      "HP:0000707": [
+        "neurological abnormalities"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0001945",
+          "HP:0001433",
+          "HP:5210419",
+          "HP:0012115",
+          "HP:0001250",
+          "HP:0001876",
+          "HP:0001251",
+          "HP:0001744",
+          "HP:0003281",
+          "HP:0012156",
+          "HP:0002155",
+          "HP:0011900",
+          "HP:0040219",
+          "HP:0000952",
+          "HP:0008151",
+          "HP:0003645",
+          "HP:5210421",
+          "HP:0002835",
+          "HP:0008677",
+          "HP:0001892",
+          "HP:0011097",
+          "HP:0001257",
+          "HP:0001350",
+          "HP:0002960"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "A case report of novel mutation in PRF1 gene, which causes familial autosomal recessive hemophagocytic lymphohistiocytosis"
+      },
+      {
+        "offset": 123,
+        "section": "ABSTRACT",
+        "text": "Background"
+      },
+      {
+        "offset": 134,
+        "section": "ABSTRACT",
+        "text": "Hemophagocytic Lymphohistiocytosis (HLH) is a life-threatening immunodeficiency and multi-organ disease that affects people of all ages and ethnic groups. Common symptoms and signs of this disease are high fever, hepatosplenomegaly, and cytopenias. Familial form of HLH disease, which is an autosomal recessive hematological disorder is due to disease-causing mutations in several genes essential for NK and T-cell granule-mediated cytotoxic function. For an effective cytotoxic response from cytotoxic T lymphocyte or NK cell encountering an infected cell or tumor cell, different processes are required, including trafficking, docking, priming, membrane fusion, and entry of cytotoxic granules into the target cell leading to apoptosis. Therefore, genes involved in these steps play important roles in the pathogenesis of HLH disease which include PRF1, UNC13D (MUNC13-4), STX11, and STXBP2 (MUNC18-2)."
+      },
+      {
+        "offset": 1039,
+        "section": "ABSTRACT",
+        "text": "Case presentation"
+      },
+      {
+        "offset": 1057,
+        "section": "ABSTRACT",
+        "text": "Here, we report a novel missense mutation in an 8-year-old boy suffered from hepatosplenomegaly, hepatitis, epilepsy and pancytopenia. The patient was born to a first-cousin parents with no previous documented disease in his parents. To identify mutated gene in the proband, Whole Exome Sequencing (WES) utilizing next generation sequencing was used on an Illumina HiSeq 2000 platform on DNA sample from the patient. Results showed a novel deleterious homozygous missense mutation in PRF1 gene (NM_001083116: exon3: c. 1120 T > G, p.W374G) in the patient and then using Sanger sequencing it was confirmed in the proband and his parents. Since his parents were heterozygous for the identified mutation, autosomal recessive pattern of inheritance was confirmed in the family."
+      },
+      {
+        "offset": 1836,
+        "section": "ABSTRACT",
+        "text": "Conclusions"
+      },
+      {
+        "offset": 1848,
+        "section": "ABSTRACT",
+        "text": "Our study identified a rare new pathogenic missense mutation in PRF1 gene in patient with HLH disease and it is the first report of mutation in PRF1 in Iranian patients with this disease."
+      },
+      {
+        "offset": 2036,
+        "section": "INTRO",
+        "text": "Background"
+      },
+      {
+        "offset": 2047,
+        "section": "INTRO",
+        "text": "Hemophagocytic lymphohistiocytosis (HLH) is an uncommon hyper-inflammatory syndrome with high mortality associated with different conditions, including neoplastic, infectious, autoimmune, or hereditary diseases. Neuropathologic findings and neurologic symptoms have been identified approximately in 75% of pediatric cases, including seizures, meningitis, encephalopathy, ataxia, hemiplegia, cranial nerve palsies, mental status changes, or simply irritability. In magnetic resonance imaging (MRI) studies some brain findings may be observed, which include the increase of nodular parenchymal lesions, leptomeningeal enhancement, demyelization, and atrophy. The incidence of HLH has been estimated to be 1 to 225 per 300 000 live births and is reported in all ages, races and both genders. HLH is grouped into two forms, which include familial type due to genetic mutations affecting the cytotoxic function of T lymphocytes and natural killer (NK) cells or acquired form presenting in different conditions such as infectious, malignant, rheumatologic, or metabolic diseases. HLH is a medical emergency and must be suspected in patients affected by unexplained cytopenias and fever at any age. There are no any gold standard confirmatory laboratory tests for HLH, which makes it difficult to confirm the disorder in patients. This is due to the fact that laboratory testing can show false negative results and lack specificity, or may take times to perform the tests which are not useful in a clinical emergency."
+      },
+      {
+        "offset": 3558,
+        "section": "INTRO",
+        "text": "The diagnostic criteria for acquired HLH include fever; cytopenias affecting at least 2 of 3 lineages in the peripheral blood; splenomegaly; hyperferritinemia; hemophagocytosis in the bone marrow, spleen, or lymph nodes; hypertriglyceridemia and/or hypofibrinogenemia; low or absent NK-cell activity determined by the 51-Cr release assay; and high levels of sCD25. Five of these eight criteria are essential for diagnosis of acquired HLH, but in familial cases with a known genetic abnormality (FHL with mutations), the diagnosis can be conducted without consideration of these five criteria. Five different forms of FHL have been described based on defects in different genetic material and genes, including chromosome arm 9q mutations (FHL1), PRF1 (FHL2), UNC13D (MUNC13-4) (FHL3), STX11 (FHL4), and STXBP2 (MUNC18-2) (FHL5). To date, several mutations have been reported across exons and exon-intron boundaries of these genes. Therefore, mutation screening for HLH is complicated. However, molecular genetic approaches using next generation sequencing can be very useful in identification of familial cases suspected for HLH. Therefore, the purpose of this study was to identify disease causing mutation in a boy diagnosed with HLH."
+      },
+      {
+        "offset": 4794,
+        "section": "CASE",
+        "text": "Case presentation"
+      },
+      {
+        "offset": 4812,
+        "section": "CASE",
+        "text": "An 8-year-old boy was admitted to the hematology department in Namazi Hospital (Shiraz, Iran) due to clinical findings such as fever, jaundice, hepatosplenomegaly, and pancytopenia. Laboratory studies showed notable abnormal findings related to liver function tests and coagulation profile. He had an increased level of AST, ALT, LDH, total and direct bilirubin, prolonged prothrombin time (PT), and activated partial thromboplastin time (aPTT), serum ferritin (nearly 1000 ng/ml), and low level of fibrinogen, total protein, and albumin. A high titer of Ebstein-Barr virus (EBV) viral capsid antigen IgM antibody proved an acute EBV infection. Serological markers for hepatitis A, B, and C were negative, and antibody titers for autoimmune hepatitis were within normal range. Moreover, Wilson disease was ruled out by measuring serum ceruloplasmin and 24-h urine copper. Liver biopsy and bone marrow aspiration followed by biopsy was inconclusive with non-specific findings. Laboratory tests such as defective killing activity of either CD8 or NK cells, were not available in our center or elsewhere in Iran."
+      },
+      {
+        "offset": 5923,
+        "section": "FIG",
+        "text": " a, b, c and d Axial Flair sequences of brain MRI, which reveal numerous variable size and irregular shape hypersignal areas involving cerebral hemispheres, cerebellar hemispheres, pones and cerebral peduncles, mostly located in the corticomedullary junction and deep white matter in favor of HLH CNS involvement"
+      },
+      {
+        "offset": 6236,
+        "section": "CASE",
+        "text": "The proband was product of consanguineous marriage (first-degree cousins) and there were no any documented HLH disease phenotype, immune disorders, hepatic diseases and blood malignancies in the immediate and extended family. The patient was suspected as a case of HLH according to HLH-2004 protocol given the fact that he fulfilled the necessary criteria mentioned above. He was treated with dexamethasone, cyclopsporin and etoposide, but soon after starting treatment he showed dramatic responses with resolution of fever and correction of hepatitis, pancytopenia and bleeding tendency. Gradually, the patient developed clinical signs of the central nervous system (CNS) involvements such as convulsion, ataxia, spasticity and slurred speech. But cerebral spinal fluid (CSF) analysis for cell count, protein and cytology were normal. Brain MRI with and without contrast injection revealed spots of white matter hypersignal intensities on T2 and FLAIR images which were in favor of CNS involvement in HLH (Fig. 1). Thus, we added intrathecal methotrexate and hydrocortisone to his treatment regimen, and searched for an HLA-matched donor for BM transplantation. "
+      },
+      {
+        "offset": 7401,
+        "section": "TABLE",
+        "text": "Whole exome sequencing detail of coverage and number of reads"
+      },
+      {
+        "offset": 8364,
+        "section": "FIG",
+        "text": "The proband is a boy with hepatitis and pancytopnea and his parents has consanguineous marriage. NGS results indicate homozygous mutation in PRF1 gene in the proband as visualized using Integrative Genome Viewer (IGV) and using Sanger sequencing presence of the identified heterozygous mutation in PRF1 gene was confirmed in the parents"
+      },
+      {
+        "offset": 8701,
+        "section": "TABLE",
+        "text": "Bioinformatic analysis of new identified mutation (p.W374G) in PRF1 gene in the proband"
+      },
+      {
+        "offset": 9266,
+        "section": "FIG",
+        "text": "Comparative amino acids alignment of perforin protein across all Kingdoms. The W374 residue is highly conserved during evolution. The conserved tryptophan residue is shown in the rectangular box. Protein sequences were obtained from National Center for Biotechnology (NCBI). Symbols: (*):identical amino acids; (:) : just similar amino acids"
+      },
+      {
+        "offset": 9612,
+        "section": "CASE",
+        "text": "To determine whether the patient is a case of familial HLH, an unbiased next generation DNA sequencing which covered the entire coding exons was performed for detection of mutation in genes involved in FHL. We performed whole exome sequencing utilizing next generation sequencing on an Illumina platform on DNA sample from the patient. Detail of sample alignment is listed in Table 1. The text files of sequences were aligned using BWA aligner tool and variants were identified using GATK and annotated with the use of annovar software. In total, more than 120 K annotated variants were identified with hetero/homo ratio of 1.7, which then were filtered based on their frequency, location, functional consequences, inheritance pattern and more importantly clinical phenotype. Results revealed a novel homozygous missense mutation in PRF1 gene (NM_001083116: exon3, c.1120 T > G, p.W374G, position 72,358,357 on chromosome 10). Homozygous mutations in PRF1 gene, which is encoded for perforin 1, have been previously reported to cause type-2 of familial HLH, (OMIM number 603553), having an autosomal recessive pattern of inheritance. Using Sanger sequencing, the new identified mutation was confirmed in the proband (as homozygote mutation) and his parents (as heterozygote mutation) (Fig. 2). This mutation has not previously been reported and this is the first report of mutation of PRF1 gene in Iranian patients affected by HLH. Following evidences confirm that this mutation can lead to FHL2: 1-Whole exome sequencing only identified this mutation to be the main cause of FHL2 in the patient. 2- As can be seen in Fig. 2, Sanger sequencing confirmed the mutation in the proband and based on identified heterozygote mutation in his parents, the inheritance pattern must be an autosomal recessive. 3- Bioinformatics software such as polyphen, SIFT, LRT, Mutation Taster, FATHMM, Radial SVM and Mutation Assessor software are predicted that this variant will be damaging (Table 2) 4- As shown in Fig. 3, the comparative amino acids alignment of perforin 1 protein across all Kingdoms using multiple sequence alignment analysis using T-Coffee Multiple Sequence Alignment Program revealed that this amino acid is highly conserved during evolution. 5. In addition, a substitution from tryptophan amino acid with an aromatic side chain (at position 374) to glycine amino acid with a nonpolar and small hydrogen side chain can create major problem in the protein. Thus, this mutation in PRF1 gene is extremely pathogenic in our patient with FHL2.    "
+      },
+      {
+        "offset": 12170,
+        "section": "DISCUSS",
+        "text": "Discussion"
+      },
+      {
+        "offset": 12181,
+        "section": "DISCUSS",
+        "text": " PRF1 which is located on the long arm of the chromosome 10 (10q22.1) is coded for perforin 1 that is functionally and structurally similar to complement component 9 (C9) involved in the complement system. Both proteins produce transmembrane tubules and able to lyse non-specifically various target cells. Perforin 1 is one of the essential cytolytic proteins of cytolytic granules, and it is well recognized to be a major effector molecule for T-cell- and natural killer-cell-mediated cytolysis. It has an important role in killing the \"non-self\" targets recognized by the immune system, for instance, in transplant rejection or some autoimmune diseases. It plays a key role in secretory granule-dependent cell death, and in defense against virus-infected or neoplastic cells. Since the gene product is involved in killing virus-infected cells and it was impaired in our patient, his EBV infection might be due to the defect of this gene."
+      },
+      {
+        "offset": 13121,
+        "section": "DISCUSS",
+        "text": "Mutations and variants in PRF1 gene are also documented in other disorders which include perforin deficiency, multiple sclerosis, type 1 diabetes, Non-Hodgkin lymphoma, and leukemia. Up to now, more than 115 pathogenic gene variants have been reported in this gene, mainly missense and nonsense mutations. In general, severity of the disease depends on the residual activity of the perforin."
+      },
+      {
+        "offset": 13513,
+        "section": "DISCUSS",
+        "text": " PRF1 mutations are responsible for approximately 20% of familial cases of HLH, with high frequencies in North America (approximately 50%), Japan (40%), and Turkey (30%. FHL2 is clinically characterized by fever, edema, hepatosplenomegaly, and liver dysfunction. In addition, neurologic impairment, seizures, and ataxia are frequent in this type. It has been reported that laboratory studies can show pancytopenia, coagulation abnormalities, hypofibrinogenemia, and hypertriglyceridemia. However, with advances in sequencing technologies, the disease is more readily detectable and secondary prevention for families become accessible. Although heterozygous carriers are not apparently sick, they are at risk of passing this deleterious mutation into their offspring. Therefore, PRF1 genetic test must be requested for individuals with abnormalities suspected for HLH and should be offered to family members of known patients who intend to have consanguineous marriage. Since there is a high rate of monogenic disorders in Iran, particularly in rural areas where first-degree marriages are more common, finding and reporting rare novel pathogenic mutations would be extremely important for subsequent prevention of inherited disorders with homozygous pattern of inheritance."
+      },
+      {
+        "offset": 14787,
+        "section": "DISCUSS",
+        "text": "Early molecular diagnosis and initiation of treatment for familial type-2 HLH is lifesaving. In addition to the prevention of new cases of inherited disease in families with consanguineous marriages, identification of novel disease-causing mutations can provide proper molecular diagnosis of HLH, which will help to consider more reliable therapeutic approaches. While there is no cure for the HLH disease, recent advances regarding other monogenic disorders have provided several potential therapeutic options which include gene therapy, cell therapy, enzyme replacement therapy and bone marrow transplant. Symptomatic and supportive treatments for the hepatic and neurological abnormalities are the current available options, but do not significantly change the clinical course and outcome. Allogeneic hematopoietic stem cell transplantation is recommended and frequently used with promising outcomes. Future therapies with the use of patient-derived iatrogenic pluripotent stem cells (iPSCs), combined with CRISPR/CAS9 gene editing techniques might help generate hematopoietic stem cell autograph transplantation."
+      },
+      {
+        "offset": 15904,
+        "section": "DISCUSS",
+        "text": "However, with the limited available therapeutic option for most of the HLH patients, molecular diagnosis might enable geneticists and pediatricians to provide informative genetic counseling, perform prenatal diagnosis, and implement prevention measures for such patients. Therefore, genetic counseling should be recommended to all individuals with HLH disease and families for their next pregnancies and for other family members who want to have consanguineous marriages."
+      },
+      {
+        "offset": 16376,
+        "section": "CONCL",
+        "text": "Conclusions"
+      },
+      {
+        "offset": 16388,
+        "section": "CONCL",
+        "text": "In summary, a rare pathogenic mutation in PRF1 gene was identified in our patient with FHL2 disorder, proving the link between PRF1 gene mutations, hepatitis, neurologic manifestations, and pancytopenia in patients with HLH. Our study may help to establish an appropriate genetic counselling and prenatal diagnosis for individuals at the high risk of HLH disorder."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-97f3ca1243d08fe4",
+    "object": "chat.completion",
+    "created": 1790521704,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0001945\",\"HP:0001433\",\"HP:5210419\",\"HP:0012115\",\"HP:0001250\",\"HP:0001876\",\"HP:0001251\",\"HP:0001744\",\"HP:0003281\",\"HP:0012156\",\"HP:0002155\",\"HP:0011900\",\"HP:0040219\",\"HP:0000952\",\"HP:0008151\",\"HP:0003645\",\"HP:5210421\",\"HP:0002835\",\"HP:0008677\",\"HP:0001892\",\"HP:0011097\",\"HP:0001257\",\"HP:0001350\",\"HP:0002960\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 5144,
+      "total_tokens": 5398,
+      "completion_tokens": 254,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0001945",
+        "HP:0001433",
+        "HP:5210419",
+        "HP:0012115",
+        "HP:0001250",
+        "HP:0001876",
+        "HP:0001251",
+        "HP:0001744",
+        "HP:0003281",
+        "HP:0012156",
+        "HP:0002155",
+        "HP:0011900",
+        "HP:0040219",
+        "HP:0000952",
+        "HP:0008151",
+        "HP:0003645",
+        "HP:5210421",
+        "HP:0002835",
+        "HP:0008677",
+        "HP:0001892",
+        "HP:0011097",
+        "HP:0001257",
+        "HP:0001350",
+        "HP:0002960"
+      ]
+    }
+  ],
+  "elapsed_seconds": 4.594,
+  "usage": {
+    "prompt_tokens": 5144,
+    "total_tokens": 5398,
+    "completion_tokens": 254,
+    "prompt_tokens_details": null
+  }
+}

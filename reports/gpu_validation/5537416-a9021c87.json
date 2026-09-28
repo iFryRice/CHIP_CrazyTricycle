@@ -1,0 +1,457 @@
+{
+  "pmc_id": "5537416",
+  "identity": "94b7eef1c5fb82d4ffcd33de111173131076486f3b93b35f6a525aff158fbced",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 17566,
+    "covered_source_characters": 17566,
+    "source_is_excerpted": false,
+    "candidate_windows": 16,
+    "selected_windows": 16,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 22353,
+    "candidate_concepts": 46,
+    "patient_count": 2
+  },
+  "prompt": {
+    "pmc_id": "5537416",
+    "patients": [
+      {
+        "patient_id": "O1",
+        "mentions": [
+          {
+            "text": "Patient 1",
+            "offset": 2181
+          },
+          {
+            "text": "She",
+            "offset": 3124
+          },
+          {
+            "text": "She",
+            "offset": 4316
+          },
+          {
+            "text": "Patient 1",
+            "offset": 6108
+          },
+          {
+            "text": "patient 1",
+            "offset": 6947
+          },
+          {
+            "text": "patient 1",
+            "offset": 13305
+          }
+        ]
+      },
+      {
+        "patient_id": "O2",
+        "mentions": [
+          {
+            "text": "Patient 2",
+            "offset": 4701
+          },
+          {
+            "text": "patient",
+            "offset": 4981
+          },
+          {
+            "text": "patient 2",
+            "offset": 13421
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0100255": [
+        "metaphyseal dysplasia"
+      ],
+      "HP:0004565": [
+        "severe platyspondyly"
+      ],
+      "HP:0002751": [
+        "kyphoscoliosis"
+      ],
+      "HP:0001156": [
+        "brachydactyly"
+      ],
+      "HP:0002176": [
+        "spinal cord compression",
+        "Spinal cord compression"
+      ],
+      "HP:0001407": [
+        "liver cysts",
+        "liver cyst"
+      ],
+      "HP:0004430": [
+        "severe immunodeficiency",
+        "severe immune deficiency"
+      ],
+      "HP:0001561": [
+        "polyhydramnios"
+      ],
+      "HP:0002904": [
+        "hyperbilirubinemia"
+      ],
+      "HP:0001270": [
+        "delayed motor development"
+      ],
+      "HP:0000924": [
+        "skeletal abnormalities"
+      ],
+      "HP:0004484": [
+        "craniofacial features",
+        "craniofacial dysmorphism"
+      ],
+      "HP:0002007": [
+        "frontal bossing"
+      ],
+      "HP:0000520": [
+        "prominent eyes"
+      ],
+      "HP:0005280": [
+        "depressed nasal bridge"
+      ],
+      "HP:0003196": [
+        "short nose"
+      ],
+      "HP:0000463": [
+        "anteverted nostrils"
+      ],
+      "HP:0005306": [
+        "capillary hemangioma"
+      ],
+      "HP:0000347": [
+        "micrognathia"
+      ],
+      "HP:0005619": [
+        "thoracolumbar kyphosis"
+      ],
+      "HP:0003307": [
+        "lordosis"
+      ],
+      "HP:0000960": [
+        "sacral dimple"
+      ],
+      "HP:0009826": [
+        "short limbs",
+        "short limb"
+      ],
+      "HP:0008936": [
+        "axial hypotonia"
+      ],
+      "HP:0025406": [
+        "weakness"
+      ],
+      "HP:0007759": [
+        "corneas"
+      ],
+      "HP:0031500": [
+        "mass"
+      ],
+      "HP:0002240": [
+        "enlarged liver"
+      ],
+      "HP:0100865": [
+        "broad ischia"
+      ],
+      "HP:0002719": [
+        "recurrent episodes",
+        "susceptibility to infection"
+      ],
+      "HP:0006532": [
+        "pulmonary infection"
+      ],
+      "HP:0000670": [
+        "dental caries"
+      ],
+      "HP:0002652": [
+        "skeletal dysplasia"
+      ],
+      "HP:0003423": [
+        "thoracolumbar kyphoscoliosis"
+      ],
+      "HP:0002194": [
+        "delayed gross motor development"
+      ],
+      "HP:0001634": [
+        "mitral valve prolapse"
+      ],
+      "HP:0033715": [
+        "HS"
+      ],
+      "HP:0002527": [
+        "falls"
+      ],
+      "HP:0002657": [
+        "spondylometaphyseal dysplasia"
+      ],
+      "HP:0000926": [
+        "platyspondyly"
+      ],
+      "HP:0001289": [
+        "confusion"
+      ],
+      "HP:0000707": [
+        "neurological disorders"
+      ],
+      "HP:0002721": [
+        "immune deficiency",
+        "immunodeficiency"
+      ],
+      "HP:0002958": [
+        "immune dysregulation"
+      ],
+      "HP:0040064": [
+        "malformations"
+      ],
+      "HP:0002808": [
+        "kyphosis"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "O1",
+        "phenotype": [
+          "HP:0004565",
+          "HP:0001156",
+          "HP:0002176",
+          "HP:0004430",
+          "HP:0001561",
+          "HP:0002904",
+          "HP:0001270",
+          "HP:0000924",
+          "HP:0004484",
+          "HP:0002007",
+          "HP:0000520",
+          "HP:0005280",
+          "HP:0003196",
+          "HP:0000463",
+          "HP:0005306",
+          "HP:0000347",
+          "HP:0005619",
+          "HP:0003307",
+          "HP:0000960",
+          "HP:0009826",
+          "HP:0008936",
+          "HP:0025406",
+          "HP:0007759",
+          "HP:0031500",
+          "HP:0002240",
+          "HP:0100865",
+          "HP:0002719",
+          "HP:0006532",
+          "HP:0000670",
+          "HP:0002652",
+          "HP:0002808"
+        ]
+      },
+      {
+        "patient_id": "O2",
+        "phenotype": [
+          "HP:0001156",
+          "HP:0002176",
+          "HP:0004484",
+          "HP:0002007",
+          "HP:0000520",
+          "HP:0005280",
+          "HP:0003196",
+          "HP:0000347",
+          "HP:0009826",
+          "HP:0002652",
+          "HP:0003423",
+          "HP:0002194",
+          "HP:0001634",
+          "HP:0002721",
+          "HP:0002958"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Identification of biallelic EXTL3 mutations in a novel type of spondylo-epi-metaphyseal dysplasia"
+      },
+      {
+        "offset": 98,
+        "section": "ABSTRACT",
+        "text": "Spondylo-epi-metaphyseal dysplasia (SEMD) is a group of inherited skeletal diseases characterized by the anomalies in spine, epiphyses and metaphyses. SEMD is highly heterogeneous and >20 distinct entities have been identified. Here we describe a novel type of SEMD in two unrelated Turkish patients who presented with severe platyspondyly, kyphoscoliosis, pelvic distortion, constriction of the proximal femora and brachydactyly. Although these phenotypes overlap considerably with some known SEMDs, they had a novel causal gene, exostosin-like glycosyltransferase 3 (EXTL3), that encodes a glycosyltransferase involved in the synthesis of heparin and heparan sulfate. The EXTL3 mutation identified in the patients was a homozygous missense mutation (c.953C>T) that caused a substitution in a highly conserved amino acid (p.P318L). The enzyme activity of the mutant EXTL3 protein was significantly decreased compared to the wild-type protein. Both patients had spinal cord compression at the cranio-vertebral junction and multiple liver cysts since early infancy. One of the patients showed severe immunodeficiency, which is considered non-fortuitous association. Our findings would help define a novel type of SEMD caused by EXTL3 mutations."
+      },
+      {
+        "offset": 1342,
+        "section": "INTRO",
+        "text": "Spondylo-epi-metaphyseal dysplasia (SEMD) stands for a group of osteochondrodysplasia that includes various diseases with vertebral, epiphyseal and metaphyseal anomalies. SEMDs are known to be caused by mutations in a variety of genes with diverse functions, including cartilage extracellular matrix protein (COL2A1, MIM 120140), biochemical catalysts (INPPL1, MIM 600829), ion channels (TRPV4, MIM 605427), chromatin regulators (SMARCAL1, MIM 606622), transcription initiation factor kinase (EIF2AK3, MIM 604032), receptor tyrosine kinase (DDR2, MIM 191311), transporter (SLC35D1, MIM 610804), mitochondrial matrix protein (LONP1, MIM 605490), lysosomal hydrolase for glycoconjugates degradation (GLB1, MIM 611458) and connective tissue growth factors (WISP3, MIM 603400)."
+      },
+      {
+        "offset": 2116,
+        "section": "INTRO",
+        "text": "We found a novel type of SEMD in two unrelated Turkish patients. Patient 1 is a Turkish girl, the only child of healthy non-consanguineous parents who originated from neighboring villages (Supplementary Figure S1A). Family history was unremarkable. Her prenatal evaluation was normal except for polyhydramnios noted at the late third trimester. She was vaginally delivered at 38th week of gestation; her length was 50 cm and weight 3500 g. She had mild hyperbilirubinemia in the neonatal period. At age 8.5 months, she was consulted to our pediatric genetic clinic for evaluation of her delayed motor development and skeletal abnormalities. Her height was 67 cm (3rd percentile), weight 6900 g (3rd percentile) and occipito-frontal circumference (OFC) 44 cm (50th percentile). The craniofacial features included frontal bossing, prominent eyes, depressed nasal bridge, short nose with anteverted nostrils, capillary hemangioma over the left zygoma, minimal gingival hypertrophy and micrognathia (Figure 1a). She had thoracolumbar kyphosis, exaggerated lumbosacral lordosis with a deep sacral dimple, short limbs and severe brachydactyly with a trident appearance of the hand (Figure 1b). She had mild neurocognitive defect. She did not gain head control and showed severe axial hypotonia and weakness of the legs with diminished tendon reflexes. The arms were rigid with restriction of the elbow joint movement. Ophthalmological examination was normal with transparent corneas. Hearing tests were normal. Routine laboratory examinations, urine organic acid analysis, tandem mass screening, chromosome analysis and electroencephalogram were unremarkable. Abdominal ultrasonography demonstrated enlarged liver with a few cystic lesions. Screening of urine glycosaminoglycan (GAG) and lysosomal enzymes yielded normal results. Her skeletal survey showed broad thorax, severe platyspondyly with thoracolumbar kyphosis, broad ilia with short greater notches, and broad ischia and pubes as well as metaphyseal broadening of the long tubular bones and severe brachydactyly (Figures 1c-f). Magnetic resonance imaging revealed canal stenosis and cord compression at the cranio-vertebral junction (Figure 1g). She received an excision of the C1 arch for the cord compression with good outcome. During follow-up, she showed recurrent episodes of pulmonary infection and susceptibility to dental caries. Immunological examination showed decrease of T-lymphocyte subset, IgG and IgM. Currently, she is 2 years old and has been treated with monthly intravenous immunoglobulin injection."
+      },
+      {
+        "offset": 4701,
+        "section": "INTRO",
+        "text": "Patient 2 is a Turkish girl of healthy first-cousin parents (Supplementary Figure S1B). She is the only child of the couple but the mother had three healthy children and experienced a spontaneous miscarriage in previous marriage. The family history is otherwise unremarkable. The patient was vaginally delivered after uneventful pregnancy. Her birth length was 51 cm, weight 3600 g and OFC 35 cm. She was found to have skeletal dysplasia and cord compression at the cranio-vertebral junction (Figure 2) and underwent decompression surgery at age 7 months. She came to us for evaluation of skeletal dysplasia at age 8 months. Her height was 62 cm (<3 percentile), weight 7800 g (25-50 percentile) and OFC 44 cm (25-50 percentile). She showed craniofacial dysmorphism, including frontal bossing, prominent eyes, depressed nasal bridge, short nose and micrognathia (Figure 2a). She had oral candidiasis. Teeth were normal. She had thoracolumbar kyphoscoliosis, short limbs and severe brachydactyly (Figure 2b). Denver developmental test showed delayed gross motor development. Ophthalmological and hearing examinations were normal. Echocardiography showed mitral valve prolapse. Abdominal ultrasonography demonstrated a few anechoic cysts in the liver. Laboratory examination, urine GAG screening and leukocyte lysosomal enzyme screening were normal. Her skeletal survey showed identical changes with those of Patient 1 (Figures 2d-h). She is currently 3 years old. Her height has been below 3rd percentile, whereas weight and OFC were of the normal range. She is able to crawl only. She has not shown susceptibility to infection."
+      },
+      {
+        "offset": 6347,
+        "section": "INTRO",
+        "text": "Although their phenotypes overlap considerably with some forms of SEMD, such as odontchondrodysplasia (MIM 184260), opsismodysplasia (MIM 258480) and Schneckenbecken dysplasia (MIM 269250), the known causal genes of for these SEMDs were not found in the patients. Therefore, we examined them by whole-exome sequencing (WES). The study protocol was approved by the ethical committee of RIKEN and participating institutions. Peripheral blood was obtained from the family members after the informed consent. Genomic DNA was extracted and the WES was performed in the two patients and the parents of the patient 1 as previously described (Supplementary Method). We obtained 2.2, 2.4, 2.6 and 2.3 Gb sequences, respectively. The sequences were successfully mapped to human RefSeq. At least 97.1% of all coding regions were covered in a depth of 10 reads (Supplementary Table S1). The analysis pipeline identified a homozygous missense variant (NM_001440: c.953C>T) in exon 3 of EXTL3 in both patients (Supplementary Figure S2; Supplementary Tables S3 and 4). Mutations in the genes of the known skeletal dysplasia were not identified in the data set. The EXTL3 variant was not deposited in any available databases, including dbSNP (http://www.ncbi.nlm.nih.gov/projects/SNP/), 1000 genomes (http://www.1000genomes.org/), ExAC (http://exac.broadinstitute.org/), ESP6500 (http://evs.gs.washington.edu/EVS/) and Human Gene Mutation Database (HGMD: https://portal.biobase-international.com/hgmd/pro/start.php). By Sanger sequencing, we confirmed that the variant was heterozygous in their parents in both families (Figure 3a). Homozygosity mapping using the WES data showed that EXTL3 was residing in 6.7 and 24.2 Mb homozygous stretches on chromosome 8 of patient 1 and 2, respectively (Supplementary Table S2). The two homozygous stretches had the common 0.8 Mb homozygous region that contained EXTL3 (Supplementary Figure S3), suggesting the presence of the common founder for the mutation."
+      },
+      {
+        "offset": 8337,
+        "section": "INTRO",
+        "text": "EXTL3 encodes N-acetylglucosaminyltransferase-I (GlcNAcT-I) and GlcNAcT-II, which transfers N-acetylglucosamine (GlcNAc) from uridine diphosphate-GlcNAc (UDP-GlcNAc) to the linkage region of heparan sulfate (HS) and heparin, and to the glucuronic acid (GlcUA) of growing glycan chains, respectively (Supplementary Figure S4). The substituted residue (p.P318L) in EXTL3 is highly conserved among diverse species (Supplementary Figure S5)."
+      },
+      {
+        "offset": 8775,
+        "section": "INTRO",
+        "text": "To investigate whether the EXTL3 missense variant affects the enzyme function, we examined the GlcNAc transferase activities of the variant. The expression vector of human EXTL3 (wild-type), p3xFLAG-CMV8/hEXTL3, was constructed as described previously, and the mutant vector was constructed using the KOD-Plus-Mutagenesis kit (TOYOBO, Osaka, Japan) and Inverse PCR. Each vector was transiently transfected into HEK293 T cells (RIKEN Cell Bank, Tsukuba, Japan). Aliquots of the conditioned media were incubated with an anti-FLAG affinity agarose resin (Wako, Osaka, Japan) and the expression of recombinant enzymes was examined by SDS-polyacrylamide gel electrophoresis and western blotting (Figure 3b). The expression level of the mutant enzyme, p.P318L-EXTL3, in the conditioned medium was considerably lower than that of the wild-type enzyme (data not shown). This observation suggests that the mutation of p.P318L may affect the secretion of the recombinant EXTL3 in our overexpression system. The conditioned medium from the p.P318L-EXTL3-expressing 293 T cells was collected and used for the assay. Western blotting analysis showed comparable amounts of the wild-type and mutant proteins (Figure 3b). GlcNAc transferase activity was examined using the cell-free recombinant EXTL3 in vitro as previously described. The activity of the recombinant p.P318L-EXTL3 proteins was significantly decreased compared with that of the wild-type EXTL3 (Figure 3c), indicating that the missense variant is a mutation causing a loss of enzyme activity."
+      },
+      {
+        "offset": 10320,
+        "section": "INTRO",
+        "text": "From the radiographic features of the two patients, the disease falls into a group of severe SEMD: this heterogeneous group of skeletal dysplasia includes lethal disorders such as achondrogenesis type 1A (MIM 200600), spondylometaphyseal dysplasia Sedaghatian type (MIM 250220), and Schneckenbecken dysplasia and non-lethal disorders such as SEMD short limb-calcification type (MIM 271665), odontochondrodysplasia, spondylometaphyseal dysplasia MAGMAS type (MIM 613320) and opsismpdysplasia. In particular, the patients may be mistaken for opsismodysplasia and odontochondrodysplasia because of their non-lethality, extreme platyspondyly and severe brachydactyly. The significant phenotypic overlap among this group of skeletal dysplasia despite the pathogenic diversity as well as significant phenotypic variations among allelic conditions cause nosological confusion and misdiagnosis. Therefore, molecular analyses are important to their diagnosis."
+      },
+      {
+        "offset": 11271,
+        "section": "INTRO",
+        "text": "Both patients had spinal cord compression at the cranio-vertebral junction, which caused serious neurological disorders in early infancy. The complication should be recognized because its early detection followed by appropriate surgical treatment is a key to good prognosis. Both patients also had multiple liver cysts in infancy. Because of its rarity in infants, the association of the liver cyst seems not fortuitous; however, further characterization of the disorder is necessary to determine its clinical significance and the relation to the mutation."
+      },
+      {
+        "offset": 11828,
+        "section": "INTRO",
+        "text": "Exlt3 knockout mice (Exlt3-/-) are embryonic lethal at 9 days post coitum when the differentiated skeletal elements are not formed. HS-derived disaccharides were not detected in Exlt3-/- embryos, demonstrating that the loss of function of Extl3 induces defective HS synthesis. The extl3 mutant of zebrafish shows defective cartilage development accompanying shortened body axis, and shorter pectoral fin, mimicking platyspondyly and brachydactyly, respectively, observed in patients with EXTL3 mutations. Although the exact mechanism of skeletal dysplasia caused by the EXTL3 mutation remains unknown, HS proteoglycans (HS-PGs) synthesized by a series of glycosyltransferases including EXTL3 have been reported to play important roles in skeletal development. Growth plate chondrocytes express both cell surface and matrix-associated HS-PGs, including perlecan, syndecan-3 and glypicans-5. These HS-PGs regulate distribution, action range and effects of the growth factors directing skeletal development. HS-PG maintains the solubility of Wnt ligands and stabilizes their activity by directly binding to the ligands at the surface of mesenchymal stem cells fated to differentiate into chondrocytes. HS also acts as a fibroblast growth factor (FGF) co-receptor, which regulates the response of chondrocytes to FGF stimulation. Moreover, HS chain disruption enhances BMP2 bioactivity and increases pSmad1/5/8 signaling in human mesenchymal stem cells."
+      },
+      {
+        "offset": 13286,
+        "section": "INTRO",
+        "text": "It is of note that patient 1 had severe immune deficiency including the decrease of T-lymphocyte subsets and immunoglobulins. Although patient 2 did not present overt immune deficiency, she had oral candidiasis, a fungal infection often found in immune-deficient patients. Not a few skeletal dysplasia associate immune deficiency, which are collectively called as immune-osseous dysplasia. The list includes Schimke immuno-osseous dysplasia (MIM 242900), cartilage-hair hypoplasia (MIM 250250) and spondyloenchondrodysplasia with immune dysregulation (MIM 607944), which are caused by mutations in SMARCAL1 (MIM 606622), RMRP (MIM 157660) and ACP5 (MIM 171640), respectively."
+      },
+      {
+        "offset": 13964,
+        "section": "INTRO",
+        "text": "While we are preparing the manuscript, EXTL3 mutations have been reported in some patients with similar phenotypes by two groups. Including our study, all of the 14 patients with six types of missense mutations in EXTL3 showed various degree of SEMD. Spinal cord compression at the cranio-vertebral junction is observed in both patients in our study. The similar cervical malformations are reported in other six patients with EXTL3 mutations. In contrast to the anomalies in skeleton, the presence or absence of immunodeficiency are highly variable. Nine of 14 patients presented severe immunodeficiency; the rest seemed normal in immune system. Interestingly, the same mutation p.P461L was associated with immunodeficiency in some patients but not in others. Similarly in our two cases, one developed severe immunodeficiency, but the other did not, although they shared the same mutation p.P318L. Thus, the phenotypic difference in immune system cannot be explained simply by the different position of the mutations in EXTL3. Other genetic modifiers or environmental factors may play crucial roles in triggering immunodeficiency in these patients bearing EXTL3 mutations. In addition, both patients in our study showed multiple liver cysts since early infancy, which were also reported in other four patients with EXTL3 mutations. Thus, except for SEMD, the phenotypic variability seems very high in the disease caused by EXTL3. Further study and more cases are necessary to explore its genotype-phenotype relationship."
+      },
+      {
+        "offset": 18504,
+        "section": "FIG",
+        "text": "Patient 1. (a, b) Clinical pictures at age 5 months. Note frontal bossing, prominent eye, depressed nasal bridge, micrognathia and severe brachydactyly. (c-f) Radiographs at age 5 months. Note broad thorax, severe platyspondyly with kyphosis at the thoracolumbar junction, broad ilia with short greater notches, broad ischia and pubes, broad metaphyses of the long tubular bones, and severe brachydactyly. (g) Spinal magnetic resonance imaging at age 8 months prior to surgery showing spinal cord compression at the cranio-vertebral junction. A full color version of this figure is available at the Journal of Human Genetics journal online."
+      },
+      {
+        "offset": 19147,
+        "section": "FIG",
+        "text": "Patient 2. (a, b) Clinical pictures at age 8 months showing skeletal disorders. (c) Spinal magnetic resonance imaging at age 5 months showing spinal cord compression at the cranio-vertebral junction. (d-h) Radiographs of the skeleton at age 9 months (d, e) and age 17 months (f-h). The skeletal changes are identical with those of patient 1; however, brachydactyly is more severe and metaphyseal deformities are more conspicuous. A full color version of this figure is available at the Journal of Human Genetics journal online."
+      },
+      {
+        "offset": 19679,
+        "section": "FIG",
+        "text": "EXTL3 mutation. (a) Electropherograms of Sanger sequence of family 1. A homozygous mutation (c.953C>T; p.P318L) is found in the patients (II-1); the parents (I-1 and I-2) are heterozygous for the mutation. (b) Western blotting of the conditioned medium from the cells transfected with the wild-type (WT) and mutant (P318L) EXTL3 showing comparable amounts of the recombinant EXTL3 proteins (arrow). (c) Glycosyltransferase assay of the purified recombinant EXTL3s using UDP-[3H]GlcNAc as the donor substrate and heparin sulfate (HS) as the acceptor substrate. GlcNAc transferase activity was determined by incorporation of [3H]GlcNAc into the non-reducing end of GlcUA residue in HS. Mock: without expression vector. GlcNAc transferase activity of the mutant was significantly reduced. Values were mean+-s.e. (n=3). *P<0.005 versus WT was calculated using the Student's t-test. A full color version of this figure is available at the Journal of Human Genetics journal online."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-a04319694e48789f",
+    "object": "chat.completion",
+    "created": 1790522375,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"association\": [\n    {\n      \"patient_id\": \"O1\",\n      \"phenotype\": [\n        \"HP:0004565\",\n        \"HP:0001156\",\n        \"HP:0002176\",\n        \"HP:0004430\",\n        \"HP:0001561\",\n        \"HP:0002904\",\n        \"HP:0001270\",\n        \"HP:0000924\",\n        \"HP:0004484\",\n        \"HP:0002007\",\n        \"HP:0000520\",\n        \"HP:0005280\",\n        \"HP:0003196\",\n        \"HP:0000463\",\n        \"HP:0005306\",\n        \"HP:0000347\",\n        \"HP:0005619\",\n        \"HP:0003307\",\n        \"HP:0000960\",\n        \"HP:0009826\",\n        \"HP:0008936\",\n        \"HP:0025406\",\n        \"HP:0007759\",\n        \"HP:0031500\",\n        \"HP:0002240\",\n        \"HP:0100865\",\n        \"HP:0002719\",\n        \"HP:0006532\",\n        \"HP:0000670\",\n        \"HP:0002652\"\n      ]\n    },\n    {\n      \"patient_id\": \"O2\",\n      \"phenotype\": [\n        \"HP:0001156\",\n        \"HP:0002176\",\n        \"HP:0004484\",\n        \"HP:0002007\",\n        \"HP:0000520\",\n        \"HP:0005280\",\n        \"HP:0003196\",\n        \"HP:0000347\",\n        \"HP:0009826\",\n        \"HP:0002652\",\n        \"HP:0003423\",\n        \"HP:0002194\",\n        \"HP:0001634\",\n        \"HP:0002721\",\n        \"HP:0002958\"\n      ]\n    }\n  ]\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 6241,
+      "total_tokens": 6833,
+      "completion_tokens": 592,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "O1",
+      "phenotype": [
+        "HP:0004565",
+        "HP:0001156",
+        "HP:0002176",
+        "HP:0004430",
+        "HP:0001561",
+        "HP:0002904",
+        "HP:0001270",
+        "HP:0000924",
+        "HP:0004484",
+        "HP:0002007",
+        "HP:0000520",
+        "HP:0005280",
+        "HP:0003196",
+        "HP:0000463",
+        "HP:0005306",
+        "HP:0000347",
+        "HP:0005619",
+        "HP:0003307",
+        "HP:0000960",
+        "HP:0009826",
+        "HP:0008936",
+        "HP:0025406",
+        "HP:0007759",
+        "HP:0031500",
+        "HP:0002240",
+        "HP:0100865",
+        "HP:0002719",
+        "HP:0006532",
+        "HP:0000670",
+        "HP:0002652"
+      ]
+    },
+    {
+      "patient_id": "O2",
+      "phenotype": [
+        "HP:0001156",
+        "HP:0002176",
+        "HP:0004484",
+        "HP:0002007",
+        "HP:0000520",
+        "HP:0005280",
+        "HP:0003196",
+        "HP:0000347",
+        "HP:0009826",
+        "HP:0002652",
+        "HP:0003423",
+        "HP:0002194",
+        "HP:0001634",
+        "HP:0002721",
+        "HP:0002958"
+      ]
+    }
+  ],
+  "elapsed_seconds": 29.828,
+  "usage": {
+    "prompt_tokens": 6241,
+    "total_tokens": 6833,
+    "completion_tokens": 592,
+    "prompt_tokens_details": null
+  }
+}

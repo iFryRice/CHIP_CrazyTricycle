@@ -1,0 +1,495 @@
+{
+  "pmc_id": "6133598",
+  "identity": "11701ac2a86c8d8c03860e9673d1f7af5414c977c0c140636921dbd67403462c",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 15359,
+    "covered_source_characters": 15359,
+    "source_is_excerpted": false,
+    "candidate_windows": 40,
+    "selected_windows": 40,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 19922,
+    "candidate_concepts": 15,
+    "patient_count": 6
+  },
+  "prompt": {
+    "pmc_id": "6133598",
+    "patients": [
+      {
+        "patient_id": "OII:1",
+        "mentions": [
+          {
+            "text": "II:1",
+            "offset": 8679
+          }
+        ]
+      },
+      {
+        "patient_id": "OIII:1",
+        "mentions": [
+          {
+            "text": "III:1",
+            "offset": 8645
+          }
+        ]
+      },
+      {
+        "patient_id": "OIII:5",
+        "mentions": [
+          {
+            "text": "III:5",
+            "offset": 8621
+          }
+        ]
+      },
+      {
+        "patient_id": "OIII:6",
+        "mentions": [
+          {
+            "text": "III:6",
+            "offset": 8598
+          }
+        ]
+      },
+      {
+        "patient_id": "OIV:4",
+        "mentions": [
+          {
+            "text": "IV:3",
+            "offset": 8577
+          },
+          {
+            "text": "IV:4",
+            "offset": 8583
+          }
+        ]
+      },
+      {
+        "patient_id": "OIV:5",
+        "mentions": [
+          {
+            "text": "man",
+            "offset": 5996
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0000548": [
+        "cone-rod dystrophy",
+        "Cone-rod dystrophy",
+        "CORD"
+      ],
+      "HP:0000613": [
+        "photophobia"
+      ],
+      "HP:0000662": [
+        "night blindness"
+      ],
+      "HP:0000639": [
+        "nystagmus"
+      ],
+      "HP:0001000": [
+        "pigmentation"
+      ],
+      "HP:0001105": [
+        "retinal atrophy"
+      ],
+      "HP:0000479": [
+        "retinal disease",
+        "Retinal diseases"
+      ],
+      "HP:0000572": [
+        "vision loss"
+      ],
+      "HP:0000505": [
+        "impaired vision"
+      ],
+      "HP:0007814": [
+        "retinal pigment epithelium",
+        "RPE"
+      ],
+      "HP:0011503": [
+        "absent fovea"
+      ],
+      "HP:0031609": [
+        "geographic atrophy"
+      ],
+      "HP:0001249": [
+        "ID"
+      ],
+      "HP:0000510": [
+        "retinitis pigmentosa",
+        "RP"
+      ],
+      "HP:0007875": [
+        "congenital amaurosis"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "OII:1",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OIII:1",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OIII:5",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OIII:6",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OIV:4",
+        "phenotype": [
+          "HP:0000548",
+          "HP:0000613",
+          "HP:0000662",
+          "HP:0000572",
+          "HP:0007814",
+          "HP:0031609"
+        ]
+      },
+      {
+        "patient_id": "OIV:5",
+        "phenotype": [
+          "HP:0000548",
+          "HP:0000613",
+          "HP:0000662",
+          "HP:0000479",
+          "HP:0000572",
+          "HP:0000505",
+          "HP:0007814",
+          "HP:0011503",
+          "HP:0031609",
+          "HP:0001249"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "A novel CRX frameshift mutation causing cone-rod dystrophy in a Chinese family"
+      },
+      {
+        "offset": 79,
+        "section": "ABSTRACT",
+        "text": "Supplemental Digital Content is available in the text"
+      },
+      {
+        "offset": 133,
+        "section": "ABSTRACT",
+        "text": "Abstract"
+      },
+      {
+        "offset": 142,
+        "section": "ABSTRACT",
+        "text": "Background:"
+      },
+      {
+        "offset": 154,
+        "section": "ABSTRACT",
+        "text": "Cone-rod dystrophy (CORD) is an inherited, progressive retinal disorder with genetic and phenotypic heterogeneity. Here, we aimed to identify the pathogenic mutation in affected individuals in a Chinese family with autosomal dominant cone-rod dystrophy (adCORD)."
+      },
+      {
+        "offset": 417,
+        "section": "ABSTRACT",
+        "text": "Methods:"
+      },
+      {
+        "offset": 426,
+        "section": "ABSTRACT",
+        "text": "Genomic DNA and clinical examination results were collected from a Chinese family presenting with adCORD. The candidate disease-causing mutations were screened with whole-exome sequencing (WES) and bioinformatics analyses. Sanger sequencing was used for validation and cosegregation analysis."
+      },
+      {
+        "offset": 719,
+        "section": "ABSTRACT",
+        "text": "Results:"
+      },
+      {
+        "offset": 728,
+        "section": "ABSTRACT",
+        "text": "A novel frameshift mutation (NM_000554.4; c.538dupG:p.Val180fs) in exon 4 of the CRX gene was identified in all affected individuals in the Chinese family with adCORD. Cosegregation analysis confirmed that this mutation was cosegregated with the disease. This variant, which results in premature termination of the protein, was absent from all public variant databases or internal exome databases."
+      },
+      {
+        "offset": 1126,
+        "section": "ABSTRACT",
+        "text": "Conclusions:"
+      },
+      {
+        "offset": 1139,
+        "section": "ABSTRACT",
+        "text": "We used whole-exome sequencing to identify a novel CRX mutation causing adCORD in a Chinese family. This study broadens the known pathogenic mutation spectrum of the CRX gene and shows the potential of WES in identifying the pathogenic mutations of CORD disease."
+      },
+      {
+        "offset": 1402,
+        "section": "INTRO",
+        "text": "Introduction"
+      },
+      {
+        "offset": 1415,
+        "section": "INTRO",
+        "text": "Cone-rod dystrophy (CORD) is an inherited, progressive retinal disorder with a prevalence of approximately 1 in 40,000. The predominant symptoms include progressively declining visual acuity, photophobia, color vision disturbances and night blindness, and nystagmus is often present. Electroretinogram (ERG) shows cone photoreceptor dysfunction or loss at an early stage, later followed by rod photoreceptor disorder. Fundus examination reveals retinal pigmentation and various degrees of retinal atrophy. CORD is genetically and phenotypically heterogeneous and is transmitted through 3 forms of inheritance: autosomal dominant (AD), autosomal recessive (AR), and X-linked (XL) inheritance. At present, >30 genes are reported to be associated with cone and cone-rod dystrophy in the RetNet database (http://www.sph.uth.tmc.edu/retnet/). No therapies are yet available to treat these diseases."
+      },
+      {
+        "offset": 2309,
+        "section": "INTRO",
+        "text": "Here, we report a 4-generation Chinese family of 8 patients with adCORD. We used whole-exome sequencing (WES) to identify the pathogenic mutations in these affected individuals and discovered a novel mutation in the CRX gene."
+      },
+      {
+        "offset": 2535,
+        "section": "METHODS",
+        "text": "Methods"
+      },
+      {
+        "offset": 2543,
+        "section": "METHODS",
+        "text": "Subjects and examinations"
+      },
+      {
+        "offset": 2569,
+        "section": "METHODS",
+        "text": "This research project was approved by the ethics committee of the National Research Institute for Family Planning. Written informed consent adhered to the tenets of the Declaration of Helsinki and the ARVO statement on the use of human subjects."
+      },
+      {
+        "offset": 2815,
+        "section": "METHODS",
+        "text": "A 4-generation Chinese family including 8 affected individuals was enrolled in this study (Fig. 1). All ophthalmic examinations, including visual acuity, fundus examination, fluorescein fundus angiography (FFA), optical coherence tomography (OCT), visual field examination, and full field electroretinography (F-ERG), were performed at the Maternal and Child Health Hospital, Haidian, Beijing, where the diagnosis was made."
+      },
+      {
+        "offset": 3239,
+        "section": "FIG",
+        "text": "Pedigree of a 4-generation Chinese family with autosomal dominant cone-rod dystrophy. Square: male, circle: female, filled symbol: patient, unfilled symbol: unaffected member, slash: deceased, black arrow: the proband, plus: normal allele, minus: mutant allele, question marks: members whose genotype could not be examined."
+      },
+      {
+        "offset": 3563,
+        "section": "METHODS",
+        "text": "Whole-exome sequencing and variant analyses"
+      },
+      {
+        "offset": 3607,
+        "section": "METHODS",
+        "text": "Peripheral venous blood was collected from 10 participants and genomic DNA was extracted with the QIAamp DNA Blood Mini Kit (QIAGEN, Hilden, Germany). The DNA concentrations were measured with a NanoDrop 2000 (Thermo Fisher Scientific, Waltham, MA). WES was performed by a commercial company, Macrogen (Shenzhen, China). Briefly, all exons were captured with the SureSelect Human All Exon V5 Kit (Agilent, Santa Clara, CA) and the enriched DNA fragments were sequenced with a HiSeq 4000 sequencer (Illumina, San Diego, CA). The Burrows-Wheeler Alignment (BWA, http://bio-bwa.sourceforge.net/bwa.shtml) algorithm was used to align the sequencing reads against the human reference genome. The Genome Analysis Toolkit (GATK, https://www.broadinstitute.org/gatk/) was used to call variants such as single nucleotide variants (SNVs) and indels. SnpEff (http://snpeff.sourceforge.net/SnpEff.html) was then used to annotate the variants and predict their functional effects."
+      },
+      {
+        "offset": 4575,
+        "section": "METHODS",
+        "text": "The candidate pathogenic variants were filtered as follows: the exonic non-synonymous mutations in known retinal disease-causing genes in the RetNet database were extracted from the WES results, including the missense, nonsense, frameshift, and splice-site mutations; and mutations with a minor allele frequency (MAF) >=0.01 in the 1000 Genomes (https://www.ncbi.nlm.nih.gov/variation/tools/1000genomes/), ESP6500 (http://evs.gs.washington.edu/EVS/), and ExAC (http://exac.broadinstitute.org/) databases were excluded. The impact of the filtered candidate mutations on the proteins was predicted with 4 online programs: PolyPhen 2 (http://genetics.bwh.harvard.edu/pph2/), SIFT (http://sift.jcvi.org/), MutationTaster (http://www.mutationtaster.org/), and SNPs&GO (http://snps.biofold.org/snps-and-go/)."
+      },
+      {
+        "offset": 5379,
+        "section": "METHODS",
+        "text": "Sanger sequencing"
+      },
+      {
+        "offset": 5397,
+        "section": "METHODS",
+        "text": "Sanger sequencing was used to validate the presence of the filtered mutations for the proband. The forward and reverse primers for the BBS4, CRX, and RAX2 genes were as follows: 5'-ATGCTCTTATTCCCAGTG-3', 5'-CTTAGGGTACAAGGTGTCT-3' (BBS4); 5'-CCCCATCTCCGCTCTTAT-3', 5'-TCTGAAACTTCCAGGCACTC-3' (CRX); and 5'-TGGGCTTAGGGAACGCTTGG-3', 5'-GGTCACCTCCTGCCTGACACT-3' (RAX2). Cosegregation analysis of the mutations and disease phenotype was performed with Sanger sequencing for all available pedigree members."
+      },
+      {
+        "offset": 5922,
+        "section": "RESULTS",
+        "text": "Results"
+      },
+      {
+        "offset": 5930,
+        "section": "RESULTS",
+        "text": "Clinical manifestations"
+      },
+      {
+        "offset": 5954,
+        "section": "RESULTS",
+        "text": "The proband (Fig. 1, IV:5), a 19-year-old man, first presented 10 years ago with binocular vision loss, photophobia, and impaired vision in the dark without any obvious cause. The uncorrected visual acuity of each eye was 0.5 and no significant improvement was observed with spectacles. Since then, the proband's visual acuity has decreased progressively. Over the past 4 years, binocular vision has decreased significantly and the night blindness has become severe. The ocular examination results showed that uncorrected visual acuity was 0.15 (right eye) and 0.1 (left eye), with no improvement observed with correction. We found no abnormality in the anterior segment. Fundus examination showed a clear optic disc border, slightly light color, a thinning artery, mid-peripheral diffuse retinal pigment epithelium (RPE) atrophy, gold foil-like reflection, and geographic pigment epithelium atrophy foci in each macular area (Fig. 2A). FFA showed delayed retinal arterial filling, diffuse transmitted fluorescence, and irregularly geographic hypofluorescence in the macular area (Fig. 2B). OCT revealed a thinning retinal nerve epithelium layer in the binocular macular area, a significantly thinning outer nuclear layer of the fovea centralis, and an absent fovea centralis, with the structure of the inner segment/outer segment (IS/OS) layer being difficult to distinguish (Fig. 2C). Visual field examination revealed quadrant defects in the binocular nasal field (Fig. 3A). F-ERG showed the binocular rod cell response amplitude and maximum response amplitude were both decreased, and both the cone cell reaction and 30 Hz scintillation reaction indicated the absence of an effective waveform (Fig. 3B)."
+      },
+      {
+        "offset": 7664,
+        "section": "FIG",
+        "text": "Ophthalmic examination results of the proband. A: Fundus images showed retinal pigment epithelium atrophy and gold foil-like reflection in the macular area. Blue arrow: geographic atrophy foci. B: Fluorescein fundus angiography showed diffuse transmitted fluorescence and geographic hypofluorescence in the macular area (orange arrow). C: Optical coherence tomography showed an absent fovea centralis and an undefined IS/OS layer (green arrow). OD: right eye, OS: left eye."
+      },
+      {
+        "offset": 8138,
+        "section": "FIG",
+        "text": "Further ophthalmic examination results of the proband. A: Visual field examination showed quadrant defects in the binocular nasal field. B: Full field electroretinography showed the binocular rod cell response amplitude and maximum response amplitude were both decreased, and both the cone cell reaction and 30 Hz scintillation reaction indicated the absence of an effective waveform. OD: right eye, OS: left eye."
+      },
+      {
+        "offset": 8554,
+        "section": "RESULTS",
+        "text": "The proband's sisters (IV:3, IV:4), mother (III:6), maternal aunt (III:5), maternal uncle (III:1), and maternal grandfather (II:1) all have a similar history of eye disease. His sister (IV:3) started to experience progressive binocular vision loss and photophobia at the age of 15, followed by night blindness symptoms. She was diagnosed with CORD at the Beijing Tongren Hospital in 2013. The results of her ocular examinations were an uncorrected visual acuity of 0.2 (right eye) and 0.05 (left eye). Fundus examination showed diffuse RPE atrophy and geographic atrophy foci in the macular area (Supplemental Figure 1A). FFA showed hypofluorescence in the fovea centralis of the macular area surrounded by punctate hyperfluorescence, with no fluorescence leakage (Supplemental Figure 1B). OCT revealed an undefined IS/OS layer, and a significantly thinning outer nuclear layer of the fovea centralis (Supplemental Figure 1C). Visual field examination revealed quadrant defects (Supplemental Figure 2A). And the sister's F-ERG results were similar to those of the proband (Supplemental Figure 2B)."
+      },
+      {
+        "offset": 9652,
+        "section": "RESULTS",
+        "text": "Candidate pathogenic variants"
+      },
+      {
+        "offset": 9682,
+        "section": "RESULTS",
+        "text": "A total of 78,471 SNPs and 9078 indels were identified in the proband (IV:5) by WES. After applying the first 2 filtering steps described in the Methods, 3 candidate mutations including 2 missense mutations and 1 frameshift mutation in 3 known retinal disease-causing genes were obtained. These mutations were c.233G > T in BBS4 (Gene ID: 585, OMIM: 600374), c.538dupG in CRX (Gene ID: 1406, OMIM: 602225), and c.235C > T in RAX2 (Gene ID: 84839, OMIM: 610362). These mutations were all absent from or were present at an extremely low frequency in the 1000 Genomes, ESP6500, and ExAC databases. The functional effects of these mutations, predicted with the online tools PolyPhen2, SIFT, MutationTaster, and SNPs&GO, indicated a deleterious impact for all 3 candidate mutations on their respective proteins (Table 1). Subsequent Sanger sequencing results validated the presence of these filtered mutations in the proband. Cosegregation analysis among all available individuals in the proband's family showed that only the CRX gene mutation (c.538dupG:p.Val180fs) was present in all affected members but not in any of the unaffected members (Fig. 4A, B); that is, only the CRX gene mutation was observed to cosegregate with the family disease phenotype. CRX is one of the pathogenic genes of cone-rod dystrophy. Therefore, this mutation was identified as the pathogenic variant in this Chinese family with cone-rod dystrophy."
+      },
+      {
+        "offset": 11114,
+        "section": "TABLE",
+        "text": "Candidate mutations in known retinal disease-causing genes identified by whole-exome sequencing."
+      },
+      {
+        "offset": 11211,
+        "section": "FIG",
+        "text": "Sanger sequencing results and CRX mutation prediction. A: The sequencing result for affected members. B: The sequencing result for unaffected members. C: The amino acid sequence in the presence and absence of the CRX mutation. Red square: the mutation site."
+      },
+      {
+        "offset": 11469,
+        "section": "RESULTS",
+        "text": "The frameshift mutation we identified in the CRX gene in this family (c.538dupG:p.Val180fs) was absent in all public databases. It was predicted by MutationTaster to result in a frameshift and premature termination. The 1 bp guanine duplication at position 538 in the open reading frame alters the reading frame, resulting in the valine at position 180 changing to a glycine thereby causing premature protein termination at codon 235 (Fig. 4C). Based on the ACMG standards and guidelines for the interpretation of sequence variants, this mutation satisfies 5 different pathogenic evidence including PVS1, PM2, PM4, PP1, and PP3, and it is classified as pathogenic."
+      },
+      {
+        "offset": 12136,
+        "section": "DISCUSS",
+        "text": "Discussion"
+      },
+      {
+        "offset": 12147,
+        "section": "DISCUSS",
+        "text": "Retinal diseases exhibit extensive genetic and phenotypic diversity, with links to more than 250 genes (https://sph.uth.edu/retnet/). This poses a challenge for specific diagnosis based on clinical manifestations and for using Sanger sequencing to identify the pathogenic mutations. Thus, we narrowed our search by selecting all known retinal disease-causing genes only, and by using WES as the sequencing analysis tool in this study. Three candidate pathogenic mutations in 3 retinal disease-causing genes were identified as a result of the initial WES of the proband. Cosegregation analysis excluded 2 of these mutations, as they did not cosegregate with the disease in the proband's family. The remaining CRX variant was therefore identified as the disease-causing mutation in this Chinese adCORD family. This mutation was predicted to result in a frameshift and premature termination that would deleteriously impact normal CRX protein function."
+      },
+      {
+        "offset": 13096,
+        "section": "DISCUSS",
+        "text": "The human cone-rod homeobox gene CRX is located on 19q13.33 and contains 4 exons encoding a 299-amino acid homeodomain transcription factor. Animal experiments have shown that this gene is preferentially expressed in vertebrate photoreceptor cells of the retina and pinealocytes of the pineal gland. The CRX protein plays an essential role in regulating the expression of specific genes in mammalian rod and cone photoreceptors to maintain the normal functioning of the cones and rods. In Crx-/- mice, which lack photoreceptor outer segments, ERG shows the absence of normal rod and cone activity."
+      },
+      {
+        "offset": 13698,
+        "section": "DISCUSS",
+        "text": "Mutations of the human CRX gene have been reported to cause not only adCORD but also autosomal dominant inherited retinitis pigmentosa (RP) and Leber congenital amaurosis (LCA), which have different severities and ages of onset. Many CRX frameshift mutations are known retinal disease-causing variants. Huang et al reported that the 49 reported CRX mutations are composed of 38.78% missense, 4.08% nonsense, 36.73% deletion, 16.33% insertion, and 4.08% indel. Mammalian CRX protein includes 5 conserved functional domains, comprising (from the N- to the C-terminus) the homeodomain (HD) and glutamine-rich (Gln) domain, and the basic, WSP, and OTX-tail motifs. The HD is associated with DNA binding while the C-terminal region of the protein, with the basic to OTX-tail domains, is associated with transcriptional regulation. The reported missense mutations that cosegregate with disease phenotype lie within the HD domain, while frameshift and nonsense mutations are restricted to the C-terminal region of the protein. Thus, the frameshift mutation observed in this Chinese family (c.538dupG:p.Val180fs) would impact normal CRX protein function by effecting the transcriptional regulation of photoreceptor-specific genes."
+      },
+      {
+        "offset": 14921,
+        "section": "DISCUSS",
+        "text": "In conclusion, with the use of WES and Sanger sequencing, we revealed a novel frameshift mutation (NM_000554.4:c.538dupG:p.Val180fs) in exon 4 of the CRX gene in a Chinese family with adCORD. This study broadens the known pathogenic mutation spectrum of the CRX gene and contributes to improved genetic counseling for adCORD patients. In addition, this work showed that whole-exome sequencing is an efficient tool for identifying the pathogenic variants of a hereditary disease associated with multiple pathogenic genes."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-ac7767be3aed6abb",
+    "object": "chat.completion",
+    "created": 1790521841,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"OII:1\",\"phenotype\":[\"HP:0000548\",\"HP:0000613\",\"HP:0000662\",\"HP:0000572\",\"HP:0007814\",\"HP:0031609\"]},{\"patient_id\":\"OIII:1\",\"phenotype\":[\"HP:0000548\",\"HP:0000613\",\"HP:0000662\",\"HP:0000572\",\"HP:0007814\",\"HP:0031609\"]},{\"patient_id\":\"OIII:5\",\"phenotype\":[\"HP:0000548\",\"HP:0000613\",\"HP:0000662\",\"HP:0000572\",\"HP:0007814\",\"HP:0031609\"]},{\"patient_id\":\"OIII:6\",\"phenotype\":[\"HP:0000548\",\"HP:0000613\",\"HP:0000662\",\"HP:0000572\",\"HP:0007814\",\"HP:0031609\"]},{\"patient_id\":\"OIV:4\",\"phenotype\":[\"HP:0000548\",\"HP:0000613\",\"HP:0000662\",\"HP:0000572\",\"HP:0007814\",\"HP:0031609\"]},{\"patient_id\":\"OIV:5\",\"phenotype\":[\"HP:0000548\",\"HP:0000613\",\"HP:0000662\",\"HP:0000479\",\"HP:0000572\",\"HP:0000505\",\"HP:0007814\",\"HP:0011503\",\"HP:0031609\",\"HP:0001249\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 5153,
+      "total_tokens": 5629,
+      "completion_tokens": 476,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "OII:1",
+      "phenotype": [
+        "HP:0000548",
+        "HP:0000613",
+        "HP:0000662",
+        "HP:0000572",
+        "HP:0007814",
+        "HP:0031609"
+      ]
+    },
+    {
+      "patient_id": "OIII:1",
+      "phenotype": [
+        "HP:0000548",
+        "HP:0000613",
+        "HP:0000662",
+        "HP:0000572",
+        "HP:0007814",
+        "HP:0031609"
+      ]
+    },
+    {
+      "patient_id": "OIII:5",
+      "phenotype": [
+        "HP:0000548",
+        "HP:0000613",
+        "HP:0000662",
+        "HP:0000572",
+        "HP:0007814",
+        "HP:0031609"
+      ]
+    },
+    {
+      "patient_id": "OIII:6",
+      "phenotype": [
+        "HP:0000548",
+        "HP:0000613",
+        "HP:0000662",
+        "HP:0000572",
+        "HP:0007814",
+        "HP:0031609"
+      ]
+    },
+    {
+      "patient_id": "OIV:4",
+      "phenotype": [
+        "HP:0000548",
+        "HP:0000613",
+        "HP:0000662",
+        "HP:0000572",
+        "HP:0007814",
+        "HP:0031609"
+      ]
+    },
+    {
+      "patient_id": "OIV:5",
+      "phenotype": [
+        "HP:0000548",
+        "HP:0000613",
+        "HP:0000662",
+        "HP:0000479",
+        "HP:0000572",
+        "HP:0000505",
+        "HP:0007814",
+        "HP:0011503",
+        "HP:0031609",
+        "HP:0001249"
+      ]
+    }
+  ],
+  "elapsed_seconds": 15.765,
+  "usage": {
+    "prompt_tokens": 5153,
+    "total_tokens": 5629,
+    "completion_tokens": 476,
+    "prompt_tokens_details": null
+  }
+}

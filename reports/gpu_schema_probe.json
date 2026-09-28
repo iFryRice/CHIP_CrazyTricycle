@@ -1,0 +1,104 @@
+{
+  "supported": true,
+  "synthetic_probe_only": true,
+  "model": "Qwen3-8B",
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "patient_phenotype_associations",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "association": {
+            "type": "object",
+            "properties": {
+              "P1": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "HP:0000519",
+                    "HP:0004322"
+                  ]
+                }
+              },
+              "P2": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "HP:0000519",
+                    "HP:0004322"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "P1",
+              "P2"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "association"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "response": {
+    "id": "chatcmpl-901ca0ed37d1fbd3",
+    "object": "chat.completion",
+    "created": 1790522067,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":{\"P1\":[\"HP:0000519\"],\"P2\":[\"HP:0004322\"]}}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 345,
+      "total_tokens": 376,
+      "completion_tokens": 31,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "normalized_association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0000519"
+      ]
+    },
+    {
+      "patient_id": "P2",
+      "phenotype": [
+        "HP:0004322"
+      ]
+    }
+  ],
+  "elapsed_seconds": 1.054,
+  "preserved_success_cache_identities_checked": 19
+}

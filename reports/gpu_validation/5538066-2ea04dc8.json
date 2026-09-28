@@ -1,0 +1,772 @@
+{
+  "pmc_id": "5538066",
+  "identity": "52126589aa67b92e1c77cecc91f27adee6bf8ba2d090a61760b3c48bb3a39a7f",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 19677,
+    "covered_source_characters": 19677,
+    "source_is_excerpted": false,
+    "candidate_windows": 41,
+    "selected_windows": 41,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 27140,
+    "candidate_concepts": 60,
+    "patient_count": 2
+  },
+  "prompt": {
+    "pmc_id": "5538066",
+    "patients": [
+      {
+        "patient_id": "O1",
+        "mentions": [
+          {
+            "text": "child",
+            "offset": 3655
+          },
+          {
+            "text": "Patient 1",
+            "offset": 4074
+          },
+          {
+            "text": "A 7-month-old female infant",
+            "offset": 4094
+          },
+          {
+            "text": "patient",
+            "offset": 4243
+          },
+          {
+            "text": "patient",
+            "offset": 4570
+          },
+          {
+            "text": "patient",
+            "offset": 4728
+          },
+          {
+            "text": "patient",
+            "offset": 5112
+          },
+          {
+            "text": "patient",
+            "offset": 5249
+          },
+          {
+            "text": "patient",
+            "offset": 5794
+          },
+          {
+            "text": "patient",
+            "offset": 5840
+          },
+          {
+            "text": "patient",
+            "offset": 6796
+          },
+          {
+            "text": "patient",
+            "offset": 7841
+          },
+          {
+            "text": "patient 1",
+            "offset": 13623
+          },
+          {
+            "text": "daughter",
+            "offset": 14155
+          },
+          {
+            "text": "Patient 1",
+            "offset": 15478
+          },
+          {
+            "text": "patient 1",
+            "offset": 16185
+          },
+          {
+            "text": "Patient 1",
+            "offset": 18737
+          },
+          {
+            "text": "patient 1",
+            "offset": 18989
+          },
+          {
+            "text": "child",
+            "offset": 19681
+          }
+        ]
+      },
+      {
+        "patient_id": "O2",
+        "mentions": [
+          {
+            "text": "mother",
+            "offset": 3806
+          },
+          {
+            "text": "a 21-year-old mother",
+            "offset": 4285
+          },
+          {
+            "text": "Patient 2",
+            "offset": 8052
+          },
+          {
+            "text": "The patient's mother",
+            "offset": 8075
+          },
+          {
+            "text": "The mother",
+            "offset": 9001
+          },
+          {
+            "text": "patient",
+            "offset": 9846
+          },
+          {
+            "text": "patient",
+            "offset": 9892
+          },
+          {
+            "text": "patient 2",
+            "offset": 13777
+          },
+          {
+            "text": "mother",
+            "offset": 14144
+          },
+          {
+            "text": "Patient 2",
+            "offset": 15948
+          },
+          {
+            "text": "Patient 2",
+            "offset": 16087
+          },
+          {
+            "text": "patient 2",
+            "offset": 16319
+          },
+          {
+            "text": "patient 2",
+            "offset": 19003
+          },
+          {
+            "text": "mother",
+            "offset": 19670
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0001328": [
+        "learning disabilities"
+      ],
+      "HP:0001999": [
+        "dysmorphic features",
+        "Dysmorphic features",
+        "facial dysmorphic features"
+      ],
+      "HP:0001510": [
+        "growth retardation",
+        "poor growth"
+      ],
+      "HP:0001263": [
+        "global developmental delay",
+        "developmental delay",
+        "developmental delays"
+      ],
+      "HP:0001249": [
+        "intellectual disability"
+      ],
+      "HP:0000252": [
+        "microcephaly"
+      ],
+      "HP:0002553": [
+        "high-arched eyebrows"
+      ],
+      "HP:0001007": [
+        "hirsutism"
+      ],
+      "HP:0000664": [
+        "synophrys"
+      ],
+      "HP:0000508": [
+        "ptosis"
+      ],
+      "HP:0001508": [
+        "failure to thrive",
+        "FTT"
+      ],
+      "HP:0001252": [
+        "hypotonia"
+      ],
+      "HP:0000716": [
+        "depression"
+      ],
+      "HP:0011410": [
+        "cesarean section"
+      ],
+      "HP:0002045": [
+        "hypothermia"
+      ],
+      "HP:0011968": [
+        "feeding issues",
+        "feeding difficulties"
+      ],
+      "HP:0000952": [
+        "jaundice"
+      ],
+      "HP:0000341": [
+        "bitemporal narrowing",
+        "narrow forehead"
+      ],
+      "HP:0000574": [
+        "thick eyebrows"
+      ],
+      "HP:0000286": [
+        "epicanthal folds"
+      ],
+      "HP:0007665": [
+        "curly eyelashes"
+      ],
+      "HP:0005280": [
+        "flat nasal bridge"
+      ],
+      "HP:0000218": [
+        "high-arched palate"
+      ],
+      "HP:0000278": [
+        "retrognathia"
+      ],
+      "HP:0009623": [
+        "proximally placed thumbs"
+      ],
+      "HP:0004209": [
+        "bilateral fifth finger clinodactyly"
+      ],
+      "HP:0001159": [
+        "syndactyly"
+      ],
+      "HP:0007010": [
+        "fine motor skills"
+      ],
+      "HP:0012382": [
+        "left to right shunt"
+      ],
+      "HP:0000750": [
+        "speech delay",
+        "speech delays"
+      ],
+      "HP:0000739": [
+        "anxiety"
+      ],
+      "HP:0011003": [
+        "severe myopia"
+      ],
+      "HP:0002650": [
+        "scoliosis"
+      ],
+      "HP:0001382": [
+        "joint laxity"
+      ],
+      "HP:0000347": [
+        "micrognathia"
+      ],
+      "HP:0040064": [
+        "limb anomalies"
+      ],
+      "HP:0011344": [
+        "severe global developmental delay"
+      ],
+      "HP:0001344": [
+        "lack of speech"
+      ],
+      "HP:0000708": [
+        "Behavioral problems",
+        "behavioral problems"
+      ],
+      "HP:0001513": [
+        "obesity"
+      ],
+      "HP:0000545": [
+        "myopia"
+      ],
+      "HP:0002020": [
+        "GERD"
+      ],
+      "HP:0002019": [
+        "constipation"
+      ],
+      "HP:0001250": [
+        "epilepsy",
+        "seizures"
+      ],
+      "HP:0000504": [
+        "vision issues"
+      ],
+      "HP:0100716": [
+        "self-injury"
+      ],
+      "HP:0007018": [
+        "ADHD"
+      ],
+      "HP:0002218": [
+        "gray hair"
+      ],
+      "HP:0000717": [
+        "Autism",
+        "autism"
+      ],
+      "HP:0000733": [
+        "stereotyped"
+      ],
+      "HP:0100710": [
+        "impulsive"
+      ],
+      "HP:0031546": [
+        "cardiac defects"
+      ],
+      "HP:0001643": [
+        "PDA"
+      ],
+      "HP:0000729": [
+        "ASD"
+      ],
+      "HP:0001629": [
+        "VSD"
+      ],
+      "HP:0001642": [
+        "pulmonic stenosis"
+      ],
+      "HP:0001655": [
+        "patent foramen ovale"
+      ],
+      "HP:0000028": [
+        "cryptorchidism"
+      ],
+      "HP:0000023": [
+        "inguinal hernia"
+      ],
+      "HP:0008677": [
+        "CNS"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "O1",
+        "phenotype": [
+          "HP:0001999",
+          "HP:0001510",
+          "HP:0001263",
+          "HP:0001249",
+          "HP:0000252",
+          "HP:0001007",
+          "HP:0000664",
+          "HP:0000508",
+          "HP:0001508",
+          "HP:0001252",
+          "HP:0002045",
+          "HP:0011968",
+          "HP:0000952",
+          "HP:0000341",
+          "HP:0000574",
+          "HP:0000286",
+          "HP:0007665",
+          "HP:0005280",
+          "HP:0000218",
+          "HP:0000278",
+          "HP:0009623",
+          "HP:0004209",
+          "HP:0001159",
+          "HP:0012382",
+          "HP:0000750",
+          "HP:0011344",
+          "HP:0001344",
+          "HP:0000708",
+          "HP:0031546",
+          "HP:0001643",
+          "HP:0000729",
+          "HP:0001629",
+          "HP:0001642",
+          "HP:0001655",
+          "HP:0000028",
+          "HP:0000023"
+        ]
+      },
+      {
+        "patient_id": "O2",
+        "phenotype": [
+          "HP:0001328",
+          "HP:0001999",
+          "HP:0001263",
+          "HP:0001007",
+          "HP:0000664",
+          "HP:0000508",
+          "HP:0001252",
+          "HP:0000716",
+          "HP:0011410",
+          "HP:0000341",
+          "HP:0000286",
+          "HP:0007665",
+          "HP:0009623",
+          "HP:0004209",
+          "HP:0001159",
+          "HP:0007010",
+          "HP:0000750",
+          "HP:0000739",
+          "HP:0011003",
+          "HP:0002650",
+          "HP:0001382",
+          "HP:0000347",
+          "HP:0000708",
+          "HP:0001513",
+          "HP:0000545",
+          "HP:0002020",
+          "HP:0002019",
+          "HP:0001250",
+          "HP:0000504",
+          "HP:0100716",
+          "HP:0007018",
+          "HP:0002218",
+          "HP:0008677"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "Rare form of autosomal dominant familial Cornelia de Lange syndrome due to a novel duplication in SMC3"
+      },
+      {
+        "offset": 103,
+        "section": "ABSTRACT",
+        "text": "Key Clinical Message"
+      },
+      {
+        "offset": 124,
+        "section": "ABSTRACT",
+        "text": "Clinical features are variable in patients with Cornelia de Lange syndrome (CdLS). Milder forms exist with structural maintenance of chromosomes 3 (SMC3) mutations. Inherited milder forms of CdLS are uncommon and may be missed if genetic testing is limited to Nipped-B-like protein (NIPBL) and SMC1A. Parental studies should be pursued if there is a history of learning disabilities and/or dysmorphic features."
+      },
+      {
+        "offset": 539,
+        "section": "INTRO",
+        "text": "Introduction"
+      },
+      {
+        "offset": 552,
+        "section": "INTRO",
+        "text": "Cornelia de Lange syndrome (CdLS) is a rare, multisystem genetic disorder that presents with variable clinical abnormalities including dysmorphic features, severe growth retardation, global developmental delay, and intellectual disability. Dysmorphic features include microcephaly, high-arched eyebrows, hirsutism, synophrys, ptosis, limb defects, and other congenital anomalies (Table 1)."
+      },
+      {
+        "offset": 945,
+        "section": "TABLE",
+        "text": "Frequency of clinical features in SMC3"
+      },
+      {
+        "offset": 2129,
+        "section": "INTRO",
+        "text": "The prevalence of classical CdLS is estimated at 1:50,000-1:100,000, with milder cases believed to be missed and remain undiagnosed 1, 2. Five genes, to date, have been identified as causative of CdLS including NIPBL (Nipped-B-like protein), SMC1A (structural maintenance of chromosomes 1A), SMC3 (structural maintenance of chromosomes 3), RAD21 (human homolog of Schizosaccharomyces pombe radiation-sensitive mutant 21), and HDAC8 (histone deacetylase 8) 3, 4, 5, 6, 7, 8, 9."
+      },
+      {
+        "offset": 2614,
+        "section": "INTRO",
+        "text": "Mutations in the NIPBL gene account for ~60-80% of cases of CdLS with the latter four genes representing only ~6-10% of cases, often with a less typical presentation 10. Heterozygous mutations in the NIPBL, RAD21, and SMC3 genes are transmitted in an autosomal dominant pattern. Heterozygous or hemizygous mutations in the SMC1A and HDAC8 genes are X-linked. The majority of cases of CdLS are de novo (99%), with rare reports of inherited CdLS within families, including the potential for germline mosaicism 11, 12."
+      },
+      {
+        "offset": 3136,
+        "section": "INTRO",
+        "text": "Several cases with the characteristic clinical features of CdLS have recently been reported with mosaic mutations in NIPBL. One report showed that 23% of cases of suspected CdLS that had no mutation on blood DNA testing had mosaicism on buccal cells 13. Other causes of mutation-negative CdLS have emerged with the increased use of clinical exome sequencing, such as the identification of mutations in the ANKDR11, KMT2A, and EP300 genes. In this report, we describe a novel SMC3 gene duplication (c.1433_1435dup) in a child who presented with failure to thrive, hypotonia, and facial dysmorphic features of CdLS. The same duplication was subsequently identified in the mother, who was noted to have milder dysmorphic facies, learning disabilities, and depression. To the best of our knowledge, this report represents the first description of a mother to daughter transmission of CdLS due to a duplication in the SMC3 gene."
+      },
+      {
+        "offset": 4062,
+        "section": "CASE",
+        "text": "Case Report"
+      },
+      {
+        "offset": 4074,
+        "section": "CASE",
+        "text": "Patient 1 (Proband)"
+      },
+      {
+        "offset": 4094,
+        "section": "CASE",
+        "text": "A 7-month-old female infant was referred to genetics clinic for an evaluation of microcephaly, failure to thrive (FTT), and dysmorphic features. The patient was born at 38 weeks gestation to a 21-year-old mother with no history of prior pregnancy who had a history of nausea and preeclampsia throughout the pregnancy. She was delivered via cesarean section with Apgar scores of 8 and 9 after 1 and 5 min respectively. Birthweight (BW) was 2.24 kg, birth length was 47 cm. The patient was admitted to the Neonatal Intensive Care Unit for 1 week due to hypothermia, feeding issues, and jaundice which resolved without phototherapy. The patient received feeds via a nasogastric tube for 1 week after birth, then was discharged home, and followed by her pediatrician."
+      },
+      {
+        "offset": 4872,
+        "section": "CASE",
+        "text": "Family history obtained from the maternal grandmother who was present during the visit in place of the parents revealed that the mother resembled her child, albeit less severe, and had a history of learning disabilities."
+      },
+      {
+        "offset": 5093,
+        "section": "CASE",
+        "text": "On evaluation, the patient's weight was 5.89 kg (1st %), length was 62 cm (<1st %), and occipitofrontal head circumference (OFC) was 40.5 cm (2.8th %). The patient had microcephaly with bitemporal narrowing of the forehead, hirsutism, arched thick eyebrows, synophrys, bilateral epicanthal folds, long curly eyelashes, and mild ptosis. Her nose appeared short and upturned, with a flat nasal bridge. She also had a small oral cavity, high-arched palate, and a small chin with mild retrognathia. Her limb examination showed proximally placed thumbs, bilateral fifth finger clinodactyly, small 4th and 5th metacarpals, and mild 2nd and 3rd toes syndactyly. Table 1 includes the physical features of the patient, and Figure 1A provides images of the patient."
+      },
+      {
+        "offset": 5856,
+        "section": "FIG",
+        "text": "Facial characteristics and hand findings in proband (A) and mother (B)."
+      },
+      {
+        "offset": 5928,
+        "section": "CASE",
+        "text": "Her neurological examination showed low generalized muscle bulk and hypotonia. There was no evidence of tremors or abnormal movements, and deep tendon reflexes were within normal limits. Developmentally, she sat independently at 7 months."
+      },
+      {
+        "offset": 6168,
+        "section": "CASE",
+        "text": "On follow-up examination at the age of 14 months, she was noted to have improved oral intake after feeding therapy. Her weight increased to 8.2 kg (10%), length measured 74 cm (15%), but OFC remained relatively small at 43 cm (5%). A developmental assessment carried out at that age showed she was advanced in her fine motor skills at 21 months of age, but gross motor skills were delayed at 11 months of age, and expressive language was at 12 months of age. She was able to pull herself up to stand and walked with support while leaning on the furniture. She began to walk independently by age 15 months."
+      },
+      {
+        "offset": 6784,
+        "section": "CASE",
+        "text": "Because the patient was not babbling, she was receiving speech therapy through early intervention. Echocardiogram identified a trivial patent foramen oval, with a mild atrial left to right shunt. Renal ultrasound was normal. The differential diagnoses of CdLS include chromosomal defects such as partial duplication of 3q who have similar dysmorphic features, FTT, and developmental delay. However, a distinguishing feature of this disorder not present in CdLS patients is normal birth weight. Deletions of 2q31 lack facial features of CdLS but have similar limb reduction anomalies. Both disorders and other copy number variants were excluded by performing a SNP microarray. Fetal alcohol syndrome has some overlapping features with CdLS; however, there was no history of alcohol intake during pregnancy in the family history. Other uncommon genetic conditions that share some overlapping clinical features with CdLS involve genetic mutations in TAF1 (X-linked), TAF6 (autosomal recessive), and Bohring-Opitz syndrome (autosomal dominant)."
+      },
+      {
+        "offset": 7830,
+        "section": "CASE",
+        "text": "Due to the patient's characteristic facial features, poor growth parameters, feeding difficulties, microcephaly, and hand findings, a Cornelia de Lange syndrome gene panel (NIPBL, SMC1A, SMC3, RAD21, HDAC8) was completed."
+      },
+      {
+        "offset": 8052,
+        "section": "CASE",
+        "text": "Patient 2 (The Mother)"
+      },
+      {
+        "offset": 8075,
+        "section": "CASE",
+        "text": "The patient's mother was 22 years old when evaluated in genetics clinic. The maternal grandmother was present during the visit and contributed to the history. The grandmother mentioned that her daughter was born full term, with BW of 3.17 kg. She had no history of failure to thrive or other medical problems growing up. She reached her motor milestones on time but had speech delay for which she received speech therapy. Her hearing was normal based on audiological testing in childhood. The mother had learning disabilities in school that required special education classes and additional support, but was able to graduate from high school. No standardized intelligence testing result was available to us. At the age of 14 years, she was diagnosed and treated for significant depression and anxiety that improved with therapy. She has severe myopia for which she wears glasses. She also has mild scoliosis and joint laxity. The mother lives with the father of her child (proband) and works in a local shop. She is functioning at an appropriate level to live independently with some support from her family as needed."
+      },
+      {
+        "offset": 9197,
+        "section": "CASE",
+        "text": "On physical examination, her weight was 95.25 kg and height was 170.6 cm. She had hirsutism, a narrow forehead with synophrys, and long and curly eyelashes. She had bilateral epicanthal folds, ptosis, and micrognathia. Limb examination showed proximally placed thumbs, bilateral fifth finger clinodactyly, small 4th and 5th metacarpals, and mild 2nd and 3rd toes syndactyly. The 5th toes were bilaterally short. Neurological examination showed normal cranial nerves, tone, and coordination. There was no evidence of tremors or abnormal movements, and her deep tendon reflexes were within normal limits. Table 1 includes the physical features of the patient, and Figure 1B provides images of the patient. Kidney ultrasound was normal, and echocardiogram was recommended but not completed."
+      },
+      {
+        "offset": 9989,
+        "section": "METHODS",
+        "text": "Methods and Materials"
+      },
+      {
+        "offset": 10011,
+        "section": "METHODS",
+        "text": "The targeted next-generation sequencing (NGS) approach was used based on SureSelect enrichment (Agilent Technologies, Santa Clara, CA) followed by MiSeq Illumina NGS. SureSelect probes were designed following Agilent's recommendations to enrich all exons (including 10 bp of intronic sequence at either end of each exon) of genes known to be associated with Cornelia de Lange syndrome: NIPBL [NM_133433.3], SMC1A [NM_006306.2], SMC3 [NM_005445.3], RAD21 [NM_006265.2], and HDAC8 [NM_018486.2]. Enriched samples were pooled and MiSeq sequenced. Indexes incorporated during the posthybridization amplification were used to demultiplex the MiSeq data followed by alignment of high-quality reads (Q > 30) to the reference genome (hg19) using Burrows-Wheeler Aligner (BWA). Data quality was assessed using FastQC. Variants were called using The Genome Analysis Toolkit (GATK) HaploTypeCaller V3.3 and assigned to the transcripts of interest. Variants were then annotated in regard to their positions in transcripts of interest, position relative to the coding sequence, consequence for the protein or mRNA, and a collection of direct and indirect evidentiary tools and databases including NCBI dbSNP, 1000 Genomes Project, Exome Sequencing Project (ESP), GERP, Conseq, PolyPhen-2, SIFT, and the Human Gene Mutation Database (HGMD). This assay was run as a clinical molecular diagnostic test at The University of Chicago Genetics Service Laboratory. The test includes complete sequence analysis of all coding exons of the transcripts listed above, plus 10 bp of flanking intronic sequence. Gaps or regions of poor coverage in the NGS dataset (<15x) are filled by Sanger sequencing. All pathogenic and likely pathogenic variants were confirmed by Sanger sequencing."
+      },
+      {
+        "offset": 11782,
+        "section": "METHODS",
+        "text": "Array comparative genomic hybridization (Array-CGH)"
+      },
+      {
+        "offset": 11836,
+        "section": "METHODS",
+        "text": "Deletion and duplication analyses of genes known to be associated with Cornelia de Lange syndrome were performed using a high-resolution, custom-designed, exon-targeted 4x180K array-CGH platform (Agilent Technologies, Santa Clara, CA) containing oligonucleotide probes spaced at an average distance of 100-250 bp in the coding and noncoding regions of the NIPBL [NM_133433.3], SMC1A [NM_006306.2], SMC3 [NM_005445.3], RAD21 [NM_006265.2], and HDAC8 [NM_018486.2] genes. Genomic DNA sample of the patient and gender-matched control were processed and cohybridized onto microarray slides according to Agilent's recommended procedures. Microarray images were scanned at 2 micron resolution, and the data were extracted using ImaGene (9.0) and analyzed using the Nexus software (7.1) (BioDiscovery, Hawthorne, CA). The genomic copy number was defined by analysis of the normalized log2 (Cy5/Cy3) ratio average of the CGH signal. Regions that reached a threshold of at least 0.32 were considered suspicious copy number losses consistent with deletions. This genomic array-CGH was developed, and its performance determined for the purpose of identifying deletions and duplications within the coding regions of the transcripts listed above at the University of Chicago Genetics Service Laboratory. Multiplex ligation-dependent probe amplification (MLPA) and/or quantitative real-time PCR analysis were conducted to confirm findings."
+      },
+      {
+        "offset": 13284,
+        "section": "RESULTS",
+        "text": "Results"
+      },
+      {
+        "offset": 13292,
+        "section": "RESULTS",
+        "text": "Mutation analysis of all coding exons and intron/exon boundaries of NIPBL, SMC1A, SMC3, RAD21, and HDAC8 by NGS was negative for mutations or variants. Deletion/duplication analysis of all genes by array CGH to identify copy number changes involving one or more exons revealed a novel c.1433_1435dup in exon 15 of the SMC3 gene in patient 1. Both parents had site-specific genetic testing for the same molecular change identified in the child. The results showed that only the mother (patient 2) carried the SMC3 mutation."
+      },
+      {
+        "offset": 13817,
+        "section": "DISCUSS",
+        "text": "Discussion"
+      },
+      {
+        "offset": 13828,
+        "section": "DISCUSS",
+        "text": "This case report confirms phenotypic variability among patients and within families with CdLS. Milder cases would be missed if molecular testing was only performed on the NIPBL and SMC1A genes. The use of a CdLS panel with multiple genes related to CdLS identified the cause of our patient's phenotype. We present a mother and daughter with a novel duplication in the SMC3 gene."
+      },
+      {
+        "offset": 14207,
+        "section": "DISCUSS",
+        "text": "Mutations in the SMC3 gene are believed to cause 1% of cases of CdLS, and, to date, less than twenty other cases have been described in the literature 5, 10. A variety of intragenic mutations in SMC3 have been reported, none of which demonstrate a familial inheritance pattern and most of which represent novel mutations within the gene. One other known case of a duplication, c.859_861dup, has been reported in exon 11 of the SMC3 gene 14. Other described mutations are either deletions of one or two residues of SMC3 or missense mutations 5, 14."
+      },
+      {
+        "offset": 14757,
+        "section": "DISCUSS",
+        "text": "Individuals with SMC3 mutations typically have a milder clinical phenotype than patients with classical CdLS. In 2015, Gil-Rodriquez et al. described the phenotype of 16 individuals with SMC3 mutations. We present herein clinical features of two more patients with a duplication in the SMC3 gene that has not been previously reported. Most patients have dysmorphic features resembling the typical CdLS facies, but they may be less noticeable and rarely are absent. Major limb anomalies are uncommon in individuals with SMC3 mutations; however, mild skeletal features frequently occur as described in Table 1 5, 14."
+      },
+      {
+        "offset": 15376,
+        "section": "DISCUSS",
+        "text": "All cases with SMC3 mutations have some degree of developmental delay and/or intellectual disability. Patient 1 had hypotonia, mild motor, and speech delays that improved with interventional therapy, and she began walking independently at 15 months of age. This is in contrast to many individuals with classical CdLS who have more severe global developmental delay including lack of speech and failure to ambulate on their own. Behavioral problems are not typically reported in individuals with SMC3 mutations, and many individuals are described as friendly in nature 14. Patient 2 developed incapacitating depression and anxiety in her teens, which improved after medical treatment for depression was started. Patient 2 also had learning disabilities throughout school and currently lives independently with patient 1, and her child's father. She works at a local shop and requires occasional assistance from her family members."
+      },
+      {
+        "offset": 16307,
+        "section": "DISCUSS",
+        "text": "In summary, patient 2, an adult with CdLS due to an SMC3 mutation, had learning disabilities, obesity, history of depression and anxiety, significant myopia, and scoliosis. There is limited literature on adults with CdLS due to SMC3 mutations. Kline et al. 15 and Mariani et al. 16 have described clinical features found in two separate adolescent and adult CdLS cohorts. Neither of the two reports indicates clinical features in adults with SMC3 mutations specifically. Both groups identify gastrointestinal reflux (GERD) as the main medical problem affecting adults with CdLS. Other medical issues affecting the adult population with CdLS include obesity, constipation, lower limb length discrepancy, scoliosis, epilepsy, hearing and vision issues, and psychiatric and behavioral problems. The psychiatric and behavioral diagnoses often worsen with age, including self-injury, anxiety, ADHD, autistic features, depression, and obsessive compulsion disorder. Patients also develop premature aging, with early gray hair 15."
+      },
+      {
+        "offset": 17335,
+        "section": "DISCUSS",
+        "text": "Medical management guidelines have been proposed for adolescents and adults with CdLS, including periodic weight checks and BMI calculation, evaluation for GERD, biennial screening with hemoglobin level, iron studies, and renal function testing, yearly ophthalmologic and orthodontic evaluation, and orthopedic and audiology evaluations as needed 16."
+      },
+      {
+        "offset": 17686,
+        "section": "DISCUSS",
+        "text": "Autism is reported in 65% of patients with CdLS, with a higher prevalence among individuals with more severe classic phenotypes than in those with mild to moderate phenotypes 17. Nakanishi et al. 18 found that 43% of patients with mild to moderate CdLS had autistic features; however, none of the patients within the cohort had an identified SMC3 mutation. There is evidence that autistic features in CdLS are phenotypically different in comparison to patients with idiopathic isolated autism. Autistic patients with CdLS have significantly less repetitive sensory behavior, better eye contact, more gestures, and less stereotyped speech. However, patients with CdLS showed a higher level of anxiety and self-injury with impulsive behavior 17, 19."
+      },
+      {
+        "offset": 18437,
+        "section": "DISCUSS",
+        "text": "Historical reports of atypical CdLS due to SMC3, RAD21, and HDAC8 mutations describe a phenotype without major congenital anomalies 20. However, 56% of patients with SMC3 mutations reportedly had congenital cardiac defects, including PDA, ASD, VSD, pulmonic stenosis, and pulmonary artery dysplasia. Patient 1 had mild cardiac findings on echocardiogram in the form of patent foramen ovale and trivial atrial shunt. Genitourinary defects have been seen in 40% of patients in the form of cryptorchidism, inguinal hernia, and hypoplastic genitalia. Both patient 1 and patient 2 had normal renal ultrasounds and genital examination. Lastly, 36% have CNS anomalies identified by brain MRI, and twenty-five percent experience seizures 14. The frequencies of these anomalies warrant newly diagnosed cases of SMC3-related CdLS to have baseline clinical evaluations to assess for these features, which may include echocardiogram, renal ultrasound, and brain MRI when indicated. Neither of our patients had a history of epilepsy or clinical signs of brain anomalies warranting imaging studies at the time of the visit."
+      },
+      {
+        "offset": 19551,
+        "section": "CONCL",
+        "text": "Conclusion"
+      },
+      {
+        "offset": 19562,
+        "section": "CONCL",
+        "text": "In summary, we describe an autosomal dominant form of CdLS due to a novel duplication in the SMC3 gene in a mother and child. Due to clinical variability of the phenotype within the same family, the mother who had milder features was not diagnosed until her child's genetic mutation was identified. The possibility of a higher incidence of inherited forms of CdLS than previously suspected exists and parental studies should be pursued if a history of developmental delays, learning disabilities, congenital anomalies, or dysmorphic features are present. Milder cases with SMC3 mutations may be missed if only the classical NIPBL and SMC1A genes are evaluated. This can be avoided by use of next-generation sequencing panels, which include genes known to be associated with the CdLS phenotype. Additionally, atypical cases of CdLS or CdLS-like conditions may emerge with the increased use of whole-exome sequencing. This case report is useful for future case series studies of CdLS due to SMC3 mutations in both children and adults, as well as for genotype-phenotype correlation studies."
+      },
+      {
+        "offset": 20658,
+        "section": "CONCL",
+        "text": "Authorship"
+      },
+      {
+        "offset": 20669,
+        "section": "CONCL",
+        "text": "EI - wrote and prepared the manuscript, including figures and tables, reviewed the literature, replied to reviewers. GAA - ran the testing and contributed to the molecular portion of the study. AEG - contributed to the idea of the manuscript, helped with writing and organization of the manuscript, helped with final review."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-b7670ce05fb22dd8",
+    "object": "chat.completion",
+    "created": 1790522405,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"O1\",\"phenotype\":[\"HP:0001999\",\"HP:0001510\",\"HP:0001263\",\"HP:0001249\",\"HP:0000252\",\"HP:0001007\",\"HP:0000664\",\"HP:0000508\",\"HP:0001508\",\"HP:0001252\",\"HP:0002045\",\"HP:0011968\",\"HP:0000952\",\"HP:0000341\",\"HP:0000574\",\"HP:0000286\",\"HP:0007665\",\"HP:0005280\",\"HP:0000218\",\"HP:0000278\",\"HP:0009623\",\"HP:0004209\",\"HP:0001159\",\"HP:0012382\",\"HP:0000750\",\"HP:0011344\",\"HP:0001344\",\"HP:0000708\",\"HP:0031546\",\"HP:0001643\",\"HP:0000729\",\"HP:0001629\",\"HP:0001642\",\"HP:0001655\",\"HP:0000028\",\"HP:0000023\"]},{\"patient_id\":\"O2\",\"phenotype\":[\"HP:0001328\",\"HP:0001999\",\"HP:0001263\",\"HP:0001007\",\"HP:0000664\",\"HP:0000508\",\"HP:0001252\",\"HP:0000716\",\"HP:0011410\",\"HP:0000341\",\"HP:0000286\",\"HP:0007665\",\"HP:0009623\",\"HP:0004209\",\"HP:0001159\",\"HP:0007010\",\"HP:0000750\",\"HP:0000739\",\"HP:0011003\",\"HP:0002650\",\"HP:0001382\",\"HP:0000347\",\"HP:0000708\",\"HP:0001513\",\"HP:0000545\",\"HP:0002020\",\"HP:0002019\",\"HP:0001250\",\"HP:0000504\",\"HP:0100716\",\"HP:0007018\",\"HP:0002218\",\"HP:0008677\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 7464,
+      "total_tokens": 8179,
+      "completion_tokens": 715,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "O1",
+      "phenotype": [
+        "HP:0001999",
+        "HP:0001510",
+        "HP:0001263",
+        "HP:0001249",
+        "HP:0000252",
+        "HP:0001007",
+        "HP:0000664",
+        "HP:0000508",
+        "HP:0001508",
+        "HP:0001252",
+        "HP:0002045",
+        "HP:0011968",
+        "HP:0000952",
+        "HP:0000341",
+        "HP:0000574",
+        "HP:0000286",
+        "HP:0007665",
+        "HP:0005280",
+        "HP:0000218",
+        "HP:0000278",
+        "HP:0009623",
+        "HP:0004209",
+        "HP:0001159",
+        "HP:0012382",
+        "HP:0000750",
+        "HP:0011344",
+        "HP:0001344",
+        "HP:0000708",
+        "HP:0031546",
+        "HP:0001643",
+        "HP:0000729",
+        "HP:0001629",
+        "HP:0001642",
+        "HP:0001655",
+        "HP:0000028",
+        "HP:0000023"
+      ]
+    },
+    {
+      "patient_id": "O2",
+      "phenotype": [
+        "HP:0001328",
+        "HP:0001999",
+        "HP:0001263",
+        "HP:0001007",
+        "HP:0000664",
+        "HP:0000508",
+        "HP:0001252",
+        "HP:0000716",
+        "HP:0011410",
+        "HP:0000341",
+        "HP:0000286",
+        "HP:0007665",
+        "HP:0009623",
+        "HP:0004209",
+        "HP:0001159",
+        "HP:0007010",
+        "HP:0000750",
+        "HP:0000739",
+        "HP:0011003",
+        "HP:0002650",
+        "HP:0001382",
+        "HP:0000347",
+        "HP:0000708",
+        "HP:0001513",
+        "HP:0000545",
+        "HP:0002020",
+        "HP:0002019",
+        "HP:0001250",
+        "HP:0000504",
+        "HP:0100716",
+        "HP:0007018",
+        "HP:0002218",
+        "HP:0008677"
+      ]
+    }
+  ],
+  "elapsed_seconds": 30.841,
+  "usage": {
+    "prompt_tokens": 7464,
+    "total_tokens": 8179,
+    "completion_tokens": 715,
+    "prompt_tokens_details": null
+  }
+}

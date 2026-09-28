@@ -1,0 +1,298 @@
+{
+  "pmc_id": "6036836",
+  "identity": "51d12ad319b843843f76c8d1ee49970156c017f804892ee2f46d117779dba809",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 6898,
+    "covered_source_characters": 6898,
+    "source_is_excerpted": false,
+    "candidate_windows": 16,
+    "selected_windows": 16,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 10232,
+    "candidate_concepts": 23,
+    "patient_count": 1
+  },
+  "prompt": {
+    "pmc_id": "6036836",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "patient",
+            "offset": 433
+          },
+          {
+            "text": "a 2-year and 7-month-old Mexican mestizo male",
+            "offset": 2556
+          },
+          {
+            "text": "patient",
+            "offset": 3231
+          },
+          {
+            "text": "patient",
+            "offset": 5795
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0001396": [
+        "cholestasis"
+      ],
+      "HP:0001642": [
+        "pulmonary stenosis"
+      ],
+      "HP:0000627": [
+        "posterior embryotoxon"
+      ],
+      "HP:0001999": [
+        "dysmorphic facial features",
+        "dysmorphic face"
+      ],
+      "HP:0000952": [
+        "jaundice"
+      ],
+      "HP:0000337": [
+        "broad forehead",
+        "wide forehead"
+      ],
+      "HP:0000490": [
+        "deep-set eyes",
+        "Deep-set eyes"
+      ],
+      "HP:0000414": [
+        "bulbous nose"
+      ],
+      "HP:0001406": [
+        "intrahepatic cholestasis"
+      ],
+      "HP:0001081": [
+        "cholelithiasis"
+      ],
+      "HP:0011410": [
+        "cesarean section"
+      ],
+      "HP:0025116": [
+        "fetal distress"
+      ],
+      "HP:0000958": [
+        "dry skin"
+      ],
+      "HP:0045075": [
+        "sparse eyebrows"
+      ],
+      "HP:0000325": [
+        "triangular face"
+      ],
+      "HP:0000411": [
+        "prominent ears"
+      ],
+      "HP:0030148": [
+        "heart murmur"
+      ],
+      "HP:0002240": [
+        "hepatomegaly"
+      ],
+      "HP:0002089": [
+        "pulmonary hypoplasia"
+      ],
+      "HP:0012704": [
+        "subarachnoid space"
+      ],
+      "HP:0000991": [
+        "xanthomata"
+      ],
+      "HP:0001395": [
+        "liver fibrosis"
+      ],
+      "HP:0000303": [
+        "prominent chin"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0001396",
+          "HP:0001642",
+          "HP:0000627",
+          "HP:0001999",
+          "HP:0000952",
+          "HP:0000337",
+          "HP:0000490",
+          "HP:0001081",
+          "HP:0011410",
+          "HP:0025116",
+          "HP:0000958",
+          "HP:0045075",
+          "HP:0000325",
+          "HP:0000411",
+          "HP:0030148",
+          "HP:0002240",
+          "HP:0002089",
+          "HP:0012704",
+          "HP:0000991",
+          "HP:0001395"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "A Novel c.91dupG JAG1 Gene Mutation Is Associated with Early Onset and Severe Alagille Syndrome"
+      },
+      {
+        "offset": 96,
+        "section": "ABSTRACT",
+        "text": "Alagille syndrome (MIM 118450) is an autosomal dominant disorder characterized by paucity of intrahepatic bile ducts, chronic cholestasis, pulmonary stenosis, butterfly-like vertebrae, posterior embryotoxon, and dysmorphic facial features. Most cases are caused by JAG1 gene mutations. We report the case of a 2-year-old Mexican mestizo patient with Alagille syndrome, having exhibited jaundice and cholestatic syndrome as of three weeks of age. Sequencing analysis of the JAG1 gene revealed the novel heterozygous mutation c.91dupG that originates a truncated protein and therefore a possibly diminished activation of the Notch signaling pathway. The latter may explain the severe phenotype of the patient. Since the mutation was not identified in the parents, it was considered a de novo event, highlighting the importance of molecular diagnosis and genetic counseling. In conclusion, this report widens the spectrum of JAG1 gene mutations associated with Alagille syndrome."
+      },
+      {
+        "offset": 1073,
+        "section": "INTRO",
+        "text": "1. Introduction"
+      },
+      {
+        "offset": 1089,
+        "section": "INTRO",
+        "text": "Alagille syndrome (ALGS1; MIM 118450) is an autosomal dominant disorder with prevalence of 1:70,000-100,000. It presents a broad spectrum of clinical manifestations, characterized by paucity of intrahepatic bile ducts, chronic cholestasis, pulmonary stenosis, butterfly-like vertebrae, posterior embryotoxon, and a dysmorphic face characterized by a broad forehead, deep-set eyes, a bulbous nose, and a small pointed mandible."
+      },
+      {
+        "offset": 1516,
+        "section": "INTRO",
+        "text": "In 97% of the cases, ALGS1 is due to JAG1 mutations (MIM 601920). The JAG1 gene is in 20p12.2 and encodes for JAGGED1, a 1218 amino acid protein that participates in the Notch signaling pathway as a ligand. This pathway is involved in the transcription of genes for cell fate and differentiation. NOTCH2 gene mutations (MIM 600275) are identified in less than 1% of ALGS patients (ALGS2). "
+      },
+      {
+        "offset": 1906,
+        "section": "INTRO",
+        "text": "ALGS1 is established when three of the five major clinical features are diagnosed and can be confirmed by direct sequencing of JAG1. Next-generation sequencing analysis, including either genome or exome sequences, has been recommended for the molecular diagnosis of neonatal or infantile intrahepatic cholestasis. Our institution is a national reference center for the diagnosis and management of ALGS patients, in which novel and known JAG1 mutations have been identified in Mexican mestizo patients. Here we describe a patient having a new JAG1 mutation associated with early onset and severe Alagille syndrome."
+      },
+      {
+        "offset": 2520,
+        "section": "CASE",
+        "text": "2. Case Presentation"
+      },
+      {
+        "offset": 2541,
+        "section": "CASE",
+        "text": "The proband is a 2-year and 7-month-old Mexican mestizo male (Figure 1(a), individual III.2). He was referred at 5 months of age due to cholestatic syndrome characterized by jaundice and pale stools, which began as of the third week of life. He is the only child of a young, apparently healthy, and unrelated couple."
+      },
+      {
+        "offset": 2858,
+        "section": "CASE",
+        "text": "The pregnancy lasted 39 weeks and was complicated by maternal cholelithiasis at the fourth month. Antibiotics were indicated for repetitive urinary infections as of the fifth month. Delivery was carried out by cesarean section due to fetal distress. The newborn's weight was 2200 g (P<5), height was 48 cm (P<5), and Apgar score was 8/9."
+      },
+      {
+        "offset": 3198,
+        "section": "CASE",
+        "text": "The cognitive development of the patient is normal. At nine months of age, his weight was 6 kg (P<5), height was 64 cm (P<5), and head circumference was 44.5 cm (P25-50). He manifested generalized jaundice, dry skin, and an anterior fontanelle that had not yet closed. He had sparse eyebrows, a broad forehead, deep-set eyes, a triangular face, prominent ears, a heart murmur, hepatomegaly, and hypotrophic limbs (Figures 1(b) and 1(c)). His liver function tests were abnormal (Figure 1(d)) and an abdominal ultrasound analysis demonstrated generalized thickening of the biliary tract. The X-ray analysis showed a butterfly-like image in several dorsal vertebrae (Figure 1(e)). Right and left pulmonary hypoplasia were diagnosed by echocardiogram analysis. A magnetic resonance image analysis at the age of 1 year and 2 months displayed widening of the subarachnoid space and bilateral subarachnoid cysts in the temporal fossa. The optic nerve in both eyes was normal. At 2 years and 2 months of age, he developed xanthomata in both elbows and in his knuckles, and at 2 years and 4 months of age, posterior embryotoxon was diagnosed. A hepatic biopsy detected intracytoplasmic cholestasis and the absence of interlobular conducts."
+      },
+      {
+        "offset": 4429,
+        "section": "CASE",
+        "text": " JAG1 gene molecular analysis was conducted with institutional approval and after obtaining informed consent by second-generation sequencing in a private laboratory (Nanolab, Mexico City, Mexico) from blood samples, revealing the c.91dupG variant in a heterozygous state. This causes a frameshift mutation and a premature stop codon at amino acid number 72 of the JAGGED1 protein (Figure 1(f)). Capillary sequencing was carried out in our laboratory and confirmed the presence of the mutation, which was not found in the parents (Figure 1(g))."
+      },
+      {
+        "offset": 4973,
+        "section": "DISCUSS",
+        "text": "3. Discussion"
+      },
+      {
+        "offset": 4987,
+        "section": "DISCUSS",
+        "text": "Alagille syndrome is an infrequent disease requiring a multidisciplinary team of medical specialists for its management. In the patient currently under study, the onset of Alagille syndrome was at an early age with severe clinical characteristics, including cholestatic syndrome and xanthomata. JAG1 gene molecular analysis revealed the previously unreported c.91dupG variant in a heterozygous state, which produces a truncated JAGGED1 protein and probably a diminished function of the Notch signaling pathway. However, additional studies are required to explore its effect on the protein and signaling level."
+      },
+      {
+        "offset": 5597,
+        "section": "DISCUSS",
+        "text": "Mouzaki et al. reported that some symptoms are deemed indicators of a bad prognosis, such as high total bilirubin levels between 12 and 24 months of age, liver fibrosis, and xanthomata. The present patient had two of these predictors, high total bilirubin and xanthomata, and required a liver transplant."
+      },
+      {
+        "offset": 5902,
+        "section": "DISCUSS",
+        "text": "ALGS1 is considered to have a wide spectrum of clinical variabilities with no strong phenotype-genotype correlation. In some cases, as found herein, there can be early onset and severe symptoms. As the mutation of the patient in question was not identified in his parents, it was considered a de novo event, which occurs in up to 60% of ALGS1 cases. However, a germline mosaicism in one of the parents cannot be discarded. Both the latter scenario and a mutation are important aspects for genetic counseling. The current report widens the spectrum of JAG1 gene mutations associated with Alagille syndrome."
+      },
+      {
+        "offset": 7492,
+        "section": "FIG",
+        "text": "(a) Pedigree of the family of the proband. (b) Facial clinical characteristics of the proband. Note the triangular face, wide forehead, and prominent chin. (c) Deep-set eyes. (d) Altered liver function analysis. (e) X-ray analysis showing butterfly-like dorsal vertebra (white arrow). (f) Capillary sequencing analysis demonstrating the mutation in the proband. (g) Wild-type sequence in one of the parents."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-928f6836f1aae1e0",
+    "object": "chat.completion",
+    "created": 1790522516,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0001396\",\"HP:0001642\",\"HP:0000627\",\"HP:0001999\",\"HP:0000952\",\"HP:0000337\",\"HP:0000490\",\"HP:0001081\",\"HP:0011410\",\"HP:0025116\",\"HP:0000958\",\"HP:0045075\",\"HP:0000325\",\"HP:0000411\",\"HP:0030148\",\"HP:0002240\",\"HP:0002089\",\"HP:0012704\",\"HP:0000991\",\"HP:0001395\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 2767,
+      "total_tokens": 2981,
+      "completion_tokens": 214,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0001396",
+        "HP:0001642",
+        "HP:0000627",
+        "HP:0001999",
+        "HP:0000952",
+        "HP:0000337",
+        "HP:0000490",
+        "HP:0001081",
+        "HP:0011410",
+        "HP:0025116",
+        "HP:0000958",
+        "HP:0045075",
+        "HP:0000325",
+        "HP:0000411",
+        "HP:0030148",
+        "HP:0002240",
+        "HP:0002089",
+        "HP:0012704",
+        "HP:0000991",
+        "HP:0001395"
+      ]
+    }
+  ],
+  "elapsed_seconds": 7.274,
+  "usage": {
+    "prompt_tokens": 2767,
+    "total_tokens": 2981,
+    "completion_tokens": 214,
+    "prompt_tokens_details": null
+  }
+}

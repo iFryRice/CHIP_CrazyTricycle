@@ -1,0 +1,379 @@
+{
+  "pmc_id": "12733031",
+  "identity": "41d0b97f5d1acc398cead6e84fa56c02643af04023e50b107ba01cf690967710",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 21659,
+    "covered_source_characters": 21659,
+    "source_is_excerpted": false,
+    "candidate_windows": 47,
+    "selected_windows": 47,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 25826,
+    "candidate_concepts": 12,
+    "patient_count": 1
+  },
+  "prompt": {
+    "pmc_id": "12733031",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "A 27-year-old female patient",
+            "offset": 5329
+          },
+          {
+            "text": "female",
+            "offset": 15590
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0001892": [
+        "bleeding",
+        "bleeding tendency",
+        "Bleeding"
+      ],
+      "HP:0002172": [
+        "imbalance"
+      ],
+      "HP:0000978": [
+        "easy bruising"
+      ],
+      "HP:0000421": [
+        "epistaxis"
+      ],
+      "HP:0004846": [
+        "prolonged bleeding after surgery"
+      ],
+      "HP:0040012": [
+        "chromosomal abnormalities"
+      ],
+      "HP:0000255": [
+        "acute sinusitis"
+      ],
+      "HP:0003645": [
+        "prolonged activated partial thromboplastin time"
+      ],
+      "HP:0100608": [
+        "intermenstrual bleeding"
+      ],
+      "HP:0002960": [
+        "autoimmune diseases"
+      ],
+      "HP:0008209": [
+        "premature ovarian failure"
+      ],
+      "HP:0030212": [
+        "Collecting"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0001892",
+          "HP:0000978",
+          "HP:0000255",
+          "HP:0030212"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "A Rare Case of Mild Hemophilia A in a Female with Mosaic Monosomy X and a De Novo F8 Variant"
+      },
+      {
+        "offset": 93,
+        "section": "ABSTRACT",
+        "text": "Hemophilia A (HA) is an X-linked recessive bleeding disorder that predominantly affects males but rarely manifests clinically in females. We report an unusual case of a woman with HA carrying a de novo heterozygous F8 variant, skewed X chromosome inactivation (XCI), and mosaic monosomy X without the Turner syndrome phenotype. DNA was extracted from whole blood. After excluding F8 inversions and large rearrangements, Sanger sequencing of coding regions was performed. XCI was assessed by STR analysis of the AR gene. Haplotypes were identified by fragment analysis of three polymorphic sites. Karyotyping was performed using G-banding. A heterozygous missense variant in the F8 gene, c.6545G>A (p.Arg2182His), was detected with allelic imbalance. STR analysis confirmed ~93% skewed XCI. Karyotyping revealed mosaicism: 45,X [7]/46,XX [14]. Neither parent carried the c.6545G>A variant or karyotype aberrations. We suggest that 46,XX cells carried c.6545G/A with preferential inactivation of the normal X chromosome, whereas 45,X0 cells carried the mutant allele only. The limited proportion of active normal X chromosomes led to a mild rather than severe phenotype. This case highlights complex genetic mechanisms underlying HA in females and underscores the importance of comprehensive molecular and cytogenetic testing for accurate diagnosis, clinical management, and genetic counseling."
+      },
+      {
+        "offset": 1486,
+        "section": "INTRO",
+        "text": "1. Introduction"
+      },
+      {
+        "offset": 1502,
+        "section": "INTRO",
+        "text": "Hemophilia A (HA, MIM #306700) is an X-linked recessive bleeding disorder caused by a deficiency in coagulation factor VIII or lack of its function due to pathogenic variants in the F8 gene (MIM #300841). It is generally accepted that HA predominantly affects males with an estimated frequency of 1 in 5000, while females are expected to be asymptomatic, due to the presence of a second X chromosome."
+      },
+      {
+        "offset": 1903,
+        "section": "INTRO",
+        "text": "However, recent data reveal that a low FVIII activity level and/or bleeding symptoms are not so rare in hemophilia A carriers. One-third of carriers are reported to have factor levels <60% (with normal range 50-150%), resulting in an increased bleeding tendency. Females with FVIII:C < 40% made up 8.5% of people attending US Hemophilia Treatment Centers between 2012 and 2022 with FVIII deficiency. Bleeding manifestations in women may include easy bruising, epistaxis, prolonged bleeding after surgery, dental procedures, or trauma. They may experience problems with their reproductive health, including heavier and more prolonged bleeding during menstruation, childbirth, and postpartum, and may have reduced health-related quality of life, adverse psychosocial effects, and increased time lost from work compared with non-carriers. Additionally, hemophilia A carriers with normal clotting factor levels may also have an increased bleeding tendency."
+      },
+      {
+        "offset": 2858,
+        "section": "INTRO",
+        "text": "Several mechanisms underlie HA manifestation in women. The most common is skewed X chromosome inactivation (XCI) of the unaffected allele. XCI is a physiological process in mammals that balances gene dosage between males and females by transcriptionally silencing one X chromosome in each female somatic cell through CpG hypermethylation and chromatin remodeling, occurring at early stages of development. Normally random, XCI can range from balanced (50:50) to highly skewed (0:100), with one X active in all cells. Large-scale studies have shown that only about 10% of females exhibit highly skewed XCI. While clinically irrelevant in healthy females, in cases of X chromosome abnormalities or X-linked disorders, a highly skewed ratio can drive disease manifestation. In hemophilia carriers, skewing correlates with factor levels and bleeding severity. Moreover, evidence suggests that XCI may not be entirely random, but instead genetically influenced and potentially inherited together with F8 variants in affected women."
+      },
+      {
+        "offset": 3885,
+        "section": "INTRO",
+        "text": "Other mechanisms include biallelic F8 variants (homozygous or compound heterozygous). Cases have also been reported in 46,XY individuals with an F8 variant and Swyer syndrome:characterized by a female phenotype due to a variant in the sex-determining region Y (SRY) gene:or with androgen insensitivity syndrome caused by a pathogenic AR variant on the X chromosome."
+      },
+      {
+        "offset": 4255,
+        "section": "INTRO",
+        "text": "HA in females may also result from X chromosomal abnormalities, either structural (such as translocations or large deletions) or numerical (e.g., Turner syndrome, TS, with a 45,X karyotype), in combination with an F8 mutation. Turner syndrome is characterized by the loss of one X chromosome or part of it. The most frequent karyotypes are 45,X (~30% of cases) and mosaic 45,X/46,XX (~50%). The clinical phenotype varies considerably: while 45,X individuals often present with classical TS features, women with mosaic X loss frequently have an unremarkable phenotype, even with up to 20% 45,X blood cells. A large UK population study reported a prevalence of 45,X in 12 per 100,000 women, with 55% showing TS phenotype, and mosaic 45,X/46,XX in 76 per 100,000 women, with only 0.5% manifesting TS features. The coincidence of HA and TS is extremely rare, with only about ten cases reported."
+      },
+      {
+        "offset": 5146,
+        "section": "INTRO",
+        "text": "Here we report a very rare case of a female with HA, mosaic monosomy X without the Turner syndrome phenotype, a de novo heterozygous pathogenic F8 variant, and skewed XCI."
+      },
+      {
+        "offset": 5318,
+        "section": "RESULTS",
+        "text": "2. Results"
+      },
+      {
+        "offset": 5329,
+        "section": "RESULTS",
+        "text": "A 27-year-old female patient was referred to a hematology center for diagnostic clarification. Since childhood, she had experienced prolonged bleeding after cuts and tooth extractions, gum bleeding, and easy bruising. At the age of four, she was diagnosed with von Willebrand disease. Menarche at age 12 was heavy and required hospitalization for dysfunctional uterine bleeding, although subsequent menses were moderate. At age 11, she underwent maxillary sinus puncture for acute sinusitis complicated by bleeding."
+      },
+      {
+        "offset": 5845,
+        "section": "RESULTS",
+        "text": "At age 17, reevaluation revealed reduced FVIII activity (19.9%), prolonged activated partial thromboplastin time (APTT, 51.7 s), decreased collagen-induced platelet aggregation (4.53%), with normal vWF:C and vWF:Ag levels. A carrier state of hemophilia A was suspected, but no further investigations were performed (Table 1)."
+      },
+      {
+        "offset": 6171,
+        "section": "RESULTS",
+        "text": "At age 27, the patient presented to a gynecologist with intermenstrual bleeding. While taking tranexamic acid, she noted worsening hemorrhagic symptoms and was referred to the hematology center. Laboratory testing showed FVIII:C = 12.7%, APTT = 48.9 s, with normal vWF:C (Table 1). The primary diagnosis was revised to hemophilia A. She reported no family history of hematologic disorders. Both parents had FVIII:C and APTT within normal range (Table 1). Genetic testing of the F8 gene was requested."
+      },
+      {
+        "offset": 6672,
+        "section": "RESULTS",
+        "text": "Both inversions inv22 and inv1 were excluded, and long deletions and insertions were not detected. The Sanger sequencing identified a missense variant in exon 23 of the F8 gene, c.6545G>A (p.Arg2182His). This variant occurs at a CpG site, a known mutational hotspot, and is reported in the Human Gene Mutation Database and in the EAHAD Database  (accessed on 13 November 2025) as pathogenic, typically associated with severe or moderate HA. However, the patient presented with a mild phenotype. Repeated sequencing consistently demonstrated a minor peak of the wild-type nucleotide beneath the mutant signal (Figure 1)."
+      },
+      {
+        "offset": 7292,
+        "section": "RESULTS",
+        "text": "Genetic analysis confirmed the absence of the pathogenic variant in both parents, indicating de novo origin."
+      },
+      {
+        "offset": 7401,
+        "section": "RESULTS",
+        "text": "The study of the AR gene, as well as Sanger sequencing, also revealed an anomaly. In heterozygous individuals, the ratio of allele peak heights (XC1/XC2) is normally 0.7-1.0; in this patient, it was ~2.6, suggesting overrepresentation of the X chromosome carrying the longer AR microsatellite allele."
+      },
+      {
+        "offset": 7704,
+        "section": "RESULTS",
+        "text": "The XCI analysis based on this locus showed that the overrepresented chromosome was predominantly active, with a skewing rate of 93% (Figure 2)."
+      },
+      {
+        "offset": 7849,
+        "section": "RESULTS",
+        "text": "Haplotype construction using three polymorphic sites (rs746853821, rs782325424, REN90200) demonstrated that the prevailing X chromosome was inherited from the patient's father (Figure 3)."
+      },
+      {
+        "offset": 8039,
+        "section": "RESULTS",
+        "text": "Given the sequencing and fragment analysis results, an X chromosome abnormality was suspected, and karyotyping was performed."
+      },
+      {
+        "offset": 8165,
+        "section": "RESULTS",
+        "text": "Conventional cytogenetic analysis revealed mosaicism, 45,X [7]/46,XX [14], corresponding to monosomy X in 7 metaphases (33%) and a normal female karyotype in 14 metaphases (67%). The patient, however, displayed no clinical features of Turner syndrome. Her father had a normal male karyotype, 46,XY, and her mother had a normal female karyotype, 46,XX."
+      },
+      {
+        "offset": 8517,
+        "section": "RESULTS",
+        "text": "Taken together, these findings suggest that the patient carried 46,XX cells with the genotype c.6545G/A and preferential inactivation of the normal X chromosome, as well as 45,X cells carrying only the mutant allele (c.6545A). The residual proportion of active normal X chromosomes likely accounted for the mild rather than severe phenotype. The prevailing X chromosome was paternally inherited, but the pathogenic variant most likely arose de novo, either in the paternal germline or during early embryogenesis."
+      },
+      {
+        "offset": 9030,
+        "section": "DISCUSS",
+        "text": "3. Discussion"
+      },
+      {
+        "offset": 9044,
+        "section": "DISCUSS",
+        "text": "Historically, hemophilia was considered a male-only disease due to its X-linked recessive inheritance. It is now clear that this view is oversimplified, as female carriers may also present with reduced factor levels and, in some cases, clinically manifest hemophilia."
+      },
+      {
+        "offset": 9312,
+        "section": "DISCUSS",
+        "text": "According to a US survey conducted between 2012 and 2020, 1161 females with HA were reported. The majority had mild disease (91%), while moderate and severe forms were less frequent (3.7% and 5.2%, respectively). This distribution likely reflects the predominant mechanism of HA in females:skewed XCI. Incomplete inactivation of the unaffected X chromosome allows residual coagulation factor activity. In our case, the patient exhibited a milder phenotype than expected for the identified pathogenic variant, likely due to a small population of cells with a normal karyotype and an active unaffected X chromosome, which maintained ~10% FVIII activity."
+      },
+      {
+        "offset": 9966,
+        "section": "DISCUSS",
+        "text": "The c.6545G>A variant, found in the patient, occurs at a CpG site, a known mutational hotspot, and is reported in the Human Gene Mutation Database (11 cases) and in the EAHAD FVIII Coagulation Factor Variant Database (67 cases) as pathogenic, typically associated with severe or moderate HA (FVIII:C < 6% in 64/67 cases). The question of why this variant leads to different phenotype severity in different patients has been discussed for a long time, but there is still no definitive answer. The main reasons for this phenomenon could be the differences in FVIII:C assay methods used for activity level estimation or extragenic factors that affect or modify gene expression or protein function influencing phenotype. Nevertheless, usually the c.6545G>A variant has quite serious consequences for the FVIII level. There is only one mention in the literature of a male patient with this variant and mild HA, but no data are available about what made this person different from all others. There is also a case of familial HA, where all males with the c.6545G>A variant had severe HA, female carriers were predominantly asymptomatic and had FVIII levels in the low/normal to normal range, except for a female proband who inherited this variant from her HA father. She had severe HA with an FVIII:C level of <0.01 IU/mL. Thorough analysis revealed that she had a normal 46,XX karyotype, and the disease appeared from almost 100% inactivation of the mother's untouched X chromosome. It is also interesting to note that despite the high frequency of c.6545G>A in the world, in the Russian population this variant has not been detected before."
+      },
+      {
+        "offset": 11605,
+        "section": "DISCUSS",
+        "text": "Our findings suggest that all cells of the patient, regardless of their karyotype, carried a mutant allele (c.6545A). This indicates that the mutation occurred earlier in the development than mosaicism. Based on haplotype reconstruction the prevailing X chromosome with the mutant allele was paternally inherited, but the absence of the pathogenic variant in the patient's father indicates that it most likely arose de novo, either in the paternal germline or during early embryogenesis. There are data showing that variants in F8, especially in CpG dinucleotides, occur more frequently in paternal germ cells, as they go through more mitotic divisions and methylation has been suggested to occur at a much higher rate in spermatocyte DNA than in oocyte DNA. The patient does not have any siblings, so it is impossible to exclude the case if the patient's father has a gonadal mosaicism or the pathogenic variant occurred only in one cell."
+      },
+      {
+        "offset": 12549,
+        "section": "DISCUSS",
+        "text": "The loss of the X chromosome obviously occurred later in the development, probably during post-zygotic mitotic divisions, as the monosomy is present in the lesser part of the blood cells. Unfortunately, the available data are insufficient to accurately determine the stage at which mosaicism arose. To determine this, it would be necessary to assess its level in tissues of different embryonic origins (for example, in buccal epithelium, fibroblasts, or urothelial cells). However, we were unable to carry this out because the patient was no longer available for an appointment. The main mechanism leading to mosaic chromosomal loss is anaphase lagging, which is the failure of a single chromatid to be incorporated into the nucleus, resulting in a monosomy of that chromosome in one cell and a disomy in the corresponding chromosome in the other cell. It occurs when the chromatid fails to attach to the spindle or when the chromatid attaches to the spindle but then fails to be incorporated into the nucleus. It was also shown that rates for X chromosome mosaicism are four times higher than mean autosomal rates and that most whole X chromosome events are mosaic losses. In addition, it is even more interesting that X mosaic events are more likely to involve the inactive X chromosome than the active X chromosome. In our case, based on the haplotype reconstruction, the maternal inactive X chromosome was lost in some cells, which is consistent with the results of the study discussed above. In humans, the inactive X chromosome is chosen early in development and, once established, stably maintained through mitotic divisions. So probably nonrandom inactivation of the maternal X chromosome led to the total loss of it in some cells."
+      },
+      {
+        "offset": 14289,
+        "section": "DISCUSS",
+        "text": "Cases of Turner syndrome co-occurring with HA have been reported. In many, there was a positive family history of HA, TS was associated with severe disease, and mosaic variants were more common than complete monosomy. Among mosaic cases, isochromosomes and ring chromosomes were more frequent than the 45,X/46,XX karyotype. In contrast, our patient had only numerical chromosomal mosaicism, no TS phenotype, no family history of HA (confirmed genetically), and a mild clinical presentation."
+      },
+      {
+        "offset": 14780,
+        "section": "DISCUSS",
+        "text": "We found only one report, from 1965, describing a phenotypically normal female with 45,X/46,XX mosaicism, Turner syndrome, and familial HA; however, neither XCI analysis nor F8 variant identification was performed."
+      },
+      {
+        "offset": 14995,
+        "section": "DISCUSS",
+        "text": "The clinical manifestations of X chromosome mosaicism vary widely, from an unremarkable phenotype to features of Turner syndrome, often complicated by additional genetic disorders. X chromosome mosaicism has also been implicated in susceptibility to autoimmune diseases and premature ovarian failure. Our patient had no health issues other than bleeding but was advised to undergo regular medical follow-up to monitor for potential complications. She does not have siblings or children; therefore, further investigation of this family was unavailable."
+      },
+      {
+        "offset": 15547,
+        "section": "DISCUSS",
+        "text": "Here we report an extremely rare case of a female with hemophilia A, mosaic monosomy X without the Turner syndrome phenotype, carrying a de novo heterozygous pathogenic variant in the F8 gene and exhibiting skewed XCI. Such cases expand our understanding of the mechanisms underlying hemophilia A and other X-linked disorders in women. Accurate and timely diagnosis of female hemophilia A is essential for appropriate clinical management and genetic counseling. Collecting and analyzing rare and complex cases contribute to improving the quality of care. In this case, establishing the correct diagnosis led to specific recommendations for the patient, including intravenous administration of FVIII concentrate during future surgical interventions or childbirth to prevent hemorrhagic complications."
+      },
+      {
+        "offset": 16347,
+        "section": "METHODS",
+        "text": "4. Materials and Methods"
+      },
+      {
+        "offset": 16372,
+        "section": "METHODS",
+        "text": "During the preparation of this work the authors did not use generative AI or AI-assisted technologies."
+      },
+      {
+        "offset": 16475,
+        "section": "METHODS",
+        "text": "4.1. Coagulation Study"
+      },
+      {
+        "offset": 16498,
+        "section": "METHODS",
+        "text": "The analysis of laboratory data included coagulation parameters performed by clotting (activated partial thromboplastin time (APTT), prothrombin index (PTI), fibrinogen concentration, activity of FVIII, FIX, FXI, FXII, vWF:C, vWF:Ag) and chromogenic (antithrombin III (AT III), protein C) methods on automatic analyzers Sysmex CA-1500 (Siemens, Washington, DC, USA), Instrumentation Laboratory ACL TOP 700 (IL Werfen, Bedford, MA, USA) and Instrumentation Laboratory ACL AcuStar (IL Werfen, Bedford, MA, USA)."
+      },
+      {
+        "offset": 17008,
+        "section": "METHODS",
+        "text": "4.2. DNA Extraction and Detection of Mutations"
+      },
+      {
+        "offset": 17055,
+        "section": "METHODS",
+        "text": "Genomic DNA of the patient, her mother, and her father was isolated from EDTA-treated whole blood samples using phenol-chloroform extraction and ethanol precipitation, dissolved in TE buffer and frozen until genotyping."
+      },
+      {
+        "offset": 17277,
+        "section": "METHODS",
+        "text": "Inv22 inversion was examined by modified long-range polymerase chain reaction (LD-PCR) using Promega GoTaq Long PCR Master Mix (Promega Corporation, Madison, WI, USA). Inv1 inversion was tested by DNA-based allele-specific PCR with primers 9F, 9cR, int1h-2F, and int1h-2R using an established method with PCR Master Mix (Thermo Fisher Scientific, Waltham, MA, USA). Sanger sequencing of all functionally important regions of the F8 gene was performed, as was described earlier. Large deletions/insertions were tested with multiplex ligation-dependent probe amplification (MLPA). MLPA was carried out using the F8 SALSA MLPA kit P178 and SALSA MLPA Reagent Kit (MRC Holland, Amsterdam, The Netherlands) according to the manufacturer's instructions. Exon dosage was calculated using Coffalyser.Net v.240129.1959 software (MRC Holland)."
+      },
+      {
+        "offset": 18114,
+        "section": "METHODS",
+        "text": "The cDNA numbering system used is compliant with the Human Genome Variation Society recommendations ver. 21.1  (accessed on 13 November 2025). The amino acid numbering is based on the start methionine codon +1; the reference sequence used is NG_011403.2 for genomic positioning and NM_000132.4 for cDNA numbering. As reference databases for pathogenic variants we used the FVIII Coagulation Factor Variant Database  (accessed on 13 November 2025) and Human Gene Mutation Database  (accessed on 13 November 2025)."
+      },
+      {
+        "offset": 18627,
+        "section": "METHODS",
+        "text": "Haplotypes of the patient and her parents were identified through the fragment analysis of three polymorphic sites (rs746853821, rs782325424, HA472 (STS REN90200)) using primers designed in our laboratory. PCR reactions were carried out on a Tercik  programmable thermocycler (DNK-Technology, Moscow, Russia) with PCR Master Mix (Thermo Fisher Scientific) using 10 pmol of each oligonucleotide primer (Syntol, Moscow, Russia) and 50-100 ng template DNA in 25 muL of reaction mixture. Amplification conditions were 30 cycles of 94  C for 1 min, 62  C for 1 min, and 72  C for 3 min."
+      },
+      {
+        "offset": 19216,
+        "section": "METHODS",
+        "text": "XCI was studied by the fragment analysis of STR rs746853821 in the AR (HUMARA) gene. The assay is based on selective activity of HpaII restriction endonuclease on unmethylated (activated) DNA. Genomic DNA (100 ng) was digested with 5 U HpaII (SibEnzyme, Novosibirsk, Russia) in a total reaction volume of 10 muL and incubated at 37  C for 16 h. Restriction enzyme was inactivated by incubation at 65  C for 20 min. For each DNA sample, two PCR reactions with the primers Hum2xF (FAM-GTG CGC GAA GTG ATC CAG AA) and Hum1x (GAG AAC CAT CCT CAC CCT GC) under conditions of 30 cycles of 94  C for 1 min, 62  C for 1 min, and 72  C for 3 min were performed. In one reaction, the template contained DNA digested with HpaII; the other reaction contained undigested genomic DNA. PCR products were subjected to electrophoresis in an automatic genetic analyzer Nanofor-05 (Syntol) with GeneScan 500 LIZ (Thermo Fisher Scientific) size standard, followed by analysis using the GeneMarker v. 3.0.1 (SoftGenetics LLC, State College, PA, USA). The degree of skewing was calculated as peak height of [(XC1 digested/non digested)/((XC2 digested/non digested) + (XC1 digested/non digested))] x 100 and was classified as random (ratios 50:50 < 80:20), skewed (ratios 80:20 < 90:10), or extremely skewed (>=90:10)."
+      },
+      {
+        "offset": 20519,
+        "section": "METHODS",
+        "text": "4.3. Conventional Cytogenetic Analysis"
+      },
+      {
+        "offset": 20558,
+        "section": "METHODS",
+        "text": "G-banding analysis was performed on 72 h cultured PHA-stimulated peripheral blood lymphocytes as per standard procedure. Ikaros 6.3 software (MetaSystems, Berlin/Altlussheim, Germany) was used for chromosome analysis. Karyotype was described according to the International System for Human Cytogenetic Nomenclature (ISCN, 2020)."
+      },
+      {
+        "offset": 27238,
+        "section": "FIG",
+        "text": "Chromatogram of Sanger sequencing (a) and resequencing (b) of the missense variant in the F8 gene, c.6545G>A (p.Arg2182His). The mutated nucleotide is framed; there is a tiny peak of wild-type nucleotide beneath it."
+      },
+      {
+        "offset": 27454,
+        "section": "FIG",
+        "text": "Fragment analysis of STR in the AR gene indicating the degree of X chromosome inactivation: (a) patient's results showing skewed XCI; (b) control sample's results with random XCI."
+      },
+      {
+        "offset": 27638,
+        "section": "FIG",
+        "text": "Fragment analysis of three polymorphic sites (rs746853821, rs782325424, REN90200) in the patient (a), her father (b), and her mother (c), and haplotype reconstruction (father's chromosome is marked by red text; patient has predominantly paternal chromosome). A, B and C are alleles of each of polymorphic site. They are shown on each plate near the corresponding peaks and are summarized on the pedigree."
+      },
+      {
+        "offset": 28045,
+        "section": "TABLE",
+        "text": "Coagulation parameters of the patient and her parents."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-b0818ddca47f1c7d",
+    "object": "chat.completion",
+    "created": 1790522186,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0001892\",\"HP:0000978\",\"HP:0000255\",\"HP:0030212\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 6416,
+      "total_tokens": 6470,
+      "completion_tokens": 54,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0001892",
+        "HP:0000978",
+        "HP:0000255",
+        "HP:0030212"
+      ]
+    }
+  ],
+  "elapsed_seconds": 4.127,
+  "usage": {
+    "prompt_tokens": 6416,
+    "total_tokens": 6470,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}

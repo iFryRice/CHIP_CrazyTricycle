@@ -1,0 +1,84 @@
+{
+  "source_config": "dictionary+nearest",
+  "source_a_sha256": "ad2c0e59a46b772377ba3457480609ae6f665adc8014d486f9d4141b468c102a",
+  "oof_sha256": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+  "documents": [
+    {
+      "pmc_id": "5574094",
+      "patients": 1
+    },
+    {
+      "pmc_id": "5415817",
+      "patients": 1
+    },
+    {
+      "pmc_id": "6491447",
+      "patients": 1
+    },
+    {
+      "pmc_id": "10789033",
+      "patients": 1
+    },
+    {
+      "pmc_id": "6063015",
+      "patients": 4
+    },
+    {
+      "pmc_id": "12405443",
+      "patients": 4
+    },
+    {
+      "pmc_id": "5866036",
+      "patients": 3
+    },
+    {
+      "pmc_id": "5773845",
+      "patients": 5
+    }
+  ],
+  "cpu_metrics": {
+    "mention": {
+      "precision": 0.8042553191489362,
+      "recall": 0.6725978647686833,
+      "f1": 0.7325581395348837,
+      "tp": 378,
+      "fp": 92,
+      "fn": 184
+    },
+    "document": {
+      "precision": 0.8785046728971962,
+      "recall": 0.7014925373134329,
+      "f1": 0.7800829875518672,
+      "tp": 188,
+      "fp": 26,
+      "fn": 80
+    },
+    "association_micro": {
+      "precision": 0.7777777777777778,
+      "recall": 0.6391304347826087,
+      "f1": 0.7016706443914081,
+      "tp": 147,
+      "fp": 42,
+      "fn": 83
+    },
+    "association_macro": {
+      "precision": 0.6131758519258519,
+      "recall": 0.5385337758291723,
+      "f1": 0.5635472308876186,
+      "patients": 20
+    },
+    "score": 0.6944647505914444,
+    "counts": {
+      "documents": 8,
+      "patients": 20
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  }
+}

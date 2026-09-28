@@ -1,0 +1,548 @@
+{
+  "pmc_id": "12126309",
+  "identity": "32c4842776f4ee5dc407bda60fb8dbf329c676691c9c8cd9667c8865d67f3fdf",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 16649,
+    "covered_source_characters": 16649,
+    "source_is_excerpted": false,
+    "candidate_windows": 40,
+    "selected_windows": 40,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 21774,
+    "candidate_concepts": 22,
+    "patient_count": 8
+  },
+  "prompt": {
+    "pmc_id": "12126309",
+    "patients": [
+      {
+        "patient_id": "OIII:4",
+        "mentions": [
+          {
+            "text": "III:4",
+            "offset": 18165
+          }
+        ]
+      },
+      {
+        "patient_id": "OIV:4",
+        "mentions": [
+          {
+            "text": "IV:4",
+            "offset": 18172
+          }
+        ]
+      },
+      {
+        "patient_id": "OV:4",
+        "mentions": [
+          {
+            "text": "V:4",
+            "offset": 18178
+          }
+        ]
+      },
+      {
+        "patient_id": "OV:5",
+        "mentions": [
+          {
+            "text": "V:5",
+            "offset": 18183
+          }
+        ]
+      },
+      {
+        "patient_id": "OV:6",
+        "mentions": [
+          {
+            "text": "V:6",
+            "offset": 18188
+          }
+        ]
+      },
+      {
+        "patient_id": "OV:7",
+        "mentions": [
+          {
+            "text": "V:7",
+            "offset": 18193
+          }
+        ]
+      },
+      {
+        "patient_id": "OVI:1",
+        "mentions": [
+          {
+            "text": "VI:1",
+            "offset": 18201
+          }
+        ]
+      },
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "patient",
+            "offset": 1498
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0200134": [
+        "epileptic encephalopathy"
+      ],
+      "HP:0000253": [
+        "progressive microcephaly",
+        "Progressive microcephaly"
+      ],
+      "HP:0001250": [
+        "seizures",
+        "epilepsy"
+      ],
+      "HP:0001272": [
+        "cerebellar atrophy"
+      ],
+      "HP:0000252": [
+        "microcephaly"
+      ],
+      "HP:0004302": [
+        "disability",
+        "disabilities"
+      ],
+      "HP:0001298": [
+        "encephalopathy"
+      ],
+      "HP:0012759": [
+        "neurodevelopmental disorder"
+      ],
+      "HP:0011344": [
+        "severe developmental delay"
+      ],
+      "HP:0001252": [
+        "hypotonia"
+      ],
+      "HP:0001508": [
+        "poor weight gain"
+      ],
+      "HP:0010864": [
+        "severe intellectual disabilities",
+        "severe intellectual disability",
+        "ID"
+      ],
+      "HP:0001999": [
+        "facial dysmorphia"
+      ],
+      "HP:0000340": [
+        "sloping forehead"
+      ],
+      "HP:0005280": [
+        "flat nasal bridge"
+      ],
+      "HP:0000490": [
+        "deep-set eyes"
+      ],
+      "HP:0000739": [
+        "anxiety",
+        "Anxiety"
+      ],
+      "HP:0001328": [
+        "learning"
+      ],
+      "HP:0005484": [
+        "secondary microcephaly"
+      ],
+      "HP:0002342": [
+        "moderate to severe intellectual disabilities"
+      ],
+      "HP:0000713": [
+        "agitation"
+      ],
+      "HP:0004484": [
+        "Craniofacial anomalies"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "OIII:4",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OIV:4",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OV:4",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OV:5",
+        "phenotype": [
+          "HP:0010864",
+          "HP:0001999",
+          "HP:0000739",
+          "HP:0000713",
+          "HP:0004484"
+        ]
+      },
+      {
+        "patient_id": "OV:6",
+        "phenotype": []
+      },
+      {
+        "patient_id": "OV:7",
+        "phenotype": [
+          "HP:0001250",
+          "HP:0000252",
+          "HP:0004302",
+          "HP:0001508",
+          "HP:0010864",
+          "HP:0001999",
+          "HP:0000340",
+          "HP:0005280",
+          "HP:0000490",
+          "HP:0000739",
+          "HP:0001328"
+        ]
+      },
+      {
+        "patient_id": "OVI:1",
+        "phenotype": []
+      },
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0000252",
+          "HP:0004302"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "QARS1 associated developmental epileptic encephalopathy: first report of a rare homozygous missense variant from Pakistan causing nonepileptic phenotype in a family of seven patients and a comprehensive review of the literature"
+      },
+      {
+        "offset": 228,
+        "section": "ABSTRACT",
+        "text": "Background"
+      },
+      {
+        "offset": 239,
+        "section": "ABSTRACT",
+        "text": "Pathogenic variants in QARS1 (MIM:603727; Glutaminyl-TRNA Synthetase 1), which encodes Glutaminyl-tRNA synthetase 1, have been associated with rare progressive microcephaly with seizures and cerebral and cerebellar atrophy (MSCCA MIM:615760). Only a handful of MSCCA patients have been reported in the literature mostly associated with compound heterozygous QARS1 variants. In the current study, we aimed molecular characterization of a large consanguineous Pakistani family affected with microcephaly, severe intellectual and developmental disability."
+      },
+      {
+        "offset": 792,
+        "section": "ABSTRACT",
+        "text": "Methods"
+      },
+      {
+        "offset": 800,
+        "section": "ABSTRACT",
+        "text": "We isolated genomic DNA from blood samples collected from the two affected and three normal individuals of the family. We employed whole exome sequencing, homozygosity mapping, Sanger sequencing and in silico protein modelling tools to characterize the pathogenic variant causing the disease phenotype. Moreover, we collected data of 26 MSCCA patients previously reported in the literature."
+      },
+      {
+        "offset": 1191,
+        "section": "ABSTRACT",
+        "text": "Results"
+      },
+      {
+        "offset": 1199,
+        "section": "ABSTRACT",
+        "text": "The phenotype in the affected individuals of the family was characterized by microcephaly, severe intellectual and developmental disability, but no epilepsy. We found a rare QARS1 variant NM_005051.3:c.1133G > A, p.(Arg378His) in homozygous state in the family. This variant was recently cited in a patient of Turkish ethnicity, the only MSCCA patient reported with nonepileptic phenotype. This variant lying in the catalytic domain of glutaminyl-tRNA synthetase 1 showed deleterious structure and functional impacts on the protein predicted by in silico tools. The variant was classified as 'likely pathogenic' following ACMG guidelines."
+      },
+      {
+        "offset": 1846,
+        "section": "ABSTRACT",
+        "text": "Conclusions"
+      },
+      {
+        "offset": 1858,
+        "section": "ABSTRACT",
+        "text": "We present first report of QARS1 associated developmental encephalopathy from Pakistan. Our study adds to the restricted clinical and mutational database of this rare disorder supporting the growing evidence that homozygous missense QARS1 genotypes may lead to the milder phenotype. The reports of more patients with molecular studies will enhance the understanding of the genotype-phenotype correlations."
+      },
+      {
+        "offset": 2264,
+        "section": "INTRO",
+        "text": "Introduction"
+      },
+      {
+        "offset": 2277,
+        "section": "INTRO",
+        "text": "Progressive microcephaly, seizures, and cerebral and cerebellar atrophy (MSCCA; MIM: 615760) is a neurodegenerative and neurodevelopmental disorder with onset in the first days or months of life. MSCCA is an extremely rare autosomal recessive disease characterized by progressive microcephaly, intractable seizures, cerebral and cerebellar atrophy, moderate to severe developmental delay, and hypotonia. For the first time, Zhang et al. (2014) unpinned MSCCA in 4 patients from 2 unrelated families associated with the QARS1 gene. In vitro experiments demonstrated a significant impairment of QARS aminoacetylation in cell lines, while homozygous loss of QARS function in zebrafish exhibited widespread cell death in the brain with reduced brain and eye size. QARS1 or glutaminyl-tRNA synthetase 1 (ENST00000306125.12) comprised 24 exons (775 amino acids) with chromosomal position 3p21.31 (https://asia.ensembl.org). So far, few cases of MSCCA have been reported in the literature caused by QARS1. Animal models including C. elegans, Drosophila melanogaster, Danio rerio and Mus musculus provide insight into the pathogenic mechanism of QARS1-related disorders. Knockdown of QARS-1 through RNAi was generated by Zheng et al. (2022) to assess the functional role of QARS-1 deficiency at cellular and developmental levels. To confirm the role of QARS1 in neuronal development and structure, Chihara et al. (2007) generated Drosophila melanogaster as a model for the variant of GlnRS (glutaminyl-tRNA synthetase). This study confirmed that the variant had affected the dendritic and axonal development. The loss of function in brain development was confirmed by Zhang et al. (2014) in Danio rerio. QARS1 knockout was achieved in zebrafish embryos by inserting a gene-trap cassette through retroviral infection."
+      },
+      {
+        "offset": 4086,
+        "section": "INTRO",
+        "text": "A large consanguineous family affected with nonepileptic phenotype of MSCCA is presented in this report. Moreover, we summarized clinical and molecular findings of the MSCCA patients harboring the QARS1 variants previously reported in the literature (Table 1)."
+      },
+      {
+        "offset": 4348,
+        "section": "TABLE",
+        "text": "Clinical and genetic data of 28 MSCCA patients identified with QARS1 variants"
+      },
+      {
+        "offset": 12756,
+        "section": "METHODS",
+        "text": "Materials and methods"
+      },
+      {
+        "offset": 12778,
+        "section": "METHODS",
+        "text": "Ascertainment of patients"
+      },
+      {
+        "offset": 12804,
+        "section": "METHODS",
+        "text": "All experiments involving human subjects or related data were conducted in accordance with relevant ethical regulations. Informed consent was signed by the affected family members and ethical approval for this study was obtained from the Institutional Review Board (IRB) of Quaid-I-Azam University, Islamabad. Detailed clinical history and venous blood samples were collected from the available healthy and affected individuals at the time of ascertainment. Peers of the affected family were interviewed to construct pedigree and collect disease history. Through standard protocol, DNA was extracted from peripheral blood lymphocytes."
+      },
+      {
+        "offset": 13439,
+        "section": "METHODS",
+        "text": "Genetic analysis by next-generation sequencing"
+      },
+      {
+        "offset": 13486,
+        "section": "METHODS",
+        "text": "Whole exome sequencing for the subject V:5 was performed at Macrogen (Korea) by using the Agilent SureSelect Human All Exome V6 Kit (Agilent Technologies, Santa Clara, CA, USA) as described. High-throughput sequencing system, Illumina NovaSeq 6000 (Illumina, Santa Clara, CA, USA) was used for paired-end sequencing or PE150. The obtained sequencing reads were aligned to the reference genome via Burrows-Wheeler Aligner v0.7.17 (BWA; http://bio-bwa.sourceforge.net/). For the enrolled family, assembly hg19 was selected, while hg38 genome assembly was utilized for the sequencing reads. BAM files were sorted through SAMtools (v1.8) while duplicated reads were identified with the help of Picard (v2.18.9). Genotyping was conducted through the Genome Analysis Toolkit (GATK; http://www.broadinstitute.org/gatk/) v4.0. Functional annotation and filtration of variants were performed using ANNOVAR (http://www.openbioinformatics.org/annovar/) and FILTUS, respectively. After annotation, the obtained file was saved in CSV format and filtered to find the most likely pathogenic variants. Our filtration strategy concentrated on exploring the coding regions as well as the splice acceptor and donor site. Based on the clinical history and pedigree, we chose the rarest variants with minor allele frequency (MAF < 0.01%) in public databases including the Genome Aggregation Database (https://gnomad.broadinstitute.org/) http://evs.gs.washington.edu) and 1000 Genomes project (http://www.1000genomes.org/). Different in silico tools were also used to predict the functional effect of the filtered variants. According to the ACMG guidelines, the identified variants were classified aspathogenic, likely pathogenic or variant of uncertain significance (VUS)."
+      },
+      {
+        "offset": 15242,
+        "section": "METHODS",
+        "text": "Homozygosity mapping and in Silico tools"
+      },
+      {
+        "offset": 15283,
+        "section": "METHODS",
+        "text": "AutoMap (https://automap.iob.ch/process) tool with the default settings on the VCF (Variant Call Format) file of whole exome sequencing was used for homozygosity mapping (shown in Fig. 1) because the identified variant was found in the region shared by ancestors. The pathogenicity of our selected variant was confirmed by PolyPhen-2 (http://genetics.bwh.harvard.edu/pph2), MutationTaster (www.mutationtaster.org), SIFT (http://sift.jcvi.org/), CADD (Combined Annotation Dependent Depletion (https://cadd.gs.washington.edu), DANN, VarSome (https://varsome.com/), PROVEAN, EIGEN and VARITY. The detected variant was further classified) based on ACMG guidelines through the Franklin variant assessment tool (https://franklin.genoox.com/clinical-db/home)."
+      },
+      {
+        "offset": 16037,
+        "section": "FIG",
+        "text": "(A) Pedigree of the consanguineous Pakistani family affected with MSCCA. (B) Sanger sequencing of the healthy and affected individuals. (C) Domains and reported mutations of QARS1 protein. (D) Evolutionary conservation of the mutated QARS1 residue p.Arg378. (E) Homozygosity mapping using AutoMap tool"
+      },
+      {
+        "offset": 16339,
+        "section": "METHODS",
+        "text": "Sanger sequencing validation"
+      },
+      {
+        "offset": 16368,
+        "section": "METHODS",
+        "text": "To validate c.1133G > A, p.(Arg378His) in the QARS1, we amplified genomic DNA of the affected and normal individuals of the family (Fig. 1) with a pair of primers (Forward: CCAGGGCCATGACGTAGAG and Reverse: CCAAACCCAGATGCTCCTCT) and sequenced with Sanger method by forward primer. These primers were designed with the Primer3 tool (https://primer3.ut.ee/). Although NGS has considerably improved accuracy, it is usually recognized that the identified variant be validated with Sanger sequencing prior to reporting. To date, using whole-exome sequencing, 188 variants in 143 distinct genes have been reported in the Pakistani population as described previously."
+      },
+      {
+        "offset": 17032,
+        "section": "RESULTS",
+        "text": "Results"
+      },
+      {
+        "offset": 17040,
+        "section": "RESULTS",
+        "text": "QARS1 biallelic variant and algorithms"
+      },
+      {
+        "offset": 17079,
+        "section": "RESULTS",
+        "text": "Whole exome sequencing in our enrolled family was used to identify a single genetic variant that fulfilled the criteria for causality based on established protocols. Family had homozygous QARS1: NM_005051.3: c.(1133G > A) p.(Arg378His) variant. The candidate variant was validated by Sanger sequencing amongst family members following the recessive mode of inheritance (Fig. 1). Minor allele frequencies; exomes: f = 0.0000137 (cov: 57.9) genomes: f = 0.00000657 were available in VarSome (https://varsome.com/). Algorithms such as SIFT (deleterious (0), Polyphen2 (probably damaging (0.996), MutationTaster (disease-causing), DANN (deleterious (1), PROVEAN (pathogenic supporting), EIGEN (pathogenic supporting (0.7135), MutPred (pathogenic supporting (0.671) and VARITY (deleterious (0.94) predicted our variant as disease-causing or deleterious. Furthermore, the CADD score for the identified variant was also high (28.4), indicating a pivotal role in the pathogenesis of the disease."
+      },
+      {
+        "offset": 18074,
+        "section": "RESULTS",
+        "text": "Biallelic variant associated with MSCCA phenotypes"
+      },
+      {
+        "offset": 18125,
+        "section": "RESULTS",
+        "text": "Our family comprised of seven patients (III:4, IV:4, V:4, V:5, V:6, V:7 and VI:1) as shown in Fig. 1. Two of them, V:5 (15 years old) and V:7 (12 years old) were born without pregnancy complications. Symptoms of both were consistent with MSCCA, except for lack of epilepsy. Their clinical features were microcephaly, poor weight gain, severe intellectual disabilities, and slurry speech. They also exhibited symptoms such as mild facial dysmorphia including a sloping forehead, broad flat nasal bridge and deep-set eyes. Other features were mood instabilities, anxiety reactions, learning disabilities (writing and reading), less responsiveness to tasks or questions, short-term memory, poor judgment or decision-making ability and poor communication to maintaining or initiating conversations. Symptoms of the affected individual III:4 were mild alive at 90 years of age, while his affected son (IV:4) died at 50 years of age. The affected individual V:4 had moderate symptoms and died at the age of 5 years due to complications from measles, while the affected individual V:6 died at the age of 8 years following an accident. Biochemical, metabolic and karyotyping evaluations were normal in the proband (V:5). Retinal examination, hearing tests, electroencephalogram, and brain MRI scans were normal for the affected individuals (V:5 and V:7)."
+      },
+      {
+        "offset": 19473,
+        "section": "RESULTS",
+        "text": "QARS1 variant alters evolutionarily conserved amino acids"
+      },
+      {
+        "offset": 19531,
+        "section": "RESULTS",
+        "text": "Our reference amino acid (arginine at 378 position) is highly conserved among different species (Homo sapiens, Mus musculus, Danio rerio, Gallus gallus, Pan troglodytes, Macaca mulatta, Canis lupus familiaris, Sus scrofa, Rattus norvegicus) as presented in Fig. 1. Functionally confirmed variants are highly conserved as examined by Zhang et al. (2014). Therefore, conservation across diverse taxa highlights the evolutionary importance of our mutated catalytic domain, indicating further investigation into its functional role in related pathologies."
+      },
+      {
+        "offset": 20084,
+        "section": "RESULTS",
+        "text": "Impact of variant on protein function or structure"
+      },
+      {
+        "offset": 20135,
+        "section": "RESULTS",
+        "text": "Protein modeling of the mutated QARS1: p.Arg378His was done by the SWISS Model (https://swissmodel.expasy.org, accessed on 14th October 2024), visualized with Pymol (https://www.pymol.org, accessed on 14th October 2024) and compared with the wild -type protein present in AlphaFold 3 database (https://alphafold.ebi.ac.uk/entry/P47897, accessed on 14th October 2024). Comparison depicts that Agr378 makes H-bonds with Trp375, Val357 and Glu382 whilst the mutant His378 makes H-bond with Trp375 only (Fig. 2). Both Arg and His are polar amino acids and positively charged but the imidazole ring in His indicates weak and conditional charge in both protonated and deprotonated forms which can contribute to less bonding (Fig. 2B) and protein structure instability. Mutational analysis by the DynaMut (https://biosig.lab.uq.edu.au/dynamut/, accessed on 14th October 2024) also suggests destabilization of protein with Delta DeltaG stability = -1.24 kcal/mol score. Figure 2 indicates that Arg378 (wild) has a guanidinium side chain that favors interactions and bonding, stabilizes the structure and contains clashes with Leu386 and Ser383 (purple dotted lines in Fig. 2). On the other hand, His378 makes steric hindrance with Trp375, Val 357 and Ser383 which is not present in wild-type protein. The size difference in both Arg378 and His378 further provides evidence of instability of the protein's active site conformation, making it unable to precisely bind with the tRNA."
+      },
+      {
+        "offset": 21609,
+        "section": "FIG",
+        "text": "(A). Wild-type QARS1 protein where Arg378 (red) makes H-bonds with Trp375 (blue) 2.2A, Val357 (magenta) 1.2 A and Glu382 (orange) 1.8 A. (B). Mutant QARS1 with His378 (red) depicts H-bond with Trp375 (blue) 2.3 A. (C). Wild-type protein with H-bonds interactions of Arg378 with neighboring amino acids where dotted red lines depict H-bonds. D. Mutant protein His378 where red dotted lines show the H-bonds and purple dotted lines depict the protein structure clashes in both (C) and (D)"
+      },
+      {
+        "offset": 22100,
+        "section": "DISCUSS",
+        "text": "Discussion"
+      },
+      {
+        "offset": 22111,
+        "section": "DISCUSS",
+        "text": "So far, approximately 28 MSCCA patients have been reported in the literature caused by QARS1 including the two patients in our conducted study. Only five patients are reported in homozygous condition and the rest are compound heterozygotes. This report presents the study of Pakistani family affected with MSCCA caused by a missense variant NM_005051.3:c.1133G > A, p.(Arg378His)classified as likely pathogenic (PM2, PM5, PP1, PP4, PM3). Clinical findings were progressive microcephaly, poor weight gain, severe intellectual disabilities, minor facial dysmorphia, and slurry speech. The 3D analysis of both mutant and wild-type GlnRS protein revealed potential structural changes induced by the homozygous mutation in the catalytic domain (Fig. 1)."
+      },
+      {
+        "offset": 22865,
+        "section": "DISCUSS",
+        "text": "MSCCA patients generally exhibit a triad of symptoms such as primary or secondary microcephaly, epilepsy with neonatal or infantile-onset and moderate to severe intellectual disabilities as shown in Table 1. Our patients are extremely rare in the literature presenting with non-epileptic symptoms, slurry speech and normal brain MRI while the single female patient reported with the same homozygous mutation NM_005051.3:c.1133G > A, p.(Arg378His) had no speech and an abnormal MRI scan (hypoplasia of the corpus callosum, white matter atrophy and enlarged ventricles)."
+      },
+      {
+        "offset": 23439,
+        "section": "DISCUSS",
+        "text": "Most of the patients with homozygous variants are reported with milder phenotypes. indicating homozygosity might be protective for the risk of developing epilepsy [7]. The same is the case in our patients in the context of homozygosity and milder phenotype. In contrast, compound heterozygous mutations showed severe phenotypic manifestations, with some exceptions. Two patients were mildly affected by the compound heterozygous mutation, possibly because of null and hypomorphic allele phenomena."
+      },
+      {
+        "offset": 23937,
+        "section": "DISCUSS",
+        "text": "Anxiety and mood instabilities were seen in a patient reported by Zhang et al. (2014), who had sensitivity to sound and severe agitation. These symptoms are consistent with our proband (V:5) phenotype. Craniofacial anomalies including facial dysmorphia were also reported by Leshinsky-Silver et al. (2017), Chan et al. (2022) and Sakka et al. (2024) and matched with all patients of our family. The most common feature of severe intellectual disability (ID) was noticed in different studies."
+      },
+      {
+        "offset": 24429,
+        "section": "CONCL",
+        "text": "Conclusions"
+      },
+      {
+        "offset": 24441,
+        "section": "CONCL",
+        "text": "Our study diagnosed a familial case consistent with MSCCA, enabled by whole exome sequencing. Notably, just a single patient of Turkish ethnicity was already cited but our study further explores the spectrum in the context of disease severity, zygosity and CP1 domain of glutaminyl-tRNA synthetase 1. Our study supports the potential role of the variant in the mild form of MSCCA because our patients and a single patient of Turkish ethnicity are mildly affected without epilepsy. Functional studies should be encouraged in MSCCA patients exhibiting QARS1 variants, for insights into exploring the disease pathogenesis."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-8512f20d721152c8",
+    "object": "chat.completion",
+    "created": 1790522041,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"association\": [\n    {\"patient_id\": \"OIII:4\", \"phenotype\": [\"HP:0010864\", \"HP:0001999\", \"HP:0000739\", \"HP:0000713\", \"HP:0004484\"]},\n    {\"patient_id\": \"OIV:4\", \"phenotype\": [\"HP:0010864\", \"HP:0001999\", \"HP:0000739\", \"HP:0000713\", \"HP:0004484\"]},\n    {\"patient_id\": \"OV:4\", \"phenotype\": [\"HP:0010864\", \"HP:0001999\", \"HP:0000739\", \"HP:0000713\", \"HP:0004484\"]},\n    {\"patient_id\": \"OV:5\", \"phenotype\": [\"HP:0010864\", \"HP:0001999\", \"HP:0000739\", \"HP:0001328\"]},\n    {\"patient_id\": \"OV:6\", \"phenotype\": [\"HP:0010864\", \"HP:0001999\", \"HP:0000739\", \"HP:0000713\", \"HP:0004484\"]},\n    {\"patient_id\": \"OV:7\", \"phenotype\": [\"HP:0010864\", \"HP:0001999\", \"HP:0000739\", \"HP:0000713\", \"HP:0004484\"]},\n    {\"patient_id\": \"OVI:1\", \"phenotype\": [\"HP:0010864\", \"HP:0001999\", \"HP:0000739\", \"HP:0000713\", \"HP:0004484\"]},\n    {\"patient_id\": \"P1\", \"phenotype\": [\"HP:0000252\", \"HP:0004302\"]}\n  ]\n}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 5718,
+      "total_tokens": 6245,
+      "completion_tokens": 527,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "OIII:4",
+      "phenotype": [
+        "HP:0010864",
+        "HP:0001999",
+        "HP:0000739",
+        "HP:0000713",
+        "HP:0004484"
+      ]
+    },
+    {
+      "patient_id": "OIV:4",
+      "phenotype": [
+        "HP:0010864",
+        "HP:0001999",
+        "HP:0000739",
+        "HP:0000713",
+        "HP:0004484"
+      ]
+    },
+    {
+      "patient_id": "OV:4",
+      "phenotype": [
+        "HP:0010864",
+        "HP:0001999",
+        "HP:0000739",
+        "HP:0000713",
+        "HP:0004484"
+      ]
+    },
+    {
+      "patient_id": "OV:5",
+      "phenotype": [
+        "HP:0010864",
+        "HP:0001999",
+        "HP:0000739",
+        "HP:0001328"
+      ]
+    },
+    {
+      "patient_id": "OV:6",
+      "phenotype": [
+        "HP:0010864",
+        "HP:0001999",
+        "HP:0000739",
+        "HP:0000713",
+        "HP:0004484"
+      ]
+    },
+    {
+      "patient_id": "OV:7",
+      "phenotype": [
+        "HP:0010864",
+        "HP:0001999",
+        "HP:0000739",
+        "HP:0000713",
+        "HP:0004484"
+      ]
+    },
+    {
+      "patient_id": "OVI:1",
+      "phenotype": [
+        "HP:0010864",
+        "HP:0001999",
+        "HP:0000739",
+        "HP:0000713",
+        "HP:0004484"
+      ]
+    },
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0000252",
+        "HP:0004302"
+      ]
+    }
+  ],
+  "elapsed_seconds": 18.15,
+  "usage": {
+    "prompt_tokens": 5718,
+    "total_tokens": 6245,
+    "completion_tokens": 527,
+    "prompt_tokens_details": null
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "pmc_id": "5023785",
+  "identity": "22a3890c42f581b866dd9e038e7f3cee400a37ea88e11f0d1158181baad33f3a",
+  "model": "Qwen3-8B",
+  "prompt_report": {
+    "source_characters": 11958,
+    "covered_source_characters": 11958,
+    "source_is_excerpted": false,
+    "candidate_windows": 13,
+    "selected_windows": 13,
+    "budget_omitted_windows": 0,
+    "max_prompt_chars": 70000,
+    "prompt_characters_including_system": 14766,
+    "candidate_concepts": 10,
+    "patient_count": 1
+  },
+  "prompt": {
+    "pmc_id": "5023785",
+    "patients": [
+      {
+        "patient_id": "P1",
+        "mentions": [
+          {
+            "text": "patient",
+            "offset": 41
+          },
+          {
+            "text": "9-year-old male patient",
+            "offset": 316
+          },
+          {
+            "text": "patient",
+            "offset": 386
+          },
+          {
+            "text": "patient",
+            "offset": 3202
+          },
+          {
+            "text": "patient",
+            "offset": 3247
+          },
+          {
+            "text": "patient",
+            "offset": 3302
+          },
+          {
+            "text": "patient",
+            "offset": 3954
+          },
+          {
+            "text": "patient",
+            "offset": 4170
+          },
+          {
+            "text": "patient",
+            "offset": 5196
+          }
+        ]
+      }
+    ],
+    "allowed_phenotypes": {
+      "HP:0003549": [
+        "connective tissue disorders",
+        "connective tissue disorder"
+      ],
+      "HP:0000974": [
+        "hyperextensible skin",
+        "skin hyperextensibility"
+      ],
+      "HP:0001382": [
+        "joint hypermobility",
+        "ligamentous laxity"
+      ],
+      "HP:0002751": [
+        "kyphoscoliosis"
+      ],
+      "HP:0012531": [
+        "pain"
+      ],
+      "HP:0033454": [
+        "tube feeding"
+      ],
+      "HP:0001252": [
+        "hypotonia",
+        "muscle hypotonia"
+      ],
+      "HP:0001324": [
+        "muscle weakness"
+      ],
+      "HP:0002194": [
+        "delayed gross motor development"
+      ],
+      "HP:0002527": [
+        "fall"
+      ]
+    },
+    "cpu_association": [
+      {
+        "patient_id": "P1",
+        "phenotype": [
+          "HP:0003549",
+          "HP:0000974",
+          "HP:0001382",
+          "HP:0002751",
+          "HP:0033454",
+          "HP:0001252",
+          "HP:0001324",
+          "HP:0002194"
+        ]
+      }
+    ],
+    "excerpts": [
+      {
+        "offset": 0,
+        "section": "TITLE",
+        "text": "A novel missense mutation of COL5A2 in a patient with Ehlers-Danlos syndrome"
+      },
+      {
+        "offset": 79,
+        "section": "ABSTRACT",
+        "text": "Ehlers-Danlos syndrome (EDS) is a group of inherited connective tissue disorders characterized by hyperextensible skin, joint hypermobility and soft tissue fragility. For molecular diagnosis, targeted exome sequencing was performed on a 9-year-old male patient who was clinically suspected to have EDS. The patient presented with progressive kyphoscoliosis, joint hypermobility and hyperextensible skin without scars. Ultimately, classical EDS was diagnosed by identifying a novel, mono-allelic mutation in COL5A2 [NM_000393.3(COL5A2_v001):c.682G>A, p.Gly228Arg]."
+      },
+      {
+        "offset": 645,
+        "section": "INTRO",
+        "text": "Ehlers-Danlos syndrome (EDS) is a heritable connective tissue disorder characterized by a varying degree of skin hyperextensibility, joint hypermobility and generalized connective tissue fragility. According to the Villefranche nosology, there are six subtypes of EDS that are classified on the basis of their clinical, biochemical and molecular characteristics: classical, hypermobile, vascular, kyphoscoliosis, arthrochalasia and dermatosparaxis. Accurate EDS diagnosis allows for appropriate screening of life-altering complications, including vascular and hollow organ rupture, and ligamentous laxity, leading to chronic dislocation with subsequent pain and long-term disability. The various forms of EDS are diagnosed on the basis of the patient's clinical presentation and family history. However, because of overlapping symptoms, diagnosing EDS remains a challenge, and many patients are left undiagnosed or have a delayed diagnosis. These cases may remain uncategorized, even by well-trained medical professionals."
+      },
+      {
+        "offset": 1672,
+        "section": "INTRO",
+        "text": "Mutations in genes encoding fibrillar (type I, III and V) collagen chains or proteins have been identified in most types of EDS, with the exception of the hypermobility type. These known underlying genetic defects are different in each subtype. Genetic testing may be diagnostically useful to identify specific EDS subtypes, but even in typical cases, genetic defects are not always detected in disease-causing genes. Because of shared clinical features between EDS subtypes, the diagnosis of these rare conditions is difficult, and an accurate diagnosis using the appropriate genetic test for each subtype can be challenging. For a molecular diagnosis outside the expected EDS genotype-phenotype relationship, simultaneous testing for multiple potential disease-causing genes in the suspected EDS patient may be an effective and systematic approach. Conventional Sanger sequencing has routinely been used for genetic testing to identify disease-causing mutations; however, it is laborious, expensive and time consuming for multiple candidate genes. Recently, targeted exome sequencing (TES) of candidate or known disease-associated genes utilizing next-generation sequencing (NGS) technology has been used to diagnose patients with various types of disorders, including EDS. Here we report a de novo mono-allelic missense mutation of COL5A2 (MIM 120190), NM_000393.3(COL5A2_v001):c.682G>A, detected in a TES panel for the coding regions of 4,813 clinical phenotype-associated genes, including EDS-associated genes, in a Japanese patient with EDS. Through this approach, the patient was diagnosed with classical EDS (cEDS)."
+      },
+      {
+        "offset": 3298,
+        "section": "INTRO",
+        "text": "The patient is the fifth child of healthy, non-consanguineous parents. After an uneventful pregnancy, he was born at 35 weeks gestation following the premature rupture of the fetal membranes. His birth weight was 1,924 g (-1.3 SD). Because of an unknown cause, perforation of the terminal ileum occurred at the age of 2 days, and an ileostomy was performed. After follow-up with central venous nutrition and tube feeding, closure of the ileostomy was performed at the age of 52 days, and he left the hospital at the age of 73 days. He achieved head control at the age of 9 months and walked independently at the age of 18 months. At the age of 1 year, the patient was diagnosed with hypotonia and kyphoscoliosis, and treated with a brace at another clinic. His kyphoscoliosis was non-responsive to the brace and increased in severity over time. At the age of 9 years, the patient was suspected to have a connective tissue disorder because he showed muscle weakness and joint hypermobility. Therefore, he was readmitted to our hospital for diagnosis. Clinical examination at the age of 9 years showed a boy with a height of 117.4 cm (-2.3 SD) and weight of 19.9 kg (-1.5 SD). He had joint hypermobility (Beighton score=6), mild hyperextensible skin (~1.5 cm on the volar surface of the forearm) and severe kyphoscoliosis (Figure 1), but did not have widened atrophic scars. In the minor diagnostic criteria for cEDS, smooth velvety skin, muscle hypotonia and delayed gross motor development were observed in addition to the manifestations of tissue extensibility and fragility (perforation of the terminal ileum at the age of 2 days). No abnormality was revealed during physical examination of the chest and abdomen or during an ophthalmological evaluation. Echocardiography and abdominal ultrasound were normal. No family history of EDS was observed. On the basis of his clinical presentation, the patient was suspected of having cEDS (MIM 130000), kyphoscoliotic EDS (MIM 225400) or other related minor EDS types in which severe progressive kyphoscoliosis is prominent."
+      },
+      {
+        "offset": 5389,
+        "section": "INTRO",
+        "text": "Molecular diagnosis was performed on genomic DNA extracted from a blood sample after informed consent was obtained from the parents. The study was approved by the Ethics Committee at Tokushima University. To screen multiple EDS genes and other known disease-associated genes, we first performed TES for the proband by using a TruSight One Sequencing Panel (Illumina, San Diego, CA, USA) and MiSeq benchtop sequencer (Illumina) with our pipeline for NGS data analysis, as described previously. To identify presumably pathogenic single-nucleotide variants, we excluded minor sequence variants with relatively high-allele frequencies, i.e., >0.01, included in the 1000 Genomes Project database (http://www.1000genomes.org/), NHLBI GO Exome Sequencing Project (ESP6500, http://evs.gs.washington.edu/EVS/), Human Genetic Variation Database (HGVD, http://www.genome.med.kyoto-u.ac.jp/SnpDB/) and Integrative Japanese Genome Variation Database (iJGVD, https://ijgvd.megabank.tohoku.ac.jp/). The detection of copy-number variations using TES data with a resolution of a single exon to several exons, depending on the exon size, was performed as described previously. These analyses identified a mono-allelic, missense mutation, NM_000393.3(COL5A2_v001):c.682G>A, in exon 9 of COL5A2, which resulted in a Gly to Arg substitution at codon 228 [NM_000393.3(COL5A2_i001):p.(Gly228Arg)]. This result was confirmed by using Sanger sequencing and was not found in the parents (Figure 2a). Primer sequences are available upon request. This mutation is not present in human genome variation databases, such as dbSNP138, 1000 Genomes Project, ESP6500, HGVD and iJGVD, or in disease-causing mutation databases, such as the Human Gene Mutation Database Professional 2016.1 (HGMD, http://www.hgmd.org/), Leiden Open Variation Database (LOVD, https://eds.gene.le.ac.uk/home.php?select_db=COL5A2) and ClinVar (http://www.ncbi.nlm.nih.gov/clinvar/). No other potentially pathogenic single-nucleotide variants or CNAs were detected in the genes possibly responsible for EDS or other related diseases. Through in silico analysis using LJB23 databases for non-synonymous variant annotation in ANNOVAR (http://annovar.openbioinformatics.org/en/latest/), this mutation was predicted to damage protein function, i.e., SIFT score=0, PolyPhen-2 score=1 and MutationTaster score=1. The presence of Gly at every third residue (Gly-X-Y) is considered to be essential for the formation of the characteristic collagen triple helix (Figure 2b). Furthermore, Arg is one of the destabilizing residues observed in the Gly position of the Gly-X-Y repeating pattern in the collagen triple helix, and its presence may cause a range of heritable connective tissue disorders. In the HGMD 2016.1 and LOVD databases, the replacement of one Gly in the (Gly-X-Y)n repeat by Arg was reported in four out of five (80%) and five out of seven (71%) COL5A2 missense mutation cases with EDS, respectively. The results of the molecular diagnosis suggested that this is a de novo mutation responsible for EDS, and the patient was diagnosed with de novo cEDS."
+      },
+      {
+        "offset": 8490,
+        "section": "INTRO",
+        "text": "In cEDS, more than 100 distinct COL5A1 mutations have been described, but only 19 and 24 COL5A2 distinct mutations are reported in the HGMD professional 2016.1 and LOVD databases, respectively. Although COL5A1 mutations are scattered throughout the gene, most COL5A2 mutations are located within the triple-helix domain. Defects in COL5A1 are most commonly null mutations consisting of either nonsense, frameshift or splice-site mutations that generate a premature termination codon (PTC). These PTCs encode transcripts that cause rapid degradation through nonsense-mediated mRNA decay and consequently reduce production of type V collagen In contrast, nearly all of the COL5A2 mutations reported to date represent structural mutations, including missense or in-frame exon-skipping splice mutations, thus resulting in the production of mutant alpha2(V)-chains that probably incorporate into collagen molecules and interfere with the formation of heterotrimers. Secreted mutant heterotrimers are predicted to exert a dominant negative effect that causes functional haploinsufficiency. Because no heterozygous COL5A2 null-allele mutations have been reported, it is possible that COL5A2 null-allele mutations result in no clinical phenotype of cEDS. Although similar observations were reported in COL1A2 and COL11A1 in other connective tissue disorders, the sample size of COL5A2 mutations needs to be increased to conclude this hypothesis."
+      },
+      {
+        "offset": 9928,
+        "section": "INTRO",
+        "text": "No clear genotype-phenotype correlations for type V collagen defects have emerged in patients with cEDS. The large inter- and intrafamilial phenotypic variabilities in cEDS and the possibility of the presence of a COL5A1 null allele in individuals with only minor symptoms of cEDS are also known. It has been reported that 20% of patients with cEDS who fulfilled all three criteria presented with severe progressive kyphoscoliosis, whereas none of the patients who fulfilled only two criteria presented with this phenotype. Here, however, the patient fulfilled only two major criteria of the Villefranche nosology and showed progressive kyphoscoliosis. Compared with COL5A1 mutation carriers, COL5A2 mutation carriers have been reported to fall within the more severe end of the phenotypic spectrum of cEDS, although no difference in severity has been noted in patients carrying a null mutation in one COL5A1 allele compared with patients carrying a structural mutation in COL5A1 or COL5A2. Studies involving an increased number of patients with COL5A2 mutations are needed to clarify the genotype-phenotype correlations for type V collagen defects in patients with cEDS."
+      },
+      {
+        "offset": 11104,
+        "section": "INTRO",
+        "text": "HGV Database"
+      },
+      {
+        "offset": 11117,
+        "section": "INTRO",
+        "text": "The relevant data from this Data Report are hosted at the Human Genome Variation Database at http://dx.doi.org/10.6084/m9.figshare.hgv.848 (2016)."
+      },
+      {
+        "offset": 13369,
+        "section": "INTRO",
+        "text": "Data Citations"
+      },
+      {
+        "offset": 13385,
+        "section": "FIG",
+        "text": "Anteroposterior (a) and lateral (b) radiographs of the patient."
+      },
+      {
+        "offset": 13449,
+        "section": "FIG",
+        "text": "(a) Electropherogram of COL5A2 (NM_000393.3) exon 9 and intron 9 sequences in the DNA of the patient and his parents. The arrowhead denotes the position of the mutated base (NM_000393.3:c.682G>A) in the patient. The DNA and corresponding amino acid sequences of the wild type and mutant COL5A2 alleles are also shown. (b) Alignment of the COL5A2 amino acid sequence around codon 228 in different mammalian species. The arrowhead denotes the position of the p.Gly228Arg mutation. The dots indicate the conserved Gly of the (Gly-X-Y)n repeat in the collagen triple helix. The amino acids that are not matched with those in Homo sapiens are depicted in light gray."
+      }
+    ]
+  },
+  "raw_response": {
+    "id": "chatcmpl-be25020eb26d22c4",
+    "object": "chat.completion",
+    "created": 1790522312,
+    "model": "Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"association\":[{\"patient_id\":\"P1\",\"phenotype\":[\"HP:0003549\",\"HP:0000974\",\"HP:0001382\",\"HP:0002751\",\"HP:0033454\",\"HP:0001252\",\"HP:0001324\",\"HP:0002194\"]}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning": null,
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 3662,
+      "total_tokens": 3756,
+      "completion_tokens": 94,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "source": "gpu",
+  "association": [
+    {
+      "patient_id": "P1",
+      "phenotype": [
+        "HP:0003549",
+        "HP:0000974",
+        "HP:0001382",
+        "HP:0002751",
+        "HP:0033454",
+        "HP:0001252",
+        "HP:0001324",
+        "HP:0002194"
+      ]
+    }
+  ],
+  "elapsed_seconds": 3.226,
+  "usage": {
+    "prompt_tokens": 3662,
+    "total_tokens": 3756,
+    "completion_tokens": 94,
+    "prompt_tokens_details": null
+  }
+}

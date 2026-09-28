@@ -1,0 +1,200 @@
+document.addEventListener('touchstart', function() {},false);
+window.onload = function(){
+    $('.loading').css('opacity','0');
+    $('.navbar').addClass('animate__animated animate__fadeInDown');
+    $('.first-carousel-caption').css('opacity','1');
+    if($('.banner').length){
+        $('.banner').addClass('animate__animated animate__fadeIn');
+        $('.banner #title').addClass('animate__animated animate__fadeIn');
+    }
+    $('body').css('overflow-y','auto');
+
+    var s = document.createElement("script");
+    s.src = "https://app.enzuzo.com/apps/enzuzo/static/js/__enzuzo-cookiebar.js?uuid=afe124de-c20f-11ed-aeba-2761d275a861";
+    $("head").append(s);
+
+    var dif_h = $(window).height()-$('.banner').height() - $('.footer').height();
+    if ($('#main-content .content').height() < dif_h){
+        $('#main-content').css('height',dif_h);
+    }
+    setTimeout(function(){
+        var scroH = $(document).scrollTop();
+        $(".main-text").each(function() {
+            if(scroH > $(this).offset().top + 100 - window.innerHeight){
+                $(this).css('opacity','1');
+            }else{
+                $(this).css('opacity','0');
+            }
+        });
+    }, 1500);
+    $('.footer').addClass('animate__animated animate__fadeIn');
+    setTimeout(function(){
+        $('.loading').css('display','none');
+    }, 1000);
+
+    if($(window).width()>=1200){
+         $('li.dropdown > a').attr('data-bs-toggle','none');
+         $('li.sub-dropdown > a').attr('data-bs-toggle','none');
+    }else{
+        $('li.dropdown > a').attr('data-bs-toggle','dropdown');
+        $('li.sub-dropdown > a').attr('data-bs-toggle','dropdown');
+        $('.navbar-toggler').css('height', '80px');
+    }
+
+    $('.navbar').hover(function(){
+         var scroH = $(document).scrollTop();
+         var window_width = $(window).width();
+         if(scroH > 80){
+            $('.navbar').css('height','80px');
+            $('.nav-item a').css('font-size','20px');
+            if(window_width > 1200){
+                $('.menu > .nav-item > a').css('line-height','60px');
+            }
+        }
+        $('.navbar-toggler').css('height','80px');
+        $('.navbar-toggler').addClass('navbar-light');
+        $('.navbar-toggler').removeClass('navbar-dark');
+
+    }, function(){
+        var scroH = $(document).scrollTop();
+        var window_width = $(window).width();
+        if(scroH > 80){
+            $('.navbar').css('height','60px');
+            $('.nav-item a').css('font-size','18px');
+            if(window_width > 1200){
+                $('.menu > .nav-item > a').css('line-height','60px');
+            }
+            else{
+                $('.menu > .nav-item > a').css('line-height','30px');
+                $('.navbar-toggler').css('height', '60px');
+            }
+        }
+        $('.navbar-collapse').collapse('hide');
+        $('.navbar-toggler').removeClass('navbar-light');
+        $('.navbar-toggler').addClass('navbar-dark');
+    });
+}
+
+
+
+$(document).ready(function(){
+    $("#nav-placeholder").load("navbar.html");
+
+    // $('.footer .col-sm-12').append('<a href="https://secure.ethicspoint.com/domain/media/en/gui/20410/index.html" target="_blank"><br>IEEE Ethics Reporting</a>');
+//    $('.footer .col-sm-12').append('<a id="clustrmaps" href="https://clustrmaps.com/site/1btqe" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=9E2-fZBz59xQh0PpL3KO3Ae_yHBJjUHEpkF91bx_uDw&cl=ffffff" /></a>');
+    $.fn.shuffle = function() {
+      var m = this.length, t, i;
+      while (m) {
+        i = Math.floor(Math.random() * m--);
+
+        t = this[m];
+        this[m] = this[i];
+        this[i] = t;
+      }
+      return this;
+    };
+
+    var supportflag=false;
+    $(window).on('scroll', function() {
+      if($('#supporting-org').length){
+        var supportcount = 0;
+        var scrollTop = $(this).scrollTop();
+        var topDistance = $('#supporting-org').offset().top;
+        if (topDistance -window.innerHeight + 100<= scrollTop && supportflag == false) {
+          supportflag=true;
+          $('#supporting-org img').shuffle().each(function() {
+            var $this = $(this)
+            var t = setTimeout(function(){
+              $this.addClass('animate__animated animate__fadeIn');
+            }, Math.random()*1500);
+            supportcount++;
+          });
+        }
+      }
+    });
+
+    $('.img-link').hover(function(){
+        $(this).find('img').css('transform', 'scale(1.1)');
+        $(this).parents('.committee-people').find('.people-link').css('color', '#fffff4');
+        $(this).parents('.committee-people').find('.people-link').css('background-color', '#00695c');
+    }, function(){
+        $(this).find('img').css('transform', 'scale(1)');
+        $(this).parents('.committee-people').find('.people-link').css('color', '#00695c');
+        $(this).parents('.committee-people').find('.people-link').css('background-color', 'transparent');
+    });
+
+    $('.people-link').hover(function(){
+        $(this).parent('.committee-people').find('img').css('transform', 'scale(1.1)');
+        $(this).css('color', '#fffff4');
+        $(this).css('background-color', '#00695c');
+    }, function(){
+        $(this).parent('.committee-people').find('img').css('transform', 'scale(1)');
+        $(this).css('color', '#00695c');
+        $(this).css('background-color', 'transparent');
+    });
+});
+
+$(document).scroll(function() {
+  var scroH = $(document).scrollTop();
+  if(scroH >500){
+    $('#go-top-btn').css("right", "20px");
+  }
+  else {
+    $('#go-top-btn').css("right", "-50px");
+  }
+  $('.navbar-collapse').collapse('hide');
+});
+
+$('#go-top-btn').bind("click", function(e) {
+  $('html, body').animate({scrollTop: 0}, 800);
+  e.preventDefault();
+});
+
+$(document).scroll(function() {
+    var scroH = $(document).scrollTop();
+    var window_width = $(window).width();
+    if(scroH > 80){
+        $('.navbar').css('height','60px');
+        $('.nav-item a').css('font-size','18px');
+        if(window_width > 1200){
+            $('.menu > .nav-item > a').css('line-height','40px');
+        }else{
+            $('.navbar-toggler').css('height', '60px');
+        }
+    }else {
+        $('.navbar').css('height','80px');
+        $('.nav-item a').css('font-size','20px');
+        if(window_width > 1200){
+            $('.menu > .nav-item > a').css('line-height','60px');
+        }else{
+            $('.navbar-toggler').css('height','80px');
+        }
+    }
+
+    $(".main-text").each(function() {
+        if(scroH > $(this).offset().top + 100 - window.innerHeight){
+            $(this).css('opacity','1');
+        }else{
+            $(this).css('opacity','0');
+        }
+    });
+
+});
+
+
+$(window).resize(function(){
+    var dif_h = $(window).height()-$('.banner').height() - $('.footer').height();
+    if ($('#main-content .content').height() < dif_h){
+        $('#main-content').css('height',dif_h);
+    }
+    var window_width = $(window).width();
+    if(window_width < 1200){
+        $('.menu > .nav-item > a').css('line-height','30px');
+        $('li.dropdown > a').attr('data-bs-toggle','dropdown');
+        $('li.sub-dropdown > a').attr('data-bs-toggle','dropdown');
+    }else{
+        $('.menu > .nav-item > a').css('line-height','60px');
+        $('li.dropdown > a').attr('data-bs-toggle','none');
+        $('li.sub-dropdown > a').attr('data-bs-toggle','none');
+    }
+});
