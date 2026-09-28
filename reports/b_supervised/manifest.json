@@ -1,0 +1,114 @@
+{
+  "status": "completed",
+  "phase": "B",
+  "training_documents": 80,
+  "target_documents": 100,
+  "target_patients": 244,
+  "selected_configuration": {
+    "name": "knowledge_union__association_0.3",
+    "entity_strategy": "knowledge_union",
+    "association_threshold": 0.3,
+    "span_threshold": 0.9702336192131042,
+    "metrics": {
+      "mention": {
+        "precision": 0.6980802792321117,
+        "recall": 0.6639004149377593,
+        "f1": 0.680561463207146,
+        "tp": 800,
+        "fp": 346,
+        "fn": 405
+      },
+      "document": {
+        "precision": 0.8252788104089219,
+        "recall": 0.6799387442572741,
+        "f1": 0.7455919395465995,
+        "tp": 444,
+        "fp": 94,
+        "fn": 209
+      },
+      "association_micro": {
+        "precision": 0.7068062827225131,
+        "recall": 0.5421686746987951,
+        "f1": 0.6136363636363636,
+        "tp": 270,
+        "fp": 112,
+        "fn": 228
+      },
+      "association_macro": {
+        "precision": 0.6196377484236625,
+        "recall": 0.521094043090116,
+        "f1": 0.5310258395863774,
+        "patients": 45
+      },
+      "score": 0.6427039014941216,
+      "counts": {
+        "documents": 16,
+        "patients": 45
+      },
+      "approximations": [
+        "No official scorer is supplied; these are local implementations of the published metrics.",
+        "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+        "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+        "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+        "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+        "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+      ]
+    },
+    "entities": 1170,
+    "association_pairs": 382
+  },
+  "selection_path": "/home/dcf/chip2026/experiments/span_ner/selected_pipeline.json",
+  "selection_sha256": "15ca6b31e575429444f00f3014c6d20124835ea83b59f621ecc365cfc2154994",
+  "target_sha256": "4dafea5aa59bfd5f90151ee3732ee475323512b8691f370f4d4678b628cdb62a",
+  "training_sha256": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+  "umls_terms_sha256": "311514dc68c619db01d19a4d8aacc55c9a62474e706b405e4cb42ac6ffc78119",
+  "ner_manifest_sha256": "676c48e897bc9fe6de61608fe01bc9dc564e77dfbc5d6573aeb5857b15939530",
+  "inference_manifest_sha256": "03d46454def270c92f3731d574db9af301e2f58598b7e4f86e16edc813ae7b3b",
+  "source_code_sha256": {
+    "scripts/finalize_b_pipeline.py": "080ccd7247a32efb3531b890ba24ee7e96f655c47e552efc5821cce325d7ab44",
+    "scripts/evaluate_linked_pipeline.py": "a5103fce6e82fe76088c3f2702d43cfad626ee41428d7f3bae0093fb1a7483bc",
+    "patientphex/span_linking.py": "d5de49d6845486687da0773890d99bb848015af70782d03b43eef026aa79a734",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6"
+  },
+  "association_candidate_provenance": {
+    "kind": "fixed_knowledge_base",
+    "uses_training_labels": false,
+    "training_document_ids": [],
+    "resource_audit": {
+      "hpo_version": "2026-06-23",
+      "allowed_hpo_ids": 19119,
+      "allowed_ids_sha256": "346dcd8837d7e1d310ac0bf254e925c7618af6a95912a5567e2f6b56f602bb40",
+      "umls_rows": 92365,
+      "umls_exact_phrases": 72825,
+      "umls_normalized_phrases": 66219,
+      "umls_export_sha256": "311514dc68c619db01d19a4d8aacc55c9a62474e706b405e4cb42ac6ffc78119",
+      "umls_export_path": "resources/umls_hpo_terms.tsv.gz",
+      "umls_source_version": [
+        [
+          "HPO2025_11_24",
+          "2025_11_24"
+        ]
+      ]
+    }
+  },
+  "negative_weight": 1.0,
+  "submission": {
+    "valid": true,
+    "path": "/home/dcf/chip2026/submissions/patientphex_b.jsonl",
+    "bytes": 826999,
+    "limit_bytes_exclusive": 100000000,
+    "sha256": "9256fbb6ac7aaabdd27bda3190d353ebd6b08da887b4065f86e75eafde7fc35c",
+    "documents": 100,
+    "patients": 244,
+    "entities": 7144,
+    "association_pairs": 2097,
+    "negated_entities": 173,
+    "unmapped_entities": 27,
+    "compound_entities": 0,
+    "document_order_preserved": true,
+    "empty_entity_documents": [],
+    "warnings": []
+  },
+  "duration_seconds": 18.873619079589844,
+  "scope": "Validated B prediction artifact. B has no local gold; no B score or improvement claim is made. No competition upload performed."
+}

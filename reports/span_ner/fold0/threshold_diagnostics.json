@@ -1,0 +1,798 @@
+{
+  "scope": "Validation-selected threshold diagnostics for the already validation-selected best checkpoint; NOT independent test performance",
+  "inference_performed": false,
+  "training_performed": false,
+  "saved_score_floor": 0.5,
+  "search_limit": "Exact for thresholds >= 0.5 on saved max-over-window scores; thresholds below 0.5 cannot be reconstructed",
+  "validation_document_ids": [
+    "10553122",
+    "11203018",
+    "11871647",
+    "11906559",
+    "11919040",
+    "12059664",
+    "12126309",
+    "12640707",
+    "12652105",
+    "12846941",
+    "2866573",
+    "3563609",
+    "4607013",
+    "4899602",
+    "5415817",
+    "5763540"
+  ],
+  "best_epoch": 5,
+  "provenance": {
+    "input_sha256": {
+      "manifest": "35369c6b1e64c56fa39ce635f56b356b92ca88f1f553822bc9d191ff03bc9718",
+      "summary": "6102119f4ce5dd5342e1234e0ba415317fd24c24d5afcf7aca7b183a02405850",
+      "predictions": "87c0253a36d8e882112ec9bb39f55809a1881647ad54e64249ac957ea85fadba"
+    },
+    "data_sha256": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "analysis_code_sha256": "15dd0551f59a87134dd674dba29411b81373b89247e41b80f3f8ab49c0c279d6",
+    "runner_code_hash_matches_manifest": true
+  },
+  "baseline_reproduces_summary": true,
+  "baseline": {
+    "positive": {
+      "precision": 0.06233665128176611,
+      "recall": 0.9412258606213266,
+      "f1": 0.11692917492437677,
+      "tp": 1121,
+      "fp": 16862,
+      "fn": 70,
+      "predicted": 17983,
+      "gold": 1191
+    },
+    "NO": {
+      "precision": 0.013157894736842105,
+      "recall": 0.6,
+      "f1": 0.025751072961373384,
+      "tp": 18,
+      "fp": 1350,
+      "fn": 12,
+      "predicted": 1368,
+      "gold": 30
+    },
+    "micro": {
+      "precision": 0.05886000723476823,
+      "recall": 0.9328419328419328,
+      "f1": 0.11073303519346686,
+      "tp": 1139,
+      "fp": 18212,
+      "fn": 82,
+      "predicted": 19351,
+      "gold": 1221
+    },
+    "any_span": {
+      "precision": 0.06286091404058736,
+      "recall": 0.9361179361179361,
+      "f1": 0.11781076066790351,
+      "tp": 1143,
+      "fp": 17040,
+      "fn": 78,
+      "predicted": 18183,
+      "gold": 1221
+    },
+    "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+  },
+  "thresholds_evaluated": [
+    0.5,
+    0.9,
+    0.95,
+    0.98,
+    0.99,
+    0.995,
+    0.998,
+    0.999,
+    0.999000999000999,
+    0.9995,
+    0.9999
+  ],
+  "common_threshold_table": [
+    {
+      "threshold": 0.5,
+      "metrics": {
+        "positive": {
+          "precision": 0.06233665128176611,
+          "recall": 0.9412258606213266,
+          "f1": 0.11692917492437677,
+          "tp": 1121,
+          "fp": 16862,
+          "fn": 70,
+          "predicted": 17983,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.013157894736842105,
+          "recall": 0.6,
+          "f1": 0.025751072961373384,
+          "tp": 18,
+          "fp": 1350,
+          "fn": 12,
+          "predicted": 1368,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.05886000723476823,
+          "recall": 0.9328419328419328,
+          "f1": 0.11073303519346686,
+          "tp": 1139,
+          "fp": 18212,
+          "fn": 82,
+          "predicted": 19351,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.06286091404058736,
+          "recall": 0.9361179361179361,
+          "f1": 0.11781076066790351,
+          "tp": 1143,
+          "fp": 17040,
+          "fn": 78,
+          "predicted": 18183,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    },
+    {
+      "threshold": 0.9,
+      "metrics": {
+        "positive": {
+          "precision": 0.09404823876453236,
+          "recall": 0.910159529806885,
+          "f1": 0.17048045922780533,
+          "tp": 1084,
+          "fp": 10442,
+          "fn": 107,
+          "predicted": 11526,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.032719836400818,
+          "recall": 0.5333333333333333,
+          "f1": 0.06165703275529866,
+          "tp": 16,
+          "fp": 473,
+          "fn": 14,
+          "predicted": 489,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.09155222638368705,
+          "recall": 0.9009009009009009,
+          "f1": 0.1662133575098217,
+          "tp": 1100,
+          "fp": 10915,
+          "fn": 121,
+          "predicted": 12015,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.09478754515740581,
+          "recall": 0.9025389025389026,
+          "f1": 0.17155756207674944,
+          "tp": 1102,
+          "fp": 10524,
+          "fn": 119,
+          "predicted": 11626,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    },
+    {
+      "threshold": 0.95,
+      "metrics": {
+        "positive": {
+          "precision": 0.10678925035360678,
+          "recall": 0.887489504617968,
+          "f1": 0.19063937235097844,
+          "tp": 1057,
+          "fp": 8841,
+          "fn": 134,
+          "predicted": 9898,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.043859649122807015,
+          "recall": 0.5,
+          "f1": 0.08064516129032258,
+          "tp": 15,
+          "fp": 327,
+          "fn": 15,
+          "predicted": 342,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.1046875,
+          "recall": 0.877968877968878,
+          "f1": 0.18706919117005497,
+          "tp": 1072,
+          "fp": 9168,
+          "fn": 149,
+          "predicted": 10240,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.10786967418546366,
+          "recall": 0.8812448812448812,
+          "f1": 0.1922115041086102,
+          "tp": 1076,
+          "fp": 8899,
+          "fn": 145,
+          "predicted": 9975,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    },
+    {
+      "threshold": 0.98,
+      "metrics": {
+        "positive": {
+          "precision": 0.1254780999383097,
+          "recall": 0.853904282115869,
+          "f1": 0.2188037865748709,
+          "tp": 1017,
+          "fp": 7088,
+          "fn": 174,
+          "predicted": 8105,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.058823529411764705,
+          "recall": 0.4,
+          "f1": 0.10256410256410256,
+          "tp": 12,
+          "fp": 192,
+          "fn": 18,
+          "predicted": 204,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.12384161752316765,
+          "recall": 0.8427518427518428,
+          "f1": 0.2159496327387198,
+          "tp": 1029,
+          "fp": 7280,
+          "fn": 192,
+          "predicted": 8309,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.1269782848730217,
+          "recall": 0.8476658476658476,
+          "f1": 0.2208706786171575,
+          "tp": 1035,
+          "fp": 7116,
+          "fn": 186,
+          "predicted": 8151,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    },
+    {
+      "threshold": 0.99,
+      "metrics": {
+        "positive": {
+          "precision": 0.14584880439625725,
+          "recall": 0.8245172124265323,
+          "f1": 0.24785461887935387,
+          "tp": 982,
+          "fp": 5751,
+          "fn": 209,
+          "predicted": 6733,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.08823529411764706,
+          "recall": 0.4,
+          "f1": 0.14457831325301207,
+          "tp": 12,
+          "fp": 124,
+          "fn": 18,
+          "predicted": 136,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.14470810889503566,
+          "recall": 0.814086814086814,
+          "f1": 0.2457354758961681,
+          "tp": 994,
+          "fp": 5875,
+          "fn": 227,
+          "predicted": 6869,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.14762819565538643,
+          "recall": 0.8181818181818182,
+          "f1": 0.2501251877816725,
+          "tp": 999,
+          "fp": 5768,
+          "fn": 222,
+          "predicted": 6767,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    },
+    {
+      "threshold": 0.995,
+      "metrics": {
+        "positive": {
+          "precision": 0.1692603266090298,
+          "recall": 0.7397145256087322,
+          "f1": 0.27548467792370235,
+          "tp": 881,
+          "fp": 4324,
+          "fn": 310,
+          "predicted": 5205,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.10679611650485436,
+          "recall": 0.36666666666666664,
+          "f1": 0.16541353383458643,
+          "tp": 11,
+          "fp": 92,
+          "fn": 19,
+          "predicted": 103,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.1680482290881688,
+          "recall": 0.7305487305487306,
+          "f1": 0.27324245673150555,
+          "tp": 892,
+          "fp": 4416,
+          "fn": 329,
+          "predicted": 5308,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.17130866081648227,
+          "recall": 0.7354627354627354,
+          "f1": 0.2778895249883955,
+          "tp": 898,
+          "fp": 4344,
+          "fn": 323,
+          "predicted": 5242,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    },
+    {
+      "threshold": 0.998,
+      "metrics": {
+        "positive": {
+          "precision": 0.2149983907306083,
+          "recall": 0.5608732157850546,
+          "f1": 0.31084225221033035,
+          "tp": 668,
+          "fp": 2439,
+          "fn": 523,
+          "predicted": 3107,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.08771929824561403,
+          "recall": 0.16666666666666666,
+          "f1": 0.11494252873563217,
+          "tp": 5,
+          "fp": 52,
+          "fn": 25,
+          "predicted": 57,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.2127054361567636,
+          "recall": 0.5511875511875511,
+          "f1": 0.3069555302166476,
+          "tp": 673,
+          "fp": 2491,
+          "fn": 548,
+          "predicted": 3164,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.2165341812400636,
+          "recall": 0.5577395577395577,
+          "f1": 0.3119560238204306,
+          "tp": 681,
+          "fp": 2464,
+          "fn": 540,
+          "predicted": 3145,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    },
+    {
+      "threshold": 0.999,
+      "metrics": {
+        "positive": {
+          "precision": 0.23778143876990665,
+          "recall": 0.3635600335852225,
+          "f1": 0.28751660026560427,
+          "tp": 433,
+          "fp": 1388,
+          "fn": 758,
+          "predicted": 1821,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.13636363636363635,
+          "recall": 0.1,
+          "f1": 0.11538461538461538,
+          "tp": 3,
+          "fp": 19,
+          "fn": 27,
+          "predicted": 22,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.23657080846446013,
+          "recall": 0.3570843570843571,
+          "f1": 0.2845953002610966,
+          "tp": 436,
+          "fp": 1407,
+          "fn": 785,
+          "predicted": 1843,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.24047878128400435,
+          "recall": 0.361998361998362,
+          "f1": 0.2889833278849297,
+          "tp": 442,
+          "fp": 1396,
+          "fn": 779,
+          "predicted": 1838,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    },
+    {
+      "threshold": 0.999000999000999,
+      "metrics": {
+        "positive": {
+          "precision": 0.23778143876990665,
+          "recall": 0.3635600335852225,
+          "f1": 0.28751660026560427,
+          "tp": 433,
+          "fp": 1388,
+          "fn": 758,
+          "predicted": 1821,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.13636363636363635,
+          "recall": 0.1,
+          "f1": 0.11538461538461538,
+          "tp": 3,
+          "fp": 19,
+          "fn": 27,
+          "predicted": 22,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.23657080846446013,
+          "recall": 0.3570843570843571,
+          "f1": 0.2845953002610966,
+          "tp": 436,
+          "fp": 1407,
+          "fn": 785,
+          "predicted": 1843,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.24047878128400435,
+          "recall": 0.361998361998362,
+          "f1": 0.2889833278849297,
+          "tp": 442,
+          "fp": 1396,
+          "fn": 779,
+          "predicted": 1838,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    },
+    {
+      "threshold": 0.9995,
+      "metrics": {
+        "positive": {
+          "precision": 0.25,
+          "recall": 0.18807724601175482,
+          "f1": 0.21466219453761382,
+          "tp": 224,
+          "fp": 672,
+          "fn": 967,
+          "predicted": 896,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.4,
+          "recall": 0.06666666666666667,
+          "f1": 0.1142857142857143,
+          "tp": 2,
+          "fp": 3,
+          "fn": 28,
+          "predicted": 5,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.25083240843507215,
+          "recall": 0.1850941850941851,
+          "f1": 0.21300659754948165,
+          "tp": 226,
+          "fp": 675,
+          "fn": 995,
+          "predicted": 901,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.2544444444444444,
+          "recall": 0.18755118755118755,
+          "f1": 0.21593587930221592,
+          "tp": 229,
+          "fp": 671,
+          "fn": 992,
+          "predicted": 900,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    },
+    {
+      "threshold": 0.9999,
+      "metrics": {
+        "positive": {
+          "precision": 0.2804878048780488,
+          "recall": 0.019311502938706968,
+          "f1": 0.03613511390416339,
+          "tp": 23,
+          "fp": 59,
+          "fn": 1168,
+          "predicted": 82,
+          "gold": 1191
+        },
+        "NO": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 30,
+          "predicted": 0,
+          "gold": 30
+        },
+        "micro": {
+          "precision": 0.2804878048780488,
+          "recall": 0.018837018837018837,
+          "f1": 0.035303146584804296,
+          "tp": 23,
+          "fp": 59,
+          "fn": 1198,
+          "predicted": 82,
+          "gold": 1221
+        },
+        "any_span": {
+          "precision": 0.2926829268292683,
+          "recall": 0.019656019656019656,
+          "f1": 0.03683806600153492,
+          "tp": 24,
+          "fp": 58,
+          "fn": 1197,
+          "predicted": 82,
+          "gold": 1221
+        },
+        "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+      }
+    }
+  ],
+  "best_common_threshold": {
+    "threshold": 0.9980515241622925,
+    "f1": 0.3092545580429264,
+    "predicted": 3112,
+    "tp": 670,
+    "distinct_score_thresholds_checked": 18880,
+    "tie_break": "Choose the higher threshold when F1 ties",
+    "metrics": {
+      "positive": {
+        "precision": 0.2176047120418848,
+        "recall": 0.5583543240973972,
+        "f1": 0.3131622321638804,
+        "tp": 665,
+        "fp": 2391,
+        "fn": 526,
+        "predicted": 3056,
+        "gold": 1191
+      },
+      "NO": {
+        "precision": 0.08928571428571429,
+        "recall": 0.16666666666666666,
+        "f1": 0.11627906976744186,
+        "tp": 5,
+        "fp": 51,
+        "fn": 25,
+        "predicted": 56,
+        "gold": 30
+      },
+      "micro": {
+        "precision": 0.2152956298200514,
+        "recall": 0.5487305487305487,
+        "f1": 0.30925455804292634,
+        "tp": 670,
+        "fp": 2442,
+        "fn": 551,
+        "predicted": 3112,
+        "gold": 1221
+      },
+      "any_span": {
+        "precision": 0.21913380736910149,
+        "recall": 0.5552825552825553,
+        "f1": 0.31425260718424103,
+        "tp": 678,
+        "fp": 2416,
+        "fn": 543,
+        "predicted": 3094,
+        "gold": 1221
+      },
+      "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+    }
+  },
+  "independent_per_label_f1_optima": {
+    "positive": {
+      "threshold": 0.9980515241622925,
+      "f1": 0.3131622321638804,
+      "predicted": 3056,
+      "tp": 665,
+      "distinct_score_thresholds_checked": 17529,
+      "tie_break": "Choose the higher threshold when F1 ties",
+      "metrics": {
+        "precision": 0.2176047120418848,
+        "recall": 0.5583543240973972,
+        "f1": 0.3131622321638804,
+        "tp": 665,
+        "fp": 2391,
+        "fn": 526,
+        "predicted": 3056,
+        "gold": 1191
+      }
+    },
+    "NO": {
+      "threshold": 0.9942301511764526,
+      "f1": 0.17391304347826086,
+      "predicted": 108,
+      "tp": 12,
+      "distinct_score_thresholds_checked": 1370,
+      "tie_break": "Choose the higher threshold when F1 ties",
+      "metrics": {
+        "precision": 0.1111111111111111,
+        "recall": 0.4,
+        "f1": 0.1739130434782609,
+        "tp": 12,
+        "fp": 96,
+        "fn": 18,
+        "predicted": 108,
+        "gold": 30
+      }
+    }
+  },
+  "combined_independent_label_thresholds": {
+    "thresholds": {
+      "positive": 0.9980515241622925,
+      "NO": 0.9942301511764526
+    },
+    "metrics": {
+      "positive": {
+        "precision": 0.2176047120418848,
+        "recall": 0.5583543240973972,
+        "f1": 0.3131622321638804,
+        "tp": 665,
+        "fp": 2391,
+        "fn": 526,
+        "predicted": 3056,
+        "gold": 1191
+      },
+      "NO": {
+        "precision": 0.1111111111111111,
+        "recall": 0.4,
+        "f1": 0.1739130434782609,
+        "tp": 12,
+        "fp": 96,
+        "fn": 18,
+        "predicted": 108,
+        "gold": 30
+      },
+      "micro": {
+        "precision": 0.21396965865992415,
+        "recall": 0.5544635544635544,
+        "f1": 0.3087799315849487,
+        "tp": 677,
+        "fp": 2487,
+        "fn": 544,
+        "predicted": 3164,
+        "gold": 1221
+      },
+      "any_span": {
+        "precision": 0.21980830670926518,
+        "recall": 0.5634725634725635,
+        "f1": 0.3162491381291657,
+        "tp": 688,
+        "fp": 2442,
+        "fn": 533,
+        "predicted": 3130,
+        "gold": 1221
+      },
+      "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+    },
+    "note": "Individual label-F1 optima; not a joint micro-F1 threshold optimization. NO has only 30 validation gold spans in this run."
+  },
+  "false_positive_profiles": {
+    "baseline": {
+      "counts": {
+        "same_span_wrong_label": 161,
+        "overlaps_gold_same_label": 14623,
+        "overlaps_gold_other_label": 759,
+        "no_overlap_with_any_gold": 2669
+      },
+      "definition": "Exclusive diagnostic categories; overlapping but inexact spans remain false positives"
+    },
+    "best_common_threshold": {
+      "counts": {
+        "same_span_wrong_label": 15,
+        "overlaps_gold_same_label": 2158,
+        "overlaps_gold_other_label": 26,
+        "no_overlap_with_any_gold": 243
+      },
+      "definition": "Exclusive diagnostic categories; overlapping but inexact spans remain false positives"
+    }
+  },
+  "weighted_bce_interpretation": {
+    "actual_class_statistics": {
+      "candidate_spans": 11696560,
+      "positive_counts": [
+        4779,
+        146
+      ],
+      "supervised_candidates_per_label": [
+        11690102,
+        11696560
+      ],
+      "ignored_negative_candidates_per_label": [
+        6458,
+        0
+      ],
+      "pos_weight": [
+        1000.0,
+        1000.0
+      ],
+      "loss_normalizer": [
+        1.40839857513647,
+        1.012469820186448
+      ],
+      "pos_weight_cap": 1000.0
+    },
+    "formula": "Ideal weighted-BCE optimum s = w*q/(1-q+w*q); equivalently logit(s)=logit(q)+log(w)",
+    "score_0_5_implied_unweighted_posterior": {
+      "positive": 0.000999000999000999,
+      "NO": 0.000999000999000999
+    },
+    "unweighted_posterior_0_5_implied_score": {
+      "positive": 0.999000999000999,
+      "NO": 0.999000999000999
+    },
+    "normalizer_effect": "A positive per-label constant rescales gradients; it does not undo pos_weight or calibrate sigmoid outputs",
+    "limitation": "Idealized loss argument, not proof of empirical calibration. Finite model fitting, per-batch averaging and max-over-window decoding can change calibration."
+  },
+  "interpretation": "Raising the threshold removes many false positives, but even the selected optimum retains substantial false positives. Diagnose ranking and span boundaries before changing training."
+}

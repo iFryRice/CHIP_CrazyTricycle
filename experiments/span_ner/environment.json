@@ -1,0 +1,42 @@
+{
+  "provider": "ssh-10.253.27.177",
+  "project_dir": "/home/dcf/chip2026",
+  "umls_dir": "/home/dcf/umls",
+  "python": "3.12",
+  "uv": "0.11.19",
+  "environment": ".venv",
+  "install_command": ".tools/uv sync --locked --extra training",
+  "packages": {
+    "torch": "2.6.0+cu124",
+    "transformers": "4.49.0"
+  },
+  "hardware": {
+    "gpu_index": 2,
+    "gpu_model": "Tesla V100-DGXS-32GB",
+    "precision": "float16",
+    "cpu_threads": 2
+  },
+  "model": {
+    "id": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+    "revision": "e1354b7a3a09615f6aba48dfad4b7a613eef7062",
+    "local_dir": "models/biomedbert",
+    "source": "https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"
+  },
+  "environment_variables": {
+    "UV_CACHE_DIR": "/home/dcf/chip2026/.uv-cache",
+    "UV_PYTHON_INSTALL_DIR": "/home/dcf/chip2026/.tools/python",
+    "HF_HOME": "/home/dcf/chip2026/.cache/huggingface",
+    "HF_HUB_OFFLINE": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "CUDA_VISIBLE_DEVICES": "2"
+  },
+  "validation": {
+    "kernel": "seeded CUDA FP16 matrix multiplication and backward pass",
+    "entrypoint": "scripts/train_span_ner.py --smoke",
+    "minimum_free_disk_gib": 20,
+    "require_empty_compute_gpu": true
+  }
+}

@@ -1,0 +1,965 @@
+{
+  "status": "complete",
+  "scope": "Read-only descriptive error decomposition of existing fivefold development predictions and frozen CPU predictions. These are not independent test scores, component causal effects, or new ablation results. Fold 0 selected the full pipeline; all folds overlap in training.",
+  "training_performed": false,
+  "model_inference_performed": false,
+  "new_experiment_performed": false,
+  "target_data_read": false,
+  "original_predictions_modified": false,
+  "selected_pipeline": {
+    "entity_strategy": "knowledge_union",
+    "association_threshold": 0.3,
+    "span_threshold": 0.9702336192131042
+  },
+  "input_provenance": {
+    "gold": {
+      "path": "D:\\Projects\\20260927_CHIP2026\\PatientPheX-V1-A\\PatientPheX-train.jsonl",
+      "sha256": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786"
+    },
+    "new_predictions": {
+      "path": "D:\\Projects\\20260927_CHIP2026\\reports\\b_supervised\\development_oof.jsonl",
+      "sha256": "6b0d0a599c5f7dd4cd6b1aeb752f6fb72f5bf6ea8053f41e14e28b24169314ca"
+    },
+    "cpu_predictions": {
+      "path": "D:\\Projects\\20260927_CHIP2026\\work\\gpu_route\\cpu_oof_input.jsonl",
+      "sha256": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2"
+    },
+    "development_summary": {
+      "path": "D:\\Projects\\20260927_CHIP2026\\reports\\b_supervised\\development_summary.json",
+      "sha256": "a98fc3296df9c5528dcce249dc624bc901910b5958ddfa9b60cc4b1b6e97fb75"
+    },
+    "component_audit": {
+      "path": "D:\\Projects\\20260927_CHIP2026\\reports\\span_ner\\component_audit.json",
+      "sha256": "cfcb4e3570951b06920e475e9d59a4a388c6a943915c1d9da9988604edfe0ad3"
+    },
+    "frozen_selection": {
+      "path": "D:\\Projects\\20260927_CHIP2026\\experiments\\span_ner\\selected_pipeline.json",
+      "sha256": "15ca6b31e575429444f00f3014c6d20124835ea83b59f621ecc365cfc2154994"
+    },
+    "scorer": {
+      "path": "D:\\Projects\\20260927_CHIP2026\\patientphex\\evaluation.py",
+      "sha256": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac"
+    },
+    "association_candidates": {
+      "path": "D:\\Projects\\20260927_CHIP2026\\patientphex\\association.py",
+      "sha256": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23"
+    }
+  },
+  "checks": {
+    "official_80_documents_exact_coverage": true,
+    "all_folds_share_frozen_parameters": true,
+    "pooled_new_metrics_exactly_reproduce_development_summary": true,
+    "pooled_cpu_metrics_exactly_reproduce_frozen_reference": true,
+    "all_predicted_association_concepts_exist_in_eligible_entities": true,
+    "mention_fp_decomposition_reproduces_scorer": true
+  },
+  "definitions": {
+    "candidate_concept": "Expand each saved entity with patientphex.association._concepts: exclude NO case-insensitively, split semicolon identifiers, replace -1 by exact original entity text. _Document.samples creates a bag for every patient and eligible concept. This is reachability, not a correct span or correct patient assertion.",
+    "association_unit": "Unique (pmc_id, patient_id, concept), using scorer _association_set. Identifiers are split as in the scorer; unmapped text is compared exactly.",
+    "fn_candidate_absent": "Gold association not predicted and its concept absent from all eligible entities in that document.",
+    "fn_candidate_present": "Gold association not predicted although its concept occurs in eligible entities in that document; the association decision did not retain it. This category does not establish why its score was low.",
+    "fp_concept_in_gold_patient_elsewhere": "Predicted association is false but its concept occurs in at least one other patient gold association in that document.",
+    "fp_concept_absent_gold_association": "Predicted association is false and the concept appears in no gold patient association in that document. It can still be a valid entity in non-patient/background text.",
+    "cpu_tp_lost_new_candidate_present": "Association correctly predicted by CPU but absent from new output, with concept still reachable in new saved entities.",
+    "new_tp_gained_cpu_candidate_present": "Association correctly predicted by new pipeline but absent from CPU output, with concept reachable in CPU saved entities.",
+    "mention_fp": "Scorer positive units (offset,length,identifier); NO excluded and evaluation passages retained. Exact mapped matches are removed; each gold -1 consumes one exact-extent prediction, preferring literal -1, identically to _mention_counts.",
+    "fp_same_extent_wrong_id": "Residual mention FP whose exact (offset,length) equals at least one positive gold entity extent. This includes surplus concepts at an already matched extent.",
+    "fp_nongold_extent": "Residual mention FP with no exact positive gold extent. Disjoint from same_extent_wrong_id.",
+    "fp_overlaps_positive_gold_extent": "Subset of fp_nongold_extent with any nonempty half-open character interval intersection with a positive gold entity. It does not require matching HPO ID, and cannot by itself attribute the FP to NER, KB, or a particular boundary mechanism."
+  },
+  "pooled_metrics": {
+    "new": {
+      "mention": {
+        "precision": 0.6369469773725093,
+        "recall": 0.6356589147286822,
+        "f1": 0.636302294197031,
+        "tp": 3772,
+        "fp": 2150,
+        "fn": 2162
+      },
+      "document": {
+        "precision": 0.7912223133716161,
+        "recall": 0.6538983050847458,
+        "f1": 0.7160356347438753,
+        "tp": 1929,
+        "fp": 509,
+        "fn": 1021
+      },
+      "association_micro": {
+        "precision": 0.6187010078387458,
+        "recall": 0.5089820359281437,
+        "f1": 0.5585039171089209,
+        "tp": 1105,
+        "fp": 681,
+        "fn": 1066
+      },
+      "association_macro": {
+        "precision": 0.5498472948751564,
+        "recall": 0.5027203509267707,
+        "f1": 0.4948295761391904,
+        "patients": 209
+      },
+      "score": 0.6014178555472544,
+      "counts": {
+        "documents": 80,
+        "patients": 209
+      }
+    },
+    "cpu": {
+      "mention": {
+        "precision": 0.7537749144352728,
+        "recall": 0.6309403437815976,
+        "f1": 0.6869094578479039,
+        "tp": 3744,
+        "fp": 1223,
+        "fn": 2190
+      },
+      "document": {
+        "precision": 0.8647654093836247,
+        "recall": 0.6372881355932203,
+        "f1": 0.7338017174082748,
+        "tp": 1880,
+        "fp": 294,
+        "fn": 1070
+      },
+      "association_micro": {
+        "precision": 0.6593527153044432,
+        "recall": 0.5536619069553201,
+        "f1": 0.6019028542814221,
+        "tp": 1202,
+        "fp": 621,
+        "fn": 969
+      },
+      "association_macro": {
+        "precision": 0.6056504811527464,
+        "recall": 0.5401905522270574,
+        "f1": 0.536294308720941,
+        "patients": 209
+      },
+      "score": 0.6397270845646355,
+      "counts": {
+        "documents": 80,
+        "patients": 209
+      }
+    }
+  },
+  "per_fold_metrics": [
+    {
+      "fold": 0,
+      "documents": 16,
+      "selected": {
+        "entity_strategy": "knowledge_union",
+        "association_threshold": 0.3,
+        "span_threshold": 0.9702336192131042
+      },
+      "parameter_selection_on_this_fold": true,
+      "new": {
+        "mention": {
+          "precision": 0.6980802792321117,
+          "recall": 0.6639004149377593,
+          "f1": 0.680561463207146,
+          "tp": 800,
+          "fp": 346,
+          "fn": 405
+        },
+        "document": {
+          "precision": 0.8252788104089219,
+          "recall": 0.6799387442572741,
+          "f1": 0.7455919395465995,
+          "tp": 444,
+          "fp": 94,
+          "fn": 209
+        },
+        "association_micro": {
+          "precision": 0.7068062827225131,
+          "recall": 0.5421686746987951,
+          "f1": 0.6136363636363636,
+          "tp": 270,
+          "fp": 112,
+          "fn": 228
+        },
+        "association_macro": {
+          "precision": 0.6196377484236625,
+          "recall": 0.521094043090116,
+          "f1": 0.5310258395863774,
+          "patients": 45
+        },
+        "score": 0.6427039014941216,
+        "counts": {
+          "documents": 16,
+          "patients": 45
+        }
+      },
+      "cpu": {
+        "mention": {
+          "precision": 0.7550626808100289,
+          "recall": 0.649792531120332,
+          "f1": 0.6984834968777877,
+          "tp": 783,
+          "fp": 254,
+          "fn": 422
+        },
+        "document": {
+          "precision": 0.8734939759036144,
+          "recall": 0.666156202143951,
+          "f1": 0.7558644656820156,
+          "tp": 435,
+          "fp": 63,
+          "fn": 218
+        },
+        "association_micro": {
+          "precision": 0.6548463356973995,
+          "recall": 0.5562248995983936,
+          "f1": 0.6015200868621065,
+          "tp": 277,
+          "fp": 146,
+          "fn": 221
+        },
+        "association_macro": {
+          "precision": 0.5365927247879956,
+          "recall": 0.4703447389425446,
+          "f1": 0.48526640209325184,
+          "patients": 45
+        },
+        "score": 0.6352836128787904,
+        "counts": {
+          "documents": 16,
+          "patients": 45
+        }
+      },
+      "config_path": "reports\\span_ner\\linked_boundary-cap100-fold0\\config.json",
+      "config_sha256": "0493245f240d8ad7a77a3ffb9948ebec1d6fdc41145967fe5dcb7c6754d33d24"
+    },
+    {
+      "fold": 1,
+      "documents": 16,
+      "selected": {
+        "entity_strategy": "knowledge_union",
+        "association_threshold": 0.3,
+        "span_threshold": 0.9702336192131042
+      },
+      "parameter_selection_on_this_fold": false,
+      "new": {
+        "mention": {
+          "precision": 0.5723809523809524,
+          "recall": 0.6497297297297298,
+          "f1": 0.6086075949367089,
+          "tp": 601,
+          "fp": 449,
+          "fn": 324
+        },
+        "document": {
+          "precision": 0.7760416666666666,
+          "recall": 0.6819221967963387,
+          "f1": 0.7259439707673568,
+          "tp": 298,
+          "fp": 86,
+          "fn": 139
+        },
+        "association_micro": {
+          "precision": 0.6079136690647482,
+          "recall": 0.49271137026239065,
+          "f1": 0.5442834138486312,
+          "tp": 169,
+          "fp": 109,
+          "fn": 174
+        },
+        "association_macro": {
+          "precision": 0.5833852477365329,
+          "recall": 0.5270002578545153,
+          "f1": 0.5047231680334421,
+          "patients": 43
+        },
+        "score": 0.5958895368965348,
+        "counts": {
+          "documents": 16,
+          "patients": 43
+        }
+      },
+      "cpu": {
+        "mention": {
+          "precision": 0.7238442822384428,
+          "recall": 0.6432432432432432,
+          "f1": 0.6811677160847167,
+          "tp": 595,
+          "fp": 227,
+          "fn": 330
+        },
+        "document": {
+          "precision": 0.839541547277937,
+          "recall": 0.6704805491990846,
+          "f1": 0.7455470737913485,
+          "tp": 293,
+          "fp": 56,
+          "fn": 144
+        },
+        "association_micro": {
+          "precision": 0.6816479400749064,
+          "recall": 0.5306122448979592,
+          "f1": 0.5967213114754099,
+          "tp": 182,
+          "fp": 85,
+          "fn": 161
+        },
+        "association_macro": {
+          "precision": 0.65980424454741,
+          "recall": 0.5473290848342892,
+          "f1": 0.5410514987859952,
+          "patients": 43
+        },
+        "score": 0.6411219000343675,
+        "counts": {
+          "documents": 16,
+          "patients": 43
+        }
+      },
+      "config_path": "reports\\span_ner\\confirmed_boundary-cap100-fold1\\config.json",
+      "config_sha256": "4c890e75086fd7f0f209525f1288d78804eb279c4ee953f26e14a6a57d337205"
+    },
+    {
+      "fold": 2,
+      "documents": 16,
+      "selected": {
+        "entity_strategy": "knowledge_union",
+        "association_threshold": 0.3,
+        "span_threshold": 0.9702336192131042
+      },
+      "parameter_selection_on_this_fold": false,
+      "new": {
+        "mention": {
+          "precision": 0.6305555555555555,
+          "recall": 0.635409377186844,
+          "f1": 0.6329731613802718,
+          "tp": 908,
+          "fp": 532,
+          "fn": 521
+        },
+        "document": {
+          "precision": 0.7807971014492754,
+          "recall": 0.626453488372093,
+          "f1": 0.6951612903225807,
+          "tp": 431,
+          "fp": 121,
+          "fn": 257
+        },
+        "association_micro": {
+          "precision": 0.6024691358024692,
+          "recall": 0.5041322314049587,
+          "f1": 0.5489313835770528,
+          "tp": 244,
+          "fp": 161,
+          "fn": 240
+        },
+        "association_macro": {
+          "precision": 0.5405381906801785,
+          "recall": 0.47582345587271696,
+          "f1": 0.4839282698966677,
+          "patients": 42
+        },
+        "score": 0.5902485262941433,
+        "counts": {
+          "documents": 16,
+          "patients": 42
+        }
+      },
+      "cpu": {
+        "mention": {
+          "precision": 0.7582781456953642,
+          "recall": 0.6410076976906928,
+          "f1": 0.6947288585513841,
+          "tp": 916,
+          "fp": 292,
+          "fn": 513
+        },
+        "document": {
+          "precision": 0.8747433264887063,
+          "recall": 0.6191860465116279,
+          "f1": 0.7251063829787234,
+          "tp": 426,
+          "fp": 61,
+          "fn": 262
+        },
+        "association_micro": {
+          "precision": 0.6778042959427207,
+          "recall": 0.5867768595041323,
+          "f1": 0.6290143964562569,
+          "tp": 284,
+          "fp": 135,
+          "fn": 200
+        },
+        "association_macro": {
+          "precision": 0.6197610752228979,
+          "recall": 0.5733787912051459,
+          "f1": 0.5778603093366249,
+          "patients": 42
+        },
+        "score": 0.6566774868307473,
+        "counts": {
+          "documents": 16,
+          "patients": 42
+        }
+      },
+      "config_path": "reports\\span_ner\\confirmed_boundary-cap100-fold2\\config.json",
+      "config_sha256": "b74084d2cfa8ac63e780bf4c84896af0b2cc46ce9ca7d432970979c616828ffa"
+    },
+    {
+      "fold": 3,
+      "documents": 16,
+      "selected": {
+        "entity_strategy": "knowledge_union",
+        "association_threshold": 0.3,
+        "span_threshold": 0.9702336192131042
+      },
+      "parameter_selection_on_this_fold": false,
+      "new": {
+        "mention": {
+          "precision": 0.6288848263254113,
+          "recall": 0.6237533998186764,
+          "f1": 0.6263086026399636,
+          "tp": 688,
+          "fp": 406,
+          "fn": 415
+        },
+        "document": {
+          "precision": 0.7903930131004366,
+          "recall": 0.6728624535315985,
+          "f1": 0.7269076305220884,
+          "tp": 362,
+          "fp": 96,
+          "fn": 176
+        },
+        "association_micro": {
+          "precision": 0.6298342541436464,
+          "recall": 0.5089285714285714,
+          "f1": 0.562962962962963,
+          "tp": 228,
+          "fp": 134,
+          "fn": 220
+        },
+        "association_macro": {
+          "precision": 0.4912233624993904,
+          "recall": 0.48982322318796995,
+          "f1": 0.4714966599617321,
+          "patients": 47
+        },
+        "score": 0.5969189640216868,
+        "counts": {
+          "documents": 16,
+          "patients": 47
+        }
+      },
+      "cpu": {
+        "mention": {
+          "precision": 0.7799779977997799,
+          "recall": 0.642792384406165,
+          "f1": 0.7047713717693836,
+          "tp": 709,
+          "fp": 200,
+          "fn": 394
+        },
+        "document": {
+          "precision": 0.8992443324937027,
+          "recall": 0.6635687732342007,
+          "f1": 0.7636363636363637,
+          "tp": 357,
+          "fp": 40,
+          "fn": 181
+        },
+        "association_micro": {
+          "precision": 0.6712328767123288,
+          "recall": 0.546875,
+          "f1": 0.6027060270602707,
+          "tp": 245,
+          "fp": 120,
+          "fn": 203
+        },
+        "association_macro": {
+          "precision": 0.5638980275233257,
+          "recall": 0.5250999553820226,
+          "f1": 0.507148004900046,
+          "patients": 47
+        },
+        "score": 0.644565441841516,
+        "counts": {
+          "documents": 16,
+          "patients": 47
+        }
+      },
+      "config_path": "reports\\span_ner\\confirmed_boundary-cap100-fold3\\config.json",
+      "config_sha256": "8dfa81db52e5bb4354ec144a7c8a13890990d0398e3a6bb8ad504b0f85b19632"
+    },
+    {
+      "fold": 4,
+      "documents": 16,
+      "selected": {
+        "entity_strategy": "knowledge_union",
+        "association_threshold": 0.3,
+        "span_threshold": 0.9702336192131042
+      },
+      "parameter_selection_on_this_fold": false,
+      "new": {
+        "mention": {
+          "precision": 0.6501677852348994,
+          "recall": 0.6092767295597484,
+          "f1": 0.6290584415584416,
+          "tp": 775,
+          "fp": 417,
+          "fn": 497
+        },
+        "document": {
+          "precision": 0.7786561264822134,
+          "recall": 0.6214511041009464,
+          "f1": 0.6912280701754386,
+          "tp": 394,
+          "fp": 112,
+          "fn": 240
+        },
+        "association_micro": {
+          "precision": 0.5403899721448467,
+          "recall": 0.48743718592964824,
+          "f1": 0.512549537648613,
+          "tp": 194,
+          "fp": 165,
+          "fn": 204
+        },
+        "association_macro": {
+          "precision": 0.5049599453479098,
+          "recall": 0.49850105251271853,
+          "f1": 0.4792122516376358,
+          "patients": 32
+        },
+        "score": 0.5780120752550323,
+        "counts": {
+          "documents": 16,
+          "patients": 32
+        }
+      },
+      "cpu": {
+        "mention": {
+          "precision": 0.7477295660948536,
+          "recall": 0.5825471698113207,
+          "f1": 0.6548828988068935,
+          "tp": 741,
+          "fp": 250,
+          "fn": 531
+        },
+        "document": {
+          "precision": 0.8329571106094809,
+          "recall": 0.582018927444795,
+          "f1": 0.6852367688022284,
+          "tp": 369,
+          "fp": 74,
+          "fn": 265
+        },
+        "association_micro": {
+          "precision": 0.6131805157593123,
+          "recall": 0.5376884422110553,
+          "f1": 0.5729585006693441,
+          "tp": 214,
+          "fp": 135,
+          "fn": 184
+        },
+        "association_macro": {
+          "precision": 0.6727975930302359,
+          "recall": 0.6074235744248394,
+          "f1": 0.5899130861950664,
+          "patients": 32
+        },
+        "score": 0.6257478136183832,
+        "counts": {
+          "documents": 16,
+          "patients": 32
+        }
+      },
+      "config_path": "reports\\span_ner\\confirmed_boundary-cap100-fold4\\config.json",
+      "config_sha256": "c7027c222266f0f05643ef686ff2e4442b72f4f3fd9f137f76c931eb769a73fc"
+    }
+  ],
+  "error_counts": {
+    "pooled": {
+      "new_goldrelations": 2171,
+      "new_candidate_covered_gold": 1497,
+      "new_fn_candidate_absent": 674,
+      "new_fn_candidate_present": 392,
+      "new_fp_concept_in_gold_patient_elsewhere": 167,
+      "new_fp_concept_absent_gold_association": 514,
+      "cpu_goldrelations": 2171,
+      "cpu_candidate_covered_gold": 1465,
+      "cpu_fn_candidate_absent": 706,
+      "cpu_fn_candidate_present": 263,
+      "cpu_fp_concept_in_gold_patient_elsewhere": 128,
+      "cpu_fp_concept_absent_gold_association": 493,
+      "new_tp_gained_cpu_candidate_absent": 45,
+      "new_fp_same_extent_wrong_id": 65,
+      "new_fp_nongold_extent": 2085,
+      "new_fp_overlaps_positive_gold_extent": 1500,
+      "cpu_fp_same_extent_wrong_id": 42,
+      "cpu_fp_nongold_extent": 1181,
+      "cpu_fp_overlaps_positive_gold_extent": 515,
+      "cpu_tp_lost_new_candidate_present": 182,
+      "new_tp_gained_cpu_candidate_present": 69,
+      "cpu_tp_lost_new_candidate_absent": 29
+    },
+    "fold1": {
+      "new_goldrelations": 343,
+      "new_candidate_covered_gold": 244,
+      "new_fn_candidate_absent": 99,
+      "new_fn_candidate_present": 75,
+      "new_fp_concept_in_gold_patient_elsewhere": 30,
+      "new_fp_concept_absent_gold_association": 79,
+      "cpu_goldrelations": 343,
+      "cpu_candidate_covered_gold": 244,
+      "cpu_fn_candidate_absent": 99,
+      "cpu_fn_candidate_present": 62,
+      "cpu_fp_concept_in_gold_patient_elsewhere": 30,
+      "cpu_fp_concept_absent_gold_association": 55,
+      "new_tp_gained_cpu_candidate_absent": 4,
+      "new_fp_same_extent_wrong_id": 17,
+      "new_fp_nongold_extent": 432,
+      "new_fp_overlaps_positive_gold_extent": 289,
+      "cpu_fp_same_extent_wrong_id": 6,
+      "cpu_fp_nongold_extent": 221,
+      "cpu_fp_overlaps_positive_gold_extent": 86,
+      "cpu_tp_lost_new_candidate_present": 23,
+      "new_tp_gained_cpu_candidate_present": 10,
+      "cpu_tp_lost_new_candidate_absent": 4
+    },
+    "single_patient": {
+      "new_goldrelations": 626,
+      "new_candidate_covered_gold": 393,
+      "new_fn_candidate_absent": 233,
+      "new_fn_candidate_present": 55,
+      "new_fp_concept_in_gold_patient_elsewhere": 0,
+      "new_fp_concept_absent_gold_association": 180,
+      "cpu_goldrelations": 626,
+      "cpu_candidate_covered_gold": 389,
+      "cpu_fn_candidate_absent": 237,
+      "cpu_fn_candidate_present": 17,
+      "cpu_fp_concept_in_gold_patient_elsewhere": 0,
+      "cpu_fp_concept_absent_gold_association": 167,
+      "new_tp_gained_cpu_candidate_absent": 14,
+      "new_fp_same_extent_wrong_id": 13,
+      "new_fp_nongold_extent": 753,
+      "new_fp_overlaps_positive_gold_extent": 511,
+      "cpu_fp_same_extent_wrong_id": 5,
+      "cpu_fp_nongold_extent": 426,
+      "cpu_fp_overlaps_positive_gold_extent": 167,
+      "cpu_tp_lost_new_candidate_present": 45,
+      "cpu_tp_lost_new_candidate_absent": 11,
+      "new_tp_gained_cpu_candidate_present": 8
+    },
+    "fold0": {
+      "new_goldrelations": 498,
+      "new_candidate_covered_gold": 361,
+      "new_fn_candidate_absent": 137,
+      "new_fn_candidate_present": 91,
+      "new_fp_concept_in_gold_patient_elsewhere": 37,
+      "new_fp_concept_absent_gold_association": 75,
+      "cpu_goldrelations": 498,
+      "cpu_candidate_covered_gold": 347,
+      "cpu_fn_candidate_absent": 151,
+      "cpu_fn_candidate_present": 70,
+      "cpu_fp_concept_in_gold_patient_elsewhere": 27,
+      "cpu_fp_concept_absent_gold_association": 119,
+      "new_tp_gained_cpu_candidate_absent": 17,
+      "new_fp_same_extent_wrong_id": 6,
+      "new_fp_nongold_extent": 340,
+      "new_fp_overlaps_positive_gold_extent": 244,
+      "cpu_fp_same_extent_wrong_id": 5,
+      "cpu_fp_nongold_extent": 249,
+      "cpu_fp_overlaps_positive_gold_extent": 86,
+      "cpu_tp_lost_new_candidate_present": 32,
+      "cpu_tp_lost_new_candidate_absent": 7,
+      "new_tp_gained_cpu_candidate_present": 15
+    },
+    "fold2": {
+      "new_goldrelations": 484,
+      "new_candidate_covered_gold": 309,
+      "new_fn_candidate_absent": 175,
+      "new_fn_candidate_present": 65,
+      "new_fp_concept_in_gold_patient_elsewhere": 44,
+      "new_fp_concept_absent_gold_association": 117,
+      "cpu_goldrelations": 484,
+      "cpu_candidate_covered_gold": 308,
+      "cpu_fn_candidate_absent": 176,
+      "cpu_fn_candidate_present": 24,
+      "cpu_fp_concept_in_gold_patient_elsewhere": 27,
+      "cpu_fp_concept_absent_gold_association": 108,
+      "cpu_tp_lost_new_candidate_present": 46,
+      "new_tp_gained_cpu_candidate_absent": 9,
+      "new_fp_same_extent_wrong_id": 23,
+      "new_fp_nongold_extent": 509,
+      "new_fp_overlaps_positive_gold_extent": 375,
+      "cpu_fp_same_extent_wrong_id": 19,
+      "cpu_fp_nongold_extent": 273,
+      "cpu_fp_overlaps_positive_gold_extent": 135,
+      "cpu_tp_lost_new_candidate_absent": 8,
+      "new_tp_gained_cpu_candidate_present": 5
+    },
+    "fold4": {
+      "new_goldrelations": 398,
+      "new_candidate_covered_gold": 255,
+      "new_fn_candidate_absent": 143,
+      "new_fn_candidate_present": 61,
+      "new_fp_concept_in_gold_patient_elsewhere": 26,
+      "new_fp_concept_absent_gold_association": 139,
+      "cpu_goldrelations": 398,
+      "cpu_candidate_covered_gold": 244,
+      "cpu_fn_candidate_absent": 154,
+      "cpu_fn_candidate_present": 30,
+      "cpu_fp_concept_in_gold_patient_elsewhere": 22,
+      "cpu_fp_concept_absent_gold_association": 113,
+      "new_tp_gained_cpu_candidate_absent": 9,
+      "new_fp_same_extent_wrong_id": 13,
+      "new_fp_nongold_extent": 404,
+      "new_fp_overlaps_positive_gold_extent": 291,
+      "cpu_fp_same_extent_wrong_id": 9,
+      "cpu_fp_nongold_extent": 241,
+      "cpu_fp_overlaps_positive_gold_extent": 106,
+      "cpu_tp_lost_new_candidate_present": 34,
+      "cpu_tp_lost_new_candidate_absent": 5,
+      "new_tp_gained_cpu_candidate_present": 10
+    },
+    "multiple_patients": {
+      "new_goldrelations": 1545,
+      "new_candidate_covered_gold": 1104,
+      "new_fn_candidate_absent": 441,
+      "new_fn_candidate_present": 337,
+      "new_fp_concept_in_gold_patient_elsewhere": 167,
+      "new_fp_concept_absent_gold_association": 334,
+      "cpu_goldrelations": 1545,
+      "cpu_candidate_covered_gold": 1076,
+      "cpu_fn_candidate_absent": 469,
+      "cpu_fn_candidate_present": 246,
+      "cpu_fp_concept_in_gold_patient_elsewhere": 128,
+      "cpu_fp_concept_absent_gold_association": 326,
+      "new_tp_gained_cpu_candidate_absent": 31,
+      "new_fp_same_extent_wrong_id": 52,
+      "new_fp_nongold_extent": 1332,
+      "new_fp_overlaps_positive_gold_extent": 989,
+      "cpu_fp_same_extent_wrong_id": 37,
+      "cpu_fp_nongold_extent": 755,
+      "cpu_fp_overlaps_positive_gold_extent": 348,
+      "cpu_tp_lost_new_candidate_present": 137,
+      "new_tp_gained_cpu_candidate_present": 61,
+      "cpu_tp_lost_new_candidate_absent": 18
+    },
+    "fold3": {
+      "new_goldrelations": 448,
+      "new_candidate_covered_gold": 328,
+      "new_fn_candidate_absent": 120,
+      "new_fn_candidate_present": 100,
+      "new_fp_concept_in_gold_patient_elsewhere": 30,
+      "new_fp_concept_absent_gold_association": 104,
+      "cpu_goldrelations": 448,
+      "cpu_candidate_covered_gold": 322,
+      "cpu_fn_candidate_absent": 126,
+      "cpu_fn_candidate_present": 77,
+      "cpu_fp_concept_in_gold_patient_elsewhere": 22,
+      "cpu_fp_concept_absent_gold_association": 98,
+      "cpu_tp_lost_new_candidate_present": 47,
+      "new_tp_gained_cpu_candidate_present": 29,
+      "new_fp_same_extent_wrong_id": 6,
+      "new_fp_nongold_extent": 400,
+      "new_fp_overlaps_positive_gold_extent": 301,
+      "cpu_fp_same_extent_wrong_id": 3,
+      "cpu_fp_nongold_extent": 197,
+      "cpu_fp_overlaps_positive_gold_extent": 102,
+      "new_tp_gained_cpu_candidate_absent": 6,
+      "cpu_tp_lost_new_candidate_absent": 5
+    }
+  },
+  "component_evidence_scope": "The component audit covers only development fold 0. No per-source causal attribution or KB/neural contribution fraction is available for folds 1-4 from these saved final predictions.",
+  "fold0_existing_component_evidence": {
+    "fixed_kb_share_of_retained_positive_units": 0.9162303664921466,
+    "fixed_kb_metrics": {
+      "mention": {
+        "precision": 0.7180952380952381,
+        "recall": 0.6257261410788382,
+        "f1": 0.6687361419068736,
+        "tp": 754,
+        "fp": 296,
+        "fn": 451
+      },
+      "document": {
+        "precision": 0.8396039603960396,
+        "recall": 0.6493108728943339,
+        "f1": 0.7322970639032815,
+        "tp": 424,
+        "fp": 81,
+        "fn": 229
+      },
+      "association_micro": {
+        "precision": 0.7166212534059946,
+        "recall": 0.5281124497991968,
+        "f1": 0.608092485549133,
+        "tp": 263,
+        "fp": 104,
+        "fn": 235
+      },
+      "association_macro": {
+        "precision": 0.6204977792404693,
+        "recall": 0.4983811279858965,
+        "f1": 0.5141747447393745,
+        "patients": 45
+      },
+      "score": 0.6308251090246657,
+      "counts": {
+        "documents": 16,
+        "patients": 45
+      },
+      "approximations": [
+        "No official scorer is supplied; these are local implementations of the published metrics.",
+        "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+        "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+        "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+        "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+        "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+      ]
+    },
+    "ner_added_to_fixed_kb": {
+      "before_positive_units": 1050,
+      "after_positive_units": 1146,
+      "shared_positive_units": 1050,
+      "share_of_after_already_in_before": 0.9162303664921466,
+      "added_mention_units": {
+        "total": 96,
+        "tp": 46,
+        "fp": 50
+      },
+      "removed_mention_units": {
+        "total": 0,
+        "tp": 0,
+        "fp": 0
+      },
+      "added_document_concepts": {
+        "total": 33,
+        "tp": 20,
+        "fp": 13
+      },
+      "removed_document_concepts": {
+        "total": 0,
+        "tp": 0,
+        "fp": 0
+      },
+      "added_association_pairs": {
+        "total": 17,
+        "tp": 8,
+        "fp": 9
+      },
+      "removed_association_pairs": {
+        "total": 2,
+        "tp": 1,
+        "fp": 1
+      },
+      "label_overrides": 32
+    },
+    "umls_added_to_hpo_only": {
+      "before_positive_units": 909,
+      "after_positive_units": 1050,
+      "shared_positive_units": 909,
+      "share_of_after_already_in_before": 0.8657142857142858,
+      "added_mention_units": {
+        "total": 141,
+        "tp": 52,
+        "fp": 89
+      },
+      "removed_mention_units": {
+        "total": 0,
+        "tp": 0,
+        "fp": 0
+      },
+      "added_document_concepts": {
+        "total": 56,
+        "tp": 27,
+        "fp": 29
+      },
+      "removed_document_concepts": {
+        "total": 0,
+        "tp": 0,
+        "fp": 0
+      },
+      "added_association_pairs": {
+        "total": 40,
+        "tp": 19,
+        "fp": 21
+      },
+      "removed_association_pairs": {
+        "total": 2,
+        "tp": 2,
+        "fp": 0
+      },
+      "label_overrides": 0
+    },
+    "conditional_ner_score_gain": 0.01187879246945589,
+    "conditional_umls_score_gain": 0.010602467070738752
+  },
+  "evidence_based_findings": [
+    {
+      "finding": "Entity precision deteriorates substantially with little recall benefit.",
+      "evidence": {
+        "mention_tp_new_minus_cpu": 28,
+        "mention_fp_new_minus_cpu": 927,
+        "document_tp_new_minus_cpu": 49,
+        "document_fp_new_minus_cpu": 215
+      }
+    },
+    {
+      "finding": "Most final entity FP are at nongold extents; overlapping nongold extents show the largest increase. These are output-level error categories, not NER-specific attribution.",
+      "evidence": {
+        "new_mention_fp": 2150,
+        "new_overlapping_nongold_extent_fp": 1500,
+        "cpu_overlapping_nongold_extent_fp": 515,
+        "new_same_extent_wrong_id_fp": 65,
+        "cpu_same_extent_wrong_id_fp": 42
+      }
+    },
+    {
+      "finding": "Association recall loss is not explained mainly by missing entity concepts: new concept reachability is slightly higher, but covered relations are retained less often.",
+      "evidence": {
+        "gold_associations": 2171,
+        "new_reachable": 1497,
+        "cpu_reachable": 1465,
+        "new_reachable_but_missed": 392,
+        "cpu_reachable_but_missed": 263,
+        "cpu_correct_relations_lost_by_new": 211,
+        "lost_relations_still_reachable_in_new": 182,
+        "fraction_still_reachable": 0.8625592417061612
+      }
+    },
+    {
+      "finding": "Regression is not restricted to multi-patient attribution.",
+      "evidence": {
+        "single_patient_new_reachable_but_missed": 55,
+        "single_patient_cpu_reachable_but_missed": 17,
+        "single_patient_new_minus_cpu_score": -0.04616507948908588
+      }
+    },
+    {
+      "finding": "Fold 0 net gain does not transfer to the four other folds; this supports development-selection caution but does not identify calibration as the cause.",
+      "evidence": {
+        "fold_score_new_minus_cpu": [
+          0.007420288615331172,
+          -0.04523236313783274,
+          -0.06642896053660408,
+          -0.047646477819829225,
+          -0.04773573836335088
+        ]
+      }
+    }
+  ],
+  "unproven_hypotheses": [
+    "The frozen span threshold 0.9702336192131042 may be miscalibrated across folds. Existing counts do not establish this; no new threshold scan was performed.",
+    "The patient association model is trained with fixed-KB candidates and evaluated on a neural-supported KB union. Candidate/evidence distribution mismatch may contribute, but its causal effect has not been measured.",
+    "Overlapping false extents may originate from nested KB matches, neural boundaries, linking, or their union. Saved final predictions do not retain enough per-source information to assign each error."
+  ],
+  "single_highest_priority_next_step": {
+    "target": "Patient association decisions for concepts already reached by the frozen entity pipeline.",
+    "proposed_change": "Prepare one controlled association-only comparison: keep span model, span threshold, entity strategy and outer folds fixed; replace fixed-KB-only association training candidates with candidates generated strictly out of fold within each outer training set, matching the deployed union candidate distribution. Refit only the association model, and assess whether reachable-but-missed relations decrease without increasing false assignments.",
+    "why_first": "The new pipeline already reaches 32 more gold relations yet loses 97 association TP overall; 182 of 211 CPU-correct relations it drops still have an eligible concept. This locates a concrete regression at association decisions and avoids treating an unverified span-threshold explanation as fact.",
+    "is_a_verified_fix": false,
+    "status": "Recommendation only; no candidate generation, model fitting, threshold tuning, or experiment was executed.",
+    "leakage_constraint": "For every outer validation fold, inner candidate generation and all upstream training, checkpoint selection and calibration must exclude the entire outer validation fold and the inner held-out document. Reusing global fivefold OOF models is insufficient because their training may include the current outer validation documents.",
+    "interpretation_constraint": "Candidate-distribution mismatch remains a hypothesis. This single comparison would test one mechanism; it is not justified to claim success in advance or report its development result as independent test performance."
+  }
+}

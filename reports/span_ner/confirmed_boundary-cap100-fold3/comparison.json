@@ -1,0 +1,213 @@
+{
+  "scope": "Approximate local four-metric evaluation; span threshold, entity strategy and association threshold frozen from development fold 0, with no parameter selection on this fold. The checkpoint and complete pipeline still involve development selection; NOT independent test performance.",
+  "approximate_four_metrics": true,
+  "validation_selection": false,
+  "baseline_reproduced": true,
+  "baseline_metric_source": "summary.last_metrics",
+  "baseline_span_metrics": {
+    "positive": {
+      "precision": 0.09947964493419038,
+      "recall": 0.8920402561756633,
+      "f1": 0.17899761336515513,
+      "tp": 975,
+      "fp": 8826,
+      "fn": 118,
+      "predicted": 9801,
+      "gold": 1093
+    },
+    "NO": {
+      "precision": 0.05970149253731343,
+      "recall": 0.8275862068965517,
+      "f1": 0.11136890951276103,
+      "tp": 24,
+      "fp": 378,
+      "fn": 5,
+      "predicted": 402,
+      "gold": 29
+    },
+    "micro": {
+      "precision": 0.09791237871214349,
+      "recall": 0.8903743315508021,
+      "f1": 0.17642384105960265,
+      "tp": 999,
+      "fp": 9204,
+      "fn": 123,
+      "predicted": 10203,
+      "gold": 1122
+    },
+    "any_span": {
+      "precision": 0.10204913854623306,
+      "recall": 0.8921568627450981,
+      "f1": 0.18314884274082882,
+      "tp": 1001,
+      "fp": 8808,
+      "fn": 121,
+      "predicted": 9809,
+      "gold": 1122
+    },
+    "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+  },
+  "best_epoch": 5,
+  "saved_score_floor": 0.5,
+  "selected_common_span_threshold": {
+    "threshold": 0.9702336192131042,
+    "selection": "Frozen from development fold 0; no current-fold threshold search",
+    "metrics": {
+      "positive": {
+        "precision": 0.3072961373390558,
+        "recall": 0.6550777676120768,
+        "f1": 0.41834647969617295,
+        "tp": 716,
+        "fp": 1614,
+        "fn": 377,
+        "predicted": 2330,
+        "gold": 1093
+      },
+      "NO": {
+        "precision": 0.4,
+        "recall": 0.3448275862068966,
+        "f1": 0.3703703703703704,
+        "tp": 10,
+        "fp": 15,
+        "fn": 19,
+        "predicted": 25,
+        "gold": 29
+      },
+      "micro": {
+        "precision": 0.30828025477707005,
+        "recall": 0.6470588235294118,
+        "f1": 0.4176013805004314,
+        "tp": 726,
+        "fp": 1629,
+        "fn": 396,
+        "predicted": 2355,
+        "gold": 1122
+      },
+      "any_span": {
+        "precision": 0.31479897348160824,
+        "recall": 0.6559714795008913,
+        "f1": 0.4254335260115607,
+        "tp": 736,
+        "fp": 1602,
+        "fn": 386,
+        "predicted": 2338,
+        "gold": 1122
+      },
+      "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+    }
+  },
+  "span_threshold_objective": "No optimization on this fold; evaluate the frozen development-fold-0 span threshold",
+  "span_label_arbitration": "Linked entities retain one label per extent; highest passing raw score wins, positive on ties",
+  "selection_rule": "No optimization on this fold; evaluate the single frozen entity strategy and association threshold",
+  "comparisons": [
+    {
+      "name": "knowledge_union__association_0.3",
+      "entity_strategy": "knowledge_union",
+      "association_threshold": 0.3,
+      "span_threshold": 0.9702336192131042,
+      "metrics": {
+        "mention": {
+          "precision": 0.6288848263254113,
+          "recall": 0.6237533998186764,
+          "f1": 0.6263086026399636,
+          "tp": 688,
+          "fp": 406,
+          "fn": 415
+        },
+        "document": {
+          "precision": 0.7903930131004366,
+          "recall": 0.6728624535315985,
+          "f1": 0.7269076305220884,
+          "tp": 362,
+          "fp": 96,
+          "fn": 176
+        },
+        "association_micro": {
+          "precision": 0.6298342541436464,
+          "recall": 0.5089285714285714,
+          "f1": 0.562962962962963,
+          "tp": 228,
+          "fp": 134,
+          "fn": 220
+        },
+        "association_macro": {
+          "precision": 0.4912233624993904,
+          "recall": 0.48982322318796995,
+          "f1": 0.4714966599617321,
+          "patients": 47
+        },
+        "score": 0.5969189640216868,
+        "counts": {
+          "documents": 16,
+          "patients": 47
+        },
+        "approximations": [
+          "No official scorer is supplied; these are local implementations of the published metrics.",
+          "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+          "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+          "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+          "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+          "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+        ]
+      },
+      "entities": 1113,
+      "association_pairs": 362
+    }
+  ],
+  "selected": {
+    "name": "knowledge_union__association_0.3",
+    "entity_strategy": "knowledge_union",
+    "association_threshold": 0.3,
+    "span_threshold": 0.9702336192131042,
+    "metrics": {
+      "mention": {
+        "precision": 0.6288848263254113,
+        "recall": 0.6237533998186764,
+        "f1": 0.6263086026399636,
+        "tp": 688,
+        "fp": 406,
+        "fn": 415
+      },
+      "document": {
+        "precision": 0.7903930131004366,
+        "recall": 0.6728624535315985,
+        "f1": 0.7269076305220884,
+        "tp": 362,
+        "fp": 96,
+        "fn": 176
+      },
+      "association_micro": {
+        "precision": 0.6298342541436464,
+        "recall": 0.5089285714285714,
+        "f1": 0.562962962962963,
+        "tp": 228,
+        "fp": 134,
+        "fn": 220
+      },
+      "association_macro": {
+        "precision": 0.4912233624993904,
+        "recall": 0.48982322318796995,
+        "f1": 0.4714966599617321,
+        "patients": 47
+      },
+      "score": 0.5969189640216868,
+      "counts": {
+        "documents": 16,
+        "patients": 47
+      },
+      "approximations": [
+        "No official scorer is supplied; these are local implementations of the published metrics.",
+        "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+        "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+        "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+        "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+        "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+      ]
+    },
+    "entities": 1113,
+    "association_pairs": 362
+  },
+  "frozen_selection": true,
+  "current_fold_parameter_selection": false,
+  "checkpoint_validation_selection": true
+}

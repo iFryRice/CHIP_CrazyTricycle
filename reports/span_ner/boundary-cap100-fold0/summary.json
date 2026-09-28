@@ -1,0 +1,57 @@
+{
+  "status": "completed",
+  "smoke": false,
+  "optimizer_steps": 694,
+  "epochs_completed": 5,
+  "last_epoch_complete": true,
+  "best_epoch": 5,
+  "best_micro_f1": 0.18139573479379306,
+  "last_metrics": {
+    "positive": {
+      "precision": 0.10394990366088631,
+      "recall": 0.9059613769941226,
+      "f1": 0.18650073459510844,
+      "tp": 1079,
+      "fp": 9301,
+      "fn": 112,
+      "predicted": 10380,
+      "gold": 1191
+    },
+    "NO": {
+      "precision": 0.03111111111111111,
+      "recall": 0.4666666666666667,
+      "f1": 0.058333333333333334,
+      "tp": 14,
+      "fp": 436,
+      "fn": 16,
+      "predicted": 450,
+      "gold": 30
+    },
+    "micro": {
+      "precision": 0.10092336103416435,
+      "recall": 0.8951678951678952,
+      "f1": 0.18139573479379306,
+      "tp": 1093,
+      "fp": 9737,
+      "fn": 128,
+      "predicted": 10830,
+      "gold": 1221
+    },
+    "any_span": {
+      "precision": 0.10581451225372417,
+      "recall": 0.9017199017199017,
+      "f1": 0.18940306210218477,
+      "tp": 1101,
+      "fp": 9304,
+      "fn": 120,
+      "predicted": 10405,
+      "gold": 1221
+    },
+    "scope": "Exact original-character spans, positive/NO; all gold spans retained in recall; no HPO or patient scores"
+  },
+  "duration_seconds": 490.57221388816833,
+  "training_documents": 64,
+  "validation_documents": 16,
+  "metric_scope": "Document-held-out exact span diagnostics only; validation used for checkpoint selection, not an independent test score",
+  "threshold": 0.5
+}

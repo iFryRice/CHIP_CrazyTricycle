@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "phase": "B",
+  "frozen_at_utc": "2026-09-28T15:49:11.613355+00:00",
+  "selected": {
+    "name": "knowledge_union__association_0.3",
+    "entity_strategy": "knowledge_union",
+    "association_threshold": 0.3,
+    "span_threshold": 0.9702336192131042,
+    "metrics": {
+      "mention": {
+        "precision": 0.6980802792321117,
+        "recall": 0.6639004149377593,
+        "f1": 0.680561463207146,
+        "tp": 800,
+        "fp": 346,
+        "fn": 405
+      },
+      "document": {
+        "precision": 0.8252788104089219,
+        "recall": 0.6799387442572741,
+        "f1": 0.7455919395465995,
+        "tp": 444,
+        "fp": 94,
+        "fn": 209
+      },
+      "association_micro": {
+        "precision": 0.7068062827225131,
+        "recall": 0.5421686746987951,
+        "f1": 0.6136363636363636,
+        "tp": 270,
+        "fp": 112,
+        "fn": 228
+      },
+      "association_macro": {
+        "precision": 0.6196377484236625,
+        "recall": 0.521094043090116,
+        "f1": 0.5310258395863774,
+        "patients": 45
+      },
+      "score": 0.6427039014941216,
+      "counts": {
+        "documents": 16,
+        "patients": 45
+      },
+      "approximations": [
+        "No official scorer is supplied; these are local implementations of the published metrics.",
+        "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+        "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+        "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+        "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+        "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+      ]
+    },
+    "entities": 1170,
+    "association_pairs": 382
+  },
+  "ner_training_parameters": {
+    "epochs": 5,
+    "batch_size": 4,
+    "gradient_accumulation": 4,
+    "learning_rate": 2e-05,
+    "head_learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "gradient_clip": 1.0,
+    "pos_weight_cap": 100.0,
+    "max_length": 384,
+    "stride": 128,
+    "max_span_width": 64,
+    "head_rank": 64,
+    "dropout": 0.1,
+    "seed": 20260928,
+    "fp16": true,
+    "model_source": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+    "model_revision": "e1354b7a3a09615f6aba48dfad4b7a613eef7062",
+    "boundary_ranking_weight": 0.0,
+    "boundary_ranking_margin": 1.0
+  },
+  "model_files_sha256": {
+    "config.json": "56bab767c02bc792897638feb8addc06d483d9c73769a5f554bbabea1f5507a1",
+    "pytorch_model.bin": "ad7bbb66376cfd6b2db3447192b034efe016337cbef135c35c411fd61b13c193",
+    "tokenizer_config.json": "53b6f42b8b8daddbdc6d3532c324187a92b46c1602bd6e8d4ad5a413b4fc90e1",
+    "vocab.txt": "79489a52be45e6fa033521e8ce8e4f62aedc0a742ee2aa6fc04667e5b0b1454d"
+  },
+  "resource_sha256": {
+    "training_data": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "ontology": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "umls_terms": "311514dc68c619db01d19a4d8aacc55c9a62474e706b405e4cb42ac6ffc78119",
+    "umls_manifest": "00decc8a78d64c9694c09843bff25fba537894e7ac2c8605ea089744ea7aa3f1"
+  },
+  "association_parameters": {
+    "C": 0.5,
+    "negative_weight": 1.0
+  },
+  "inference_code_sha256": {
+    "scripts/evaluate_linked_pipeline.py": "a5103fce6e82fe76088c3f2702d43cfad626ee41428d7f3bae0093fb1a7483bc",
+    "scripts/finalize_b_pipeline.py": "080ccd7247a32efb3531b890ba24ee7e96f655c47e552efc5821cce325d7ab44",
+    "scripts/predict_span_ner.py": "3267a635b37e97dc89d63f9e2fbf8c4a7667006f03cb1e17754eb93a49c73172",
+    "patientphex/span_linking.py": "d5de49d6845486687da0773890d99bb848015af70782d03b43eef026aa79a734",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/entities.py": "c1d1ce81f01eb171a64a8fd1487609e0fd590804ae5ac738d6b497791ac13ada",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324"
+  },
+  "selection_sources": {
+    "comparison": {
+      "path": "/home/dcf/chip2026/reports/span_ner/linked_boundary-cap100-fold0/comparison.json",
+      "sha256": "a08725ce56265c2b919890d8e69e70ea181f079d17e33c3416730992d75064ef"
+    },
+    "configuration": {
+      "path": "/home/dcf/chip2026/reports/span_ner/linked_boundary-cap100-fold0/config.json",
+      "sha256": "0493245f240d8ad7a77a3ffb9948ebec1d6fdc41145967fe5dcb7c6754d33d24"
+    },
+    "training_manifest": {
+      "path": "/home/dcf/chip2026/work/span_ner/boundary-cap100-fold0/manifest.json",
+      "sha256": "5ba8c9591cfd2bda9792b83dd20e487995dfa2827056281df6762c5e6afcca7b"
+    }
+  },
+  "decision": "Highest complete four-metric score on development fold 0 among the original run and two predeclared boundary controls; differences are not a significance claim",
+  "confirmation": "Remaining folds use these fixed span/entity/association choices and final epoch 5. Training and development overlap across folds, so the overall result is a development estimate, not an independent test.",
+  "target": "PatientPheX-V1-B/PatientPheX-V1-B.jsonl; never used to select parameters"
+}

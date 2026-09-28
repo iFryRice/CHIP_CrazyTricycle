@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-09-28T16:12:40.476683+00:00",
+  "status": "passed",
+  "local_submission_sha256": "9256fbb6ac7aaabdd27bda3190d353ebd6b08da887b4065f86e75eafde7fc35c",
+  "local_and_remote_submission_identical": true,
+  "frozen_code_hashes_rechecked": [
+    "scripts/evaluate_linked_pipeline.py",
+    "scripts/finalize_b_pipeline.py",
+    "scripts/predict_span_ner.py",
+    "patientphex/span_linking.py",
+    "patientphex/patient_linking.py",
+    "patientphex/association.py",
+    "patientphex/entities.py",
+    "patientphex/ontology.py",
+    "patientphex/validation.py",
+    "patientphex/data.py"
+  ],
+  "inference_code_hashes_rechecked": [
+    "scripts/predict_span_ner.py",
+    "scripts/train_span_ner.py",
+    "patientphex/span_data.py"
+  ],
+  "local_final_manifest_bound_to_inference": true,
+  "remote_tests": {
+    "command": "CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 .venv/bin/python -m unittest discover -s tests -q",
+    "tests": 85,
+    "failures": 0,
+    "skips": 0,
+    "seconds": 3.721
+  },
+  "local_tests": {
+    "tests": 85,
+    "passed": 74,
+    "skipped_optional_torch": 11,
+    "failures": 0
+  },
+  "independent_remote_checkpoint_review": {
+    "sha256": "cf201805a7bcb1f4d066aa17d4bd1ebfbc076d6b81e66c1e2bedb92955b62e9f",
+    "epoch": 5,
+    "global_step": 910,
+    "next_batch": 0,
+    "metrics": null,
+    "best_score": null,
+    "best_epoch": null
+  },
+  "scope": "Artifact integrity and engineering checks; not a B accuracy estimate."
+}

@@ -1,0 +1,143 @@
+{
+  "checked_at": "2026-09-28T22:02:24+08:00",
+  "server": "10.253.27.177",
+  "remote_root": "/home/dcf/umls",
+  "scope": "Read-only metadata checks, hashes of six small HPO files, HPO SQLite integrity check, and read-only database queries. No uploaded scripts were executed and no uploaded files were modified.",
+  "independent_upload_metadata_check": {
+    "manifest_path": "/home/dcf/umls/upload-manifest.json",
+    "entries_checked": 2985,
+    "expected_total_bytes": 36031260551,
+    "actual_total_bytes": 36031260551,
+    "missing_files": [],
+    "size_mismatches": [],
+    "paths_outside_remote_root": [],
+    "all_manifest_files_exist_with_expected_size": true
+  },
+  "uploaded_manifest_hash_claim_not_independently_repeated": true,
+  "uploaded_full_hash_verification_claim": {
+    "source": "/home/dcf/umls/upload-verification.json",
+    "files": 2985,
+    "bytes": 36031260551,
+    "reported_mismatches": [],
+    "interpretation": "The uploader reports successful full-file SHA-256 verification. This review independently checked existence and sizes for all 2985 files, but did not recompute the full approximately 34 GiB upload hashes."
+  },
+  "resources": {
+    "umls_release": {
+      "version": "2026AA",
+      "release_date": "20260504",
+      "evidence_path": "/home/dcf/umls/install/2026AA/META/release.dat",
+      "scope": "MetamorphoSys-selected installed subset; not a claim that the complete release media or every source was uploaded"
+    },
+    "mrconso": {
+      "path": "/home/dcf/umls/install/2026AA/META/MRCONSO.RRF",
+      "bytes": 1670024054,
+      "sha256_independently_recomputed": false
+    },
+    "umls_term_index": {
+      "path": "/home/dcf/umls/indexes/v54-candidate-crosswalk/2026AA/umls-terms.sqlite",
+      "bytes": 1544871936,
+      "manifest_path": "/home/dcf/umls/indexes/v54-candidate-crosswalk/2026AA/umls-terms.manifest.json",
+      "manifest_reported_rows": 3729476,
+      "manifest_declared_filters": {
+        "language": "ENG",
+        "suppress": "N",
+        "sources": [
+          "RXNORM", "LNC", "SNOMEDCT_US", "ICD9CM", "ICD10CM",
+          "ICD10PCS", "MSH", "HPO", "MED-RT", "MTH"
+        ]
+      },
+      "observed_tables": ["metadata", "sources", "terms", "concepts", "semantic_types"],
+      "observed_indexes": [
+        "terms_normalized_text_idx", "terms_source_code_idx", "terms_cui_idx", "semantic_types_cui_idx"
+      ],
+      "index_capabilities": "B-tree normalized exact-text, source-code, and CUI lookup; no full-text or vector index observed",
+      "read_only_lookup_verified": true,
+      "full_database_integrity_check_independently_repeated": false,
+      "sha256_independently_recomputed": false
+    },
+    "target_hpo_database": {
+      "path": "/home/dcf/umls/hpo/2026-06-23/hpo-2026-06-23.sqlite",
+      "bytes": 8790016,
+      "version": "2026-06-23",
+      "observed_tables": ["concepts", "synonyms", "parents", "alternate_ids", "replacements", "metadata"],
+      "available_content": ["names", "definitions", "synonyms_with_scope", "parents", "alternate_ids", "replacement_relations"],
+      "independent_sqlite_integrity_check": "ok"
+    },
+    "target_hpo_obo": {
+      "path": "/home/dcf/umls/hpo/2026-06-23/hp-v2026-06-23.obo",
+      "bytes": 11222341,
+      "version": "2026-06-23",
+      "sha256": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+      "local_comparison_path": "PatientPheX-V1-A/hp.obo",
+      "independently_matches_local_project_obo": true
+    }
+  },
+  "independent_hpo_file_hash_verification": {
+    "manifest_path": "/home/dcf/umls/hpo/2026-06-23/hpo-manifest.json",
+    "files_checked": 6,
+    "all_match": true,
+    "files": [
+      {
+        "path": "/home/dcf/umls/hpo/2026-06-23/hp-v2026-06-23.obo",
+        "bytes": 11222341,
+        "sha256": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/dcf/umls/hpo/2026-06-23/hpo-2026-06-23.sqlite",
+        "bytes": 8790016,
+        "sha256": "9e1445a82053d42958c8496652a1b3349454afeca3bc0271b2875a0d746be954",
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/dcf/umls/hpo/2026-06-23/hpo-competition-concepts.tsv",
+        "bytes": 835009,
+        "sha256": "9576c017cf94a8f5b33a8a38e293b894ee6f901502de559a31b1ce051091bf3f",
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/dcf/umls/hpo/2026-06-23/hpo-required-missing-from-umls.tsv",
+        "bytes": 21230,
+        "sha256": "6e7114fee7a19eaa9231ee110a8e73be426cae90496fdd1b8db2037b7be30860",
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/dcf/umls/hpo/2026-06-23/hpo-umls-terms.tsv",
+        "bytes": 2664842,
+        "sha256": "f93d98191726f9a8910b0692fd62de1131aeaa65625a6e53cb6d3b070b85edea",
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/dcf/umls/hpo/2026-06-23/umls-hpo-audit.json",
+        "bytes": 5905,
+        "sha256": "07b60eee6a517af5b9f6fbadc159b9f1ae46f2292e2f38c4e9bbf4e266835635",
+        "matches_manifest": true
+      }
+    ]
+  },
+  "independent_hpo_coverage_check": {
+    "umls_hpo_source": "HPO2025_11_24",
+    "umls_hpo_version": "2025_11_24",
+    "target_version": "2026-06-23",
+    "umls_index_distinct_hpo_codes": 19393,
+    "target_database_branch_including_root": 19120,
+    "project_allowed_branch_excluding_root": 19119,
+    "covered_project_allowed_ids": 18627,
+    "missing_project_allowed_ids": 492,
+    "root_id_excluded": "HP:0000118",
+    "project_branch_filter": "in_competition_branch = 1 AND obsolete = 0 AND hpo_id <> 'HP:0000118'",
+    "sorted_allowed_ids_sha256": "346dcd8837d7e1d310ac0bf254e925c7618af6a95912a5567e2f6b56f602bb40",
+    "allowed_ids_hash_method": "SHA-256 of UTF-8 sorted IDs joined with LF and no trailing LF",
+    "independently_matches_local_project_ontology_allowed_ids": true,
+    "interpretation": "Ontology-ID coverage only, not training-data coverage, mention recall, or model performance"
+  },
+  "integration_notes": [
+    "Use the 2026-06-23 HPO database as the authoritative candidate and output ID set; use UMLS only to expand or rank candidates.",
+    "A single HPO identifier can have multiple CUIs; CUI lookup does not establish an unambiguous one-to-one HPO mapping.",
+    "Preserve synonym scope and distinguish consider from replaced_by when handling ontology replacements.",
+    "Existing SQLite indexes can be queried read-only without rebuilding the full UMLS index or loading approximately 34 GiB into RAM.",
+    "Uploaded configuration and README examples contain Windows paths; none of their scripts or commands were executed.",
+    "MRHIST.RRF is present but empty; the README reports incomplete source history. Current-release lookup does not establish complete cross-release change history.",
+    "Remote database checks used the existing /usr/bin/python3 with SQLite and mode=ro connections."
+  ]
+}

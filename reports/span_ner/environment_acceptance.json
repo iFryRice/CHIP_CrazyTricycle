@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "date": "2026-09-28",
+  "timezone": "Asia/Shanghai",
+  "reviewer": "independent environment_acceptance agent",
+  "host": "10.253.27.177",
+  "project_dir": "/home/dcf/chip2026",
+  "spec_sha256": "1327ca93670a7ea2c01e0ee41acc3af11c736c3a622a0079480e8ea1e88aa8ba",
+  "runbook": "reports/span_ner/remote_runbook.md",
+  "exact_acceptance_commands_executed": true,
+  "exit_code": 0,
+  "resolved_doc_divergence": "HF_HOME was initially missing from the runbook; it was added before the reviewer reran the exact commands.",
+  "model_verification": {
+    "verified": true,
+    "files_verified": 6,
+    "revision": "e1354b7a3a09615f6aba48dfad4b7a613eef7062"
+  },
+  "tests": {"run": 48, "passed": 48, "skipped": 0, "seconds": 1.7},
+  "cuda_witness": {
+    "sentinel": "CUDA_WITNESS",
+    "python": "3.12.13",
+    "torch": "2.6.0+cu124",
+    "transformers": "4.49.0",
+    "gpu": "Tesla V100-DGXS-32GB",
+    "capability": [7, 0],
+    "dtype": "float16",
+    "shape": [128, 128],
+    "forward_and_backward_finite": true,
+    "loss": 257.83489990234375,
+    "peak_allocated_mib": 16.516
+  },
+  "smoke": {"status": "completed", "optimizer_steps": 20, "validation_documents": 16, "summary": "reports/span_ner/smoke_fold0/summary.json"},
+  "formal_run": {
+    "status": "completed",
+    "finished_at_utc": "2026-09-28T14:40:38Z",
+    "epochs_completed": 5,
+    "duration_seconds": 490.2091875076294,
+    "planned_updates": 695,
+    "optimizer_steps": 692,
+    "amp_skipped_updates": 3,
+    "amp_skip_epochs": [1],
+    "all_logged_losses_finite": true,
+    "loss_range": [0.000549, 0.594312],
+    "train_validation_document_intersection": 0,
+    "peak_allocated_gib": 3.057501792907715,
+    "best_checkpoint_bytes": 438814610,
+    "last_checkpoint_bytes": 1311732218,
+    "summary": "reports/span_ner/fold0/summary.json",
+    "scope": "Exact character-span and positive/NO diagnostics only; no HPO or patient association score. Validation selected the checkpoint and is not an independent test."
+  }
+}

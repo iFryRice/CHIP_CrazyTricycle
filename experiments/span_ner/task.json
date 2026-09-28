@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "competition": "CHIP 2026 PatientPheX",
+  "phase": "B",
+  "purpose": "Data roles and completion record for the frozen B prediction pipeline; final fit uses all 80 official labeled training documents, while B is blind inference only.",
+  "remote_project_root": "/home/dcf/chip2026",
+  "training": {
+    "path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+    "sha256": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "documents": 80,
+    "role": "Official labeled supervision; folder name does not determine the competition prediction stage"
+  },
+  "development": {
+    "split_path": "reports/cpu_baseline/split.json",
+    "split_sha256": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "scope": "Document-held-out labeled training documents only; no B gold or B-driven threshold selection"
+  },
+  "inference_target": {
+    "path": "PatientPheX-V1-B/PatientPheX-V1-B.jsonl",
+    "sha256": "4dafea5aa59bfd5f90151ee3732ee475323512b8691f370f4d4678b628cdb62a",
+    "bytes": 2027053,
+    "documents": 100,
+    "patients": 244,
+    "require_empty_entities_and_association": true,
+    "require_disjoint_from_training": true,
+    "preserve_document_order_text_offsets_and_patient_ids": true
+  },
+  "ontology": {
+    "path": "PatientPheX-V1-A/hp.obo",
+    "version": "2026-06-23",
+    "allowed_root": "HP:0000118",
+    "exclude_root_from_outputs": true,
+    "server_resource_directory": "/home/dcf/umls/hpo/2026-06-23/"
+  },
+  "planned_submission_path": "submissions/patientphex_b.jsonl",
+  "submission_status": "generated_and_validated_candidate",
+  "remaining_stages": [],
+  "submission_sha256": "9256fbb6ac7aaabdd27bda3190d353ebd6b08da887b4065f86e75eafde7fc35c",
+  "completion_report": "reports/b_supervised/report.md",
+  "completed_stages": [
+    "Compared span boundary configurations on the selection fold",
+    "Connected specified HPO and uploaded UMLS resources",
+    "Completed frozen confirmation folds and patient association training",
+    "Fitted all 80 training documents for 5 epochs and validated B predictions on server and locally"
+  ],
+  "quality_assessment": {
+    "scope": "Local approximate five-fold development estimate, not an independent test or B score",
+    "new_pipeline": 0.6014178555472544,
+    "frozen_cpu_reference": 0.6397270845646355,
+    "outcome": "Below frozen CPU; experimental candidate, improvement not established"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "phase": "B",
+  "selection_data": "Only the 80 labeled training documents, initially saved fold 0",
+  "frozen_target": "PatientPheX-V1-B/PatientPheX-V1-B.jsonl",
+  "diagnosis": "Half of the 2442 high-threshold false positive spans combine correct endpoints from distinct gold entities; no indexing or masking defect was found",
+  "reference_run": "work/span_ner/fold0",
+  "first_control": {
+    "name": "boundary-cap100-fold0",
+    "only_changed_training_parameter": "pos_weight_cap",
+    "old_value": 1000,
+    "new_value": 100,
+    "epochs": 5,
+    "fold": 0,
+    "seed": 20260928
+  },
+  "second_control_if_needed": "Explicit hard-negative loss on incorrect start/end pairings; retain all true overlapping spans",
+  "criterion": "Held-out exact-span precision/recall, threshold diagnostics and endpoint mismatch errors; do not use B labels or compare span F1 with competition overall score",
+  "subsequent_steps": ["UMLS/HPO linking", "Patient-balanced association supervision", "Document-level complete-pipeline validation", "Final B inference and schema validation"]
+}

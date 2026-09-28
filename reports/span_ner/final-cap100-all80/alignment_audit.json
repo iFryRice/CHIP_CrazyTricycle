@@ -1,0 +1,138 @@
+{
+  "train": {
+    "label_names": [
+      "positive",
+      "NO"
+    ],
+    "parameters": {
+      "max_length": 384,
+      "stride": 128,
+      "max_span_width": 64
+    },
+    "counts": {
+      "documents": 80,
+      "paragraphs": 2815,
+      "windows": 2897,
+      "empty_windows": 0,
+      "entities": 6027,
+      "encoded_entities": 6023,
+      "positive_entities": 5852,
+      "entity_window_assignments": 6177,
+      "negative_entities": 171,
+      "unencoded_entities": 4,
+      "span_window_targets": 6167
+    },
+    "issue_counts": {
+      "invalid_entity_span": 0,
+      "entity_not_in_passage": 0,
+      "text_mismatch": 0,
+      "exact_alignment_failed": 4,
+      "span_too_long": 0,
+      "no_window_coverage": 0
+    },
+    "issues": {
+      "invalid_entity_span": [],
+      "entity_not_in_passage": [],
+      "text_mismatch": [],
+      "exact_alignment_failed": [
+        {
+          "pmc_id": "11765409",
+          "entity_index": 58,
+          "offset": 17132,
+          "length": 3,
+          "text": "GCD",
+          "identifier": "HP:0007802",
+          "note": null,
+          "start_aligned": true,
+          "end_aligned": false
+        },
+        {
+          "pmc_id": "11765409",
+          "entity_index": 60,
+          "offset": 17202,
+          "length": 3,
+          "text": "GCD",
+          "identifier": "HP:0007802",
+          "note": null,
+          "start_aligned": true,
+          "end_aligned": false
+        },
+        {
+          "pmc_id": "11765409",
+          "entity_index": 63,
+          "offset": 17521,
+          "length": 3,
+          "text": "GCD",
+          "identifier": "HP:0007802",
+          "note": null,
+          "start_aligned": true,
+          "end_aligned": false
+        },
+        {
+          "pmc_id": "6063015",
+          "entity_index": 100,
+          "offset": 17418,
+          "length": 63,
+          "text": "pregulation of the ER-associated proteasomal degradation system",
+          "identifier": "-1",
+          "note": null,
+          "start_aligned": false,
+          "end_aligned": true
+        }
+      ],
+      "span_too_long": [],
+      "no_window_coverage": []
+    },
+    "unencoded_entities": [
+      {
+        "pmc_id": "11765409",
+        "entity_index": 58,
+        "offset": 17132,
+        "length": 3,
+        "text": "GCD",
+        "identifier": "HP:0007802",
+        "note": null,
+        "reasons": [
+          "exact_alignment_failed"
+        ]
+      },
+      {
+        "pmc_id": "11765409",
+        "entity_index": 60,
+        "offset": 17202,
+        "length": 3,
+        "text": "GCD",
+        "identifier": "HP:0007802",
+        "note": null,
+        "reasons": [
+          "exact_alignment_failed"
+        ]
+      },
+      {
+        "pmc_id": "11765409",
+        "entity_index": 63,
+        "offset": 17521,
+        "length": 3,
+        "text": "GCD",
+        "identifier": "HP:0007802",
+        "note": null,
+        "reasons": [
+          "exact_alignment_failed"
+        ]
+      },
+      {
+        "pmc_id": "6063015",
+        "entity_index": 100,
+        "offset": 17418,
+        "length": 63,
+        "text": "pregulation of the ER-associated proteasomal degradation system",
+        "identifier": "-1",
+        "note": null,
+        "reasons": [
+          "exact_alignment_failed"
+        ]
+      }
+    ]
+  },
+  "validation": null
+}

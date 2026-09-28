@@ -1,0 +1,36 @@
+{
+  "observed_at_utc": "2026-09-28T14:47:12.396429+00:00",
+  "memory": {
+    "MemTotal_kib": 263833416,
+    "MemFree_kib": 1782308,
+    "MemAvailable_kib": 226810780,
+    "Buffers_kib": 7131736,
+    "Cached_kib": 211376148,
+    "SwapTotal_kib": 0
+  },
+  "disk_free_bytes": 77339844608,
+  "actual_project_path": "/home/dcf/chip2026",
+  "actual_umls_path": "/home/dcf/umls",
+  "gpu_snapshot": [
+    "0, Tesla V100-DGXS-32GB, 221 MiB, 32768 MiB, 0 %",
+    "1, Tesla V100-DGXS-32GB, 3020 MiB, 32768 MiB, 9 %",
+    "2, Tesla V100-DGXS-32GB, 14 MiB, 32768 MiB, 0 %",
+    "3, Tesla V100-DGXS-32GB, 30934 MiB, 32768 MiB, 24 %"
+  ],
+  "compute_processes": [
+    "1919127, GPU-f72988cd-4489-8be0-291e-7c898cdf7fb2, 3006 MiB",
+    "1860873, GPU-2bfe87b4-496d-3ee4-12f1-e31486942eb8, 30920 MiB"
+  ],
+  "checkpoints": {
+    "best.pt": {
+      "path": "/home/dcf/chip2026/work/span_ner/fold0/best.pt",
+      "bytes": 438814610,
+      "sha256": "16b76f95267144b8d8746f36332f7f601cf52e0756c28f1e5f8e8de08dcc9adb"
+    },
+    "last.pt": {
+      "path": "/home/dcf/chip2026/work/span_ner/fold0/last.pt",
+      "bytes": 1311732218,
+      "sha256": "a509fbb9996d70408ec16c275c4f436e520ac5498682f6ff0cd0afa84178c0c9"
+    }
+  }
+}
