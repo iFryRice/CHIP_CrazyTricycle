@@ -1,0 +1,131 @@
+{
+  "declared_at_utc": "2026-09-28T17:10:11.094055+00:00",
+  "hypothesis": "Training patient linkage on inner out-of-fold CPU candidates reduces upstream train/inference distribution mismatch. Entity extraction is frozen.",
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "ontology_path": "PatientPheX-V1-A/hp.obo",
+  "target_path": "PatientPheX-V1-B/PatientPheX-V1-B.jsonl",
+  "split_path": "reports/cpu_baseline/split.json",
+  "baseline_oof": "reports/cpu_b_control/out_of_fold_predictions.jsonl",
+  "baseline_b": "submissions/patientphex_b_cpu.jsonl",
+  "official_baseline": {
+    "target_set": "B",
+    "submitted_at": "2026-09-29 00:55:05",
+    "timezone": "Asia/Shanghai",
+    "submission": "submissions/patientphex_b_cpu.jsonl",
+    "submission_sha256": "1597723da587849498ad652eb96350272c130a4a1d526435f1a444f57a1819bf",
+    "metrics": {
+      "score": 0.6152,
+      "mention_f1": 0.6609,
+      "document_f1": 0.7296,
+      "association_micro_f1": 0.5753,
+      "association_macro_f1": 0.495
+    },
+    "source": "User-provided official leaderboard row; user explicitly confirmed the submission filename. No direct platform query.",
+    "leaderboard_snapshot": [
+      {
+        "team": "Agriv",
+        "metrics": [
+          0.7323,
+          0.7704,
+          0.8275,
+          0.6958,
+          0.6357
+        ]
+      },
+      {
+        "team": "suxiao818",
+        "metrics": [
+          0.7138,
+          0.7524,
+          0.8138,
+          0.6783,
+          0.6107
+        ]
+      },
+      {
+        "team": "大工无私",
+        "metrics": [
+          0.713,
+          0.7419,
+          0.8051,
+          0.6834,
+          0.6214
+        ]
+      },
+      {
+        "team": "Mosaic",
+        "metrics": [
+          0.7036,
+          0.7482,
+          0.7979,
+          0.6743,
+          0.5941
+        ]
+      }
+    ]
+  },
+  "report_dir": "reports/cpu_crossfit",
+  "output": "submissions/patientphex_b_cpu_crossfit.jsonl",
+  "configurations": [
+    {
+      "name": "crossfit_w1_t0.3",
+      "negative_weight": 1.0,
+      "threshold": 0.3
+    },
+    {
+      "name": "crossfit_w1_t0.5",
+      "negative_weight": 1.0,
+      "threshold": 0.5
+    },
+    {
+      "name": "crossfit_w1_t0.7",
+      "negative_weight": 1.0,
+      "threshold": 0.7
+    },
+    {
+      "name": "crossfit_w0.5_t0.3",
+      "negative_weight": 0.5,
+      "threshold": 0.3
+    },
+    {
+      "name": "crossfit_w0.5_t0.5",
+      "negative_weight": 0.5,
+      "threshold": 0.5
+    },
+    {
+      "name": "crossfit_w0.5_t0.7",
+      "negative_weight": 0.5,
+      "threshold": 0.7
+    }
+  ],
+  "promotion": {
+    "minimum_gain": 0.002,
+    "minimum_nonworse_folds": 4,
+    "maximum_precision_loss": 0.05
+  },
+  "selection": "Highest pooled score among configurations passing every predeclared gate. No B labels, inferred per-document B labels, or B prediction agreement used.",
+  "development_scope": "Outer folds have been used in prior method development, including dictionary selection; estimates are not independent test scores. Inner candidate sources record only the labels used by the frozen extractor in this run.",
+  "inner_folds": 4,
+  "inner_seed": 20260929,
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "PatientPheX-V1-B/PatientPheX-V1-B.jsonl": "4dafea5aa59bfd5f90151ee3732ee475323512b8691f370f4d4678b628cdb62a",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "reports/cpu_b_control/out_of_fold_predictions.jsonl": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+    "submissions/patientphex_b_cpu.jsonl": "1597723da587849498ad652eb96350272c130a4a1d526435f1a444f57a1819bf",
+    "reports/official_feedback/b_cpu.json": "d844461338369635627859539c951778c21e1cf7f3b483b19c59c5bed2e7eb3c"
+  },
+  "code_sha256": {
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/entities.py": "c1d1ce81f01eb171a64a8fd1487609e0fd590804ae5ac738d6b497791ac13ada",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+    "scripts/run_cpu_crossfit.sh": "e6c293e61f36309c420128ed3fbcb2e8e504d43f4d4c4bcc472cf815f43b6d23"
+  },
+  "environment": "Existing remote .venv, CPU only, 2 BLAS threads; environment spec unchanged."
+}

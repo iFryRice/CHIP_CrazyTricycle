@@ -1,0 +1,38 @@
+{
+  "validation": {
+    "valid": true,
+    "path": "D:\\Projects\\20260927_CHIP2026\\reports\\document_abbreviations\\best_development_oof.jsonl",
+    "bytes": 687033,
+    "limit_bytes_exclusive": 100000000,
+    "sha256": "78a643cf6e0b9c02b14b3a4168e9a7d8f1e7f34f61d722fed2d9e2ebd6c766ee",
+    "documents": 80,
+    "patients": 209,
+    "entities": 5868,
+    "association_pairs": 1923,
+    "negated_entities": 257,
+    "unmapped_entities": 36,
+    "compound_entities": 8,
+    "document_order_preserved": false,
+    "empty_entity_documents": [],
+    "warnings": [
+      "Document order differs from the source dataset"
+    ]
+  },
+  "metrics_reproduced": true,
+  "selected": null,
+  "changes": {
+    "remove": 64,
+    "correct": 10,
+    "add": 21
+  },
+  "baseline_b_unchanged": true,
+  "no_new_b_submission": true,
+  "remote_tests": {
+    "passed": 116,
+    "skipped": 0
+  },
+  "local_tests": {
+    "passed": 105,
+    "skipped": 11
+  }
+}

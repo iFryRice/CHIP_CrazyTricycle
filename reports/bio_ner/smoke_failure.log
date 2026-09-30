@@ -1,0 +1,9 @@
+{"event": "start", "time_utc": "2026-09-28T17:52:58.341411+00:00", "elapsed_seconds": 4.946587800979614, "training_documents": 64, "validation_documents": 16, "training_windows": 2209, "planned_steps": 695, "projection": {"selected_unique_spans": 4759, "omitted_overlap_unique_spans": 33, "omitted": null, "token_counts": {"-100": 4447, "0": 216923, "1": 4892, "2": 10360}, "policy": "Longest nonoverlapping gold spans for BIO training; clipped or unencoded gold tokens ignored; all original gold retained for evaluation."}}
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"event": "train_step", "time_utc": "2026-09-28T17:52:58.825733+00:00", "elapsed_seconds": 5.430908441543579, "epoch": 1, "step": 1, "planned_steps": 695, "loss": 1.1917343139648438, "gradient_norm": Infinity, "optimizer_step_applied": false, "learning_rate": 0.0, "peak_allocated_gib": 3.237412452697754}
+Traceback (most recent call last):
+  File "/home/dcf/chip2026/scripts/train_bio_ner.py", line 235, in <module>
+    run(parser.parse_args())
+  File "/home/dcf/chip2026/scripts/train_bio_ner.py", line 221, in run
+    raise RuntimeError("Excessive AMP overflow; inspect training before trusting this run.")
+RuntimeError: Excessive AMP overflow; inspect training before trusting this run.

@@ -1,0 +1,132 @@
+{
+  "old_plan_sha256": "c95658ca97ce9e051a736f96392da929c6fffcdea8eb7038479d605a01ad39fe",
+  "failed_plan": {
+    "declared_at_utc": "2026-09-28T21:58:21.146724+00:00",
+    "hypothesis": "Zero-shot semantic review disagrees with some competition annotation conventions and does not recover missing patient links. A supervised text classifier can learn annotation-compatible ownership and complement structural trees, with entities and HPO mappings fixed.",
+    "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+    "split_path": "reports/cpu_baseline/split.json",
+    "ontology_path": "PatientPheX-V1-A/hp.obo",
+    "baseline_oof": "reports/association_context/best_development_oof.jsonl",
+    "candidate_root": "reports/cpu_crossfit",
+    "model_path": "models/biomedbert",
+    "reference_ner_manifest": "work/span_ner/boundary-cap100-fold0/manifest.json",
+    "association_models": {
+      "0": "work/span_ner/document_abbreviations/fold0.pkl",
+      "1": "work/span_ner/document_abbreviations/fold1.pkl"
+    },
+    "work_dir": "work/span_ner/relation_text",
+    "report_dir": "reports/relation_text",
+    "pilot_folds": [
+      0,
+      1
+    ],
+    "parameters": {
+      "epochs": 3,
+      "learning_rate": 2e-05,
+      "batch_size": 12,
+      "seed": 20260929,
+      "precision": "FP16",
+      "max_input_tokens": 384,
+      "weight_decay": 0.01,
+      "dropout": 0.1,
+      "negative_weight": 0.5,
+      "patient_balanced": true,
+      "warmup_fraction": 0.1,
+      "gradient_clip": 1.0,
+      "early_stopping": false,
+      "encoder_training": "Full BiomedBERT fine-tuning from pinned pretrained weights; previous task checkpoints are not reused."
+    },
+    "representation": {
+      "maximum_occurrences": 3,
+      "ranking": "Nearest provided target-patient anchor",
+      "header_token_budget": 32,
+      "target_reference_token_budget": 64,
+      "each_occurrence_token_budget": 92,
+      "patient_and_entity_markers": "Existing unused1..6 tokens; no vocabulary expansion",
+      "source_context_cropping": "Centered per-fragment token crop; focus spans must survive. Full original source excerpts and offsets preserved in metadata.",
+      "document_and_patient_ids_as_features": false
+    },
+    "smoke_steps": 20,
+    "configurations": [
+      {
+        "name": "text_only",
+        "neural_weight": 1.0
+      },
+      {
+        "name": "blend_half",
+        "neural_weight": 0.5
+      },
+      {
+        "name": "blend_quarter",
+        "neural_weight": 0.25
+      }
+    ],
+    "promotion": {
+      "minimum_mean_gain": 0.008,
+      "maximum_fold_loss": 0.002,
+      "maximum_component_loss": 0.002
+    },
+    "confirmation_requirement": {
+      "remaining_folds": [
+        2,
+        3,
+        4
+      ],
+      "minimum_remaining_mean_gain": 0.003,
+      "minimum_full_score_gain": 0.005,
+      "minimum_nonworse_folds": 4,
+      "maximum_component_f1_loss": 0.002,
+      "positive_document_bootstrap_lower_bound": true
+    },
+    "fixed": {
+      "association_threshold": 0.5,
+      "entity_changes": false,
+      "hpo_changes": false,
+      "training_candidate_labels": "Only inner crossfit CPU candidates within the outer training partition; not validation gold entities.",
+      "checkpoint_selection": "Fixed final epoch. No held-out labels used by training or inference.",
+      "llm_decisions_as_features": false
+    },
+    "scope": "Reused development corpus, no independent-test or official B claim. Pilot result must pass fixed gates before remaining-fold confirmation or B generation.",
+    "environment": "Reuse accepted root venv and pinned BiomedBERT, unchanged packages. Only physical GPU 0 and 2, two CPU threads per worker.",
+    "input_sha256": {
+      "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+      "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+      "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+      "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+      "work/span_ner/document_abbreviations/fold0.pkl": "731a2c6843e2a5a88609ea6227f7c74b0c55fc00f5b0f4489f3ac50876916229",
+      "work/span_ner/document_abbreviations/fold1.pkl": "12a4f09bd6ec66d3a65c206af746a223374d025d29c1decd80420ead2c6c5201",
+      "reports/cpu_crossfit/fold0/training_candidates.jsonl": "e868099731b4b608a82e66f00580a7bbea2987110034e41c9835ce2dc6a42f80",
+      "reports/cpu_crossfit/fold0/candidate_provenance.json": "4b72a036278c529245a91fb541cdfd37e15219aff48f93049f705cdf967ed9f2",
+      "reports/cpu_crossfit/fold1/training_candidates.jsonl": "7ef15ee97c867adadd1e1c39e940825d850d584fde13865db22513e9d009a296",
+      "reports/cpu_crossfit/fold1/candidate_provenance.json": "6996c71260b7688ffdba5deb67e430842f224ca94cffae83cf6bf00194f1e2d4",
+      "work/span_ner/boundary-cap100-fold0/manifest.json": "5ba8c9591cfd2bda9792b83dd20e487995dfa2827056281df6762c5e6afcca7b",
+      "experiments/span_ner/environment.json": "3eaf5fe542974df58d82cbc1d100690791a2c2764e25fbdc47bf62e689349edf",
+      "experiments/span_ner/environment_gpu0.json": "9b6d638f88867a1c8d5ccc1d5b1e2908bee6e9fcfeefc8867f66aa99344aa0c8",
+      "reports/span_ner/environment_acceptance.json": "e806b57a3731af77aeb4a1ebd76e0fd24dbc11c9040b8ed5e533127b9a74c2e0",
+      "reports/llm_concept_review/summary.json": "f4f2b48b267a75bdb4df94694b30eb1cab6ce3378ddcec47d6aaf32bcdc60f3c",
+      "reports/entity_residuals/concept_review_error_audit.json": "06a85473447b0918d15f698e0d88420889caab6cd524cbef4cffe874fcc74639",
+      "pyproject.toml": "9f0f2d283585913da5d715595c6426a77e458b0aa90e21805117299979f5d5ca",
+      "uv.lock": "87efa49d3d2685881d061b9af51a086fb0de3944cbf6a50dcb3892095b09f5f6"
+    },
+    "code_sha256": {
+      "patientphex/relation_text.py": "99eccd6f9873f45fab67e0b1c4ba9d9216ede5f84aa0745453a7bc85997a8fd2",
+      "scripts/train_relation_text.py": "9f8e8a7f4bd69cae3a98889f681c5ae0864d6a4dd2d49061b945b2d4b684426c",
+      "scripts/run_relation_experiment.py": "c4ee07aa6c6055f71d426775c2c9ef019d267fd5009ceaa40ffd8966a4340c5e",
+      "scripts/run_relation_text.sh": "11a44b37d4aad16a4851ba1c44de03ba803fde1be9398c1a9f768ba6abcda54e",
+      "tests/test_relation_text.py": "af01fb225e7ca00b580cad1475318e81999d6efac4cbe74ccd022ab54a545402",
+      "scripts/train_span_ner.py": "a569587eb2e6551f054d229101ef403128e2d8d9451f1bd41c4ea38c0a5bda39",
+      "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+      "scripts/run_llm_association.py": "1000ee50cb20f902694f6657a50ff440f30c279a65ebc4b9837a17ff3ea64233",
+      "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+      "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+      "patientphex/context_linking.py": "802e46e10f22051d1d9d151a37d9b338ccb912bda5cb1601f16f67d99041ce8d",
+      "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+      "patientphex/llm_association.py": "9abaa6e0be77d9deab91764383e29fd75198aab7ea512d02c30c56644f0cd8a9",
+      "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+      "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+      "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280"
+    }
+  },
+  "root_cause": "Pinned BiomedBERT vocabulary has only PAD/UNK/CLS/SEP/MASK special tokens, no unused1..6. Failure occurred before output directory/model training creation.",
+  "repair": "Add exactly six explicit role markers and resize encoder token embeddings with seeded standard initialization; no package/data changes or training budget changes."
+}

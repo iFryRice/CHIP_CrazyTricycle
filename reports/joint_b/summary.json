@@ -1,0 +1,67 @@
+{
+  "status": "completed",
+  "plan_sha256": "e9449586e4f7f11eaf84d5c0ffd39351b90ef862a71c217942e586a84f6c231b",
+  "output": "submissions/patientphex_b_joint.jsonl",
+  "sha256": "7ad32cfddfc783cbb40a105fbee2bb433ddf2b6120b56a8a7861a107475d5a0c",
+  "validation": {
+    "valid": true,
+    "path": "/home/dcf/chip2026/work/span_ner/joint_b/candidate.jsonl",
+    "bytes": 810737,
+    "limit_bytes_exclusive": 100000000,
+    "sha256": "7ad32cfddfc783cbb40a105fbee2bb433ddf2b6120b56a8a7861a107475d5a0c",
+    "documents": 100,
+    "patients": 244,
+    "entities": 6957,
+    "association_pairs": 2207,
+    "negated_entities": 369,
+    "unmapped_entities": 46,
+    "compound_entities": 5,
+    "document_order_preserved": true,
+    "empty_entity_documents": [],
+    "warnings": []
+  },
+  "source_pairs": 7122,
+  "text_fold_probability_sha256": {
+    "seed_20260929_fold0": "98e6c502b8e18407e69b53ea803a5c347aabf5fc216786c78fa82f5e20f377dd",
+    "seed_20260929_fold1": "afb0c7807cb3be99533adc7b03b3ab31f163cd3e5364bb8c8e4f417bbab6eaf3",
+    "seed_20260929_fold2": "0cedf0ea176ad17f95f70dee43d7d33507b30a0e2ece575cadec92141f3ebada",
+    "seed_20260929_fold3": "dad74ee43b0bf0c29a1b2220451dea275f17d497e348309d2f3877abc093c3b4",
+    "seed_20260929_fold4": "928964c64296aa85c29566fa17ad87eeca8f5b90f22b51bb2c430a9031e2032b",
+    "seed_20260930_fold0": "38c9d18452ae5c6aa40bd8f2257545c3359bccbbecd789e4103addd2c7fd73fd",
+    "seed_20260930_fold1": "3490ad7d73e32d35d67be99c837d0a7814d309921b0b3a80f349957cbdf088f3",
+    "seed_20260930_fold2": "35a1e2a83cbca9ddf5c94c93b0703e7a6c72a982afd07b8aa93d4a1768756f2f",
+    "seed_20260930_fold3": "899a922d5e1854fa629021027d6e79bc26a5ebac3759d33103a0ff97140012c1",
+    "seed_20260930_fold4": "9dc4f298d9afa9cba8f179cddfe4906a4f2c1d09a9b99a222d45ad3336f2b6a4",
+    "seed_20261001_fold0": "85593a3798297059ee2c4998ff51f2d6fa93205fe8099d5e262efaece91ed13a",
+    "seed_20261001_fold1": "d7fc4cc0501881b63fd70b9d4d60a9da41977432dafb44110a68c212dc15efcc",
+    "seed_20261001_fold2": "6e3991197d0704f65889fcd0a24ac756a38fcf4e784af40aa335e82e51c1b812",
+    "seed_20261001_fold3": "6c2c4d8bca0e7ccda4827ae54e3699b31970f211bd9d846688fe0e4eb791b3be",
+    "seed_20261001_fold4": "575297f851c3a7872e26c2b3ae6d91538b2a02a76b04c86d4f9983a77ae9d42f"
+  },
+  "model_count": 15,
+  "association_added": 80,
+  "association_removed": 174,
+  "changed_patients": 117,
+  "concept_review": [
+    {
+      "concept_plan_sha256": "ed4577d345d5ec77033dc8b94fca7e942f9de48e86b6ed170b48ac3c7eb4bb0f",
+      "decisions_sha256": "9e16d3204633a5bd7ea51e8a41656ca4230cd64e1dad7996cb4b478e083f6c8b",
+      "format_success_rate": 1.0,
+      "review_tasks": 1344,
+      "removed_entities": 162
+    },
+    {
+      "concept_plan_sha256": "ed4577d345d5ec77033dc8b94fca7e942f9de48e86b6ed170b48ac3c7eb4bb0f",
+      "decisions_sha256": "1a2c0adfae9388e771d83b35fe35e94a98e39d374a31149a541916d3342e3ccb",
+      "format_success_rate": 1.0,
+      "review_tasks": 1345,
+      "removed_entities": 191
+    }
+  ],
+  "removed_entities": 353,
+  "retained_entity_records_exactly_preserved": true,
+  "elapsed_seconds": 437.36574053764343,
+  "peak_allocated_gib": 1.4534416198730469,
+  "official_score": null,
+  "scope": "Blind B inference with all predeclared folds and seeds. Development uses each document's held-out seed ensemble; ensemble B accuracy requires official feedback."
+}

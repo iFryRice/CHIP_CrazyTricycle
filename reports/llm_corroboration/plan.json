@@ -1,0 +1,95 @@
+{
+  "declared_at_utc": "2026-09-28T20:13:44.441741+00:00",
+  "hypothesis": "Source-exact LLM extraction offered few useful nonoverlapping additions. Test whether independent mention support can remove existing false detections, without changing model outputs or HPO assignments.",
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "split_path": "reports/cpu_baseline/split.json",
+  "ontology_path": "PatientPheX-V1-A/hp.obo",
+  "baseline_oof": "reports/association_context/best_development_oof.jsonl",
+  "inference_plan": "experiments/llm_extraction/plan.json",
+  "inference_work_dir": "work/span_ner/llm_extraction",
+  "report_dir": "reports/llm_corroboration",
+  "pilot_folds": [
+    0,
+    1
+  ],
+  "configurations": [
+    {
+      "name": "veto_acronyms",
+      "scope": "acronyms"
+    },
+    {
+      "name": "veto_short_terms",
+      "scope": "short_terms"
+    },
+    {
+      "name": "veto_all_mapped",
+      "scope": "all_mapped"
+    }
+  ],
+  "fixed": {
+    "support_overlap_fraction_of_shorter_span": 0.5,
+    "minimum_support_characters": 2,
+    "acronym_max_characters": 8,
+    "short_single_term_max_characters": 20,
+    "preserve_negated": true,
+    "preserve_unmapped": true,
+    "association_threshold": 0.5,
+    "new_entities": false
+  },
+  "promotion": {
+    "minimum_mean_gain": 0.008,
+    "maximum_fold_loss": 0.002,
+    "maximum_component_loss": 0.002
+  },
+  "confirmation_requirement": {
+    "remaining_folds": [
+      2,
+      3,
+      4
+    ],
+    "minimum_remaining_mean_gain": 0.003,
+    "minimum_full_score_gain": 0.005,
+    "minimum_nonworse_folds": 4,
+    "maximum_component_f1_loss": 0.002,
+    "positive_document_bootstrap_lower_bound": true
+  },
+  "selection": "Freeze the highest mean passing policy and confirm on remaining three folds with the same Qwen prompts and greedy decoding, without retuning.",
+  "scope": "Post-addition-failure hypothesis using repeated development CV, not independent validation or official B. No B inference is authorized by this plan.",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "experiments/llm_extraction/plan.json": "9cc5eb7a9df4ff1878583edeaf82ac14328be780e1da36c6f7c47361847fdae8",
+    "reports/llm_extraction/pilot/summary.json": "ab35ab673e376fa7e7cf888455b2ca98f8700202cf0911ed7961af0bc30fece7",
+    "work/span_ner/llm_extraction/fold0/spans.jsonl": "a232471ee7423f1b6a1492be4ed9b6f7a1c41da2ac469ceb36078c53d4584ae6",
+    "work/span_ner/document_abbreviations/fold0.pkl": "731a2c6843e2a5a88609ea6227f7c74b0c55fc00f5b0f4489f3ac50876916229",
+    "work/span_ner/llm_extraction/fold1/spans.jsonl": "a9628313f6b0d18c4cbaf075fb5069de15807c809e4dcc73ae6f1d78647cfb15",
+    "work/span_ner/document_abbreviations/fold1.pkl": "12a4f09bd6ec66d3a65c206af746a223374d025d29c1decd80420ead2c6c5201"
+  },
+  "code_sha256": {
+    "patientphex/__init__.py": "1fd13e9583dce1d135f45d50dbef50613e212c7dd640ace4c70017c95c41f058",
+    "patientphex/__main__.py": "f03fb7a2210ad1da045ef95d68d0378bbcaf6dc0da587be46851595cc5300bec",
+    "patientphex/abbreviations.py": "6b51f2305b961238d9a19fb1847e9194b1e25d1e67d26fbbe92ce0279d8ec619",
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/bio_corroboration.py": "7e080c94c40148f75681e57eb13986f85c5cc24f98c06709b2c7c741fed86d86",
+    "patientphex/bio_data.py": "8e42fd12dfeb8d21dd4348d513d5076900990a8d0a8b08ce7fee2fc52a20f3b3",
+    "patientphex/context_linking.py": "802e46e10f22051d1d9d151a37d9b338ccb912bda5cb1601f16f67d99041ce8d",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/entities.py": "c1d1ce81f01eb171a64a8fd1487609e0fd590804ae5ac738d6b497791ac13ada",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/llm_corroboration.py": "93367611f0c7d3e1a7373780d747e17b94d73d337b0f057eae3179dc9905e504",
+    "patientphex/llm_extraction.py": "96ff3849e6948febe6e2317d074668497e07e7d936277875315053e5d4949af8",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/semantic_linking.py": "c50f68cbc4649909334f82a9544f90e5168ee5f3b0849a97e227d43fb01f12c9",
+    "patientphex/span_data.py": "5dbd5351bb14c6d5244c2e02c5027dccbb4d49707ed48409bde1a01465963409",
+    "patientphex/span_linking.py": "d5de49d6845486687da0773890d99bb848015af70782d03b43eef026aa79a734",
+    "patientphex/span_losses.py": "ac4e512e135febf62df4576426494ad4174c105091a7f4079a1f553ae19f8c19",
+    "patientphex/umls_augmentation.py": "963c919ce7ab58b91447c332633b99b68fc3f9cc851ec74fdf817ab5fbe97cbe",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "scripts/evaluate_llm_corroboration.py": "ca00aed0fa32abc1f939c5bad828a03f2a960d21a3c97c55e60655f8d56426b5",
+    "scripts/evaluate_semantic_linking.py": "96f5b3cb886bfb5b4a788a6a8076e5f25c5a670c8e122d2023ada0a7ec8effec",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46"
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "ner_family": "bio",
+  "plan_sha256": "7e70b86addeff2d47b34872a594e83a8e46ef6d7ee0cfd201f718f3dca6c132e",
+  "parameters": {
+    "epochs": 5,
+    "learning_rate": 3e-05,
+    "batch_size": 16,
+    "max_length": 384,
+    "stride": 128,
+    "seed": 20260929,
+    "loss": "Unweighted token cross entropy, O/B/I; padding, special tokens and clipped/unencoded gold regions ignored.",
+    "polarity": "Both positive and NO spans teach mention boundaries; polarity is assigned by the existing local negation rule during linking.",
+    "amp_initial_scale": 1024
+  },
+  "training_document_ids": [
+    "10313222",
+    "10789033",
+    "11196099",
+    "11221135",
+    "11235872",
+    "11765409",
+    "11826603",
+    "11986149",
+    "12017973",
+    "12078887",
+    "12110755",
+    "12110769",
+    "12118522",
+    "12147048",
+    "12250201",
+    "12334843",
+    "12386172",
+    "12405443",
+    "12444410",
+    "12455887",
+    "12628480",
+    "12646972",
+    "12733031",
+    "12779223",
+    "12798528",
+    "12811285",
+    "12891056",
+    "2964533",
+    "4644339",
+    "4678370",
+    "5023785",
+    "5368377",
+    "5422868",
+    "5425407",
+    "5452357",
+    "5473715",
+    "5537416",
+    "5538066",
+    "5562981",
+    "5574094",
+    "5575846",
+    "5693559",
+    "5773845",
+    "5789735",
+    "5793168",
+    "5866036",
+    "5959423",
+    "5970456",
+    "6036836",
+    "6048891",
+    "6049015",
+    "6057141",
+    "6059678",
+    "6063015",
+    "6096008",
+    "6134758",
+    "6151044",
+    "6219255",
+    "6220403",
+    "6332535",
+    "6338757",
+    "6390251",
+    "6491447",
+    "9327653"
+  ],
+  "validation_document_ids": [
+    "10553122",
+    "11203018",
+    "11871647",
+    "11906559",
+    "11919040",
+    "12059664",
+    "12126309",
+    "12640707",
+    "12652105",
+    "12846941",
+    "2866573",
+    "3563609",
+    "4607013",
+    "4899602",
+    "5415817",
+    "5763540"
+  ],
+  "fit_all": false,
+  "smoke": false,
+  "labels": [
+    "O",
+    "B",
+    "I"
+  ],
+  "split_sha256": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+  "train_sha256": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+  "code_sha256": {
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/span_data.py": "5dbd5351bb14c6d5244c2e02c5027dccbb4d49707ed48409bde1a01465963409",
+    "patientphex/span_losses.py": "ac4e512e135febf62df4576426494ad4174c105091a7f4079a1f553ae19f8c19",
+    "patientphex/bio_data.py": "8e42fd12dfeb8d21dd4348d513d5076900990a8d0a8b08ce7fee2fc52a20f3b3",
+    "scripts/train_span_ner.py": "a569587eb2e6551f054d229101ef403128e2d8d9451f1bd41c4ea38c0a5bda39",
+    "scripts/train_bio_ner.py": "511fc33751bb3e8d82496c18f05ec8c17c04fa6ce04b27c005d10be3c7ffca0c",
+    "scripts/run_bio_job.sh": "76ccdc7b272892ab43201afa37b744132f9d14612031e30685f8bea89cfe29c3"
+  },
+  "base_model_files": {
+    "config.json": "56bab767c02bc792897638feb8addc06d483d9c73769a5f554bbabea1f5507a1",
+    "pytorch_model.bin": "ad7bbb66376cfd6b2db3447192b034efe016337cbef135c35c411fd61b13c193",
+    "tokenizer_config.json": "53b6f42b8b8daddbdc6d3532c324187a92b46c1602bd6e8d4ad5a413b4fc90e1",
+    "vocab.txt": "79489a52be45e6fa033521e8ce8e4f62aedc0a742ee2aa6fc04667e5b0b1454d"
+  },
+  "training_windows": 2209,
+  "validation_windows": 688,
+  "projection": {
+    "selected_unique_spans": 4759,
+    "omitted_overlap_unique_spans": 33,
+    "omitted": [
+      [
+        "12444410",
+        5176,
+        10
+      ],
+      [
+        "12444410",
+        5187,
+        17
+      ],
+      [
+        "12444410",
+        11711,
+        9
+      ],
+      [
+        "2964533",
+        10032,
+        17
+      ],
+      [
+        "5422868",
+        13627,
+        8
+      ],
+      [
+        "5537416",
+        18642,
+        13
+      ],
+      [
+        "5789735",
+        796,
+        18
+      ],
+      [
+        "5789735",
+        6019,
+        18
+      ],
+      [
+        "5789735",
+        8141,
+        29
+      ],
+      [
+        "5789735",
+        10487,
+        33
+      ],
+      [
+        "5789735",
+        10799,
+        12
+      ],
+      [
+        "5789735",
+        10822,
+        17
+      ],
+      [
+        "5789735",
+        10845,
+        37
+      ],
+      [
+        "5789735",
+        11125,
+        19
+      ],
+      [
+        "5866036",
+        13086,
+        8
+      ],
+      [
+        "6036836",
+        3395,
+        8
+      ],
+      [
+        "6048891",
+        12533,
+        10
+      ],
+      [
+        "6057141",
+        1350,
+        22
+      ],
+      [
+        "6057141",
+        12455,
+        12
+      ],
+      [
+        "6059678",
+        13085,
+        6
+      ],
+      [
+        "6063015",
+        11772,
+        15
+      ],
+      [
+        "6063015",
+        12064,
+        18
+      ],
+      [
+        "6151044",
+        7261,
+        8
+      ],
+      [
+        "6219255",
+        3072,
+        14
+      ],
+      [
+        "6219255",
+        3164,
+        24
+      ],
+      [
+        "6219255",
+        5395,
+        12
+      ],
+      [
+        "6220403",
+        157,
+        6
+      ],
+      [
+        "6220403",
+        8456,
+        13
+      ],
+      [
+        "6332535",
+        12574,
+        9
+      ],
+      [
+        "6390251",
+        200,
+        11
+      ],
+      [
+        "6390251",
+        5609,
+        8
+      ],
+      [
+        "6390251",
+        13820,
+        11
+      ],
+      [
+        "6390251",
+        14434,
+        6
+      ]
+    ],
+    "token_counts": {
+      "-100": 4447,
+      "0": 216923,
+      "1": 4892,
+      "2": 10360
+    },
+    "policy": "Longest nonoverlapping gold spans for BIO training; clipped or unencoded gold tokens ignored; all original gold retained for evaluation."
+  },
+  "runtime": {
+    "torch": "2.6.0+cu124",
+    "gpu": "Tesla V100-DGXS-32GB",
+    "fp16": true
+  },
+  "selection": "Fixed five epochs; no validation-based checkpoint selection or early stopping."
+}

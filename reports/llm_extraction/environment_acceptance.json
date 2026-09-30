@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "spec_sha256": "e9dd0d2face037abbbadeef7478721df212680749dbc6de7b50193d01a16a1a3",
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "transformers": "4.51.3",
+    "peft": "0.15.2",
+    "accelerate": "1.6.0"
+  },
+  "physical_gpu": "2",
+  "gpu": "Tesla V100-DGXS-32GB",
+  "capability": [
+    7,
+    0
+  ],
+  "lora_kernel": {
+    "loss": 4.198121547698975,
+    "gradient_norm": 0.7589725255966187,
+    "optimizer_updated": true,
+    "trainable_parameters": 1792
+  },
+  "real_model_parameter_count": 8190735360,
+  "synthetic_source": "The child had short stature and recurrent seizures.",
+  "response": [
+    "short stature",
+    "recurrent seizures"
+  ],
+  "exact_source_json_passed": true,
+  "peak_allocated_gib": 16.43345308303833,
+  "elapsed_seconds": 58.21955227851868,
+  "scope": "Runtime and format acceptance only; no competition accuracy claim."
+}

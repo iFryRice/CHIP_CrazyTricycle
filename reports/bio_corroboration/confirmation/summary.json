@@ -1,0 +1,168 @@
+{
+  "confirmation_plan_sha256": "2fcabd23cf735114dd1f7ded90e7b0c651b20fbbd63fe3a3fb6f243b1c09dd76",
+  "evaluation_manifest_sha256": "33780247f8c6c51b6911a7dd7149b1ad63c9ffc363ac8e5cab5125c5559c3d17",
+  "selected": {
+    "name": "veto_acronyms",
+    "veto_acronyms": true,
+    "add_mentions": false
+  },
+  "baseline": {
+    "mention": {
+      "precision": 0.727497789566755,
+      "recall": 0.6932928884395012,
+      "f1": 0.7099836051428078,
+      "tp": 4114,
+      "fp": 1541,
+      "fn": 1820
+    },
+    "document": {
+      "precision": 0.8364136846244593,
+      "recall": 0.7210169491525423,
+      "f1": 0.7744401966138722,
+      "tp": 2127,
+      "fp": 416,
+      "fn": 823
+    },
+    "association_micro": {
+      "precision": 0.6984950700570836,
+      "recall": 0.6199907876554583,
+      "f1": 0.6569058077110785,
+      "tp": 1346,
+      "fp": 581,
+      "fn": 825
+    },
+    "association_macro": {
+      "precision": 0.6347296808354593,
+      "recall": 0.5958367750799103,
+      "f1": 0.5863331905840667,
+      "patients": 209
+    },
+    "score": 0.6819157000129563,
+    "counts": {
+      "documents": 80,
+      "patients": 209
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "metrics": {
+    "mention": {
+      "precision": 0.7600224803297115,
+      "recall": 0.6836872261543647,
+      "f1": 0.7198367636621718,
+      "tp": 4057,
+      "fp": 1281,
+      "fn": 1877
+    },
+    "document": {
+      "precision": 0.844047619047619,
+      "recall": 0.7210169491525423,
+      "f1": 0.7776965265082267,
+      "tp": 2127,
+      "fp": 393,
+      "fn": 823
+    },
+    "association_micro": {
+      "precision": 0.7033942558746736,
+      "recall": 0.6204514048825426,
+      "f1": 0.6593245227606461,
+      "tp": 1347,
+      "fp": 568,
+      "fn": 824
+    },
+    "association_macro": {
+      "precision": 0.6377775477260479,
+      "recall": 0.5975911610448226,
+      "f1": 0.5891597760369514,
+      "patients": 209
+    },
+    "score": 0.686504397241999,
+    "counts": {
+      "documents": 80,
+      "patients": 209
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "fold_deltas": [
+    0.007442181668809278,
+    0.011131795728489546,
+    0.003724712366294236,
+    0.0002623315598756504,
+    -0.0018573262320666917
+  ],
+  "confirmation_mean_gain": 0.0007099058980343983,
+  "checks": {
+    "confirmation_mean_gain": false,
+    "confirmation_consistency": true,
+    "confirmation_worst_fold": true,
+    "full_score_gain": false,
+    "all_components_nonworse": true
+  },
+  "promoted": false,
+  "errors": {
+    "gold": 2171,
+    "reachable": 1637,
+    "reachable_fn": 290,
+    "unreachable_fn": 534,
+    "fp": 568,
+    "tp": 1347
+  },
+  "bootstrap": {
+    "iterations": 2000,
+    "unit": "document",
+    "seed": 20260929,
+    "interval_95": [
+      -0.0007041419325359982,
+      0.009664243403739718
+    ],
+    "fraction_positive": 0.962,
+    "scope": "Descriptive paired bootstrap after model selection, not a selection-adjusted significance test."
+  },
+  "artifacts": {
+    "0": {
+      "manifest.json": "cf42b851fdc84847a5665db027a9f7ae8747b6d7aca6a25f38017a80c1bcf165",
+      "summary.json": "4ffd8df83dfc7afed199f9be3073c45b11c8700270ad696be5126db72374f354",
+      "last_validation_spans.jsonl": "ab337b5c60d561fb2e624d4828e47f1f397376d4b436fbb498c1463cdc11d0d4",
+      "association_model_sha256": "731a2c6843e2a5a88609ea6227f7c74b0c55fc00f5b0f4489f3ac50876916229"
+    },
+    "1": {
+      "manifest.json": "06824147175da3a7a9797d0c66e78183f978cbf4e86c73a8a54e86e8072f6532",
+      "summary.json": "412c6bf31895433ed8782222097e9c3e9a473e002f7dd161e341463da81666e8",
+      "last_validation_spans.jsonl": "6af40a35cd77b69acc0336d790ede9b6b843371ed0ae0acb5bd2eeaeaabcbac6",
+      "association_model_sha256": "12a4f09bd6ec66d3a65c206af746a223374d025d29c1decd80420ead2c6c5201"
+    },
+    "2": {
+      "manifest.json": "9b62f0ac7250d6517f50e30283900440a81a28aca63f8d1507c9a373974e7bec",
+      "summary.json": "779d82a554c34b30e7e1ea496ca02ac389b0e5129ea61e4068c0305782c7bf98",
+      "last_validation_spans.jsonl": "75c57df973d74ce33697512fabf36db9b32818cd7d2940dfdfceb07ce13050bc",
+      "association_model_sha256": "573854edb9a846c6e7bb653f0e83b8d2564cb816b1a65b882ddd3f828b82f5d7"
+    },
+    "3": {
+      "manifest.json": "581d16ffe1a987529476c2586af7a7b4c2809526ce8d893551da0b3332477ecb",
+      "summary.json": "41421051e655bcbf54d910d1922e13640081d010fb94d69d3ea10044d36e1b44",
+      "last_validation_spans.jsonl": "6c62b35e3496a39053f0b19d82db3c9bab91d82877cd9b35aa3ba3b1b74b96af",
+      "association_model_sha256": "489d138f04c0f02fd2188728641557d882207e5c42488ef26e01431fe54f07cd"
+    },
+    "4": {
+      "manifest.json": "15c8964310b1b8aa395e5227689ed14b10f76c4890ff4c420e383b0e3112e8b2",
+      "summary.json": "89fd1b735a46da7e268ec9de32b9cd2cb30dc226fb5c3516143bc9e1837af8d4",
+      "last_validation_spans.jsonl": "bcfbc89ba8660ad3b8596b323c816cdb0629fbed17dad1ae7e2d8b3c54146da7",
+      "association_model_sha256": "1ba5396ba2106a2c2a9128d4fa2b2a00b5464b12942cbf3f52b4ad9de8c61bd7"
+    }
+  },
+  "elapsed_seconds": 17.810605764389038,
+  "scope": "Fivefold development with the rule frozen after two pilot folds. Earlier development reused these documents; this is not an independent test or official B score."
+}

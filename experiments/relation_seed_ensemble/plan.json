@@ -1,0 +1,189 @@
+{
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "split_path": "reports/cpu_baseline/split.json",
+  "ontology_path": "PatientPheX-V1-A/hp.obo",
+  "baseline_oof": "reports/association_context/best_development_oof.jsonl",
+  "association_models": {
+    "0": "work/span_ner/document_abbreviations/fold0.pkl",
+    "1": "work/span_ner/document_abbreviations/fold1.pkl",
+    "2": "work/span_ner/document_abbreviations/fold2.pkl",
+    "3": "work/span_ner/document_abbreviations/fold3.pkl",
+    "4": "work/span_ner/document_abbreviations/fold4.pkl"
+  },
+  "parameters": {
+    "epochs": 3,
+    "learning_rate": 2e-05,
+    "batch_size": 12,
+    "seed": 20260929,
+    "precision": "FP16",
+    "max_input_tokens": 384,
+    "weight_decay": 0.01,
+    "dropout": 0.1,
+    "negative_weight": 0.5,
+    "patient_balanced": true,
+    "warmup_fraction": 0.1,
+    "gradient_clip": 1.0,
+    "early_stopping": false,
+    "encoder_training": "Full BiomedBERT fine-tuning from pinned pretrained weights; previous task checkpoints are not reused."
+  },
+  "representation": {
+    "maximum_occurrences": 3,
+    "ranking": "Nearest provided target-patient anchor",
+    "header_token_budget": 32,
+    "target_reference_token_budget": 64,
+    "each_occurrence_token_budget": 92,
+    "patient_and_entity_markers": "Six dedicated added tokens: TARGET, /TARGET, OTHER, /OTHER, PHENOTYPE, /PHENOTYPE enclosed in brackets; seeded encoder embedding resize from 30522 to 30528, mean_resizing=False.",
+    "source_context_cropping": "Centered per-fragment token crop; focus spans must survive. Full original source excerpts and offsets preserved in metadata.",
+    "document_and_patient_ids_as_features": false
+  },
+  "selected": {
+    "name": "blend_quarter",
+    "neural_weight": 0.25
+  },
+  "confirmation_requirement": {
+    "remaining_folds": [
+      2,
+      3,
+      4
+    ],
+    "minimum_remaining_mean_gain": 0.003,
+    "minimum_full_score_gain": 0.005,
+    "minimum_nonworse_folds": 4,
+    "maximum_component_f1_loss": 0.002,
+    "positive_document_bootstrap_lower_bound": true
+  },
+  "declared_at_utc": "2026-09-28T22:20:09.408918+00:00",
+  "hypothesis": "The first text model improves four folds but misses the complete promotion gate, with one negative fold and a bootstrap lower bound just below zero. Equal probability averaging over three predefined training seeds tests whether initialization/data-order variance is limiting stability, without changing features, training budget, structural blend or thresholds.",
+  "seeds": [
+    20260929,
+    20260930,
+    20261001
+  ],
+  "new_seeds": [
+    20260930,
+    20261001
+  ],
+  "members": {
+    "20260930": {
+      "seed": 20260930,
+      "plan": "experiments/relation_seed_ensemble/seed_20260930.json",
+      "work_dir": "work/span_ner/relation_seed_ensemble/seed_20260930",
+      "fold_plan_sha256": {
+        "0": "8433bf7c970b7929d5d265175f4f7bd17e167b726a4aaa8bd23e244d3cf5ee32",
+        "1": "8433bf7c970b7929d5d265175f4f7bd17e167b726a4aaa8bd23e244d3cf5ee32",
+        "2": "8433bf7c970b7929d5d265175f4f7bd17e167b726a4aaa8bd23e244d3cf5ee32",
+        "3": "8433bf7c970b7929d5d265175f4f7bd17e167b726a4aaa8bd23e244d3cf5ee32",
+        "4": "8433bf7c970b7929d5d265175f4f7bd17e167b726a4aaa8bd23e244d3cf5ee32"
+      }
+    },
+    "20261001": {
+      "seed": 20261001,
+      "plan": "experiments/relation_seed_ensemble/seed_20261001.json",
+      "work_dir": "work/span_ner/relation_seed_ensemble/seed_20261001",
+      "fold_plan_sha256": {
+        "0": "7cf27684a321b2a6ecb04c0082abca6f63e6dcfd2defb91d46179c9defe239f5",
+        "1": "7cf27684a321b2a6ecb04c0082abca6f63e6dcfd2defb91d46179c9defe239f5",
+        "2": "7cf27684a321b2a6ecb04c0082abca6f63e6dcfd2defb91d46179c9defe239f5",
+        "3": "7cf27684a321b2a6ecb04c0082abca6f63e6dcfd2defb91d46179c9defe239f5",
+        "4": "7cf27684a321b2a6ecb04c0082abca6f63e6dcfd2defb91d46179c9defe239f5"
+      }
+    },
+    "20260929": {
+      "seed": 20260929,
+      "work_dir": "work/span_ner/relation_text",
+      "fold_work_dirs": {
+        "0": "work/span_ner/relation_text",
+        "1": "work/span_ner/relation_text",
+        "2": "work/span_ner/relation_confirmation",
+        "3": "work/span_ner/relation_confirmation",
+        "4": "work/span_ner/relation_confirmation"
+      },
+      "fold_plan_sha256": {
+        "0": "73ea1e95da4783a713ca06824f8590e96bdeb623d668fa6dd51549922cb9c123",
+        "1": "73ea1e95da4783a713ca06824f8590e96bdeb623d668fa6dd51549922cb9c123",
+        "2": "9333cb63e8a863c87a9e03134650f8919e2aa121179ebd3429776a12070f16b9",
+        "3": "9333cb63e8a863c87a9e03134650f8919e2aa121179ebd3429776a12070f16b9",
+        "4": "9333cb63e8a863c87a9e03134650f8919e2aa121179ebd3429776a12070f16b9"
+      }
+    }
+  },
+  "report_dir": "reports/relation_seed_ensemble",
+  "selection": "No choice among seeds or alternative mixtures. Evaluate the mean probability of all three seeds at each held-out fold, then fixed 0.75 structural + 0.25 text mean with threshold 0.5.",
+  "resource_budget": {
+    "additional_jobs": 10,
+    "epochs_each": 3,
+    "physical_gpus": [
+      0,
+      2
+    ],
+    "cpu_threads_each": 2,
+    "minimum_free_disk_gib_before_launch": 25,
+    "estimated_wall_minutes": 15
+  },
+  "scope": "Repeated development informed by the preceding failed confirmation. No independent-test claim, B labels or official score claim.",
+  "b_generation_if_confirmed": {
+    "text_ensemble": "Equal mean of all 15 models across five folds and three predefined seeds. No best-seed selection.",
+    "neural_weight": 0.25,
+    "structural_weight": 0.75,
+    "threshold": 0.5,
+    "entities_fixed": true,
+    "output": "submissions/patientphex_b_relation_ensemble.jsonl"
+  },
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "work/span_ner/document_abbreviations/fold0.pkl": "731a2c6843e2a5a88609ea6227f7c74b0c55fc00f5b0f4489f3ac50876916229",
+    "work/span_ner/document_abbreviations/fold1.pkl": "12a4f09bd6ec66d3a65c206af746a223374d025d29c1decd80420ead2c6c5201",
+    "reports/cpu_crossfit/fold0/training_candidates.jsonl": "e868099731b4b608a82e66f00580a7bbea2987110034e41c9835ce2dc6a42f80",
+    "reports/cpu_crossfit/fold0/candidate_provenance.json": "4b72a036278c529245a91fb541cdfd37e15219aff48f93049f705cdf967ed9f2",
+    "reports/cpu_crossfit/fold1/training_candidates.jsonl": "7ef15ee97c867adadd1e1c39e940825d850d584fde13865db22513e9d009a296",
+    "reports/cpu_crossfit/fold1/candidate_provenance.json": "6996c71260b7688ffdba5deb67e430842f224ca94cffae83cf6bf00194f1e2d4",
+    "work/span_ner/boundary-cap100-fold0/manifest.json": "5ba8c9591cfd2bda9792b83dd20e487995dfa2827056281df6762c5e6afcca7b",
+    "experiments/span_ner/environment.json": "3eaf5fe542974df58d82cbc1d100690791a2c2764e25fbdc47bf62e689349edf",
+    "experiments/span_ner/environment_gpu0.json": "9b6d638f88867a1c8d5ccc1d5b1e2908bee6e9fcfeefc8867f66aa99344aa0c8",
+    "reports/span_ner/environment_acceptance.json": "e806b57a3731af77aeb4a1ebd76e0fd24dbc11c9040b8ed5e533127b9a74c2e0",
+    "reports/llm_concept_review/summary.json": "f4f2b48b267a75bdb4df94694b30eb1cab6ce3378ddcec47d6aaf32bcdc60f3c",
+    "reports/entity_residuals/concept_review_error_audit.json": "06a85473447b0918d15f698e0d88420889caab6cd524cbef4cffe874fcc74639",
+    "pyproject.toml": "9f0f2d283585913da5d715595c6426a77e458b0aa90e21805117299979f5d5ca",
+    "uv.lock": "87efa49d3d2685881d061b9af51a086fb0de3944cbf6a50dcb3892095b09f5f6",
+    "reports/relation_text/marker_failure.json": "af9d2490f2814254ad6e25c65e2b6849153be3506a95ff1b46a4b1ac40d6bb13",
+    "work/span_ner/document_abbreviations/fold2.pkl": "573854edb9a846c6e7bb653f0e83b8d2564cb816b1a65b882ddd3f828b82f5d7",
+    "reports/cpu_crossfit/fold2/training_candidates.jsonl": "85b42877107242ea2ad3df7f5960ea01499e54ca8b14899c6cf54f237fa46190",
+    "reports/cpu_crossfit/fold2/candidate_provenance.json": "899f397417d3fbb4ca43c408c028fbac9586f688c9130a85339614fbd2455eeb",
+    "work/span_ner/document_abbreviations/fold3.pkl": "489d138f04c0f02fd2188728641557d882207e5c42488ef26e01431fe54f07cd",
+    "reports/cpu_crossfit/fold3/training_candidates.jsonl": "5ed17d03b429a40b2decaa6bfa0e0d8fdf0aaa4e78d5ea2e5dda23aae155b720",
+    "reports/cpu_crossfit/fold3/candidate_provenance.json": "759d28227a100daa0eb1adbf6d3bac8a116867c563eecdd929fdf46355baa8ed",
+    "work/span_ner/document_abbreviations/fold4.pkl": "1ba5396ba2106a2c2a9128d4fa2b2a00b5464b12942cbf3f52b4ad9de8c61bd7",
+    "reports/cpu_crossfit/fold4/training_candidates.jsonl": "4e299ef0b0c0b32b406f2817fc4f921c1829de52a54d5b1a30461d0510754417",
+    "reports/cpu_crossfit/fold4/candidate_provenance.json": "0885f978f9924f5f7c2d16f347c2f592cbab9b03be436619e3e701bfb20ea931",
+    "experiments/relation_text/plan.json": "73ea1e95da4783a713ca06824f8590e96bdeb623d668fa6dd51549922cb9c123",
+    "reports/relation_text/summary.json": "4096e21c8abac6bf2d04128f58121c5204bcff183a750b5f51dfaa15838e83e3",
+    "reports/relation_text/blend_quarter_predictions.jsonl": "ccd04e5481d7f01de4b59bb9199398e91653cabef8e1a0d3da9a0a331acf99ea",
+    "experiments/relation_text/confirmation_plan.json": "9333cb63e8a863c87a9e03134650f8919e2aa121179ebd3429776a12070f16b9",
+    "reports/relation_confirmation/summary.json": "ba548947abdd7468ed5f963ff2b18b3c6799b8d1873011d62de5c7663bc18c10",
+    "experiments/relation_seed_ensemble/seed_20260930.json": "8433bf7c970b7929d5d265175f4f7bd17e167b726a4aaa8bd23e244d3cf5ee32",
+    "experiments/relation_seed_ensemble/seed_20261001.json": "7cf27684a321b2a6ecb04c0082abca6f63e6dcfd2defb91d46179c9defe239f5"
+  },
+  "code_sha256": {
+    "patientphex/relation_text.py": "f63f4495d352cb73ccb894f965cf8bd4f755c072be14b3e492998c35b42bf3f3",
+    "scripts/train_relation_text.py": "c45fe05af8cafc5281363af002889589fa704e28f4be8a6167d49b706b47e7ae",
+    "scripts/run_relation_experiment.py": "c4ee07aa6c6055f71d426775c2c9ef019d267fd5009ceaa40ffd8966a4340c5e",
+    "scripts/run_relation_text.sh": "11a44b37d4aad16a4851ba1c44de03ba803fde1be9398c1a9f768ba6abcda54e",
+    "tests/test_relation_text.py": "697ff44855177b6b1f3866318b20744feec77d9d5df604e096b5c090c65b0bac",
+    "scripts/train_span_ner.py": "a569587eb2e6551f054d229101ef403128e2d8d9451f1bd41c4ea38c0a5bda39",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+    "scripts/run_llm_association.py": "1000ee50cb20f902694f6657a50ff440f30c279a65ebc4b9837a17ff3ea64233",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/context_linking.py": "802e46e10f22051d1d9d151a37d9b338ccb912bda5cb1601f16f67d99041ce8d",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/llm_association.py": "9abaa6e0be77d9deab91764383e29fd75198aab7ea512d02c30c56644f0cd8a9",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "scripts/confirm_relation_text.py": "7ae100a6cd192662f9ff7202e983da96d972d7fc6c52de39a59073fcb11ee558",
+    "scripts/run_relation_seed_ensemble.py": "299955e855ea127c683860ee23aea0b010987ce652f7c0bcb8d1c7bdbc753f5b"
+  }
+}

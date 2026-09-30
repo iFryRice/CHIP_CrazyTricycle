@@ -1,0 +1,1493 @@
+{
+  "scope": "LABEL-USING CANDIDATE-COVERAGE DIAGNOSTIC ONLY. No new inference score or prediction; coverage is limited to the preexisting SapBERT cache. Gold labels cannot select individual deployment cases.",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "work/span_ner/semantic_linking/development_retrieval.json": "d11451f8d0f6b3098f0339f3c653f1f64c053dad25882e28aa0ef3a5d6f57e7b"
+  },
+  "candidate_rule": "Current mapped single HPO concept plus cached top three distinct SapBERT concepts. Protect exact unique official HPO names/synonyms matching the current concept; all decisions are independent of labels.",
+  "totals": {
+    "positive_single_hpo_entities": 5617,
+    "cached_retrieval_available": 5157,
+    "unique_exact_hpo_protected": 3350,
+    "protected:exact_current_correct": 2928,
+    "missing_cached_retrieval": 460,
+    "reviewable_without_unique_exact_hpo": 1807,
+    "reviewable:exact_current_correct": 972,
+    "reviewable:no_gold_overlap": 538,
+    "reviewable:overlap_gold_in_alternatives_only": 40,
+    "reviewable:overlap_other": 197,
+    "protected:overlap_other": 262,
+    "protected:overlap_gold_in_alternatives_only": 35,
+    "protected:no_gold_overlap": 110,
+    "reviewable:exact_wrong_gold_in_candidates": 40,
+    "protected:exact_wrong_gold_not_in_candidates": 9,
+    "reviewable:exact_wrong_gold_not_in_candidates": 20,
+    "protected:exact_wrong_gold_in_candidates": 6
+  },
+  "folds": {
+    "1": {
+      "positive_single_hpo_entities": 938,
+      "cached_retrieval_available": 851,
+      "unique_exact_hpo_protected": 583,
+      "protected:exact_current_correct": 490,
+      "missing_cached_retrieval": 87,
+      "reviewable_without_unique_exact_hpo": 268,
+      "reviewable:exact_current_correct": 128,
+      "reviewable:no_gold_overlap": 107,
+      "reviewable:overlap_gold_in_alternatives_only": 5,
+      "reviewable:overlap_other": 23,
+      "protected:overlap_other": 56,
+      "protected:no_gold_overlap": 29,
+      "protected:overlap_gold_in_alternatives_only": 3,
+      "reviewable:exact_wrong_gold_in_candidates": 3,
+      "protected:exact_wrong_gold_not_in_candidates": 4,
+      "protected:exact_wrong_gold_in_candidates": 1,
+      "reviewable:exact_wrong_gold_not_in_candidates": 2
+    },
+    "0": {
+      "positive_single_hpo_entities": 1156,
+      "cached_retrieval_available": 1092,
+      "unique_exact_hpo_protected": 696,
+      "protected:exact_current_correct": 636,
+      "reviewable_without_unique_exact_hpo": 396,
+      "reviewable:exact_current_correct": 200,
+      "reviewable:overlap_other": 31,
+      "missing_cached_retrieval": 64,
+      "protected:overlap_other": 40,
+      "reviewable:no_gold_overlap": 145,
+      "protected:overlap_gold_in_alternatives_only": 6,
+      "reviewable:overlap_gold_in_alternatives_only": 14,
+      "reviewable:exact_wrong_gold_in_candidates": 5,
+      "protected:no_gold_overlap": 13,
+      "reviewable:exact_wrong_gold_not_in_candidates": 1,
+      "protected:exact_wrong_gold_not_in_candidates": 1
+    },
+    "2": {
+      "positive_single_hpo_entities": 1353,
+      "cached_retrieval_available": 1252,
+      "reviewable_without_unique_exact_hpo": 440,
+      "reviewable:exact_current_correct": 235,
+      "unique_exact_hpo_protected": 812,
+      "protected:exact_current_correct": 701,
+      "reviewable:no_gold_overlap": 120,
+      "reviewable:overlap_other": 47,
+      "missing_cached_retrieval": 101,
+      "protected:overlap_other": 66,
+      "protected:exact_wrong_gold_not_in_candidates": 3,
+      "reviewable:exact_wrong_gold_not_in_candidates": 11,
+      "reviewable:exact_wrong_gold_in_candidates": 21,
+      "protected:overlap_gold_in_alternatives_only": 12,
+      "reviewable:overlap_gold_in_alternatives_only": 6,
+      "protected:no_gold_overlap": 29,
+      "protected:exact_wrong_gold_in_candidates": 1
+    },
+    "4": {
+      "positive_single_hpo_entities": 1156,
+      "cached_retrieval_available": 1053,
+      "reviewable_without_unique_exact_hpo": 390,
+      "reviewable:exact_current_correct": 220,
+      "unique_exact_hpo_protected": 663,
+      "protected:exact_current_correct": 577,
+      "reviewable:overlap_gold_in_alternatives_only": 7,
+      "missing_cached_retrieval": 103,
+      "reviewable:overlap_other": 56,
+      "protected:overlap_other": 53,
+      "reviewable:no_gold_overlap": 100,
+      "reviewable:exact_wrong_gold_in_candidates": 6,
+      "protected:no_gold_overlap": 21,
+      "protected:overlap_gold_in_alternatives_only": 9,
+      "protected:exact_wrong_gold_in_candidates": 3,
+      "reviewable:exact_wrong_gold_not_in_candidates": 1
+    },
+    "3": {
+      "positive_single_hpo_entities": 1014,
+      "cached_retrieval_available": 909,
+      "reviewable_without_unique_exact_hpo": 313,
+      "reviewable:exact_current_correct": 189,
+      "unique_exact_hpo_protected": 596,
+      "protected:exact_current_correct": 524,
+      "missing_cached_retrieval": 105,
+      "reviewable:overlap_other": 40,
+      "protected:no_gold_overlap": 18,
+      "reviewable:no_gold_overlap": 66,
+      "reviewable:overlap_gold_in_alternatives_only": 8,
+      "protected:overlap_other": 47,
+      "reviewable:exact_wrong_gold_in_candidates": 5,
+      "protected:overlap_gold_in_alternatives_only": 5,
+      "protected:exact_wrong_gold_not_in_candidates": 1,
+      "reviewable:exact_wrong_gold_not_in_candidates": 5,
+      "protected:exact_wrong_gold_in_candidates": 1
+    }
+  },
+  "reviewable_exact_correction_examples": [
+    {
+      "fold": 3,
+      "pmc_id": "11765409",
+      "entity": {
+        "identifier": "HP:0000505",
+        "type": "Phenotype",
+        "offset": 583,
+        "length": 16,
+        "text": "decreased vision",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0007663"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000505",
+          "similarity": 0.9892275333404541,
+          "name": "Visual impairment"
+        },
+        {
+          "identifier": "HP:0000572",
+          "similarity": 0.9282370805740356,
+          "name": "Visual loss"
+        },
+        {
+          "identifier": "HP:0007663",
+          "similarity": 0.8979026079177856,
+          "name": "Reduced visual acuity"
+        }
+      ],
+      "current_name": "Visual impairment",
+      "context": "zygous classic LCD and GCD2, however, has not yet been reported. (2) Case report: A 39-year-old male (proband) presented to our clinic complaining of decreased vision bilaterally. A slit-lamp examination revealed corneal opacities consistent with classic LCD. Contrast sensitivity (CS) was decreased. A genetic analy"
+    },
+    {
+      "fold": 3,
+      "pmc_id": "11765409",
+      "entity": {
+        "identifier": "HP:0007759",
+        "type": "Phenotype",
+        "offset": 4017,
+        "length": 17,
+        "text": "stromal opacities",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0007957"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0007759",
+          "similarity": 0.9131087064743042,
+          "name": "Opacification of the corneal stroma"
+        },
+        {
+          "identifier": "HP:0007957",
+          "similarity": 0.8243193030357361,
+          "name": "Corneal opacity"
+        },
+        {
+          "identifier": "HP:0008039",
+          "similarity": 0.8203825354576111,
+          "name": "Subepithelial corneal opacities"
+        }
+      ],
+      "current_name": "Opacification of the corneal stroma",
+      "context": "or segment optical coherence tomography (FD-OCT) (RTVue-100; Optovue Inc., Fremont, CA, USA) confirmed that the proband had thick central superficial stromal opacities (Figure 1C,F). The lattice lines of the proband were more numerous in the mid-periphery, reaching the limbus and visible with direct and retro-illumi"
+    },
+    {
+      "fold": 0,
+      "pmc_id": "11906559",
+      "entity": {
+        "identifier": "HP:0006703",
+        "type": "Phenotype",
+        "offset": 4722,
+        "length": 20,
+        "text": "pulmonary hypoplasia",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0002089"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0002089",
+          "similarity": 1.000000238418579,
+          "name": "Pulmonary hypoplasia"
+        },
+        {
+          "identifier": "HP:0006703",
+          "similarity": 0.8209211230278015,
+          "name": "Aplasia/Hypoplasia of the lungs"
+        },
+        {
+          "identifier": "HP:0004971",
+          "similarity": 0.81253981590271,
+          "name": "Pulmonary artery hypoplasia"
+        }
+      ],
+      "current_name": "Aplasia/Hypoplasia of the lungs",
+      "context": "involved in limb specification and joint pattern formation. Biallelic mutations in the TBX4 gene are responsible for posterior amelia with pelvic and pulmonary hypoplasia syndrome (PAPPAS, #601360), a lethal condition. This gene encodes for the TBX4 protein (T-box transcription factor 4), a member of the evolutionarily"
+    },
+    {
+      "fold": 0,
+      "pmc_id": "11906559",
+      "entity": {
+        "identifier": "HP:0002999",
+        "type": "Phenotype",
+        "offset": 10063,
+        "length": 28,
+        "text": "patellar lateral dislocation",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0006397"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0002999",
+          "similarity": 0.9073119759559631,
+          "name": "Patellar dislocation"
+        },
+        {
+          "identifier": "HP:0006397",
+          "similarity": 0.8581500053405762,
+          "name": "Lateral displacement of patellae"
+        },
+        {
+          "identifier": "HP:0010499",
+          "similarity": 0.8190452456474304,
+          "name": "Patellar subluxation"
+        }
+      ],
+      "current_name": "Patellar dislocation",
+      "context": "s trauma (skiing). With regard to the phenotype severity, the affected females exhibited a milder phenotype than the affected males, limited to minor patellar lateral dislocation that did not interfere with normal daily activities, although causing progressive degeneration of the cartilage."
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12110755",
+      "entity": {
+        "identifier": "HP:0001629",
+        "type": "Phenotype",
+        "offset": 8680,
+        "length": 25,
+        "text": "ventricular septum defect",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0011681"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0001629",
+          "similarity": 0.9661654233932495,
+          "name": "Ventricular septal defect"
+        },
+        {
+          "identifier": "HP:0011623",
+          "similarity": 0.9124819040298462,
+          "name": "Muscular ventricular septal defect"
+        },
+        {
+          "identifier": "HP:0011681",
+          "similarity": 0.8690670132637024,
+          "name": "Subarterial ventricular septal defect"
+        }
+      ],
+      "current_name": "Ventricular septal defect",
+      "context": "e) and his Apgar score was 8 at 1' and 9 at 5'. His neonatal period was notable for a prematurity-related Grade I intraventricular hemorrhage, a 3 mm ventricular septum defect detected on echocardiogram that subsequently resolved completely, and dysmorphic features along with a small penis. He underwent an endocrine workup,"
+    },
+    {
+      "fold": 4,
+      "pmc_id": "12110769",
+      "entity": {
+        "identifier": "HP:0100257",
+        "type": "Phenotype",
+        "offset": 2841,
+        "length": 28,
+        "text": "split hand foot malformation",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0001839"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0100257",
+          "similarity": 0.8285304307937622,
+          "name": "Ectrodactyly"
+        },
+        {
+          "identifier": "HP:0001171",
+          "similarity": 0.7765962481498718,
+          "name": "Split hand"
+        },
+        {
+          "identifier": "HP:0001839",
+          "similarity": 0.7759233117103577,
+          "name": "Split foot"
+        }
+      ],
+      "current_name": "Ectrodactyly",
+      "context": "ncluding DLX5 and DLX6 (SHFM1), TP63 (SHFM4), WNT10B (SHFM6), FGFR1 (HH2), MAP3K20 (SFMMP), UBA2 (ACCES), and EPS15L1 (SHFM8). In addition, type 3 of split hand foot malformation with long bone deficiency (SHFLD3) is associated with duplications at 17p13.3 encompassing the BHLHA9 gene, whereas SHFM3 is linked to duplications a"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12386172",
+      "entity": {
+        "identifier": "HP:0012758",
+        "type": "Phenotype",
+        "offset": 23301,
+        "length": 29,
+        "text": "neurodevelopmental impairment",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0012759"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0012758",
+          "similarity": 0.9268231987953186,
+          "name": "Neurodevelopmental delay"
+        },
+        {
+          "identifier": "HP:0012759",
+          "similarity": 0.9040297865867615,
+          "name": "Neurodevelopmental abnormality"
+        },
+        {
+          "identifier": "HP:0002376",
+          "similarity": 0.8261833786964417,
+          "name": "Developmental regression"
+        }
+      ],
+      "current_name": "Neurodevelopmental delay",
+      "context": "n, this case expands the phenotypic and mutational landscape of early-onset and complex SPAST-related HSP by revealing a rare association with severe neurodevelopmental impairment, including ASD. It underscores the importance of considering SPAST variants cautiously in the differential diagnosis of early-onset developmental dis"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12405443",
+      "entity": {
+        "identifier": "HP:0012475",
+        "type": "Phenotype",
+        "offset": 1553,
+        "length": 19,
+        "text": "antibody deficiency",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0004313"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0012475",
+          "similarity": 0.9022858738899231,
+          "name": "Impaired specific antibody response"
+        },
+        {
+          "identifier": "HP:0005368",
+          "similarity": 0.8621525764465332,
+          "name": "Abnormality of humoral immunity"
+        },
+        {
+          "identifier": "HP:0004313",
+          "similarity": 0.8549083471298218,
+          "name": "Decreased circulating immunoglobulin concentration"
+        }
+      ],
+      "current_name": "Impaired specific antibody response",
+      "context": "ome is a rare inborn error of immunity (IEI) characterized by chronic neutropenia, recurrent bacterial and human papillomavirus (HPV) infections, and antibody deficiency. In most cases, the underlying genetic defect is a heterozygous gain-of-function (GOF), autosomal dominant variant in C-X-C chemokine receptor 4 gene"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12405443",
+      "entity": {
+        "identifier": "HP:0012475",
+        "type": "Phenotype",
+        "offset": 6247,
+        "length": 19,
+        "text": "antibody deficiency",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0004313"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0012475",
+          "similarity": 0.9022858738899231,
+          "name": "Impaired specific antibody response"
+        },
+        {
+          "identifier": "HP:0005368",
+          "similarity": 0.8621525764465332,
+          "name": "Abnormality of humoral immunity"
+        },
+        {
+          "identifier": "HP:0004313",
+          "similarity": 0.8549083471298218,
+          "name": "Decreased circulating immunoglobulin concentration"
+        }
+      ],
+      "current_name": "Impaired specific antibody response",
+      "context": "Considering the familial clustering of immune-related phenotypes, both siblings underwent extended immunologic evaluation, which confirmed antibody deficiency and chronic neutropenia. As a result, both were started on IgRT. While the antibody deficiency accounted for their susceptibility to infection, the c"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12405443",
+      "entity": {
+        "identifier": "HP:0012475",
+        "type": "Phenotype",
+        "offset": 6342,
+        "length": 19,
+        "text": "antibody deficiency",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0004313"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0012475",
+          "similarity": 0.9022858738899231,
+          "name": "Impaired specific antibody response"
+        },
+        {
+          "identifier": "HP:0005368",
+          "similarity": 0.8621525764465332,
+          "name": "Abnormality of humoral immunity"
+        },
+        {
+          "identifier": "HP:0004313",
+          "similarity": 0.8549083471298218,
+          "name": "Decreased circulating immunoglobulin concentration"
+        }
+      ],
+      "current_name": "Impaired specific antibody response",
+      "context": "rwent extended immunologic evaluation, which confirmed antibody deficiency and chronic neutropenia. As a result, both were started on IgRT. While the antibody deficiency accounted for their susceptibility to infection, the cause of persistent neutropenia remained elusive, prompting referral for genetic evaluation."
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12405443",
+      "entity": {
+        "identifier": "HP:0012475",
+        "type": "Phenotype",
+        "offset": 12494,
+        "length": 19,
+        "text": "antibody deficiency",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0004313"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0012475",
+          "similarity": 0.9022858738899231,
+          "name": "Impaired specific antibody response"
+        },
+        {
+          "identifier": "HP:0005368",
+          "similarity": 0.8621525764465332,
+          "name": "Abnormality of humoral immunity"
+        },
+        {
+          "identifier": "HP:0004313",
+          "similarity": 0.8549083471298218,
+          "name": "Decreased circulating immunoglobulin concentration"
+        }
+      ],
+      "current_name": "Impaired specific antibody response",
+      "context": "eria (recurrent warts, hypogammaglobulinemia, chronic lymphopenia, and a first-degree relative with neutropenia). In-depth immune evaluation revealed antibody deficiency syndrome with dysregulated B cell development in family members carrying the CXCR4 variant, whereas P4 - who carried only the NFKB1 variant - showed "
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12405443",
+      "entity": {
+        "identifier": "HP:0012475",
+        "type": "Phenotype",
+        "offset": 12674,
+        "length": 19,
+        "text": "antibody deficiency",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0004313"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0012475",
+          "similarity": 0.9022858738899231,
+          "name": "Impaired specific antibody response"
+        },
+        {
+          "identifier": "HP:0005368",
+          "similarity": 0.8621525764465332,
+          "name": "Abnormality of humoral immunity"
+        },
+        {
+          "identifier": "HP:0004313",
+          "similarity": 0.8549083471298218,
+          "name": "Decreased circulating immunoglobulin concentration"
+        }
+      ],
+      "current_name": "Impaired specific antibody response",
+      "context": "ith dysregulated B cell development in family members carrying the CXCR4 variant, whereas P4 - who carried only the NFKB1 variant - showed a profound antibody deficiency and immunologic markers consistent with CVID. While in silico analyses suggested the p.S341Y variant was likely deleterious, they were insufficient t"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12444410",
+      "entity": {
+        "identifier": "HP:0000202",
+        "type": "Phenotype",
+        "offset": 313,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0000175",
+        "HP:0410030"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000202",
+          "similarity": 0.9999961256980896,
+          "name": "Orofacial cleft"
+        },
+        {
+          "identifier": "HP:0000204",
+          "similarity": 0.8601197004318237,
+          "name": "Cleft upper lip"
+        },
+        {
+          "identifier": "HP:0410030",
+          "similarity": 0.8560576438903809,
+          "name": "Cleft lip"
+        }
+      ],
+      "current_name": "Orofacial cleft",
+      "context": "Heterozygous TP63 mutations cause a spectrum of disorders including split-hand/foot malformation 4 (SHFM4) and ectrodactyly-ectodermal dysplasia-cleft lip/palate syndrome 3 (EEC3). While some SHFM4 mutations concurrently induce EEC3-like phenotypes (designated SHFM4/EEC3 mutations), their prevalence and distri"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12444410",
+      "entity": {
+        "identifier": "HP:0000202",
+        "type": "Phenotype",
+        "offset": 4959,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0000175",
+        "HP:0410030"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000202",
+          "similarity": 0.9999961256980896,
+          "name": "Orofacial cleft"
+        },
+        {
+          "identifier": "HP:0000204",
+          "similarity": 0.8601197004318237,
+          "name": "Cleft upper lip"
+        },
+        {
+          "identifier": "HP:0410030",
+          "similarity": 0.8560576438903809,
+          "name": "Cleft lip"
+        }
+      ],
+      "current_name": "Orofacial cleft",
+      "context": "nts are sourced from HGMD (top) and ClinVar (bottom; underlined: (likely) pathogenic; italic: likely benign). AEC, ankyloblepharon-ectodermal defects-cleft lip/palate syndrome; DBD, DNA binding domain; EEC3, ectrodactyly-ectodermal dysplasia-cleft lip/palate syndrome 3; OD, oligomerization domain; RHS, Rapp-Hodgkin"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12444410",
+      "entity": {
+        "identifier": "HP:0000202",
+        "type": "Phenotype",
+        "offset": 5051,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0000175",
+        "HP:0410030"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000202",
+          "similarity": 0.9999961256980896,
+          "name": "Orofacial cleft"
+        },
+        {
+          "identifier": "HP:0000204",
+          "similarity": 0.8601197004318237,
+          "name": "Cleft upper lip"
+        },
+        {
+          "identifier": "HP:0410030",
+          "similarity": 0.8560576438903809,
+          "name": "Cleft lip"
+        }
+      ],
+      "current_name": "Orofacial cleft",
+      "context": ": likely benign). AEC, ankyloblepharon-ectodermal defects-cleft lip/palate syndrome; DBD, DNA binding domain; EEC3, ectrodactyly-ectodermal dysplasia-cleft lip/palate syndrome 3; OD, oligomerization domain; RHS, Rapp-Hodgkin syndrome; SAM, sterile alpha motif domain; SHFM4, split-hand/foot malformation 4; SUMO, sum"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12444410",
+      "entity": {
+        "identifier": "HP:0000202",
+        "type": "Phenotype",
+        "offset": 5538,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0000175",
+        "HP:0410030"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000202",
+          "similarity": 0.9999961256980896,
+          "name": "Orofacial cleft"
+        },
+        {
+          "identifier": "HP:0000204",
+          "similarity": 0.8601197004318237,
+          "name": "Cleft upper lip"
+        },
+        {
+          "identifier": "HP:0410030",
+          "similarity": 0.8560576438903809,
+          "name": "Cleft lip"
+        }
+      ],
+      "current_name": "Orofacial cleft",
+      "context": "trum of syndromic and non-syndromic disorders. These conditions are characterized by various combinations of ectodermal dysplasia, SHFM/ectrodactyly, cleft lip/palate, lacrimal duct obstruction, hypo- or hyper-pigmentation, hypoplastic breasts, hypospadias, etc. (Sutton and van Bokhoven ). The ectrodactyly-ectoderm"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12444410",
+      "entity": {
+        "identifier": "HP:0000202",
+        "type": "Phenotype",
+        "offset": 5717,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0000175",
+        "HP:0410030"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000202",
+          "similarity": 0.9999961256980896,
+          "name": "Orofacial cleft"
+        },
+        {
+          "identifier": "HP:0000204",
+          "similarity": 0.8601197004318237,
+          "name": "Cleft upper lip"
+        },
+        {
+          "identifier": "HP:0410030",
+          "similarity": 0.8560576438903809,
+          "name": "Cleft lip"
+        }
+      ],
+      "current_name": "Orofacial cleft",
+      "context": "ct obstruction, hypo- or hyper-pigmentation, hypoplastic breasts, hypospadias, etc. (Sutton and van Bokhoven ). The ectrodactyly-ectodermal dysplasia-cleft lip/palate syndrome 3 (EEC3, OMIM# 604292) is considered the prototype of TP63-related disorders and is defined by the triad of ectrodactyly, ectodermal dysplas"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12444410",
+      "entity": {
+        "identifier": "HP:0000202",
+        "type": "Phenotype",
+        "offset": 5891,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0000175",
+        "HP:0410030"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000202",
+          "similarity": 0.9999961256980896,
+          "name": "Orofacial cleft"
+        },
+        {
+          "identifier": "HP:0000204",
+          "similarity": 0.8601197004318237,
+          "name": "Cleft upper lip"
+        },
+        {
+          "identifier": "HP:0410030",
+          "similarity": 0.8560576438903809,
+          "name": "Cleft lip"
+        }
+      ],
+      "current_name": "Orofacial cleft",
+      "context": "e 3 (EEC3, OMIM# 604292) is considered the prototype of TP63-related disorders and is defined by the triad of ectrodactyly, ectodermal dysplasia, and cleft lip/palate. At the same time, EEC3 exhibits significant inter- and intra-familial phenotypic variability, and its phenotypic spectrum can encompass nearly all s"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12444410",
+      "entity": {
+        "identifier": "HP:0000202",
+        "type": "Phenotype",
+        "offset": 18880,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0000175",
+        "HP:0410030"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000202",
+          "similarity": 0.9999961256980896,
+          "name": "Orofacial cleft"
+        },
+        {
+          "identifier": "HP:0000204",
+          "similarity": 0.8601197004318237,
+          "name": "Cleft upper lip"
+        },
+        {
+          "identifier": "HP:0410030",
+          "similarity": 0.8560576438903809,
+          "name": "Cleft lip"
+        }
+      ],
+      "current_name": "Orofacial cleft",
+      "context": "to our analysis, SHFM4 mutations (n = 152) and EEC3-like syndrome mutations share the same triad symptom hierarchy (ectrodactyly>ectodermal dysplasia>cleft lip/palate), though with differential frequencies (SHFM4: 91%, 30%, 7%; EEC3: 68%, 50%, 37%) and dissimilar ectodermal dysplasia patterns (Table S1; Rinne et al"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12444410",
+      "entity": {
+        "identifier": "HP:0000202",
+        "type": "Phenotype",
+        "offset": 27418,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0000175",
+        "HP:0410030"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000202",
+          "similarity": 0.9999961256980896,
+          "name": "Orofacial cleft"
+        },
+        {
+          "identifier": "HP:0000204",
+          "similarity": 0.8601197004318237,
+          "name": "Cleft upper lip"
+        },
+        {
+          "identifier": "HP:0410030",
+          "similarity": 0.8560576438903809,
+          "name": "Cleft lip"
+        }
+      ],
+      "current_name": "Orofacial cleft",
+      "context": "Additionally, small frameshift deletions at the N-terminus of the sumoylation-related subdomain caused ankyloblepharon-ectodermal defects-cleft lip/palate syndrome (AEC, OMIM #106260) or Rapp-Hodgkin syndrome (RHS, OMIM #129400) (Figure 1B). SHFM rarely appears in their phenotypes. So far, frameshift mu"
+    },
+    {
+      "fold": 0,
+      "pmc_id": "12640707",
+      "entity": {
+        "identifier": "HP:0001249",
+        "type": "Phenotype",
+        "offset": 23605,
+        "length": 33,
+        "text": "intellectual development disorder",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0001263"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0001249",
+          "similarity": 0.999998927116394,
+          "name": "Intellectual disability"
+        },
+        {
+          "identifier": "HP:0100543",
+          "similarity": 0.8610388040542603,
+          "name": "Cognitive impairment"
+        },
+        {
+          "identifier": "HP:0001263",
+          "similarity": 0.8483594059944153,
+          "name": "Global developmental delay"
+        }
+      ],
+      "current_name": "Intellectual disability",
+      "context": "diagnoses for several of the affected individuals described in Shepherdson et al., likely due to its high phenotypic similarity to the ZFX-associated intellectual development disorder. Interestingly, cerebellar vermian hypoplasia has been observed in X-linked recessive Joubert syndrome patients with OFD1 mutations. However, the typ"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12891056",
+      "entity": {
+        "identifier": "HP:0000964",
+        "type": "Phenotype",
+        "offset": 13294,
+        "length": 10,
+        "text": "dermatitis",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0011123"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000964",
+          "similarity": 0.9999997615814209,
+          "name": "Eczematoid dermatitis"
+        },
+        {
+          "identifier": "HP:0011123",
+          "similarity": 0.7991618514060974,
+          "name": "Inflammatory abnormality of the skin"
+        },
+        {
+          "identifier": "HP:0032282",
+          "similarity": 0.7870937585830688,
+          "name": "Contact dermatitis"
+        }
+      ],
+      "current_name": "Eczematoid dermatitis",
+      "context": "developmental abnormalities, hypotonia, intellectual disability, and language disorders. However, the two reported cases of IMD49 both presented with dermatitis in the neonatal period (one case of erythematous psoriasis-like dermatitis, one case of congenital erosive dermatitis), cardiovascular malformations "
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12891056",
+      "entity": {
+        "identifier": "HP:0000964",
+        "type": "Phenotype",
+        "offset": 13369,
+        "length": 10,
+        "text": "dermatitis",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0011123"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000964",
+          "similarity": 0.9999997615814209,
+          "name": "Eczematoid dermatitis"
+        },
+        {
+          "identifier": "HP:0011123",
+          "similarity": 0.7991618514060974,
+          "name": "Inflammatory abnormality of the skin"
+        },
+        {
+          "identifier": "HP:0032282",
+          "similarity": 0.7870937585830688,
+          "name": "Contact dermatitis"
+        }
+      ],
+      "current_name": "Eczematoid dermatitis",
+      "context": "ge disorders. However, the two reported cases of IMD49 both presented with dermatitis in the neonatal period (one case of erythematous psoriasis-like dermatitis, one case of congenital erosive dermatitis), cardiovascular malformations (one case of mild pulmonary stenosis, one case of mild aortic dilation), an"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12891056",
+      "entity": {
+        "identifier": "HP:0000964",
+        "type": "Phenotype",
+        "offset": 13412,
+        "length": 10,
+        "text": "dermatitis",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0011123"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000964",
+          "similarity": 0.9999997615814209,
+          "name": "Eczematoid dermatitis"
+        },
+        {
+          "identifier": "HP:0011123",
+          "similarity": 0.7991618514060974,
+          "name": "Inflammatory abnormality of the skin"
+        },
+        {
+          "identifier": "HP:0032282",
+          "similarity": 0.7870937585830688,
+          "name": "Contact dermatitis"
+        }
+      ],
+      "current_name": "Eczematoid dermatitis",
+      "context": "es of IMD49 both presented with dermatitis in the neonatal period (one case of erythematous psoriasis-like dermatitis, one case of congenital erosive dermatitis), cardiovascular malformations (one case of mild pulmonary stenosis, one case of mild aortic dilation), and severe combined immunodeficiency (decreas"
+    },
+    {
+      "fold": 2,
+      "pmc_id": "12891056",
+      "entity": {
+        "identifier": "HP:0000964",
+        "type": "Phenotype",
+        "offset": 25435,
+        "length": 10,
+        "text": "dermatitis",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0011123"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000964",
+          "similarity": 0.9999997615814209,
+          "name": "Eczematoid dermatitis"
+        },
+        {
+          "identifier": "HP:0011123",
+          "similarity": 0.7991618514060974,
+          "name": "Inflammatory abnormality of the skin"
+        },
+        {
+          "identifier": "HP:0032282",
+          "similarity": 0.7870937585830688,
+          "name": "Contact dermatitis"
+        }
+      ],
+      "current_name": "Eczematoid dermatitis",
+      "context": "vere IMD49 clinical outcome, which includes SCID, profound developmental delay, and major multisystem anomalies (such as callosal agenesis and severe dermatitis). Our case supports that the LoF mechanism of BCL11B results in IDDSFTA, although its broad pleiotropic role in immune, neural, craniofacial, and cut"
+    },
+    {
+      "fold": 3,
+      "pmc_id": "2964533",
+      "entity": {
+        "identifier": "HP:0010804",
+        "type": "Phenotype",
+        "offset": 5270,
+        "length": 18,
+        "text": "inverted upper lip",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0010803"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0010804",
+          "similarity": 0.9430010914802551,
+          "name": "Tented upper lip vermilion"
+        },
+        {
+          "identifier": "HP:0010803",
+          "similarity": 0.9040741920471191,
+          "name": "Everted upper lip vermilion"
+        },
+        {
+          "identifier": "HP:0040295",
+          "similarity": 0.8930776715278625,
+          "name": "Duplication of the upper lip"
+        }
+      ],
+      "current_name": "Tented upper lip vermilion",
+      "context": " between the ages of 5-10 y and three spontaneous pneumothoraces (SP). He had a square shaped face, upslanting palpebral fissures, down turned mouth, inverted upper lip, and synophrys (Fig. 1A). Other physical anomalies included brachydactyly, bilateral fifth finger clinodactyly with a small middle phalanx of his fif"
+    },
+    {
+      "fold": 0,
+      "pmc_id": "4607013",
+      "entity": {
+        "identifier": "HP:0001712",
+        "type": "Phenotype",
+        "offset": 4917,
+        "length": 20,
+        "text": "large left ventricle",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:4000141"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0001712",
+          "similarity": 0.9130881428718567,
+          "name": "Left ventricular hypertrophy"
+        },
+        {
+          "identifier": "HP:4000141",
+          "similarity": 0.8791906833648682,
+          "name": "Left ventricular dilatation"
+        },
+        {
+          "identifier": "HP:0001640",
+          "similarity": 0.863663375377655,
+          "name": "Cardiomegaly"
+        }
+      ],
+      "current_name": "Left ventricular hypertrophy",
+      "context": " with diabetes during pregnancy with a birth weight of 4.7 kg (+3 SDS), a length of 52 cm (+1 SDS) and a head circumference of +2 SDS. She also had a large left ventricle, and a systolic murmur, but this disappeared at the age of six years. Postnatally, her growth decelerated and she had feeding difficulties. At 6.5 ye"
+    },
+    {
+      "fold": 0,
+      "pmc_id": "4899602",
+      "entity": {
+        "identifier": "HP:6000591",
+        "type": "Phenotype",
+        "offset": 1646,
+        "length": 12,
+        "text": "loose joints",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0001382"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:6000591",
+          "similarity": 0.9051463007926941,
+          "name": "Loose body in joint"
+        },
+        {
+          "identifier": "HP:0001382",
+          "similarity": 0.8561093211174011,
+          "name": "Joint hypermobility"
+        },
+        {
+          "identifier": "HP:0031013",
+          "similarity": 0.7568227648735046,
+          "name": "Ankylosis"
+        }
+      ],
+      "current_name": "Loose body in joint",
+      "context": "netic testing. Patients with PSACH share common clinical characteristics such as disproportionate short stature, brachydactyly, lower limb anomalies, loose joints, ligamentous laxity and early-onset osteoarthritis. This disorder is not diagnosed until ~2 years of age, with the onset of a waddling gait, lax join"
+    },
+    {
+      "fold": 1,
+      "pmc_id": "5023785",
+      "entity": {
+        "identifier": "HP:0001788",
+        "type": "Phenotype",
+        "offset": 3448,
+        "length": 40,
+        "text": "premature rupture of the fetal membranes",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0005100"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0001788",
+          "similarity": 0.997087299823761,
+          "name": "Premature rupture of membranes"
+        },
+        {
+          "identifier": "HP:6000310",
+          "similarity": 0.9556371569633484,
+          "name": "Preterm premature rupture of membranes"
+        },
+        {
+          "identifier": "HP:0005100",
+          "similarity": 0.9324617385864258,
+          "name": "Premature birth following premature rupture of fetal membranes"
+        }
+      ],
+      "current_name": "Premature rupture of membranes",
+      "context": "The patient is the fifth child of healthy, non-consanguineous parents. After an uneventful pregnancy, he was born at 35 weeks gestation following the premature rupture of the fetal membranes. His birth weight was 1,924 g (-1.3 SD). Because of an unknown cause, perforation of the terminal ileum occurred at the age of 2 days, and an ileosto"
+    },
+    {
+      "fold": 4,
+      "pmc_id": "5452357",
+      "entity": {
+        "identifier": "HP:0000790",
+        "type": "Phenotype",
+        "offset": 6818,
+        "length": 10,
+        "text": "haematuria",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0012587"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000790",
+          "similarity": 0.9999997019767761,
+          "name": "Hematuria"
+        },
+        {
+          "identifier": "HP:0012587",
+          "similarity": 0.8894677758216858,
+          "name": "Macroscopic hematuria"
+        },
+        {
+          "identifier": "HP:0002907",
+          "similarity": 0.7894494533538818,
+          "name": "Microscopic hematuria"
+        }
+      ],
+      "current_name": "Hematuria",
+      "context": " an orthopaedist, was referred to hospital because of a one-day febrilities and positive urinary finding of ketone bodies, proteins, leukocyturia and haematuria. She was born after a normal pregnancy at full term with an uncomplicated perinatal and neonatal course. There was no history of gross haematuria or "
+    },
+    {
+      "fold": 2,
+      "pmc_id": "5473715",
+      "entity": {
+        "identifier": "HP:0007108",
+        "type": "Phenotype",
+        "offset": 21692,
+        "length": 34,
+        "text": "peripheral demyelinating disorders",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0011096"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0007108",
+          "similarity": 0.9455538392066956,
+          "name": "Demyelinating peripheral neuropathy"
+        },
+        {
+          "identifier": "HP:0011096",
+          "similarity": 0.8646565079689026,
+          "name": "Peripheral demyelination"
+        },
+        {
+          "identifier": "HP:0001271",
+          "similarity": 0.8010912537574768,
+          "name": "Polyneuropathy"
+        }
+      ],
+      "current_name": "Demyelinating peripheral neuropathy",
+      "context": "LP1 (Spastic Paraplegia 35 (MIM: 612319) and Pelizaeus-Merzbacher Disease (MIM: 312080)) as well as five genes in which mutations are associated with peripheral demyelinating disorders (PMP22 [MIM: 601097], LITAF [MIM: 601098], NDRG1 [MIM: 601455], SH3TC2 [MIM: 601596], SOX10 [MIM: 609136], and YARS [MIM: 608323]) (Figure 4). Given "
+    },
+    {
+      "fold": 2,
+      "pmc_id": "5575846",
+      "entity": {
+        "identifier": "HP:0012760",
+        "type": "Phenotype",
+        "offset": 16334,
+        "length": 29,
+        "text": "deficient social interactions",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0012433"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0012760",
+          "similarity": 0.970548152923584,
+          "name": "Reduced social responsiveness"
+        },
+        {
+          "identifier": "HP:0012433",
+          "similarity": 0.926561176776886,
+          "name": "Abnormal social behavior"
+        },
+        {
+          "identifier": "HP:5200310",
+          "similarity": 0.9154267311096191,
+          "name": "Diminishment of social interactions"
+        }
+      ],
+      "current_name": "Reduced social responsiveness",
+      "context": " as follows: early global developmental delay and later severe mental retardation; hypotonia; failure to acquire speech or purposeful hand movements; deficient social interactions including poor eye contact, denoting a syndromic form of autism at an early age; combined stereotypic movements and dyskinesia with mixed features of"
+    },
+    {
+      "fold": 1,
+      "pmc_id": "5693559",
+      "entity": {
+        "identifier": "HP:0000675",
+        "type": "Phenotype",
+        "offset": 10332,
+        "length": 18,
+        "text": "prominent incisors",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0011081"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000675",
+          "similarity": 0.951407790184021,
+          "name": "Macrodontia of permanent maxillary central incisor"
+        },
+        {
+          "identifier": "HP:0006333",
+          "similarity": 0.8747836947441101,
+          "name": "Crowded maxillary incisors"
+        },
+        {
+          "identifier": "HP:0011081",
+          "similarity": 0.8726515173912048,
+          "name": "Incisor macrodontia"
+        }
+      ],
+      "current_name": "Macrodontia of permanent maxillary central incisor",
+      "context": "ill scholarisation or upcoming years, like retinal dystrophy, truncal obesity and overly sociable behavior, furthermore the typical facial gestalt of prominent incisors is always absent. In fact, when the girl was first seen at 7 years and the boy at 1 year, respectively, they had postnatal-onset microcephaly and del"
+    },
+    {
+      "fold": 1,
+      "pmc_id": "5789735",
+      "entity": {
+        "identifier": "HP:0000598",
+        "type": "Phenotype",
+        "offset": 2990,
+        "length": 13,
+        "text": "ear anomalies",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0000356"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000598",
+          "similarity": 0.9999990463256836,
+          "name": "Abnormality of the ear"
+        },
+        {
+          "identifier": "HP:0000356",
+          "similarity": 0.9999990463256836,
+          "name": "Abnormality of the outer ear"
+        },
+        {
+          "identifier": "HP:0031703",
+          "similarity": 0.9268295764923096,
+          "name": "Abnormal ear morphology"
+        }
+      ],
+      "current_name": "Abnormality of the ear",
+      "context": "n abnormalities, including cerebellar and brainstem hypoplasia. Furthermore, over 80% of patients with Marden-Walker syndrome show kyphoscoliosis and ear anomalies (low-set, dysplastic ears)."
+    },
+    {
+      "fold": 4,
+      "pmc_id": "5970456",
+      "entity": {
+        "identifier": "HP:0000938",
+        "type": "Phenotype",
+        "offset": 5150,
+        "length": 20,
+        "text": "reduced bone density",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0004349"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000938",
+          "similarity": 0.982816219329834,
+          "name": "Osteopenia"
+        },
+        {
+          "identifier": "HP:0004349",
+          "similarity": 0.953079104423523,
+          "name": "Reduced bone mineral density"
+        },
+        {
+          "identifier": "HP:0011001",
+          "similarity": 0.814678430557251,
+          "name": "Increased bone mineral density"
+        }
+      ],
+      "current_name": "Osteopenia",
+      "context": " cm (- 4.3 SD), head circumference of 47.5 (10th centile) and weight of 14,600 g (25th centile). Repeated radiologic reports were in favor of OI with reduced bone density and multiple fractures in various stages of healing. Laboratory tests were also performed for the proband which revealed following results: increased"
+    },
+    {
+      "fold": 4,
+      "pmc_id": "6036836",
+      "entity": {
+        "identifier": "HP:0006571",
+        "type": "Phenotype",
+        "offset": 178,
+        "length": 34,
+        "text": "paucity of intrahepatic bile ducts",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0005248"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0006571",
+          "similarity": 0.9444220662117004,
+          "name": "Reduced number of intrahepatic bile ducts"
+        },
+        {
+          "identifier": "HP:0005248",
+          "similarity": 0.8938037753105164,
+          "name": "Intrahepatic biliary atresia"
+        },
+        {
+          "identifier": "HP:0001401",
+          "similarity": 0.7922820448875427,
+          "name": "Intrahepatic biliary dysgenesis"
+        }
+      ],
+      "current_name": "Reduced number of intrahepatic bile ducts",
+      "context": "Alagille syndrome (MIM 118450) is an autosomal dominant disorder characterized by paucity of intrahepatic bile ducts, chronic cholestasis, pulmonary stenosis, butterfly-like vertebrae, posterior embryotoxon, and dysmorphic facial features. Most cases are caused by J"
+    },
+    {
+      "fold": 4,
+      "pmc_id": "6036836",
+      "entity": {
+        "identifier": "HP:0006571",
+        "type": "Phenotype",
+        "offset": 1272,
+        "length": 34,
+        "text": "paucity of intrahepatic bile ducts",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0005248"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0006571",
+          "similarity": 0.9444220662117004,
+          "name": "Reduced number of intrahepatic bile ducts"
+        },
+        {
+          "identifier": "HP:0005248",
+          "similarity": 0.8938037753105164,
+          "name": "Intrahepatic biliary atresia"
+        },
+        {
+          "identifier": "HP:0001401",
+          "similarity": 0.7922820448875427,
+          "name": "Intrahepatic biliary dysgenesis"
+        }
+      ],
+      "current_name": "Reduced number of intrahepatic bile ducts",
+      "context": "450) is an autosomal dominant disorder with prevalence of 1:70,000-100,000. It presents a broad spectrum of clinical manifestations, characterized by paucity of intrahepatic bile ducts, chronic cholestasis, pulmonary stenosis, butterfly-like vertebrae, posterior embryotoxon, and a dysmorphic face characterized by a broad forehead, d"
+    },
+    {
+      "fold": 3,
+      "pmc_id": "6063015",
+      "entity": {
+        "identifier": "HP:0001181",
+        "type": "Phenotype",
+        "offset": 15105,
+        "length": 11,
+        "text": "clasp thumb",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0001188"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0001181",
+          "similarity": 0.9448298215866089,
+          "name": "Adducted thumb"
+        },
+        {
+          "identifier": "HP:0001188",
+          "similarity": 0.9089495539665222,
+          "name": "Hand clenching"
+        },
+        {
+          "identifier": "HP:0001222",
+          "similarity": 0.9051674008369446,
+          "name": "Spatulate thumbs"
+        }
+      ],
+      "current_name": "Adducted thumb",
+      "context": "ions and a familial case with OSGEP mutations. Case II-2 in the present study displayed additional skeletal deformities, including arachnodactyly and clasp thumb. Skeletal deformities are more commonly reported than hiatal hernias in patients with GAMOS. In a large study conducted by Braun et al., most of the "
+    },
+    {
+      "fold": 3,
+      "pmc_id": "6219255",
+      "entity": {
+        "identifier": "HP:0001263",
+        "type": "Phenotype",
+        "offset": 594,
+        "length": 38,
+        "text": "delays in intellectual and development",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0001249"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0001263",
+          "similarity": 0.956989586353302,
+          "name": "Global developmental delay"
+        },
+        {
+          "identifier": "HP:0001249",
+          "similarity": 0.8802099227905273,
+          "name": "Intellectual disability"
+        },
+        {
+          "identifier": "HP:0012758",
+          "similarity": 0.8613336086273193,
+          "name": "Neurodevelopmental delay"
+        }
+      ],
+      "current_name": "Global developmental delay",
+      "context": "The proband presented at 5 yrs. 1 month of age with delays in intellectual and development, seizures and behavioral problems. A novel missense mutation, c.1181C > A (p.Thr394Lys), in the SLC6A8 gene (NM_005629.3) was detected via targeted e"
+    },
+    {
+      "fold": 4,
+      "pmc_id": "6390251",
+      "entity": {
+        "identifier": "HP:0000519",
+        "type": "Phenotype",
+        "offset": 5599,
+        "length": 18,
+        "text": "bilateral cataract",
+        "note": null
+      },
+      "gold_exact_ids": [
+        "HP:0000518"
+      ],
+      "alternatives": [
+        {
+          "identifier": "HP:0000519",
+          "similarity": 0.9499815702438354,
+          "name": "Developmental cataract"
+        },
+        {
+          "identifier": "HP:0000518",
+          "similarity": 0.7578533887863159,
+          "name": "Cataract"
+        },
+        {
+          "identifier": "HP:0010693",
+          "similarity": 0.7529191970825195,
+          "name": "Pulverulent cataract"
+        }
+      ],
+      "current_name": "Developmental cataract",
+      "context": " the diagnosis of WS was made based on the revised diagnostic criteria for WS. The patient had all cardinal signs and symptoms (scarce and gray hair, bilateral cataract, changes of skin, skin ulcers difficult to manage, calcification of the Achilles tendon, bird-like facial appearance, and high pitched voice). Also, "
+    }
+  ]
+}

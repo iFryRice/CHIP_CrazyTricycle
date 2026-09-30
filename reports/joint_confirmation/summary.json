@@ -1,0 +1,151 @@
+{
+  "plan_sha256": "89bdabf695a66d42eb6231e0c08b14bb9af3bf41378257e5a8fe48eb6023cea4",
+  "selected": "joint_all_reviewed",
+  "promoted": true,
+  "baseline": {
+    "mention": {
+      "precision": 0.727497789566755,
+      "recall": 0.6932928884395012,
+      "f1": 0.7099836051428078,
+      "tp": 4114,
+      "fp": 1541,
+      "fn": 1820
+    },
+    "document": {
+      "precision": 0.8364136846244593,
+      "recall": 0.7210169491525423,
+      "f1": 0.7744401966138722,
+      "tp": 2127,
+      "fp": 416,
+      "fn": 823
+    },
+    "association_micro": {
+      "precision": 0.6984950700570836,
+      "recall": 0.6199907876554583,
+      "f1": 0.6569058077110785,
+      "tp": 1346,
+      "fp": 581,
+      "fn": 825
+    },
+    "association_macro": {
+      "precision": 0.6347296808354593,
+      "recall": 0.5958367750799103,
+      "f1": 0.5863331905840667,
+      "patients": 209
+    },
+    "score": 0.6819157000129563,
+    "counts": {
+      "documents": 80,
+      "patients": 209
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "metrics": {
+    "mention": {
+      "precision": 0.7520325203252033,
+      "recall": 0.6858779912369397,
+      "f1": 0.7174334567248369,
+      "tp": 4070,
+      "fp": 1342,
+      "fn": 1864
+    },
+    "document": {
+      "precision": 0.8571428571428571,
+      "recall": 0.711864406779661,
+      "f1": 0.7777777777777778,
+      "tp": 2100,
+      "fp": 350,
+      "fn": 850
+    },
+    "association_micro": {
+      "precision": 0.7217391304347827,
+      "recall": 0.6116996775679411,
+      "f1": 0.6621790077287459,
+      "tp": 1328,
+      "fp": 512,
+      "fn": 843
+    },
+    "association_macro": {
+      "precision": 0.6623065801184657,
+      "recall": 0.604999024977632,
+      "f1": 0.6056889780920908,
+      "patients": 209
+    },
+    "score": 0.6907698050808628,
+    "counts": {
+      "documents": 80,
+      "patients": 209
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "fold_deltas": [
+    0.007123404389192456,
+    0.02766304976047962,
+    -0.0025192800321911513,
+    0.004849942075694891,
+    0.009261214980972543
+  ],
+  "confirmation_mean_gain": 0.0038639590081587607,
+  "checks": {
+    "remaining_mean_gain": true,
+    "full_score_gain": true,
+    "nonworse_folds": true,
+    "component_guard": true,
+    "mention_improved": true,
+    "format_guard": true,
+    "positive_bootstrap_lower_bound": true
+  },
+  "bootstrap": {
+    "iterations": 2000,
+    "unit": "document",
+    "seed": 20260929,
+    "interval_95": [
+      0.0036293768675781544,
+      0.014490886377075409
+    ],
+    "fraction_positive": 0.9985,
+    "scope": "Descriptive paired bootstrap after model selection, not a selection-adjusted significance test."
+  },
+  "validation": {
+    "valid": true,
+    "path": "/home/dcf/chip2026/reports/joint_confirmation/development_oof.jsonl",
+    "bytes": 664719,
+    "limit_bytes_exclusive": 100000000,
+    "sha256": "21d0b06ac500fd18de2a057374e4431dae870bcb3b9034da1f7c485a66fc3972",
+    "documents": 80,
+    "patients": 209,
+    "entities": 5668,
+    "association_pairs": 1840,
+    "negated_entities": 258,
+    "unmapped_entities": 36,
+    "compound_entities": 2,
+    "document_order_preserved": false,
+    "empty_entity_documents": [],
+    "warnings": [
+      "Document order differs from the source dataset"
+    ]
+  },
+  "errors": {
+    "gold": 2171,
+    "reachable": 1620,
+    "reachable_fn": 292,
+    "unreachable_fn": 551,
+    "fp": 512,
+    "tp": 1328
+  },
+  "scope": "Fivefold development with the joint policy frozen after two-fold screening. All documents were used by prior development; not independent-test or official B accuracy."
+}

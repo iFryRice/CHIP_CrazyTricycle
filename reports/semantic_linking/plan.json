@@ -1,0 +1,117 @@
+{
+  "declared_at_utc": "2026-09-28T17:40:44.295289+00:00",
+  "goal": "Move official B performance toward 0.70; this development experiment alone cannot verify that objective.",
+  "hypothesis": "Neural spans contain many CPU-missed mentions, but exact lexical linking discards unseen expressions. Fixed SapBERT synonym vectors can normalize them and reject poor boundary variants.",
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "ontology_path": "PatientPheX-V1-A/hp.obo",
+  "target_path": "PatientPheX-V1-B/PatientPheX-V1-B.jsonl",
+  "split_path": "reports/cpu_baseline/split.json",
+  "baseline_oof": "reports/umls_augmentation/best_development_oof.jsonl",
+  "baseline_b": "submissions/patientphex_b_cpu_umls.jsonl",
+  "model_manifest": "experiments/semantic_linking/model.json",
+  "model_path": "models/sapbert",
+  "umls_path": "resources/umls_hpo_terms.tsv.gz",
+  "neural_folds": [
+    {
+      "predictions": "work/span_ner/boundary-cap100-fold0/best_validation_predictions.jsonl",
+      "manifest": "work/span_ner/boundary-cap100-fold0/manifest.json",
+      "summary": "work/span_ner/boundary-cap100-fold0/summary.json"
+    },
+    {
+      "predictions": "work/span_ner/boundary-cap100-fold1/best_validation_predictions.jsonl",
+      "manifest": "work/span_ner/boundary-cap100-fold1/manifest.json",
+      "summary": "work/span_ner/boundary-cap100-fold1/summary.json"
+    },
+    {
+      "predictions": "work/span_ner/boundary-cap100-fold2/best_validation_predictions.jsonl",
+      "manifest": "work/span_ner/boundary-cap100-fold2/manifest.json",
+      "summary": "work/span_ner/boundary-cap100-fold2/summary.json"
+    },
+    {
+      "predictions": "work/span_ner/boundary-cap100-fold3/best_validation_predictions.jsonl",
+      "manifest": "work/span_ner/boundary-cap100-fold3/manifest.json",
+      "summary": "work/span_ner/boundary-cap100-fold3/summary.json"
+    },
+    {
+      "predictions": "work/span_ner/boundary-cap100-fold4/best_validation_predictions.jsonl",
+      "manifest": "work/span_ner/boundary-cap100-fold4/manifest.json",
+      "summary": "work/span_ner/boundary-cap100-fold4/summary.json"
+    }
+  ],
+  "b_neural_predictions": "work/span_ner/b_span_predictions/spans.jsonl",
+  "b_neural_manifest": "work/span_ner/b_span_predictions/manifest.json",
+  "margin_threshold": 0.02,
+  "configurations": [
+    {
+      "name": "ner0.9_semantic0.85",
+      "span_threshold": 0.9,
+      "semantic_threshold": 0.85
+    },
+    {
+      "name": "ner0.9_semantic0.9",
+      "span_threshold": 0.9,
+      "semantic_threshold": 0.9
+    },
+    {
+      "name": "ner0.97_semantic0.85",
+      "span_threshold": 0.97,
+      "semantic_threshold": 0.85
+    },
+    {
+      "name": "ner0.97_semantic0.9",
+      "span_threshold": 0.97,
+      "semantic_threshold": 0.9
+    }
+  ],
+  "promotion": {
+    "minimum_gain": 0.003,
+    "minimum_nonworse_folds": 4,
+    "maximum_association_f1_loss": 0.005
+  },
+  "report_dir": "reports/semantic_linking",
+  "output": "submissions/patientphex_b_semantic.jsonl",
+  "selection": "Highest pooled development score among configurations passing all predeclared gates. B labels and B agreement are not used.",
+  "scope": "Reused fivefold development data, not independent testing. Neural checkpoint epoch is fixed to completed epoch 5; all saved best epochs happen to equal 5. SapBERT and its HPO/UMLS index are fixed and use no competition labels. Fold training aliases only use the 64 allowed documents.",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "PatientPheX-V1-B/PatientPheX-V1-B.jsonl": "4dafea5aa59bfd5f90151ee3732ee475323512b8691f370f4d4678b628cdb62a",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "reports/umls_augmentation/best_development_oof.jsonl": "736b0e504dd9d17094f7b7e7e1eca5e75de69dae00854f4bdb6ee4fd8b53729a",
+    "submissions/patientphex_b_cpu_umls.jsonl": "08d38cc8019fbde853a21a4d9fa234b85da82efb37b7e0343bdcf4018ba454c2",
+    "experiments/semantic_linking/model.json": "b4f89169804c89d718f3b308bde923350f66fa94a0ed9571c9edc763595109d7",
+    "resources/umls_hpo_terms.tsv.gz": "311514dc68c619db01d19a4d8aacc55c9a62474e706b405e4cb42ac6ffc78119",
+    "work/span_ner/b_span_predictions/spans.jsonl": "fd0a79a2108ae299e8a282d978a2a1ec61bbbb3c6c0b5fb2cf924ec7a0d14e54",
+    "work/span_ner/b_span_predictions/manifest.json": "03d46454def270c92f3731d574db9af301e2f58598b7e4f86e16edc813ae7b3b",
+    "work/span_ner/boundary-cap100-fold0/best_validation_predictions.jsonl": "99b308bea84d450d9bfac5c9a6487616c2f9350361fd28c33a7e4052dc0420c2",
+    "work/span_ner/boundary-cap100-fold0/manifest.json": "5ba8c9591cfd2bda9792b83dd20e487995dfa2827056281df6762c5e6afcca7b",
+    "work/span_ner/boundary-cap100-fold0/summary.json": "d11f3a166b5d1831feba7f6837e2947311bd7e4342dd248ef2fd3a0a7756bdd3",
+    "work/span_ner/boundary-cap100-fold1/best_validation_predictions.jsonl": "8c0aa1c0905cf9645651472892022964c1fcf30fae3a44cbc7d7ce2a8e80c625",
+    "work/span_ner/boundary-cap100-fold1/manifest.json": "fe6f8e8f0b0b324e409a67f1f30446622c636744393fccead398302047675815",
+    "work/span_ner/boundary-cap100-fold1/summary.json": "00529e13f4a44cbf202f49a28d0326239a2d51bbec828167b003694e7d42d90c",
+    "work/span_ner/boundary-cap100-fold2/best_validation_predictions.jsonl": "c4819ae686ab3faf85d87d022488d71a2d0e4423c23d79c32cce71167abb10c8",
+    "work/span_ner/boundary-cap100-fold2/manifest.json": "2ee0c1f5b1c6c92e18b82153907391240b53d487d2a9218dc89d6166ea6b7e1d",
+    "work/span_ner/boundary-cap100-fold2/summary.json": "c9a0ce9b4393190d5d941eabbad9252a8076ac70f0d387db34f6b6a46f20e8d9",
+    "work/span_ner/boundary-cap100-fold3/best_validation_predictions.jsonl": "e1ec31195cdf63e91c66baf5a4e4bcdabe4a6a18da4b4ce902771820f857add8",
+    "work/span_ner/boundary-cap100-fold3/manifest.json": "7aa6822166fb2b1a6d550f1cf5992aa67a697973a30972f675cbb0acf64e896c",
+    "work/span_ner/boundary-cap100-fold3/summary.json": "f79e548d1635667dc2fd8a10e81a65ecdd692bf8821b2ab744db43138f2d50db",
+    "work/span_ner/boundary-cap100-fold4/best_validation_predictions.jsonl": "ccfa8ba7220ca69e8bd7020f349501992aaf08721845f51efd7d84c957c4d131",
+    "work/span_ner/boundary-cap100-fold4/manifest.json": "9093e3abd6ed6ee4bd361b5938fcb623d78ef03c18a566c8acb64ec1d693e822",
+    "work/span_ner/boundary-cap100-fold4/summary.json": "891a96979a7b16924b19901c4fd2cd59627fd3a50b5bc58662dbbb3bdb373b18"
+  },
+  "code_sha256": {
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/entities.py": "c1d1ce81f01eb171a64a8fd1487609e0fd590804ae5ac738d6b497791ac13ada",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "patientphex/span_linking.py": "d5de49d6845486687da0773890d99bb848015af70782d03b43eef026aa79a734",
+    "patientphex/semantic_linking.py": "c50f68cbc4649909334f82a9544f90e5168ee5f3b0849a97e227d43fb01f12c9",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+    "scripts/evaluate_semantic_linking.py": "96f5b3cb886bfb5b4a788a6a8076e5f25c5a670c8e122d2023ada0a7ec8effec",
+    "scripts/run_semantic_linking.sh": "c0f0565b2e37cbc637ae3218b5a99bfc30bab0997d512043f4d9389d7566c081"
+  },
+  "environment": "Existing project .venv; unchanged environment spec. GPU 2, 2 CPU threads, FP16 encoder inference and FP32 cosine retrieval."
+}

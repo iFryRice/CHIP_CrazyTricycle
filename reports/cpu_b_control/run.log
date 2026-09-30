@@ -1,0 +1,28 @@
+Documents: train=80, B=100; HPO terms=19119
+Fold 1/5: fit 64, validate 16
+  dictionary+nearest: score=0.6353
+  dictionary+learned: score=0.6447
+  learned+nearest: score=0.6284
+  learned+learned: score=0.6387
+Fold 2/5: fit 64, validate 16
+  dictionary+nearest: score=0.6411
+  dictionary+learned: score=0.6069
+  learned+nearest: score=0.6319
+  learned+learned: score=0.6261
+Fold 3/5: fit 64, validate 16
+  dictionary+nearest: score=0.6567
+  dictionary+learned: score=0.6130
+  learned+nearest: score=0.6505
+  learned+learned: score=0.6252
+Fold 4/5: fit 64, validate 16
+  dictionary+nearest: score=0.6446
+  dictionary+learned: score=0.6483
+  learned+nearest: score=0.6511
+  learned+learned: score=0.6600
+Fold 5/5: fit 64, validate 16
+  dictionary+nearest: score=0.6257
+  dictionary+learned: score=0.6412
+  learned+nearest: score=0.6113
+  learned+learned: score=0.6271
+Selected dictionary+nearest; pooled out-of-fold score=0.6397
+Saved submissions/patientphex_b_cpu.jsonl: 752544 bytes; validation passed.

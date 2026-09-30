@@ -1,0 +1,2065 @@
+{
+  "status": "completed",
+  "scope": "Same B input and training data; output agreement only, not B accuracy.",
+  "target_sha256": "4dafea5aa59bfd5f90151ee3732ee475323512b8691f370f4d4678b628cdb62a",
+  "official_B_scores_available": false,
+  "B_accuracy_computed": false,
+  "B_parameter_selection_performed": false,
+  "cpu": {
+    "path": "D:\\Projects\\20260927_CHIP2026\\submissions\\patientphex_b_cpu.jsonl",
+    "validation": {
+      "valid": true,
+      "path": "D:\\Projects\\20260927_CHIP2026\\submissions\\patientphex_b_cpu.jsonl",
+      "bytes": 752544,
+      "limit_bytes_exclusive": 100000000,
+      "sha256": "1597723da587849498ad652eb96350272c130a4a1d526435f1a444f57a1819bf",
+      "documents": 100,
+      "patients": 244,
+      "entities": 6486,
+      "association_pairs": 2158,
+      "negated_entities": 331,
+      "unmapped_entities": 46,
+      "compound_entities": 5,
+      "document_order_preserved": true,
+      "empty_entity_documents": [],
+      "warnings": []
+    },
+    "selected_configuration": "dictionary+nearest",
+    "fresh_training": true,
+    "development_metrics": {
+      "mention": {
+        "precision": 0.7537749144352728,
+        "recall": 0.6309403437815976,
+        "f1": 0.6869094578479039,
+        "tp": 3744,
+        "fp": 1223,
+        "fn": 2190
+      },
+      "document": {
+        "precision": 0.8647654093836247,
+        "recall": 0.6372881355932203,
+        "f1": 0.7338017174082748,
+        "tp": 1880,
+        "fp": 294,
+        "fn": 1070
+      },
+      "association_micro": {
+        "precision": 0.6593527153044432,
+        "recall": 0.5536619069553201,
+        "f1": 0.6019028542814221,
+        "tp": 1202,
+        "fp": 621,
+        "fn": 969
+      },
+      "association_macro": {
+        "precision": 0.6056504811527464,
+        "recall": 0.5401905522270574,
+        "f1": 0.536294308720941,
+        "patients": 209
+      },
+      "score": 0.6397270845646355,
+      "counts": {
+        "documents": 80,
+        "patients": 209
+      },
+      "approximations": [
+        "No official scorer is supplied; these are local implementations of the published metrics.",
+        "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+        "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+        "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+        "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+        "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+      ]
+    }
+  },
+  "candidate": {
+    "path": "D:\\Projects\\20260927_CHIP2026\\submissions\\patientphex_b_association_reweighted.jsonl",
+    "validation": {
+      "valid": true,
+      "path": "D:\\Projects\\20260927_CHIP2026\\submissions\\patientphex_b_association_reweighted.jsonl",
+      "bytes": 829943,
+      "limit_bytes_exclusive": 100000000,
+      "sha256": "79ca807342b239e83f45a3fa5bdf955d191a77502cd4548a8d627c5477b51fab",
+      "documents": 100,
+      "patients": 244,
+      "entities": 7144,
+      "association_pairs": 2323,
+      "negated_entities": 173,
+      "unmapped_entities": 27,
+      "compound_entities": 0,
+      "document_order_preserved": true,
+      "empty_entity_documents": [],
+      "warnings": []
+    },
+    "configuration": "BiomedBERT/HPO/UMLS frozen entities + patient-balanced association negative weight 0.5",
+    "development_metrics": {
+      "mention": {
+        "precision": 0.6369469773725093,
+        "recall": 0.6356589147286822,
+        "f1": 0.636302294197031,
+        "tp": 3772,
+        "fp": 2150,
+        "fn": 2162
+      },
+      "document": {
+        "precision": 0.7912223133716161,
+        "recall": 0.6538983050847458,
+        "f1": 0.7160356347438753,
+        "tp": 1929,
+        "fp": 509,
+        "fn": 1021
+      },
+      "association_micro": {
+        "precision": 0.5983284169124877,
+        "recall": 0.5605711653615846,
+        "f1": 0.5788347205707491,
+        "tp": 1217,
+        "fp": 817,
+        "fn": 954
+      },
+      "association_macro": {
+        "precision": 0.5285754293158851,
+        "recall": 0.5313299511393743,
+        "f1": 0.5000299395218019,
+        "patients": 209
+      },
+      "score": 0.6078006472583644,
+      "counts": {
+        "documents": 80,
+        "patients": 209
+      },
+      "approximations": [
+        "No official scorer is supplied; these are local implementations of the published metrics.",
+        "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+        "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+        "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+        "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+        "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+      ]
+    }
+  },
+  "positive_mention_agreement": {
+    "cpu_units": 6160,
+    "candidate_units": 6971,
+    "shared": 5152,
+    "cpu_only": 1008,
+    "candidate_only": 1819,
+    "jaccard_agreement": 0.6456949492417596
+  },
+  "patient_relation_agreement": {
+    "cpu_units": 2158,
+    "candidate_units": 2323,
+    "shared": 1628,
+    "cpu_only": 530,
+    "candidate_only": 695,
+    "jaccard_agreement": 0.570627409744129
+  },
+  "per_document": [
+    {
+      "pmc_id": "10144254",
+      "positive_mentions": {
+        "cpu_units": 15,
+        "candidate_units": 26,
+        "shared": 12,
+        "cpu_only": 3,
+        "candidate_only": 14,
+        "jaccard_agreement": 0.41379310344827586
+      },
+      "patient_relations": {
+        "cpu_units": 1,
+        "candidate_units": 1,
+        "shared": 1,
+        "cpu_only": 0,
+        "candidate_only": 0,
+        "jaccard_agreement": 1.0
+      }
+    },
+    {
+      "pmc_id": "10331715",
+      "positive_mentions": {
+        "cpu_units": 31,
+        "candidate_units": 41,
+        "shared": 28,
+        "cpu_only": 3,
+        "candidate_only": 13,
+        "jaccard_agreement": 0.6363636363636364
+      },
+      "patient_relations": {
+        "cpu_units": 4,
+        "candidate_units": 5,
+        "shared": 2,
+        "cpu_only": 2,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.2857142857142857
+      }
+    },
+    {
+      "pmc_id": "11196984",
+      "positive_mentions": {
+        "cpu_units": 69,
+        "candidate_units": 81,
+        "shared": 53,
+        "cpu_only": 16,
+        "candidate_only": 28,
+        "jaccard_agreement": 0.5463917525773195
+      },
+      "patient_relations": {
+        "cpu_units": 25,
+        "candidate_units": 20,
+        "shared": 15,
+        "cpu_only": 10,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.5
+      }
+    },
+    {
+      "pmc_id": "11219444",
+      "positive_mentions": {
+        "cpu_units": 26,
+        "candidate_units": 49,
+        "shared": 26,
+        "cpu_only": 0,
+        "candidate_only": 23,
+        "jaccard_agreement": 0.5306122448979592
+      },
+      "patient_relations": {
+        "cpu_units": 3,
+        "candidate_units": 3,
+        "shared": 3,
+        "cpu_only": 0,
+        "candidate_only": 0,
+        "jaccard_agreement": 1.0
+      }
+    },
+    {
+      "pmc_id": "11255198",
+      "positive_mentions": {
+        "cpu_units": 6,
+        "candidate_units": 5,
+        "shared": 5,
+        "cpu_only": 1,
+        "candidate_only": 0,
+        "jaccard_agreement": 0.8333333333333334
+      },
+      "patient_relations": {
+        "cpu_units": 6,
+        "candidate_units": 5,
+        "shared": 5,
+        "cpu_only": 1,
+        "candidate_only": 0,
+        "jaccard_agreement": 0.8333333333333334
+      }
+    },
+    {
+      "pmc_id": "11623322",
+      "positive_mentions": {
+        "cpu_units": 27,
+        "candidate_units": 38,
+        "shared": 25,
+        "cpu_only": 2,
+        "candidate_only": 13,
+        "jaccard_agreement": 0.625
+      },
+      "patient_relations": {
+        "cpu_units": 7,
+        "candidate_units": 5,
+        "shared": 3,
+        "cpu_only": 4,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.3333333333333333
+      }
+    },
+    {
+      "pmc_id": "11803302",
+      "positive_mentions": {
+        "cpu_units": 75,
+        "candidate_units": 96,
+        "shared": 74,
+        "cpu_only": 1,
+        "candidate_only": 22,
+        "jaccard_agreement": 0.7628865979381443
+      },
+      "patient_relations": {
+        "cpu_units": 16,
+        "candidate_units": 19,
+        "shared": 16,
+        "cpu_only": 0,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.8421052631578947
+      }
+    },
+    {
+      "pmc_id": "11869264",
+      "positive_mentions": {
+        "cpu_units": 48,
+        "candidate_units": 71,
+        "shared": 44,
+        "cpu_only": 4,
+        "candidate_only": 27,
+        "jaccard_agreement": 0.5866666666666667
+      },
+      "patient_relations": {
+        "cpu_units": 22,
+        "candidate_units": 37,
+        "shared": 20,
+        "cpu_only": 2,
+        "candidate_only": 17,
+        "jaccard_agreement": 0.5128205128205128
+      }
+    },
+    {
+      "pmc_id": "11880773",
+      "positive_mentions": {
+        "cpu_units": 18,
+        "candidate_units": 18,
+        "shared": 16,
+        "cpu_only": 2,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.8
+      },
+      "patient_relations": {
+        "cpu_units": 4,
+        "candidate_units": 6,
+        "shared": 4,
+        "cpu_only": 0,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.6666666666666666
+      }
+    },
+    {
+      "pmc_id": "11895343",
+      "positive_mentions": {
+        "cpu_units": 100,
+        "candidate_units": 101,
+        "shared": 88,
+        "cpu_only": 12,
+        "candidate_only": 13,
+        "jaccard_agreement": 0.7787610619469026
+      },
+      "patient_relations": {
+        "cpu_units": 50,
+        "candidate_units": 43,
+        "shared": 40,
+        "cpu_only": 10,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.7547169811320755
+      }
+    },
+    {
+      "pmc_id": "11908418",
+      "positive_mentions": {
+        "cpu_units": 62,
+        "candidate_units": 52,
+        "shared": 35,
+        "cpu_only": 27,
+        "candidate_only": 17,
+        "jaccard_agreement": 0.4430379746835443
+      },
+      "patient_relations": {
+        "cpu_units": 10,
+        "candidate_units": 11,
+        "shared": 9,
+        "cpu_only": 1,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.75
+      }
+    },
+    {
+      "pmc_id": "11964616",
+      "positive_mentions": {
+        "cpu_units": 93,
+        "candidate_units": 100,
+        "shared": 80,
+        "cpu_only": 13,
+        "candidate_only": 20,
+        "jaccard_agreement": 0.7079646017699115
+      },
+      "patient_relations": {
+        "cpu_units": 55,
+        "candidate_units": 51,
+        "shared": 43,
+        "cpu_only": 12,
+        "candidate_only": 8,
+        "jaccard_agreement": 0.6825396825396826
+      }
+    },
+    {
+      "pmc_id": "11980148",
+      "positive_mentions": {
+        "cpu_units": 107,
+        "candidate_units": 73,
+        "shared": 60,
+        "cpu_only": 47,
+        "candidate_only": 13,
+        "jaccard_agreement": 0.5
+      },
+      "patient_relations": {
+        "cpu_units": 27,
+        "candidate_units": 23,
+        "shared": 21,
+        "cpu_only": 6,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.7241379310344828
+      }
+    },
+    {
+      "pmc_id": "12000180",
+      "positive_mentions": {
+        "cpu_units": 132,
+        "candidate_units": 161,
+        "shared": 119,
+        "cpu_only": 13,
+        "candidate_only": 42,
+        "jaccard_agreement": 0.6839080459770115
+      },
+      "patient_relations": {
+        "cpu_units": 43,
+        "candidate_units": 60,
+        "shared": 37,
+        "cpu_only": 6,
+        "candidate_only": 23,
+        "jaccard_agreement": 0.5606060606060606
+      }
+    },
+    {
+      "pmc_id": "12006727",
+      "positive_mentions": {
+        "cpu_units": 50,
+        "candidate_units": 63,
+        "shared": 46,
+        "cpu_only": 4,
+        "candidate_only": 17,
+        "jaccard_agreement": 0.6865671641791045
+      },
+      "patient_relations": {
+        "cpu_units": 19,
+        "candidate_units": 10,
+        "shared": 7,
+        "cpu_only": 12,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.3181818181818182
+      }
+    },
+    {
+      "pmc_id": "12105292",
+      "positive_mentions": {
+        "cpu_units": 49,
+        "candidate_units": 64,
+        "shared": 45,
+        "cpu_only": 4,
+        "candidate_only": 19,
+        "jaccard_agreement": 0.6617647058823529
+      },
+      "patient_relations": {
+        "cpu_units": 9,
+        "candidate_units": 6,
+        "shared": 4,
+        "cpu_only": 5,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.36363636363636365
+      }
+    },
+    {
+      "pmc_id": "12111208",
+      "positive_mentions": {
+        "cpu_units": 80,
+        "candidate_units": 100,
+        "shared": 72,
+        "cpu_only": 8,
+        "candidate_only": 28,
+        "jaccard_agreement": 0.6666666666666666
+      },
+      "patient_relations": {
+        "cpu_units": 32,
+        "candidate_units": 26,
+        "shared": 19,
+        "cpu_only": 13,
+        "candidate_only": 7,
+        "jaccard_agreement": 0.48717948717948717
+      }
+    },
+    {
+      "pmc_id": "12124243",
+      "positive_mentions": {
+        "cpu_units": 74,
+        "candidate_units": 62,
+        "shared": 47,
+        "cpu_only": 27,
+        "candidate_only": 15,
+        "jaccard_agreement": 0.5280898876404494
+      },
+      "patient_relations": {
+        "cpu_units": 19,
+        "candidate_units": 15,
+        "shared": 11,
+        "cpu_only": 8,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.4782608695652174
+      }
+    },
+    {
+      "pmc_id": "12171241",
+      "positive_mentions": {
+        "cpu_units": 39,
+        "candidate_units": 46,
+        "shared": 34,
+        "cpu_only": 5,
+        "candidate_only": 12,
+        "jaccard_agreement": 0.6666666666666666
+      },
+      "patient_relations": {
+        "cpu_units": 8,
+        "candidate_units": 11,
+        "shared": 6,
+        "cpu_only": 2,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.46153846153846156
+      }
+    },
+    {
+      "pmc_id": "12186393",
+      "positive_mentions": {
+        "cpu_units": 72,
+        "candidate_units": 81,
+        "shared": 62,
+        "cpu_only": 10,
+        "candidate_only": 19,
+        "jaccard_agreement": 0.6813186813186813
+      },
+      "patient_relations": {
+        "cpu_units": 11,
+        "candidate_units": 9,
+        "shared": 8,
+        "cpu_only": 3,
+        "candidate_only": 1,
+        "jaccard_agreement": 0.6666666666666666
+      }
+    },
+    {
+      "pmc_id": "12216401",
+      "positive_mentions": {
+        "cpu_units": 72,
+        "candidate_units": 83,
+        "shared": 69,
+        "cpu_only": 3,
+        "candidate_only": 14,
+        "jaccard_agreement": 0.8023255813953488
+      },
+      "patient_relations": {
+        "cpu_units": 40,
+        "candidate_units": 38,
+        "shared": 38,
+        "cpu_only": 2,
+        "candidate_only": 0,
+        "jaccard_agreement": 0.95
+      }
+    },
+    {
+      "pmc_id": "12249766",
+      "positive_mentions": {
+        "cpu_units": 67,
+        "candidate_units": 42,
+        "shared": 27,
+        "cpu_only": 40,
+        "candidate_only": 15,
+        "jaccard_agreement": 0.32926829268292684
+      },
+      "patient_relations": {
+        "cpu_units": 11,
+        "candidate_units": 4,
+        "shared": 2,
+        "cpu_only": 9,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.15384615384615385
+      }
+    },
+    {
+      "pmc_id": "12322239",
+      "positive_mentions": {
+        "cpu_units": 31,
+        "candidate_units": 31,
+        "shared": 26,
+        "cpu_only": 5,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.7222222222222222
+      },
+      "patient_relations": {
+        "cpu_units": 2,
+        "candidate_units": 2,
+        "shared": 2,
+        "cpu_only": 0,
+        "candidate_only": 0,
+        "jaccard_agreement": 1.0
+      }
+    },
+    {
+      "pmc_id": "12385928",
+      "positive_mentions": {
+        "cpu_units": 71,
+        "candidate_units": 100,
+        "shared": 67,
+        "cpu_only": 4,
+        "candidate_only": 33,
+        "jaccard_agreement": 0.6442307692307693
+      },
+      "patient_relations": {
+        "cpu_units": 14,
+        "candidate_units": 16,
+        "shared": 11,
+        "cpu_only": 3,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.5789473684210527
+      }
+    },
+    {
+      "pmc_id": "12411262",
+      "positive_mentions": {
+        "cpu_units": 66,
+        "candidate_units": 94,
+        "shared": 65,
+        "cpu_only": 1,
+        "candidate_only": 29,
+        "jaccard_agreement": 0.6842105263157895
+      },
+      "patient_relations": {
+        "cpu_units": 27,
+        "candidate_units": 26,
+        "shared": 21,
+        "cpu_only": 6,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.65625
+      }
+    },
+    {
+      "pmc_id": "12646977",
+      "positive_mentions": {
+        "cpu_units": 29,
+        "candidate_units": 36,
+        "shared": 26,
+        "cpu_only": 3,
+        "candidate_only": 10,
+        "jaccard_agreement": 0.6666666666666666
+      },
+      "patient_relations": {
+        "cpu_units": 10,
+        "candidate_units": 12,
+        "shared": 4,
+        "cpu_only": 6,
+        "candidate_only": 8,
+        "jaccard_agreement": 0.2222222222222222
+      }
+    },
+    {
+      "pmc_id": "12649092",
+      "positive_mentions": {
+        "cpu_units": 54,
+        "candidate_units": 65,
+        "shared": 47,
+        "cpu_only": 7,
+        "candidate_only": 18,
+        "jaccard_agreement": 0.6527777777777778
+      },
+      "patient_relations": {
+        "cpu_units": 19,
+        "candidate_units": 10,
+        "shared": 10,
+        "cpu_only": 9,
+        "candidate_only": 0,
+        "jaccard_agreement": 0.5263157894736842
+      }
+    },
+    {
+      "pmc_id": "12652073",
+      "positive_mentions": {
+        "cpu_units": 29,
+        "candidate_units": 62,
+        "shared": 26,
+        "cpu_only": 3,
+        "candidate_only": 36,
+        "jaccard_agreement": 0.4
+      },
+      "patient_relations": {
+        "cpu_units": 10,
+        "candidate_units": 12,
+        "shared": 7,
+        "cpu_only": 3,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.4666666666666667
+      }
+    },
+    {
+      "pmc_id": "12652286",
+      "positive_mentions": {
+        "cpu_units": 47,
+        "candidate_units": 41,
+        "shared": 33,
+        "cpu_only": 14,
+        "candidate_only": 8,
+        "jaccard_agreement": 0.6
+      },
+      "patient_relations": {
+        "cpu_units": 9,
+        "candidate_units": 6,
+        "shared": 6,
+        "cpu_only": 3,
+        "candidate_only": 0,
+        "jaccard_agreement": 0.6666666666666666
+      }
+    },
+    {
+      "pmc_id": "12652972",
+      "positive_mentions": {
+        "cpu_units": 46,
+        "candidate_units": 62,
+        "shared": 38,
+        "cpu_only": 8,
+        "candidate_only": 24,
+        "jaccard_agreement": 0.5428571428571428
+      },
+      "patient_relations": {
+        "cpu_units": 19,
+        "candidate_units": 20,
+        "shared": 15,
+        "cpu_only": 4,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.625
+      }
+    },
+    {
+      "pmc_id": "12674976",
+      "positive_mentions": {
+        "cpu_units": 91,
+        "candidate_units": 110,
+        "shared": 81,
+        "cpu_only": 10,
+        "candidate_only": 29,
+        "jaccard_agreement": 0.675
+      },
+      "patient_relations": {
+        "cpu_units": 43,
+        "candidate_units": 40,
+        "shared": 33,
+        "cpu_only": 10,
+        "candidate_only": 7,
+        "jaccard_agreement": 0.66
+      }
+    },
+    {
+      "pmc_id": "12674977",
+      "positive_mentions": {
+        "cpu_units": 107,
+        "candidate_units": 111,
+        "shared": 94,
+        "cpu_only": 13,
+        "candidate_only": 17,
+        "jaccard_agreement": 0.7580645161290323
+      },
+      "patient_relations": {
+        "cpu_units": 46,
+        "candidate_units": 59,
+        "shared": 39,
+        "cpu_only": 7,
+        "candidate_only": 20,
+        "jaccard_agreement": 0.5909090909090909
+      }
+    },
+    {
+      "pmc_id": "12692996",
+      "positive_mentions": {
+        "cpu_units": 25,
+        "candidate_units": 33,
+        "shared": 23,
+        "cpu_only": 2,
+        "candidate_only": 10,
+        "jaccard_agreement": 0.6571428571428571
+      },
+      "patient_relations": {
+        "cpu_units": 6,
+        "candidate_units": 5,
+        "shared": 5,
+        "cpu_only": 1,
+        "candidate_only": 0,
+        "jaccard_agreement": 0.8333333333333334
+      }
+    },
+    {
+      "pmc_id": "12698336",
+      "positive_mentions": {
+        "cpu_units": 24,
+        "candidate_units": 45,
+        "shared": 24,
+        "cpu_only": 0,
+        "candidate_only": 21,
+        "jaccard_agreement": 0.5333333333333333
+      },
+      "patient_relations": {
+        "cpu_units": 10,
+        "candidate_units": 15,
+        "shared": 9,
+        "cpu_only": 1,
+        "candidate_only": 6,
+        "jaccard_agreement": 0.5625
+      }
+    },
+    {
+      "pmc_id": "12699863",
+      "positive_mentions": {
+        "cpu_units": 67,
+        "candidate_units": 77,
+        "shared": 59,
+        "cpu_only": 8,
+        "candidate_only": 18,
+        "jaccard_agreement": 0.6941176470588235
+      },
+      "patient_relations": {
+        "cpu_units": 13,
+        "candidate_units": 15,
+        "shared": 10,
+        "cpu_only": 3,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.5555555555555556
+      }
+    },
+    {
+      "pmc_id": "12732778",
+      "positive_mentions": {
+        "cpu_units": 84,
+        "candidate_units": 91,
+        "shared": 68,
+        "cpu_only": 16,
+        "candidate_only": 23,
+        "jaccard_agreement": 0.6355140186915887
+      },
+      "patient_relations": {
+        "cpu_units": 24,
+        "candidate_units": 18,
+        "shared": 11,
+        "cpu_only": 13,
+        "candidate_only": 7,
+        "jaccard_agreement": 0.3548387096774194
+      }
+    },
+    {
+      "pmc_id": "12765696",
+      "positive_mentions": {
+        "cpu_units": 37,
+        "candidate_units": 51,
+        "shared": 37,
+        "cpu_only": 0,
+        "candidate_only": 14,
+        "jaccard_agreement": 0.7254901960784313
+      },
+      "patient_relations": {
+        "cpu_units": 19,
+        "candidate_units": 26,
+        "shared": 15,
+        "cpu_only": 4,
+        "candidate_only": 11,
+        "jaccard_agreement": 0.5
+      }
+    },
+    {
+      "pmc_id": "12779174",
+      "positive_mentions": {
+        "cpu_units": 57,
+        "candidate_units": 69,
+        "shared": 54,
+        "cpu_only": 3,
+        "candidate_only": 15,
+        "jaccard_agreement": 0.75
+      },
+      "patient_relations": {
+        "cpu_units": 21,
+        "candidate_units": 23,
+        "shared": 19,
+        "cpu_only": 2,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.76
+      }
+    },
+    {
+      "pmc_id": "12801135",
+      "positive_mentions": {
+        "cpu_units": 150,
+        "candidate_units": 139,
+        "shared": 115,
+        "cpu_only": 35,
+        "candidate_only": 24,
+        "jaccard_agreement": 0.6609195402298851
+      },
+      "patient_relations": {
+        "cpu_units": 41,
+        "candidate_units": 50,
+        "shared": 35,
+        "cpu_only": 6,
+        "candidate_only": 15,
+        "jaccard_agreement": 0.625
+      }
+    },
+    {
+      "pmc_id": "12822607",
+      "positive_mentions": {
+        "cpu_units": 73,
+        "candidate_units": 78,
+        "shared": 66,
+        "cpu_only": 7,
+        "candidate_only": 12,
+        "jaccard_agreement": 0.7764705882352941
+      },
+      "patient_relations": {
+        "cpu_units": 24,
+        "candidate_units": 25,
+        "shared": 21,
+        "cpu_only": 3,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.75
+      }
+    },
+    {
+      "pmc_id": "12831391",
+      "positive_mentions": {
+        "cpu_units": 81,
+        "candidate_units": 81,
+        "shared": 67,
+        "cpu_only": 14,
+        "candidate_only": 14,
+        "jaccard_agreement": 0.7052631578947368
+      },
+      "patient_relations": {
+        "cpu_units": 40,
+        "candidate_units": 34,
+        "shared": 29,
+        "cpu_only": 11,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.6444444444444445
+      }
+    },
+    {
+      "pmc_id": "12892861",
+      "positive_mentions": {
+        "cpu_units": 18,
+        "candidate_units": 39,
+        "shared": 17,
+        "cpu_only": 1,
+        "candidate_only": 22,
+        "jaccard_agreement": 0.425
+      },
+      "patient_relations": {
+        "cpu_units": 9,
+        "candidate_units": 17,
+        "shared": 9,
+        "cpu_only": 0,
+        "candidate_only": 8,
+        "jaccard_agreement": 0.5294117647058824
+      }
+    },
+    {
+      "pmc_id": "12898156",
+      "positive_mentions": {
+        "cpu_units": 96,
+        "candidate_units": 113,
+        "shared": 89,
+        "cpu_only": 7,
+        "candidate_only": 24,
+        "jaccard_agreement": 0.7416666666666667
+      },
+      "patient_relations": {
+        "cpu_units": 51,
+        "candidate_units": 89,
+        "shared": 45,
+        "cpu_only": 6,
+        "candidate_only": 44,
+        "jaccard_agreement": 0.47368421052631576
+      }
+    },
+    {
+      "pmc_id": "12898639",
+      "positive_mentions": {
+        "cpu_units": 103,
+        "candidate_units": 143,
+        "shared": 98,
+        "cpu_only": 5,
+        "candidate_only": 45,
+        "jaccard_agreement": 0.6621621621621622
+      },
+      "patient_relations": {
+        "cpu_units": 25,
+        "candidate_units": 22,
+        "shared": 18,
+        "cpu_only": 7,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.6206896551724138
+      }
+    },
+    {
+      "pmc_id": "3541344",
+      "positive_mentions": {
+        "cpu_units": 28,
+        "candidate_units": 45,
+        "shared": 26,
+        "cpu_only": 2,
+        "candidate_only": 19,
+        "jaccard_agreement": 0.5531914893617021
+      },
+      "patient_relations": {
+        "cpu_units": 18,
+        "candidate_units": 25,
+        "shared": 17,
+        "cpu_only": 1,
+        "candidate_only": 8,
+        "jaccard_agreement": 0.6538461538461539
+      }
+    },
+    {
+      "pmc_id": "3652099",
+      "positive_mentions": {
+        "cpu_units": 76,
+        "candidate_units": 81,
+        "shared": 62,
+        "cpu_only": 14,
+        "candidate_only": 19,
+        "jaccard_agreement": 0.6526315789473685
+      },
+      "patient_relations": {
+        "cpu_units": 25,
+        "candidate_units": 27,
+        "shared": 19,
+        "cpu_only": 6,
+        "candidate_only": 8,
+        "jaccard_agreement": 0.5757575757575758
+      }
+    },
+    {
+      "pmc_id": "3775762",
+      "positive_mentions": {
+        "cpu_units": 53,
+        "candidate_units": 56,
+        "shared": 52,
+        "cpu_only": 1,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.9122807017543859
+      },
+      "patient_relations": {
+        "cpu_units": 7,
+        "candidate_units": 3,
+        "shared": 3,
+        "cpu_only": 4,
+        "candidate_only": 0,
+        "jaccard_agreement": 0.42857142857142855
+      }
+    },
+    {
+      "pmc_id": "3824280",
+      "positive_mentions": {
+        "cpu_units": 25,
+        "candidate_units": 33,
+        "shared": 25,
+        "cpu_only": 0,
+        "candidate_only": 8,
+        "jaccard_agreement": 0.7575757575757576
+      },
+      "patient_relations": {
+        "cpu_units": 8,
+        "candidate_units": 11,
+        "shared": 8,
+        "cpu_only": 0,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.7272727272727273
+      }
+    },
+    {
+      "pmc_id": "4538198",
+      "positive_mentions": {
+        "cpu_units": 63,
+        "candidate_units": 78,
+        "shared": 61,
+        "cpu_only": 2,
+        "candidate_only": 17,
+        "jaccard_agreement": 0.7625
+      },
+      "patient_relations": {
+        "cpu_units": 27,
+        "candidate_units": 24,
+        "shared": 21,
+        "cpu_only": 6,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.7
+      }
+    },
+    {
+      "pmc_id": "4630879",
+      "positive_mentions": {
+        "cpu_units": 28,
+        "candidate_units": 38,
+        "shared": 28,
+        "cpu_only": 0,
+        "candidate_only": 10,
+        "jaccard_agreement": 0.7368421052631579
+      },
+      "patient_relations": {
+        "cpu_units": 12,
+        "candidate_units": 14,
+        "shared": 12,
+        "cpu_only": 0,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.8571428571428571
+      }
+    },
+    {
+      "pmc_id": "4769499",
+      "positive_mentions": {
+        "cpu_units": 178,
+        "candidate_units": 193,
+        "shared": 162,
+        "cpu_only": 16,
+        "candidate_only": 31,
+        "jaccard_agreement": 0.7751196172248804
+      },
+      "patient_relations": {
+        "cpu_units": 90,
+        "candidate_units": 113,
+        "shared": 77,
+        "cpu_only": 13,
+        "candidate_only": 36,
+        "jaccard_agreement": 0.6111111111111112
+      }
+    },
+    {
+      "pmc_id": "4773268",
+      "positive_mentions": {
+        "cpu_units": 20,
+        "candidate_units": 31,
+        "shared": 18,
+        "cpu_only": 2,
+        "candidate_only": 13,
+        "jaccard_agreement": 0.5454545454545454
+      },
+      "patient_relations": {
+        "cpu_units": 11,
+        "candidate_units": 14,
+        "shared": 10,
+        "cpu_only": 1,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.6666666666666666
+      }
+    },
+    {
+      "pmc_id": "4784292",
+      "positive_mentions": {
+        "cpu_units": 25,
+        "candidate_units": 45,
+        "shared": 23,
+        "cpu_only": 2,
+        "candidate_only": 22,
+        "jaccard_agreement": 0.48936170212765956
+      },
+      "patient_relations": {
+        "cpu_units": 8,
+        "candidate_units": 14,
+        "shared": 8,
+        "cpu_only": 0,
+        "candidate_only": 6,
+        "jaccard_agreement": 0.5714285714285714
+      }
+    },
+    {
+      "pmc_id": "4867568",
+      "positive_mentions": {
+        "cpu_units": 60,
+        "candidate_units": 74,
+        "shared": 54,
+        "cpu_only": 6,
+        "candidate_only": 20,
+        "jaccard_agreement": 0.675
+      },
+      "patient_relations": {
+        "cpu_units": 11,
+        "candidate_units": 10,
+        "shared": 7,
+        "cpu_only": 4,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.5
+      }
+    },
+    {
+      "pmc_id": "4881620",
+      "positive_mentions": {
+        "cpu_units": 44,
+        "candidate_units": 49,
+        "shared": 37,
+        "cpu_only": 7,
+        "candidate_only": 12,
+        "jaccard_agreement": 0.6607142857142857
+      },
+      "patient_relations": {
+        "cpu_units": 38,
+        "candidate_units": 36,
+        "shared": 22,
+        "cpu_only": 16,
+        "candidate_only": 14,
+        "jaccard_agreement": 0.4230769230769231
+      }
+    },
+    {
+      "pmc_id": "4975905",
+      "positive_mentions": {
+        "cpu_units": 93,
+        "candidate_units": 124,
+        "shared": 84,
+        "cpu_only": 9,
+        "candidate_only": 40,
+        "jaccard_agreement": 0.631578947368421
+      },
+      "patient_relations": {
+        "cpu_units": 57,
+        "candidate_units": 48,
+        "shared": 40,
+        "cpu_only": 17,
+        "candidate_only": 8,
+        "jaccard_agreement": 0.6153846153846154
+      }
+    },
+    {
+      "pmc_id": "5031822",
+      "positive_mentions": {
+        "cpu_units": 41,
+        "candidate_units": 33,
+        "shared": 22,
+        "cpu_only": 19,
+        "candidate_only": 11,
+        "jaccard_agreement": 0.4230769230769231
+      },
+      "patient_relations": {
+        "cpu_units": 18,
+        "candidate_units": 18,
+        "shared": 9,
+        "cpu_only": 9,
+        "candidate_only": 9,
+        "jaccard_agreement": 0.3333333333333333
+      }
+    },
+    {
+      "pmc_id": "5090660",
+      "positive_mentions": {
+        "cpu_units": 52,
+        "candidate_units": 54,
+        "shared": 38,
+        "cpu_only": 14,
+        "candidate_only": 16,
+        "jaccard_agreement": 0.5588235294117647
+      },
+      "patient_relations": {
+        "cpu_units": 2,
+        "candidate_units": 0,
+        "shared": 0,
+        "cpu_only": 2,
+        "candidate_only": 0,
+        "jaccard_agreement": 0.0
+      }
+    },
+    {
+      "pmc_id": "5107629",
+      "positive_mentions": {
+        "cpu_units": 38,
+        "candidate_units": 42,
+        "shared": 35,
+        "cpu_only": 3,
+        "candidate_only": 7,
+        "jaccard_agreement": 0.7777777777777778
+      },
+      "patient_relations": {
+        "cpu_units": 20,
+        "candidate_units": 25,
+        "shared": 15,
+        "cpu_only": 5,
+        "candidate_only": 10,
+        "jaccard_agreement": 0.5
+      }
+    },
+    {
+      "pmc_id": "5111003",
+      "positive_mentions": {
+        "cpu_units": 70,
+        "candidate_units": 88,
+        "shared": 67,
+        "cpu_only": 3,
+        "candidate_only": 21,
+        "jaccard_agreement": 0.7362637362637363
+      },
+      "patient_relations": {
+        "cpu_units": 30,
+        "candidate_units": 41,
+        "shared": 28,
+        "cpu_only": 2,
+        "candidate_only": 13,
+        "jaccard_agreement": 0.6511627906976745
+      }
+    },
+    {
+      "pmc_id": "5167130",
+      "positive_mentions": {
+        "cpu_units": 175,
+        "candidate_units": 114,
+        "shared": 80,
+        "cpu_only": 95,
+        "candidate_only": 34,
+        "jaccard_agreement": 0.3827751196172249
+      },
+      "patient_relations": {
+        "cpu_units": 27,
+        "candidate_units": 24,
+        "shared": 20,
+        "cpu_only": 7,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.6451612903225806
+      }
+    },
+    {
+      "pmc_id": "5219735",
+      "positive_mentions": {
+        "cpu_units": 72,
+        "candidate_units": 89,
+        "shared": 64,
+        "cpu_only": 8,
+        "candidate_only": 25,
+        "jaccard_agreement": 0.6597938144329897
+      },
+      "patient_relations": {
+        "cpu_units": 16,
+        "candidate_units": 14,
+        "shared": 9,
+        "cpu_only": 7,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.42857142857142855
+      }
+    },
+    {
+      "pmc_id": "5339678",
+      "positive_mentions": {
+        "cpu_units": 138,
+        "candidate_units": 116,
+        "shared": 87,
+        "cpu_only": 51,
+        "candidate_only": 29,
+        "jaccard_agreement": 0.5209580838323353
+      },
+      "patient_relations": {
+        "cpu_units": 66,
+        "candidate_units": 103,
+        "shared": 55,
+        "cpu_only": 11,
+        "candidate_only": 48,
+        "jaccard_agreement": 0.4824561403508772
+      }
+    },
+    {
+      "pmc_id": "5351214",
+      "positive_mentions": {
+        "cpu_units": 92,
+        "candidate_units": 123,
+        "shared": 85,
+        "cpu_only": 7,
+        "candidate_only": 38,
+        "jaccard_agreement": 0.6538461538461539
+      },
+      "patient_relations": {
+        "cpu_units": 49,
+        "candidate_units": 50,
+        "shared": 36,
+        "cpu_only": 13,
+        "candidate_only": 14,
+        "jaccard_agreement": 0.5714285714285714
+      }
+    },
+    {
+      "pmc_id": "5359868",
+      "positive_mentions": {
+        "cpu_units": 62,
+        "candidate_units": 71,
+        "shared": 48,
+        "cpu_only": 14,
+        "candidate_only": 23,
+        "jaccard_agreement": 0.5647058823529412
+      },
+      "patient_relations": {
+        "cpu_units": 24,
+        "candidate_units": 31,
+        "shared": 20,
+        "cpu_only": 4,
+        "candidate_only": 11,
+        "jaccard_agreement": 0.5714285714285714
+      }
+    },
+    {
+      "pmc_id": "5388735",
+      "positive_mentions": {
+        "cpu_units": 118,
+        "candidate_units": 116,
+        "shared": 105,
+        "cpu_only": 13,
+        "candidate_only": 11,
+        "jaccard_agreement": 0.813953488372093
+      },
+      "patient_relations": {
+        "cpu_units": 46,
+        "candidate_units": 32,
+        "shared": 27,
+        "cpu_only": 19,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.5294117647058824
+      }
+    },
+    {
+      "pmc_id": "5389142",
+      "positive_mentions": {
+        "cpu_units": 32,
+        "candidate_units": 26,
+        "shared": 24,
+        "cpu_only": 8,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.7058823529411765
+      },
+      "patient_relations": {
+        "cpu_units": 5,
+        "candidate_units": 14,
+        "shared": 5,
+        "cpu_only": 0,
+        "candidate_only": 9,
+        "jaccard_agreement": 0.35714285714285715
+      }
+    },
+    {
+      "pmc_id": "5443993",
+      "positive_mentions": {
+        "cpu_units": 77,
+        "candidate_units": 107,
+        "shared": 64,
+        "cpu_only": 13,
+        "candidate_only": 43,
+        "jaccard_agreement": 0.5333333333333333
+      },
+      "patient_relations": {
+        "cpu_units": 14,
+        "candidate_units": 16,
+        "shared": 11,
+        "cpu_only": 3,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.5789473684210527
+      }
+    },
+    {
+      "pmc_id": "5511509",
+      "positive_mentions": {
+        "cpu_units": 30,
+        "candidate_units": 10,
+        "shared": 3,
+        "cpu_only": 27,
+        "candidate_only": 7,
+        "jaccard_agreement": 0.08108108108108109
+      },
+      "patient_relations": {
+        "cpu_units": 3,
+        "candidate_units": 4,
+        "shared": 0,
+        "cpu_only": 3,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.0
+      }
+    },
+    {
+      "pmc_id": "5568374",
+      "positive_mentions": {
+        "cpu_units": 108,
+        "candidate_units": 96,
+        "shared": 74,
+        "cpu_only": 34,
+        "candidate_only": 22,
+        "jaccard_agreement": 0.5692307692307692
+      },
+      "patient_relations": {
+        "cpu_units": 48,
+        "candidate_units": 43,
+        "shared": 34,
+        "cpu_only": 14,
+        "candidate_only": 9,
+        "jaccard_agreement": 0.5964912280701754
+      }
+    },
+    {
+      "pmc_id": "5618395",
+      "positive_mentions": {
+        "cpu_units": 71,
+        "candidate_units": 87,
+        "shared": 66,
+        "cpu_only": 5,
+        "candidate_only": 21,
+        "jaccard_agreement": 0.717391304347826
+      },
+      "patient_relations": {
+        "cpu_units": 34,
+        "candidate_units": 32,
+        "shared": 22,
+        "cpu_only": 12,
+        "candidate_only": 10,
+        "jaccard_agreement": 0.5
+      }
+    },
+    {
+      "pmc_id": "5839060",
+      "positive_mentions": {
+        "cpu_units": 71,
+        "candidate_units": 75,
+        "shared": 63,
+        "cpu_only": 8,
+        "candidate_only": 12,
+        "jaccard_agreement": 0.7590361445783133
+      },
+      "patient_relations": {
+        "cpu_units": 32,
+        "candidate_units": 52,
+        "shared": 23,
+        "cpu_only": 9,
+        "candidate_only": 29,
+        "jaccard_agreement": 0.3770491803278688
+      }
+    },
+    {
+      "pmc_id": "6026433",
+      "positive_mentions": {
+        "cpu_units": 76,
+        "candidate_units": 90,
+        "shared": 69,
+        "cpu_only": 7,
+        "candidate_only": 21,
+        "jaccard_agreement": 0.711340206185567
+      },
+      "patient_relations": {
+        "cpu_units": 31,
+        "candidate_units": 27,
+        "shared": 20,
+        "cpu_only": 11,
+        "candidate_only": 7,
+        "jaccard_agreement": 0.5263157894736842
+      }
+    },
+    {
+      "pmc_id": "6062669",
+      "positive_mentions": {
+        "cpu_units": 35,
+        "candidate_units": 50,
+        "shared": 31,
+        "cpu_only": 4,
+        "candidate_only": 19,
+        "jaccard_agreement": 0.5740740740740741
+      },
+      "patient_relations": {
+        "cpu_units": 21,
+        "candidate_units": 31,
+        "shared": 17,
+        "cpu_only": 4,
+        "candidate_only": 14,
+        "jaccard_agreement": 0.4857142857142857
+      }
+    },
+    {
+      "pmc_id": "6074827",
+      "positive_mentions": {
+        "cpu_units": 60,
+        "candidate_units": 37,
+        "shared": 29,
+        "cpu_only": 31,
+        "candidate_only": 8,
+        "jaccard_agreement": 0.4264705882352941
+      },
+      "patient_relations": {
+        "cpu_units": 7,
+        "candidate_units": 6,
+        "shared": 5,
+        "cpu_only": 2,
+        "candidate_only": 1,
+        "jaccard_agreement": 0.625
+      }
+    },
+    {
+      "pmc_id": "6099051",
+      "positive_mentions": {
+        "cpu_units": 15,
+        "candidate_units": 19,
+        "shared": 15,
+        "cpu_only": 0,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.7894736842105263
+      },
+      "patient_relations": {
+        "cpu_units": 3,
+        "candidate_units": 6,
+        "shared": 3,
+        "cpu_only": 0,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.5
+      }
+    },
+    {
+      "pmc_id": "6131905",
+      "positive_mentions": {
+        "cpu_units": 45,
+        "candidate_units": 56,
+        "shared": 43,
+        "cpu_only": 2,
+        "candidate_only": 13,
+        "jaccard_agreement": 0.7413793103448276
+      },
+      "patient_relations": {
+        "cpu_units": 22,
+        "candidate_units": 24,
+        "shared": 20,
+        "cpu_only": 2,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.7692307692307693
+      }
+    },
+    {
+      "pmc_id": "6192414",
+      "positive_mentions": {
+        "cpu_units": 53,
+        "candidate_units": 70,
+        "shared": 48,
+        "cpu_only": 5,
+        "candidate_only": 22,
+        "jaccard_agreement": 0.64
+      },
+      "patient_relations": {
+        "cpu_units": 26,
+        "candidate_units": 27,
+        "shared": 24,
+        "cpu_only": 2,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.8275862068965517
+      }
+    },
+    {
+      "pmc_id": "6311306",
+      "positive_mentions": {
+        "cpu_units": 47,
+        "candidate_units": 71,
+        "shared": 43,
+        "cpu_only": 4,
+        "candidate_only": 28,
+        "jaccard_agreement": 0.5733333333333334
+      },
+      "patient_relations": {
+        "cpu_units": 16,
+        "candidate_units": 29,
+        "shared": 12,
+        "cpu_only": 4,
+        "candidate_only": 17,
+        "jaccard_agreement": 0.36363636363636365
+      }
+    },
+    {
+      "pmc_id": "6339326",
+      "positive_mentions": {
+        "cpu_units": 50,
+        "candidate_units": 56,
+        "shared": 48,
+        "cpu_only": 2,
+        "candidate_only": 8,
+        "jaccard_agreement": 0.8275862068965517
+      },
+      "patient_relations": {
+        "cpu_units": 14,
+        "candidate_units": 10,
+        "shared": 9,
+        "cpu_only": 5,
+        "candidate_only": 1,
+        "jaccard_agreement": 0.6
+      }
+    },
+    {
+      "pmc_id": "6389469",
+      "positive_mentions": {
+        "cpu_units": 68,
+        "candidate_units": 73,
+        "shared": 60,
+        "cpu_only": 8,
+        "candidate_only": 13,
+        "jaccard_agreement": 0.7407407407407407
+      },
+      "patient_relations": {
+        "cpu_units": 24,
+        "candidate_units": 23,
+        "shared": 21,
+        "cpu_only": 3,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.8076923076923077
+      }
+    },
+    {
+      "pmc_id": "6390614",
+      "positive_mentions": {
+        "cpu_units": 59,
+        "candidate_units": 82,
+        "shared": 57,
+        "cpu_only": 2,
+        "candidate_only": 25,
+        "jaccard_agreement": 0.6785714285714286
+      },
+      "patient_relations": {
+        "cpu_units": 24,
+        "candidate_units": 20,
+        "shared": 18,
+        "cpu_only": 6,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.6923076923076923
+      }
+    },
+    {
+      "pmc_id": "6417543",
+      "positive_mentions": {
+        "cpu_units": 39,
+        "candidate_units": 41,
+        "shared": 36,
+        "cpu_only": 3,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.8181818181818182
+      },
+      "patient_relations": {
+        "cpu_units": 8,
+        "candidate_units": 13,
+        "shared": 7,
+        "cpu_only": 1,
+        "candidate_only": 6,
+        "jaccard_agreement": 0.5
+      }
+    },
+    {
+      "pmc_id": "6438871",
+      "positive_mentions": {
+        "cpu_units": 77,
+        "candidate_units": 65,
+        "shared": 54,
+        "cpu_only": 23,
+        "candidate_only": 11,
+        "jaccard_agreement": 0.6136363636363636
+      },
+      "patient_relations": {
+        "cpu_units": 25,
+        "candidate_units": 20,
+        "shared": 14,
+        "cpu_only": 11,
+        "candidate_only": 6,
+        "jaccard_agreement": 0.45161290322580644
+      }
+    },
+    {
+      "pmc_id": "6549484",
+      "positive_mentions": {
+        "cpu_units": 104,
+        "candidate_units": 108,
+        "shared": 78,
+        "cpu_only": 26,
+        "candidate_only": 30,
+        "jaccard_agreement": 0.582089552238806
+      },
+      "patient_relations": {
+        "cpu_units": 33,
+        "candidate_units": 38,
+        "shared": 27,
+        "cpu_only": 6,
+        "candidate_only": 11,
+        "jaccard_agreement": 0.6136363636363636
+      }
+    },
+    {
+      "pmc_id": "6687635",
+      "positive_mentions": {
+        "cpu_units": 69,
+        "candidate_units": 84,
+        "shared": 62,
+        "cpu_only": 7,
+        "candidate_only": 22,
+        "jaccard_agreement": 0.6813186813186813
+      },
+      "patient_relations": {
+        "cpu_units": 37,
+        "candidate_units": 34,
+        "shared": 21,
+        "cpu_only": 16,
+        "candidate_only": 13,
+        "jaccard_agreement": 0.42
+      }
+    },
+    {
+      "pmc_id": "6801452",
+      "positive_mentions": {
+        "cpu_units": 41,
+        "candidate_units": 51,
+        "shared": 38,
+        "cpu_only": 3,
+        "candidate_only": 13,
+        "jaccard_agreement": 0.7037037037037037
+      },
+      "patient_relations": {
+        "cpu_units": 10,
+        "candidate_units": 6,
+        "shared": 6,
+        "cpu_only": 4,
+        "candidate_only": 0,
+        "jaccard_agreement": 0.6
+      }
+    },
+    {
+      "pmc_id": "8071555",
+      "positive_mentions": {
+        "cpu_units": 65,
+        "candidate_units": 72,
+        "shared": 60,
+        "cpu_only": 5,
+        "candidate_only": 12,
+        "jaccard_agreement": 0.7792207792207793
+      },
+      "patient_relations": {
+        "cpu_units": 7,
+        "candidate_units": 8,
+        "shared": 5,
+        "cpu_only": 2,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.5
+      }
+    },
+    {
+      "pmc_id": "8151499",
+      "positive_mentions": {
+        "cpu_units": 54,
+        "candidate_units": 62,
+        "shared": 48,
+        "cpu_only": 6,
+        "candidate_only": 14,
+        "jaccard_agreement": 0.7058823529411765
+      },
+      "patient_relations": {
+        "cpu_units": 18,
+        "candidate_units": 18,
+        "shared": 12,
+        "cpu_only": 6,
+        "candidate_only": 6,
+        "jaccard_agreement": 0.5
+      }
+    },
+    {
+      "pmc_id": "8222854",
+      "positive_mentions": {
+        "cpu_units": 41,
+        "candidate_units": 33,
+        "shared": 29,
+        "cpu_only": 12,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.6444444444444445
+      },
+      "patient_relations": {
+        "cpu_units": 25,
+        "candidate_units": 37,
+        "shared": 21,
+        "cpu_only": 4,
+        "candidate_only": 16,
+        "jaccard_agreement": 0.5121951219512195
+      }
+    },
+    {
+      "pmc_id": "8304864",
+      "positive_mentions": {
+        "cpu_units": 49,
+        "candidate_units": 26,
+        "shared": 22,
+        "cpu_only": 27,
+        "candidate_only": 4,
+        "jaccard_agreement": 0.41509433962264153
+      },
+      "patient_relations": {
+        "cpu_units": 5,
+        "candidate_units": 3,
+        "shared": 1,
+        "cpu_only": 4,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.14285714285714285
+      }
+    },
+    {
+      "pmc_id": "8336383",
+      "positive_mentions": {
+        "cpu_units": 68,
+        "candidate_units": 90,
+        "shared": 67,
+        "cpu_only": 1,
+        "candidate_only": 23,
+        "jaccard_agreement": 0.7362637362637363
+      },
+      "patient_relations": {
+        "cpu_units": 15,
+        "candidate_units": 15,
+        "shared": 14,
+        "cpu_only": 1,
+        "candidate_only": 1,
+        "jaccard_agreement": 0.875
+      }
+    },
+    {
+      "pmc_id": "8391275",
+      "positive_mentions": {
+        "cpu_units": 89,
+        "candidate_units": 107,
+        "shared": 79,
+        "cpu_only": 10,
+        "candidate_only": 28,
+        "jaccard_agreement": 0.6752136752136753
+      },
+      "patient_relations": {
+        "cpu_units": 18,
+        "candidate_units": 17,
+        "shared": 12,
+        "cpu_only": 6,
+        "candidate_only": 5,
+        "jaccard_agreement": 0.5217391304347826
+      }
+    },
+    {
+      "pmc_id": "8426226",
+      "positive_mentions": {
+        "cpu_units": 41,
+        "candidate_units": 52,
+        "shared": 40,
+        "cpu_only": 1,
+        "candidate_only": 12,
+        "jaccard_agreement": 0.7547169811320755
+      },
+      "patient_relations": {
+        "cpu_units": 18,
+        "candidate_units": 24,
+        "shared": 18,
+        "cpu_only": 0,
+        "candidate_only": 6,
+        "jaccard_agreement": 0.75
+      }
+    },
+    {
+      "pmc_id": "8447699",
+      "positive_mentions": {
+        "cpu_units": 64,
+        "candidate_units": 73,
+        "shared": 59,
+        "cpu_only": 5,
+        "candidate_only": 14,
+        "jaccard_agreement": 0.7564102564102564
+      },
+      "patient_relations": {
+        "cpu_units": 13,
+        "candidate_units": 11,
+        "shared": 9,
+        "cpu_only": 4,
+        "candidate_only": 2,
+        "jaccard_agreement": 0.6
+      }
+    },
+    {
+      "pmc_id": "8527611",
+      "positive_mentions": {
+        "cpu_units": 48,
+        "candidate_units": 74,
+        "shared": 45,
+        "cpu_only": 3,
+        "candidate_only": 29,
+        "jaccard_agreement": 0.5844155844155844
+      },
+      "patient_relations": {
+        "cpu_units": 25,
+        "candidate_units": 15,
+        "shared": 12,
+        "cpu_only": 13,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.42857142857142855
+      }
+    },
+    {
+      "pmc_id": "8580100",
+      "positive_mentions": {
+        "cpu_units": 61,
+        "candidate_units": 75,
+        "shared": 54,
+        "cpu_only": 7,
+        "candidate_only": 21,
+        "jaccard_agreement": 0.6585365853658537
+      },
+      "patient_relations": {
+        "cpu_units": 26,
+        "candidate_units": 28,
+        "shared": 21,
+        "cpu_only": 5,
+        "candidate_only": 7,
+        "jaccard_agreement": 0.6363636363636364
+      }
+    },
+    {
+      "pmc_id": "8606201",
+      "positive_mentions": {
+        "cpu_units": 7,
+        "candidate_units": 10,
+        "shared": 7,
+        "cpu_only": 0,
+        "candidate_only": 3,
+        "jaccard_agreement": 0.7
+      },
+      "patient_relations": {
+        "cpu_units": 2,
+        "candidate_units": 3,
+        "shared": 2,
+        "cpu_only": 0,
+        "candidate_only": 1,
+        "jaccard_agreement": 0.6666666666666666
+      }
+    },
+    {
+      "pmc_id": "8633184",
+      "positive_mentions": {
+        "cpu_units": 66,
+        "candidate_units": 82,
+        "shared": 63,
+        "cpu_only": 3,
+        "candidate_only": 19,
+        "jaccard_agreement": 0.7411764705882353
+      },
+      "patient_relations": {
+        "cpu_units": 22,
+        "candidate_units": 22,
+        "shared": 21,
+        "cpu_only": 1,
+        "candidate_only": 1,
+        "jaccard_agreement": 0.9130434782608695
+      }
+    },
+    {
+      "pmc_id": "9806447",
+      "positive_mentions": {
+        "cpu_units": 31,
+        "candidate_units": 44,
+        "shared": 24,
+        "cpu_only": 7,
+        "candidate_only": 20,
+        "jaccard_agreement": 0.47058823529411764
+      },
+      "patient_relations": {
+        "cpu_units": 13,
+        "candidate_units": 20,
+        "shared": 10,
+        "cpu_only": 3,
+        "candidate_only": 10,
+        "jaccard_agreement": 0.43478260869565216
+      }
+    }
+  ],
+  "limitations": [
+    "More predictions or greater agreement does not imply higher accuracy.",
+    "CPU and candidate are complete pipelines with different entity resources and association models; this is not a single-component ablation.",
+    "Development scores use the same reused training documents and are not B leaderboard scores.",
+    "B leaderboard results remain unknown until official feedback for these exact file hashes."
+  ]
+}

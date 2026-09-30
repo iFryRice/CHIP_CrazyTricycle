@@ -1,0 +1,179 @@
+{
+  "recorded_at_utc": "2026-09-30T01:03:14.666353+00:00",
+  "base_commit": "52f9430c2cd4867f58e96cc693be8af60a64801c",
+  "scope": "Documentation-time local verification; not new model training, new official feedback, or live server acceptance.",
+  "artifact_manifests": {
+    "reports/joint_confirmation/artifact_manifest.json": 35,
+    "reports/joint_b/artifact_manifest.json": 18,
+    "reports/nested_span_screen/artifact_manifest.json": 5
+  },
+  "plans": {
+    "experiments/joint_review/plan.json": {
+      "sha256": "7de32d238329004b65e4ce33ea2c7625cfe7d0fed99af06fd054c162ee9a6469",
+      "local_matching_references": 27,
+      "unavailable_local_references": [
+        "models/biomedbert/pytorch_model.bin"
+      ],
+      "mismatches": []
+    },
+    "experiments/joint_review/confirmation_plan.json": {
+      "sha256": "89bdabf695a66d42eb6231e0c08b14bb9af3bf41378257e5a8fe48eb6023cea4",
+      "local_matching_references": 35,
+      "unavailable_local_references": [
+        "models/biomedbert/pytorch_model.bin"
+      ],
+      "mismatches": []
+    },
+    "experiments/joint_b/plan.json": {
+      "sha256": "e9449586e4f7f11eaf84d5c0ffd39351b90ef862a71c217942e586a84f6c231b",
+      "local_matching_references": 65,
+      "unavailable_local_references": [
+        "models/biomedbert/pytorch_model.bin",
+        "work/span_ner/association_context/model.pkl",
+        "work/span_ner/relation_text/fold0/manifest.json",
+        "work/span_ner/relation_text/fold0/last.pt",
+        "work/span_ner/relation_text/fold0/summary.json",
+        "work/span_ner/relation_text/fold0/validation_scores.json",
+        "work/span_ner/relation_text/fold1/manifest.json",
+        "work/span_ner/relation_text/fold1/last.pt",
+        "work/span_ner/relation_text/fold1/summary.json",
+        "work/span_ner/relation_text/fold1/validation_scores.json",
+        "work/span_ner/relation_confirmation/fold2/manifest.json",
+        "work/span_ner/relation_confirmation/fold2/last.pt",
+        "work/span_ner/relation_confirmation/fold2/summary.json",
+        "work/span_ner/relation_confirmation/fold2/validation_scores.json",
+        "work/span_ner/relation_confirmation/fold3/manifest.json",
+        "work/span_ner/relation_confirmation/fold3/last.pt",
+        "work/span_ner/relation_confirmation/fold3/summary.json",
+        "work/span_ner/relation_confirmation/fold3/validation_scores.json",
+        "work/span_ner/relation_confirmation/fold4/manifest.json",
+        "work/span_ner/relation_confirmation/fold4/last.pt",
+        "work/span_ner/relation_confirmation/fold4/summary.json",
+        "work/span_ner/relation_confirmation/fold4/validation_scores.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold0/manifest.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold0/last.pt",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold0/summary.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold0/validation_scores.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold1/manifest.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold1/last.pt",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold1/summary.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold1/validation_scores.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold2/manifest.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold2/last.pt",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold2/summary.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold2/validation_scores.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold3/manifest.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold3/last.pt",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold3/summary.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold3/validation_scores.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold4/manifest.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold4/last.pt",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold4/summary.json",
+        "work/span_ner/relation_seed_ensemble/seed_20260930/fold4/validation_scores.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold0/manifest.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold0/last.pt",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold0/summary.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold0/validation_scores.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold1/manifest.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold1/last.pt",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold1/summary.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold1/validation_scores.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold2/manifest.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold2/last.pt",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold2/summary.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold2/validation_scores.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold3/manifest.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold3/last.pt",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold3/summary.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold3/validation_scores.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold4/manifest.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold4/last.pt",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold4/summary.json",
+        "work/span_ner/relation_seed_ensemble/seed_20261001/fold4/validation_scores.json"
+      ],
+      "mismatches": []
+    },
+    "experiments/nested_span_screen/plan.json": {
+      "sha256": "1c8cac0621a3a88dd738ea9c253c2abe2d9e707f3bb71e8e6c06cb3c381936c9",
+      "local_matching_references": 16,
+      "unavailable_local_references": [],
+      "mismatches": []
+    }
+  },
+  "recomputed_oof_metrics": {
+    "baseline": {
+      "prediction_sha256": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+      "score": 0.6819157000129563,
+      "mention_f1": 0.7099836051428078,
+      "document_f1": 0.7744401966138722,
+      "association_micro_f1": 0.6569058077110785,
+      "association_macro_f1": 0.5863331905840667,
+      "matches_saved_summary": true
+    },
+    "metrics": {
+      "prediction_sha256": "21d0b06ac500fd18de2a057374e4431dae870bcb3b9034da1f7c485a66fc3972",
+      "score": 0.6907698050808628,
+      "mention_f1": 0.7174334567248369,
+      "document_f1": 0.7777777777777778,
+      "association_micro_f1": 0.6621790077287459,
+      "association_macro_f1": 0.6056889780920908,
+      "matches_saved_summary": true
+    }
+  },
+  "b_validation": {
+    "valid": true,
+    "path": "D:\\Projects\\20260927_CHIP2026\\submissions\\patientphex_b_joint.jsonl",
+    "bytes": 810737,
+    "limit_bytes_exclusive": 100000000,
+    "sha256": "7ad32cfddfc783cbb40a105fbee2bb433ddf2b6120b56a8a7861a107475d5a0c",
+    "documents": 100,
+    "patients": 244,
+    "entities": 6957,
+    "association_pairs": 2207,
+    "negated_entities": 369,
+    "unmapped_entities": 46,
+    "compound_entities": 5,
+    "document_order_preserved": true,
+    "empty_entity_documents": [],
+    "warnings": []
+  },
+  "local_tests": {
+    "command": "uv run --no-sync python -m unittest discover -s tests -v",
+    "tests_run": 157,
+    "passed": 146,
+    "skipped": 11,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0,
+    "skip_reason": "Optional torch training dependency is not installed",
+    "observed_tail": "Ran 157 tests in 0.557s; OK (skipped=11)"
+  },
+  "server_recheck": {
+    "completed": false,
+    "reason": "SSH to 10.253.27.177 port 22 timed out on initial connection and bounded ConnectTimeout=8 retry. No fresh server test result is claimed."
+  },
+  "documentation_links": {
+    "zh.md": {
+      "relative_links_checked": 53,
+      "sha256": "49f45e791c79237057bb05b30d0396400fe33dcd5fb73d3ea52071d99e024e5e"
+    },
+    "en.md": {
+      "relative_links_checked": 53,
+      "sha256": "c8e655def3ab719e23925cf003be5db72d3b12fdf076cf9063127ee52a60106b"
+    }
+  },
+  "bilingual_key_numbers_and_fingerprints_agree": true,
+  "status": "passed_with_declared_server_and_dependency_limits",
+  "official_cpu_artifact_hash_verified": true,
+  "staged_byte_integrity": {
+    "files_checked_excluding_this_record": 795,
+    "exact_worktree_bytes_in_index": true,
+    "purpose": "Preserve frozen SHA-256 values, including original mixed line endings."
+  },
+  "whitespace_check": {
+    "crlf_aware_check": "git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --cached --check",
+    "remaining_diagnostic": "reports/bio_ner/numerical_fix.patch:11: trailing whitespace.",
+    "explanation": "The historical unified patch contains a required single-space context marker for an empty source line. Original evidence bytes are retained.",
+    "all_other_staged_files_pass": true
+  }
+}

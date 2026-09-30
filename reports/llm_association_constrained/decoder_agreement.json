@@ -1,0 +1,61 @@
+{
+  "scope": "Raw model decision comparison on task overlap only; invalid reference counts in the old output are still included as raw decisions. No gold labels or accuracy scores used.",
+  "folds": [
+    {
+      "fold": 0,
+      "overlapping_tasks": 91,
+      "changed_decisions": 1,
+      "transitions": [
+        {
+          "unconstrained": "other_or_general",
+          "constrained": "other_or_general",
+          "count": 4
+        },
+        {
+          "unconstrained": "supported",
+          "constrained": "other_or_general",
+          "count": 1
+        },
+        {
+          "unconstrained": "supported",
+          "constrained": "supported",
+          "count": 86
+        }
+      ],
+      "changed_task_ids": [
+        "679458dcf6f324c7071773d358b466e625030fc830754f3830559b506e3ae582"
+      ]
+    },
+    {
+      "fold": 1,
+      "overlapping_tasks": 93,
+      "changed_decisions": 7,
+      "transitions": [
+        {
+          "unconstrained": "other_or_general",
+          "constrained": "other_or_general",
+          "count": 12
+        },
+        {
+          "unconstrained": "supported",
+          "constrained": "other_or_general",
+          "count": 7
+        },
+        {
+          "unconstrained": "supported",
+          "constrained": "supported",
+          "count": 74
+        }
+      ],
+      "changed_task_ids": [
+        "9a400fe9f16366a74d6c041a62c5f9fa5c2f7d37f7bb1aeac1caeac7aa140f18",
+        "67a631ae7060935e1eb8fad8294ebff814a5b8d161b7d9d2f5c0979b00125d8b",
+        "61e16c0ec9169556fabbcd617acb9e1829d9657e880e240a98debe3c332ac6e4",
+        "15a7a38b5061a70d46dff3c912f97ae11e8c99f014fb9e56fb7fbc89e9c4d4f5",
+        "8a724d625d56637f52a9105cb3c3676218695131f787b54924eaea0d99e43cdc",
+        "8ba6fbf1368a509d29ad82f378ce1bfb4c2c3650b264f83d9d09fde3e1f11347",
+        "e9700839007f43a3be19e72382779679430a0fb07c9fac10739fc243b16edefe"
+      ]
+    }
+  ]
+}

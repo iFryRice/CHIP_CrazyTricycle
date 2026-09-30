@@ -1,0 +1,24 @@
+{
+  "status": "failed",
+  "pid": 2027880,
+  "started_at_epoch": 1790627788.3412275,
+  "plan_sha256": "e8fb7094ac71a33d0820b01602d23d66a332389a1b12aad0049394443e29346f",
+  "jobs": [
+    {
+      "fold": 0,
+      "gpu": 2,
+      "pid": 2027958,
+      "log": "reports/llm_association/fold0_inference.log",
+      "exit_code": 143
+    },
+    {
+      "fold": 1,
+      "gpu": 0,
+      "pid": 2027959,
+      "log": "reports/llm_association/fold1_inference.log",
+      "exit_code": 143
+    }
+  ],
+  "error": "RuntimeError: Association inference failed; logs and prompt caches are preserved.",
+  "elapsed_seconds": 601.13405418396
+}

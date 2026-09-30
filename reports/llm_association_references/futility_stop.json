@@ -1,0 +1,54 @@
+{
+  "status": "format_gate_impossible",
+  "plan_sha256": "fa76180ac6dce03f800fb1b919491395dd233d28fe45623f0e7b0d6aa272d7c6",
+  "progress": [
+    {
+      "event": "task_complete",
+      "fold": 0,
+      "completed": 91,
+      "total": 403,
+      "format_errors": 9,
+      "decisions": {
+        "supported": 78,
+        "unclear": 9,
+        "other_or_general": 4
+      },
+      "elapsed_seconds": 171.59305095672607,
+      "maximum_possible_format_success_rate": 0.9776674937965261
+    },
+    {
+      "event": "task_complete",
+      "fold": 1,
+      "completed": 93,
+      "total": 297,
+      "format_errors": 1,
+      "decisions": {
+        "supported": 80,
+        "unclear": 1,
+        "other_or_general": 12
+      },
+      "elapsed_seconds": 172.2032721042633,
+      "maximum_possible_format_success_rate": 0.9966329966329966
+    }
+  ],
+  "minimum_format_success_rate": 0.98,
+  "reason": "Even if every remaining response were valid, one fold cannot reach the preregistered format floor.",
+  "stopped_workers": [
+    {
+      "pid": 2029293,
+      "command": "experiments/llm_runtime/.venv/bin/python -u scripts/run_llm_reference_review.py infer --plan /home/dcf/chip2026/experiments/llm_association_references/plan.json --fold 0 ",
+      "parent": 2029280,
+      "cwd": "/home/dcf/chip2026",
+      "uid": 1009
+    },
+    {
+      "pid": 2029292,
+      "command": "experiments/llm_runtime/.venv/bin/python -u scripts/run_llm_reference_review.py infer --plan /home/dcf/chip2026/experiments/llm_association_references/plan.json --fold 1 ",
+      "parent": 2029281,
+      "cwd": "/home/dcf/chip2026",
+      "uid": 1009
+    }
+  ],
+  "accuracy_evaluated": false,
+  "time_epoch": 1790628819.101143
+}

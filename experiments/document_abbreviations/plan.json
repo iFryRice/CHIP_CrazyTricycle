@@ -1,0 +1,92 @@
+{
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "target_path": "PatientPheX-V1-B/PatientPheX-V1-B.jsonl",
+  "ontology_path": "PatientPheX-V1-A/hp.obo",
+  "split_path": "reports/cpu_baseline/split.json",
+  "environment": "Existing project venv; CPU only, two threads; no package changes.",
+  "declared_at_utc": "2026-09-28T18:31:38.452741+00:00",
+  "hypothesis": "Use same-document abbreviation definitions to correct global acronym collisions and optionally add missed mentions or suppress unsupported senses.",
+  "baseline_oof": "reports/association_context/best_development_oof.jsonl",
+  "baseline_b": "submissions/patientphex_b_context.jsonl",
+  "umls_path": "resources/umls_hpo_terms.tsv.gz",
+  "association_model": "work/span_ner/association_context/model.pkl",
+  "report_dir": "reports/document_abbreviations",
+  "work_dir": "work/span_ner/document_abbreviations",
+  "output": "submissions/patientphex_b_abbreviations.jsonl",
+  "configurations": [
+    {
+      "name": "correct_add0_suppress0",
+      "add_missing": false,
+      "suppress_unresolved": false
+    },
+    {
+      "name": "correct_add0_suppress1",
+      "add_missing": false,
+      "suppress_unresolved": true
+    },
+    {
+      "name": "correct_add1_suppress0",
+      "add_missing": true,
+      "suppress_unresolved": false
+    },
+    {
+      "name": "correct_add1_suppress1",
+      "add_missing": true,
+      "suppress_unresolved": true
+    }
+  ],
+  "promotion": {
+    "minimum_gain": 0.003,
+    "minimum_nonworse_folds": 4,
+    "maximum_fold_loss": 0.01,
+    "maximum_precision_loss": 0.01
+  },
+  "scope": "The definition is text evidence, not a label. Unresolved definitions are not proven nonphenotypes; suppression is an explicit tested ablation. Fold training remains isolated and upstream baseline is reproduced before each experiment.",
+  "method_source": "https://psb.stanford.edu/psb-online/proceedings/psb03/schwartz.pdf",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "PatientPheX-V1-B/PatientPheX-V1-B.jsonl": "4dafea5aa59bfd5f90151ee3732ee475323512b8691f370f4d4678b628cdb62a",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "reports/semantic_linking/best_development_oof.jsonl": "56d059bbed128cd7447504b24118f6a2ab056518d355a78539652b49d605d571",
+    "submissions/patientphex_b_semantic.jsonl": "680946cb61a6bef00bb5573fd0113a07928849365d64623a9815628224c9b423",
+    "reports/cpu_b_control/out_of_fold_predictions.jsonl": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+    "experiments/cpu_crossfit/plan.json": "9c1f90796a0044048d0972527c39414a3e6a51f0ca6ae723db018afcdb754316",
+    "reports/association_context/diagnosis.json": "ebc93f5507d14404efc8bd4f2c055eb4d1e515c0531356d4f34026808def17c2",
+    "reports/cpu_crossfit/fold0/training_candidates.jsonl": "e868099731b4b608a82e66f00580a7bbea2987110034e41c9835ce2dc6a42f80",
+    "reports/cpu_crossfit/fold0/candidate_provenance.json": "4b72a036278c529245a91fb541cdfd37e15219aff48f93049f705cdf967ed9f2",
+    "reports/cpu_crossfit/fold1/training_candidates.jsonl": "7ef15ee97c867adadd1e1c39e940825d850d584fde13865db22513e9d009a296",
+    "reports/cpu_crossfit/fold1/candidate_provenance.json": "6996c71260b7688ffdba5deb67e430842f224ca94cffae83cf6bf00194f1e2d4",
+    "reports/cpu_crossfit/fold2/training_candidates.jsonl": "85b42877107242ea2ad3df7f5960ea01499e54ca8b14899c6cf54f237fa46190",
+    "reports/cpu_crossfit/fold2/candidate_provenance.json": "899f397417d3fbb4ca43c408c028fbac9586f688c9130a85339614fbd2455eeb",
+    "reports/cpu_crossfit/fold3/training_candidates.jsonl": "5ed17d03b429a40b2decaa6bfa0e0d8fdf0aaa4e78d5ea2e5dda23aae155b720",
+    "reports/cpu_crossfit/fold3/candidate_provenance.json": "759d28227a100daa0eb1adbf6d3bac8a116867c563eecdd929fdf46355baa8ed",
+    "reports/cpu_crossfit/fold4/training_candidates.jsonl": "4e299ef0b0c0b32b406f2817fc4f921c1829de52a54d5b1a30461d0510754417",
+    "reports/cpu_crossfit/fold4/candidate_provenance.json": "0885f978f9924f5f7c2d16f347c2f592cbab9b03be436619e3e701bfb20ea931",
+    "experiments/association_context/plan.json": "5ca7bbccdcddd93f7cb486dc054fc6c9b494b8229e9f16760f848570a59da52c",
+    "reports/association_context/summary.json": "0c379295931050fc6fa8a7950c53f39a105fc6bac11c46a2245af50018abe89f",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "submissions/patientphex_b_context.jsonl": "5c58c0375d6465e750cca31f7f6cd94119bd4e5f8039f4510e37ab2380fe1c29",
+    "reports/entity_residuals/audit.json": "5fa6c552429dc9043ad73b15268d436040c5fb45411f5bc2ea67747baf8206ca",
+    "resources/umls_hpo_terms.tsv.gz": "311514dc68c619db01d19a4d8aacc55c9a62474e706b405e4cb42ac6ffc78119",
+    "resources/umls_hpo_terms.tsv.gz.manifest.json": "00decc8a78d64c9694c09843bff25fba537894e7ac2c8605ea089744ea7aa3f1",
+    "work/span_ner/association_context/model.pkl": "26e68eae871da5950931e4c959d4677c0efcc037ddf33dd2f4f744e259332b4e"
+  },
+  "code_sha256": {
+    "patientphex/context_linking.py": "802e46e10f22051d1d9d151a37d9b338ccb912bda5cb1601f16f67d99041ce8d",
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "scripts/evaluate_context_linking.py": "4b52b8d0e452ec62c338d1a51d0ca491a412d3677b2296b94d2d29038164e812",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+    "scripts/run_context_linking.sh": "fb6254ec14747ce4a59c70a3558fa4612c7ad1edaddb9f1c9e7a3d1ea0ac3f56",
+    "patientphex/abbreviations.py": "6b51f2305b961238d9a19fb1847e9194b1e25d1e67d26fbbe92ce0279d8ec619",
+    "patientphex/entities.py": "c1d1ce81f01eb171a64a8fd1487609e0fd590804ae5ac738d6b497791ac13ada",
+    "patientphex/span_linking.py": "d5de49d6845486687da0773890d99bb848015af70782d03b43eef026aa79a734",
+    "scripts/evaluate_document_abbreviations.py": "5186cef7622b29e4c70453b8a5e3487bb794190ae28ab153812857a94566dc93",
+    "scripts/run_document_abbreviations.sh": "2b5e2a76205b7fc5d1e37b3735e1a0f44a7984e80611d573ed6d37de63815dfe"
+  }
+}

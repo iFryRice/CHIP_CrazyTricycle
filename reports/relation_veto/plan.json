@@ -1,0 +1,95 @@
+{
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "split_path": "reports/cpu_baseline/split.json",
+  "ontology_path": "PatientPheX-V1-A/hp.obo",
+  "baseline_oof": "reports/association_context/best_development_oof.jsonl",
+  "parameters": {
+    "epochs": 3,
+    "learning_rate": 2e-05,
+    "batch_size": 12,
+    "seed": 20260929,
+    "precision": "FP16",
+    "max_input_tokens": 384,
+    "weight_decay": 0.01,
+    "dropout": 0.1,
+    "negative_weight": 0.5,
+    "patient_balanced": true,
+    "warmup_fraction": 0.1,
+    "gradient_clip": 1.0,
+    "early_stopping": false,
+    "encoder_training": "Full BiomedBERT fine-tuning from pinned pretrained weights; previous task checkpoints are not reused."
+  },
+  "representation": {
+    "maximum_occurrences": 3,
+    "ranking": "Nearest provided target-patient anchor",
+    "header_token_budget": 32,
+    "target_reference_token_budget": 64,
+    "each_occurrence_token_budget": 92,
+    "patient_and_entity_markers": "Six dedicated added tokens: TARGET, /TARGET, OTHER, /OTHER, PHENOTYPE, /PHENOTYPE enclosed in brackets; seeded encoder embedding resize from 30522 to 30528, mean_resizing=False.",
+    "source_context_cropping": "Centered per-fragment token crop; focus spans must survive. Full original source excerpts and offsets preserved in metadata.",
+    "document_and_patient_ids_as_features": false
+  },
+  "seeds": [
+    20260929,
+    20260930,
+    20261001
+  ],
+  "confirmation_requirement": {
+    "remaining_folds": [
+      2,
+      3,
+      4
+    ],
+    "minimum_remaining_mean_gain": 0.003,
+    "minimum_full_score_gain": 0.005,
+    "minimum_nonworse_folds": 4,
+    "maximum_component_f1_loss": 0.002,
+    "positive_document_bootstrap_lower_bound": true
+  },
+  "declared_at_utc": "2026-09-28T22:39:53.646435+00:00",
+  "hypothesis": "The first-seed audit and three-seed replay show wrong new links dominate the persistent negative fold. Test an intersection-only action rule, preserving the exact models, 0.25 blend and 0.5 threshold, rather than changing training seeds further.",
+  "selected": {
+    "name": "veto_only",
+    "neural_weight": 0.25
+  },
+  "model_ensemble_plan": "experiments/relation_seed_ensemble/plan.json",
+  "ensemble_oof": "reports/relation_seed_ensemble/development_oof.jsonl",
+  "report_dir": "reports/relation_veto",
+  "fixed": {
+    "new_relations": false,
+    "new_entities": false,
+    "threshold": 0.5,
+    "neural_weight": 0.25,
+    "structural_weight": 0.75,
+    "seed_selection": false,
+    "new_training": false,
+    "policy": "Intersection of baseline positive links and the previously frozen three-seed mixed positive links, independently per patient."
+  },
+  "scope": "A single post-diagnostic action ablation, fixed before its metrics are calculated. Repeated development only; not fresh independent confirmation.",
+  "b_generation_if_confirmed": {
+    "text_models": "All 15 fixed fold/seed models equally weighted.",
+    "rule": "Apply the identical 0.25 blend/0.5 threshold, then intersect with the original B context associations.",
+    "output": "submissions/patientphex_b_relation_veto.jsonl"
+  },
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "experiments/relation_seed_ensemble/plan.json": "53d4844c2bf5f9cb582b70ea672eee91a6f92a55b80eacddad6707813ea44561",
+    "reports/relation_seed_ensemble/development_oof.jsonl": "d9c6eb63d8d4c7b8063aaeaa1ac2d9511ee42bdda4cfdb6e88d36be9f280de6a",
+    "reports/relation_seed_ensemble/summary.json": "f05d1cb83818f3b8e366f3f0a50baa4b85fa088d4ba7005bc52f619b65a13633",
+    "reports/entity_residuals/relation_text_change_audit.json": "687364e54f5e156b9af732136ea49fe9d6809be3e95c3b67dca971ee1c8f8d93"
+  },
+  "code_sha256": {
+    "patientphex/relation_veto.py": "5aad1f78c01e4832ec37e7eba4dd98dea4b5a38daac1a32da4a9e9f193315dcb",
+    "scripts/evaluate_relation_veto.py": "df5b5bb751a87ee612a015f61a7a8b6c2db9d5097b1daf5a7a16dd39b37d6e7f",
+    "tests/test_relation_veto.py": "69df021a65cdc662ca548f6a461cef8066586fff7546252bb0951756dd34bba3",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+    "scripts/run_llm_association.py": "1000ee50cb20f902694f6657a50ff440f30c279a65ebc4b9837a17ff3ea64233"
+  }
+}

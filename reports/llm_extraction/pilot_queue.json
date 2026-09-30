@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "pid": 2016863,
+  "started_at_epoch": 1790624414.9726555,
+  "plan_sha256": "9cc5eb7a9df4ff1878583edeaf82ac14328be780e1da36c6f7c47361847fdae8",
+  "launcher_sha256": "5c796fa3c6f5d0d7c1ba198f1e757c5758e0a5ab7cb682e8eaf3b44412c3aea4",
+  "jobs": [
+    {
+      "fold": 0,
+      "physical_gpu": 2,
+      "pid": 2021160,
+      "command": [
+        "bash",
+        "scripts/run_llm_extraction.sh",
+        "--fold",
+        "0"
+      ],
+      "log": "reports/llm_extraction/fold0_inference.log",
+      "status": "completed",
+      "exit_code": 0
+    },
+    {
+      "fold": 1,
+      "physical_gpu": 0,
+      "pid": 2021161,
+      "command": [
+        "bash",
+        "scripts/run_llm_extraction.sh",
+        "--fold",
+        "1"
+      ],
+      "log": "reports/llm_extraction/fold1_inference.log",
+      "status": "completed",
+      "exit_code": 0
+    }
+  ],
+  "selected": null,
+  "best_mean_gain": -0.0001308111578008364,
+  "elapsed_seconds": 1684.816781759262
+}

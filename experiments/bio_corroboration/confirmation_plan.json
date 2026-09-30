@@ -1,0 +1,35 @@
+{
+  "declared_at_utc": "2026-09-28T18:41:10.272774+00:00",
+  "selected": {
+    "name": "veto_acronyms",
+    "veto_acronyms": true,
+    "add_mentions": false
+  },
+  "selection_source_sha256": "b73eaede29488836fc7689e207bd0b2c48e902e52a799407780457425c66d097",
+  "training_plan": "experiments/bio_ner/plan.json",
+  "training_plan_sha256": "7e70b86addeff2d47b34872a594e83a8e46ef6d7ee0cfd201f718f3dca6c132e",
+  "confirmation_folds": [
+    2,
+    3,
+    4
+  ],
+  "runs": {
+    "0": "work/span_ner/bio-pilot-fold0",
+    "1": "work/span_ner/bio-pilot-fold1",
+    "2": "work/span_ner/bio-confirm-fold2",
+    "3": "work/span_ner/bio-confirm-fold3",
+    "4": "work/span_ner/bio-confirm-fold4"
+  },
+  "parameters": "Unchanged fixed epoch 5, BIO loss, seed, learning rate, AMP scale, and input fingerprints from the original BIO training plan.",
+  "promotion": {
+    "minimum_confirmation_mean_gain": 0.005,
+    "minimum_confirmation_nonworse_folds": 2,
+    "maximum_confirmation_fold_loss": 0.005,
+    "minimum_full_score_gain": 0.005,
+    "all_four_components_nonworse": true
+  },
+  "scope": "Remaining folds evaluate the frozen pilot-selected rule; documents have been reused in earlier development, so this is not an independent test. Train all 80 documents and generate a B candidate only after full confirmation passes.",
+  "baseline_oof": "reports/association_context/best_development_oof.jsonl",
+  "baseline_oof_sha256": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+  "implementation_sha256": "7e080c94c40148f75681e57eb13986f85c5cc24f98c06709b2c7c741fed86d86"
+}

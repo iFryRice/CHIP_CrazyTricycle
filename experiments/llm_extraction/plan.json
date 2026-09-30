@@ -1,0 +1,112 @@
+{
+  "name": "qwen3_exact_quote_additions",
+  "purpose": "Recover missing phenotype mentions with source-exact few-shot extraction, preserving the frozen semantic/context baseline.",
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "split_path": "reports/cpu_baseline/split.json",
+  "baseline_oof": "reports/association_context/best_development_oof.jsonl",
+  "ontology_path": "PatientPheX-V1-A/hp.obo",
+  "umls_path": "resources/umls_hpo_terms.tsv.gz",
+  "pilot_folds": [
+    0,
+    1
+  ],
+  "expected_chunks": {
+    "0": 685,
+    "1": 479
+  },
+  "seed": 20260929,
+  "demonstrations": 2,
+  "chunk_maximum_characters": 1800,
+  "chunk_overlap_characters": 300,
+  "generation": {
+    "max_new_tokens": 512,
+    "do_sample": false
+  },
+  "thinking": false,
+  "model_manifest": "experiments/llm_extraction/model.json",
+  "work_dir": "work/span_ner/llm_extraction",
+  "report_dir": "reports/llm_extraction/pilot",
+  "configurations": [
+    {
+      "name": "strict",
+      "semantic_threshold": 0.92,
+      "margin_threshold": 0.03
+    },
+    {
+      "name": "established",
+      "semantic_threshold": 0.9,
+      "margin_threshold": 0.02
+    },
+    {
+      "name": "recall",
+      "semantic_threshold": 0.85,
+      "margin_threshold": 0.03
+    }
+  ],
+  "promotion": {
+    "minimum_mean_gain": 0.008,
+    "maximum_fold_loss": 0.002,
+    "maximum_association_loss": 0.002,
+    "minimum_format_success_rate": 0.98
+  },
+  "confirmation_requirement": {
+    "remaining_folds": [
+      2,
+      3,
+      4
+    ],
+    "minimum_remaining_mean_gain": 0.003,
+    "minimum_full_score_gain": 0.005,
+    "minimum_nonworse_folds": 4,
+    "maximum_component_f1_loss": 0.002,
+    "positive_document_bootstrap_lower_bound": true
+  },
+  "association_model_sha256": {
+    "0": "731a2c6843e2a5a88609ea6227f7c74b0c55fc00f5b0f4489f3ac50876916229",
+    "1": "12a4f09bd6ec66d3a65c206af746a223374d025d29c1decd80420ead2c6c5201"
+  },
+  "scope": "Repeated development CV, not independent testing or official B score. B inference requires a separate passing full-fold confirmation manifest.",
+  "external_resources": [
+    "Official Qwen/Qwen3-8B Apache-2.0 snapshot, 8190735360 parameters",
+    "Frozen SapBERT snapshot",
+    "Licensed UMLS HPO terms",
+    "HPO 2026-06-23 HP:0000118 descendants"
+  ],
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "experiments/llm_extraction/environment.json": "bcc472fd15e0bc0861bb4ea5fbb15d3652f375ac639a517b6e6d4f91046e9c09",
+    "experiments/llm_extraction/model.json": "a1719fab4284f55d831d16f06fee78b96f853614a27f55583f166e5406ce0a9b",
+    "experiments/semantic_linking/model.json": "b4f89169804c89d718f3b308bde923350f66fa94a0ed9571c9edc763595109d7",
+    "experiments/llm_runtime/uv.lock": "9e5c53a32450e40cd762f0c3b5e79bf434cdb4475dbf47d59fe0b994a9737a91",
+    "resources/umls_hpo_terms.tsv.gz": "311514dc68c619db01d19a4d8aacc55c9a62474e706b405e4cb42ac6ffc78119"
+  },
+  "code_sha256": {
+    "patientphex/__init__.py": "1fd13e9583dce1d135f45d50dbef50613e212c7dd640ace4c70017c95c41f058",
+    "patientphex/__main__.py": "f03fb7a2210ad1da045ef95d68d0378bbcaf6dc0da587be46851595cc5300bec",
+    "patientphex/abbreviations.py": "6b51f2305b961238d9a19fb1847e9194b1e25d1e67d26fbbe92ce0279d8ec619",
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/bio_corroboration.py": "7e080c94c40148f75681e57eb13986f85c5cc24f98c06709b2c7c741fed86d86",
+    "patientphex/bio_data.py": "8e42fd12dfeb8d21dd4348d513d5076900990a8d0a8b08ce7fee2fc52a20f3b3",
+    "patientphex/context_linking.py": "802e46e10f22051d1d9d151a37d9b338ccb912bda5cb1601f16f67d99041ce8d",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/entities.py": "c1d1ce81f01eb171a64a8fd1487609e0fd590804ae5ac738d6b497791ac13ada",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/llm_extraction.py": "96ff3849e6948febe6e2317d074668497e07e7d936277875315053e5d4949af8",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/semantic_linking.py": "c50f68cbc4649909334f82a9544f90e5168ee5f3b0849a97e227d43fb01f12c9",
+    "patientphex/span_data.py": "5dbd5351bb14c6d5244c2e02c5027dccbb4d49707ed48409bde1a01465963409",
+    "patientphex/span_linking.py": "d5de49d6845486687da0773890d99bb848015af70782d03b43eef026aa79a734",
+    "patientphex/span_losses.py": "ac4e512e135febf62df4576426494ad4174c105091a7f4079a1f553ae19f8c19",
+    "patientphex/umls_augmentation.py": "963c919ce7ab58b91447c332633b99b68fc3f9cc851ec74fdf817ab5fbe97cbe",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "scripts/evaluate_llm_extraction.py": "07e3feacdd3a40fa037f0db00546205e428b00e9be610508f1b83a235d5d2355",
+    "scripts/evaluate_semantic_linking.py": "96f5b3cb886bfb5b4a788a6a8076e5f25c5a670c8e122d2023ada0a7ec8effec",
+    "scripts/infer_llm_extraction.py": "907ede7cb6f6b90d07ec4a9c57df29d370c9a6e137a7f9dfa26b9e0930799df3",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+    "scripts/run_llm_extraction.sh": "3157560227af301c7e67bace876c9d470751803acfc5cd2af6258239ee408dbb"
+  }
+}

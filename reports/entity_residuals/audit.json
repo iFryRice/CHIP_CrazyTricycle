@@ -1,0 +1,3554 @@
+{
+  "input_sha256": {
+    "PatientPheX-V1-A\\PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports\\association_context\\best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8"
+  },
+  "code_sha256": "6e83aeab0590795ed77779520febf6d1235f71e3ed3d6caeae189fb95fc8b57c",
+  "metrics": {
+    "mention": {
+      "precision": 0.727497789566755,
+      "recall": 0.6932928884395012,
+      "f1": 0.7099836051428078,
+      "tp": 4114,
+      "fp": 1541,
+      "fn": 1820
+    },
+    "document": {
+      "precision": 0.8364136846244593,
+      "recall": 0.7210169491525423,
+      "f1": 0.7744401966138722,
+      "tp": 2127,
+      "fp": 416,
+      "fn": 823
+    },
+    "association_micro": {
+      "precision": 0.6984950700570836,
+      "recall": 0.6199907876554583,
+      "f1": 0.6569058077110785,
+      "tp": 1346,
+      "fp": 581,
+      "fn": 825
+    },
+    "association_macro": {
+      "precision": 0.6347296808354593,
+      "recall": 0.5958367750799103,
+      "f1": 0.5863331905840667,
+      "patients": 209
+    },
+    "score": 0.6819157000129563,
+    "counts": {
+      "documents": 80,
+      "patients": 209
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "counts": {
+    "fn:overlap_different_concept": 439,
+    "fn:no_overlap": 941,
+    "fp:no_overlap": 822,
+    "fp:overlap_different_concept": 402,
+    "fn:overlap_same_concept": 249,
+    "fn:false_negated_exact": 97,
+    "fp:overlap_same_concept": 230,
+    "fn:exact_span_wrong_concept": 94,
+    "fp:exact_span_wrong_concept": 87
+  },
+  "frequent_phrases": {
+    "fn:overlap_different_concept": [
+      [
+        "craniofacial features",
+        8
+      ],
+      [
+        "chronic lymphadenopathy",
+        7
+      ],
+      [
+        "neurodevelopmental regression (speech, motor and cognition)",
+        6
+      ],
+      [
+        "optic nerve pallor",
+        5
+      ],
+      [
+        "pain in his wrists, elbows, shoulders, hips, knees, and ankles",
+        5
+      ],
+      [
+        "contractures of the wrists, knees, hips, and ankles",
+        4
+      ],
+      [
+        "contracture over hip, knee, elbow and wrist",
+        4
+      ],
+      [
+        "cutaneous warts",
+        3
+      ],
+      [
+        "encephalitis",
+        3
+      ],
+      [
+        "vitro contracture",
+        3
+      ],
+      [
+        "increased level of AST, ALT, LDH, total and direct bilirubin",
+        3
+      ],
+      [
+        "truncal and limb ataxia",
+        3
+      ],
+      [
+        "epi-metaphyseal dysplasia",
+        3
+      ],
+      [
+        "cord compression at the cranio-vertebral",
+        3
+      ],
+      [
+        "multiple liver cysts",
+        3
+      ],
+      [
+        "decreased level of hemoglobin (Hb) (11.8 g/dL), hematocrit (HCT) (34.5%), mean corpuscular volume (MCV) (68.73 fL), mean corpuscular hemoglobin (MCH) (23.51 pg)",
+        3
+      ],
+      [
+        "flexion contractures of the elbows",
+        3
+      ],
+      [
+        "persistent diarrhea",
+        3
+      ],
+      [
+        "bleeding episodes from the nose, mouth, and anus",
+        3
+      ],
+      [
+        "Burkitt leukemia",
+        3
+      ],
+      [
+        "follicular papules",
+        2
+      ],
+      [
+        "severe psychomotor developmental delay",
+        2
+      ],
+      [
+        "non-autoimmune diabetes",
+        2
+      ],
+      [
+        "ophthalmologic, cardiovascular, neurologic abnormalities",
+        2
+      ],
+      [
+        "camptodactyly of the 2nd-5th fingers",
+        2
+      ],
+      [
+        "low-set posteriorly rotated ears",
+        2
+      ],
+      [
+        "broad protruding forehead",
+        2
+      ],
+      [
+        "craniofacial malformations",
+        2
+      ],
+      [
+        "polydactyly of the third toe",
+        2
+      ],
+      [
+        "sweat retention",
+        2
+      ]
+    ],
+    "fn:no_overlap": [
+      [
+        "SNHL",
+        12
+      ],
+      [
+        "short distal ulnae",
+        9
+      ],
+      [
+        "HE",
+        9
+      ],
+      [
+        "SP",
+        7
+      ],
+      [
+        "mitochondrial disease",
+        5
+      ],
+      [
+        "CL/P",
+        5
+      ],
+      [
+        "liver disease",
+        5
+      ],
+      [
+        "motion and height of development is slight falling",
+        4
+      ],
+      [
+        "GCD2",
+        4
+      ],
+      [
+        "disorder of glycosylation",
+        4
+      ],
+      [
+        "craniofacial, skeletal, and visceral anomalies",
+        4
+      ],
+      [
+        "lentigines",
+        4
+      ],
+      [
+        "spikes and slow waves in the left occipital and posterior temporal regions",
+        4
+      ],
+      [
+        "mucocutaneous triad",
+        4
+      ],
+      [
+        "bone deformities",
+        4
+      ],
+      [
+        "Gordon Holmes syndrome",
+        4
+      ],
+      [
+        "refractive errors",
+        3
+      ],
+      [
+        "GCD",
+        3
+      ],
+      [
+        "peripheral cornea",
+        3
+      ],
+      [
+        "flat femoral",
+        3
+      ],
+      [
+        "thiamine deficiency",
+        3
+      ],
+      [
+        "hair follicles",
+        3
+      ],
+      [
+        "slurry speech",
+        3
+      ],
+      [
+        "flattened cochlea",
+        3
+      ],
+      [
+        "ocular manifestations",
+        3
+      ],
+      [
+        "spontaneous pneumothoraces",
+        3
+      ],
+      [
+        "gums appeared healthy",
+        3
+      ],
+      [
+        "3-aminoisobutyric acid, 3-hydroxyisobutyric acid, 3-hydroxypropionic acid and 2-ethyl-3-hydroxypropionic acids were observed in increased amounts",
+        3
+      ],
+      [
+        "pyramidal syndrome",
+        3
+      ],
+      [
+        "increased level of CPK (1124 U/L), lactate dehydrogenase (LDH) (542 mu/L), and aspartate aminotransferase (AST, SGOT)",
+        3
+      ]
+    ],
+    "fp:no_overlap": [
+      [
+        "SHFM",
+        42
+      ],
+      [
+        "NS",
+        38
+      ],
+      [
+        "diabetes",
+        35
+      ],
+      [
+        "MODY",
+        24
+      ],
+      [
+        "ID",
+        22
+      ],
+      [
+        "ASD",
+        22
+      ],
+      [
+        "CNS",
+        22
+      ],
+      [
+        "TRMA",
+        19
+      ],
+      [
+        "mass",
+        19
+      ],
+      [
+        "HS",
+        15
+      ],
+      [
+        "dysmorphic features",
+        14
+      ],
+      [
+        "inflammation",
+        13
+      ],
+      [
+        "RP",
+        13
+      ],
+      [
+        "pulmonary fibrosis",
+        11
+      ],
+      [
+        "learning disabilities",
+        9
+      ],
+      [
+        "MH",
+        9
+      ],
+      [
+        "ADHD",
+        8
+      ],
+      [
+        "ABR",
+        8
+      ],
+      [
+        "facial features",
+        8
+      ],
+      [
+        "tumor",
+        8
+      ],
+      [
+        "metabolic diseases",
+        7
+      ],
+      [
+        "neurological disorders",
+        7
+      ],
+      [
+        "DM",
+        7
+      ],
+      [
+        "malformation",
+        6
+      ],
+      [
+        "RCD",
+        6
+      ],
+      [
+        "diabetic",
+        6
+      ],
+      [
+        "jaundice",
+        6
+      ],
+      [
+        "aplastic anemia",
+        6
+      ],
+      [
+        "PDA",
+        5
+      ],
+      [
+        "disabilities",
+        5
+      ]
+    ],
+    "fp:overlap_different_concept": [
+      [
+        "weakness",
+        9
+      ],
+      [
+        "lymphadenopathy",
+        9
+      ],
+      [
+        "pallor",
+        7
+      ],
+      [
+        "facial features",
+        7
+      ],
+      [
+        "dysmorphic craniofacial features",
+        6
+      ],
+      [
+        "neuropathy",
+        6
+      ],
+      [
+        "fractures",
+        6
+      ],
+      [
+        "flexion contractures",
+        5
+      ],
+      [
+        "malformations",
+        5
+      ],
+      [
+        "sensorineural hearing loss",
+        5
+      ],
+      [
+        "contracture",
+        5
+      ],
+      [
+        "leukemia",
+        5
+      ],
+      [
+        "malformation",
+        4
+      ],
+      [
+        "syndactyly",
+        4
+      ],
+      [
+        "inflammation",
+        4
+      ],
+      [
+        "hypotonia",
+        4
+      ],
+      [
+        "disability",
+        3
+      ],
+      [
+        "hearing loss",
+        3
+      ],
+      [
+        "camptodactyly",
+        3
+      ],
+      [
+        "eyebrows",
+        3
+      ],
+      [
+        "flat nasal bridge",
+        3
+      ],
+      [
+        "pigmentation",
+        3
+      ],
+      [
+        "progressive spasticity",
+        3
+      ],
+      [
+        "warts",
+        3
+      ],
+      [
+        "neutropenia",
+        3
+      ],
+      [
+        "autoimmune encephalitis",
+        3
+      ],
+      [
+        "bleeding",
+        3
+      ],
+      [
+        "leukodystrophies",
+        3
+      ],
+      [
+        "liver cysts",
+        3
+      ],
+      [
+        "metaphyseal dysplasia",
+        3
+      ]
+    ],
+    "fn:overlap_same_concept": [
+      [
+        "Myotonia congenita",
+        5
+      ],
+      [
+        "sensorineural hearing",
+        4
+      ],
+      [
+        "-deficit/hyperactivity disorder",
+        4
+      ],
+      [
+        "distinctive facial",
+        4
+      ],
+      [
+        "hereditary elliptocytosis",
+        4
+      ],
+      [
+        "Pierre Robin",
+        3
+      ],
+      [
+        "Y-shaped 2-3 toe syndactyly",
+        3
+      ],
+      [
+        "truncal and limb ataxia",
+        3
+      ],
+      [
+        "mild mulberry like molars",
+        3
+      ],
+      [
+        "downslanted palpebral",
+        2
+      ],
+      [
+        "stereotyped",
+        2
+      ],
+      [
+        "bleeding disorder",
+        2
+      ],
+      [
+        "small head",
+        2
+      ],
+      [
+        "lack of femoral head ossification",
+        2
+      ],
+      [
+        "RTT-like MR",
+        2
+      ],
+      [
+        "spastic-ataxia",
+        2
+      ],
+      [
+        "ataxia",
+        2
+      ],
+      [
+        "thickening of the skin with pearly papules",
+        2
+      ],
+      [
+        "subarachnoid space widening",
+        2
+      ],
+      [
+        "myotonia congenita",
+        2
+      ],
+      [
+        "long-narrow face",
+        2
+      ],
+      [
+        "scleroderma-like skin changes",
+        2
+      ],
+      [
+        "learning disabilities",
+        1
+      ],
+      [
+        "increased leukocyte levels",
+        1
+      ],
+      [
+        "nail-bed pallor",
+        1
+      ],
+      [
+        "elevated levels of white blood",
+        1
+      ],
+      [
+        "fits of anger",
+        1
+      ],
+      [
+        "irregular menstrual",
+        1
+      ],
+      [
+        "-polycystic ovaries",
+        1
+      ],
+      [
+        "diabetes,",
+        1
+      ]
+    ],
+    "fn:false_negated_exact": [
+      [
+        "lymphoma",
+        7
+      ],
+      [
+        "seizures",
+        3
+      ],
+      [
+        "epilepsy",
+        3
+      ],
+      [
+        "hyperparathyroidism",
+        3
+      ],
+      [
+        "motor delay",
+        2
+      ],
+      [
+        "seizure",
+        2
+      ],
+      [
+        "microcephaly",
+        2
+      ],
+      [
+        "nystagmus",
+        2
+      ],
+      [
+        "primary hyperparathyroidism",
+        2
+      ],
+      [
+        "immunodeficiency",
+        2
+      ],
+      [
+        "antinuclear antibody",
+        1
+      ],
+      [
+        "DM",
+        1
+      ],
+      [
+        "lipodystrophy",
+        1
+      ],
+      [
+        "developmental delay",
+        1
+      ],
+      [
+        "cardiac abnormalities",
+        1
+      ],
+      [
+        "optic nerve atrophy",
+        1
+      ],
+      [
+        "neurodevelopmental phenotypes",
+        1
+      ],
+      [
+        "pulmonary arterial hypertension",
+        1
+      ],
+      [
+        "cranial nerve involvement",
+        1
+      ],
+      [
+        "abnormal hemoglobin",
+        1
+      ],
+      [
+        "hearing loss",
+        1
+      ],
+      [
+        "short stature",
+        1
+      ],
+      [
+        "neurodevelopmental delay",
+        1
+      ],
+      [
+        "autoimmune disease",
+        1
+      ],
+      [
+        "limb deformities",
+        1
+      ],
+      [
+        "intellectual disability",
+        1
+      ],
+      [
+        "hypogonadism",
+        1
+      ],
+      [
+        "hyposmia",
+        1
+      ],
+      [
+        "white matter atrophy",
+        1
+      ],
+      [
+        "hypoplasia of the corpus callosum",
+        1
+      ]
+    ],
+    "fp:overlap_same_concept": [
+      [
+        "facial features",
+        5
+      ],
+      [
+        "elliptocytosis",
+        5
+      ],
+      [
+        "Myotonia",
+        5
+      ],
+      [
+        "sensorineural hearing loss",
+        4
+      ],
+      [
+        "attention-deficit/hyperactivity disorder",
+        4
+      ],
+      [
+        "bleeding",
+        4
+      ],
+      [
+        "Pierre Robin sequence",
+        3
+      ],
+      [
+        "2-3 toe syndactyly",
+        3
+      ],
+      [
+        "limb ataxia",
+        3
+      ],
+      [
+        "MR",
+        3
+      ],
+      [
+        "subarachnoid space",
+        3
+      ],
+      [
+        "mulberry like molars",
+        3
+      ],
+      [
+        "pallor",
+        2
+      ],
+      [
+        "cirrhosis",
+        2
+      ],
+      [
+        "Pierre Robin",
+        2
+      ],
+      [
+        "downslanted palpebral fissures",
+        2
+      ],
+      [
+        "perivascular spaces",
+        2
+      ],
+      [
+        "stereotyped behaviors",
+        2
+      ],
+      [
+        "small head circumference",
+        2
+      ],
+      [
+        "posteriorly rotated ears",
+        2
+      ],
+      [
+        "kyphoscoliosis",
+        2
+      ],
+      [
+        "stereotyped",
+        2
+      ],
+      [
+        "lack of femoral head",
+        2
+      ],
+      [
+        "autism",
+        2
+      ],
+      [
+        "spastic-ataxia phenotype",
+        2
+      ],
+      [
+        "macular pigment epitheliopathy",
+        2
+      ],
+      [
+        "development delay",
+        2
+      ],
+      [
+        "narrow face",
+        2
+      ],
+      [
+        "anteverted pinnae ear",
+        2
+      ],
+      [
+        "elevated levels of white blood cells",
+        1
+      ]
+    ],
+    "fn:exact_span_wrong_concept": [
+      [
+        "cleft lip/palate",
+        18
+      ],
+      [
+        "antibody deficiency",
+        5
+      ],
+      [
+        "dermatitis",
+        4
+      ],
+      [
+        "dysmorphic features",
+        3
+      ],
+      [
+        "ID",
+        3
+      ],
+      [
+        "increased tone",
+        3
+      ],
+      [
+        "pulmonary hypoplasia",
+        2
+      ],
+      [
+        "intracranial calcifications",
+        2
+      ],
+      [
+        "developmental delays",
+        2
+      ],
+      [
+        "facial features",
+        2
+      ],
+      [
+        "paucity of intrahepatic bile ducts",
+        2
+      ],
+      [
+        "stromal opacities",
+        1
+      ],
+      [
+        "decreased vision",
+        1
+      ],
+      [
+        "patellar lateral dislocation",
+        1
+      ],
+      [
+        "inflammation",
+        1
+      ],
+      [
+        "cleft palate",
+        1
+      ],
+      [
+        "NDD",
+        1
+      ],
+      [
+        "cardiac defects",
+        1
+      ],
+      [
+        "ventricular septum defect",
+        1
+      ],
+      [
+        "split hand foot malformation",
+        1
+      ],
+      [
+        "clonic limb movements",
+        1
+      ],
+      [
+        "degrees of intellectual disability",
+        1
+      ],
+      [
+        "neurodevelopmental impairment",
+        1
+      ],
+      [
+        "intellectual development disorder",
+        1
+      ],
+      [
+        "disorder of skeletal muscle",
+        1
+      ],
+      [
+        "fecal impaction",
+        1
+      ],
+      [
+        "visual impairment",
+        1
+      ],
+      [
+        "inverted upper lip",
+        1
+      ],
+      [
+        "large left ventricle",
+        1
+      ],
+      [
+        "reduced vision",
+        1
+      ]
+    ],
+    "fp:exact_span_wrong_concept": [
+      [
+        "cleft lip/palate",
+        12
+      ],
+      [
+        "antibody deficiency",
+        5
+      ],
+      [
+        "dermatitis",
+        4
+      ],
+      [
+        "ID",
+        3
+      ],
+      [
+        "dysmorphic features",
+        3
+      ],
+      [
+        "increased tone",
+        3
+      ],
+      [
+        "pulmonary hypoplasia",
+        2
+      ],
+      [
+        "intracranial calcifications",
+        2
+      ],
+      [
+        "facial features",
+        2
+      ],
+      [
+        "paucity of intrahepatic bile ducts",
+        2
+      ],
+      [
+        "decreased vision",
+        1
+      ],
+      [
+        "stromal opacities",
+        1
+      ],
+      [
+        "patellar lateral dislocation",
+        1
+      ],
+      [
+        "inflammation",
+        1
+      ],
+      [
+        "cleft palate",
+        1
+      ],
+      [
+        "ventricular septum defect",
+        1
+      ],
+      [
+        "NDD",
+        1
+      ],
+      [
+        "cardiac defects",
+        1
+      ],
+      [
+        "split hand foot malformation",
+        1
+      ],
+      [
+        "degrees of intellectual disability",
+        1
+      ],
+      [
+        "clonic limb movements",
+        1
+      ],
+      [
+        "neurodevelopmental impairment",
+        1
+      ],
+      [
+        "intellectual development disorder",
+        1
+      ],
+      [
+        "disorder of skeletal muscle",
+        1
+      ],
+      [
+        "fecal impaction",
+        1
+      ],
+      [
+        "developmental delays",
+        1
+      ],
+      [
+        "visual impairment",
+        1
+      ],
+      [
+        "inverted upper lip",
+        1
+      ],
+      [
+        "large left ventricle",
+        1
+      ],
+      [
+        "reduced vision",
+        1
+      ]
+    ]
+  },
+  "examples": {
+    "fn:overlap_different_concept": [
+      {
+        "pmc_id": "10313222",
+        "offset": 4787,
+        "length": 25,
+        "text": "elevated hemoglobin HbA1c",
+        "concept": "HP:0040217",
+        "overlap": [
+          [
+            4787,
+            19,
+            "HP:0001900"
+          ]
+        ],
+        "context": "and 6 months had revealed the following: non-fasting blood glucose of 158 mg/dL, glucosuria, and an elevated hemoglobin HbA1c of 8.4% (normal range 4.4-5.6%). His repeat laboratory studies at our Endocrinology clinic showed a"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 18333,
+        "length": 29,
+        "text": "sepsis in the neonatal period",
+        "concept": "HP:0040187",
+        "overlap": [
+          [
+            18333,
+            6,
+            "HP:0100806"
+          ]
+        ],
+        "context": "hem with the findings of our case, the child was eventually confirmed as KBGS accompanied by severe sepsis in the neonatal period. As is known, KBGS is prone to be complicated by infectious diseases, so the patient's intractable "
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 12675,
+        "length": 31,
+        "text": "grade I intracranial hemorrhage",
+        "concept": "HP:0034209",
+        "overlap": [
+          [
+            12683,
+            23,
+            "HP:0002170"
+          ]
+        ],
+        "context": "racoabdominal ultrasonography was employed for imaging examinations. Cranial ultrasonography showed grade I intracranial hemorrhage (Fig. 2A). Renal ultrasonography suggested separation of the left renal collecting system (Fig. 2B)"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 3276,
+        "length": 27,
+        "text": "fontanel or delayed closure",
+        "concept": "HP:0000270",
+        "overlap": [
+          [
+            3270,
+            14,
+            "HP:0000239"
+          ]
+        ],
+        "context": "es, epilepsy, cryptorchidism, feeding difficulties, abnormal palatal arch, autism, as well as large fontanel or delayed closure."
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 12773,
+        "length": 23,
+        "text": "renal collecting system",
+        "concept": "HP:0000081",
+        "overlap": [
+          [
+            12779,
+            10,
+            "HP:0030212"
+          ]
+        ],
+        "context": "d grade I intracranial hemorrhage (Fig. 2A). Renal ultrasonography suggested separation of the left renal collecting system (Fig. 2B). In addition, bone marrow smear indicated: thrombocytopenia; infectious anemia combined w"
+      },
+      {
+        "pmc_id": "10789033",
+        "offset": 6577,
+        "length": 21,
+        "text": "intermittent dystonia",
+        "concept": "HP:0002268",
+        "overlap": [
+          [
+            6590,
+            8,
+            "HP:0001332"
+          ]
+        ],
+        "context": "al examination, symptoms of complex movement disorder were detected with spasticity, slight ataxia, intermittent dystonia, stereotypes. Video demonstrates the complex movement disorder of the patient (Additional Video 1)."
+      },
+      {
+        "pmc_id": "10789033",
+        "offset": 14058,
+        "length": 37,
+        "text": "mild-to-profound cognitive impairment",
+        "concept": "HP:0001256",
+        "overlap": [
+          [
+            14075,
+            20,
+            "HP:0100543"
+          ]
+        ],
+        "context": " clinical feature in patients with pathogenic or likely pathogenic variants of the CTNNB1 gene is a mild-to-profound cognitive impairment. Exudative vitreoretinopathy, truncal hypotonia, peripheral spasticity, dystonia, behavior problems"
+      },
+      {
+        "pmc_id": "10789033",
+        "offset": 4708,
+        "length": 14,
+        "text": "ovarian cancer",
+        "concept": "HP:0100615",
+        "overlap": [
+          [
+            4716,
+            6,
+            "HP:0002664"
+          ]
+        ],
+        "context": "are linked to various tumors, such as colorectal cancer, hepatocellular carcinoma, medulloblastoma, ovarian cancer, and pilomatricoma."
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 2159,
+        "length": 9,
+        "text": "myoclonus",
+        "concept": "HP:0001336",
+        "overlap": [
+          [
+            2159,
+            19,
+            "HP:0002123"
+          ]
+        ],
+        "context": ") syndrome, a multi-systemic mitochondrial disease first described in 1990 (3) and characterized by myoclonus, seizures, cerebellar ataxia and mitochondrial myopathy. Since then, an expansion of the phenotypic"
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 2170,
+        "length": 8,
+        "text": "seizures",
+        "concept": "HP:0001250",
+        "overlap": [
+          [
+            2159,
+            19,
+            "HP:0002123"
+          ]
+        ],
+        "context": " a multi-systemic mitochondrial disease first described in 1990 (3) and characterized by myoclonus, seizures, cerebellar ataxia and mitochondrial myopathy. Since then, an expansion of the phenotypic spectrum "
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 6151,
+        "length": 36,
+        "text": "Congenital heart and brain anomalies",
+        "concept": "HP:0001627",
+        "overlap": [
+          [
+            6172,
+            15,
+            "HP:0012443"
+          ]
+        ],
+        "context": "bility, abnormal behaviour (autistic, aggressive, and hyperactive), and dysmorphic facial features. Congenital heart and brain anomalies, as well as visual and hearing impairment, are also common. In 2011, Wentzel et al. speculated that"
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 3853,
+        "length": 30,
+        "text": "bilateral single palmar crease",
+        "concept": "HP:0007598",
+        "overlap": [
+          [
+            3863,
+            20,
+            "HP:0000954"
+          ]
+        ],
+        "context": "n open bite, epicanthus, long palpebral fissures, a bulbous nasal tip, cupped ears, a short neck, a bilateral single palmar crease, flat feet, and visual defects (photo not shown). Moreover, she had small-joint laxity, as well as "
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 6200,
+        "length": 29,
+        "text": "visual and hearing impairment",
+        "concept": "HP:0000505",
+        "overlap": [
+          [
+            6211,
+            18,
+            "HP:0000365"
+          ]
+        ],
+        "context": " and hyperactive), and dysmorphic facial features. Congenital heart and brain anomalies, as well as visual and hearing impairment, are also common. In 2011, Wentzel et al. speculated that non-homologous end-joining or FoSTeS migh"
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 6017,
+        "length": 40,
+        "text": "mild-to-moderate intellectual disability",
+        "concept": "HP:0001256",
+        "overlap": [
+          [
+            6025,
+            32,
+            "HP:0002342"
+          ]
+        ],
+        "context": "ic syndromic intellectual disability characterized by developmental delay, hypotonia, speech delay, mild-to-moderate intellectual disability, abnormal behaviour (autistic, aggressive, and hyperactive), and dysmorphic facial features. Congen"
+      },
+      {
+        "pmc_id": "11221135",
+        "offset": 1643,
+        "length": 18,
+        "text": "follicular papules",
+        "concept": "HP:0025084",
+        "overlap": [
+          [
+            1654,
+            7,
+            "HP:0200034"
+          ]
+        ],
+        "context": "arse, short, and fragile hairs with apopecia since infancy (Fig. 1A). There were numerous keratotic follicular papules on her occipital area (Fig. 1B). The secondary hair, eyebrow, eyelashes, fingernails, and systemic "
+      },
+      {
+        "pmc_id": "11221135",
+        "offset": 1541,
+        "length": 32,
+        "text": "sparse, short, and fragile hairs",
+        "concept": "HP:0008070",
+        "overlap": [
+          [
+            1560,
+            13,
+            "HP:0002299"
+          ]
+        ],
+        "context": "The proband (II-2) was a 30-year-old woman. She developed sparse, short, and fragile hairs with apopecia since infancy (Fig. 1A). There were numerous keratotic follicular papules on her occi"
+      },
+      {
+        "pmc_id": "11221135",
+        "offset": 2862,
+        "length": 18,
+        "text": "follicular papules",
+        "concept": "HP:0025084",
+        "overlap": [
+          [
+            2873,
+            7,
+            "HP:0200034"
+          ]
+        ],
+        "context": "Her father aged 58 years also had noticeable hair loss with less marked follicular papules (Fig. 4A-B). Dermoscopy revealed hair fragility and breakage (Fig. 4C). Her younger brother aged 17"
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 10126,
+        "length": 41,
+        "text": "mild-to-moderate psychiatric disturbances",
+        "concept": "HP:0001256",
+        "overlap": [
+          [
+            10143,
+            24,
+            "HP:0000708"
+          ]
+        ],
+        "context": "ry auras, and occasional evolution into bilateral tonic-clonic attacks, starting in adulthood, with mild-to-moderate psychiatric disturbances in all but individual III-2."
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 806,
+        "length": 17,
+        "text": "gait disabilities",
+        "concept": "HP:0001288",
+        "overlap": [
+          [
+            811,
+            12,
+            "HP:0004302"
+          ]
+        ],
+        "context": "uding seizures (11/14), behavioral disturbances (5/14), mild intellectual disability (3/14), and/or gait disabilities (2/14). Brain magnetic resonance imaging revealed hippocampal sclerosis in the 8-year-old proband, "
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 13004,
+        "length": 40,
+        "text": "repetitive generalized or focal seizures",
+        "concept": "HP:0007334",
+        "overlap": [
+          [
+            13030,
+            14,
+            "HP:0007359"
+          ]
+        ],
+        "context": "ts of HS in GLUT1-DS. Several factors may contribute to HS, such as prolonged febrile seizures, and repetitive generalized or focal seizures, especially during status epilepticus. In our case, we have no definite explanation of this finding"
+      }
+    ],
+    "fn:no_overlap": [
+      {
+        "pmc_id": "10313222",
+        "offset": 2055,
+        "length": 36,
+        "text": "destruction of pancreatic beta-cells",
+        "concept": "HP:0006274",
+        "overlap": [],
+        "context": "nto 4 major forms in 1997. These forms include type 1 diabetes resulting from an autoimmune-induced destruction of pancreatic beta-cells, and type 2 diabetes resulting from a combination of increased beta-cell apoptosis and insulin resi"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 12029,
+        "length": 12,
+        "text": "rising HbA1c",
+        "concept": "HP:0040217",
+        "overlap": [],
+        "context": "f HbA1c is lower than 6.5%, a low carbohydrate diet may be temporarily successful. With a higher or rising HbA1c, the next useful treatment is sulfonylurea derivatives. Sulfonylurea derivatives increase endogenou"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 4934,
+        "length": 25,
+        "text": "non-fasting serum glucose",
+        "concept": "HP:0025691",
+        "overlap": [],
+        "context": " 4.4-5.6%). His repeat laboratory studies at our Endocrinology clinic showed an HbA1c of 8.7% and a non-fasting serum glucose level of 189 mg/dL."
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 8638,
+        "length": 12,
+        "text": "brain injury",
+        "concept": "HP:0002170",
+        "overlap": [],
+        "context": "ty in stopping the bleeding on the puncture sites. The brain sonography on day 4 after birth showed brain injury and intracranial hemorrhage. Therefore, 140 mg of bovine lung surfactant was administered through e"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 14262,
+        "length": 50,
+        "text": "motion and height of development is slight falling",
+        "concept": "HP:0001510",
+        "overlap": [],
+        "context": "The following-up of 1-year-6-month showed that the language, motion and height of development is slight falling behind the children of the same age."
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 7847,
+        "length": 32,
+        "text": "bluish discoloration on the skin",
+        "concept": "HP:0000961",
+        "overlap": [],
+        "context": "nation recorded a birth weight of 1.18 kg and a heart rate of 70 bpm, together with birth asphyxia, bluish discoloration on the skin, flaccid limbs, and unresponsiveness. Medical intervention was carried out immediately, including w"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 3237,
+        "length": 12,
+        "text": "palatal arch",
+        "concept": "HP:0000218",
+        "overlap": [],
+        "context": " fingers or associated hand abnormalities, epilepsy, cryptorchidism, feeding difficulties, abnormal palatal arch, autism, as well as large fontanel or delayed closure."
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 13387,
+        "length": 40,
+        "text": "anterior horns of the lateral ventricles",
+        "concept": "HP:0006956",
+        "overlap": [],
+        "context": "teral bodies of lateral ventricles are both about 0.2 cm in width. The coronal view indicates sharp anterior horns of the lateral ventricles. The width of the third ventricle measures about 0.3 cm. The thalamus, caudate nucleus and lenticul"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 17272,
+        "length": 17,
+        "text": "craniofacial bone",
+        "concept": "HP:0004493",
+        "overlap": [],
+        "context": "nvolved in a common gene regulatory network, jointly playing a role in epigenetic regulation during craniofacial bone development."
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 9367,
+        "length": 15,
+        "text": "less ruddy skin",
+        "concept": "HP:0000980",
+        "overlap": [],
+        "context": " kg. The immature infant was malnourished with poor response and tachypnea. The inspection revealed less ruddy skin with an uneven texture, and scattered petechiae on the limbs caused by venipuncture. The anterior f"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 16681,
+        "length": 20,
+        "text": "craniofacial feature",
+        "concept": "HP:0004484",
+        "overlap": [],
+        "context": "n its association with cognitive dysfunction and autism spectrum disorder. Quantitative analysis of craniofacial feature of the patients with KBGS using 3D imaging technique showed that the overall size of the mid-face a"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 14262,
+        "length": 50,
+        "text": "motion and height of development is slight falling",
+        "concept": "HP:0002376",
+        "overlap": [],
+        "context": "The following-up of 1-year-6-month showed that the language, motion and height of development is slight falling behind the children of the same age."
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 11769,
+        "length": 18,
+        "text": "marrow hyperplasia",
+        "concept": "HP:0031020",
+        "overlap": [],
+        "context": "Bone marrow smear test suggests significantly active bone marrow hyperplasia, with lymphocytes accounting for 48%, juvenile lymphocytes for 2.5%, granulocytes for 30%, and eryt"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 9566,
+        "length": 35,
+        "text": "the congestion in pharyngeal mucosa",
+        "concept": "HP:0025439",
+        "overlap": [],
+        "context": ". The anterior fontanel, which remained unclosed, measured about 2 cm x 2 cm. Perioral cyanosis and the congestion in pharyngeal mucosa were also noted in the examination. Retraction sign of 3 fossae was negative. Pulmonary auscultatio"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 1443,
+        "length": 50,
+        "text": "motion and height of development is slight falling",
+        "concept": "HP:0002376",
+        "overlap": [],
+        "context": " the infant returned to normal levels. The following-up of 1-year-6-month showed that the language, motion and height of development is slight falling behind the children of the same age."
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 11145,
+        "length": 18,
+        "text": "marrow hyperplasia",
+        "concept": "HP:0031020",
+        "overlap": [],
+        "context": "n hemoglobin with a minimum value of 75 g/L. Bone marrow smears suggested significantly active bone marrow hyperplasia, with lymphocytes accounting for 48%, juvenile lymphocytes for 2.5%, granulocytes for 30%, and eryt"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 1443,
+        "length": 50,
+        "text": "motion and height of development is slight falling",
+        "concept": "HP:0001510",
+        "overlap": [],
+        "context": " the infant returned to normal levels. The following-up of 1-year-6-month showed that the language, motion and height of development is slight falling behind the children of the same age."
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 13293,
+        "length": 28,
+        "text": "bodies of lateral ventricles",
+        "concept": "HP:0006956",
+        "overlap": [],
+        "context": "t 0.8 x 0.4 cm in the left subependymal lesion, with a sac-like anechoic zone inside. The bilateral bodies of lateral ventricles are both about 0.2 cm in width. The coronal view indicates sharp anterior horns of the lateral vent"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 7881,
+        "length": 13,
+        "text": "flaccid limbs",
+        "concept": "HP:0010547",
+        "overlap": [],
+        "context": "1.18 kg and a heart rate of 70 bpm, together with birth asphyxia, bluish discoloration on the skin, flaccid limbs, and unresponsiveness. Medical intervention was carried out immediately, including warmth keeping, "
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 1089,
+        "length": 12,
+        "text": "brain injury",
+        "concept": "HP:0002170",
+        "overlap": [],
+        "context": "The brain sonography on day 4 after birth showed brain injury and intracranial hemorrhage. Therefore, 140 mg of bovine lung surfactant was administered through e"
+      }
+    ],
+    "fp:no_overlap": [
+      {
+        "pmc_id": "10313222",
+        "offset": 2977,
+        "length": 4,
+        "text": "MODY",
+        "concept": "HP:0004904",
+        "overlap": [],
+        "context": "en, though this could represent an underestimation because of the high frequency of misdiagnosis of MODY as either Type 1 or Type 2 diabetes, and the exclusion of non-White subjects in the population stud"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 717,
+        "length": 4,
+        "text": "MODY",
+        "concept": "HP:0004904",
+        "overlap": [],
+        "context": "ng our report of two cases where the full expression of the clinical phenotype was described. HNF1A-MODY (Maturity Onset Diabetes of the Young type 3) is one of the most common subtypes of MODY. Due to it"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 2337,
+        "length": 4,
+        "text": "MODY",
+        "concept": "HP:0004904",
+        "overlap": [],
+        "context": "ic types of pathologies such as monogenic diabetes syndromes (maturity-onset diabetes of the young (MODY), neonatal diabetes), diseases of the exocrine pancreas (pancreatitis, cystic fibrosis), and chemic"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 9620,
+        "length": 4,
+        "text": "MODY",
+        "concept": "HP:0004904",
+        "overlap": [],
+        "context": "HNF1A-MODY (MODY 3) is a monogenic disease with autosomal dominant inheritance due to HNF1A (hepatocyte nuclea"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 10628,
+        "length": 8,
+        "text": "diabetes",
+        "concept": "HP:0000819",
+        "overlap": [],
+        "context": "on 17 HNF1A variants which were identified in 48 individuals from 20 Czech families presenting with diabetes. Among the 17 identified variants, 12 had not been previously reported in the literature, one of th"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 9026,
+        "length": 4,
+        "text": "MODY",
+        "concept": "HP:0004904",
+        "overlap": [],
+        "context": "The frequent misdiagnosis of MODY subtypes makes it necessary to clarify the clinical spectrum of phenotypes in these subjects so tha"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 2752,
+        "length": 4,
+        "text": "MODY",
+        "concept": "HP:0004904",
+        "overlap": [],
+        "context": "llection of genetically inherited, non-autoimmune disorders that are present in childhood. Thirteen MODY genes have been characterized to date. The prevalence of monogenic diabetes is 1/10,000 in adults a"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 9626,
+        "length": 4,
+        "text": "MODY",
+        "concept": "HP:0004904",
+        "overlap": [],
+        "context": "HNF1A-MODY (MODY 3) is a monogenic disease with autosomal dominant inheritance due to HNF1A (hepatocyte nuclear fact"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 2457,
+        "length": 8,
+        "text": "diabetes",
+        "concept": "HP:0000819",
+        "overlap": [],
+        "context": "etes), diseases of the exocrine pancreas (pancreatitis, cystic fibrosis), and chemical/drug induced diabetes (like high-dose glucocorticoid therapy). The fourth form is gestational diabetes mellitus that is f"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 468,
+        "length": 4,
+        "text": "MODY",
+        "concept": "HP:0004904",
+        "overlap": [],
+        "context": " plans can be introduced as early as possible in the course of the disease. We report the case of a MODY subtype that was initially characterized as variant of uncertain significance (VUS) but was later c"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 3482,
+        "length": 4,
+        "text": "MODY",
+        "concept": "HP:0004904",
+        "overlap": [],
+        "context": "dels showed improvement in the specificity (94% vs 91%) and sensitivity (91% vs 72%) in identifying MODY compared with the standard criteria (patient diagnosed before the age of 25 years and has an affect"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 9639,
+        "length": 17,
+        "text": "monogenic disease",
+        "concept": "-1",
+        "overlap": [],
+        "context": "HNF1A-MODY (MODY 3) is a monogenic disease with autosomal dominant inheritance due to HNF1A (hepatocyte nuclear factor 1 alpha) haplo-insuffic"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 8800,
+        "length": 8,
+        "text": "Diabetes",
+        "concept": "HP:0000819",
+        "overlap": [],
+        "context": "The patient's timeline from diabetes mellitus diagnosis until today. *Diabetes antibodies: glutamic acid decarboxylase antibodies, anti-insulin antibodies, ant-islet cell antibod"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 6315,
+        "length": 8,
+        "text": "Diabetes",
+        "concept": "HP:0000819",
+        "overlap": [],
+        "context": "ferred to the Genetics clinic for evaluation for possible monogenic diabetes. His Invitae Monogenic Diabetes Panel showed a heterozygous mutation in the HNF1A gene, exon 2, variant c.416T>C (p. Leu139Pro),  F"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 8861,
+        "length": 23,
+        "text": "anti-insulin antibodies",
+        "concept": "HP:0034062",
+        "overlap": [],
+        "context": "betes mellitus diagnosis until today. *Diabetes antibodies: glutamic acid decarboxylase antibodies, anti-insulin antibodies, ant-islet cell antibodies, zinc transporter 8 antibodies. VUS, variant of uncertain significance."
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 9604,
+        "length": 8,
+        "text": "diabetes",
+        "concept": "HP:0000819",
+        "overlap": [],
+        "context": "eatures seen in an individual with a medical course that led us to explore a diagnosis of monogenic diabetes."
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 806,
+        "length": 4,
+        "text": "MODY",
+        "concept": "HP:0004904",
+        "overlap": [],
+        "context": "bed. HNF1A-MODY (Maturity Onset Diabetes of the Young type 3) is one of the most common subtypes of MODY. Due to its variable clinical presentation, and the concerns with being misdiagnosed as either type"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 2279,
+        "length": 8,
+        "text": "diabetes",
+        "concept": "HP:0000819",
+        "overlap": [],
+        "context": "insulin resistance. A third category includes other specific types of pathologies such as monogenic diabetes syndromes (maturity-onset diabetes of the young (MODY), neonatal diabetes), diseases of the exocrin"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 1933,
+        "length": 8,
+        "text": "Diabetes",
+        "concept": "HP:0000819",
+        "overlap": [],
+        "context": "neuropathy. Diabetes mellitus is a group of metabolic diseases which was classified by the American Diabetes Association into 4 major forms in 1997. These forms include type 1 diabetes resulting from an autoi"
+      },
+      {
+        "pmc_id": "10313222",
+        "offset": 4273,
+        "length": 8,
+        "text": "diabetes",
+        "concept": "HP:0000819",
+        "overlap": [],
+        "context": "his is the first case in the United States that fully characterizes the phenotype and course of the diabetes associated with this mutation. Our report indicates that this is a pathogenic mutation leading to M"
+      }
+    ],
+    "fp:overlap_different_concept": [
+      {
+        "pmc_id": "10313222",
+        "offset": 4787,
+        "length": 19,
+        "text": "elevated hemoglobin",
+        "concept": "HP:0001900",
+        "overlap": [
+          [
+            4787,
+            25,
+            "HP:0040217"
+          ]
+        ],
+        "context": "and 6 months had revealed the following: non-fasting blood glucose of 158 mg/dL, glucosuria, and an elevated hemoglobin HbA1c of 8.4% (normal range 4.4-5.6%). His repeat laboratory studies at our Endocrinology clinic sh"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 3270,
+        "length": 14,
+        "text": "large fontanel",
+        "concept": "HP:0000239",
+        "overlap": [
+          [
+            3276,
+            27,
+            "HP:0000270"
+          ]
+        ],
+        "context": "malities, epilepsy, cryptorchidism, feeding difficulties, abnormal palatal arch, autism, as well as large fontanel or delayed closure."
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 2028,
+        "length": 12,
+        "text": "disabilities",
+        "concept": "HP:0004302",
+        "overlap": [
+          [
+            2019,
+            21,
+            "HP:0001328"
+          ]
+        ],
+        "context": "al delays, seizures, and intellectual disabilities in accompany with developmental delays, learning disabilities, or significant behavioral abnormalities such as autism. According to the literature, this syndrome"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 18333,
+        "length": 6,
+        "text": "sepsis",
+        "concept": "HP:0100806",
+        "overlap": [
+          [
+            18333,
+            29,
+            "HP:0040187"
+          ]
+        ],
+        "context": "hem with the findings of our case, the child was eventually confirmed as KBGS accompanied by severe sepsis in the neonatal period. As is known, KBGS is prone to be complicated by infectious diseases, so the"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 12779,
+        "length": 10,
+        "text": "collecting",
+        "concept": "HP:0030212",
+        "overlap": [
+          [
+            12773,
+            23,
+            "HP:0000081"
+          ]
+        ],
+        "context": "e I intracranial hemorrhage (Fig. 2A). Renal ultrasonography suggested separation of the left renal collecting system (Fig. 2B). In addition, bone marrow smear indicated: thrombocytopenia; infectious anemia com"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 12683,
+        "length": 23,
+        "text": "intracranial hemorrhage",
+        "concept": "HP:0002170",
+        "overlap": [
+          [
+            12675,
+            31,
+            "HP:0034209"
+          ]
+        ],
+        "context": "minal ultrasonography was employed for imaging examinations. Cranial ultrasonography showed grade I intracranial hemorrhage (Fig. 2A). Renal ultrasonography suggested separation of the left renal collecting system (Fig. 2B)"
+      },
+      {
+        "pmc_id": "10789033",
+        "offset": 4716,
+        "length": 6,
+        "text": "cancer",
+        "concept": "HP:0002664",
+        "overlap": [
+          [
+            4708,
+            14,
+            "HP:0100615"
+          ]
+        ],
+        "context": "ed to various tumors, such as colorectal cancer, hepatocellular carcinoma, medulloblastoma, ovarian cancer, and pilomatricoma."
+      },
+      {
+        "pmc_id": "10789033",
+        "offset": 14075,
+        "length": 20,
+        "text": "cognitive impairment",
+        "concept": "HP:0100543",
+        "overlap": [
+          [
+            14058,
+            37,
+            "HP:0001256"
+          ]
+        ],
+        "context": " in patients with pathogenic or likely pathogenic variants of the CTNNB1 gene is a mild-to-profound cognitive impairment. Exudative vitreoretinopathy, truncal hypotonia, peripheral spasticity, dystonia, behavior problems"
+      },
+      {
+        "pmc_id": "10789033",
+        "offset": 6590,
+        "length": 8,
+        "text": "dystonia",
+        "concept": "HP:0001332",
+        "overlap": [
+          [
+            6577,
+            21,
+            "HP:0002268"
+          ]
+        ],
+        "context": "n, symptoms of complex movement disorder were detected with spasticity, slight ataxia, intermittent dystonia, stereotypes. Video demonstrates the complex movement disorder of the patient (Additional Video 1)."
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 2159,
+        "length": 19,
+        "text": "myoclonus, seizures",
+        "concept": "HP:0002123",
+        "overlap": [
+          [
+            2159,
+            9,
+            "HP:0001336"
+          ],
+          [
+            2170,
+            8,
+            "HP:0001250"
+          ]
+        ],
+        "context": ") syndrome, a multi-systemic mitochondrial disease first described in 1990 (3) and characterized by myoclonus, seizures, cerebellar ataxia and mitochondrial myopathy. Since then, an expansion of the phenotypic spectrum "
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 6172,
+        "length": 15,
+        "text": "brain anomalies",
+        "concept": "HP:0012443",
+        "overlap": [
+          [
+            6151,
+            36,
+            "HP:0001627"
+          ]
+        ],
+        "context": "viour (autistic, aggressive, and hyperactive), and dysmorphic facial features. Congenital heart and brain anomalies, as well as visual and hearing impairment, are also common. In 2011, Wentzel et al. speculated that"
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 6025,
+        "length": 32,
+        "text": "moderate intellectual disability",
+        "concept": "HP:0002342",
+        "overlap": [
+          [
+            6017,
+            40,
+            "HP:0001256"
+          ]
+        ],
+        "context": "omic intellectual disability characterized by developmental delay, hypotonia, speech delay, mild-to-moderate intellectual disability, abnormal behaviour (autistic, aggressive, and hyperactive), and dysmorphic facial features. Congen"
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 3863,
+        "length": 20,
+        "text": "single palmar crease",
+        "concept": "HP:0000954",
+        "overlap": [
+          [
+            3853,
+            30,
+            "HP:0007598"
+          ]
+        ],
+        "context": "e, epicanthus, long palpebral fissures, a bulbous nasal tip, cupped ears, a short neck, a bilateral single palmar crease, flat feet, and visual defects (photo not shown). Moreover, she had small-joint laxity, as well as "
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 6211,
+        "length": 18,
+        "text": "hearing impairment",
+        "concept": "HP:0000365",
+        "overlap": [
+          [
+            6200,
+            29,
+            "HP:0000505"
+          ]
+        ],
+        "context": "ctive), and dysmorphic facial features. Congenital heart and brain anomalies, as well as visual and hearing impairment, are also common. In 2011, Wentzel et al. speculated that non-homologous end-joining or FoSTeS migh"
+      },
+      {
+        "pmc_id": "11221135",
+        "offset": 2873,
+        "length": 7,
+        "text": "papules",
+        "concept": "HP:0200034",
+        "overlap": [
+          [
+            2862,
+            18,
+            "HP:0025084"
+          ]
+        ],
+        "context": "Her father aged 58 years also had noticeable hair loss with less marked follicular papules (Fig. 4A-B). Dermoscopy revealed hair fragility and breakage (Fig. 4C). Her younger brother aged 17"
+      },
+      {
+        "pmc_id": "11221135",
+        "offset": 1654,
+        "length": 7,
+        "text": "papules",
+        "concept": "HP:0200034",
+        "overlap": [
+          [
+            1643,
+            18,
+            "HP:0025084"
+          ]
+        ],
+        "context": ", and fragile hairs with apopecia since infancy (Fig. 1A). There were numerous keratotic follicular papules on her occipital area (Fig. 1B). The secondary hair, eyebrow, eyelashes, fingernails, and systemic "
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 811,
+        "length": 12,
+        "text": "disabilities",
+        "concept": "HP:0004302",
+        "overlap": [
+          [
+            806,
+            17,
+            "HP:0001288"
+          ]
+        ],
+        "context": " seizures (11/14), behavioral disturbances (5/14), mild intellectual disability (3/14), and/or gait disabilities (2/14). Brain magnetic resonance imaging revealed hippocampal sclerosis in the 8-year-old proband, "
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 10066,
+        "length": 30,
+        "text": "bilateral tonic-clonic attacks",
+        "concept": "HP:0002069",
+        "overlap": [
+          [
+            10040,
+            56,
+            "HP:0007334"
+          ]
+        ],
+        "context": ", had focal seizures with head and eye version, viscerosensory auras, and occasional evolution into bilateral tonic-clonic attacks, starting in adulthood, with mild-to-moderate psychiatric disturbances in all but individual III-2."
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 10143,
+        "length": 24,
+        "text": "psychiatric disturbances",
+        "concept": "HP:0000708",
+        "overlap": [
+          [
+            10126,
+            41,
+            "HP:0001256"
+          ]
+        ],
+        "context": "asional evolution into bilateral tonic-clonic attacks, starting in adulthood, with mild-to-moderate psychiatric disturbances in all but individual III-2."
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 13030,
+        "length": 14,
+        "text": "focal seizures",
+        "concept": "HP:0007359",
+        "overlap": [
+          [
+            13004,
+            40,
+            "HP:0007334"
+          ]
+        ],
+        "context": "ral factors may contribute to HS, such as prolonged febrile seizures, and repetitive generalized or focal seizures, especially during status epilepticus. In our case, we have no definite explanation of this finding"
+      }
+    ],
+    "fn:overlap_same_concept": [
+      {
+        "pmc_id": "10553122",
+        "offset": 2019,
+        "length": 21,
+        "text": "learning disabilities",
+        "concept": "HP:0001328",
+        "overlap": [
+          [
+            2019,
+            8,
+            "HP:0001328"
+          ],
+          [
+            2028,
+            12,
+            "HP:0004302"
+          ]
+        ],
+        "context": "velopmental delays, seizures, and intellectual disabilities in accompany with developmental delays, learning disabilities, or significant behavioral abnormalities such as autism. According to the literature, this syndrome"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 10615,
+        "length": 26,
+        "text": "increased leukocyte levels",
+        "concept": "HP:0001974",
+        "overlap": [
+          [
+            10615,
+            19,
+            "HP:0001974"
+          ]
+        ],
+        "context": "Laboratory examination: Repeated blood routine tests all showed increased leukocyte levels beyond the upper limit of normal range, with the highest recorded as 28.67 x 109/L, which was mainl"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 10336,
+        "length": 15,
+        "text": "nail-bed pallor",
+        "concept": "HP:0000980",
+        "overlap": [
+          [
+            10345,
+            6,
+            "HP:0000980"
+          ]
+        ],
+        "context": "wel sounds were 3 times/min. Examination of the fingers suggested normal capillary filling time and nail-bed pallor but with no cyanosis. No abnormality was found in muscle tone test of the extremities. The clinical"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 9024,
+        "length": 30,
+        "text": "elevated levels of white blood",
+        "concept": "HP:0001974",
+        "overlap": [
+          [
+            9024,
+            36,
+            "HP:0001974"
+          ]
+        ],
+        "context": "evels. During the hospitalization, recurrent fever was noted 4 times during 1 month, accompanied by elevated levels of white blood cells, C-reactive protein and procalcitonin. Besides, 2 apnea episodes were also observed within 27"
+      },
+      {
+        "pmc_id": "10789033",
+        "offset": 6110,
+        "length": 13,
+        "text": "fits of anger",
+        "concept": "HP:0031473",
+        "overlap": [
+          [
+            6118,
+            5,
+            "HP:0031473"
+          ]
+        ],
+        "context": "detected with a borderline IQ. Behavioral problems were observed, which included aggressiveness and fits of anger. The patient was of short stature as his height was lower than the 3rd percentile. Intermittent hea"
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 3070,
+        "length": 19,
+        "text": "irregular menstrual",
+        "concept": "HP:0000858",
+        "overlap": [
+          [
+            3070,
+            26,
+            "HP:0000858"
+          ]
+        ],
+        "context": "ted in Figure 2B (5). At 18 years of age, there were signs of insulin resistance, facial hirsutism, irregular menstrual cycles and androgenetic alopecia. In addition, ultrasonography revealed enlarged, micro-polycystic "
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 3177,
+        "length": 19,
+        "text": "-polycystic ovaries",
+        "concept": "HP:0000147",
+        "overlap": [
+          [
+            3178,
+            18,
+            "HP:0000147"
+          ]
+        ],
+        "context": "ar menstrual cycles and androgenetic alopecia. In addition, ultrasonography revealed enlarged, micro-polycystic ovaries, leading to a diagnosis of polycystic ovary syndrome. The patient was diagnosed with diabetes melli"
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 7949,
+        "length": 21,
+        "text": "sensorineural hearing",
+        "concept": "HP:0000407",
+        "overlap": [
+          [
+            7949,
+            26,
+            "HP:0000407"
+          ]
+        ],
+        "context": "good practice towards precision medicine. Consequently, the patient was further diagnosed with mild sensorineural hearing loss, multiple cervical lipomatosis, proximal myopathy, fatigue, cognitive impairment, sensory atax"
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 2383,
+        "length": 9,
+        "text": "diabetes,",
+        "concept": "HP:0000819",
+        "overlap": [
+          [
+            2383,
+            8,
+            "HP:0000819"
+          ]
+        ],
+        "context": "een reported (4), and this variant has been associated with other phenotypes including lipomatosis, diabetes, deafness and psychiatric disorders. The objective of this case report was to describe a mitochondri"
+      },
+      {
+        "pmc_id": "11221135",
+        "offset": 1541,
+        "length": 32,
+        "text": "sparse, short, and fragile hairs",
+        "concept": "HP:0002299",
+        "overlap": [
+          [
+            1560,
+            13,
+            "HP:0002299"
+          ]
+        ],
+        "context": "The proband (II-2) was a 30-year-old woman. She developed sparse, short, and fragile hairs with apopecia since infancy (Fig. 1A). There were numerous keratotic follicular papules on her occi"
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 986,
+        "length": 31,
+        "text": "-deficit/hyperactivity disorder",
+        "concept": "HP:0007018",
+        "overlap": [
+          [
+            977,
+            40,
+            "HP:0007018"
+          ]
+        ],
+        "context": "sclerosis in the 8-year-old proband, who also had drug-responsive absences associated with attention-deficit/hyperactivity disorder. His 52-year-old father, who had focal epilepsy since childhood, developed paraparesis related to a"
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 9676,
+        "length": 30,
+        "text": "bilateral tonic-clonic attacks",
+        "concept": "HP:0002069",
+        "overlap": [
+          [
+            9686,
+            20,
+            "HP:0002069"
+          ]
+        ],
+        "context": "ively. All had an almost identical epilepsy phenotype consisting of focal (head and eye version) to bilateral tonic-clonic attacks, starting in adulthood. Only individual II-3 had mild ID. The remaining three had normal intelligen"
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 4561,
+        "length": 31,
+        "text": "-deficit/hyperactivity disorder",
+        "concept": "HP:0007018",
+        "overlap": [
+          [
+            4552,
+            40,
+            "HP:0007018"
+          ]
+        ],
+        "context": "etation (CI). Our c.446C>T (p.P149L) variant is highlighted with red. aa, aminoacid; ADHD, attention-deficit/hyperactivity disorder; AF, allelic frequency; FLAIR, fluid-attenuated inversion recovery; LoF, loss of function."
+      },
+      {
+        "pmc_id": "11765409",
+        "offset": 2598,
+        "length": 33,
+        "text": "progressive loss of visual acuity",
+        "concept": "HP:0000529",
+        "overlap": [
+          [
+            2610,
+            21,
+            "HP:0000529"
+          ]
+        ],
+        "context": "been a report of a compound heterozygote of p.(R124C) (classic LCD) and p.(G470X) presenting with a progressive loss of visual acuity since childhood; exhibiting dense, subepithelial opacities without accompanying typical lattice lin"
+      },
+      {
+        "pmc_id": "11765409",
+        "offset": 3540,
+        "length": 26,
+        "text": "painful recurrent erosions",
+        "concept": "HP:0000495",
+        "overlap": [
+          [
+            3548,
+            18,
+            "HP:0000495"
+          ]
+        ],
+        "context": "istance visual acuity (CDVA) of 20/200 (OD) and 20/150 (OS). The patient had previously experienced painful recurrent erosions but had no history of trauma or ocular surgery."
+      },
+      {
+        "pmc_id": "11765409",
+        "offset": 17291,
+        "length": 16,
+        "text": "amyloid deposits",
+        "concept": "HP:0011034",
+        "overlap": [
+          [
+            17291,
+            7,
+            "HP:0011034"
+          ]
+        ],
+        "context": "ntified in GCD1 aggregates, while 18 and 24 unique proteins were isolated from stromal and Bowman's amyloid deposits in LCD1. They also showed the presence of the HtrA1 protease in LCD1-amyloid aggregates. These data"
+      },
+      {
+        "pmc_id": "11871647",
+        "offset": 2032,
+        "length": 32,
+        "text": "autosomal dominant inherited NDD",
+        "concept": "HP:0012759",
+        "overlap": [
+          [
+            2061,
+            3,
+            "HP:0012759"
+          ]
+        ],
+        "context": " genetic factors dominate. Bosch-Boonstra-Schaaf optic atrophy syndrome (BBSOAS, OMIM#615722) is an autosomal dominant inherited NDD first reported in 2014. BBSOAS exhibits diverse clinical manifestations characterized by various de"
+      },
+      {
+        "pmc_id": "11871647",
+        "offset": 16182,
+        "length": 39,
+        "text": "language and motor function impairments",
+        "concept": "HP:0004302",
+        "overlap": [
+          [
+            16195,
+            26,
+            "HP:0004302"
+          ]
+        ],
+        "context": "nd that variants within the NR2F1 DBD might cause more severe clinical manifestations, particularly language and motor function impairments. The DBD has two highly conserved ZF structures, and variants within this region can significantly "
+      },
+      {
+        "pmc_id": "11906559",
+        "offset": 7105,
+        "length": 27,
+        "text": "Achilles tendon lengthening",
+        "concept": "HP:0001771",
+        "overlap": [
+          [
+            7105,
+            15,
+            "HP:0001771"
+          ]
+        ],
+        "context": "c patella alta, iliac crest and femoral head misalignment, and sandal gap. He underwent surgery for Achilles tendon lengthening to solve left pes planus in childhood, and surgery for the correction of congenital dysplasia in th"
+      },
+      {
+        "pmc_id": "11906559",
+        "offset": 8028,
+        "length": 23,
+        "text": "retroversion of femoral",
+        "concept": "HP:0008796",
+        "overlap": [
+          [
+            8028,
+            28,
+            "HP:0008796"
+          ]
+        ],
+        "context": "at femoral trochlea on both sides (arrows); D 3D CT scan image of both dislocated patellae; (E) the retroversion of femoral neck seen in CT scan reconstruction"
+      }
+    ],
+    "fn:false_negated_exact": [
+      {
+        "pmc_id": "10553122",
+        "offset": 11612,
+        "length": 20,
+        "text": "antinuclear antibody",
+        "concept": "HP:0003493",
+        "overlap": [],
+        "context": "o anomaly was detected pertaining to the thyroid function, as well as the levels of immunoglobulin, antinuclear antibody, 25-hydroxyvitamin D and urinary calcium/creatinine ratio."
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 4682,
+        "length": 2,
+        "text": "DM",
+        "concept": "HP:0000819",
+        "overlap": [],
+        "context": "i-diabetic drugs. She has two brothers of 30 and 47 years of age, respectively, neither of whom has DM."
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 10100,
+        "length": 13,
+        "text": "lipodystrophy",
+        "concept": "HP:0009125",
+        "overlap": [],
+        "context": "sis is plausible, the same paper also stated that neither metabolic phenotype nor potential partial lipodystrophy signs were systematically investigated in patients harboring mtDNA mutations, particularly in those"
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 8693,
+        "length": 19,
+        "text": "developmental delay",
+        "concept": "HP:0001263",
+        "overlap": [],
+        "context": "as reported in the literature. The patient differed from the other three patients in the absence of developmental delay and cardiac abnormalities. However, both our patient and the three other patients shared visual imp"
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 7970,
+        "length": 11,
+        "text": "motor delay",
+        "concept": "HP:0001270",
+        "overlap": [],
+        "context": "irment, similar to the majority of patients described in the literature (Table 2), she did not have motor delay. Based on this latest clinical evidence and the absence of the deletion of the WAC gene, we specula"
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 8717,
+        "length": 21,
+        "text": "cardiac abnormalities",
+        "concept": "HP:0001627",
+        "overlap": [],
+        "context": "ature. The patient differed from the other three patients in the absence of developmental delay and cardiac abnormalities. However, both our patient and the three other patients shared visual impairment and some facial dy"
+      },
+      {
+        "pmc_id": "11203018",
+        "offset": 9806,
+        "length": 11,
+        "text": "motor delay",
+        "concept": "HP:0001270",
+        "overlap": [],
+        "context": "e deletion in this chromosomal region with the absence of a WAC gene deletion and that did not have motor delay. However, it would be useful to further investigate this region to better understand the exact geno"
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 13214,
+        "length": 8,
+        "text": "seizures",
+        "concept": "HP:0001250",
+        "overlap": [],
+        "context": "te explanation of this finding, as the proband did not experience febrile, prolonged, or repetitive seizures. Interestingly, other than brain-blood barrier, GLUT1 receptors are widely but heterogeneously expr"
+      },
+      {
+        "pmc_id": "11871647",
+        "offset": 10296,
+        "length": 19,
+        "text": "optic nerve atrophy",
+        "concept": "HP:0000648",
+        "overlap": [],
+        "context": "s. Fundoscopic examination of the patient shows bilateral optic nerve pallor (a, b). No significant optic nerve atrophy is observed on magnetic resonance imaging scans (c, d)"
+      },
+      {
+        "pmc_id": "11871647",
+        "offset": 18094,
+        "length": 29,
+        "text": "neurodevelopmental phenotypes",
+        "concept": "HP:0012759",
+        "overlap": [],
+        "context": "e validated through large-scale studies. There are currently no effective treatment options for the neurodevelopmental phenotypes associated with BBSOAS. Antisense oligonucleotide-mediated gene therapy, which may regulate NR2F1 p"
+      },
+      {
+        "pmc_id": "11906559",
+        "offset": 3792,
+        "length": 31,
+        "text": "pulmonary arterial hypertension",
+        "concept": "HP:0002092",
+        "overlap": [],
+        "context": "Ischio-coxo-podo-patellar syndrome with or without pulmonary arterial hypertension (ICPPS; OMIM #147891) is a rare autosomal dominant disorder with multiple skeletal abnormalities, i"
+      },
+      {
+        "pmc_id": "11986149",
+        "offset": 8981,
+        "length": 25,
+        "text": "cranial nerve involvement",
+        "concept": "HP:0001291",
+        "overlap": [],
+        "context": "ech was also noted. The neurological examination showed bilateral facial diplegia without any other cranial nerve involvement, mild distal muscle weakness in all limbs, weak deep tendon reflexes in the upper limbs, in the abs"
+      },
+      {
+        "pmc_id": "12017973",
+        "offset": 1561,
+        "length": 19,
+        "text": "abnormal hemoglobin",
+        "concept": "HP:0011902",
+        "overlap": [],
+        "context": "ld Chinese girl was diagnosed with diabetes mellitus and severe sensorineural hearing loss, without abnormal hemoglobin. DNA sequencing revealed a novel compound heterozygous variant of c.808-1G > A and c.1228C > T (p.G"
+      },
+      {
+        "pmc_id": "12017973",
+        "offset": 18138,
+        "length": 12,
+        "text": "hearing loss",
+        "concept": "HP:0000365",
+        "overlap": [],
+        "context": "y. Indeed, some affected individuals have megaloblastic anemia and diabetes at an early age, but no hearing loss. For the patient in this study, she had signs of sensorineural hearing loss and diabetes mellitus, "
+      },
+      {
+        "pmc_id": "12059664",
+        "offset": 11866,
+        "length": 13,
+        "text": "short stature",
+        "concept": "HP:0004322",
+        "overlap": [],
+        "context": " genetic findings and had overlapping phenotypes, including neurodevelopmental delay, microcephaly, short stature, dysmorphic craniofacial features, congenital anomalies, and hearing loss. Three of the fewer than "
+      },
+      {
+        "pmc_id": "12059664",
+        "offset": 20573,
+        "length": 7,
+        "text": "seizure",
+        "concept": "HP:0001250",
+        "overlap": [],
+        "context": "with status epilepticus and was hospitalized, but the electroencephalogram did not show any ongoing seizure tendency, so no ongoing anticonvulsants were prescribed. She had a history of behavioral outbursts."
+      },
+      {
+        "pmc_id": "12059664",
+        "offset": 11852,
+        "length": 12,
+        "text": "microcephaly",
+        "concept": "HP:0000252",
+        "overlap": [],
+        "context": "ther causative genetic findings and had overlapping phenotypes, including neurodevelopmental delay, microcephaly, short stature, dysmorphic craniofacial features, congenital anomalies, and hearing loss. Three of "
+      },
+      {
+        "pmc_id": "12059664",
+        "offset": 11826,
+        "length": 24,
+        "text": "neurodevelopmental delay",
+        "concept": "HP:0012758",
+        "overlap": [],
+        "context": "to Rican descent, had no other causative genetic findings and had overlapping phenotypes, including neurodevelopmental delay, microcephaly, short stature, dysmorphic craniofacial features, congenital anomalies, and hearing l"
+      },
+      {
+        "pmc_id": "12078887",
+        "offset": 5873,
+        "length": 8,
+        "text": "lymphoma",
+        "concept": "HP:0002665",
+        "overlap": [],
+        "context": "however, demonstrated a lymphocyte-depleted lymph node comprised mostly of T cells without residual lymphoma. The patient remains in follow-up with no evidence of relapsed lymphoma. Peripheral blood flow cyto"
+      },
+      {
+        "pmc_id": "12078887",
+        "offset": 6944,
+        "length": 8,
+        "text": "lymphoma",
+        "concept": "HP:0002665",
+        "overlap": [],
+        "context": "tiple biopsies of this mass demonstrate paracortical and follicular hyperplasia without evidence of lymphoma. Due to clinical concern, the patient was treated with further chemotherapy (R-IVAC). Targeted NGS "
+      }
+    ],
+    "fp:overlap_same_concept": [
+      {
+        "pmc_id": "10553122",
+        "offset": 9024,
+        "length": 36,
+        "text": "elevated levels of white blood cells",
+        "concept": "HP:0001974",
+        "overlap": [
+          [
+            9024,
+            30,
+            "HP:0001974"
+          ]
+        ],
+        "context": "evels. During the hospitalization, recurrent fever was noted 4 times during 1 month, accompanied by elevated levels of white blood cells, C-reactive protein and procalcitonin. Besides, 2 apnea episodes were also observed within 27 days."
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 2019,
+        "length": 8,
+        "text": "learning",
+        "concept": "HP:0001328",
+        "overlap": [
+          [
+            2019,
+            21,
+            "HP:0001328"
+          ]
+        ],
+        "context": "velopmental delays, seizures, and intellectual disabilities in accompany with developmental delays, learning disabilities, or significant behavioral abnormalities such as autism. According to the literature, "
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 10615,
+        "length": 19,
+        "text": "increased leukocyte",
+        "concept": "HP:0001974",
+        "overlap": [
+          [
+            10615,
+            26,
+            "HP:0001974"
+          ]
+        ],
+        "context": "Laboratory examination: Repeated blood routine tests all showed increased leukocyte levels beyond the upper limit of normal range, with the highest recorded as 28.67 x 109/L, which wa"
+      },
+      {
+        "pmc_id": "10553122",
+        "offset": 10345,
+        "length": 6,
+        "text": "pallor",
+        "concept": "HP:0000980",
+        "overlap": [
+          [
+            10336,
+            15,
+            "HP:0000980"
+          ]
+        ],
+        "context": "s were 3 times/min. Examination of the fingers suggested normal capillary filling time and nail-bed pallor but with no cyanosis. No abnormality was found in muscle tone test of the extremities. The clinical"
+      },
+      {
+        "pmc_id": "10789033",
+        "offset": 6118,
+        "length": 5,
+        "text": "anger",
+        "concept": "HP:0031473",
+        "overlap": [
+          [
+            6110,
+            13,
+            "HP:0031473"
+          ]
+        ],
+        "context": " with a borderline IQ. Behavioral problems were observed, which included aggressiveness and fits of anger. The patient was of short stature as his height was lower than the 3rd percentile. Intermittent hea"
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 3070,
+        "length": 26,
+        "text": "irregular menstrual cycles",
+        "concept": "HP:0000858",
+        "overlap": [
+          [
+            3070,
+            19,
+            "HP:0000858"
+          ]
+        ],
+        "context": "ted in Figure 2B (5). At 18 years of age, there were signs of insulin resistance, facial hirsutism, irregular menstrual cycles and androgenetic alopecia. In addition, ultrasonography revealed enlarged, micro-polycystic ovaries"
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 7949,
+        "length": 26,
+        "text": "sensorineural hearing loss",
+        "concept": "HP:0000407",
+        "overlap": [
+          [
+            7949,
+            21,
+            "HP:0000407"
+          ]
+        ],
+        "context": "good practice towards precision medicine. Consequently, the patient was further diagnosed with mild sensorineural hearing loss, multiple cervical lipomatosis, proximal myopathy, fatigue, cognitive impairment, sensory ataxia, a"
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 2383,
+        "length": 8,
+        "text": "diabetes",
+        "concept": "HP:0000819",
+        "overlap": [
+          [
+            2383,
+            9,
+            "HP:0000819"
+          ]
+        ],
+        "context": "een reported (4), and this variant has been associated with other phenotypes including lipomatosis, diabetes, deafness and psychiatric disorders. The objective of this case report was to describe a mitochondr"
+      },
+      {
+        "pmc_id": "11196099",
+        "offset": 3178,
+        "length": 18,
+        "text": "polycystic ovaries",
+        "concept": "HP:0000147",
+        "overlap": [
+          [
+            3177,
+            19,
+            "HP:0000147"
+          ]
+        ],
+        "context": "r menstrual cycles and androgenetic alopecia. In addition, ultrasonography revealed enlarged, micro-polycystic ovaries, leading to a diagnosis of polycystic ovary syndrome. The patient was diagnosed with diabetes melli"
+      },
+      {
+        "pmc_id": "11221135",
+        "offset": 1560,
+        "length": 13,
+        "text": "fragile hairs",
+        "concept": "HP:0002299",
+        "overlap": [
+          [
+            1541,
+            32,
+            "HP:0002299"
+          ],
+          [
+            1541,
+            32,
+            "HP:0008070"
+          ]
+        ],
+        "context": "The proband (II-2) was a 30-year-old woman. She developed sparse, short, and fragile hairs with apopecia since infancy (Fig. 1A). There were numerous keratotic follicular papules on her occi"
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 4552,
+        "length": 40,
+        "text": "attention-deficit/hyperactivity disorder",
+        "concept": "HP:0007018",
+        "overlap": [
+          [
+            4561,
+            31,
+            "HP:0007018"
+          ]
+        ],
+        "context": "g interpretation (CI). Our c.446C>T (p.P149L) variant is highlighted with red. aa, aminoacid; ADHD, attention-deficit/hyperactivity disorder; AF, allelic frequency; FLAIR, fluid-attenuated inversion recovery; LoF, loss of function."
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 9686,
+        "length": 20,
+        "text": "tonic-clonic attacks",
+        "concept": "HP:0002069",
+        "overlap": [
+          [
+            9676,
+            30,
+            "HP:0002069"
+          ]
+        ],
+        "context": " had an almost identical epilepsy phenotype consisting of focal (head and eye version) to bilateral tonic-clonic attacks, starting in adulthood. Only individual II-3 had mild ID. The remaining three had normal intelligen"
+      },
+      {
+        "pmc_id": "11235872",
+        "offset": 977,
+        "length": 40,
+        "text": "attention-deficit/hyperactivity disorder",
+        "concept": "HP:0007018",
+        "overlap": [
+          [
+            986,
+            31,
+            "HP:0007018"
+          ]
+        ],
+        "context": "pocampal sclerosis in the 8-year-old proband, who also had drug-responsive absences associated with attention-deficit/hyperactivity disorder. His 52-year-old father, who had focal epilepsy since childhood, developed paraparesis related to a"
+      },
+      {
+        "pmc_id": "11765409",
+        "offset": 3548,
+        "length": 18,
+        "text": "recurrent erosions",
+        "concept": "HP:0000495",
+        "overlap": [
+          [
+            3540,
+            26,
+            "HP:0000495"
+          ]
+        ],
+        "context": "visual acuity (CDVA) of 20/200 (OD) and 20/150 (OS). The patient had previously experienced painful recurrent erosions but had no history of trauma or ocular surgery."
+      },
+      {
+        "pmc_id": "11765409",
+        "offset": 17291,
+        "length": 7,
+        "text": "amyloid",
+        "concept": "HP:0011034",
+        "overlap": [
+          [
+            17291,
+            16,
+            "HP:0011034"
+          ]
+        ],
+        "context": "ntified in GCD1 aggregates, while 18 and 24 unique proteins were isolated from stromal and Bowman's amyloid deposits in LCD1. They also showed the presence of the HtrA1 protease in LCD1-amyloid aggregates. T"
+      },
+      {
+        "pmc_id": "11765409",
+        "offset": 2610,
+        "length": 21,
+        "text": "loss of visual acuity",
+        "concept": "HP:0000529",
+        "overlap": [
+          [
+            2598,
+            33,
+            "HP:0000529"
+          ]
+        ],
+        "context": "t of a compound heterozygote of p.(R124C) (classic LCD) and p.(G470X) presenting with a progressive loss of visual acuity since childhood; exhibiting dense, subepithelial opacities without accompanying typical lattice lin"
+      },
+      {
+        "pmc_id": "11871647",
+        "offset": 16195,
+        "length": 26,
+        "text": "motor function impairments",
+        "concept": "HP:0004302",
+        "overlap": [
+          [
+            16182,
+            39,
+            "HP:0002463"
+          ],
+          [
+            16182,
+            39,
+            "HP:0004302"
+          ]
+        ],
+        "context": "nts within the NR2F1 DBD might cause more severe clinical manifestations, particularly language and motor function impairments. The DBD has two highly conserved ZF structures, and variants within this region can significantly "
+      },
+      {
+        "pmc_id": "11871647",
+        "offset": 2061,
+        "length": 3,
+        "text": "NDD",
+        "concept": "HP:0012759",
+        "overlap": [
+          [
+            2032,
+            32,
+            "HP:0012759"
+          ]
+        ],
+        "context": "sch-Boonstra-Schaaf optic atrophy syndrome (BBSOAS, OMIM#615722) is an autosomal dominant inherited NDD first reported in 2014. BBSOAS exhibits diverse clinical manifestations characterized by various de"
+      },
+      {
+        "pmc_id": "11906559",
+        "offset": 7105,
+        "length": 15,
+        "text": "Achilles tendon",
+        "concept": "HP:0001771",
+        "overlap": [
+          [
+            7105,
+            27,
+            "HP:0001771"
+          ]
+        ],
+        "context": "c patella alta, iliac crest and femoral head misalignment, and sandal gap. He underwent surgery for Achilles tendon lengthening to solve left pes planus in childhood, and surgery for the correction of congenital dys"
+      },
+      {
+        "pmc_id": "11906559",
+        "offset": 8028,
+        "length": 28,
+        "text": "retroversion of femoral neck",
+        "concept": "HP:0008796",
+        "overlap": [
+          [
+            8028,
+            23,
+            "HP:0008796"
+          ]
+        ],
+        "context": "at femoral trochlea on both sides (arrows); D 3D CT scan image of both dislocated patellae; (E) the retroversion of femoral neck seen in CT scan reconstruction"
+      }
+    ],
+    "fn:exact_span_wrong_concept": [
+      {
+        "pmc_id": "11765409",
+        "offset": 4017,
+        "length": 17,
+        "text": "stromal opacities",
+        "concept": "HP:0007957",
+        "overlap": [
+          [
+            4017,
+            17,
+            "HP:0007759"
+          ]
+        ],
+        "context": "RTVue-100; Optovue Inc., Fremont, CA, USA) confirmed that the proband had thick central superficial stromal opacities (Figure 1C,F). The lattice lines of the proband were more numerous in the mid-periphery, reaching t"
+      },
+      {
+        "pmc_id": "11765409",
+        "offset": 583,
+        "length": 16,
+        "text": "decreased vision",
+        "concept": "HP:0007663",
+        "overlap": [
+          [
+            583,
+            16,
+            "HP:0000505"
+          ]
+        ],
+        "context": "been reported. (2) Case report: A 39-year-old male (proband) presented to our clinic complaining of decreased vision bilaterally. A slit-lamp examination revealed corneal opacities consistent with classic LCD. Contra"
+      },
+      {
+        "pmc_id": "11906559",
+        "offset": 4722,
+        "length": 20,
+        "text": "pulmonary hypoplasia",
+        "concept": "HP:0002089",
+        "overlap": [
+          [
+            4722,
+            20,
+            "HP:0006703"
+          ]
+        ],
+        "context": "ormation. Biallelic mutations in the TBX4 gene are responsible for posterior amelia with pelvic and pulmonary hypoplasia syndrome (PAPPAS, #601360), a lethal condition. This gene encodes for the TBX4 protein (T-box trans"
+      },
+      {
+        "pmc_id": "11906559",
+        "offset": 10063,
+        "length": 28,
+        "text": "patellar lateral dislocation",
+        "concept": "HP:0006397",
+        "overlap": [
+          [
+            10063,
+            28,
+            "HP:0002999"
+          ]
+        ],
+        "context": "verity, the affected females exhibited a milder phenotype than the affected males, limited to minor patellar lateral dislocation that did not interfere with normal daily activities, although causing progressive degeneration of t"
+      },
+      {
+        "pmc_id": "11919040",
+        "offset": 13997,
+        "length": 12,
+        "text": "inflammation",
+        "concept": "HP:0012115",
+        "overlap": [
+          [
+            13997,
+            12,
+            "-1"
+          ]
+        ],
+        "context": "weight < 3%, and DQ 63); abnormal liver function with nodular cirrhosis, bile duct injury, and mild inflammation (G1-2S4); thrombocytopenia/coagulopathy; and prone to nausea/diarrhea. Hypotonia and microcephaly a"
+      },
+      {
+        "pmc_id": "11986149",
+        "offset": 14123,
+        "length": 12,
+        "text": "cleft palate",
+        "concept": "HP:0000202",
+        "overlap": [
+          [
+            14123,
+            12,
+            "HP:0000175"
+          ]
+        ],
+        "context": "l disability. Among the facial dysmorphisms, retro/micrognathia is prevalent, often associated with cleft palate and hypoglossia, contributing to the Pierre Robin sequence in half of the cases. Additionally, nons"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 11202,
+        "length": 19,
+        "text": "dysmorphic features",
+        "concept": "HP:0001999",
+        "overlap": [
+          [
+            11202,
+            19,
+            "-1"
+          ]
+        ],
+        "context": "was referred for neurological assessment. He was diagnosed with mild ID, ADHD, axial hypotonia, and dysmorphic features, including hypertelorism, a broad nasal bridge, tented upper lip vermillion, prominent nasal colume"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 251,
+        "length": 3,
+        "text": "NDD",
+        "concept": "HP:0012759",
+        "overlap": [
+          [
+            251,
+            3,
+            "HP:0012758"
+          ]
+        ],
+        "context": "Background: Kleefstra syndrome 1(KLEFS1, OMIM#610253) is a rare neurodevelopmental disorder (NDD) instigated by heterozygous variants or microdeletions occurring in the 9q34.4 genomic region of th"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 8776,
+        "length": 19,
+        "text": "dysmorphic features",
+        "concept": "HP:0001999",
+        "overlap": [
+          [
+            8776,
+            19,
+            "-1"
+          ]
+        ],
+        "context": " mm ventricular septum defect detected on echocardiogram that subsequently resolved completely, and dysmorphic features along with a small penis. He underwent an endocrine workup, molecular analysis of the androgen rece"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 11171,
+        "length": 2,
+        "text": "ID",
+        "concept": "HP:0001249",
+        "overlap": [
+          [
+            11171,
+            2,
+            "HP:0002342"
+          ]
+        ],
+        "context": "At 5 years old, he was referred for neurological assessment. He was diagnosed with mild ID, ADHD, axial hypotonia, and dysmorphic features, including hypertelorism, a broad nasal bridge, ten"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 2033,
+        "length": 2,
+        "text": "ID",
+        "concept": "HP:0001249",
+        "overlap": [
+          [
+            2033,
+            2,
+            "HP:0002342"
+          ]
+        ],
+        "context": "tly re-calculated prevalence of 1:36,000. The syndrome is characterized by intellectual disability (ID), global developmental delay (GDD), hypotonia, attention deficit hyperactivity disorder (ADHD), and"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 2189,
+        "length": 15,
+        "text": "cardiac defects",
+        "concept": "HP:0031546",
+        "overlap": [
+          [
+            2189,
+            15,
+            "HP:0001627"
+          ]
+        ],
+        "context": "ion deficit hyperactivity disorder (ADHD), and distinctive facial features, with epilepsy/seizures, cardiac defects, genital anomalies, hearing loss, and behavioral and sleep disorders being present as less common c"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 8680,
+        "length": 25,
+        "text": "ventricular septum defect",
+        "concept": "HP:0011681",
+        "overlap": [
+          [
+            8680,
+            25,
+            "HP:0001629"
+          ]
+        ],
+        "context": "s neonatal period was notable for a prematurity-related Grade I intraventricular hemorrhage, a 3 mm ventricular septum defect detected on echocardiogram that subsequently resolved completely, and dysmorphic features along wit"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 9609,
+        "length": 2,
+        "text": "ID",
+        "concept": "HP:0001249",
+        "overlap": [
+          [
+            9609,
+            2,
+            "HP:0002342"
+          ]
+        ],
+        "context": "At 7 years old, he underwent evaluation at another institution and was diagnosed with moderate ID, ADHD, axial hypotonia, sleep disturbances, and frequent temper tantrums. Dysmorphic features obser"
+      },
+      {
+        "pmc_id": "12110769",
+        "offset": 2841,
+        "length": 28,
+        "text": "split hand foot malformation",
+        "concept": "HP:0001839",
+        "overlap": [
+          [
+            2841,
+            28,
+            "HP:0100257"
+          ]
+        ],
+        "context": "0B (SHFM6), FGFR1 (HH2), MAP3K20 (SFMMP), UBA2 (ACCES), and EPS15L1 (SHFM8). In addition, type 3 of split hand foot malformation with long bone deficiency (SHFLD3) is associated with duplications at 17p13.3 encompassing the BHLH"
+      },
+      {
+        "pmc_id": "12110769",
+        "offset": 474,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "concept": "HP:0000202",
+        "overlap": [
+          [
+            474,
+            16,
+            "HP:0000175"
+          ],
+          [
+            474,
+            16,
+            "HP:0410030"
+          ]
+        ],
+        "context": "ons or monogenic alterations known to be involved in the disease pathomechanism. On the other hand, cleft lip/palate (CL/P) usually results from polygenic and environmental factors, with the complex interplay of both"
+      },
+      {
+        "pmc_id": "12110769",
+        "offset": 3349,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "concept": "HP:0000202",
+        "overlap": [
+          [
+            3349,
+            16,
+            "HP:0000175"
+          ],
+          [
+            3349,
+            16,
+            "HP:0410030"
+          ]
+        ],
+        "context": "An isolated cleft lip/palate (CL/P), a sporadic facial malformation, is polygenic in nature. Several known genetic and environme"
+      },
+      {
+        "pmc_id": "12334843",
+        "offset": 11452,
+        "length": 21,
+        "text": "clonic limb movements",
+        "concept": "HP:5200295",
+        "overlap": [
+          [
+            11452,
+            21,
+            "HP:0002169"
+          ]
+        ],
+        "context": " At 6 months of age, the infant presented with focal seizures, characterized by ocular fixation and clonic limb movements. During hospitalization, recurrent seizures were recorded. At 9 months, the child could sit with su"
+      },
+      {
+        "pmc_id": "12334843",
+        "offset": 2230,
+        "length": 34,
+        "text": "degrees of intellectual disability",
+        "concept": "HP:0006887",
+        "overlap": [
+          [
+            2230,
+            34,
+            "HP:0001249"
+          ]
+        ],
+        "context": "ominant neurodevelopmental disorder characterized by global developmental delay, hypotonia, varying degrees of intellectual disability, speech delay, facial dysmorphism, and, in some cases, epilepsy. It was first described by Houge et"
+      },
+      {
+        "pmc_id": "12386172",
+        "offset": 23301,
+        "length": 29,
+        "text": "neurodevelopmental impairment",
+        "concept": "HP:0012759",
+        "overlap": [
+          [
+            23301,
+            29,
+            "HP:0012758"
+          ]
+        ],
+        "context": " landscape of early-onset and complex SPAST-related HSP by revealing a rare association with severe neurodevelopmental impairment, including ASD. It underscores the importance of considering SPAST variants cautiously in the diffe"
+      }
+    ],
+    "fp:exact_span_wrong_concept": [
+      {
+        "pmc_id": "11765409",
+        "offset": 583,
+        "length": 16,
+        "text": "decreased vision",
+        "concept": "HP:0000505",
+        "overlap": [
+          [
+            583,
+            16,
+            "HP:0007663"
+          ]
+        ],
+        "context": "been reported. (2) Case report: A 39-year-old male (proband) presented to our clinic complaining of decreased vision bilaterally. A slit-lamp examination revealed corneal opacities consistent with classic LCD. Contra"
+      },
+      {
+        "pmc_id": "11765409",
+        "offset": 4017,
+        "length": 17,
+        "text": "stromal opacities",
+        "concept": "HP:0007759",
+        "overlap": [
+          [
+            4017,
+            17,
+            "HP:0007957"
+          ]
+        ],
+        "context": "RTVue-100; Optovue Inc., Fremont, CA, USA) confirmed that the proband had thick central superficial stromal opacities (Figure 1C,F). The lattice lines of the proband were more numerous in the mid-periphery, reaching t"
+      },
+      {
+        "pmc_id": "11906559",
+        "offset": 4722,
+        "length": 20,
+        "text": "pulmonary hypoplasia",
+        "concept": "HP:0006703",
+        "overlap": [
+          [
+            4722,
+            20,
+            "HP:0002089"
+          ]
+        ],
+        "context": "ormation. Biallelic mutations in the TBX4 gene are responsible for posterior amelia with pelvic and pulmonary hypoplasia syndrome (PAPPAS, #601360), a lethal condition. This gene encodes for the TBX4 protein (T-box trans"
+      },
+      {
+        "pmc_id": "11906559",
+        "offset": 10063,
+        "length": 28,
+        "text": "patellar lateral dislocation",
+        "concept": "HP:0002999",
+        "overlap": [
+          [
+            10063,
+            28,
+            "HP:0006397"
+          ]
+        ],
+        "context": "verity, the affected females exhibited a milder phenotype than the affected males, limited to minor patellar lateral dislocation that did not interfere with normal daily activities, although causing progressive degeneration of t"
+      },
+      {
+        "pmc_id": "11919040",
+        "offset": 13997,
+        "length": 12,
+        "text": "inflammation",
+        "concept": "-1",
+        "overlap": [
+          [
+            13997,
+            12,
+            "HP:0012115"
+          ]
+        ],
+        "context": "weight < 3%, and DQ 63); abnormal liver function with nodular cirrhosis, bile duct injury, and mild inflammation (G1-2S4); thrombocytopenia/coagulopathy; and prone to nausea/diarrhea. Hypotonia and microcephaly a"
+      },
+      {
+        "pmc_id": "11986149",
+        "offset": 14123,
+        "length": 12,
+        "text": "cleft palate",
+        "concept": "HP:0000175",
+        "overlap": [
+          [
+            14123,
+            12,
+            "HP:0000202"
+          ]
+        ],
+        "context": "l disability. Among the facial dysmorphisms, retro/micrognathia is prevalent, often associated with cleft palate and hypoglossia, contributing to the Pierre Robin sequence in half of the cases. Additionally, nons"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 8680,
+        "length": 25,
+        "text": "ventricular septum defect",
+        "concept": "HP:0001629",
+        "overlap": [
+          [
+            8680,
+            25,
+            "HP:0011681"
+          ]
+        ],
+        "context": "s neonatal period was notable for a prematurity-related Grade I intraventricular hemorrhage, a 3 mm ventricular septum defect detected on echocardiogram that subsequently resolved completely, and dysmorphic features along wit"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 9609,
+        "length": 2,
+        "text": "ID",
+        "concept": "HP:0002342",
+        "overlap": [
+          [
+            9609,
+            2,
+            "HP:0001249"
+          ]
+        ],
+        "context": "At 7 years old, he underwent evaluation at another institution and was diagnosed with moderate ID, ADHD, axial hypotonia, sleep disturbances, and frequent temper tantrums. Dysmorphic features obser"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 11202,
+        "length": 19,
+        "text": "dysmorphic features",
+        "concept": "-1",
+        "overlap": [
+          [
+            11202,
+            19,
+            "HP:0001999"
+          ]
+        ],
+        "context": "was referred for neurological assessment. He was diagnosed with mild ID, ADHD, axial hypotonia, and dysmorphic features, including hypertelorism, a broad nasal bridge, tented upper lip vermillion, prominent nasal colume"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 251,
+        "length": 3,
+        "text": "NDD",
+        "concept": "HP:0012758",
+        "overlap": [
+          [
+            251,
+            3,
+            "HP:0012759"
+          ]
+        ],
+        "context": "Background: Kleefstra syndrome 1(KLEFS1, OMIM#610253) is a rare neurodevelopmental disorder (NDD) instigated by heterozygous variants or microdeletions occurring in the 9q34.4 genomic region of th"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 8776,
+        "length": 19,
+        "text": "dysmorphic features",
+        "concept": "-1",
+        "overlap": [
+          [
+            8776,
+            19,
+            "HP:0001999"
+          ]
+        ],
+        "context": " mm ventricular septum defect detected on echocardiogram that subsequently resolved completely, and dysmorphic features along with a small penis. He underwent an endocrine workup, molecular analysis of the androgen rece"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 2189,
+        "length": 15,
+        "text": "cardiac defects",
+        "concept": "HP:0001627",
+        "overlap": [
+          [
+            2189,
+            15,
+            "HP:0031546"
+          ]
+        ],
+        "context": "ion deficit hyperactivity disorder (ADHD), and distinctive facial features, with epilepsy/seizures, cardiac defects, genital anomalies, hearing loss, and behavioral and sleep disorders being present as less common c"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 11171,
+        "length": 2,
+        "text": "ID",
+        "concept": "HP:0002342",
+        "overlap": [
+          [
+            11171,
+            2,
+            "HP:0001249"
+          ]
+        ],
+        "context": "At 5 years old, he was referred for neurological assessment. He was diagnosed with mild ID, ADHD, axial hypotonia, and dysmorphic features, including hypertelorism, a broad nasal bridge, ten"
+      },
+      {
+        "pmc_id": "12110755",
+        "offset": 2033,
+        "length": 2,
+        "text": "ID",
+        "concept": "HP:0002342",
+        "overlap": [
+          [
+            2033,
+            2,
+            "HP:0001249"
+          ]
+        ],
+        "context": "tly re-calculated prevalence of 1:36,000. The syndrome is characterized by intellectual disability (ID), global developmental delay (GDD), hypotonia, attention deficit hyperactivity disorder (ADHD), and"
+      },
+      {
+        "pmc_id": "12110769",
+        "offset": 3349,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "concept": "HP:0410030",
+        "overlap": [
+          [
+            3349,
+            16,
+            "HP:0000202"
+          ]
+        ],
+        "context": "An isolated cleft lip/palate (CL/P), a sporadic facial malformation, is polygenic in nature. Several known genetic and environme"
+      },
+      {
+        "pmc_id": "12110769",
+        "offset": 3349,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "concept": "HP:0000175",
+        "overlap": [
+          [
+            3349,
+            16,
+            "HP:0000202"
+          ]
+        ],
+        "context": "An isolated cleft lip/palate (CL/P), a sporadic facial malformation, is polygenic in nature. Several known genetic and environme"
+      },
+      {
+        "pmc_id": "12110769",
+        "offset": 2841,
+        "length": 28,
+        "text": "split hand foot malformation",
+        "concept": "HP:0100257",
+        "overlap": [
+          [
+            2841,
+            28,
+            "HP:0001839"
+          ]
+        ],
+        "context": "0B (SHFM6), FGFR1 (HH2), MAP3K20 (SFMMP), UBA2 (ACCES), and EPS15L1 (SHFM8). In addition, type 3 of split hand foot malformation with long bone deficiency (SHFLD3) is associated with duplications at 17p13.3 encompassing the BHLH"
+      },
+      {
+        "pmc_id": "12110769",
+        "offset": 474,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "concept": "HP:0000175",
+        "overlap": [
+          [
+            474,
+            16,
+            "HP:0000202"
+          ]
+        ],
+        "context": "ons or monogenic alterations known to be involved in the disease pathomechanism. On the other hand, cleft lip/palate (CL/P) usually results from polygenic and environmental factors, with the complex interplay of both"
+      },
+      {
+        "pmc_id": "12110769",
+        "offset": 474,
+        "length": 16,
+        "text": "cleft lip/palate",
+        "concept": "HP:0410030",
+        "overlap": [
+          [
+            474,
+            16,
+            "HP:0000202"
+          ]
+        ],
+        "context": "ons or monogenic alterations known to be involved in the disease pathomechanism. On the other hand, cleft lip/palate (CL/P) usually results from polygenic and environmental factors, with the complex interplay of both"
+      },
+      {
+        "pmc_id": "12334843",
+        "offset": 2230,
+        "length": 34,
+        "text": "degrees of intellectual disability",
+        "concept": "HP:0001249",
+        "overlap": [
+          [
+            2230,
+            34,
+            "HP:0006887"
+          ]
+        ],
+        "context": "ominant neurodevelopmental disorder characterized by global developmental delay, hypotonia, varying degrees of intellectual disability, speech delay, facial dysmorphism, and, in some cases, epilepsy. It was first described by Houge et"
+      }
+    ]
+  },
+  "scope": "Diagnostic on reused development documents; not a new validation score."
+}

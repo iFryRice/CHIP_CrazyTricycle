@@ -1,0 +1,632 @@
+{
+  "counts": {
+    "tn": 4359,
+    "tp": 1350,
+    "fp": 767,
+    "fp_no_gold_mention": 297,
+    "fp_not_any_patient_but_gold_mention": 330,
+    "fn": 287,
+    "fp_wrong_patient": 140
+  },
+  "breakdown": {
+    "singleton": {
+      "tn": 289,
+      "tp": 422,
+      "fp": 218,
+      "fn": 16
+    },
+    "max:generic": {
+      "tn": 3090,
+      "tp": 687,
+      "fp": 478,
+      "fn": 160
+    },
+    "max:clinical_owner": {
+      "tp": 972,
+      "fp": 384
+    },
+    "max:clinical": {
+      "tp": 1009,
+      "fp": 430,
+      "tn": 1515,
+      "fn": 184
+    },
+    "max:sole_sentence": {
+      "tp": 426,
+      "fp": 139
+    },
+    "max:local_owner": {
+      "tp": 1234,
+      "fp": 681
+    },
+    "max:same_paragraph": {
+      "tp": 1248,
+      "fp": 699,
+      "tn": 677,
+      "fn": 154
+    },
+    "max:shared_sentence": {
+      "fp": 4,
+      "tp": 10
+    }
+  },
+  "examples": {
+    "fp": [
+      {
+        "doc": "10313222",
+        "patient": "P1",
+        "concept": "HP:0001900",
+        "text": "elevated hemoglobin",
+        "section": "CASE",
+        "heading": "Case presentation",
+        "context": "btained at his annual well-child physical examination at age 10 years and 6 months had revealed the following: non-fasting blood glucose of 158 mg/dL, glucosuria, and an elevated hemoglobin HbA1c of 8.4% (normal range 4.4-5.6%). His repeat laboratory studies at our Endocrinology clinic showed an HbA1c of 8.7% and a non-fasting serum glucose level of 189 mg/dL.",
+        "markers": [
+          [
+            "P1",
+            "patient"
+          ],
+          [
+            "P1",
+            "a 12-year-old boy"
+          ]
+        ],
+        "gold_owners": []
+      },
+      {
+        "doc": "10313222",
+        "patient": "P1",
+        "concept": "HP:0034062",
+        "text": "anti-insulin antibodies",
+        "section": "FIG",
+        "heading": "Case presentation",
+        "context": "The patient's timeline from diabetes mellitus diagnosis until today. *Diabetes antibodies: glutamic acid decarboxylase antibodies, anti-insulin antibodies, ant-islet cell antibodies, zinc transporter 8 antibodies. VUS, variant of uncertain significance.",
+        "markers": [],
+        "gold_owners": []
+      },
+      {
+        "doc": "10553122",
+        "patient": "O1",
+        "concept": "HP:0001622",
+        "text": "premature delivery",
+        "section": "METHODS",
+        "heading": "2.1. Clinical data",
+        "context": " a 1-month-old female newborn was referred to the Neonatal Intensive Care Unit, Department of Neonatology, Affiliated Children's Hospital of Shandong University, due to \"premature delivery at 31 + 2 weeks, recurrent infection for 1 month, and abdominal distension for half a day.\" Detailed physical examination of clinical signs and comprehensive laboratory tests were p",
+        "markers": [
+          [
+            "O1",
+            "a 1-month-old female newborn"
+          ]
+        ],
+        "gold_owners": []
+      },
+      {
+        "doc": "10553122",
+        "patient": "O1",
+        "concept": "HP:0000822",
+        "text": "hypertension",
+        "section": "RESULTS",
+        "heading": "3.1. Clinical feature",
+        "context": "ts were healthy with no family history of genetic disorders or contagious diseases. She was the first birth from the 23-year-old mother, who was diagnosed as gestational hypertension at 5 months' gestation. During pregnancy, 2 tests for Down's syndrome suggested high potential risk, in contrast to the results of noninvasive prenatal testing that indicated no abnormali",
+        "markers": [
+          [
+            "O1",
+            "a 1-month-old female proband"
+          ],
+          [
+            "O1",
+            "proband"
+          ]
+        ],
+        "gold_owners": []
+      },
+      {
+        "doc": "10553122",
+        "patient": "O1",
+        "concept": "HP:0011410",
+        "text": "cesarean section",
+        "section": "RESULTS",
+        "heading": "3.1. Clinical feature",
+        "context": "ed high potential risk, in contrast to the results of noninvasive prenatal testing that indicated no abnormalities in the fetus. At 31 + 2 weeks' gestation, an emergency cesarean section was performed in People's Hospital of Yuncheng County due to severe preeclampsia, severe placental abruption with a separation area of 4/5, and slow fetal heart rate. Neonatal physica",
+        "markers": [
+          [
+            "O1",
+            "a 1-month-old female proband"
+          ],
+          [
+            "O1",
+            "proband"
+          ]
+        ],
+        "gold_owners": []
+      },
+      {
+        "doc": "10553122",
+        "patient": "O1",
+        "concept": "HP:0001892",
+        "text": "bleeding",
+        "section": "RESULTS",
+        "heading": "3.1. Clinical feature",
+        "context": "sed procalcitonin (100 ng/mL) as well as relatively low platelet count (124 x 109/L) accompanied by coagulation dysfunction as demonstrated by difficulty in stopping the bleeding on the puncture sites. The brain sonography on day 4 after birth showed brain injury and intracranial hemorrhage. Therefore, 140 mg of bovine lung surfactant was administered through endotrac",
+        "markers": [
+          [
+            "O1",
+            "a 1-month-old female proband"
+          ],
+          [
+            "O1",
+            "proband"
+          ]
+        ],
+        "gold_owners": []
+      },
+      {
+        "doc": "10553122",
+        "patient": "O1",
+        "concept": "HP:0004395",
+        "text": "malnourished",
+        "section": "RESULTS",
+        "heading": "3.1. Clinical feature",
+        "context": "Physical examination: T 37.0 C, P 160 bpm, R 60 breaths/min, BP 75/42 mm Hg, WT 1.4 kg. The immature infant was malnourished with poor response and tachypnea. The inspection revealed less ruddy skin with an uneven texture, and scattered petechiae on the limbs caused by venipuncture. The anterior fontanel, which",
+        "markers": [],
+        "gold_owners": []
+      },
+      {
+        "doc": "10553122",
+        "patient": "O1",
+        "concept": "HP:0040187",
+        "text": "neonatal sepsis",
+        "section": "RESULTS",
+        "heading": "3.1. Clinical feature",
+        "context": "illing time and nail-bed pallor but with no cyanosis. No abnormality was found in muscle tone test of the extremities. The clinical diagnosis was eventually confirmed as neonatal sepsis, anemia, and thrombocytopenia.",
+        "markers": [],
+        "gold_owners": []
+      },
+      {
+        "doc": "10553122",
+        "patient": "O1",
+        "concept": "HP:0030212",
+        "text": "collecting",
+        "section": "RESULTS",
+        "heading": "3.1. Clinical feature",
+        "context": "employed for imaging examinations. Cranial ultrasonography showed grade I intracranial hemorrhage (Fig. 2A). Renal ultrasonography suggested separation of the left renal collecting system (Fig. 2B). In addition, bone marrow smear indicated: thrombocytopenia; infectious anemia combined with nutritional anemia; and hemolytic anemia to be further confirmed (Fig. 2C).",
+        "markers": [
+          [
+            "O1",
+            "In this case"
+          ]
+        ],
+        "gold_owners": []
+      },
+      {
+        "doc": "10553122",
+        "patient": "O1",
+        "concept": "HP:0009716",
+        "text": "subependymal lesion",
+        "section": "FIG",
+        "heading": "3.1. Clinical feature",
+        "context": "es the absorption period of bilateral subependymal hemorrhage. The sagittal view through the fontanel reveals a hyperechoic area measuring about 0.8 x 0.4 cm in the left subependymal lesion, with a sac-like anechoic zone inside. The bilateral bodies of lateral ventricles are both about 0.2 cm in width. The coronal view indicates sharp anterior horns of the lateral ven",
+        "markers": [],
+        "gold_owners": []
+      }
+    ],
+    "fn": [
+      {
+        "doc": "11203018",
+        "patient": "P1",
+        "concept": "HP:0040012",
+        "text": "Chromosomal abnormalities",
+        "section": "INTRO",
+        "heading": "1. Introduction",
+        "context": "Chromosomal abnormalities, involving the short arm of chromosome 10, have been rarely reported. Only 13 patients with large overlapping deletions of 10p11.2-p12 have been described in the literature. ",
+        "markers": [],
+        "gold_owners": [
+          "P1"
+        ]
+      },
+      {
+        "doc": "11221135",
+        "patient": "OII-2",
+        "concept": "HP:0008070",
+        "text": "sparseness of hair",
+        "section": "INTRO",
+        "heading": "",
+        "context": "beaded hair, is a rare hereditary hair disorder, characterized by abnormal hair shafts with periodic nodes and internodes, hair fragility, follicular hyperkeratosis, and sparseness of hair. Classically, it is caused by autosomal dominant mutations in basic hair keratin genes KRT86, KRT83 and KRT81. Rarely, an autosomal recessive mutation in the DSG4 gene may contribut",
+        "markers": [],
+        "gold_owners": [
+          "OII-2",
+          "P1"
+        ]
+      },
+      {
+        "doc": "11221135",
+        "patient": "P1",
+        "concept": "HP:0002299",
+        "text": "fragile hairs",
+        "section": "INTRO",
+        "heading": "",
+        "context": "The proband (II-2) was a 30-year-old woman. She developed sparse, short, and fragile hairs with apopecia since infancy (Fig. 1A). There were numerous keratotic follicular papules on her occipital area (Fig. 1B). The secondary hair, eyebrow, eyelashes, fingernails, and systemic",
+        "markers": [
+          [
+            "OII-2",
+            "II-2"
+          ]
+        ],
+        "gold_owners": [
+          "OII-2",
+          "P1"
+        ]
+      },
+      {
+        "doc": "11235872",
+        "patient": "OII-1",
+        "concept": "HP:0001250",
+        "text": "seizures",
+        "section": "ABSTRACT",
+        "heading": "Results",
+        "context": "The 14 (nine living) affected members had heterogeneous phenotypes, including seizures (11/14), behavioral disturbances (5/14), mild intellectual disability (3/14), and/or gait disabilities (2/14). Brain magnetic resonance imaging revealed hippocampal sclerosis in the 8-year-ol",
+        "markers": [
+          [
+            "OIV-1",
+            "the 8-year-old proband"
+          ],
+          [
+            "OIV-1",
+            "proband"
+          ],
+          [
+            "OIII-3",
+            "52-year-old father"
+          ],
+          [
+            "OIII-3",
+            "father"
+          ]
+        ],
+        "gold_owners": [
+          "OII-1",
+          "OII-2",
+          "OII-3",
+          "OII-4",
+          "OIII-3",
+          "OIV-1",
+          "OIV-3"
+        ]
+      },
+      {
+        "doc": "11235872",
+        "patient": "OII-1",
+        "concept": "HP:0002069",
+        "text": "tonic-clonic attacks",
+        "section": "RESULTS",
+        "heading": "RESULTS",
+        "context": "3, and II-4 died at the ages of 78, 77, and 82 years respectively. All had an almost identical epilepsy phenotype consisting of focal (head and eye version) to bilateral tonic-clonic attacks, starting in adulthood. Only individual II-3 had mild ID. The remaining three had normal intelligence (based on the clinical impression of the relatives). Individuals III-1, who d",
+        "markers": [
+          [
+            "OI-1",
+            "Individual I-1"
+          ],
+          [
+            "OI-1",
+            "I-1"
+          ],
+          [
+            "OII-1",
+            "Individual II-1"
+          ],
+          [
+            "OII-1",
+            "II-1"
+          ],
+          [
+            "OII-2",
+            "II-2"
+          ],
+          [
+            "OII-3",
+            "II-3"
+          ],
+          [
+            "OII-4",
+            "II-4"
+          ],
+          [
+            "OII-3",
+            "individual II-3"
+          ],
+          [
+            "OII-3",
+            "II-3"
+          ],
+          [
+            "OIII-1",
+            "Individuals III-1"
+          ],
+          [
+            "OIII-1",
+            "III-1"
+          ],
+          [
+            "OIII-2",
+            "III-2"
+          ],
+          [
+            "OIII-5",
+            "III-5"
+          ],
+          [
+            "OIII-6",
+            "III-6"
+          ],
+          [
+            "OIII-2",
+            "III-2"
+          ]
+        ],
+        "gold_owners": [
+          "OII-1",
+          "OII-2",
+          "OII-3",
+          "OII-4"
+        ]
+      },
+      {
+        "doc": "11235872",
+        "patient": "OII-2",
+        "concept": "HP:0001250",
+        "text": "seizures",
+        "section": "ABSTRACT",
+        "heading": "Results",
+        "context": "The 14 (nine living) affected members had heterogeneous phenotypes, including seizures (11/14), behavioral disturbances (5/14), mild intellectual disability (3/14), and/or gait disabilities (2/14). Brain magnetic resonance imaging revealed hippocampal sclerosis in the 8-year-ol",
+        "markers": [
+          [
+            "OIV-1",
+            "the 8-year-old proband"
+          ],
+          [
+            "OIV-1",
+            "proband"
+          ],
+          [
+            "OIII-3",
+            "52-year-old father"
+          ],
+          [
+            "OIII-3",
+            "father"
+          ]
+        ],
+        "gold_owners": [
+          "OII-1",
+          "OII-2",
+          "OII-3",
+          "OII-4",
+          "OIII-3",
+          "OIV-1",
+          "OIV-3"
+        ]
+      },
+      {
+        "doc": "11235872",
+        "patient": "OII-2",
+        "concept": "HP:0002069",
+        "text": "tonic-clonic attacks",
+        "section": "RESULTS",
+        "heading": "RESULTS",
+        "context": "3, and II-4 died at the ages of 78, 77, and 82 years respectively. All had an almost identical epilepsy phenotype consisting of focal (head and eye version) to bilateral tonic-clonic attacks, starting in adulthood. Only individual II-3 had mild ID. The remaining three had normal intelligence (based on the clinical impression of the relatives). Individuals III-1, who d",
+        "markers": [
+          [
+            "OI-1",
+            "Individual I-1"
+          ],
+          [
+            "OI-1",
+            "I-1"
+          ],
+          [
+            "OII-1",
+            "Individual II-1"
+          ],
+          [
+            "OII-1",
+            "II-1"
+          ],
+          [
+            "OII-2",
+            "II-2"
+          ],
+          [
+            "OII-3",
+            "II-3"
+          ],
+          [
+            "OII-4",
+            "II-4"
+          ],
+          [
+            "OII-3",
+            "individual II-3"
+          ],
+          [
+            "OII-3",
+            "II-3"
+          ],
+          [
+            "OIII-1",
+            "Individuals III-1"
+          ],
+          [
+            "OIII-1",
+            "III-1"
+          ],
+          [
+            "OIII-2",
+            "III-2"
+          ],
+          [
+            "OIII-5",
+            "III-5"
+          ],
+          [
+            "OIII-6",
+            "III-6"
+          ],
+          [
+            "OIII-2",
+            "III-2"
+          ]
+        ],
+        "gold_owners": [
+          "OII-1",
+          "OII-2",
+          "OII-3",
+          "OII-4"
+        ]
+      },
+      {
+        "doc": "11235872",
+        "patient": "OII-3",
+        "concept": "HP:0001250",
+        "text": "seizures",
+        "section": "ABSTRACT",
+        "heading": "Results",
+        "context": "The 14 (nine living) affected members had heterogeneous phenotypes, including seizures (11/14), behavioral disturbances (5/14), mild intellectual disability (3/14), and/or gait disabilities (2/14). Brain magnetic resonance imaging revealed hippocampal sclerosis in the 8-year-ol",
+        "markers": [
+          [
+            "OIV-1",
+            "the 8-year-old proband"
+          ],
+          [
+            "OIV-1",
+            "proband"
+          ],
+          [
+            "OIII-3",
+            "52-year-old father"
+          ],
+          [
+            "OIII-3",
+            "father"
+          ]
+        ],
+        "gold_owners": [
+          "OII-1",
+          "OII-2",
+          "OII-3",
+          "OII-4",
+          "OIII-3",
+          "OIV-1",
+          "OIV-3"
+        ]
+      },
+      {
+        "doc": "11235872",
+        "patient": "OII-3",
+        "concept": "HP:0002069",
+        "text": "tonic-clonic attacks",
+        "section": "RESULTS",
+        "heading": "RESULTS",
+        "context": "3, and II-4 died at the ages of 78, 77, and 82 years respectively. All had an almost identical epilepsy phenotype consisting of focal (head and eye version) to bilateral tonic-clonic attacks, starting in adulthood. Only individual II-3 had mild ID. The remaining three had normal intelligence (based on the clinical impression of the relatives). Individuals III-1, who d",
+        "markers": [
+          [
+            "OI-1",
+            "Individual I-1"
+          ],
+          [
+            "OI-1",
+            "I-1"
+          ],
+          [
+            "OII-1",
+            "Individual II-1"
+          ],
+          [
+            "OII-1",
+            "II-1"
+          ],
+          [
+            "OII-2",
+            "II-2"
+          ],
+          [
+            "OII-3",
+            "II-3"
+          ],
+          [
+            "OII-4",
+            "II-4"
+          ],
+          [
+            "OII-3",
+            "individual II-3"
+          ],
+          [
+            "OII-3",
+            "II-3"
+          ],
+          [
+            "OIII-1",
+            "Individuals III-1"
+          ],
+          [
+            "OIII-1",
+            "III-1"
+          ],
+          [
+            "OIII-2",
+            "III-2"
+          ],
+          [
+            "OIII-5",
+            "III-5"
+          ],
+          [
+            "OIII-6",
+            "III-6"
+          ],
+          [
+            "OIII-2",
+            "III-2"
+          ]
+        ],
+        "gold_owners": [
+          "OII-1",
+          "OII-2",
+          "OII-3",
+          "OII-4"
+        ]
+      },
+      {
+        "doc": "11235872",
+        "patient": "OIII-1",
+        "concept": "HP:0001256",
+        "text": "mild intellectual disability",
+        "section": "ABSTRACT",
+        "heading": "Results",
+        "context": "The 14 (nine living) affected members had heterogeneous phenotypes, including seizures (11/14), behavioral disturbances (5/14), mild intellectual disability (3/14), and/or gait disabilities (2/14). Brain magnetic resonance imaging revealed hippocampal sclerosis in the 8-year-old proband, who also had drug-responsive absences a",
+        "markers": [
+          [
+            "OIV-1",
+            "the 8-year-old proband"
+          ],
+          [
+            "OIV-1",
+            "proband"
+          ],
+          [
+            "OIII-3",
+            "52-year-old father"
+          ],
+          [
+            "OIII-3",
+            "father"
+          ]
+        ],
+        "gold_owners": [
+          "OIII-1",
+          "OIII-5",
+          "OIII-6"
+        ]
+      }
+    ]
+  }
+}

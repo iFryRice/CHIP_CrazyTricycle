@@ -1,0 +1,94 @@
+{
+  "declared_at_utc": "2026-09-28T18:17:34.918734+00:00",
+  "hypothesis": "Nonlinear structural conjunctions and occurrence-consistent ownership improve patient association over nearest rules.",
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "target_path": "PatientPheX-V1-B/PatientPheX-V1-B.jsonl",
+  "ontology_path": "PatientPheX-V1-A/hp.obo",
+  "split_path": "reports/cpu_baseline/split.json",
+  "baseline_oof": "reports/semantic_linking/best_development_oof.jsonl",
+  "baseline_b": "submissions/patientphex_b_semantic.jsonl",
+  "report_dir": "reports/association_context",
+  "output": "submissions/patientphex_b_context.jsonl",
+  "configurations": [
+    {
+      "name": "leaves7_t0.3",
+      "leaves": 7,
+      "threshold": 0.3
+    },
+    {
+      "name": "leaves7_t0.5",
+      "leaves": 7,
+      "threshold": 0.5
+    },
+    {
+      "name": "leaves7_t0.7",
+      "leaves": 7,
+      "threshold": 0.7
+    },
+    {
+      "name": "leaves15_t0.3",
+      "leaves": 15,
+      "threshold": 0.3
+    },
+    {
+      "name": "leaves15_t0.5",
+      "leaves": 15,
+      "threshold": 0.5
+    },
+    {
+      "name": "leaves15_t0.7",
+      "leaves": 15,
+      "threshold": 0.7
+    }
+  ],
+  "promotion": {
+    "minimum_gain": 0.003,
+    "minimum_nonworse_folds": 4,
+    "maximum_precision_loss": 0.03
+  },
+  "fixed": {
+    "learning_rate": 0.05,
+    "max_iter": 150,
+    "min_samples_leaf": 20,
+    "l2_regularization": 5,
+    "negative_weight": 0.5,
+    "patient_balance": true,
+    "early_stopping": false,
+    "seed": 20260929
+  },
+  "scope": "Repeated fivefold development, with inner CPU crossfit candidates generated without outer validation labels. Semantic validation entity distribution differs from CPU training candidates. No official B accuracy available.",
+  "environment": "Existing project venv; CPU only, two threads; no package changes.",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "PatientPheX-V1-B/PatientPheX-V1-B.jsonl": "4dafea5aa59bfd5f90151ee3732ee475323512b8691f370f4d4678b628cdb62a",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "reports/semantic_linking/best_development_oof.jsonl": "56d059bbed128cd7447504b24118f6a2ab056518d355a78539652b49d605d571",
+    "submissions/patientphex_b_semantic.jsonl": "680946cb61a6bef00bb5573fd0113a07928849365d64623a9815628224c9b423",
+    "reports/cpu_b_control/out_of_fold_predictions.jsonl": "e3201f2939ee44f3932ac9a451d97e6c22fef161f53776e87a312098eae3b0b2",
+    "experiments/cpu_crossfit/plan.json": "9c1f90796a0044048d0972527c39414a3e6a51f0ca6ae723db018afcdb754316",
+    "reports/association_context/diagnosis.json": "ebc93f5507d14404efc8bd4f2c055eb4d1e515c0531356d4f34026808def17c2",
+    "reports/cpu_crossfit/fold0/training_candidates.jsonl": "e868099731b4b608a82e66f00580a7bbea2987110034e41c9835ce2dc6a42f80",
+    "reports/cpu_crossfit/fold0/candidate_provenance.json": "4b72a036278c529245a91fb541cdfd37e15219aff48f93049f705cdf967ed9f2",
+    "reports/cpu_crossfit/fold1/training_candidates.jsonl": "7ef15ee97c867adadd1e1c39e940825d850d584fde13865db22513e9d009a296",
+    "reports/cpu_crossfit/fold1/candidate_provenance.json": "6996c71260b7688ffdba5deb67e430842f224ca94cffae83cf6bf00194f1e2d4",
+    "reports/cpu_crossfit/fold2/training_candidates.jsonl": "85b42877107242ea2ad3df7f5960ea01499e54ca8b14899c6cf54f237fa46190",
+    "reports/cpu_crossfit/fold2/candidate_provenance.json": "899f397417d3fbb4ca43c408c028fbac9586f688c9130a85339614fbd2455eeb",
+    "reports/cpu_crossfit/fold3/training_candidates.jsonl": "5ed17d03b429a40b2decaa6bfa0e0d8fdf0aaa4e78d5ea2e5dda23aae155b720",
+    "reports/cpu_crossfit/fold3/candidate_provenance.json": "759d28227a100daa0eb1adbf6d3bac8a116867c563eecdd929fdf46355baa8ed",
+    "reports/cpu_crossfit/fold4/training_candidates.jsonl": "4e299ef0b0c0b32b406f2817fc4f921c1829de52a54d5b1a30461d0510754417",
+    "reports/cpu_crossfit/fold4/candidate_provenance.json": "0885f978f9924f5f7c2d16f347c2f592cbab9b03be436619e3e701bfb20ea931"
+  },
+  "code_sha256": {
+    "patientphex/context_linking.py": "802e46e10f22051d1d9d151a37d9b338ccb912bda5cb1601f16f67d99041ce8d",
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "scripts/evaluate_context_linking.py": "4b52b8d0e452ec62c338d1a51d0ca491a412d3677b2296b94d2d29038164e812",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+    "scripts/run_context_linking.sh": "fb6254ec14747ce4a59c70a3558fa4612c7ad1edaddb9f1c9e7a3d1ea0ac3f56"
+  }
+}

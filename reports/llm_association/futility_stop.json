@@ -1,0 +1,54 @@
+{
+  "status": "format_gate_impossible",
+  "plan_sha256": "e8fb7094ac71a33d0820b01602d23d66a332389a1b12aad0049394443e29346f",
+  "progress": [
+    {
+      "event": "task_complete",
+      "fold": 0,
+      "completed": 98,
+      "total": 403,
+      "format_errors": 3,
+      "decisions": {
+        "supported": 91,
+        "unclear": 3,
+        "other_or_general": 4
+      },
+      "elapsed_seconds": 592.643949508667,
+      "maximum_possible_format_success_rate": 0.9925558312655087
+    },
+    {
+      "event": "task_complete",
+      "fold": 1,
+      "completed": 103,
+      "total": 297,
+      "format_errors": 6,
+      "decisions": {
+        "supported": 84,
+        "other_or_general": 13,
+        "unclear": 6
+      },
+      "elapsed_seconds": 593.8848984241486,
+      "maximum_possible_format_success_rate": 0.9797979797979798
+    }
+  ],
+  "minimum_format_success_rate": 0.98,
+  "reason": "Even if every remaining response were valid, one fold cannot reach the preregistered format floor.",
+  "stopped_workers": [
+    {
+      "pid": 2027971,
+      "command": "experiments/llm_runtime/.venv/bin/python -u scripts/run_llm_association.py infer --fold 0 ",
+      "parent": 2027958,
+      "cwd": "/home/dcf/chip2026",
+      "uid": 1009
+    },
+    {
+      "pid": 2027968,
+      "command": "experiments/llm_runtime/.venv/bin/python -u scripts/run_llm_association.py infer --fold 1 ",
+      "parent": 2027959,
+      "cwd": "/home/dcf/chip2026",
+      "uid": 1009
+    }
+  ],
+  "accuracy_evaluated": false,
+  "time_epoch": 1790628389.2574072
+}

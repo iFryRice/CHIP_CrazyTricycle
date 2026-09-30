@@ -2,6 +2,22 @@
 
 Provider: `dcf@10.253.27.177`; project `/home/dcf/chip2026`.
 
+## qwen3-extraction@e9dd0d2f
+
+- Spec: `experiments/llm_extraction/environment.json`
+- Canonical spec SHA256: `e9dd0d2face037abbbadeef7478721df212680749dbc6de7b50193d01a16a1a3`
+- Shape: direct SSH host; separate project `experiments/llm_runtime`, environment `experiments/llm_runtime/.venv`; original root `.venv` retained.
+- Build: `bash scripts/bootstrap_qwen_runtime.sh`; exact `pyproject.toml` / `uv.lock`, verified official wheel preloading and offline locked uv sync.
+- Runtime: Python 3.12.13, torch 2.6.0+cu124, transformers 4.51.3, peft 0.15.2, accelerate 1.6.0.
+- Tier: physical GPUs 0 or 2, V100 32 GiB, two CPU threads, FP16 eager attention. Each invocation checks the device and takes its existing project lock.
+- Weights: official Qwen/Qwen3-8B, revision `b968826d9c46dd6066d109eabc6255188de91218`, 8,190,735,360 parameters. All bytes and file hashes are pinned in `experiments/llm_extraction/model.json`.
+- Transport: first shard downloaded and verified on the host; remaining identical official shards arrive through workstation staging and SSH after poor host throughput. `finalize_qwen_stage.py` verifies full SHA256 before publication. This changes transport only.
+- Validation status: passed parent smoke and fresh exact-runbook acceptance, exit 0 and `QWEN_CUDA_WITNESS`. The full 8,190,735,360-parameter model generated exact-source JSON in FP16 on GPU 2, peak 16.433453 GiB. The seeded small Qwen3 LoRA kernel produced finite loss 4.19812155, gradient norm 0.75897253 and an actual optimizer update. These are environment witnesses, not competition scores or proof of full-model fine-tuning.
+- Fresh acceptance: `reports/llm_extraction/agent_acceptance.json`, published 2026-09-28 19:50:47 UTC, command exit codes [0,0], no runbook execution divergence; witness report SHA256 `06bcace1ef437a58599e7991370ffaeefd5085093eab15508547c3fc304e216c`.
+- Code/data preflight: all 125 existing-runtime regression tests and 1,164 real-tokenizer prompt preflights passed; no held-out demonstration documents, no source truncation, maximum prompt lengths 1,496 and 1,582 tokens.
+- Formal extraction pilot completed after fresh acceptance via `scripts/run_llm_pilot_queue.py`, fold 0 on GPU 2 and fold 1 on GPU 0. Frozen plan SHA256 `9cc5eb7a9df4ff1878583edeaf82ac14328be780e1da36c6f7c47361847fdae8`; all three addition policies failed their accuracy gate. This does not invalidate runtime acceptance. Follow-up association review reuses the identical environment specification and model bytes without rebuilding.
+- Reproduction: `reports/llm_extraction/remote_runbook.md`; evidence in `reports/llm_extraction/`.
+
 ## span-ner-gpu0@40ddda02
 
 - Spec: `experiments/span_ner/environment_gpu0.json`

@@ -28,6 +28,30 @@ def generate_predictions(documents, entities, model):
     ]
 
 
+def target_paths(args):
+    """Keep supervision in the training directory and resolve A/B targets explicitly."""
+    stage = getattr(args, "target_set", "A")
+    if stage not in {"A", "B"}:
+        raise ValueError("Target set must be A or B")
+    data_dir = Path(args.data_dir)
+    default_target = (data_dir / "PatientPheX-A.jsonl" if stage == "A"
+                      else Path("PatientPheX-V1-B/PatientPheX-V1-B.jsonl"))
+    target = Path(getattr(args, "target_file", None) or default_target)
+    default_report = "reports/cpu_baseline" if stage == "A" else "reports/cpu_b_control"
+    default_output = "submissions/patientphex_a.jsonl" if stage == "A" else "submissions/patientphex_b_cpu.jsonl"
+    return stage, target, Path(getattr(args, "report_dir", None) or default_report), Path(getattr(args, "output", None) or default_output)
+
+
+def check_target(documents, targets, stage):
+    """Reject supervised targets and accidental cross-stage dataset selection."""
+    if set(str(d["pmc_id"]) for d in documents) & set(str(d["pmc_id"]) for d in targets):
+        raise ValueError("Training and target documents overlap")
+    if any(d.get("entities") or d.get("association") for d in targets):
+        raise ValueError(f"Expected an unlabeled {stage} set")
+    if stage == "B" and (len(targets) != 100 or sum(len(d["patient"]) for d in targets) != 244):
+        raise ValueError("The official B target requires 100 documents and 244 patients")
+
+
 def run(args):
     from .association import AssociationModel
     from .entities import EntityExtractor
@@ -37,19 +61,17 @@ def run(args):
 
     started = time.monotonic()
     data_dir = Path(args.data_dir)
-    report_dir = Path(args.report_dir)
+    stage, target_path, report_dir, output_path = target_paths(args)
+    if stage == "B" and (report_dir.exists() or output_path.exists()):
+        raise FileExistsError("B CPU control outputs already exist; use a fresh experiment output location")
     train_path = data_dir / "PatientPheX-train.jsonl"
-    target_path = data_dir / "PatientPheX-A.jsonl"
     ontology_path = data_dir / "hp.obo"
     original_hashes = {str(path): digest_file(path) for path in (train_path, target_path, ontology_path)}
     code_paths = sorted(Path(__file__).parent.glob("*.py")) + [Path("pyproject.toml"), Path("uv.lock")]
     code_hashes = {str(path): digest_file(path) for path in code_paths}
     documents = read_jsonl(train_path)
     targets = read_jsonl(target_path)
-    if set(str(d["pmc_id"]) for d in documents) & set(str(d["pmc_id"]) for d in targets):
-        raise ValueError("Training and target documents overlap")
-    if any(d["entities"] or d["association"] for d in targets):
-        raise ValueError("Expected an unlabeled A set")
+    check_target(documents, targets, stage)
     ontology = Ontology(ontology_path)
     if "2026-06-23" not in str(ontology.version):
         raise ValueError(f"Unexpected HPO version: {ontology.version}")
@@ -63,7 +85,7 @@ def run(args):
     combinations = [(e, a) for e in ("dictionary", "learned") for a in ("nearest", "learned")]
     accumulated = {f"{e}+{a}": [] for e, a in combinations}
     fold_scores = {name: [] for name in accumulated}
-    log(f"Documents: train={len(documents)}, A={len(targets)}; HPO terms={len(ontology.allowed_ids)}")
+    log(f"Documents: train={len(documents)}, {stage}={len(targets)}; HPO terms={len(ontology.allowed_ids)}")
     for fold_index, held_out in enumerate(fold_documents):
         held_out_ids = {str(d["pmc_id"]) for d in held_out}
         training = [d for d in documents if str(d["pmc_id"]) not in held_out_ids]
@@ -106,8 +128,8 @@ def run(args):
     model = AssociationModel(mode=association_mode).fit(documents, training_entities)
     target_entities = [extractor.predict(blind(d)) for d in targets]
     predictions = generate_predictions(targets, target_entities, model)
-    write_jsonl(args.output, predictions)
-    submission_validation = validate_submission(args.output, targets, ontology)
+    write_jsonl(output_path, predictions)
+    submission_validation = validate_submission(output_path, targets, ontology)
     if any(digest_file(path) != checksum for path, checksum in original_hashes.items()):
         raise RuntimeError("An original input changed during execution")
     if any(digest_file(path) != checksum for path, checksum in code_hashes.items()):
@@ -115,12 +137,20 @@ def run(args):
     metrics = {
         "selected_configuration": selected,
         "selection_rule": "Highest pooled document-held-out score among four predeclared configurations.",
-        "score_caveat": "Cross-validation used for model selection, not an independent test score. Local scorer approximates public rules; A leaderboard score is unknown.",
+        "score_caveat": f"Cross-validation used for model selection, not an independent test score. Local scorer approximates public rules; {stage} leaderboard score is unknown.",
         "selected_metrics": selected_metrics,
         "comparisons": comparisons,
         "input_sha256": original_hashes,
         "code_sha256": code_hashes,
-        "submission_sha256": digest_file(args.output),
+        "submission_sha256": digest_file(output_path),
+        "target_set": stage,
+        "target_path": str(target_path),
+        "training_path": str(train_path),
+        "output_path": str(output_path),
+        "report_dir": str(report_dir),
+        "run_mode": "Fresh four-configuration cross-validation and full-training refit; no cached predictions reused",
+        "target_has_gold": False,
+        "target_score": None,
         "environment": {"python": platform.python_version(), "scikit_learn": importlib.metadata.version("scikit-learn")},
         "hpo_version": ontology.version,
         "runtime_seconds": round(time.monotonic() - started, 2),
@@ -130,7 +160,7 @@ def run(args):
         "target_patients": sum(len(d["patient"]) for d in targets),
         "predicted_entities": sum(len(d["entities"]) for d in predictions),
         "predicted_associations": sum(len(a["phenotype"]) for d in predictions for a in d["association"]),
-        "submission_bytes": Path(args.output).stat().st_size,
+        "submission_bytes": output_path.stat().st_size,
     }
     write_json(report_dir / "metrics.json", metrics)
     write_json(report_dir / "submission_validation.json", submission_validation)
@@ -141,17 +171,22 @@ def run(args):
     ]
     write_json(report_dir / "per_document_metrics.json", per_document)
     write_report(report_dir / "report.md", metrics)
-    log(f"Saved {args.output}: {metrics['submission_bytes']} bytes; validation passed.")
+    log(f"Saved {output_path}: {metrics['submission_bytes']} bytes; validation passed.")
 
 
 def write_report(path, metrics):
     score = metrics["selected_metrics"]
+    stage = metrics.get("target_set", "A")
+    data_dir = str(Path(metrics.get("training_path", "PatientPheX-V1-A/PatientPheX-train.jsonl")).parent)
+    target_file = metrics.get("target_path", "PatientPheX-V1-A/PatientPheX-A.jsonl")
+    output_file = metrics.get("output_path", "submissions/patientphex_a.jsonl")
+    report_dir = metrics.get("report_dir", "reports/cpu_baseline")
     lines = [
         "# PatientPheX CPU 基线报告", "",
-        f"选择方案：`{metrics['selected_configuration']}`。训练文献 {metrics['training_documents']} 篇，A 榜文献 {metrics['target_documents']} 篇、患者 {metrics['target_patients']} 人。", "",
+        f"选择方案：`{metrics['selected_configuration']}`。训练文献 {metrics['training_documents']} 篇，{stage} 榜文献 {metrics['target_documents']} 篇、患者 {metrics['target_patients']} 人。", "",
         "## 离线验证", "",
         f"按文献进行固定 {metrics['fold_count']} 折划分，单患者/多患者分层；每折词典、消歧统计和分类器仅使用该折训练文献。预测前移除答案字段。固定 HPO 本体可用于全部折。", "",
-        "以下是用于选择方案的交叉验证分数，不能视为独立测试或 A 榜成绩。官方评测脚本未提供，本地实现依据项目内公开说明，存在正文范围及特殊实体处理差异。", "",
+        f"以下是本次重新训练、用于选择方案的交叉验证分数，不能视为独立测试或 {stage} 榜成绩。目标集没有本地答案，官方成绩未知；本地实现存在正文范围及特殊实体处理差异。", "",
         "| 指标 | Precision | Recall | F1 |", "|---|---:|---:|---:|",
     ]
     for key, label in (("mention", "实体提及"), ("document", "文档概念"), ("association_micro", "患者关联 Micro"), ("association_macro", "患者关联 Macro")):
@@ -162,11 +197,14 @@ def write_report(path, metrics):
         lines.append(f"| {name} | {comparison['pooled_out_of_fold']['score']:.4f} | {comparison['fold_score_mean']:.4f} ± {comparison['fold_score_std']:.4f} |")
     lines.extend([
         "", "## 正式预测与校验", "",
-        f"选定配置用全部 80 篇训练文献重建后预测 A 榜。输出 {metrics['predicted_entities']} 个实体、{metrics['predicted_associations']} 条患者概念关联；文件 {metrics['submission_bytes']:,} 字节，低于 100,000,000 字节。",
+        f"选定配置用全部 {metrics['training_documents']} 篇训练文献重建后预测 {stage} 榜。输出 {metrics['predicted_entities']} 个实体、{metrics['predicted_associations']} 条患者概念关联；文件 {metrics['submission_bytes']:,} 字节，低于 100,000,000 字节。",
         "", "已检查完整文献覆盖、主键唯一、患者引用、原文字符跨度、HPO 分支、JSONL 编码与文件大小。输入文件 SHA256 和环境版本见 `metrics.json`；逐项检查见 `submission_validation.json`。",
         "", "## 适用范围", "",
         "本版仅用 CPU、训练标注和随数据提供的 HPO 本体，无外部大模型推理，无平台提交。主要局限是未见表达的召回、精确边界、词义歧义及跨段患者共指。",
-        "", "## 复现", "", "```powershell", "uv sync --locked", "uv run python -m unittest discover -s tests -v", "uv run python -m patientphex run", "uv run python -m patientphex validate --input submissions/patientphex_a.jsonl", "```", "",
+        "", "## 复现", "", "已有 B 输出不可覆盖；重新运行需指定空的报告目录及新的实验输出路径。", "",
+        "```powershell", "uv sync --locked", "uv run python -m unittest discover -s tests -v",
+        f"uv run python -m patientphex run --target-set {stage} --target-file {target_file} --data-dir {data_dir} --report-dir {report_dir} --output {output_file}",
+        f"uv run python -m patientphex validate --target-set {stage} --target-file {target_file} --data-dir {data_dir} --input {output_file} --report {report_dir}/submission_validation.json", "```", "",
         "方法实现参考：[scikit-learn LogisticRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)；隔离训练与验证参照 [Common pitfalls](https://scikit-learn.org/stable/common_pitfalls.html)。", "",
     ])
     Path(path).write_text("\n".join(lines), encoding="utf-8")
@@ -175,24 +213,31 @@ def write_report(path, metrics):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
-    runner = subparsers.add_parser("run", help="Cross-validate, refit, predict A, and validate")
+    runner = subparsers.add_parser("run", help="Cross-validate, refit, predict the specified target, and validate")
     runner.add_argument("--data-dir", default="PatientPheX-V1-A")
-    runner.add_argument("--report-dir", default="reports/cpu_baseline")
-    runner.add_argument("--output", default="submissions/patientphex_a.jsonl")
+    runner.add_argument("--target-set", choices=("A", "B"), default="A")
+    runner.add_argument("--target-file")
+    runner.add_argument("--report-dir")
+    runner.add_argument("--output")
     runner.add_argument("--folds", type=int, default=5)
     runner.add_argument("--seed", type=int, default=20260927)
-    validator = subparsers.add_parser("validate", help="Validate an existing A-set submission")
+    validator = subparsers.add_parser("validate", help="Validate an existing submission against the specified target")
     validator.add_argument("--input", required=True)
     validator.add_argument("--data-dir", default="PatientPheX-V1-A")
-    validator.add_argument("--report", default="reports/cpu_baseline/submission_validation.json")
+    validator.add_argument("--target-set", choices=("A", "B"), default="A")
+    validator.add_argument("--target-file")
+    validator.add_argument("--report")
     args = parser.parse_args()
     if args.command == "run":
         run(args)
     else:
         from .ontology import Ontology
         from .validation import validate_submission
-        result = validate_submission(args.input, read_jsonl(Path(args.data_dir) / "PatientPheX-A.jsonl"), Ontology(Path(args.data_dir) / "hp.obo"))
-        write_json(args.report, result)
+        _, target_path, report_dir, _ = target_paths(args)
+        targets = read_jsonl(target_path)
+        check_target(read_jsonl(Path(args.data_dir) / "PatientPheX-train.jsonl"), targets, args.target_set)
+        result = validate_submission(args.input, targets, Ontology(Path(args.data_dir) / "hp.obo"))
+        write_json(args.report or report_dir / "submission_validation.json", result)
         log(str(result))
 
 

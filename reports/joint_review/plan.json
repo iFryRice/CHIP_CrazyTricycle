@@ -1,0 +1,96 @@
+{
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "split_path": "reports/cpu_baseline/split.json",
+  "ontology_path": "PatientPheX-V1-A/hp.obo",
+  "baseline_oof": "reports/association_context/best_development_oof.jsonl",
+  "promotion": {
+    "minimum_mean_gain": 0.008,
+    "maximum_fold_loss": 0.002,
+    "maximum_component_loss": 0.002,
+    "minimum_format_success_rate": 0.98
+  },
+  "confirmation_requirement": {
+    "remaining_folds": [
+      2,
+      3,
+      4
+    ],
+    "minimum_remaining_mean_gain": 0.003,
+    "minimum_full_score_gain": 0.005,
+    "minimum_nonworse_folds": 4,
+    "maximum_component_f1_loss": 0.002,
+    "positive_document_bootstrap_lower_bound": true
+  },
+  "declared_at_utc": "2026-09-28T22:50:50.728928+00:00",
+  "hypothesis": "Concept filtering and supervised ownership target complementary error sources. Test their actual sequential pipeline, recomputing structural features and neural inputs after entity deletion, instead of adding separate reported gains.",
+  "pilot_folds": [
+    0,
+    1
+  ],
+  "concept_plans": {
+    "0": "experiments/llm_concept_review/plan.json",
+    "1": "experiments/llm_concept_review/plan.json"
+  },
+  "ensemble_plan": "experiments/relation_seed_ensemble/plan.json",
+  "model_path": "models/biomedbert",
+  "work_dir": "work/span_ner/joint_review",
+  "report_dir": "reports/joint_review",
+  "runner_script": "scripts/run_joint_review.py",
+  "wrapper_script": "scripts/run_joint_review.sh",
+  "fixed": {
+    "concept_policy": "all_reviewed with identical original scope, prompts, grammar and completed decisions",
+    "neural_weight": 0.25,
+    "structural_weight": 0.75,
+    "threshold": 0.5,
+    "seeds": [
+      20260929,
+      20260930,
+      20261001
+    ],
+    "new_training": false,
+    "input_cache_rule": "Reuse a probability only when the checkpoint and all three encoded model-input arrays match; recompute changed examples. Deleted candidates disappear.",
+    "baseline_exact_replay": true,
+    "new_entities": false,
+    "hpo_reassignments": false,
+    "protected_entities": [
+      "NO",
+      "unmapped",
+      "compound IDs",
+      "unique exact official HPO matches"
+    ],
+    "source_offsets": "Preserved; only originally reviewed entity records may be removed."
+  },
+  "scope": "One fixed combined policy, motivated by previous repeated-development diagnostics. Two-fold screening followed by remaining-fold confirmation with unchanged gates before any B candidate. Not independent test or official B accuracy.",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "experiments/relation_seed_ensemble/plan.json": "53d4844c2bf5f9cb582b70ea672eee91a6f92a55b80eacddad6707813ea44561",
+    "experiments/llm_concept_review/plan.json": "993fb656ecaf86329ef3e7c2bacb5a13b44c66a8a2e60e1f5cd44023c5021f1d",
+    "reports/llm_concept_review/summary.json": "f4f2b48b267a75bdb4df94694b30eb1cab6ce3378ddcec47d6aaf32bcdc60f3c",
+    "reports/relation_seed_ensemble/summary.json": "f05d1cb83818f3b8e366f3f0a50baa4b85fa088d4ba7005bc52f619b65a13633",
+    "reports/relation_veto/summary.json": "36ba4387aeacb25f7e26b4def9f1270a3c7fdbf0b0a0a75a81eaf52080bd0e0d",
+    "models/biomedbert/config.json": "56bab767c02bc792897638feb8addc06d483d9c73769a5f554bbabea1f5507a1",
+    "models/biomedbert/pytorch_model.bin": "ad7bbb66376cfd6b2db3447192b034efe016337cbef135c35c411fd61b13c193",
+    "models/biomedbert/tokenizer_config.json": "53b6f42b8b8daddbdc6d3532c324187a92b46c1602bd6e8d4ad5a413b4fc90e1",
+    "models/biomedbert/vocab.txt": "79489a52be45e6fa033521e8ce8e4f62aedc0a742ee2aa6fc04667e5b0b1454d"
+  },
+  "code_sha256": {
+    "patientphex/joint_review.py": "6a6de1e5e8042700704b5b288b83d77afa0219be2c8f229da86e1c0ac6a2f194",
+    "patientphex/relation_text.py": "f63f4495d352cb73ccb894f965cf8bd4f755c072be14b3e492998c35b42bf3f3",
+    "scripts/run_joint_review.py": "b3dc7cea72fda6f571b3ab3a8440bebda82fc04c0a3c92d9e77e9fb35ce12d34",
+    "scripts/run_joint_review.sh": "0654e3915bb45ef7d04ab628bba9788171b01d2c184daa97aafc3df0b39175e2",
+    "scripts/run_relation_seed_ensemble.py": "299955e855ea127c683860ee23aea0b010987ce652f7c0bcb8d1c7bdbc753f5b",
+    "scripts/run_llm_association.py": "1000ee50cb20f902694f6657a50ff440f30c279a65ebc4b9837a17ff3ea64233",
+    "scripts/queue_llm_review.py": "1f656ba02b6496c2850bd013026b09739b642a3d86f513e9bb7d1f28603bd5c3",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+    "patientphex/llm_concept_review.py": "c75368a46b5679c0569c69bf653cfa5ad63fbe3ebd83477332de6550ca7125a3",
+    "patientphex/llm_association_references.py": "4f164bd13048159506677730c9907713841341973ece15c101b4dcf0267d8f00",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "tests/test_joint_review.py": "577f0a6021346831637b6b9105fb5d659356334bf09cbb610e4ebe2296ce871b"
+  }
+}

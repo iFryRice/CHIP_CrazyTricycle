@@ -1,0 +1,45 @@
+{
+  "declared_at_utc": "2026-09-28T16:40:46.765731+00:00",
+  "request": "Fresh CPU control for PatientPheX-V1-B, with new cross-validation and all-80 refit",
+  "target_set": "B",
+  "training_documents": 80,
+  "target_documents": 100,
+  "target_patients": 244,
+  "folds": 5,
+  "seed": 20260927,
+  "configurations": [
+    "dictionary+nearest",
+    "dictionary+learned",
+    "learned+nearest",
+    "learned+learned"
+  ],
+  "selection": "Highest pooled development score, no B labels or leaderboard score used",
+  "reuse_old_cpu_predictions": false,
+  "B_official_score_available": false,
+  "B_accuracy_computable_locally": false,
+  "resource_scope": "Official labeled training documents and HPO only; same original CPU algorithms",
+  "output": "submissions/patientphex_b_cpu.jsonl",
+  "report_dir": "reports/cpu_b_control",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "PatientPheX-V1-B/PatientPheX-V1-B.jsonl": "4dafea5aa59bfd5f90151ee3732ee475323512b8691f370f4d4678b628cdb62a",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff"
+  },
+  "code_sha256": {
+    "patientphex/__init__.py": "1fd13e9583dce1d135f45d50dbef50613e212c7dd640ace4c70017c95c41f058",
+    "patientphex/__main__.py": "f03fb7a2210ad1da045ef95d68d0378bbcaf6dc0da587be46851595cc5300bec",
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/entities.py": "c1d1ce81f01eb171a64a8fd1487609e0fd590804ae5ac738d6b497791ac13ada",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/span_data.py": "5dbd5351bb14c6d5244c2e02c5027dccbb4d49707ed48409bde1a01465963409",
+    "patientphex/span_linking.py": "d5de49d6845486687da0773890d99bb848015af70782d03b43eef026aa79a734",
+    "patientphex/span_losses.py": "ac4e512e135febf62df4576426494ad4174c105091a7f4079a1f553ae19f8c19",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280"
+  },
+  "command": "bash scripts/run_cpu_b_control.sh",
+  "environment": "Existing project .venv, CPU only, 2 BLAS threads"
+}

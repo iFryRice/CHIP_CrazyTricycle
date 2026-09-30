@@ -1,0 +1,26 @@
+{
+  "status": "failed",
+  "pid": 2029273,
+  "started_at_epoch": 1790628641.788294,
+  "plan_sha256": "fa76180ac6dce03f800fb1b919491395dd233d28fe45623f0e7b0d6aa272d7c6",
+  "jobs": [
+    {
+      "fold": 0,
+      "gpu": 2,
+      "pid": 2029280,
+      "log": "reports/llm_association_references/fold0_inference.log",
+      "status": "failed",
+      "exit_code": 143
+    },
+    {
+      "fold": 1,
+      "gpu": 0,
+      "pid": 2029281,
+      "log": "reports/llm_association_references/fold1_inference.log",
+      "status": "failed",
+      "exit_code": 143
+    }
+  ],
+  "error": "RuntimeError: Inference failed; logs and caches are preserved. No pending folds were launched.",
+  "elapsed_seconds": 180.01593255996704
+}

@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "spec_sha256": "e9dd0d2face037abbbadeef7478721df212680749dbc6de7b50193d01a16a1a3",
+  "agent_task": "/root/qwen_environment_acceptance",
+  "runbook_sha256": "3c676820de36b61e026aa1170a1dfe3ffbc1e3952e41b286a97b1a2af0411c48",
+  "commands": [
+    "cd /home/dcf/chip2026\nbash scripts/bootstrap_qwen_runtime.sh\n",
+    "cd /home/dcf/chip2026\nbash scripts/run_qwen_witness.sh --report reports/llm_extraction/environment_acceptance.json\n"
+  ],
+  "exit_codes": [
+    0,
+    0
+  ],
+  "witness_report_sha256": "06bcace1ef437a58599e7991370ffaeefd5085093eab15508547c3fc304e216c",
+  "documentation_divergence": [],
+  "checked_at_utc": "2026-09-28T19:50:47.276983+00:00",
+  "provider": "dcf@10.253.27.177",
+  "physical_gpu": "2",
+  "python_version": "Python 3.12.13",
+  "sentinel": "QWEN_CUDA_WITNESS",
+  "real_model_parameter_count": 8190735360,
+  "model_load_dtype": "float16",
+  "dtype_evidence": "Unmodified witness loads the complete checkpoint using torch_dtype=torch.float16; exact-source generation and finite logits passed.",
+  "lora_kernel": {
+    "loss": 4.198121547698975,
+    "gradient_norm": 0.7589725255966187,
+    "optimizer_updated": true,
+    "trainable_parameters": 1792
+  },
+  "lora_scope": "Seeded small Qwen3 model exercises FP16 LoRA forward/backward and optimizer update; full 8.19B checkpoint exercises FP16 generation.",
+  "response": [
+    "short stature",
+    "recurrent seizures"
+  ],
+  "peak_allocated_gib": 16.43345308303833,
+  "elapsed_seconds": 58.21955227851868,
+  "model_verification_sha256": "64ee2a6adb03b84847ba9d4b3fde49ba2ad30319e75543cd2d436c56210adf84",
+  "log_sha256": {
+    "agent_bootstrap.log": "b518202cd68a58c39c7d86392482243666eb22ede6e8a3bab11da9cdd1a9e748",
+    "agent_witness.log": "038df4376867ba7027d10ae9e51a5dbc04688127f99f0e4f4dcbe393b79c5191"
+  },
+  "script_sha256": {
+    "bootstrap_qwen_runtime.sh": "2ebbfe193b31dbe6fa852b42073b378f26d451cea622f0d7eb2fe7be346bfe7a",
+    "run_qwen_witness.sh": "693a0fd33e4292262f67c516ac5220cb81eeca646d86834341cafdf702da7b96",
+    "qwen_runtime_witness.py": "1f75d2b40b317c11c14fe583374dc11ef4d5f844925962454ba61611572c4785"
+  },
+  "runtime_warnings": [
+    "Sliding Window Attention is enabled but not implemented for `eager`; unexpected results may be encountered."
+  ],
+  "scope": "Runtime, CUDA, model integrity and exact-source format acceptance only; no PatientPheX accuracy claim."
+}

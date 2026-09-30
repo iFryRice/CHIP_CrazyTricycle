@@ -1,0 +1,118 @@
+{
+  "checked_at_utc": "2026-09-28T19:54:10.968149+00:00",
+  "processes": [
+    {
+      "pid": 2016863,
+      "elapsed": "13:56",
+      "script": "run_llm_pilot_queue.py"
+    },
+    {
+      "pid": 2021172,
+      "elapsed": "03:16",
+      "script": "infer_llm_extraction.py"
+    },
+    {
+      "pid": 2021173,
+      "elapsed": "03:16",
+      "script": "infer_llm_extraction.py"
+    }
+  ],
+  "weights": [
+    {
+      "file": "model-00001-of-00005.safetensors",
+      "expected_bytes": 3996250744,
+      "published_bytes": 3996250744,
+      "incoming_bytes": 0
+    },
+    {
+      "file": "model-00002-of-00005.safetensors",
+      "expected_bytes": 3993160032,
+      "published_bytes": 3993160032,
+      "incoming_bytes": 0
+    },
+    {
+      "file": "model-00003-of-00005.safetensors",
+      "expected_bytes": 3959604768,
+      "published_bytes": 3959604768,
+      "incoming_bytes": 0
+    },
+    {
+      "file": "model-00004-of-00005.safetensors",
+      "expected_bytes": 3187841392,
+      "published_bytes": 3187841392,
+      "incoming_bytes": 0
+    },
+    {
+      "file": "model-00005-of-00005.safetensors",
+      "expected_bytes": 1244659840,
+      "published_bytes": 1244659840,
+      "incoming_bytes": 0
+    }
+  ],
+  "model_verification": "verified",
+  "smoke": "passed",
+  "independent_acceptance": "passed",
+  "queue": {
+    "status": "inference_running",
+    "pid": 2016863,
+    "started_at_epoch": 1790624414.9726555,
+    "plan_sha256": "9cc5eb7a9df4ff1878583edeaf82ac14328be780e1da36c6f7c47361847fdae8",
+    "launcher_sha256": "5c796fa3c6f5d0d7c1ba198f1e757c5758e0a5ab7cb682e8eaf3b44412c3aea4",
+    "jobs": [
+      {
+        "fold": 0,
+        "physical_gpu": 2,
+        "pid": 2021160,
+        "command": [
+          "bash",
+          "scripts/run_llm_extraction.sh",
+          "--fold",
+          "0"
+        ],
+        "log": "reports/llm_extraction/fold0_inference.log",
+        "status": "running"
+      },
+      {
+        "fold": 1,
+        "physical_gpu": 0,
+        "pid": 2021161,
+        "command": [
+          "bash",
+          "scripts/run_llm_extraction.sh",
+          "--fold",
+          "1"
+        ],
+        "log": "reports/llm_extraction/fold1_inference.log",
+        "status": "running"
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "fold": 0,
+      "cached_prompts": 141,
+      "expected_prompts": 685,
+      "recent_mean_generation_seconds": 0.9235033893585205,
+      "estimated_remaining_seconds": 502.38584381103516,
+      "summary_exists": false,
+      "log_tail": "epted\": 0, \"format_errors\": 0, \"elapsed_seconds\": 183.53816533088684}\n{\"event\": \"chunk_complete\", \"fold\": 0, \"completed\": 139, \"total\": 685, \"accepted\": 0, \"format_errors\": 0, \"elapsed_seconds\": 183.72625207901}\n{\"event\": \"chunk_complete\", \"fold\": 0, \"completed\": 140, \"total\": 685, \"accepted\": 6, \"format_errors\": 0, \"elapsed_seconds\": 187.5723774433136}\n{\"event\": \"chunk_complete\", \"fold\": 0, \"completed\": 141, \"total\": 685, \"accepted\": 2, \"format_errors\": 0, \"elapsed_seconds\": 189.7793483734131}\n"
+    },
+    {
+      "fold": 1,
+      "cached_prompts": 117,
+      "expected_prompts": 479,
+      "recent_mean_generation_seconds": 1.1478165769577027,
+      "estimated_remaining_seconds": 415.5096008586884,
+      "summary_exists": false,
+      "log_tail": "ed\": 0, \"format_errors\": 0, \"elapsed_seconds\": 187.93097615242004}\n{\"event\": \"chunk_complete\", \"fold\": 1, \"completed\": 115, \"total\": 479, \"accepted\": 0, \"format_errors\": 0, \"elapsed_seconds\": 188.1068799495697}\n{\"event\": \"chunk_complete\", \"fold\": 1, \"completed\": 116, \"total\": 479, \"accepted\": 0, \"format_errors\": 0, \"elapsed_seconds\": 188.25593662261963}\n{\"event\": \"chunk_complete\", \"fold\": 1, \"completed\": 117, \"total\": 479, \"accepted\": 0, \"format_errors\": 0, \"elapsed_seconds\": 188.4046413898468}\n"
+    }
+  ],
+  "gpu": [
+    "0, 18709 MiB, 48 %",
+    "1, 3018 MiB, 38 %",
+    "2, 18502 MiB, 47 %",
+    "3, 30934 MiB, 90 %"
+  ],
+  "smoke_log_tail": "\ufffd\ufffd      | 2/5 [00:02<00:04,  1.42s/it]\rLoading checkpoint shards:  60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 3/5 [00:04<00:02,  1.41s/it]\rLoading checkpoint shards:  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 4/5 [00:05<00:01,  1.30s/it]\rLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [00:05<00:00,  1.02it/s]\rLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 5/5 [00:05<00:00,  1.16s/it]\nQWEN_CUDA_WITNESS {\"status\": \"passed\", \"spec_sha256\": \"e9dd0d2face037abbbadeef7478721df212680749dbc6de7b50193d01a16a1a3\", \"versions\": {\"torch\": \"2.6.0+cu124\", \"transformers\": \"4.51.3\", \"peft\": \"0.15.2\", \"accelerate\": \"1.6.0\"}, \"physical_gpu\": \"2\", \"gpu\": \"Tesla V100-DGXS-32GB\", \"capability\": [7, 0], \"lora_kernel\": {\"loss\": 4.198121547698975, \"gradient_norm\": 0.7589725255966187, \"optimizer_updated\": true, \"trainable_parameters\": 1792}, \"real_model_parameter_count\": 8190735360, \"synthetic_source\": \"The child had short stature and recurrent seizures.\", \"response\": [\"short stature\", \"recurrent seizures\"], \"exact_source_json_passed\": true, \"peak_allocated_gib\": 16.43345308303833, \"elapsed_seconds\": 58.84914803504944, \"scope\": \"Runtime and format acceptance only; no competition accuracy claim.\"}\n",
+  "evaluation_summary": null
+}

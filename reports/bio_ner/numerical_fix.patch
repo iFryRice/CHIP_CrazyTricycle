@@ -1,0 +1,24 @@
+--- a/scripts/train_bio_ner.py
++++ b/scripts/train_bio_ner.py
+@@ -151,7 +151,7 @@
+     total_steps = len(loader) * parameters["epochs"]
+     warmup = max(1, int(total_steps * 0.1))
+     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda step: step / warmup if step < warmup else max(0.0, (total_steps - step) / max(1, total_steps - warmup)))
+-    scaler = torch.amp.GradScaler("cuda")
++    scaler = torch.amp.GradScaler("cuda", init_scale=parameters["amp_initial_scale"])
+     torch.cuda.reset_peak_memory_stats()
+     log_path = args.output_dir / "training.jsonl"
+ 
+@@ -192,9 +192,10 @@
+                 skipped += 1
+             step += 1
+             loss_total += float(loss)
+-            if step == 1 or step % 25 == 0:
++            if step <= 5 or step % 25 == 0:
+                 emit("train_step", epoch=epoch, step=step, planned_steps=total_steps, loss=float(loss),
+-                     gradient_norm=float(gradient_norm), optimizer_step_applied=update_applied,
++                     gradient_norm=float(gradient_norm) if math.isfinite(float(gradient_norm)) else None, optimizer_step_applied=update_applied,
++                     amp_scale_before=old_scale, amp_scale_after=scaler.get_scale(),
+                      learning_rate=scheduler.get_last_lr()[0], peak_allocated_gib=torch.cuda.max_memory_allocated() / 1024 ** 3)
+             if args.max_steps is not None and step >= args.max_steps:
+                 completed_epoch = batch_index + 1 == len(loader)

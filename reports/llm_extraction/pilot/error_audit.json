@@ -1,0 +1,495 @@
+{
+  "configuration": {
+    "name": "established",
+    "semantic_threshold": 0.9,
+    "margin_threshold": 0.02
+  },
+  "promoted_to_confirmation": false,
+  "input_sha256": {
+    "reports/llm_extraction/pilot/fold0_candidates.json": "bc5f369594b25637019861b1e95716b52c0e6f12cb70c2ec570386f24b92b6f2",
+    "reports/llm_extraction/pilot/fold1_candidates.json": "4c4f4d27aaf85f2b9ccb0360818ae0aa7fee56a090c29b7945308a0a57084ffe",
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "reports/llm_extraction/pilot/best_pilot_predictions.jsonl": "a9d1f5efba22b1ba07a0fe520b39cb66038a42b070ebf7d935c3afbdf56b5d39",
+    "experiments/llm_extraction/plan.json": "9cc5eb7a9df4ff1878583edeaf82ac14328be780e1da36c6f7c47361847fdae8",
+    "reports/llm_extraction/pilot/summary.json": "ab35ab673e376fa7e7cf888455b2ca98f8700202cf0911ed7961af0bc30fece7"
+  },
+  "implementation_sha256": "46e6992634c9333e8031bd273a3194887e7229552a6d499ec4d167422640a076",
+  "entity_counts": {
+    "added_entity_records": 20,
+    "added_negated_records": 1,
+    "no_gold_overlap": 12,
+    "overlap_wrong_boundary": 1,
+    "correct": 6
+  },
+  "added_scored_units": 19,
+  "added_unit_precision": 0.3157894736842105,
+  "mapping_sources": {
+    "semantic": {
+      "fp": 13,
+      "tp": 6
+    }
+  },
+  "association_changes": {
+    "added_tp": 2,
+    "added_fp": 4,
+    "removed_tp": 0,
+    "removed_fp": 0
+  },
+  "document_deltas": [
+    {
+      "pmc_id": "6049015",
+      "added_entities": 4,
+      "score_delta": -0.0095625762266629
+    },
+    {
+      "pmc_id": "5425407",
+      "added_entities": 2,
+      "score_delta": -0.006803550688568083
+    },
+    {
+      "pmc_id": "12640707",
+      "added_entities": 1,
+      "score_delta": -0.0059050581257275025
+    },
+    {
+      "pmc_id": "10553122",
+      "added_entities": 2,
+      "score_delta": -0.005238085586068197
+    },
+    {
+      "pmc_id": "11221135",
+      "added_entities": 1,
+      "score_delta": -0.003024803387779773
+    },
+    {
+      "pmc_id": "4607013",
+      "added_entities": 1,
+      "score_delta": -0.0027052743554421
+    },
+    {
+      "pmc_id": "5415817",
+      "added_entities": 3,
+      "score_delta": -0.0017450354831758386
+    },
+    {
+      "pmc_id": "11203018",
+      "added_entities": 1,
+      "score_delta": -0.0016048934108526813
+    },
+    {
+      "pmc_id": "5866036",
+      "added_entities": 1,
+      "score_delta": -0.000876577840112247
+    },
+    {
+      "pmc_id": "11871647",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "11906559",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "11919040",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "12059664",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "12126309",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "12846941",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "2866573",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "3563609",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "4899602",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "5763540",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "10313222",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "11826603",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "12078887",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "12628480",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "12779223",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "5023785",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "5368377",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "5693559",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "5789735",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "6220403",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "9327653",
+      "added_entities": 0,
+      "score_delta": 0.0
+    },
+    {
+      "pmc_id": "6096008",
+      "added_entities": 3,
+      "score_delta": 0.020113640138053057
+    },
+    {
+      "pmc_id": "12652105",
+      "added_entities": 1,
+      "score_delta": 0.023716687123123248
+    }
+  ],
+  "examples": {
+    "no_gold_overlap": [
+      {
+        "pmc_id": "10553122",
+        "entity": {
+          "identifier": "HP:0000201",
+          "type": "Phenotype",
+          "offset": 16876,
+          "length": 16,
+          "text": "Robinow syndrome",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9330968856811523,
+        "margin": 0.27941370010375977,
+        "context": "ll size of the mid-face and lower face reduced in these cases, which is similar to the phenotype of Robinow syndrome caused by core gene mutation in the Wnt/PCP signaling pathway. The dynamic changes in histone acety"
+      },
+      {
+        "pmc_id": "10553122",
+        "entity": {
+          "identifier": "HP:0011986",
+          "type": "Phenotype",
+          "offset": 17006,
+          "length": 12,
+          "text": "ossification",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9294417500495911,
+        "margin": 0.08396404981613159,
+        "context": "e gene mutation in the Wnt/PCP signaling pathway. The dynamic changes in histone acetylation during ossification are associated with the key osteogenic factors such as Runx2, Sp7, and Alp. Given that Runx2 can di"
+      },
+      {
+        "pmc_id": "11203018",
+        "entity": {
+          "identifier": "HP:0000752",
+          "type": "Phenotype",
+          "offset": 6105,
+          "length": 11,
+          "text": "hyperactive",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9488424062728882,
+        "margin": 0.08156722784042358,
+        "context": "eech delay, mild-to-moderate intellectual disability, abnormal behaviour (autistic, aggressive, and hyperactive), and dysmorphic facial features. Congenital heart and brain anomalies, as well as visual and heari"
+      },
+      {
+        "pmc_id": "4607013",
+        "entity": {
+          "identifier": "HP:0001256",
+          "type": "Phenotype",
+          "offset": 14770,
+          "length": 48,
+          "text": "intellectual development is often mildly delayed",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9110961556434631,
+        "margin": 0.06382149457931519,
+        "context": "problems appear in 4/14 patients. Motor delay is common (9/14 patients) and as previously reported, intellectual development is often mildly delayed (6 patients normal and 8 mildly delayed). Keratosis pilaris/hyperkeratosis is less common (4/12 pat"
+      },
+      {
+        "pmc_id": "5415817",
+        "entity": {
+          "identifier": "HP:0033833",
+          "type": "Phenotype",
+          "offset": 3901,
+          "length": 20,
+          "text": "high levels of sCD25",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9360324144363403,
+        "margin": 0.23560947179794312,
+        "context": "nd/or hypofibrinogenemia; low or absent NK-cell activity determined by the 51-Cr release assay; and high levels of sCD25. Five of these eight criteria are essential for diagnosis of acquired HLH, but in familial cases wi"
+      },
+      {
+        "pmc_id": "11221135",
+        "entity": {
+          "identifier": "HP:0001595",
+          "type": "Phenotype",
+          "offset": 3862,
+          "length": 35,
+          "text": "structural defect of the hair shaft",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9252020716667175,
+        "margin": 0.1443774700164795,
+        "context": "Monilethrix is a structural defect of the hair shaft, usually caused by mutations in genes encoding hair keratins. KRT86 and KRT81 are the most common i"
+      },
+      {
+        "pmc_id": "5425407",
+        "entity": {
+          "identifier": "HP:0008668",
+          "type": "Phenotype",
+          "offset": 1254,
+          "length": 33,
+          "text": "46,XY disorder of sex development",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9235250949859619,
+        "margin": 0.03531467914581299,
+        "context": "iod, including dysmorphic facial features, hypotonicity, microcephaly, Y-shaped 2-3 toe syndactyly, 46,XY disorder of sex development (DSD) and congenital heart diseases. Y-shaped 2-3 toe syndactyly, referring to incomplete cutaneous"
+      },
+      {
+        "pmc_id": "5866036",
+        "entity": {
+          "identifier": "HP:0020058",
+          "type": "Phenotype",
+          "offset": 19252,
+          "length": 13,
+          "text": "abnormal RBCs",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9415202140808105,
+        "margin": 0.028090178966522217,
+        "context": " function, reduced erythrocyte membrane surface area and increased membrane osmotic fragility These abnormal RBCs are detained and broken into RBC debris in the spleen, leading to hemolytic anemia. Notably, a sign"
+      },
+      {
+        "pmc_id": "6049015",
+        "entity": {
+          "identifier": "HP:0041147",
+          "type": "Phenotype",
+          "offset": 2266,
+          "length": 9,
+          "text": "epiphyses",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9237964153289795,
+        "margin": 0.12639951705932617,
+        "context": "ss, reduced visual acuity and facial paralysis.In severe cases it may involve the metaphysis, while epiphyses are rarely involved. TGFB1 is so far the only gene associated with CAEND."
+      },
+      {
+        "pmc_id": "6049015",
+        "entity": {
+          "identifier": "HP:0041055",
+          "type": "Phenotype",
+          "offset": 3053,
+          "length": 7,
+          "text": "humerus",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9643482565879822,
+        "margin": 0.25313639640808105,
+        "context": "prominent forehead, proptosis and blepharoptosis (Fig. 1). Prominent palpable bones in upper limbs, humerus, ulna and radius (Fig. 2) and lower limbs (Fig. 3) were noted with muscle wasting and pseudo-atroph"
+      },
+      {
+        "pmc_id": "6096008",
+        "entity": {
+          "identifier": "HP:0004904",
+          "type": "Phenotype",
+          "offset": 4819,
+          "length": 5,
+          "text": "MODY5",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9079636931419373,
+        "margin": 0.1341005563735962,
+        "context": "ed, his glycemic control worsened again because of irregular insulin injections. A genetic test for MODY5 was carried out at 21 years of age with his written informed consent."
+      },
+      {
+        "pmc_id": "6096008",
+        "entity": {
+          "identifier": "HP:0004904",
+          "type": "Phenotype",
+          "offset": 9046,
+          "length": 5,
+          "text": "MODY5",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9079636931419373,
+        "margin": 0.1341005563735962,
+        "context": "tal abnormalities were not observed. Based on the above findings, his phenotype was compatible with MODY5."
+      }
+    ],
+    "overlap_wrong_boundary": [
+      {
+        "pmc_id": "12640707",
+        "entity": {
+          "identifier": "HP:0000496",
+          "type": "Phenotype",
+          "offset": 7760,
+          "length": 37,
+          "text": "extraocular movements seemed abnormal",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9329057931900024,
+        "margin": 0.1289311647415161,
+        "context": " hyperpigmentation was irregular in appearance and seemed consistent with pigmentary mosaicism. Her extraocular movements seemed abnormal, with limited upward and lateral gaze without nystagmus. Follow-up visit at age 19 (Figure 1C; weig"
+      }
+    ],
+    "correct": [
+      {
+        "pmc_id": "12652105",
+        "entity": {
+          "identifier": "HP:0003803",
+          "type": "Phenotype",
+          "offset": 12972,
+          "length": 25,
+          "text": "type I fiber predominance",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9443294405937195,
+        "margin": 0.09946346282958984,
+        "context": "lysis of the muscle revealed increased variability in fiber size, hypertrophic and atrophic fibers, type I fiber predominance (63% and atrophy. She presented normal creatine kinase (CK). Patient II.2 also exhibited positive I"
+      },
+      {
+        "pmc_id": "5415817",
+        "entity": {
+          "identifier": "HP:0011096",
+          "type": "Phenotype",
+          "offset": 2676,
+          "length": 13,
+          "text": "demyelization",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9027997255325317,
+        "margin": 0.06343305110931396,
+        "context": "be observed, which include the increase of nodular parenchymal lesions, leptomeningeal enhancement, demyelization, and atrophy. The incidence of HLH has been estimated to be 1 to 225 per 300 000 live births and is"
+      },
+      {
+        "pmc_id": "5415817",
+        "entity": {
+          "identifier": "HP:0011900",
+          "type": "Phenotype",
+          "offset": 5298,
+          "length": 23,
+          "text": "low level of fibrinogen",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9868865013122559,
+        "margin": 0.2357427477836609,
+        "context": "ime (PT), and activated partial thromboplastin time (aPTT), serum ferritin (nearly 1000 ng/ml), and low level of fibrinogen, total protein, and albumin. A high titer of Ebstein-Barr virus (EBV) viral capsid antigen IgM anti"
+      },
+      {
+        "pmc_id": "5425407",
+        "entity": {
+          "identifier": "HP:0008668",
+          "type": "Phenotype",
+          "offset": 297,
+          "length": 33,
+          "text": "46,XY disorder of sex development",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9235250949859619,
+        "margin": 0.03531467914581299,
+        "context": "drocholesterol reductase (DHCR7), which is rarely observed in Japan. We report a Japanese case with 46,XY disorder of sex development and Y-shaped 2-3 toe syndactyly. DHCR7 gene analysis revealed compound heterozygous mutations inclu"
+      },
+      {
+        "pmc_id": "6049015",
+        "entity": {
+          "identifier": "HP:0032458",
+          "type": "Phenotype",
+          "offset": 4127,
+          "length": 28,
+          "text": "medullary canal obliteration",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9147430658340454,
+        "margin": 0.1819896697998047,
+        "context": "rtical thickening and medullary canal stenosis. (C) Right radius and ulna with cortical thickening, medullary canal obliteration and narrowing of space between radius and ulna. (D) Left radius and ulna with cortical thickening, "
+      },
+      {
+        "pmc_id": "6049015",
+        "entity": {
+          "identifier": "HP:0032458",
+          "type": "Phenotype",
+          "offset": 4255,
+          "length": 28,
+          "text": "medullary canal obliteration",
+          "note": null
+        },
+        "source": "semantic",
+        "similarity": 0.9147430658340454,
+        "margin": 0.1819896697998047,
+        "context": " and narrowing of space between radius and ulna. (D) Left radius and ulna with cortical thickening, medullary canal obliteration and narrowing of space between radius and ulna."
+      }
+    ]
+  },
+  "scope": "Post-hoc error diagnosis on the completed, repeatedly used development pilot; not an official score or independent validation."
+}

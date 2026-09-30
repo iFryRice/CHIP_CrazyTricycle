@@ -1,0 +1,185 @@
+{
+  "fold": 1,
+  "baseline": {
+    "mention": {
+      "precision": 0.691817215727949,
+      "recall": 0.7037837837837838,
+      "f1": 0.6977491961414791,
+      "tp": 651,
+      "fp": 290,
+      "fn": 274
+    },
+    "document": {
+      "precision": 0.8019559902200489,
+      "recall": 0.7505720823798627,
+      "f1": 0.7754137115839244,
+      "tp": 328,
+      "fp": 81,
+      "fn": 109
+    },
+    "association_micro": {
+      "precision": 0.6531986531986532,
+      "recall": 0.565597667638484,
+      "f1": 0.60625,
+      "tp": 194,
+      "fp": 103,
+      "fn": 149
+    },
+    "association_macro": {
+      "precision": 0.6258578668838279,
+      "recall": 0.5633862562075224,
+      "f1": 0.5410718042400448,
+      "patients": 43
+    },
+    "score": 0.655121177991362,
+    "counts": {
+      "documents": 16,
+      "patients": 43
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "configurations": {
+    "veto_acronyms": {
+      "mention": {
+        "precision": 0.7254237288135593,
+        "recall": 0.6940540540540541,
+        "f1": 0.7093922651933702,
+        "tp": 642,
+        "fp": 243,
+        "fn": 283
+      },
+      "document": {
+        "precision": 0.8098765432098766,
+        "recall": 0.7505720823798627,
+        "f1": 0.7790973871733967,
+        "tp": 328,
+        "fp": 77,
+        "fn": 109
+      },
+      "association_micro": {
+        "precision": 0.6577181208053692,
+        "recall": 0.5714285714285714,
+        "f1": 0.6115444617784711,
+        "tp": 196,
+        "fp": 102,
+        "fn": 147
+      },
+      "association_macro": {
+        "precision": 0.6385972649686432,
+        "recall": 0.5982699771377549,
+        "f1": 0.5649777807341683,
+        "patients": 43
+      },
+      "score": 0.6662529737198516,
+      "counts": {
+        "documents": 16,
+        "patients": 43
+      },
+      "approximations": [
+        "No official scorer is supplied; these are local implementations of the published metrics.",
+        "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+        "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+        "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+        "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+        "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+      ]
+    },
+    "add_bio_mentions": {
+      "mention": {
+        "precision": 0.6888888888888889,
+        "recall": 0.7037837837837838,
+        "f1": 0.6962566844919786,
+        "tp": 651,
+        "fp": 294,
+        "fn": 274
+      },
+      "document": {
+        "precision": 0.7980535279805353,
+        "recall": 0.7505720823798627,
+        "f1": 0.7735849056603774,
+        "tp": 328,
+        "fp": 83,
+        "fn": 109
+      },
+      "association_micro": {
+        "precision": 0.65,
+        "recall": 0.5685131195335277,
+        "f1": 0.6065318818040435,
+        "tp": 195,
+        "fp": 105,
+        "fn": 148
+      },
+      "association_macro": {
+        "precision": 0.6245432192799993,
+        "recall": 0.5642168209915754,
+        "f1": 0.5406499111116934,
+        "patients": 43
+      },
+      "score": 0.6542558457670232,
+      "counts": {
+        "documents": 16,
+        "patients": 43
+      },
+      "approximations": [
+        "No official scorer is supplied; these are local implementations of the published metrics.",
+        "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+        "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+        "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+        "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+        "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+      ]
+    },
+    "veto_and_add": {
+      "mention": {
+        "precision": 0.7221597300337458,
+        "recall": 0.6940540540540541,
+        "f1": 0.7078280044101434,
+        "tp": 642,
+        "fp": 247,
+        "fn": 283
+      },
+      "document": {
+        "precision": 0.8058968058968059,
+        "recall": 0.7505720823798627,
+        "f1": 0.7772511848341233,
+        "tp": 328,
+        "fp": 79,
+        "fn": 109
+      },
+      "association_micro": {
+        "precision": 0.654485049833887,
+        "recall": 0.5743440233236151,
+        "f1": 0.6118012422360248,
+        "tp": 197,
+        "fp": 104,
+        "fn": 146
+      },
+      "association_macro": {
+        "precision": 0.6372826173648146,
+        "recall": 0.5991005419218081,
+        "f1": 0.5645558876058169,
+        "patients": 43
+      },
+      "score": 0.6653590797715271,
+      "counts": {
+        "documents": 16,
+        "patients": 43
+      },
+      "approximations": [
+        "No official scorer is supplied; these are local implementations of the published metrics.",
+        "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+        "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+        "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+        "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+        "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+      ]
+    }
+  }
+}

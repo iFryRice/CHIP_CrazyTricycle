@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "experiment": "association_negative_weight_half",
+  "declared_at_utc": "2026-09-28T16:29:43.503627+00:00",
+  "baseline_git_commit": "52f9430c2cd4867f58e96cc693be8af60a64801c",
+  "question": "Does downweighting unconfirmed negative-surrogate relations reduce reachable association misses with acceptable precision cost?",
+  "single_changed_factor": "negative_weight",
+  "baseline_negative_weight": 1.0,
+  "candidate_negative_weight": 0.5,
+  "fixed": {
+    "C": 0.5,
+    "association_threshold": 0.3,
+    "candidate_protocol": "fixed_knowledge_base",
+    "entity_strategy": "previous frozen knowledge_union outputs",
+    "entity_predictions": "byte-equivalent entity objects from each saved validation/B artifact",
+    "split": "previous five document-level folds",
+    "patient_balancing": "unchanged"
+  },
+  "promotion_criteria": {
+    "minimum_score_gain": 0.002,
+    "minimum_nonworse_folds": 4,
+    "maximum_micro_precision_loss": 0.05
+  },
+  "training": {
+    "path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+    "sha256": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786"
+  },
+  "ontology": {
+    "path": "PatientPheX-V1-A/hp.obo",
+    "sha256": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b"
+  },
+  "baseline_selection": {
+    "path": "experiments/span_ner/selected_pipeline.json",
+    "sha256": "15ca6b31e575429444f00f3014c6d20124835ea83b59f621ecc365cfc2154994"
+  },
+  "baseline_summary": {
+    "path": "reports/b_supervised/development_summary.json",
+    "sha256": "a98fc3296df9c5528dcce249dc624bc901910b5958ddfa9b60cc4b1b6e97fb75"
+  },
+  "b_target": {
+    "path": "PatientPheX-V1-B/PatientPheX-V1-B.jsonl",
+    "sha256": "4dafea5aa59bfd5f90151ee3732ee475323512b8691f370f4d4678b628cdb62a"
+  },
+  "b_baseline": {
+    "path": "submissions/patientphex_b.jsonl",
+    "sha256": "9256fbb6ac7aaabdd27bda3190d353ebd6b08da887b4065f86e75eafde7fc35c"
+  },
+  "b_output": "submissions/patientphex_b_association_reweighted.jsonl",
+  "report_dir": "reports/association_reweighting",
+  "work_dir": "work/span_ner/association_reweighting",
+  "environment": {
+    "reuse_spec": "experiments/span_ner/environment.json",
+    "canonical_spec_sha256": "1327ca93670a7ea2c01e0ee41acc3af11c736c3a622a0079480e8ea1e88aa8ba",
+    "runtime": "existing project .venv, CPU only, 2 BLAS threads",
+    "new_packages": []
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "directory": "reports/span_ner/linked_boundary-cap100-fold0",
+      "config_sha256": "0493245f240d8ad7a77a3ffb9948ebec1d6fdc41145967fe5dcb7c6754d33d24"
+    },
+    {
+      "fold": 1,
+      "directory": "reports/span_ner/confirmed_boundary-cap100-fold1",
+      "config_sha256": "4c890e75086fd7f0f209525f1288d78804eb279c4ee953f26e14a6a57d337205"
+    },
+    {
+      "fold": 2,
+      "directory": "reports/span_ner/confirmed_boundary-cap100-fold2",
+      "config_sha256": "b74084d2cfa8ac63e780bf4c84896af0b2cc46ce9ca7d432970979c616828ffa"
+    },
+    {
+      "fold": 3,
+      "directory": "reports/span_ner/confirmed_boundary-cap100-fold3",
+      "config_sha256": "8dfa81db52e5bb4354ec144a7c8a13890990d0398e3a6bb8ad504b0f85b19632"
+    },
+    {
+      "fold": 4,
+      "directory": "reports/span_ner/confirmed_boundary-cap100-fold4",
+      "config_sha256": "c7027c222266f0f05643ef686ff2e4442b72f4f3fd9f137f76c931eb769a73fc"
+    }
+  ],
+  "code_sha256": {
+    "scripts/evaluate_association_reweighting.py": "d999685829a4a076e11186c24c246bbe703ed7960d03ee44d8b0b1245bf470ce",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77"
+  },
+  "limitations": [
+    "Previously reused development documents; no independent test claim.",
+    "Candidate distribution mismatch and nested OOF candidate generation are not changed or tested.",
+    "No B gold and no threshold sweep. Prior B output remains immutable."
+  ]
+}

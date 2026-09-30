@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "pid": 2034989,
+  "plan_sha256": "73ea1e95da4783a713ca06824f8590e96bdeb623d668fa6dd51549922cb9c123",
+  "jobs": [
+    {
+      "fold": 0,
+      "gpu": 2,
+      "pid": 2035099,
+      "status": "completed",
+      "log": "reports/relation_text/fold0_training.log",
+      "exit_code": 0
+    },
+    {
+      "fold": 1,
+      "gpu": 0,
+      "pid": 2035100,
+      "status": "completed",
+      "log": "reports/relation_text/fold1_training.log",
+      "exit_code": 0
+    }
+  ],
+  "started_at_epoch": 1790632937.9659312,
+  "selected": {
+    "name": "blend_quarter",
+    "neural_weight": 0.25
+  },
+  "best_mean_gain": 0.010512495656491982,
+  "elapsed_seconds": 186.76462078094482
+}

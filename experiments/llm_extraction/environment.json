@@ -1,0 +1,31 @@
+{
+  "provider": "dcf@10.253.27.177",
+  "project_root": "/home/dcf/chip2026",
+  "runtime_project": "experiments/llm_runtime",
+  "python": "3.12.13",
+  "environment_path": "experiments/llm_runtime/.venv",
+  "pyproject_sha256": "1e2d21de3fa93d68cc2d41ec514c45c3d01c50a0c298c4666b572e8d620492e9",
+  "lock_sha256": "9e5c53a32450e40cd762f0c3b5e79bf434cdb4475dbf47d59fe0b994a9737a91",
+  "model_manifest_sha256": "a1719fab4284f55d831d16f06fee78b96f853614a27f55583f166e5406ce0a9b",
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "model_path": "models/qwen3-8b",
+  "torch": "2.6.0+cu124",
+  "transformers": "4.51.3",
+  "peft": "0.15.2",
+  "accelerate": "1.6.0",
+  "physical_gpus": [
+    0,
+    2
+  ],
+  "initial_gpu": 2,
+  "cpu_threads": 2,
+  "dtype": "float16",
+  "attention": "eager",
+  "maximum_context_tokens": 4096,
+  "maximum_new_tokens": 512,
+  "training_context_tokens": 1024,
+  "external_api_inference": false,
+  "preexisting_environment": "Root .venv remains the original training runtime.",
+  "acceptance": "Pinned input verification, real CUDA Qwen generation, seeded LoRA forward/backward step, and fresh agent following the runbook before experiment inference."
+}

@@ -1,0 +1,1542 @@
+{
+  "scope": "Label-using diagnostics on repeatedly used development documents only. No B labels, fitted rule, selected threshold, oracle prediction export, or new performance claim.",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "reports/joint_confirmation/development_oof.jsonl": "21d0b06ac500fd18de2a057374e4431dae870bcb3b9034da1f7c485a66fc3972",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff"
+  },
+  "code_sha256": "82c1a786636f550f2175a7f724cb72f64ac55081dd9502e9222b7f1b42c9dadc",
+  "metrics": {
+    "mention": {
+      "precision": 0.7520325203252033,
+      "recall": 0.6858779912369397,
+      "f1": 0.7174334567248369,
+      "tp": 4070,
+      "fp": 1342,
+      "fn": 1864
+    },
+    "document": {
+      "precision": 0.8571428571428571,
+      "recall": 0.711864406779661,
+      "f1": 0.7777777777777778,
+      "tp": 2100,
+      "fp": 350,
+      "fn": 850
+    },
+    "association_micro": {
+      "precision": 0.7217391304347827,
+      "recall": 0.6116996775679411,
+      "f1": 0.6621790077287459,
+      "tp": 1328,
+      "fp": 512,
+      "fn": 843
+    },
+    "association_macro": {
+      "precision": 0.6623065801184657,
+      "recall": 0.604999024977632,
+      "f1": 0.6056889780920908,
+      "patients": 209
+    },
+    "score": 0.6907698050808628,
+    "counts": {
+      "documents": 80,
+      "patients": 209
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "association_error_categories": {
+    "fp:concept_absent_from_gold_positive_entities_and_associations": 200,
+    "fn:concept_already_missing": 534,
+    "fp:gold_entity_without_patient_association": 165,
+    "fn:concept_removed_by_review": 17,
+    "fn:available_assigned_to_no_patient": 155,
+    "fn:available_assigned_to_other_patient": 137,
+    "fp:belongs_to_other_gold_patient": 147
+  },
+  "association_transitions": {
+    "true_added": 21,
+    "false_added": 35,
+    "true_removed": 39,
+    "false_removed": 104
+  },
+  "unavailable_concept_sources": {
+    "gold_positive_entity_not_available": 519,
+    "predicted_negated_only": 24,
+    "association_concept_absent_from_gold_positive_entities": 8
+  },
+  "patient_count_groups": {
+    "1_patient": {
+      "baseline": {
+        "mention": {
+          "precision": 0.7238142292490118,
+          "recall": 0.6884398496240601,
+          "f1": 0.7056840077071291,
+          "tp": 1465,
+          "fp": 559,
+          "fn": 663
+        },
+        "document": {
+          "precision": 0.8267800212539851,
+          "recall": 0.706630336058129,
+          "f1": 0.761998041136141,
+          "tp": 778,
+          "fp": 163,
+          "fn": 323
+        },
+        "association_micro": {
+          "precision": 0.7287234042553191,
+          "recall": 0.6565495207667732,
+          "f1": 0.6907563025210084,
+          "tp": 411,
+          "fp": 153,
+          "fn": 215
+        },
+        "association_macro": {
+          "precision": 0.71224789548442,
+          "recall": 0.6547308105826641,
+          "f1": 0.6699690845251358,
+          "patients": 36
+        },
+        "score": 0.7071018589723536,
+        "counts": {
+          "documents": 36,
+          "patients": 36
+        },
+        "approximations": [
+          "No official scorer is supplied; these are local implementations of the published metrics.",
+          "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+          "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+          "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+          "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+          "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+        ]
+      },
+      "joint": {
+        "mention": {
+          "precision": 0.746900826446281,
+          "recall": 0.6795112781954887,
+          "f1": 0.7116141732283464,
+          "tp": 1446,
+          "fp": 490,
+          "fn": 682
+        },
+        "document": {
+          "precision": 0.8512763596004439,
+          "recall": 0.6966394187102634,
+          "f1": 0.7662337662337663,
+          "tp": 767,
+          "fp": 134,
+          "fn": 334
+        },
+        "association_micro": {
+          "precision": 0.7645951035781544,
+          "recall": 0.6485623003194888,
+          "f1": 0.7018150388936906,
+          "tp": 406,
+          "fp": 125,
+          "fn": 220
+        },
+        "association_macro": {
+          "precision": 0.7525355374398409,
+          "recall": 0.6460761550530085,
+          "f1": 0.6798293279462582,
+          "patients": 36
+        },
+        "score": 0.7148730765755154,
+        "counts": {
+          "documents": 36,
+          "patients": 36
+        },
+        "approximations": [
+          "No official scorer is supplied; these are local implementations of the published metrics.",
+          "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+          "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+          "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+          "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+          "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+        ]
+      }
+    },
+    "2_to_4_patients": {
+      "baseline": {
+        "mention": {
+          "precision": 0.745819397993311,
+          "recall": 0.7111977321048901,
+          "f1": 0.72809722474152,
+          "tp": 2007,
+          "fp": 684,
+          "fn": 815
+        },
+        "document": {
+          "precision": 0.8484107579462102,
+          "recall": 0.7393465909090909,
+          "f1": 0.7901328273244782,
+          "tp": 1041,
+          "fp": 186,
+          "fn": 367
+        },
+        "association_micro": {
+          "precision": 0.6901140684410646,
+          "recall": 0.6564195298372514,
+          "f1": 0.6728452270620945,
+          "tp": 726,
+          "fp": 326,
+          "fn": 380
+        },
+        "association_macro": {
+          "precision": 0.6886891150697515,
+          "recall": 0.6507898312850373,
+          "f1": 0.6355039214989738,
+          "patients": 83
+        },
+        "score": 0.7066448001567667,
+        "counts": {
+          "documents": 31,
+          "patients": 83
+        },
+        "approximations": [
+          "No official scorer is supplied; these are local implementations of the published metrics.",
+          "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+          "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+          "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+          "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+          "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+        ]
+      },
+      "joint": {
+        "mention": {
+          "precision": 0.7757410296411856,
+          "recall": 0.7048192771084337,
+          "f1": 0.7385815076123282,
+          "tp": 1989,
+          "fp": 575,
+          "fn": 833
+        },
+        "document": {
+          "precision": 0.869198312236287,
+          "recall": 0.7315340909090909,
+          "f1": 0.7944465869649056,
+          "tp": 1030,
+          "fp": 155,
+          "fn": 378
+        },
+        "association_micro": {
+          "precision": 0.7054187192118226,
+          "recall": 0.6473779385171791,
+          "f1": 0.6751532296086752,
+          "tp": 716,
+          "fp": 299,
+          "fn": 390
+        },
+        "association_macro": {
+          "precision": 0.6983457175159483,
+          "recall": 0.6504896980175983,
+          "f1": 0.6418159518154452,
+          "patients": 83
+        },
+        "score": 0.7124993190003386,
+        "counts": {
+          "documents": 31,
+          "patients": 83
+        },
+        "approximations": [
+          "No official scorer is supplied; these are local implementations of the published metrics.",
+          "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+          "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+          "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+          "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+          "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+        ]
+      }
+    },
+    "5_or_more_patients": {
+      "baseline": {
+        "mention": {
+          "precision": 0.6829787234042554,
+          "recall": 0.6524390243902439,
+          "f1": 0.6673596673596673,
+          "tp": 642,
+          "fp": 298,
+          "fn": 342
+        },
+        "document": {
+          "precision": 0.8213333333333334,
+          "recall": 0.6984126984126984,
+          "f1": 0.7549019607843137,
+          "tp": 308,
+          "fp": 67,
+          "fn": 133
+        },
+        "association_micro": {
+          "precision": 0.6720257234726688,
+          "recall": 0.4760820045558087,
+          "f1": 0.5573333333333333,
+          "tp": 209,
+          "fp": 102,
+          "fn": 230
+        },
+        "association_macro": {
+          "precision": 0.5539598056264723,
+          "recall": 0.521600231267414,
+          "f1": 0.5075324922750026,
+          "patients": 90
+        },
+        "score": 0.6217818634380793,
+        "counts": {
+          "documents": 13,
+          "patients": 90
+        },
+        "approximations": [
+          "No official scorer is supplied; these are local implementations of the published metrics.",
+          "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+          "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+          "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+          "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+          "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+        ]
+      },
+      "joint": {
+        "mention": {
+          "precision": 0.6962719298245614,
+          "recall": 0.6453252032520326,
+          "f1": 0.669831223628692,
+          "tp": 635,
+          "fp": 277,
+          "fn": 349
+        },
+        "document": {
+          "precision": 0.8324175824175825,
+          "recall": 0.6870748299319728,
+          "f1": 0.7527950310559006,
+          "tp": 303,
+          "fp": 61,
+          "fn": 138
+        },
+        "association_micro": {
+          "precision": 0.7006802721088435,
+          "recall": 0.46924829157175396,
+          "f1": 0.5620736698499318,
+          "tp": 206,
+          "fp": 88,
+          "fn": 233
+        },
+        "association_macro": {
+          "precision": 0.5929789038122372,
+          "recall": 0.5466156633661794,
+          "f1": 0.542715740161108,
+          "patients": 90
+        },
+        "score": 0.6318539161739081,
+        "counts": {
+          "documents": 13,
+          "patients": 90
+        },
+        "approximations": [
+          "No official scorer is supplied; these are local implementations of the published metrics.",
+          "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+          "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+          "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+          "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+          "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+        ]
+      }
+    }
+  },
+  "documents": [
+    {
+      "pmc_id": "5763540",
+      "fold": 0,
+      "patients": 3,
+      "baseline_score": 0.535767830370529,
+      "score": 0.48685861941675895,
+      "score_delta": -0.048909210953770044,
+      "association_macro_f1": 0.2619047619047619,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 2,
+        "fn:available_assigned_to_no_patient": 4,
+        "fn:concept_already_missing": 6,
+        "fp:gold_entity_without_patient_association": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1
+      }
+    },
+    {
+      "pmc_id": "10789033",
+      "fold": 2,
+      "patients": 1,
+      "baseline_score": 0.8999696785930867,
+      "score": 0.8553960659223817,
+      "score_delta": -0.04457361267070503,
+      "association_macro_f1": 0.8421052631578947,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 2,
+        "fn:concept_removed_by_review": 1,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1,
+        "fp:gold_entity_without_patient_association": 1
+      }
+    },
+    {
+      "pmc_id": "11986149",
+      "fold": 3,
+      "patients": 2,
+      "baseline_score": 0.7039973249532256,
+      "score": 0.662508616927112,
+      "score_delta": -0.0414887080261136,
+      "association_macro_f1": 0.5245098039215687,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_no_patient": 33,
+        "fn:available_assigned_to_other_patient": 2,
+        "fn:concept_already_missing": 11,
+        "fp:gold_entity_without_patient_association": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3,
+        "fn:concept_removed_by_review": 1,
+        "fp:belongs_to_other_gold_patient": 3
+      }
+    },
+    {
+      "pmc_id": "11871647",
+      "fold": 0,
+      "patients": 1,
+      "baseline_score": 0.7295993750318428,
+      "score": 0.6902564102564103,
+      "score_delta": -0.03934296477543253,
+      "association_macro_f1": 0.6666666666666666,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 3,
+        "fn:available_assigned_to_no_patient": 1,
+        "fn:concept_removed_by_review": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "5422868",
+      "fold": 2,
+      "patients": 2,
+      "baseline_score": 0.7989756812947603,
+      "score": 0.7625480604921394,
+      "score_delta": -0.03642762080262085,
+      "association_macro_f1": 0.6558441558441558,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 6,
+        "fp:gold_entity_without_patient_association": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3,
+        "fn:available_assigned_to_no_patient": 2,
+        "fp:belongs_to_other_gold_patient": 5
+      }
+    },
+    {
+      "pmc_id": "12646972",
+      "fold": 4,
+      "patients": 1,
+      "baseline_score": 0.37727272727272726,
+      "score": 0.35062656641604006,
+      "score_delta": -0.026646160856687195,
+      "association_macro_f1": 0.2,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 4,
+        "fn:available_assigned_to_no_patient": 4
+      }
+    },
+    {
+      "pmc_id": "12250201",
+      "fold": 4,
+      "patients": 3,
+      "baseline_score": 0.6299846079423725,
+      "score": 0.6155748201784008,
+      "score_delta": -0.014409787763971726,
+      "association_macro_f1": 0.5743271221532091,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 9,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3,
+        "fp:belongs_to_other_gold_patient": 4
+      }
+    },
+    {
+      "pmc_id": "6390251",
+      "fold": 4,
+      "patients": 2,
+      "baseline_score": 0.7994459386767079,
+      "score": 0.786060038564839,
+      "score_delta": -0.01338590011186891,
+      "association_macro_f1": 0.7595338983050848,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_no_patient": 8,
+        "fn:concept_already_missing": 3,
+        "fp:belongs_to_other_gold_patient": 5,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1,
+        "fp:gold_entity_without_patient_association": 6
+      }
+    },
+    {
+      "pmc_id": "12846941",
+      "fold": 0,
+      "patients": 1,
+      "baseline_score": 0.8031484794275492,
+      "score": 0.7916712840565485,
+      "score_delta": -0.01147719537100067,
+      "association_macro_f1": 0.8461538461538461,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_no_patient": 1,
+        "fn:concept_already_missing": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "5959423",
+      "fold": 2,
+      "patients": 6,
+      "baseline_score": 0.6136307528279511,
+      "score": 0.6030331068959832,
+      "score_delta": -0.01059764593196788,
+      "association_macro_f1": 0.4777869002006933,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 2,
+        "fn:concept_already_missing": 8,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fp:gold_entity_without_patient_association": 7,
+        "fp:belongs_to_other_gold_patient": 5,
+        "fn:available_assigned_to_no_patient": 1
+      }
+    },
+    {
+      "pmc_id": "5575846",
+      "fold": 2,
+      "patients": 4,
+      "baseline_score": 0.6862954910582364,
+      "score": 0.6791161448377943,
+      "score_delta": -0.00717934622044214,
+      "association_macro_f1": 0.655011655011655,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 16,
+        "fp:gold_entity_without_patient_association": 1,
+        "fp:belongs_to_other_gold_patient": 8,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3
+      }
+    },
+    {
+      "pmc_id": "11906559",
+      "fold": 0,
+      "patients": 5,
+      "baseline_score": 0.5788161729338199,
+      "score": 0.572170060331825,
+      "score_delta": -0.00664611260199488,
+      "association_macro_f1": 0.4066666666666666,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 5,
+        "fp:belongs_to_other_gold_patient": 2,
+        "fn:available_assigned_to_other_patient": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fn:concept_removed_by_review": 1
+      }
+    },
+    {
+      "pmc_id": "12110755",
+      "fold": 2,
+      "patients": 2,
+      "baseline_score": 0.7112052510269794,
+      "score": 0.705228105815221,
+      "score_delta": -0.005977145211758406,
+      "association_macro_f1": 0.7037037037037037,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 9,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 8,
+        "fp:gold_entity_without_patient_association": 4
+      }
+    },
+    {
+      "pmc_id": "5693559",
+      "fold": 1,
+      "patients": 2,
+      "baseline_score": 0.6919189450474361,
+      "score": 0.6868348950627432,
+      "score_delta": -0.005084049984692918,
+      "association_macro_f1": 0.4904761904761905,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 8,
+        "fn:available_assigned_to_no_patient": 5,
+        "fp:belongs_to_other_gold_patient": 7,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fn:available_assigned_to_other_patient": 14
+      }
+    },
+    {
+      "pmc_id": "12386172",
+      "fold": 2,
+      "patients": 1,
+      "baseline_score": 0.6780049737496546,
+      "score": 0.673253938758445,
+      "score_delta": -0.004751034991209657,
+      "association_macro_f1": 0.6785714285714286,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 9,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:gold_entity_without_patient_association": 4,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 4
+      }
+    },
+    {
+      "pmc_id": "11203018",
+      "fold": 0,
+      "patients": 1,
+      "baseline_score": 0.8389925090799031,
+      "score": 0.8343258145363408,
+      "score_delta": -0.0046666945435622775,
+      "association_macro_f1": 0.8571428571428571,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 2,
+        "fn:concept_removed_by_review": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "12126309",
+      "fold": 0,
+      "patients": 8,
+      "baseline_score": 0.39785714285714285,
+      "score": 0.3935580702473087,
+      "score_delta": -0.0042990726098341425,
+      "association_macro_f1": 0.11805555555555555,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 24,
+        "fn:concept_already_missing": 21,
+        "fn:available_assigned_to_no_patient": 29,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 4
+      }
+    },
+    {
+      "pmc_id": "12455887",
+      "fold": 4,
+      "patients": 2,
+      "baseline_score": 0.6809142082722205,
+      "score": 0.6777398622343085,
+      "score_delta": -0.0031743460379120014,
+      "association_macro_f1": 0.6256873527101335,
+      "remaining_association_errors": {
+        "fn:concept_removed_by_review": 3,
+        "fn:concept_already_missing": 18,
+        "fn:available_assigned_to_no_patient": 1,
+        "fn:available_assigned_to_other_patient": 5,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 11,
+        "fp:belongs_to_other_gold_patient": 13,
+        "fp:gold_entity_without_patient_association": 2
+      }
+    },
+    {
+      "pmc_id": "6063015",
+      "fold": 3,
+      "patients": 4,
+      "baseline_score": 0.8773311780428757,
+      "score": 0.8745020604395604,
+      "score_delta": -0.0028291176033153898,
+      "association_macro_f1": 0.9145833333333333,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 6,
+        "fn:available_assigned_to_other_patient": 2,
+        "fp:gold_entity_without_patient_association": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1,
+        "fp:belongs_to_other_gold_patient": 3
+      }
+    },
+    {
+      "pmc_id": "12059664",
+      "fold": 0,
+      "patients": 4,
+      "baseline_score": 0.8557791994368196,
+      "score": 0.8529577055691961,
+      "score_delta": -0.002821493867623426,
+      "association_macro_f1": 0.8452122722432082,
+      "remaining_association_errors": {
+        "fn:concept_removed_by_review": 4,
+        "fn:concept_already_missing": 7,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 7,
+        "fp:gold_entity_without_patient_association": 2,
+        "fn:available_assigned_to_other_patient": 2,
+        "fp:belongs_to_other_gold_patient": 11,
+        "fn:available_assigned_to_no_patient": 1
+      }
+    },
+    {
+      "pmc_id": "12405443",
+      "fold": 2,
+      "patients": 4,
+      "baseline_score": 0.7751288194632447,
+      "score": 0.7728264536002619,
+      "score_delta": -0.0023023658629828248,
+      "association_macro_f1": 0.7768817204301075,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 2,
+        "fn:concept_already_missing": 7,
+        "fp:gold_entity_without_patient_association": 4,
+        "fp:belongs_to_other_gold_patient": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1
+      }
+    },
+    {
+      "pmc_id": "11235872",
+      "fold": 3,
+      "patients": 14,
+      "baseline_score": 0.6806216357153125,
+      "score": 0.6787430972388956,
+      "score_delta": -0.0018785384764169466,
+      "association_macro_f1": 0.45646258503401355,
+      "remaining_association_errors": {
+        "fp:gold_entity_without_patient_association": 8,
+        "fn:available_assigned_to_other_patient": 7,
+        "fn:available_assigned_to_no_patient": 3,
+        "fn:concept_already_missing": 5,
+        "fp:belongs_to_other_gold_patient": 5
+      }
+    },
+    {
+      "pmc_id": "10553122",
+      "fold": 0,
+      "patients": 1,
+      "baseline_score": 0.6693152265566059,
+      "score": 0.6674503657262278,
+      "score_delta": -0.0018648608303780678,
+      "association_macro_f1": 0.6206896551724138,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 14,
+        "fp:gold_entity_without_patient_association": 5,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3
+      }
+    },
+    {
+      "pmc_id": "5773845",
+      "fold": 3,
+      "patients": 5,
+      "baseline_score": 0.6305843290475974,
+      "score": 0.6287851037851038,
+      "score_delta": -0.0017992252624936533,
+      "association_macro_f1": 0.44761904761904764,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_no_patient": 16,
+        "fn:concept_already_missing": 6,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fn:available_assigned_to_other_patient": 6,
+        "fp:belongs_to_other_gold_patient": 1
+      }
+    },
+    {
+      "pmc_id": "5538066",
+      "fold": 3,
+      "patients": 2,
+      "baseline_score": 0.6872527874172611,
+      "score": 0.6855988089046317,
+      "score_delta": -0.0016539785126294948,
+      "association_macro_f1": 0.6643337066069429,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_no_patient": 4,
+        "fn:concept_already_missing": 21,
+        "fn:available_assigned_to_other_patient": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 8,
+        "fp:gold_entity_without_patient_association": 4,
+        "fp:belongs_to_other_gold_patient": 4
+      }
+    },
+    {
+      "pmc_id": "5473715",
+      "fold": 2,
+      "patients": 7,
+      "baseline_score": 0.7102672536319152,
+      "score": 0.7090689869181583,
+      "score_delta": -0.0011982667137568903,
+      "association_macro_f1": 0.7534013605442177,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 4,
+        "fn:concept_already_missing": 14,
+        "fn:concept_removed_by_review": 1,
+        "fp:belongs_to_other_gold_patient": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 4
+      }
+    },
+    {
+      "pmc_id": "6491447",
+      "fold": 2,
+      "patients": 1,
+      "baseline_score": 0.7400793650793651,
+      "score": 0.7395604395604396,
+      "score_delta": -0.0005189255189255171,
+      "association_macro_f1": 0.7692307692307693,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 5,
+        "fn:available_assigned_to_no_patient": 1
+      }
+    },
+    {
+      "pmc_id": "12779223",
+      "fold": 1,
+      "patients": 1,
+      "baseline_score": 0.747232664995823,
+      "score": 0.747232664995823,
+      "score_delta": 0.0,
+      "association_macro_f1": 0.6428571428571429,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_no_patient": 5,
+        "fn:concept_already_missing": 3,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1,
+        "fp:gold_entity_without_patient_association": 1
+      }
+    },
+    {
+      "pmc_id": "3563609",
+      "fold": 0,
+      "patients": 9,
+      "baseline_score": 0.7734858104858104,
+      "score": 0.7734858104858104,
+      "score_delta": 0.0,
+      "association_macro_f1": 0.7783068783068783,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 8,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "4644339",
+      "fold": 3,
+      "patients": 1,
+      "baseline_score": 0.7896398944193062,
+      "score": 0.7896398944193062,
+      "score_delta": 0.0,
+      "association_macro_f1": 0.7692307692307693,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 4,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:gold_entity_without_patient_association": 1
+      }
+    },
+    {
+      "pmc_id": "6036836",
+      "fold": 4,
+      "patients": 1,
+      "baseline_score": 0.7159676298639065,
+      "score": 0.7159676298639065,
+      "score_delta": 0.0,
+      "association_macro_f1": 0.6382978723404256,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 7,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:gold_entity_without_patient_association": 7,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "6057141",
+      "fold": 4,
+      "patients": 1,
+      "baseline_score": 0.652055176749049,
+      "score": 0.652055176749049,
+      "score_delta": 0.0,
+      "association_macro_f1": 0.6382978723404256,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 12,
+        "fp:gold_entity_without_patient_association": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3
+      }
+    },
+    {
+      "pmc_id": "9327653",
+      "fold": 1,
+      "patients": 1,
+      "baseline_score": 0.5938852813852814,
+      "score": 0.5938852813852814,
+      "score_delta": 0.0,
+      "association_macro_f1": 0.625,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 3,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:gold_entity_without_patient_association": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1
+      }
+    },
+    {
+      "pmc_id": "12017973",
+      "fold": 3,
+      "patients": 1,
+      "baseline_score": 0.6896758703481393,
+      "score": 0.6908407198495836,
+      "score_delta": 0.0011648495014443538,
+      "association_macro_f1": 0.6666666666666666,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 2,
+        "fp:gold_entity_without_patient_association": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3
+      }
+    },
+    {
+      "pmc_id": "6338757",
+      "fold": 4,
+      "patients": 1,
+      "baseline_score": 0.8499115448267991,
+      "score": 0.85196948309471,
+      "score_delta": 0.002057938267910897,
+      "association_macro_f1": 0.8518518518518519,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 3,
+        "fp:gold_entity_without_patient_association": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3
+      }
+    },
+    {
+      "pmc_id": "5562981",
+      "fold": 4,
+      "patients": 3,
+      "baseline_score": 0.7365126050420168,
+      "score": 0.7392067222077835,
+      "score_delta": 0.0026941171657667295,
+      "association_macro_f1": 0.7222222222222222,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 12,
+        "fp:belongs_to_other_gold_patient": 1
+      }
+    },
+    {
+      "pmc_id": "12891056",
+      "fold": 2,
+      "patients": 1,
+      "baseline_score": 0.8011421577327844,
+      "score": 0.803842959860528,
+      "score_delta": 0.0027008021277435956,
+      "association_macro_f1": 0.8135593220338984,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 5,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:gold_entity_without_patient_association": 3,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "6134758",
+      "fold": 2,
+      "patients": 1,
+      "baseline_score": 0.599836037892612,
+      "score": 0.602635046113307,
+      "score_delta": 0.0027990082206950095,
+      "association_macro_f1": 0.5507246376811594,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 18,
+        "fn:available_assigned_to_no_patient": 5,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 6,
+        "fp:gold_entity_without_patient_association": 2
+      }
+    },
+    {
+      "pmc_id": "2964533",
+      "fold": 3,
+      "patients": 2,
+      "baseline_score": 0.7821534960137901,
+      "score": 0.7858982376920267,
+      "score_delta": 0.003744741678236574,
+      "association_macro_f1": 0.8166666666666667,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 8,
+        "fp:gold_entity_without_patient_association": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1,
+        "fn:concept_removed_by_review": 1
+      }
+    },
+    {
+      "pmc_id": "5574094",
+      "fold": 2,
+      "patients": 1,
+      "baseline_score": 0.7588523466940733,
+      "score": 0.7627161322813496,
+      "score_delta": 0.0038637855872762916,
+      "association_macro_f1": 0.7857142857142857,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 10,
+        "fp:gold_entity_without_patient_association": 2
+      }
+    },
+    {
+      "pmc_id": "11919040",
+      "fold": 0,
+      "patients": 3,
+      "baseline_score": 0.8218395691609978,
+      "score": 0.8271000505867334,
+      "score_delta": 0.0052604814257356525,
+      "association_macro_f1": 0.8698412698412699,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 6,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fp:belongs_to_other_gold_patient": 1
+      }
+    },
+    {
+      "pmc_id": "12444410",
+      "fold": 2,
+      "patients": 5,
+      "baseline_score": 0.35136335394956086,
+      "score": 0.35673846550114297,
+      "score_delta": 0.005375111551582101,
+      "association_macro_f1": 0.11058823529411765,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 1,
+        "fn:concept_already_missing": 9,
+        "fp:gold_entity_without_patient_association": 11,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1,
+        "fp:belongs_to_other_gold_patient": 4,
+        "fn:available_assigned_to_no_patient": 2
+      }
+    },
+    {
+      "pmc_id": "6096008",
+      "fold": 1,
+      "patients": 4,
+      "baseline_score": 0.6782334672999635,
+      "score": 0.6842672070558128,
+      "score_delta": 0.00603373975584931,
+      "association_macro_f1": 0.6714285714285715,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_no_patient": 9,
+        "fn:concept_already_missing": 1,
+        "fp:belongs_to_other_gold_patient": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "5415817",
+      "fold": 0,
+      "patients": 1,
+      "baseline_score": 0.7610989010989011,
+      "score": 0.7687739463601533,
+      "score_delta": 0.007675045261252178,
+      "association_macro_f1": 0.7222222222222222,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 6,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:gold_entity_without_patient_association": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "5425407",
+      "fold": 1,
+      "patients": 1,
+      "baseline_score": 0.7147920564356945,
+      "score": 0.7233286418015482,
+      "score_delta": 0.008536585365853666,
+      "association_macro_f1": 0.7,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 7,
+        "fp:gold_entity_without_patient_association": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3
+      }
+    },
+    {
+      "pmc_id": "4899602",
+      "fold": 0,
+      "patients": 1,
+      "baseline_score": 0.7778691896338956,
+      "score": 0.7864593301435407,
+      "score_delta": 0.008590140509645128,
+      "association_macro_f1": 0.8181818181818182,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 3,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1
+      }
+    },
+    {
+      "pmc_id": "2866573",
+      "fold": 0,
+      "patients": 1,
+      "baseline_score": 0.6622979961215256,
+      "score": 0.6713459891521553,
+      "score_delta": 0.009047993030629642,
+      "association_macro_f1": 0.65,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 11,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fp:gold_entity_without_patient_association": 1
+      }
+    },
+    {
+      "pmc_id": "12118522",
+      "fold": 2,
+      "patients": 1,
+      "baseline_score": 0.785989010989011,
+      "score": 0.7953580901856764,
+      "score_delta": 0.009369079196665409,
+      "association_macro_f1": 0.8,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 5,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3,
+        "fp:gold_entity_without_patient_association": 1
+      }
+    },
+    {
+      "pmc_id": "5023785",
+      "fold": 1,
+      "patients": 1,
+      "baseline_score": 0.7543960734101579,
+      "score": 0.7654127481713688,
+      "score_delta": 0.011016674761210932,
+      "association_macro_f1": 0.8181818181818182,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "6151044",
+      "fold": 3,
+      "patients": 1,
+      "baseline_score": 0.6747939560439561,
+      "score": 0.6876456876456877,
+      "score_delta": 0.012851731601731586,
+      "association_macro_f1": 0.7692307692307693,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1
+      }
+    },
+    {
+      "pmc_id": "6059678",
+      "fold": 3,
+      "patients": 1,
+      "baseline_score": 0.5953076323987538,
+      "score": 0.608465527135596,
+      "score_delta": 0.013157894736842146,
+      "association_macro_f1": 0.5263157894736842,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 7,
+        "fp:gold_entity_without_patient_association": 2
+      }
+    },
+    {
+      "pmc_id": "5537416",
+      "fold": 4,
+      "patients": 2,
+      "baseline_score": 0.6741308535862478,
+      "score": 0.6876056432669528,
+      "score_delta": 0.013474789680705035,
+      "association_macro_f1": 0.7059373539036933,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 15,
+        "fn:available_assigned_to_other_patient": 1,
+        "fp:gold_entity_without_patient_association": 4,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 7,
+        "fp:belongs_to_other_gold_patient": 4,
+        "fn:available_assigned_to_no_patient": 1
+      }
+    },
+    {
+      "pmc_id": "5970456",
+      "fold": 4,
+      "patients": 1,
+      "baseline_score": 0.5091362126245847,
+      "score": 0.5227272727272727,
+      "score_delta": 0.013591060102687957,
+      "association_macro_f1": 0.5454545454545454,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 2,
+        "fp:gold_entity_without_patient_association": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "11826603",
+      "fold": 1,
+      "patients": 1,
+      "baseline_score": 0.41055341055341055,
+      "score": 0.425,
+      "score_delta": 0.014446589446589442,
+      "association_macro_f1": 0.2857142857142857,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 3,
+        "fp:gold_entity_without_patient_association": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1
+      }
+    },
+    {
+      "pmc_id": "12628480",
+      "fold": 1,
+      "patients": 4,
+      "baseline_score": 0.6028896555910832,
+      "score": 0.6178878511871884,
+      "score_delta": 0.014998195596105157,
+      "association_macro_f1": 0.48763546798029556,
+      "remaining_association_errors": {
+        "fn:concept_removed_by_review": 2,
+        "fn:concept_already_missing": 11,
+        "fn:available_assigned_to_other_patient": 10,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 12,
+        "fp:gold_entity_without_patient_association": 1,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:belongs_to_other_gold_patient": 13
+      }
+    },
+    {
+      "pmc_id": "11196099",
+      "fold": 4,
+      "patients": 2,
+      "baseline_score": 0.8581537474501546,
+      "score": 0.8733478445408034,
+      "score_delta": 0.015194097090648784,
+      "association_macro_f1": 0.9444444444444444,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 3
+      }
+    },
+    {
+      "pmc_id": "6048891",
+      "fold": 3,
+      "patients": 2,
+      "baseline_score": 0.7331524271632672,
+      "score": 0.7498516787300437,
+      "score_delta": 0.01669925156677643,
+      "association_macro_f1": 0.7211764705882353,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 7,
+        "fp:gold_entity_without_patient_association": 3,
+        "fp:belongs_to_other_gold_patient": 3,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "6219255",
+      "fold": 3,
+      "patients": 1,
+      "baseline_score": 0.7208242866004964,
+      "score": 0.7379033503165046,
+      "score_delta": 0.017079063716008203,
+      "association_macro_f1": 0.7333333333333333,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_no_patient": 3,
+        "fn:concept_already_missing": 2,
+        "fp:gold_entity_without_patient_association": 3
+      }
+    },
+    {
+      "pmc_id": "5866036",
+      "fold": 1,
+      "patients": 3,
+      "baseline_score": 0.4176354609349461,
+      "score": 0.43477443609022554,
+      "score_delta": 0.017138975155279457,
+      "association_macro_f1": 0.21052631578947367,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 3,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 4,
+        "fp:gold_entity_without_patient_association": 1,
+        "fn:available_assigned_to_other_patient": 1
+      }
+    },
+    {
+      "pmc_id": "6049015",
+      "fold": 1,
+      "patients": 1,
+      "baseline_score": 0.681969696969697,
+      "score": 0.6995916754478398,
+      "score_delta": 0.01762197847814284,
+      "association_macro_f1": 0.625,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 7,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fp:gold_entity_without_patient_association": 3
+      }
+    },
+    {
+      "pmc_id": "5789735",
+      "fold": 1,
+      "patients": 5,
+      "baseline_score": 0.6191956558951632,
+      "score": 0.636995933962879,
+      "score_delta": 0.01780027806771578,
+      "association_macro_f1": 0.387497062279671,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 7,
+        "fn:concept_already_missing": 11,
+        "fn:available_assigned_to_no_patient": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fp:gold_entity_without_patient_association": 4,
+        "fp:belongs_to_other_gold_patient": 1
+      }
+    },
+    {
+      "pmc_id": "12798528",
+      "fold": 4,
+      "patients": 3,
+      "baseline_score": 0.7310601834960098,
+      "score": 0.7489761396011396,
+      "score_delta": 0.01791595610512986,
+      "association_macro_f1": 0.7378917378917379,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 6,
+        "fp:gold_entity_without_patient_association": 2,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:belongs_to_other_gold_patient": 4,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 4
+      }
+    },
+    {
+      "pmc_id": "12733031",
+      "fold": 3,
+      "patients": 1,
+      "baseline_score": 0.4544726930320151,
+      "score": 0.47364400305576776,
+      "score_delta": 0.019171310023752663,
+      "association_macro_f1": 0.42857142857142855,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 3,
+        "fp:gold_entity_without_patient_association": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3
+      }
+    },
+    {
+      "pmc_id": "12334843",
+      "fold": 2,
+      "patients": 2,
+      "baseline_score": 0.6830768346589304,
+      "score": 0.7035943223443224,
+      "score_delta": 0.020517487685391966,
+      "association_macro_f1": 0.6190476190476191,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 9,
+        "fp:gold_entity_without_patient_association": 3
+      }
+    },
+    {
+      "pmc_id": "6332535",
+      "fold": 4,
+      "patients": 2,
+      "baseline_score": 0.6404369438042348,
+      "score": 0.6612465593699824,
+      "score_delta": 0.020809615565747674,
+      "association_macro_f1": 0.5636363636363637,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 2,
+        "fn:available_assigned_to_other_patient": 4,
+        "fp:gold_entity_without_patient_association": 3,
+        "fp:belongs_to_other_gold_patient": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "11221135",
+      "fold": 1,
+      "patients": 3,
+      "baseline_score": 0.5934280144806461,
+      "score": 0.6161027568922306,
+      "score_delta": 0.022674742411584514,
+      "association_macro_f1": 0.5238095238095238,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 5,
+        "fn:available_assigned_to_other_patient": 2,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2
+      }
+    },
+    {
+      "pmc_id": "12652105",
+      "fold": 0,
+      "patients": 2,
+      "baseline_score": 0.7470301856543524,
+      "score": 0.7712250939952346,
+      "score_delta": 0.024194908340882226,
+      "association_macro_f1": 0.8357487922705313,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 4,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1,
+        "fp:gold_entity_without_patient_association": 1
+      }
+    },
+    {
+      "pmc_id": "12110769",
+      "fold": 4,
+      "patients": 6,
+      "baseline_score": 0.6305043468743159,
+      "score": 0.6560452468903045,
+      "score_delta": 0.025540900015988632,
+      "association_macro_f1": 0.7136752136752137,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 4,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fp:gold_entity_without_patient_association": 4,
+        "fn:concept_removed_by_review": 1,
+        "fp:belongs_to_other_gold_patient": 1
+      }
+    },
+    {
+      "pmc_id": "12147048",
+      "fold": 2,
+      "patients": 3,
+      "baseline_score": 0.5303606405432889,
+      "score": 0.5583133613909289,
+      "score_delta": 0.02795272084764,
+      "association_macro_f1": 0.41860348877892734,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 7,
+        "fn:concept_already_missing": 10,
+        "fp:gold_entity_without_patient_association": 9,
+        "fp:belongs_to_other_gold_patient": 8,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 8
+      }
+    },
+    {
+      "pmc_id": "5452357",
+      "fold": 4,
+      "patients": 1,
+      "baseline_score": 0.494274322169059,
+      "score": 0.5246843434343434,
+      "score_delta": 0.03041002126528447,
+      "association_macro_f1": 0.4,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 8,
+        "fp:gold_entity_without_patient_association": 7,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 3
+      }
+    },
+    {
+      "pmc_id": "4678370",
+      "fold": 3,
+      "patients": 7,
+      "baseline_score": 0.7190412867274569,
+      "score": 0.7504913583949199,
+      "score_delta": 0.03145007166746294,
+      "association_macro_f1": 0.7129120879120878,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 7,
+        "fn:concept_already_missing": 6,
+        "fn:available_assigned_to_no_patient": 2,
+        "fp:belongs_to_other_gold_patient": 1
+      }
+    },
+    {
+      "pmc_id": "12811285",
+      "fold": 3,
+      "patients": 2,
+      "baseline_score": 0.6048563188793903,
+      "score": 0.6390340597431776,
+      "score_delta": 0.03417774086378733,
+      "association_macro_f1": 0.5214285714285715,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 1,
+        "fn:concept_already_missing": 2,
+        "fp:belongs_to_other_gold_patient": 7,
+        "fp:gold_entity_without_patient_association": 4,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 5
+      }
+    },
+    {
+      "pmc_id": "5793168",
+      "fold": 4,
+      "patients": 1,
+      "baseline_score": 0.5707070707070707,
+      "score": 0.60625,
+      "score_delta": 0.03554292929292924,
+      "association_macro_f1": 1.0,
+      "remaining_association_errors": {}
+    },
+    {
+      "pmc_id": "10313222",
+      "fold": 1,
+      "patients": 1,
+      "baseline_score": 0.7431372549019608,
+      "score": 0.7881944444444444,
+      "score_delta": 0.04505718954248361,
+      "association_macro_f1": 0.8888888888888888,
+      "remaining_association_errors": {
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 1
+      }
+    },
+    {
+      "pmc_id": "12078887",
+      "fold": 1,
+      "patients": 6,
+      "baseline_score": 0.6412202089017282,
+      "score": 0.6876743161255672,
+      "score_delta": 0.046454107223839025,
+      "association_macro_f1": 0.7385129490392649,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 5,
+        "fn:concept_already_missing": 11,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 4,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:belongs_to_other_gold_patient": 2
+      }
+    },
+    {
+      "pmc_id": "4607013",
+      "fold": 0,
+      "patients": 3,
+      "baseline_score": 0.5409209735360536,
+      "score": 0.5880332739156269,
+      "score_delta": 0.04711230037957326,
+      "association_macro_f1": 0.3466666666666667,
+      "remaining_association_errors": {
+        "fn:available_assigned_to_other_patient": 12,
+        "fn:concept_already_missing": 5,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 6,
+        "fp:gold_entity_without_patient_association": 4,
+        "fp:belongs_to_other_gold_patient": 12
+      }
+    },
+    {
+      "pmc_id": "5368377",
+      "fold": 1,
+      "patients": 7,
+      "baseline_score": 0.7623157873337811,
+      "score": 0.8134735953701471,
+      "score_delta": 0.05115780803636594,
+      "association_macro_f1": 0.8426906426906428,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fp:gold_entity_without_patient_association": 2,
+        "fp:belongs_to_other_gold_patient": 1
+      }
+    },
+    {
+      "pmc_id": "12640707",
+      "fold": 0,
+      "patients": 1,
+      "baseline_score": 0.7544659961685823,
+      "score": 0.8124000701701627,
+      "score_delta": 0.05793407400158035,
+      "association_macro_f1": 0.8,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 11,
+        "fn:available_assigned_to_no_patient": 1,
+        "fp:concept_absent_from_gold_positive_entities_and_associations": 2,
+        "fp:gold_entity_without_patient_association": 2
+      }
+    },
+    {
+      "pmc_id": "11765409",
+      "fold": 3,
+      "patients": 1,
+      "baseline_score": 0.5550438596491227,
+      "score": 0.6189393939393939,
+      "score_delta": 0.06389553429027117,
+      "association_macro_f1": 0.5,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 2,
+        "fp:gold_entity_without_patient_association": 4
+      }
+    },
+    {
+      "pmc_id": "6220403",
+      "fold": 1,
+      "patients": 2,
+      "baseline_score": 0.7497813528044603,
+      "score": 0.8391009751896849,
+      "score_delta": 0.0893196223852245,
+      "association_macro_f1": 0.782991202346041,
+      "remaining_association_errors": {
+        "fn:concept_already_missing": 1,
+        "fp:belongs_to_other_gold_patient": 3,
+        "fp:gold_entity_without_patient_association": 1,
+        "fn:available_assigned_to_other_patient": 3
+      }
+    }
+  ]
+}

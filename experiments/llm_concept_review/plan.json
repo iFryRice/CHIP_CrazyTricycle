@@ -1,0 +1,132 @@
+{
+  "declared_at_utc": "2026-09-28T21:37:39.931564+00:00",
+  "hypothesis": "Target context-dependent normalization errors such as NS/Noonan vs nephrotic syndrome, CNS/anatomy vs congenital nephrotic syndrome, or generic inflammation vs hepatitis. Reject only clear mismatches between the source phrase and its already assigned HPO concept; do not judge patient attribution or assertion.",
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "split_path": "reports/cpu_baseline/split.json",
+  "ontology_path": "PatientPheX-V1-A/hp.obo",
+  "baseline_oof": "reports/association_context/best_development_oof.jsonl",
+  "environment_spec": "experiments/llm_extraction/environment.json",
+  "association_models": {
+    "0": "work/span_ner/document_abbreviations/fold0.pkl",
+    "1": "work/span_ner/document_abbreviations/fold1.pkl"
+  },
+  "confirmation_requirement": {
+    "remaining_folds": [
+      2,
+      3,
+      4
+    ],
+    "minimum_remaining_mean_gain": 0.003,
+    "minimum_full_score_gain": 0.005,
+    "minimum_nonworse_folds": 4,
+    "maximum_component_f1_loss": 0.002,
+    "positive_document_bootstrap_lower_bound": true
+  },
+  "work_dir": "work/span_ner/llm_concept_review",
+  "report_dir": "reports/llm_concept_review",
+  "runner_script": "scripts/run_concept_review.py",
+  "wrapper_script": "scripts/run_concept_review.sh",
+  "protocol_module": "patientphex.llm_concept_review",
+  "identity_fields": [
+    "pmc_id",
+    "entity_index",
+    "concept"
+  ],
+  "pilot_folds": [
+    0,
+    1
+  ],
+  "seed": 20260929,
+  "generation": {
+    "max_new_tokens": 64,
+    "do_sample": false,
+    "num_beams": 1
+  },
+  "policies": [
+    "acronyms",
+    "all_reviewed"
+  ],
+  "fixed": {
+    "review_scope": "Existing positive single HPO entities except a unique exact official HPO name/synonym matching the current concept. No cached-retrieval requirement.",
+    "preserve_negated": true,
+    "preserve_unmapped": true,
+    "preserve_compound_ids": true,
+    "preserve_unique_exact_hpo": true,
+    "new_entities": false,
+    "hpo_reassignments": false,
+    "boundary_changes": false,
+    "source_padding_characters": 400,
+    "document_definition_padding_characters": 100,
+    "maximum_document_definitions": 2,
+    "ontology_definition_max_characters": 800,
+    "ontology_exact_synonyms_max_count": 4,
+    "source_truncation": false,
+    "association_threshold": 0.5,
+    "association_model": "Frozen per-fold context tree, recomputed on filtered entities; baseline exact replay required.",
+    "on_unclear": "keep original entity",
+    "decoding": "Finite JSON grammar with current exact source excerpt IDs; no free-form response repair.",
+    "llm_training": false,
+    "few_shot_examples": 0,
+    "diagnostic_labels_in_prompts": false
+  },
+  "promotion": {
+    "minimum_mean_gain": 0.008,
+    "maximum_fold_loss": 0.002,
+    "maximum_component_loss": 0.002,
+    "minimum_format_success_rate": 0.98
+  },
+  "selection": "Highest mean passing policy is frozen for the remaining three folds before any B candidate is generated.",
+  "scope": "Hypothesis informed by diagnostics on the repeatedly used development corpus. No independent-test claim, B label access or official score claim.",
+  "parent_failed_experiment": "experiments/llm_patient_markers/plan.json",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "experiments/llm_extraction/environment.json": "bcc472fd15e0bc0861bb4ea5fbb15d3652f375ac639a517b6e6d4f91046e9c09",
+    "experiments/llm_extraction/model.json": "a1719fab4284f55d831d16f06fee78b96f853614a27f55583f166e5406ce0a9b",
+    "experiments/llm_runtime/pyproject.toml": "1e2d21de3fa93d68cc2d41ec514c45c3d01c50a0c298c4666b572e8d620492e9",
+    "experiments/llm_runtime/uv.lock": "9e5c53a32450e40cd762f0c3b5e79bf434cdb4475dbf47d59fe0b994a9737a91",
+    "reports/llm_extraction/environment_acceptance.json": "06bcace1ef437a58599e7991370ffaeefd5085093eab15508547c3fc304e216c",
+    "reports/llm_extraction/agent_acceptance.json": "f64835dd34bb34b2666cd5ef47fc9254f1294e88f05b6ec188dc3b5342ce36c1",
+    "reports/entity_residuals/hpo_disambiguation_audit.json": "9d0b7efd001f830f9dc3ecfe2aaa3f6bff4bd1bea4ac61b37c4f2e9b845db866",
+    "reports/llm_patient_markers/summary.json": "c84f7f78343ce18fabd684ece535af2436888aba5235cd766364c2b69c545f82",
+    "work/span_ner/document_abbreviations/fold0.pkl": "731a2c6843e2a5a88609ea6227f7c74b0c55fc00f5b0f4489f3ac50876916229",
+    "work/span_ner/document_abbreviations/fold1.pkl": "12a4f09bd6ec66d3a65c206af746a223374d025d29c1decd80420ead2c6c5201"
+  },
+  "code_sha256": {
+    "patientphex/__init__.py": "1fd13e9583dce1d135f45d50dbef50613e212c7dd640ace4c70017c95c41f058",
+    "patientphex/__main__.py": "f03fb7a2210ad1da045ef95d68d0378bbcaf6dc0da587be46851595cc5300bec",
+    "patientphex/abbreviations.py": "6b51f2305b961238d9a19fb1847e9194b1e25d1e67d26fbbe92ce0279d8ec619",
+    "patientphex/association.py": "45c6638ac690df06c734739e48c7ff73fe89cfdef2498ec901f1b423fb3e7a23",
+    "patientphex/bio_corroboration.py": "7e080c94c40148f75681e57eb13986f85c5cc24f98c06709b2c7c741fed86d86",
+    "patientphex/bio_data.py": "8e42fd12dfeb8d21dd4348d513d5076900990a8d0a8b08ce7fee2fc52a20f3b3",
+    "patientphex/context_linking.py": "802e46e10f22051d1d9d151a37d9b338ccb912bda5cb1601f16f67d99041ce8d",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/entities.py": "c1d1ce81f01eb171a64a8fd1487609e0fd590804ae5ac738d6b497791ac13ada",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "patientphex/llm_association.py": "9abaa6e0be77d9deab91764383e29fd75198aab7ea512d02c30c56644f0cd8a9",
+    "patientphex/llm_association_references.py": "4f164bd13048159506677730c9907713841341973ece15c101b4dcf0267d8f00",
+    "patientphex/llm_concept_review.py": "c75368a46b5679c0569c69bf653cfa5ad63fbe3ebd83477332de6550ca7125a3",
+    "patientphex/llm_corroboration.py": "93367611f0c7d3e1a7373780d747e17b94d73d337b0f057eae3179dc9905e504",
+    "patientphex/llm_extraction.py": "96ff3849e6948febe6e2317d074668497e07e7d936277875315053e5d4949af8",
+    "patientphex/llm_patient_markers.py": "c9af422088713bc8a6eac2b52c8fd0c3c72a17c032e87cf54b3398398d29f44e",
+    "patientphex/llm_review_grammar.py": "9bb7e715d6dce22c79703b54d386e8ffffc2b98826e24bb9c4ba29003d47334a",
+    "patientphex/ontology.py": "507ea8b279cff75a0ba8acac22a33fa72ed78a264ef77f568865c6fb61fecb77",
+    "patientphex/patient_linking.py": "d93bcd43b1fbe741e2d682412d99f226e05ea63c303464ab69798eff05b725b6",
+    "patientphex/semantic_linking.py": "c50f68cbc4649909334f82a9544f90e5168ee5f3b0849a97e227d43fb01f12c9",
+    "patientphex/span_data.py": "5dbd5351bb14c6d5244c2e02c5027dccbb4d49707ed48409bde1a01465963409",
+    "patientphex/span_linking.py": "d5de49d6845486687da0773890d99bb848015af70782d03b43eef026aa79a734",
+    "patientphex/span_losses.py": "ac4e512e135febf62df4576426494ad4174c105091a7f4079a1f553ae19f8c19",
+    "patientphex/umls_augmentation.py": "963c919ce7ab58b91447c332633b99b68fc3f9cc851ec74fdf817ab5fbe97cbe",
+    "patientphex/validation.py": "376cc479fc5c403c3edf5311da8dcb4d19d3c27be5d2e29c9394206712b13280",
+    "scripts/infer_structured_review.py": "70efb55b2f415c43e7ee9287f6865648b05305737bd6b0194040b1b60ac2a828",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+    "scripts/queue_llm_review.py": "1f656ba02b6496c2850bd013026b09739b642a3d86f513e9bb7d1f28603bd5c3",
+    "scripts/run_concept_review.py": "eaafc5e934c883b1cfa177b7d42cf082a77ad12dae1d9f4878043f499983aca0",
+    "scripts/run_concept_review.sh": "d5ba89f2d8f272972d51d1e6b96699e450e68c430c918cc375e40f8815bba273",
+    "scripts/run_llm_association.py": "1000ee50cb20f902694f6657a50ff440f30c279a65ebc4b9837a17ff3ea64233",
+    "tests/test_llm_concept_review.py": "6eb7453e0e42ff4c476c6db96f0e69efc9bb47e985afdfc88ed2da68935a8fa9",
+    "tests/test_llm_review_grammar.py": "b11f7a73aa91a91e202676572d1ddd133ce3f71e85b5262b042fa02865923fac"
+  }
+}

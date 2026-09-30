@@ -1,0 +1,12 @@
+..................................inner_fold=0 train=6 held_out=2
+inner_fold=1 train=6 held_out=2
+inner_fold=2 train=6 held_out=2
+inner_fold=3 train=6 held_out=2
+.......................................................................{"event": "start", "time_utc": "2026-09-28T18:46:35Z", "elapsed_seconds": 0.011, "resume": false, "fit_all": true, "train_documents": 80, "validation_documents": 0, "train_windows": 1, "validation_windows": 0, "class_statistics": {"candidate_spans": 3, "positive_counts": [2, 1], "supervised_candidates_per_label": [3, 3], "ignored_negative_candidates_per_label": [0, 0], "pos_weight": [1.0, 2.0], "loss_normalizer": [1.0, 1.3333333333333333], "pos_weight_cap": 1000.0}, "train_unencoded": 0, "validation_unencoded": null, "planned_steps": 1, "device": "cpu", "fp16": false, "runtime": {"python": "3.12.13", "torch": "2.6.0+cu124", "transformers": "4.49.0", "cuda": "12.4", "device": "cpu", "gpu": null, "fp16": false, "attention": "eager"}, "objective": {"base": "weighted_bce", "boundary_ranking_weight": 0.0, "boundary_ranking_margin": 1.0, "boundary_ranking_version": "same_endpoint_hardest_negative_v1", "negative_policy": "Same start or end; exclude gold in any label and ignored candidates in any label"}}
+{"event": "train_step", "time_utc": "2026-09-28T18:46:35Z", "elapsed_seconds": 0.038, "epoch": 1, "batch": 1, "step": 1, "loss": 1.1072670221328735, "span_bce_loss": 1.1072670221328735, "boundary_ranking_loss": 0.0, "boundary_ranking_weight": 0.0, "gradient_norm": 1.720089077949524, "optimizer_step_applied": true, "learning_rate": 0.0, "amp_scale": 1.0, "gpu_peak_allocated_gib": null}
+{"event": "complete", "time_utc": "2026-09-28T18:46:35Z", "elapsed_seconds": 0.042, "status": "completed", "smoke": false, "optimizer_steps": 1, "epochs_completed": 1, "last_epoch_complete": true, "last_metrics": null, "duration_seconds": 0.04205751419067383, "training_documents": 80, "validation_documents": 0, "metric_scope": "Fit all 80 official labeled training documents with a fixed configured epoch budget; no validation metrics or best-checkpoint selection", "threshold": 0.5, "fit_all": true, "fit_all_scope": "Fit all 80 official labeled training documents with a fixed configured epoch budget; no validation metrics or best-checkpoint selection", "metrics": null, "configured_epochs": 1, "prediction_checkpoint": "last.pt"}
+...............
+----------------------------------------------------------------------
+Ran 120 tests in 3.728s
+
+OK

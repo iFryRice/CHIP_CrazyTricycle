@@ -1,0 +1,73 @@
+{
+  "declared_at_utc": "2026-09-28T17:57:36.748188+00:00",
+  "goal": "Move official B performance toward 0.70; development gains alone cannot complete that goal.",
+  "hypothesis": "The all-span detector has many high-confidence boundary false positives. A token BIO softmax objective directly learns starts/continuations/background and may provide better precision/recall before semantic normalization.",
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "split_path": "reports/cpu_baseline/split.json",
+  "baseline_summary": "reports/semantic_linking/summary.json",
+  "baseline_oof": "reports/semantic_linking/best_development_oof.jsonl",
+  "model_path": "models/biomedbert",
+  "reference_ner_manifest": "work/span_ner/boundary-cap100-fold0/manifest.json",
+  "parameters": {
+    "epochs": 5,
+    "learning_rate": 3e-05,
+    "batch_size": 16,
+    "max_length": 384,
+    "stride": 128,
+    "seed": 20260929,
+    "loss": "Unweighted token cross entropy, O/B/I; padding, special tokens and clipped/unencoded gold regions ignored.",
+    "polarity": "Both positive and NO spans teach mention boundaries; polarity is assigned by the existing local negation rule during linking.",
+    "amp_initial_scale": 1024
+  },
+  "pilot_folds": [
+    0,
+    1
+  ],
+  "pilot_advance_gate": {
+    "minimum_mean_full_pipeline_gain": 0.008,
+    "maximum_single_fold_loss": 0.005
+  },
+  "pilot_inference_grid": {
+    "bio_confidence": [
+      0.5,
+      0.8
+    ],
+    "entity_policy": [
+      "bio_only",
+      "cpu_umls_union"
+    ],
+    "semantic_similarity": 0.9,
+    "semantic_margin": 0.02
+  },
+  "selection": "Use fixed completed epoch 5. Compare the four predefined inference configurations on pilot folds 0/1; advance the highest mean configuration satisfying the gate to folds 2/3/4 without retuning. All evaluations are repeated development, not independent tests.",
+  "smoke": {
+    "fold": 0,
+    "steps": 20,
+    "output": "work/span_ner/bio-smoke-scaled",
+    "must_pass_before_formal_training": true
+  },
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "reports/semantic_linking/summary.json": "12970b1d89fe31c00797c65170aaf32d082382d9995bf59106c33755263f480d",
+    "reports/semantic_linking/best_development_oof.jsonl": "56d059bbed128cd7447504b24118f6a2ab056518d355a78539652b49d605d571",
+    "experiments/semantic_linking/model.json": "b4f89169804c89d718f3b308bde923350f66fa94a0ed9571c9edc763595109d7",
+    "work/span_ner/boundary-cap100-fold0/manifest.json": "5ba8c9591cfd2bda9792b83dd20e487995dfa2827056281df6762c5e6afcca7b"
+  },
+  "code_sha256": {
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/span_data.py": "5dbd5351bb14c6d5244c2e02c5027dccbb4d49707ed48409bde1a01465963409",
+    "patientphex/span_losses.py": "ac4e512e135febf62df4576426494ad4174c105091a7f4079a1f553ae19f8c19",
+    "patientphex/bio_data.py": "8e42fd12dfeb8d21dd4348d513d5076900990a8d0a8b08ce7fee2fc52a20f3b3",
+    "scripts/train_span_ner.py": "a569587eb2e6551f054d229101ef403128e2d8d9451f1bd41c4ea38c0a5bda39",
+    "scripts/train_bio_ner.py": "511fc33751bb3e8d82496c18f05ec8c17c04fa6ce04b27c005d10be3c7ffca0c",
+    "scripts/run_bio_job.sh": "76ccdc7b272892ab43201afa37b744132f9d14612031e30685f8bea89cfe29c3"
+  },
+  "environment": "Existing validated .venv and pinned BiomedBERT; unchanged dependency stack. GPU 0 and GPU 2, two CPU threads per process, FP16.",
+  "output_policy": "Fresh work/span_ner/bio-* directories; original checkpoints and predictions remain untouched.",
+  "numerical_repair": {
+    "failed_plan_sha256": "730cb6b09dc81a719351a2e5a68497c9350895c834c3e30ddb1b13cbeedcb572",
+    "failure_report": "reports/bio_ner/smoke_failure.json",
+    "change": "Use a smaller initial GradScaler scale; require the same smoke gate before formal runs."
+  }
+}

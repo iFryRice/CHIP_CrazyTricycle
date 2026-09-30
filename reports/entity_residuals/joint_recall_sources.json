@@ -1,0 +1,1274 @@
+{
+  "scope": "Label-using attribution only. Saved neural proposals have score >= 0.9; absence is not proof that the neural model never generated a span. Candidate availability is not measured accuracy or an attainable score. No predictions are exported.",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "PatientPheX-V1-A/hp.obo": "a5092cbdf605f568403cf7380d9173014015692433b2cc631bc5c1b053876b1b",
+    "reports/joint_confirmation/development_oof.jsonl": "21d0b06ac500fd18de2a057374e4431dae870bcb3b9034da1f7c485a66fc3972",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "reports/semantic_linking/summary.json": "12970b1d89fe31c00797c65170aaf32d082382d9995bf59106c33755263f480d",
+    "experiments/semantic_linking/plan.json": "598ddf473a67ea0afc1e6feb05951dfc252ebcb8ef936fffd8ab41eeb41624de",
+    "reports/semantic_linking/fold0/candidates.json": "5ffda45116035f219c3ec62ec68c947a4016065bd7ea2e158d6628757aeac9a5",
+    "reports/semantic_linking/fold1/candidates.json": "8345177e8960e6aded3b490d8f12860241aad595af3bca20fba373958535469b",
+    "reports/semantic_linking/fold2/candidates.json": "6c52144d01b3a4208e591485f2849d01f31656e27ab8a33192b073f54f3b5bad",
+    "reports/semantic_linking/fold3/candidates.json": "196bc20df0c64344b9b22bdbc1bcf0b71d19f76a7edd71a151e82dbc60a7731b",
+    "reports/semantic_linking/fold4/candidates.json": "ccc9606230ce9b58aa325cd530fbe7e0cdf70605d3d1fffb69e2c3c489c69068"
+  },
+  "code_sha256": "1dae5e238ada23ac4ae17a9612201c96c1cc65f193487111b77571147f873e7b",
+  "saved_candidate_minimum_span_score": 0.9,
+  "selected_original_configuration": {
+    "name": "ner0.9_semantic0.9",
+    "span_threshold": 0.9,
+    "semantic_threshold": 0.9
+  },
+  "missing_mentions": 1864,
+  "candidate_categories": {
+    "saved_exact_span_but_wrong_mapping_or_negation": 523,
+    "no_exact_span_in_saved_high_confidence_candidates": 790,
+    "passing_exact_candidate_blocked_by_overlap": 174,
+    "exact_candidate_below_frozen_confidence_gates": 333,
+    "lost_after_concept_review": 44
+  },
+  "fold_training_and_hpo_surface_support": {
+    "unseen_in_both": 1642,
+    "seen_in_fold_training": 163,
+    "official_hpo_only": 59
+  },
+  "cross_tabulation": {
+    "saved_exact_span_but_wrong_mapping_or_negation": {
+      "unseen_in_both": 407,
+      "seen_in_fold_training": 79,
+      "official_hpo_only": 37
+    },
+    "no_exact_span_in_saved_high_confidence_candidates": {
+      "unseen_in_both": 745,
+      "seen_in_fold_training": 32,
+      "official_hpo_only": 13
+    },
+    "passing_exact_candidate_blocked_by_overlap": {
+      "unseen_in_both": 151,
+      "official_hpo_only": 5,
+      "seen_in_fold_training": 18
+    },
+    "exact_candidate_below_frozen_confidence_gates": {
+      "unseen_in_both": 333
+    },
+    "lost_after_concept_review": {
+      "seen_in_fold_training": 34,
+      "official_hpo_only": 4,
+      "unseen_in_both": 6
+    }
+  },
+  "examples": {
+    "saved_exact_span_but_wrong_mapping_or_negation": [
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "intracranial brain injury",
+        "offset": 651,
+        "length": 25,
+        "concept": "HP:0002170",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "brain injury",
+        "offset": 1089,
+        "length": 12,
+        "concept": "HP:0002170",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "slow fetal heart rate",
+        "offset": 7701,
+        "length": 21,
+        "concept": "HP:0025116",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "brain injury",
+        "offset": 8638,
+        "length": 12,
+        "concept": "HP:0002170",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "less ruddy skin",
+        "offset": 9367,
+        "length": 15,
+        "concept": "HP:0000980",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "nail-bed pallor",
+        "offset": 10336,
+        "length": 15,
+        "concept": "HP:0000980",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0000980",
+            "type": "Phenotype",
+            "offset": 10345,
+            "length": 6,
+            "text": "pallor",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "antinuclear antibody",
+        "offset": 11612,
+        "length": 20,
+        "concept": "HP:0003493",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0003493",
+            "type": "Phenotype",
+            "offset": 11612,
+            "length": 20,
+            "text": "antinuclear antibody",
+            "note": "NO"
+          }
+        ]
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "dilatation of bilateral ureters",
+        "offset": 14053,
+        "length": 31,
+        "concept": "HP:0000072",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "11203018",
+        "fold": 0,
+        "text": "chromosomal anomaly",
+        "offset": 4060,
+        "length": 19,
+        "concept": "HP:0040012",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "11203018",
+        "fold": 0,
+        "text": "mild-to-moderate intellectual disability",
+        "offset": 6017,
+        "length": 40,
+        "concept": "HP:0001256",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0002342",
+            "type": "Phenotype",
+            "offset": 6025,
+            "length": 32,
+            "text": "moderate intellectual disability",
+            "note": null
+          }
+        ]
+      }
+    ],
+    "no_exact_span_in_saved_high_confidence_candidates": [
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "motion and height of development is slight falling",
+        "offset": 1443,
+        "length": 50,
+        "concept": "HP:0001510",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "motion and height of development is slight falling",
+        "offset": 1443,
+        "length": 50,
+        "concept": "HP:0002376",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "palatal arch",
+        "offset": 3237,
+        "length": 12,
+        "concept": "HP:0000218",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "fontanel or delayed closure",
+        "offset": 3276,
+        "length": 27,
+        "concept": "HP:0000270",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0000239",
+            "type": "Phenotype",
+            "offset": 3270,
+            "length": 14,
+            "text": "large fontanel",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "1-minute Apgar score rated as 5",
+        "offset": 8192,
+        "length": 31,
+        "concept": "HP:0030932",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "elevated levels of white blood",
+        "offset": 9024,
+        "length": 30,
+        "concept": "HP:0001974",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0001974",
+            "type": "Phenotype",
+            "offset": 9024,
+            "length": 36,
+            "text": "elevated levels of white blood cells",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "The anterior fontanel, which remained unclosed",
+        "offset": 9468,
+        "length": 46,
+        "concept": "HP:0001476",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "the congestion in pharyngeal mucosa",
+        "offset": 9566,
+        "length": 35,
+        "concept": "HP:0025439",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "Pulmonary auscultation",
+        "offset": 9680,
+        "length": 22,
+        "concept": "HP:0030829",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "marrow hyperplasia",
+        "offset": 11145,
+        "length": 18,
+        "concept": "HP:0031020",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": []
+      }
+    ],
+    "passing_exact_candidate_blocked_by_overlap": [
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "learning disabilities",
+        "offset": 2019,
+        "length": 21,
+        "concept": "HP:0001328",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0001328",
+              "type": "Phenotype",
+              "offset": 2019,
+              "length": 21,
+              "text": "learning disabilities",
+              "note": null
+            },
+            "span_score": 0.9876558780670166,
+            "source": "semantic",
+            "similarity": 0.9050021171569824,
+            "margin": 0.08922237157821655
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0001328",
+            "type": "Phenotype",
+            "offset": 2019,
+            "length": 8,
+            "text": "learning",
+            "note": null
+          },
+          {
+            "identifier": "HP:0004302",
+            "type": "Phenotype",
+            "offset": 2028,
+            "length": 12,
+            "text": "disabilities",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "increased leukocyte levels",
+        "offset": 10615,
+        "length": 26,
+        "concept": "HP:0001974",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0001974",
+              "type": "Phenotype",
+              "offset": 10615,
+              "length": 26,
+              "text": "increased leukocyte levels",
+              "note": null
+            },
+            "span_score": 0.9824299812316895,
+            "source": "semantic",
+            "similarity": 0.9545533061027527,
+            "margin": 0.14844650030136108
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0001974",
+            "type": "Phenotype",
+            "offset": 10615,
+            "length": 19,
+            "text": "increased leukocyte",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11203018",
+        "fold": 0,
+        "text": "bilateral single palmar crease",
+        "offset": 3853,
+        "length": 30,
+        "concept": "HP:0007598",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0007598",
+              "type": "Phenotype",
+              "offset": 3853,
+              "length": 30,
+              "text": "bilateral single palmar crease",
+              "note": null
+            },
+            "span_score": 0.9419189691543579,
+            "source": "semantic",
+            "similarity": 0.9489506483078003,
+            "margin": 0.05251413583755493
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0000954",
+            "type": "Phenotype",
+            "offset": 3863,
+            "length": 20,
+            "text": "single palmar crease",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11871647",
+        "fold": 0,
+        "text": "severe motor and cognitive developmental delays",
+        "offset": 925,
+        "length": 47,
+        "concept": "HP:0011344",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0011344",
+              "type": "Phenotype",
+              "offset": 925,
+              "length": 47,
+              "text": "severe motor and cognitive developmental delays",
+              "note": null
+            },
+            "span_score": 0.9524117112159729,
+            "source": "semantic",
+            "similarity": 0.9128767251968384,
+            "margin": 0.04387873411178589
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0001263",
+            "type": "Phenotype",
+            "offset": 952,
+            "length": 20,
+            "text": "developmental delays",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11871647",
+        "fold": 0,
+        "text": "optic nerve pallor",
+        "offset": 998,
+        "length": 18,
+        "concept": "HP:0000543",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0000543",
+              "type": "Phenotype",
+              "offset": 998,
+              "length": 18,
+              "text": "optic nerve pallor",
+              "note": null
+            },
+            "span_score": 0.9862616658210754,
+            "source": "semantic",
+            "similarity": 0.9356842637062073,
+            "margin": 0.10936552286148071
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0000980",
+            "type": "Phenotype",
+            "offset": 1010,
+            "length": 6,
+            "text": "pallor",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11871647",
+        "fold": 0,
+        "text": "severe psychomotor developmental delay",
+        "offset": 3065,
+        "length": 38,
+        "concept": "HP:0011344",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0011344",
+              "type": "Phenotype",
+              "offset": 3065,
+              "length": 38,
+              "text": "severe psychomotor developmental delay",
+              "note": null
+            },
+            "span_score": 0.9436319470405579,
+            "source": "semantic",
+            "similarity": 0.9107670187950134,
+            "margin": 0.05270296335220337
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0001263",
+            "type": "Phenotype",
+            "offset": 3084,
+            "length": 38,
+            "text": "developmental delay in early childhood",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11871647",
+        "fold": 0,
+        "text": "optic nerve pallor",
+        "offset": 9154,
+        "length": 18,
+        "concept": "HP:0000543",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0000543",
+              "type": "Phenotype",
+              "offset": 9154,
+              "length": 18,
+              "text": "optic nerve pallor",
+              "note": null
+            },
+            "span_score": 0.9873102903366089,
+            "source": "semantic",
+            "similarity": 0.9356842637062073,
+            "margin": 0.10936552286148071
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0000980",
+            "type": "Phenotype",
+            "offset": 9166,
+            "length": 6,
+            "text": "pallor",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11871647",
+        "fold": 0,
+        "text": "optic nerve pallor",
+        "offset": 10254,
+        "length": 18,
+        "concept": "HP:0000543",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0000543",
+              "type": "Phenotype",
+              "offset": 10254,
+              "length": 18,
+              "text": "optic nerve pallor",
+              "note": null
+            },
+            "span_score": 0.9949873685836792,
+            "source": "semantic",
+            "similarity": 0.9356842637062073,
+            "margin": 0.10936552286148071
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0000980",
+            "type": "Phenotype",
+            "offset": 10266,
+            "length": 6,
+            "text": "pallor",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11871647",
+        "fold": 0,
+        "text": "optic nerve pallor",
+        "offset": 13522,
+        "length": 18,
+        "concept": "HP:0000543",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0000543",
+              "type": "Phenotype",
+              "offset": 13522,
+              "length": 18,
+              "text": "optic nerve pallor",
+              "note": null
+            },
+            "span_score": 0.9910075068473816,
+            "source": "semantic",
+            "similarity": 0.9356842637062073,
+            "margin": 0.10936552286148071
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0000980",
+            "type": "Phenotype",
+            "offset": 13534,
+            "length": 6,
+            "text": "pallor",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11871647",
+        "fold": 0,
+        "text": "optic nerve pallor",
+        "offset": 18867,
+        "length": 18,
+        "concept": "HP:0000543",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0000543",
+              "type": "Phenotype",
+              "offset": 18867,
+              "length": 18,
+              "text": "optic nerve pallor",
+              "note": null
+            },
+            "span_score": 0.9917580485343933,
+            "source": "semantic",
+            "similarity": 0.9356842637062073,
+            "margin": 0.10936552286148071
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0000980",
+            "type": "Phenotype",
+            "offset": 18879,
+            "length": 6,
+            "text": "pallor",
+            "note": null
+          }
+        ]
+      }
+    ],
+    "exact_candidate_below_frozen_confidence_gates": [
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "bluish discoloration on the skin",
+        "offset": 7847,
+        "length": 32,
+        "concept": "HP:0000961",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0000961",
+              "type": "Phenotype",
+              "offset": 7847,
+              "length": 32,
+              "text": "bluish discoloration on the skin",
+              "note": null
+            },
+            "span_score": 0.9903600215911865,
+            "source": "semantic",
+            "similarity": 0.8653075098991394,
+            "margin": 0.040144383907318115
+          }
+        ],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "flaccid limbs",
+        "offset": 7881,
+        "length": 13,
+        "concept": "HP:0010547",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0010547",
+              "type": "Phenotype",
+              "offset": 7881,
+              "length": 13,
+              "text": "flaccid limbs",
+              "note": null
+            },
+            "span_score": 0.9819735288619995,
+            "source": "semantic",
+            "similarity": 0.8470057249069214,
+            "margin": 0.09999281167984009
+          }
+        ],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "grade I intracranial hemorrhage",
+        "offset": 12675,
+        "length": 31,
+        "concept": "HP:0034209",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0034209",
+              "type": "Phenotype",
+              "offset": 12675,
+              "length": 31,
+              "text": "grade I intracranial hemorrhage",
+              "note": null
+            },
+            "span_score": 0.9689523577690125,
+            "source": "semantic",
+            "similarity": 0.8537490367889404,
+            "margin": 0.1135324239730835
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0002170",
+            "type": "Phenotype",
+            "offset": 12683,
+            "length": 23,
+            "text": "intracranial hemorrhage",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "bilateral subependymal hemorrhage",
+        "offset": 13078,
+        "length": 33,
+        "concept": "HP:0034209",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0034209",
+              "type": "Phenotype",
+              "offset": 13078,
+              "length": 33,
+              "text": "bilateral subependymal hemorrhage",
+              "note": null
+            },
+            "span_score": 0.9645843505859375,
+            "source": "semantic",
+            "similarity": 0.7555463314056396,
+            "margin": 0.006646156311035156
+          }
+        ],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "10553122",
+        "fold": 0,
+        "text": "abnormal localization",
+        "offset": 16010,
+        "length": 21,
+        "concept": "HP:0011811",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0011811",
+              "type": "Phenotype",
+              "offset": 16010,
+              "length": 21,
+              "text": "abnormal localization",
+              "note": null
+            },
+            "span_score": 0.9627429842948914,
+            "source": "semantic",
+            "similarity": 0.721391499042511,
+            "margin": 0.003610551357269287
+          }
+        ],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "11203018",
+        "fold": 0,
+        "text": "dysmorphic traits",
+        "offset": 885,
+        "length": 17,
+        "concept": "-1",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0001999",
+              "type": "Phenotype",
+              "offset": 885,
+              "length": 17,
+              "text": "dysmorphic traits",
+              "note": null
+            },
+            "span_score": 0.9887762665748596,
+            "source": "semantic",
+            "similarity": 0.8448176980018616,
+            "margin": 0.052449941635131836
+          }
+        ],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "11203018",
+        "fold": 0,
+        "text": "dysmorphic traits",
+        "offset": 3242,
+        "length": 17,
+        "concept": "-1",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0001999",
+              "type": "Phenotype",
+              "offset": 3242,
+              "length": 17,
+              "text": "dysmorphic traits",
+              "note": null
+            },
+            "span_score": 0.9848657846450806,
+            "source": "semantic",
+            "similarity": 0.8448176980018616,
+            "margin": 0.052449941635131836
+          }
+        ],
+        "overlapping_baseline_entities": []
+      },
+      {
+        "pmc_id": "11203018",
+        "fold": 0,
+        "text": "Congenital heart and brain anomalies",
+        "offset": 6151,
+        "length": 36,
+        "concept": "HP:0001627",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0001627",
+              "type": "Phenotype",
+              "offset": 6151,
+              "length": 36,
+              "text": "Congenital heart and brain anomalies",
+              "note": null
+            },
+            "span_score": 0.9861921072006226,
+            "source": "semantic",
+            "similarity": 0.7326983213424683,
+            "margin": 0.08013105392456055
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0012443",
+            "type": "Phenotype",
+            "offset": 6172,
+            "length": 15,
+            "text": "brain anomalies",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11203018",
+        "fold": 0,
+        "text": "visual and hearing impairment",
+        "offset": 6200,
+        "length": 29,
+        "concept": "HP:0000505",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0000505",
+              "type": "Phenotype",
+              "offset": 6200,
+              "length": 29,
+              "text": "visual and hearing impairment",
+              "note": null
+            },
+            "span_score": 0.9736136198043823,
+            "source": "semantic",
+            "similarity": 0.8052564859390259,
+            "margin": 0.03126192092895508
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0000365",
+            "type": "Phenotype",
+            "offset": 6211,
+            "length": 18,
+            "text": "hearing impairment",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11871647",
+        "fold": 0,
+        "text": "severe psychomotor developmental disorders",
+        "offset": 393,
+        "length": 42,
+        "concept": "HP:0011344",
+        "lexical_support": "unseen_in_both",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0011344",
+              "type": "Phenotype",
+              "offset": 393,
+              "length": 42,
+              "text": "severe psychomotor developmental disorders",
+              "note": null
+            },
+            "span_score": 0.9732049107551575,
+            "source": "semantic",
+            "similarity": 0.8865202069282532,
+            "margin": 0.014784276485443115
+          }
+        ],
+        "overlapping_baseline_entities": []
+      }
+    ],
+    "lost_after_concept_review": [
+      {
+        "pmc_id": "11203018",
+        "fold": 0,
+        "text": "Chromosomal abnormalities",
+        "offset": 1694,
+        "length": 25,
+        "concept": "HP:0040012",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0040012",
+            "type": "Phenotype",
+            "offset": 1694,
+            "length": 25,
+            "text": "Chromosomal abnormalities",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11203018",
+        "fold": 0,
+        "text": "chromosomal abnormalities",
+        "offset": 2441,
+        "length": 25,
+        "concept": "HP:0040012",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0040012",
+            "type": "Phenotype",
+            "offset": 2441,
+            "length": 25,
+            "text": "chromosomal abnormalities",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "11871647",
+        "fold": 0,
+        "text": "vaginal delivery",
+        "offset": 7874,
+        "length": 16,
+        "concept": "HP:0030369",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0030369",
+            "type": "Phenotype",
+            "offset": 7874,
+            "length": 16,
+            "text": "vaginal delivery",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "12059664",
+        "fold": 0,
+        "text": "distinctive craniofacial features",
+        "offset": 22202,
+        "length": 33,
+        "concept": "HP:0004484",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0004484",
+            "type": "Phenotype",
+            "offset": 22202,
+            "length": 33,
+            "text": "distinctive craniofacial features",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "12126309",
+        "fold": 0,
+        "text": "epilepsy",
+        "offset": 18389,
+        "length": 8,
+        "concept": "HP:0001250",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0001250",
+              "type": "Phenotype",
+              "offset": 18389,
+              "length": 8,
+              "text": "epilepsy",
+              "note": null
+            },
+            "span_score": 0.9848462343215942,
+            "source": "training_exact",
+            "similarity": 1.0,
+            "margin": 1.0
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0001250",
+            "type": "Phenotype",
+            "offset": 18389,
+            "length": 8,
+            "text": "epilepsy",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "12126309",
+        "fold": 0,
+        "text": "Craniofacial anomalies",
+        "offset": 24139,
+        "length": 22,
+        "concept": "HP:0004484",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0004484",
+              "type": "Phenotype",
+              "offset": 24139,
+              "length": 22,
+              "text": "Craniofacial anomalies",
+              "note": null
+            },
+            "span_score": 0.9747110605239868,
+            "source": "training_exact",
+            "similarity": 1.0,
+            "margin": 1.0
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0004484",
+            "type": "Phenotype",
+            "offset": 24139,
+            "length": 22,
+            "text": "Craniofacial anomalies",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "12640707",
+        "fold": 0,
+        "text": "chromosomal abnormalities",
+        "offset": 10718,
+        "length": 25,
+        "concept": "HP:0040012",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0040012",
+              "type": "Phenotype",
+              "offset": 10718,
+              "length": 25,
+              "text": "chromosomal abnormalities",
+              "note": null
+            },
+            "span_score": 0.9915059208869934,
+            "source": "training_exact",
+            "similarity": 1.0,
+            "margin": 1.0
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0040012",
+            "type": "Phenotype",
+            "offset": 10718,
+            "length": 25,
+            "text": "chromosomal abnormalities",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "12640707",
+        "fold": 0,
+        "text": "chromosomal abnormalities",
+        "offset": 10912,
+        "length": 25,
+        "concept": "HP:0040012",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0040012",
+              "type": "Phenotype",
+              "offset": 10912,
+              "length": 25,
+              "text": "chromosomal abnormalities",
+              "note": null
+            },
+            "span_score": 0.9928399324417114,
+            "source": "training_exact",
+            "similarity": 1.0,
+            "margin": 1.0
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0040012",
+            "type": "Phenotype",
+            "offset": 10912,
+            "length": 25,
+            "text": "chromosomal abnormalities",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "12652105",
+        "fold": 0,
+        "text": "contractures",
+        "offset": 9759,
+        "length": 12,
+        "concept": "HP:0034392",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0034392",
+              "type": "Phenotype",
+              "offset": 9759,
+              "length": 12,
+              "text": "contractures",
+              "note": null
+            },
+            "span_score": 0.9884694218635559,
+            "source": "training_exact",
+            "similarity": 1.0,
+            "margin": 1.0
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0034392",
+            "type": "Phenotype",
+            "offset": 9759,
+            "length": 12,
+            "text": "contractures",
+            "note": null
+          }
+        ]
+      },
+      {
+        "pmc_id": "12652105",
+        "fold": 0,
+        "text": "contractures",
+        "offset": 9824,
+        "length": 12,
+        "concept": "HP:0034392",
+        "lexical_support": "seen_in_fold_training",
+        "exact_candidates": [
+          {
+            "entity": {
+              "identifier": "HP:0034392",
+              "type": "Phenotype",
+              "offset": 9824,
+              "length": 12,
+              "text": "contractures",
+              "note": null
+            },
+            "span_score": 0.9756844639778137,
+            "source": "training_exact",
+            "similarity": 1.0,
+            "margin": 1.0
+          }
+        ],
+        "overlapping_baseline_entities": [
+          {
+            "identifier": "HP:0034392",
+            "type": "Phenotype",
+            "offset": 9824,
+            "length": 12,
+            "text": "contractures",
+            "note": null
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "plan_sha256": "1c8cac0621a3a88dd738ea9c253c2abe2d9e707f3bb71e8e6c06cb3c381936c9",
+  "baseline": {
+    "mention": {
+      "precision": 0.7497497497497497,
+      "recall": 0.7032863849765258,
+      "f1": 0.7257751937984496,
+      "tp": 1498,
+      "fp": 500,
+      "fn": 632
+    },
+    "document": {
+      "precision": 0.8536842105263158,
+      "recall": 0.7440366972477064,
+      "f1": 0.7950980392156862,
+      "tp": 811,
+      "fp": 139,
+      "fn": 279
+    },
+    "counts": {
+      "documents": 32,
+      "patients": 88
+    }
+  },
+  "candidate": {
+    "mention": {
+      "precision": 0.6562102585841458,
+      "recall": 0.7267605633802817,
+      "f1": 0.6896858988638895,
+      "tp": 1548,
+      "fp": 811,
+      "fn": 582
+    },
+    "document": {
+      "precision": 0.8259149357072205,
+      "recall": 0.7660550458715596,
+      "f1": 0.794859590671109,
+      "tp": 835,
+      "fp": 176,
+      "fn": 255
+    },
+    "counts": {
+      "documents": 32,
+      "patients": 88
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "baseline": {
+        "mention": {
+          "precision": 0.7789954337899543,
+          "recall": 0.7078838174273859,
+          "f1": 0.7417391304347826,
+          "tp": 853,
+          "fp": 242,
+          "fn": 352
+        },
+        "document": {
+          "precision": 0.8738738738738738,
+          "recall": 0.7427258805513017,
+          "f1": 0.8029801324503312,
+          "tp": 485,
+          "fp": 70,
+          "fn": 168
+        },
+        "counts": {
+          "documents": 16,
+          "patients": 45
+        }
+      },
+      "candidate": {
+        "mention": {
+          "precision": 0.6909803921568628,
+          "recall": 0.7311203319502074,
+          "f1": 0.7104838709677419,
+          "tp": 881,
+          "fp": 394,
+          "fn": 324
+        },
+        "document": {
+          "precision": 0.8486394557823129,
+          "recall": 0.7641653905053599,
+          "f1": 0.8041901692183723,
+          "tp": 499,
+          "fp": 89,
+          "fn": 154
+        },
+        "counts": {
+          "documents": 16,
+          "patients": 45
+        }
+      },
+      "added": 180
+    },
+    {
+      "fold": 1,
+      "baseline": {
+        "mention": {
+          "precision": 0.7142857142857143,
+          "recall": 0.6972972972972973,
+          "f1": 0.7056892778993435,
+          "tp": 645,
+          "fp": 258,
+          "fn": 280
+        },
+        "document": {
+          "precision": 0.8253164556962025,
+          "recall": 0.7459954233409611,
+          "f1": 0.7836538461538461,
+          "tp": 326,
+          "fp": 69,
+          "fn": 111
+        },
+        "counts": {
+          "documents": 16,
+          "patients": 43
+        }
+      },
+      "candidate": {
+        "mention": {
+          "precision": 0.6153136531365314,
+          "recall": 0.721081081081081,
+          "f1": 0.6640119462419114,
+          "tp": 667,
+          "fp": 417,
+          "fn": 258
+        },
+        "document": {
+          "precision": 0.7943262411347518,
+          "recall": 0.7688787185354691,
+          "f1": 0.7813953488372093,
+          "tp": 336,
+          "fp": 87,
+          "fn": 101
+        },
+        "counts": {
+          "documents": 16,
+          "patients": 43
+        }
+      },
+      "added": 181
+    }
+  ],
+  "checks": {
+    "mention_gain": false,
+    "document_guard": true,
+    "fold_guard": false
+  },
+  "advance_to_joint_test": false,
+  "mention_f1_gain": -0.036089294934560034,
+  "scope": "Entity-only screening on reused development folds 0/1. Associations were not recomputed, so no full score or association performance is reported. This stage cannot authorize B generation."
+}

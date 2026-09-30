@@ -1,0 +1,48 @@
+{
+  "declared_at_utc": "2026-09-28T23:35:48.789492+00:00",
+  "hypothesis": "The unconditional overlap veto discards already generated high-confidence spans. Test constrained containment additions while preserving every reviewed entity, rejecting negated overlaps, crossings, original exact boundaries and overlapping additions.",
+  "train_path": "PatientPheX-V1-A/PatientPheX-train.jsonl",
+  "split_path": "reports/cpu_baseline/split.json",
+  "before_review": "reports/association_context/best_development_oof.jsonl",
+  "baseline_oof": "reports/joint_confirmation/development_oof.jsonl",
+  "pilot_folds": [
+    0,
+    1
+  ],
+  "candidates": {
+    "0": "reports/semantic_linking/fold0/candidates.json",
+    "1": "reports/semantic_linking/fold1/candidates.json"
+  },
+  "report_dir": "reports/nested_span_screen",
+  "fixed_thresholds": {
+    "span_threshold": 0.9,
+    "semantic_threshold": 0.9,
+    "margin_threshold": 0.02
+  },
+  "screen_gates": {
+    "minimum_mention_f1_gain": 0.003,
+    "maximum_document_f1_loss": 0.002,
+    "all_pilot_mention_folds_nonworse": true
+  },
+  "scope": "A new hypothesis informed by reused full-development diagnostics. Two-fold entity-only screen, not independent validation and not a full pipeline score. No B generation or modification. If passed, requires separately frozen joint association testing and remaining-fold confirmation.",
+  "input_sha256": {
+    "PatientPheX-V1-A/PatientPheX-train.jsonl": "5029544d59a1e812de83c07a56d841c09b88cae222d4266fd2930b4c9a224786",
+    "reports/cpu_baseline/split.json": "2384f83aa16e1c9d63313f2e2741e844f5ff667d6419ece504332472f9c31aff",
+    "reports/association_context/best_development_oof.jsonl": "f54d5180be93cbf2a0bc6d325a4b0182451c691931a16bafbb09d0826e641ef8",
+    "reports/joint_confirmation/development_oof.jsonl": "21d0b06ac500fd18de2a057374e4431dae870bcb3b9034da1f7c485a66fc3972",
+    "reports/joint_confirmation/summary.json": "98d37dc924ebb44b03f449ee6e9ba5c5085d76cdb7bbae8a66fae1e99afde0c1",
+    "reports/semantic_linking/summary.json": "12970b1d89fe31c00797c65170aaf32d082382d9995bf59106c33755263f480d",
+    "reports/semantic_linking/fold0/candidates.json": "5ffda45116035f219c3ec62ec68c947a4016065bd7ea2e158d6628757aeac9a5",
+    "reports/semantic_linking/fold1/candidates.json": "8345177e8960e6aded3b490d8f12860241aad595af3bca20fba373958535469b",
+    "reports/entity_residuals/joint_recall_sources.json": "1338d7ea93efdbd89a67feaf4fc8ab0e18a46bd43591a0410ce0a176550e51b6"
+  },
+  "code_sha256": {
+    "patientphex/overlap_candidates.py": "dd2dc37d2ed1532eb69f7ef582efe7e5f7df46eed058a20b6da5f8afb6644d5f",
+    "scripts/screen_nested_candidates.py": "3bbf0ec0c4b2a2db6929f26371f5ffe5d57f3ece6354a353794b63c1e20cb5f3",
+    "tests/test_overlap_candidates.py": "29871cd758774262421cf8674008210ca052d85cdefe294cc5260908a70fe422",
+    "patientphex/data.py": "c8869f11a004a6f716f0295d8d51b42faf414c1d6866bcb9def2b7cb7585e324",
+    "patientphex/evaluation.py": "d8cc8261655cad8d78dbd550ed11bfb4745f510645bbb9d43aa8ade5f82ae2ac",
+    "scripts/optimize_cpu_association.py": "575f72f8fbfb88a1b4632379aa6a00b05e8cb4cf16a35cecd817dd83d5516c46",
+    "scripts/run_llm_association.py": "1000ee50cb20f902694f6657a50ff440f30c279a65ebc4b9837a17ff3ea64233"
+  }
+}

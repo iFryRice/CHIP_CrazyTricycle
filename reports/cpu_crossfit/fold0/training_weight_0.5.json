@@ -1,0 +1,3066 @@
+{
+  "documents": 64,
+  "patients": 164,
+  "active_patients": 164,
+  "candidate_entities": 4002,
+  "excluded_no_entities": 177,
+  "candidate_pairs": 4402,
+  "positive_pairs": 1103,
+  "negative_surrogate_pairs": 3299,
+  "negative_weight": 0.5,
+  "effective_sample_weight_sum": 2755.9280036250716,
+  "gold_relations": 1673,
+  "covered_gold_relations": 1103,
+  "candidate_relation_recall_ceiling": 0.6592946802151823,
+  "missing_gold_relations": 570,
+  "provenance_kind": "out_of_fold",
+  "candidate_distribution": "Out-of-fold candidates with declared complete upstream training/validation/selection label-source IDs.",
+  "label_source": "Official association sets in train_documents only.",
+  "negative_label_scope": "Absent associations are negative surrogates; annotation completeness is not assumed.",
+  "evidence_scope": "Automatically derived document-local features; no human evidence-chain labels.",
+  "coverage_scope": "Candidate reachability on training documents, not model accuracy or a validation score.",
+  "patients_detail": [
+    {
+      "pmc_id": "10313222",
+      "patient_id": "P1",
+      "candidate_pairs": 14,
+      "positive_pairs": 3,
+      "negative_surrogate_pairs": 11,
+      "gold_relations": 4,
+      "covered_gold_relations": 3,
+      "missing_gold_concepts": [
+        "HP:0002591"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.296602787456447
+    },
+    {
+      "pmc_id": "10789033",
+      "patient_id": "P1",
+      "candidate_pairs": 29,
+      "positive_pairs": 16,
+      "negative_surrogate_pairs": 13,
+      "gold_relations": 20,
+      "covered_gold_relations": 16,
+      "missing_gold_concepts": [
+        "HP:0000733",
+        "HP:0001622",
+        "HP:0002268",
+        "HP:0002321"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.825273338940274
+    },
+    {
+      "pmc_id": "11196099",
+      "patient_id": "P1",
+      "candidate_pairs": 33,
+      "positive_pairs": 11,
+      "negative_surrogate_pairs": 22,
+      "gold_relations": 15,
+      "covered_gold_relations": 11,
+      "missing_gold_concepts": [
+        "HP:0000858",
+        "HP:0001939",
+        "HP:0010741",
+        "HP:0031987"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.894308943089417
+    },
+    {
+      "pmc_id": "11196099",
+      "patient_id": "P2",
+      "candidate_pairs": 33,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 32,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.827420546932732
+    },
+    {
+      "pmc_id": "11221135",
+      "patient_id": "OII-2",
+      "candidate_pairs": 7,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 5,
+      "gold_relations": 5,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [
+        "HP:0002209",
+        "HP:0002299",
+        "HP:0025084"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.255226480836235
+    },
+    {
+      "pmc_id": "11221135",
+      "patient_id": "P1",
+      "candidate_pairs": 7,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 5,
+      "gold_relations": 4,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [
+        "HP:0002299",
+        "HP:0025084"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.25522648083624
+    },
+    {
+      "pmc_id": "11221135",
+      "patient_id": "P2",
+      "candidate_pairs": 7,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 6,
+      "gold_relations": 3,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [
+        "HP:0002208",
+        "HP:0100874"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.337979094076656
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OI-1",
+      "candidate_pairs": 24,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.979928861788617
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OII-1",
+      "candidate_pairs": 24,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 2,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [
+        "HP:0002069"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.979928861788615
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OII-2",
+      "candidate_pairs": 24,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 2,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [
+        "HP:0002069"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.979928861788615
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OII-3",
+      "candidate_pairs": 24,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 2,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [
+        "HP:0002069"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.979928861788615
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OII-4",
+      "candidate_pairs": 24,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 2,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [
+        "HP:0002069"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.979928861788615
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OIII-1",
+      "candidate_pairs": 24,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 22,
+      "gold_relations": 3,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [
+        "HP:0007334"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.53912601626016
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OIII-2",
+      "candidate_pairs": 24,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 2,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [
+        "HP:0007334"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.979928861788617
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OIII-3",
+      "candidate_pairs": 24,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 19,
+      "gold_relations": 5,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.21671747967479
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OIII-4",
+      "candidate_pairs": 24,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 24,
+      "gold_relations": 1,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [
+        "HP:0100543"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.42073170731707
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OIII-5",
+      "candidate_pairs": 24,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 22,
+      "gold_relations": 3,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [
+        "HP:0007334"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.53912601626016
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OIII-6",
+      "candidate_pairs": 24,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 22,
+      "gold_relations": 3,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [
+        "HP:0007334"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.53912601626016
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OIV-1",
+      "candidate_pairs": 24,
+      "positive_pairs": 3,
+      "negative_surrogate_pairs": 21,
+      "gold_relations": 3,
+      "covered_gold_relations": 3,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.098323170731701
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OIV-2",
+      "candidate_pairs": 24,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.979928861788617
+    },
+    {
+      "pmc_id": "11235872",
+      "patient_id": "OIV-3",
+      "candidate_pairs": 24,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.979928861788615
+    },
+    {
+      "pmc_id": "11765409",
+      "patient_id": "P1",
+      "candidate_pairs": 8,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 6,
+      "gold_relations": 5,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [
+        "HP:0000495",
+        "HP:0007663",
+        "HP:0031135"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.77591463414634
+    },
+    {
+      "pmc_id": "11826603",
+      "patient_id": "O1",
+      "candidate_pairs": 6,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 6,
+      "gold_relations": 4,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [
+        "HP:0007663",
+        "HP:0011499",
+        "HP:0025320",
+        "HP:0032106"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.420731707317072
+    },
+    {
+      "pmc_id": "11986149",
+      "patient_id": "O1",
+      "candidate_pairs": 57,
+      "positive_pairs": 36,
+      "negative_surrogate_pairs": 21,
+      "gold_relations": 46,
+      "covered_gold_relations": 36,
+      "missing_gold_concepts": [
+        "HP:0001510",
+        "HP:0003487",
+        "HP:0007099",
+        "HP:0009465",
+        "HP:0012453",
+        "HP:0012716",
+        "HP:0031006",
+        "HP:0034057",
+        "HP:0100275",
+        "HP:6000920"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 21.896983311938364
+    },
+    {
+      "pmc_id": "11986149",
+      "patient_id": "O2",
+      "candidate_pairs": 57,
+      "positive_pairs": 23,
+      "negative_surrogate_pairs": 34,
+      "gold_relations": 31,
+      "covered_gold_relations": 23,
+      "missing_gold_concepts": [
+        "HP:0001291",
+        "HP:0001315",
+        "HP:0001510",
+        "HP:0002460",
+        "HP:0003484",
+        "HP:0007099",
+        "HP:0008872",
+        "HP:0009748"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.836114676936248
+    },
+    {
+      "pmc_id": "12017973",
+      "patient_id": "O1",
+      "candidate_pairs": 21,
+      "positive_pairs": 6,
+      "negative_surrogate_pairs": 15,
+      "gold_relations": 8,
+      "covered_gold_relations": 6,
+      "missing_gold_concepts": [
+        "HP:0001901",
+        "HP:0011902"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.255226480836235
+    },
+    {
+      "pmc_id": "12078887",
+      "patient_id": "OP1",
+      "candidate_pairs": 24,
+      "positive_pairs": 8,
+      "negative_surrogate_pairs": 16,
+      "gold_relations": 12,
+      "covered_gold_relations": 8,
+      "missing_gold_concepts": [
+        "HP:0002730",
+        "HP:0002849",
+        "HP:0002851",
+        "HP:0410028"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.894308943089428
+    },
+    {
+      "pmc_id": "12078887",
+      "patient_id": "OP2",
+      "candidate_pairs": 24,
+      "positive_pairs": 8,
+      "negative_surrogate_pairs": 16,
+      "gold_relations": 11,
+      "covered_gold_relations": 8,
+      "missing_gold_concepts": [
+        "HP:0002851",
+        "HP:0008940",
+        "HP:0025084"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.894308943089435
+    },
+    {
+      "pmc_id": "12078887",
+      "patient_id": "OP3",
+      "candidate_pairs": 24,
+      "positive_pairs": 6,
+      "negative_surrogate_pairs": 18,
+      "gold_relations": 8,
+      "covered_gold_relations": 6,
+      "missing_gold_concepts": [
+        "HP:0002960",
+        "HP:0025084"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.77591463414634
+    },
+    {
+      "pmc_id": "12078887",
+      "patient_id": "OP4",
+      "candidate_pairs": 24,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 4,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [
+        "HP:0005528",
+        "HP:0012190",
+        "HP:0025084"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.979928861788617
+    },
+    {
+      "pmc_id": "12078887",
+      "patient_id": "P1",
+      "candidate_pairs": 24,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.979928861788617
+    },
+    {
+      "pmc_id": "12078887",
+      "patient_id": "P2",
+      "candidate_pairs": 24,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 24,
+      "gold_relations": 0,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.42073170731707
+    },
+    {
+      "pmc_id": "12110755",
+      "patient_id": "OP1",
+      "candidate_pairs": 33,
+      "positive_pairs": 13,
+      "negative_surrogate_pairs": 20,
+      "gold_relations": 21,
+      "covered_gold_relations": 13,
+      "missing_gold_concepts": [
+        "HP:0000337",
+        "HP:0001999",
+        "HP:0010850",
+        "HP:0011410",
+        "HP:0011681",
+        "HP:0012704",
+        "HP:0030748",
+        "HP:0033053"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.707686622320757
+    },
+    {
+      "pmc_id": "12110755",
+      "patient_id": "OP2",
+      "candidate_pairs": 33,
+      "positive_pairs": 8,
+      "negative_surrogate_pairs": 25,
+      "gold_relations": 12,
+      "covered_gold_relations": 8,
+      "missing_gold_concepts": [
+        "HP:0000337",
+        "HP:0000448",
+        "HP:0002280",
+        "HP:0010804"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.67424242424241
+    },
+    {
+      "pmc_id": "12110769",
+      "patient_id": "OI.1",
+      "candidate_pairs": 30,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 29,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.868089430894308
+    },
+    {
+      "pmc_id": "12110769",
+      "patient_id": "OI.2",
+      "candidate_pairs": 30,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 30,
+      "gold_relations": 1,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [
+        "HP:0001249"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.420731707317072
+    },
+    {
+      "pmc_id": "12110769",
+      "patient_id": "OII.1",
+      "candidate_pairs": 30,
+      "positive_pairs": 4,
+      "negative_surrogate_pairs": 26,
+      "gold_relations": 6,
+      "covered_gold_relations": 4,
+      "missing_gold_concepts": [
+        "HP:0010334",
+        "HP:0010711"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.210162601626015
+    },
+    {
+      "pmc_id": "12110769",
+      "patient_id": "OII.2",
+      "candidate_pairs": 30,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 29,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.868089430894308
+    },
+    {
+      "pmc_id": "12110769",
+      "patient_id": "OII.3",
+      "candidate_pairs": 30,
+      "positive_pairs": 6,
+      "negative_surrogate_pairs": 24,
+      "gold_relations": 8,
+      "covered_gold_relations": 6,
+      "missing_gold_concepts": [
+        "HP:0004280",
+        "HP:0010289"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.10487804878049
+    },
+    {
+      "pmc_id": "12110769",
+      "patient_id": "OII.4",
+      "candidate_pairs": 30,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 29,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.868089430894308
+    },
+    {
+      "pmc_id": "12118522",
+      "patient_id": "P1",
+      "candidate_pairs": 39,
+      "positive_pairs": 20,
+      "negative_surrogate_pairs": 19,
+      "gold_relations": 26,
+      "covered_gold_relations": 20,
+      "missing_gold_concepts": [
+        "HP:0000951",
+        "HP:0002199",
+        "HP:0011344",
+        "HP:0033077",
+        "HP:0100015",
+        "HP:6000057"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.303158223889923
+    },
+    {
+      "pmc_id": "12147048",
+      "patient_id": "P1",
+      "candidate_pairs": 31,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 26,
+      "gold_relations": 10,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0000953",
+        "HP:0003124",
+        "HP:0007642",
+        "HP:0007663",
+        "HP:0007737"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.585365853658546
+    },
+    {
+      "pmc_id": "12147048",
+      "patient_id": "P2",
+      "candidate_pairs": 31,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 26,
+      "gold_relations": 10,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0006934",
+        "HP:0011503",
+        "HP:0025175",
+        "HP:0030211",
+        "HP:0030329"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.585365853658542
+    },
+    {
+      "pmc_id": "12147048",
+      "patient_id": "P3",
+      "candidate_pairs": 31,
+      "positive_pairs": 9,
+      "negative_surrogate_pairs": 22,
+      "gold_relations": 12,
+      "covered_gold_relations": 9,
+      "missing_gold_concepts": [
+        "HP:0000514",
+        "HP:0007737",
+        "HP:0012511"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.317073170731707
+    },
+    {
+      "pmc_id": "12250201",
+      "patient_id": "P1",
+      "candidate_pairs": 23,
+      "positive_pairs": 7,
+      "negative_surrogate_pairs": 16,
+      "gold_relations": 13,
+      "covered_gold_relations": 7,
+      "missing_gold_concepts": [
+        "HP:0000359",
+        "HP:0001053",
+        "HP:0008586",
+        "HP:0008619",
+        "HP:0011380",
+        "HP:0011476"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.50530222693531
+    },
+    {
+      "pmc_id": "12250201",
+      "patient_id": "P2",
+      "candidate_pairs": 23,
+      "positive_pairs": 4,
+      "negative_surrogate_pairs": 19,
+      "gold_relations": 8,
+      "covered_gold_relations": 4,
+      "missing_gold_concepts": [
+        "HP:0000359",
+        "HP:0002251",
+        "HP:0008586",
+        "HP:0011380"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.754772004241774
+    },
+    {
+      "pmc_id": "12250201",
+      "patient_id": "P3",
+      "candidate_pairs": 23,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 22,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.004241781548243
+    },
+    {
+      "pmc_id": "12334843",
+      "patient_id": "P1",
+      "candidate_pairs": 23,
+      "positive_pairs": 6,
+      "negative_surrogate_pairs": 17,
+      "gold_relations": 9,
+      "covered_gold_relations": 6,
+      "missing_gold_concepts": [
+        "HP:0001892",
+        "HP:0002334",
+        "HP:0002686"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.921792152704132
+    },
+    {
+      "pmc_id": "12334843",
+      "patient_id": "P2",
+      "candidate_pairs": 23,
+      "positive_pairs": 4,
+      "negative_surrogate_pairs": 19,
+      "gold_relations": 10,
+      "covered_gold_relations": 4,
+      "missing_gold_concepts": [
+        "HP:0002283",
+        "HP:0006958",
+        "HP:0011185",
+        "HP:0012444",
+        "HP:0034295",
+        "HP:5200295"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.754772004241772
+    },
+    {
+      "pmc_id": "12386172",
+      "patient_id": "P1",
+      "candidate_pairs": 35,
+      "positive_pairs": 16,
+      "negative_surrogate_pairs": 19,
+      "gold_relations": 29,
+      "covered_gold_relations": 16,
+      "missing_gold_concepts": [
+        "HP:0000817",
+        "HP:0001298",
+        "HP:0001771",
+        "HP:0002492",
+        "HP:0002540",
+        "HP:0007083",
+        "HP:0011199",
+        "HP:0012418",
+        "HP:0012760",
+        "HP:0025325",
+        "HP:0100960",
+        "HP:0200006",
+        "HP:5200110"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 19.555923344947747
+    },
+    {
+      "pmc_id": "12405443",
+      "patient_id": "OP1",
+      "candidate_pairs": 30,
+      "positive_pairs": 12,
+      "negative_surrogate_pairs": 18,
+      "gold_relations": 18,
+      "covered_gold_relations": 12,
+      "missing_gold_concepts": [
+        "HP:0000704",
+        "HP:0004821",
+        "HP:0005387",
+        "HP:0005437",
+        "HP:0032215",
+        "HP:0410028"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.789024390243913
+    },
+    {
+      "pmc_id": "12405443",
+      "patient_id": "OP2",
+      "candidate_pairs": 30,
+      "positive_pairs": 7,
+      "negative_surrogate_pairs": 23,
+      "gold_relations": 10,
+      "covered_gold_relations": 7,
+      "missing_gold_concepts": [
+        "HP:0001874",
+        "HP:0004821",
+        "HP:0032215"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.552235772357726
+    },
+    {
+      "pmc_id": "12405443",
+      "patient_id": "OP3",
+      "candidate_pairs": 30,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 28,
+      "gold_relations": 3,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [
+        "HP:0012182"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.315447154471544
+    },
+    {
+      "pmc_id": "12405443",
+      "patient_id": "OP4",
+      "candidate_pairs": 30,
+      "positive_pairs": 6,
+      "negative_surrogate_pairs": 24,
+      "gold_relations": 6,
+      "covered_gold_relations": 6,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.10487804878049
+    },
+    {
+      "pmc_id": "12444410",
+      "patient_id": "OI:1",
+      "candidate_pairs": 22,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 21,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.030764966740572
+    },
+    {
+      "pmc_id": "12444410",
+      "patient_id": "OII:4",
+      "candidate_pairs": 22,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 21,
+      "gold_relations": 3,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [
+        "HP:0009185",
+        "HP:0009779"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.030764966740572
+    },
+    {
+      "pmc_id": "12444410",
+      "patient_id": "OII:8",
+      "candidate_pairs": 22,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 21,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.030764966740573
+    },
+    {
+      "pmc_id": "12444410",
+      "patient_id": "OII:9",
+      "candidate_pairs": 22,
+      "positive_pairs": 3,
+      "negative_surrogate_pairs": 19,
+      "gold_relations": 10,
+      "covered_gold_relations": 3,
+      "missing_gold_concepts": [
+        "HP:0001204",
+        "HP:0009185",
+        "HP:0009460",
+        "HP:0010011",
+        "HP:0010711",
+        "HP:0100362",
+        "HP:4000062"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.250831485587577
+    },
+    {
+      "pmc_id": "12444410",
+      "patient_id": "OIII:6",
+      "candidate_pairs": 22,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 21,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.030764966740573
+    },
+    {
+      "pmc_id": "12455887",
+      "patient_id": "OP1",
+      "candidate_pairs": 52,
+      "positive_pairs": 21,
+      "negative_surrogate_pairs": 31,
+      "gold_relations": 39,
+      "covered_gold_relations": 21,
+      "missing_gold_concepts": [
+        "HP:0000912",
+        "HP:0001181",
+        "HP:0001533",
+        "HP:0001622",
+        "HP:0002015",
+        "HP:0002268",
+        "HP:0002311",
+        "HP:0002483",
+        "HP:0002540",
+        "HP:0002877",
+        "HP:0003202",
+        "HP:0003484",
+        "HP:0004887",
+        "HP:0005445",
+        "HP:0006951",
+        "HP:0007178",
+        "HP:0012510",
+        "HP:0031629"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.840642589118197
+    },
+    {
+      "pmc_id": "12455887",
+      "patient_id": "OP2",
+      "candidate_pairs": 52,
+      "positive_pairs": 16,
+      "negative_surrogate_pairs": 36,
+      "gold_relations": 33,
+      "covered_gold_relations": 16,
+      "missing_gold_concepts": [
+        "HP:0000912",
+        "HP:0001270",
+        "HP:0001508",
+        "HP:0001533",
+        "HP:0001765",
+        "HP:0002311",
+        "HP:0002355",
+        "HP:0002495",
+        "HP:0003394",
+        "HP:0003444",
+        "HP:0004880",
+        "HP:0007010",
+        "HP:0007178",
+        "HP:0007992",
+        "HP:0008944",
+        "HP:0008954",
+        "HP:0031629"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.550187617260786
+    },
+    {
+      "pmc_id": "12628480",
+      "patient_id": "OP1",
+      "candidate_pairs": 43,
+      "positive_pairs": 19,
+      "negative_surrogate_pairs": 24,
+      "gold_relations": 28,
+      "covered_gold_relations": 19,
+      "missing_gold_concepts": [
+        "HP:0001871",
+        "HP:0002574",
+        "HP:0011107",
+        "HP:0011110",
+        "HP:0025329",
+        "HP:0025834",
+        "HP:0030050",
+        "HP:0410147",
+        "HP:6000016"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 19.350822461712976
+    },
+    {
+      "pmc_id": "12628480",
+      "patient_id": "OP2",
+      "candidate_pairs": 43,
+      "positive_pairs": 14,
+      "negative_surrogate_pairs": 29,
+      "gold_relations": 19,
+      "covered_gold_relations": 14,
+      "missing_gold_concepts": [
+        "HP:0001871",
+        "HP:0002460",
+        "HP:0003237",
+        "HP:0030378",
+        "HP:0100838"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.790272263187738
+    },
+    {
+      "pmc_id": "12628480",
+      "patient_id": "OP3",
+      "candidate_pairs": 43,
+      "positive_pairs": 6,
+      "negative_surrogate_pairs": 37,
+      "gold_relations": 8,
+      "covered_gold_relations": 6,
+      "missing_gold_concepts": [
+        "HP:0000759",
+        "HP:0011107"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.293391945547365
+    },
+    {
+      "pmc_id": "12628480",
+      "patient_id": "P1",
+      "candidate_pairs": 43,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 41,
+      "gold_relations": 2,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.044951786727175
+    },
+    {
+      "pmc_id": "12646972",
+      "patient_id": "O1",
+      "candidate_pairs": 6,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 1,
+      "gold_relations": 9,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0000958",
+        "HP:0010783",
+        "HP:0025474",
+        "HP:0040189"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 24.604674796747965
+    },
+    {
+      "pmc_id": "12733031",
+      "patient_id": "P1",
+      "candidate_pairs": 11,
+      "positive_pairs": 3,
+      "negative_surrogate_pairs": 8,
+      "gold_relations": 6,
+      "covered_gold_relations": 3,
+      "missing_gold_concepts": [
+        "HP:0000139",
+        "HP:0000225",
+        "HP:0006298"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.080931263858094
+    },
+    {
+      "pmc_id": "12779223",
+      "patient_id": "P1",
+      "candidate_pairs": 19,
+      "positive_pairs": 12,
+      "negative_surrogate_pairs": 7,
+      "gold_relations": 17,
+      "covered_gold_relations": 12,
+      "missing_gold_concepts": [
+        "HP:0000319",
+        "HP:0000437",
+        "HP:0002553",
+        "HP:0012760",
+        "restrictive diet"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 21.896983311938378
+    },
+    {
+      "pmc_id": "12798528",
+      "patient_id": "O1",
+      "candidate_pairs": 35,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 30,
+      "gold_relations": 10,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0003391",
+        "HP:0005197",
+        "HP:0006467",
+        "HP:0010834",
+        "HP:0011107"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.337979094076662
+    },
+    {
+      "pmc_id": "12798528",
+      "patient_id": "O2",
+      "candidate_pairs": 35,
+      "positive_pairs": 7,
+      "negative_surrogate_pairs": 28,
+      "gold_relations": 9,
+      "covered_gold_relations": 7,
+      "missing_gold_concepts": [
+        "HP:0030374",
+        "HP:0034295"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.1048780487805
+    },
+    {
+      "pmc_id": "12798528",
+      "patient_id": "O3",
+      "candidate_pairs": 35,
+      "positive_pairs": 9,
+      "negative_surrogate_pairs": 26,
+      "gold_relations": 12,
+      "covered_gold_relations": 9,
+      "missing_gold_concepts": [
+        "HP:0000466",
+        "HP:0002829",
+        "HP:0005197"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.871777003484333
+    },
+    {
+      "pmc_id": "12811285",
+      "patient_id": "P1",
+      "candidate_pairs": 20,
+      "positive_pairs": 10,
+      "negative_surrogate_pairs": 10,
+      "gold_relations": 12,
+      "covered_gold_relations": 10,
+      "missing_gold_concepts": [
+        "HP:0025089",
+        "HP:0030002"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.13109756097562
+    },
+    {
+      "pmc_id": "12811285",
+      "patient_id": "P2",
+      "candidate_pairs": 20,
+      "positive_pairs": 3,
+      "negative_surrogate_pairs": 17,
+      "gold_relations": 3,
+      "covered_gold_relations": 3,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.433841463414637
+    },
+    {
+      "pmc_id": "12891056",
+      "patient_id": "P1",
+      "candidate_pairs": 39,
+      "positive_pairs": 21,
+      "negative_surrogate_pairs": 18,
+      "gold_relations": 30,
+      "covered_gold_relations": 21,
+      "missing_gold_concepts": [
+        "HP:0000326",
+        "HP:0000682",
+        "HP:0002719",
+        "HP:0004484",
+        "HP:0006297",
+        "HP:0006956",
+        "HP:0007010",
+        "HP:0430028",
+        "HP:5200110"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.64727954971856
+    },
+    {
+      "pmc_id": "2964533",
+      "patient_id": "O1",
+      "candidate_pairs": 29,
+      "positive_pairs": 17,
+      "negative_surrogate_pairs": 12,
+      "gold_relations": 26,
+      "covered_gold_relations": 17,
+      "missing_gold_concepts": [
+        "HP:0001622",
+        "HP:0002108",
+        "HP:0002714",
+        "HP:0005819",
+        "HP:0008762",
+        "HP:0010803",
+        "HP:0031355",
+        "HP:0031473",
+        "finger chewing"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 21.28805719091673
+    },
+    {
+      "pmc_id": "2964533",
+      "patient_id": "O2",
+      "candidate_pairs": 29,
+      "positive_pairs": 7,
+      "negative_surrogate_pairs": 22,
+      "gold_relations": 9,
+      "covered_gold_relations": 7,
+      "missing_gold_concepts": [
+        "HP:0004322",
+        "HP:0040040"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.66021867115223
+    },
+    {
+      "pmc_id": "4644339",
+      "patient_id": "P1",
+      "candidate_pairs": 27,
+      "positive_pairs": 10,
+      "negative_surrogate_pairs": 17,
+      "gold_relations": 15,
+      "covered_gold_relations": 10,
+      "missing_gold_concepts": [
+        "HP:0002179",
+        "HP:0011471",
+        "HP:0033044",
+        "HP:0034322",
+        "unable to manage his oral secretions"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.39137308039747
+    },
+    {
+      "pmc_id": "4678370",
+      "patient_id": "OII:3",
+      "candidate_pairs": 14,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 14,
+      "gold_relations": 0,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.42073170731707
+    },
+    {
+      "pmc_id": "4678370",
+      "patient_id": "OII:4",
+      "candidate_pairs": 14,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 14,
+      "gold_relations": 0,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.42073170731707
+    },
+    {
+      "pmc_id": "4678370",
+      "patient_id": "OIII:2",
+      "candidate_pairs": 14,
+      "positive_pairs": 7,
+      "negative_surrogate_pairs": 7,
+      "gold_relations": 9,
+      "covered_gold_relations": 7,
+      "missing_gold_concepts": [
+        "HP:0002160",
+        "HP:0012019"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.13109756097561
+    },
+    {
+      "pmc_id": "4678370",
+      "patient_id": "OIII:3",
+      "candidate_pairs": 14,
+      "positive_pairs": 10,
+      "negative_surrogate_pairs": 4,
+      "gold_relations": 12,
+      "covered_gold_relations": 10,
+      "missing_gold_concepts": [
+        "HP:0002160",
+        "HP:0012019"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 23.006968641114977
+    },
+    {
+      "pmc_id": "4678370",
+      "patient_id": "OIII:4",
+      "candidate_pairs": 14,
+      "positive_pairs": 7,
+      "negative_surrogate_pairs": 7,
+      "gold_relations": 9,
+      "covered_gold_relations": 7,
+      "missing_gold_concepts": [
+        "HP:0002160",
+        "HP:0012019"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.13109756097561
+    },
+    {
+      "pmc_id": "4678370",
+      "patient_id": "OIII:5",
+      "candidate_pairs": 14,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 14,
+      "gold_relations": 0,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.42073170731707
+    },
+    {
+      "pmc_id": "4678370",
+      "patient_id": "OIII:6",
+      "candidate_pairs": 14,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 14,
+      "gold_relations": 0,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.42073170731707
+    },
+    {
+      "pmc_id": "5023785",
+      "patient_id": "P1",
+      "candidate_pairs": 9,
+      "positive_pairs": 7,
+      "negative_surrogate_pairs": 2,
+      "gold_relations": 11,
+      "covered_gold_relations": 7,
+      "missing_gold_concepts": [
+        "HP:0000977",
+        "HP:0003549",
+        "HP:0005100",
+        "HP:0031368"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 23.859078590785906
+    },
+    {
+      "pmc_id": "5368377",
+      "patient_id": "O1",
+      "candidate_pairs": 13,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 8,
+      "gold_relations": 7,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0003075",
+        "multimembrane effusion"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.582551594746715
+    },
+    {
+      "pmc_id": "5368377",
+      "patient_id": "O2",
+      "candidate_pairs": 13,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 11,
+      "gold_relations": 2,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.48545966228893
+    },
+    {
+      "pmc_id": "5368377",
+      "patient_id": "O3",
+      "candidate_pairs": 13,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 8,
+      "gold_relations": 5,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.582551594746715
+    },
+    {
+      "pmc_id": "5368377",
+      "patient_id": "P1",
+      "candidate_pairs": 13,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 12,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.453095684803001
+    },
+    {
+      "pmc_id": "5368377",
+      "patient_id": "P2",
+      "candidate_pairs": 13,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 12,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.453095684803001
+    },
+    {
+      "pmc_id": "5368377",
+      "patient_id": "P3",
+      "candidate_pairs": 13,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 13,
+      "gold_relations": 0,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.420731707317072
+    },
+    {
+      "pmc_id": "5368377",
+      "patient_id": "P4",
+      "candidate_pairs": 13,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 13,
+      "gold_relations": 0,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.420731707317072
+    },
+    {
+      "pmc_id": "5422868",
+      "patient_id": "OCSA108.01",
+      "candidate_pairs": 41,
+      "positive_pairs": 16,
+      "negative_surrogate_pairs": 25,
+      "gold_relations": 22,
+      "covered_gold_relations": 16,
+      "missing_gold_concepts": [
+        "HP:0000646",
+        "HP:0008504",
+        "HP:0009909",
+        "HP:0011800",
+        "HP:0400000",
+        "HP:6001302"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.65809042236763
+    },
+    {
+      "pmc_id": "5422868",
+      "patient_id": "OCSA108.02",
+      "candidate_pairs": 41,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 36,
+      "gold_relations": 9,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0000687",
+        "HP:0010793",
+        "HP:0011800",
+        "mild learning disability"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.057406305770366
+    },
+    {
+      "pmc_id": "5425407",
+      "patient_id": "P1",
+      "candidate_pairs": 22,
+      "positive_pairs": 14,
+      "negative_surrogate_pairs": 8,
+      "gold_relations": 21,
+      "covered_gold_relations": 14,
+      "missing_gold_concepts": [
+        "46,XY disorder of sex development",
+        "HP:0000151",
+        "HP:0010463",
+        "HP:0010569",
+        "HP:0100327",
+        "HP:0410328",
+        "SLOS phenotype"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 21.961197339246116
+    },
+    {
+      "pmc_id": "5452357",
+      "patient_id": "P1",
+      "candidate_pairs": 15,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 10,
+      "gold_relations": 14,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0001992",
+        "HP:0002027",
+        "HP:0012085",
+        "HP:0012587",
+        "HP:0034661",
+        "HP:0045034",
+        "HP:6000607",
+        "HP:6001114",
+        "febrilities"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.89430894308943
+    },
+    {
+      "pmc_id": "5473715",
+      "patient_id": "O1",
+      "candidate_pairs": 38,
+      "positive_pairs": 11,
+      "negative_surrogate_pairs": 27,
+      "gold_relations": 16,
+      "covered_gold_relations": 11,
+      "missing_gold_concepts": [
+        "HP:0002078",
+        "HP:0007256",
+        "HP:0009046",
+        "reduced up-gaze",
+        "very limited voluntary eye movements"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.305680359435172
+    },
+    {
+      "pmc_id": "5473715",
+      "patient_id": "O2",
+      "candidate_pairs": 38,
+      "positive_pairs": 6,
+      "negative_surrogate_pairs": 32,
+      "gold_relations": 10,
+      "covered_gold_relations": 6,
+      "missing_gold_concepts": [
+        "HP:0007256",
+        "HP:0009046",
+        "HP:0011096",
+        "HP:0031960"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.539794608472398
+    },
+    {
+      "pmc_id": "5473715",
+      "patient_id": "O3",
+      "candidate_pairs": 38,
+      "positive_pairs": 6,
+      "negative_surrogate_pairs": 32,
+      "gold_relations": 8,
+      "covered_gold_relations": 6,
+      "missing_gold_concepts": [
+        "HP:0002078",
+        "HP:0007256"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.539794608472397
+    },
+    {
+      "pmc_id": "5473715",
+      "patient_id": "O4",
+      "candidate_pairs": 38,
+      "positive_pairs": 8,
+      "negative_surrogate_pairs": 30,
+      "gold_relations": 12,
+      "covered_gold_relations": 8,
+      "missing_gold_concepts": [
+        "HP:0002061",
+        "HP:0002078",
+        "HP:0007941",
+        "HP:0007979"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.24614890885751
+    },
+    {
+      "pmc_id": "5473715",
+      "patient_id": "O5",
+      "candidate_pairs": 38,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 37,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.773908857509623
+    },
+    {
+      "pmc_id": "5473715",
+      "patient_id": "O6",
+      "candidate_pairs": 38,
+      "positive_pairs": 4,
+      "negative_surrogate_pairs": 34,
+      "gold_relations": 4,
+      "covered_gold_relations": 4,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.833440308087287
+    },
+    {
+      "pmc_id": "5473715",
+      "patient_id": "O7",
+      "candidate_pairs": 38,
+      "positive_pairs": 4,
+      "negative_surrogate_pairs": 34,
+      "gold_relations": 4,
+      "covered_gold_relations": 4,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.833440308087287
+    },
+    {
+      "pmc_id": "5537416",
+      "patient_id": "O1",
+      "candidate_pairs": 41,
+      "positive_pairs": 21,
+      "negative_surrogate_pairs": 20,
+      "gold_relations": 36,
+      "covered_gold_relations": 21,
+      "missing_gold_concepts": [
+        "HP:0000212",
+        "HP:0001315",
+        "HP:0001888",
+        "HP:0002421",
+        "HP:0002938",
+        "HP:0003016",
+        "HP:0003265",
+        "HP:0004060",
+        "HP:0004313",
+        "HP:0007340",
+        "HP:0100625",
+        "HP:6000920",
+        "broad ilia",
+        "neurocognitive defect",
+        "short greater notches"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.29476502082093
+    },
+    {
+      "pmc_id": "5537416",
+      "patient_id": "O2",
+      "candidate_pairs": 41,
+      "positive_pairs": 13,
+      "negative_surrogate_pairs": 28,
+      "gold_relations": 15,
+      "covered_gold_relations": 13,
+      "missing_gold_concepts": [
+        "HP:0002953",
+        "HP:0009098"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.67608566329565
+    },
+    {
+      "pmc_id": "5538066",
+      "patient_id": "O1",
+      "candidate_pairs": 60,
+      "positive_pairs": 26,
+      "negative_surrogate_pairs": 34,
+      "gold_relations": 44,
+      "covered_gold_relations": 26,
+      "missing_gold_concepts": [
+        "HP:0000119",
+        "HP:0000163",
+        "HP:0000298",
+        "HP:0000331",
+        "HP:0000527",
+        "HP:0001270",
+        "HP:0001290",
+        "HP:0001337",
+        "HP:0003196",
+        "HP:0003241",
+        "HP:0004324",
+        "HP:0004691",
+        "HP:0005867",
+        "HP:0010862",
+        "HP:0030955",
+        "HP:0040012",
+        "HP:0040288",
+        "HP:0100022"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 19.23638211382115
+    },
+    {
+      "pmc_id": "5538066",
+      "patient_id": "O2",
+      "candidate_pairs": 60,
+      "positive_pairs": 17,
+      "negative_surrogate_pairs": 43,
+      "gold_relations": 23,
+      "covered_gold_relations": 17,
+      "missing_gold_concepts": [
+        "HP:0001337",
+        "HP:0002018",
+        "HP:0004691",
+        "HP:0005867",
+        "HP:0100022",
+        "joint laxity"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.223272357723587
+    },
+    {
+      "pmc_id": "5562981",
+      "patient_id": "O1",
+      "candidate_pairs": 37,
+      "positive_pairs": 10,
+      "negative_surrogate_pairs": 27,
+      "gold_relations": 14,
+      "covered_gold_relations": 10,
+      "missing_gold_concepts": [
+        "HP:0002140",
+        "HP:0002311",
+        "HP:0002454",
+        "HP:6000099"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.047956493078434
+    },
+    {
+      "pmc_id": "5562981",
+      "patient_id": "O2",
+      "candidate_pairs": 37,
+      "positive_pairs": 7,
+      "negative_surrogate_pairs": 30,
+      "gold_relations": 15,
+      "covered_gold_relations": 7,
+      "missing_gold_concepts": [
+        "HP:0001903",
+        "HP:0003236",
+        "HP:0025066",
+        "HP:0025435",
+        "HP:0025547",
+        "HP:0031851",
+        "HP:0033096",
+        "MESH:D009069;MESH:D014786;MESH:D003072"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.95978905735002
+    },
+    {
+      "pmc_id": "5562981",
+      "patient_id": "P1",
+      "candidate_pairs": 37,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 36,
+      "gold_relations": 2,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [
+        "HP:0001344"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.7834541858932
+    },
+    {
+      "pmc_id": "5574094",
+      "patient_id": "P1",
+      "candidate_pairs": 30,
+      "positive_pairs": 19,
+      "negative_surrogate_pairs": 11,
+      "gold_relations": 32,
+      "covered_gold_relations": 19,
+      "missing_gold_concepts": [
+        "HP:0000185",
+        "HP:0000519",
+        "HP:0000528",
+        "HP:0003367",
+        "HP:0003413",
+        "HP:0003502",
+        "HP:0006471",
+        "HP:0011849",
+        "HP:0100862",
+        "distal femoral and proximal tibial epiphyseal ossification centers",
+        "hypoplasia of dens",
+        "separation of the anterior atlas arch",
+        "widening of the distal humeral metaphysis"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 21.920528455284558
+    },
+    {
+      "pmc_id": "5575846",
+      "patient_id": "O1",
+      "candidate_pairs": 29,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 24,
+      "gold_relations": 7,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0002059",
+        "HP:0007333"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.734650967199324
+    },
+    {
+      "pmc_id": "5575846",
+      "patient_id": "O2",
+      "candidate_pairs": 29,
+      "positive_pairs": 4,
+      "negative_surrogate_pairs": 25,
+      "gold_relations": 10,
+      "covered_gold_relations": 4,
+      "missing_gold_concepts": [
+        "HP:0002015",
+        "HP:0006956",
+        "HP:0006989",
+        "HP:0007333",
+        "HP:0011291",
+        "HP:0012009"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.271867115222872
+    },
+    {
+      "pmc_id": "5575846",
+      "patient_id": "O3",
+      "candidate_pairs": 29,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 24,
+      "gold_relations": 10,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0003324",
+        "HP:0007333",
+        "HP:0007370",
+        "HP:0011196",
+        "occasional atypical spikes"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.734650967199324
+    },
+    {
+      "pmc_id": "5575846",
+      "patient_id": "O4",
+      "candidate_pairs": 29,
+      "positive_pairs": 3,
+      "negative_surrogate_pairs": 26,
+      "gold_relations": 12,
+      "covered_gold_relations": 3,
+      "missing_gold_concepts": [
+        "Abnormal muscular tension",
+        "HP:0007333",
+        "HP:0007334",
+        "HP:0011287",
+        "HP:0011289",
+        "HP:0012011",
+        "HP:0012013",
+        "HP:0032588",
+        "severe distress"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.809083263246421
+    },
+    {
+      "pmc_id": "5693559",
+      "patient_id": "P1",
+      "candidate_pairs": 34,
+      "positive_pairs": 24,
+      "negative_surrogate_pairs": 10,
+      "gold_relations": 30,
+      "covered_gold_relations": 24,
+      "missing_gold_concepts": [
+        "HP:0000280",
+        "HP:0000675",
+        "HP:0001290",
+        "HP:0002300",
+        "HP:0011081",
+        "HP:0100025"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 22.894189383070294
+    },
+    {
+      "pmc_id": "5693559",
+      "patient_id": "P2",
+      "candidate_pairs": 34,
+      "positive_pairs": 18,
+      "negative_surrogate_pairs": 16,
+      "gold_relations": 23,
+      "covered_gold_relations": 18,
+      "missing_gold_concepts": [
+        "HP:0000218",
+        "HP:0000574",
+        "HP:0004283",
+        "HP:0011081",
+        "HP:0100025"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.52582496413199
+    },
+    {
+      "pmc_id": "5773845",
+      "patient_id": "P1",
+      "candidate_pairs": 22,
+      "positive_pairs": 11,
+      "negative_surrogate_pairs": 11,
+      "gold_relations": 14,
+      "covered_gold_relations": 11,
+      "missing_gold_concepts": [
+        "HP:0001317",
+        "HP:0002064",
+        "HP:0008994"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.131097560975604
+    },
+    {
+      "pmc_id": "5773845",
+      "patient_id": "P2",
+      "candidate_pairs": 22,
+      "positive_pairs": 15,
+      "negative_surrogate_pairs": 7,
+      "gold_relations": 20,
+      "covered_gold_relations": 15,
+      "missing_gold_concepts": [
+        "HP:0001317",
+        "HP:0003546",
+        "HP:0006986",
+        "HP:0008969",
+        "HP:0012407"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 22.57123059866962
+    },
+    {
+      "pmc_id": "5773845",
+      "patient_id": "P3",
+      "candidate_pairs": 22,
+      "positive_pairs": 8,
+      "negative_surrogate_pairs": 14,
+      "gold_relations": 9,
+      "covered_gold_relations": 8,
+      "missing_gold_concepts": [
+        "HP:0001317"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.300997782705096
+    },
+    {
+      "pmc_id": "5773845",
+      "patient_id": "P4",
+      "candidate_pairs": 22,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 22,
+      "gold_relations": 1,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [
+        "HP:0001317"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.420731707317069
+    },
+    {
+      "pmc_id": "5773845",
+      "patient_id": "P5",
+      "candidate_pairs": 22,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 21,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.030764966740572
+    },
+    {
+      "pmc_id": "5789735",
+      "patient_id": "P1",
+      "candidate_pairs": 58,
+      "positive_pairs": 11,
+      "negative_surrogate_pairs": 47,
+      "gold_relations": 17,
+      "covered_gold_relations": 11,
+      "missing_gold_concepts": [
+        "HP:0000689",
+        "HP:0000895",
+        "HP:0002987",
+        "HP:0005033",
+        "HP:0010600",
+        "HP:0410169"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.966042893187538
+    },
+    {
+      "pmc_id": "5789735",
+      "patient_id": "P2",
+      "candidate_pairs": 58,
+      "positive_pairs": 12,
+      "negative_surrogate_pairs": 46,
+      "gold_relations": 19,
+      "covered_gold_relations": 12,
+      "missing_gold_concepts": [
+        "HP:0000689",
+        "HP:0000895",
+        "HP:0001032",
+        "HP:0002987",
+        "HP:0005033",
+        "HP:0010600",
+        "HP:0410169"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.197434819175765
+    },
+    {
+      "pmc_id": "5789735",
+      "patient_id": "P3",
+      "candidate_pairs": 58,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 56,
+      "gold_relations": 2,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.883515559293514
+    },
+    {
+      "pmc_id": "5789735",
+      "patient_id": "P4",
+      "candidate_pairs": 58,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 58,
+      "gold_relations": 1,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [
+        "HP:0005033"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.420731707317064
+    },
+    {
+      "pmc_id": "5789735",
+      "patient_id": "P5",
+      "candidate_pairs": 58,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 58,
+      "gold_relations": 1,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [
+        "HP:0005033"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.420731707317064
+    },
+    {
+      "pmc_id": "5793168",
+      "patient_id": "P1",
+      "candidate_pairs": 6,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 6,
+      "gold_relations": 0,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.420731707317072
+    },
+    {
+      "pmc_id": "5866036",
+      "patient_id": "P1",
+      "candidate_pairs": 13,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 8,
+      "gold_relations": 9,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0004804",
+        "HP:0040320",
+        "redness in the pharynx",
+        "xanthochromia"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.582551594746715
+    },
+    {
+      "pmc_id": "5866036",
+      "patient_id": "P10",
+      "candidate_pairs": 13,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 12,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.453095684803001
+    },
+    {
+      "pmc_id": "5866036",
+      "patient_id": "P2",
+      "candidate_pairs": 13,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 13,
+      "gold_relations": 0,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.420731707317072
+    },
+    {
+      "pmc_id": "5959423",
+      "patient_id": "OI-1",
+      "candidate_pairs": 17,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 15,
+      "gold_relations": 4,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [
+        "HP:0001029",
+        "HP:0002086"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.999641319942608
+    },
+    {
+      "pmc_id": "5959423",
+      "patient_id": "OII-1",
+      "candidate_pairs": 17,
+      "positive_pairs": 8,
+      "negative_surrogate_pairs": 9,
+      "gold_relations": 16,
+      "covered_gold_relations": 8,
+      "missing_gold_concepts": [
+        "HP:0001029",
+        "HP:0002094",
+        "HP:0002875",
+        "HP:0025390",
+        "HP:0031246",
+        "epithelial foot extension",
+        "mucocutaneous triad",
+        "squamous epithelial hyperplasia"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 19.73637015781922
+    },
+    {
+      "pmc_id": "5959423",
+      "patient_id": "OII-2",
+      "candidate_pairs": 17,
+      "positive_pairs": 0,
+      "negative_surrogate_pairs": 17,
+      "gold_relations": 0,
+      "covered_gold_relations": 0,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.420731707317069
+    },
+    {
+      "pmc_id": "5959423",
+      "patient_id": "OII-4",
+      "candidate_pairs": 17,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 16,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.210186513629838
+    },
+    {
+      "pmc_id": "5959423",
+      "patient_id": "OIII-1",
+      "candidate_pairs": 17,
+      "positive_pairs": 3,
+      "negative_surrogate_pairs": 14,
+      "gold_relations": 3,
+      "covered_gold_relations": 3,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.789096126255377
+    },
+    {
+      "pmc_id": "5959423",
+      "patient_id": "OIII-2",
+      "candidate_pairs": 17,
+      "positive_pairs": 3,
+      "negative_surrogate_pairs": 14,
+      "gold_relations": 3,
+      "covered_gold_relations": 3,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.789096126255377
+    },
+    {
+      "pmc_id": "5970456",
+      "patient_id": "P1",
+      "candidate_pairs": 9,
+      "positive_pairs": 2,
+      "negative_surrogate_pairs": 7,
+      "gold_relations": 5,
+      "covered_gold_relations": 2,
+      "missing_gold_concepts": [
+        "HP:0004349",
+        "HP:0005855",
+        "HP:0020110"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.40311653116531
+    },
+    {
+      "pmc_id": "6036836",
+      "patient_id": "P1",
+      "candidate_pairs": 23,
+      "positive_pairs": 13,
+      "negative_surrogate_pairs": 10,
+      "gold_relations": 23,
+      "covered_gold_relations": 13,
+      "missing_gold_concepts": [
+        "HP:0000236",
+        "HP:0002611",
+        "HP:0003316",
+        "HP:0003573",
+        "HP:0006703",
+        "HP:0012440",
+        "HP:0012703",
+        "HP:0031865",
+        "HP:0033835",
+        "pale stools"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 21.00636267232237
+    },
+    {
+      "pmc_id": "6048891",
+      "patient_id": "P1",
+      "candidate_pairs": 25,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 20,
+      "gold_relations": 13,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0001488",
+        "HP:0001788",
+        "HP:0002757",
+        "HP:0003330",
+        "HP:0005855",
+        "HP:0011314",
+        "HP:0011889",
+        "HP:0031846"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.10487804878049
+    },
+    {
+      "pmc_id": "6048891",
+      "patient_id": "P2",
+      "candidate_pairs": 25,
+      "positive_pairs": 13,
+      "negative_surrogate_pairs": 12,
+      "gold_relations": 16,
+      "covered_gold_relations": 13,
+      "missing_gold_concepts": [
+        "HP:0002079",
+        "HP:0002335",
+        "HP:0100307"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.399512195121954
+    },
+    {
+      "pmc_id": "6049015",
+      "patient_id": "P1",
+      "candidate_pairs": 29,
+      "positive_pairs": 9,
+      "negative_surrogate_pairs": 20,
+      "gold_relations": 17,
+      "covered_gold_relations": 9,
+      "missing_gold_concepts": [
+        "HP:0003324",
+        "HP:0003867",
+        "HP:0030834",
+        "HP:0031363",
+        "HP:0032458",
+        "HP:0041217",
+        "HP:6000812",
+        "narrowing of space between radius and ulna"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.58578637510513
+    },
+    {
+      "pmc_id": "6057141",
+      "patient_id": "P1",
+      "candidate_pairs": 23,
+      "positive_pairs": 13,
+      "negative_surrogate_pairs": 10,
+      "gold_relations": 27,
+      "covered_gold_relations": 13,
+      "missing_gold_concepts": [
+        "HP:0001239",
+        "HP:0003111",
+        "HP:0003273",
+        "HP:0004918",
+        "HP:0030834",
+        "HP:0030836",
+        "HP:0030838",
+        "HP:0030839",
+        "HP:0030840",
+        "HP:0034671",
+        "HP:0034677",
+        "HP:0100324",
+        "HP:6000529",
+        "indurated plaques"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 21.00636267232237
+    },
+    {
+      "pmc_id": "6059678",
+      "patient_id": "P1",
+      "candidate_pairs": 15,
+      "positive_pairs": 4,
+      "negative_surrogate_pairs": 11,
+      "gold_relations": 12,
+      "covered_gold_relations": 4,
+      "missing_gold_concepts": [
+        "HP:0001315",
+        "HP:0001761",
+        "HP:0002921",
+        "HP:0008002",
+        "a reduction in the branches of the right middle cerebral artery",
+        "reduction in the size the pituitary",
+        "the expansion of the right lateral side",
+        "with widened cerebellar sulci"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 16.99959349593496
+    },
+    {
+      "pmc_id": "6063015",
+      "patient_id": "OII-1",
+      "candidate_pairs": 33,
+      "positive_pairs": 13,
+      "negative_surrogate_pairs": 20,
+      "gold_relations": 17,
+      "covered_gold_relations": 13,
+      "missing_gold_concepts": [
+        "HP:0003259",
+        "HP:0011037",
+        "HP:0033288",
+        "HP:0033290"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.707686622320757
+    },
+    {
+      "pmc_id": "6063015",
+      "patient_id": "OII-2",
+      "candidate_pairs": 33,
+      "positive_pairs": 18,
+      "negative_surrogate_pairs": 15,
+      "gold_relations": 23,
+      "covered_gold_relations": 18,
+      "missing_gold_concepts": [
+        "HP:0000218",
+        "HP:0001188",
+        "HP:0006850",
+        "HP:0007874",
+        "HP:0100307"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.7411308203991
+    },
+    {
+      "pmc_id": "6063015",
+      "patient_id": "OII-3",
+      "candidate_pairs": 33,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 32,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 13.827420546932734
+    },
+    {
+      "pmc_id": "6063015",
+      "patient_id": "OII-4",
+      "candidate_pairs": 33,
+      "positive_pairs": 9,
+      "negative_surrogate_pairs": 24,
+      "gold_relations": 9,
+      "covered_gold_relations": 9,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.080931263858083
+    },
+    {
+      "pmc_id": "6096008",
+      "patient_id": "P1",
+      "candidate_pairs": 18,
+      "positive_pairs": 10,
+      "negative_surrogate_pairs": 8,
+      "gold_relations": 12,
+      "covered_gold_relations": 10,
+      "missing_gold_concepts": [
+        "HP:0001392",
+        "HP:0001738"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.876693766937663
+    },
+    {
+      "pmc_id": "6096008",
+      "patient_id": "P2",
+      "candidate_pairs": 18,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 17,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.166327913279128
+    },
+    {
+      "pmc_id": "6096008",
+      "patient_id": "P3",
+      "candidate_pairs": 18,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 17,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.166327913279128
+    },
+    {
+      "pmc_id": "6096008",
+      "patient_id": "P4",
+      "candidate_pairs": 18,
+      "positive_pairs": 1,
+      "negative_surrogate_pairs": 17,
+      "gold_relations": 1,
+      "covered_gold_relations": 1,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.166327913279126
+    },
+    {
+      "pmc_id": "6134758",
+      "patient_id": "P1",
+      "candidate_pairs": 30,
+      "positive_pairs": 21,
+      "negative_surrogate_pairs": 9,
+      "gold_relations": 42,
+      "covered_gold_relations": 21,
+      "missing_gold_concepts": [
+        "HP:0000426",
+        "HP:0000766",
+        "HP:0000885",
+        "HP:0002395",
+        "HP:0002491",
+        "HP:0002678",
+        "HP:0002816",
+        "HP:0003037",
+        "HP:0003308",
+        "HP:0003312",
+        "HP:0004322",
+        "HP:0004440",
+        "HP:0004442",
+        "HP:0006380",
+        "HP:0011319",
+        "HP:0025262",
+        "HP:0025682",
+        "HP:0033127",
+        "HP:0034671",
+        "HP:0100257",
+        "catch-up growth"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 22.815243902439033
+    },
+    {
+      "pmc_id": "6151044",
+      "patient_id": "P1",
+      "candidate_pairs": 6,
+      "positive_pairs": 4,
+      "negative_surrogate_pairs": 2,
+      "gold_relations": 7,
+      "covered_gold_relations": 4,
+      "missing_gold_concepts": [
+        "HP:0003698",
+        "HP:0003740",
+        "HP:0100284"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 22.36788617886179
+    },
+    {
+      "pmc_id": "6219255",
+      "patient_id": "P1",
+      "candidate_pairs": 19,
+      "positive_pairs": 12,
+      "negative_surrogate_pairs": 7,
+      "gold_relations": 16,
+      "covered_gold_relations": 12,
+      "missing_gold_concepts": [
+        "HP:0006863",
+        "HP:0011024",
+        "HP:0025051",
+        "HP:6000127"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 21.896983311938385
+    },
+    {
+      "pmc_id": "6220403",
+      "patient_id": "OIV-1",
+      "candidate_pairs": 23,
+      "positive_pairs": 12,
+      "negative_surrogate_pairs": 11,
+      "gold_relations": 14,
+      "covered_gold_relations": 12,
+      "missing_gold_concepts": [
+        "HP:0001250",
+        "HP:0034295"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 20.4228525980912
+    },
+    {
+      "pmc_id": "6220403",
+      "patient_id": "OIV-2",
+      "candidate_pairs": 23,
+      "positive_pairs": 7,
+      "negative_surrogate_pairs": 16,
+      "gold_relations": 7,
+      "covered_gold_relations": 7,
+      "missing_gold_concepts": [],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.50530222693531
+    },
+    {
+      "pmc_id": "6332535",
+      "patient_id": "OII-5",
+      "candidate_pairs": 18,
+      "positive_pairs": 3,
+      "negative_surrogate_pairs": 15,
+      "gold_relations": 7,
+      "covered_gold_relations": 3,
+      "missing_gold_concepts": [
+        "HP:0000276",
+        "HP:0006346",
+        "HP:0011092",
+        "HP:0040080"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 15.657520325203249
+    },
+    {
+      "pmc_id": "6332535",
+      "patient_id": "OIII-1",
+      "candidate_pairs": 18,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 13,
+      "gold_relations": 9,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0006346",
+        "HP:0010667",
+        "HP:0011092",
+        "HP:0040080"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 17.148712737127365
+    },
+    {
+      "pmc_id": "6338757",
+      "patient_id": "P1",
+      "candidate_pairs": 26,
+      "positive_pairs": 20,
+      "negative_surrogate_pairs": 6,
+      "gold_relations": 26,
+      "covered_gold_relations": 20,
+      "missing_gold_concepts": [
+        "HP:0001519",
+        "HP:0002616",
+        "HP:0002617",
+        "HP:0011645",
+        "HP:0025167",
+        "HP:0410275"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 23.74437148217636
+    },
+    {
+      "pmc_id": "6390251",
+      "patient_id": "P1",
+      "candidate_pairs": 55,
+      "positive_pairs": 22,
+      "negative_surrogate_pairs": 33,
+      "gold_relations": 29,
+      "covered_gold_relations": 22,
+      "missing_gold_concepts": [
+        "HP:0000444",
+        "HP:0000519",
+        "HP:0000953",
+        "HP:0002218",
+        "HP:0031087",
+        "HP:0031359",
+        "HP:0031375"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 18.78902439024389
+    },
+    {
+      "pmc_id": "6390251",
+      "patient_id": "P2",
+      "candidate_pairs": 55,
+      "positive_pairs": 5,
+      "negative_surrogate_pairs": 50,
+      "gold_relations": 8,
+      "covered_gold_relations": 5,
+      "missing_gold_concepts": [
+        "HP:0000519",
+        "HP:0000618",
+        "HP:0000951"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 14.640798226164085
+    },
+    {
+      "pmc_id": "6491447",
+      "patient_id": "P1",
+      "candidate_pairs": 12,
+      "positive_pairs": 11,
+      "negative_surrogate_pairs": 1,
+      "gold_relations": 16,
+      "covered_gold_relations": 11,
+      "missing_gold_concepts": [
+        "HP:0000007",
+        "HP:0000421",
+        "HP:0004325",
+        "HP:0025289",
+        "HP:0030140"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 25.723069105691064
+    },
+    {
+      "pmc_id": "9327653",
+      "patient_id": "P1",
+      "candidate_pairs": 9,
+      "positive_pairs": 6,
+      "negative_surrogate_pairs": 3,
+      "gold_relations": 9,
+      "covered_gold_relations": 6,
+      "missing_gold_concepts": [
+        "HP:0000105",
+        "HP:0000234",
+        "HP:0011121"
+      ],
+      "balanced_weight_before_negative_downweighting": 26.841463414634145,
+      "effective_weight_sum": 22.367886178861784
+    }
+  ],
+  "documents_detail": [
+    {
+      "pmc_id": "10313222",
+      "candidate_entities": 73,
+      "excluded_no_entities": 7,
+      "eligible_concepts": 14
+    },
+    {
+      "pmc_id": "10789033",
+      "candidate_entities": 91,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 29
+    },
+    {
+      "pmc_id": "11196099",
+      "candidate_entities": 76,
+      "excluded_no_entities": 4,
+      "eligible_concepts": 33
+    },
+    {
+      "pmc_id": "11221135",
+      "candidate_entities": 22,
+      "excluded_no_entities": 1,
+      "eligible_concepts": 7
+    },
+    {
+      "pmc_id": "11235872",
+      "candidate_entities": 64,
+      "excluded_no_entities": 3,
+      "eligible_concepts": 24
+    },
+    {
+      "pmc_id": "11765409",
+      "candidate_entities": 48,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 8
+    },
+    {
+      "pmc_id": "11826603",
+      "candidate_entities": 15,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 6
+    },
+    {
+      "pmc_id": "11986149",
+      "candidate_entities": 93,
+      "excluded_no_entities": 3,
+      "eligible_concepts": 57
+    },
+    {
+      "pmc_id": "12017973",
+      "candidate_entities": 86,
+      "excluded_no_entities": 6,
+      "eligible_concepts": 21
+    },
+    {
+      "pmc_id": "12078887",
+      "candidate_entities": 73,
+      "excluded_no_entities": 13,
+      "eligible_concepts": 24
+    },
+    {
+      "pmc_id": "12110755",
+      "candidate_entities": 60,
+      "excluded_no_entities": 1,
+      "eligible_concepts": 33
+    },
+    {
+      "pmc_id": "12110769",
+      "candidate_entities": 91,
+      "excluded_no_entities": 6,
+      "eligible_concepts": 30
+    },
+    {
+      "pmc_id": "12118522",
+      "candidate_entities": 60,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 39
+    },
+    {
+      "pmc_id": "12147048",
+      "candidate_entities": 89,
+      "excluded_no_entities": 2,
+      "eligible_concepts": 31
+    },
+    {
+      "pmc_id": "12250201",
+      "candidate_entities": 57,
+      "excluded_no_entities": 2,
+      "eligible_concepts": 23
+    },
+    {
+      "pmc_id": "12334843",
+      "candidate_entities": 64,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 23
+    },
+    {
+      "pmc_id": "12386172",
+      "candidate_entities": 105,
+      "excluded_no_entities": 4,
+      "eligible_concepts": 35
+    },
+    {
+      "pmc_id": "12405443",
+      "candidate_entities": 67,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 30
+    },
+    {
+      "pmc_id": "12444410",
+      "candidate_entities": 90,
+      "excluded_no_entities": 5,
+      "eligible_concepts": 22
+    },
+    {
+      "pmc_id": "12455887",
+      "candidate_entities": 77,
+      "excluded_no_entities": 3,
+      "eligible_concepts": 52
+    },
+    {
+      "pmc_id": "12628480",
+      "candidate_entities": 90,
+      "excluded_no_entities": 1,
+      "eligible_concepts": 43
+    },
+    {
+      "pmc_id": "12646972",
+      "candidate_entities": 6,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 6
+    },
+    {
+      "pmc_id": "12733031",
+      "candidate_entities": 25,
+      "excluded_no_entities": 2,
+      "eligible_concepts": 11
+    },
+    {
+      "pmc_id": "12779223",
+      "candidate_entities": 31,
+      "excluded_no_entities": 1,
+      "eligible_concepts": 19
+    },
+    {
+      "pmc_id": "12798528",
+      "candidate_entities": 91,
+      "excluded_no_entities": 15,
+      "eligible_concepts": 35
+    },
+    {
+      "pmc_id": "12811285",
+      "candidate_entities": 61,
+      "excluded_no_entities": 1,
+      "eligible_concepts": 20
+    },
+    {
+      "pmc_id": "12891056",
+      "candidate_entities": 102,
+      "excluded_no_entities": 6,
+      "eligible_concepts": 39
+    },
+    {
+      "pmc_id": "2964533",
+      "candidate_entities": 42,
+      "excluded_no_entities": 6,
+      "eligible_concepts": 29
+    },
+    {
+      "pmc_id": "4644339",
+      "candidate_entities": 36,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 27
+    },
+    {
+      "pmc_id": "4678370",
+      "candidate_entities": 57,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 14
+    },
+    {
+      "pmc_id": "5023785",
+      "candidate_entities": 26,
+      "excluded_no_entities": 2,
+      "eligible_concepts": 9
+    },
+    {
+      "pmc_id": "5368377",
+      "candidate_entities": 55,
+      "excluded_no_entities": 2,
+      "eligible_concepts": 13
+    },
+    {
+      "pmc_id": "5422868",
+      "candidate_entities": 104,
+      "excluded_no_entities": 2,
+      "eligible_concepts": 41
+    },
+    {
+      "pmc_id": "5425407",
+      "candidate_entities": 40,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 22
+    },
+    {
+      "pmc_id": "5452357",
+      "candidate_entities": 61,
+      "excluded_no_entities": 4,
+      "eligible_concepts": 15
+    },
+    {
+      "pmc_id": "5473715",
+      "candidate_entities": 88,
+      "excluded_no_entities": 2,
+      "eligible_concepts": 38
+    },
+    {
+      "pmc_id": "5537416",
+      "candidate_entities": 87,
+      "excluded_no_entities": 1,
+      "eligible_concepts": 41
+    },
+    {
+      "pmc_id": "5538066",
+      "candidate_entities": 136,
+      "excluded_no_entities": 8,
+      "eligible_concepts": 60
+    },
+    {
+      "pmc_id": "5562981",
+      "candidate_entities": 93,
+      "excluded_no_entities": 3,
+      "eligible_concepts": 37
+    },
+    {
+      "pmc_id": "5574094",
+      "candidate_entities": 64,
+      "excluded_no_entities": 8,
+      "eligible_concepts": 30
+    },
+    {
+      "pmc_id": "5575846",
+      "candidate_entities": 86,
+      "excluded_no_entities": 4,
+      "eligible_concepts": 29
+    },
+    {
+      "pmc_id": "5693559",
+      "candidate_entities": 72,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 34
+    },
+    {
+      "pmc_id": "5773845",
+      "candidate_entities": 42,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 22
+    },
+    {
+      "pmc_id": "5789735",
+      "candidate_entities": 115,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 58
+    },
+    {
+      "pmc_id": "5793168",
+      "candidate_entities": 9,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 6
+    },
+    {
+      "pmc_id": "5866036",
+      "candidate_entities": 43,
+      "excluded_no_entities": 10,
+      "eligible_concepts": 13
+    },
+    {
+      "pmc_id": "5959423",
+      "candidate_entities": 69,
+      "excluded_no_entities": 6,
+      "eligible_concepts": 17
+    },
+    {
+      "pmc_id": "5970456",
+      "candidate_entities": 13,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 9
+    },
+    {
+      "pmc_id": "6036836",
+      "candidate_entities": 38,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 23
+    },
+    {
+      "pmc_id": "6048891",
+      "candidate_entities": 58,
+      "excluded_no_entities": 2,
+      "eligible_concepts": 25
+    },
+    {
+      "pmc_id": "6049015",
+      "candidate_entities": 49,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 29
+    },
+    {
+      "pmc_id": "6057141",
+      "candidate_entities": 43,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 23
+    },
+    {
+      "pmc_id": "6059678",
+      "candidate_entities": 40,
+      "excluded_no_entities": 3,
+      "eligible_concepts": 15
+    },
+    {
+      "pmc_id": "6063015",
+      "candidate_entities": 86,
+      "excluded_no_entities": 1,
+      "eligible_concepts": 33
+    },
+    {
+      "pmc_id": "6096008",
+      "candidate_entities": 54,
+      "excluded_no_entities": 4,
+      "eligible_concepts": 18
+    },
+    {
+      "pmc_id": "6134758",
+      "candidate_entities": 63,
+      "excluded_no_entities": 7,
+      "eligible_concepts": 30
+    },
+    {
+      "pmc_id": "6151044",
+      "candidate_entities": 22,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 6
+    },
+    {
+      "pmc_id": "6219255",
+      "candidate_entities": 49,
+      "excluded_no_entities": 2,
+      "eligible_concepts": 19
+    },
+    {
+      "pmc_id": "6220403",
+      "candidate_entities": 55,
+      "excluded_no_entities": 1,
+      "eligible_concepts": 23
+    },
+    {
+      "pmc_id": "6332535",
+      "candidate_entities": 65,
+      "excluded_no_entities": 4,
+      "eligible_concepts": 18
+    },
+    {
+      "pmc_id": "6338757",
+      "candidate_entities": 42,
+      "excluded_no_entities": 1,
+      "eligible_concepts": 26
+    },
+    {
+      "pmc_id": "6390251",
+      "candidate_entities": 142,
+      "excluded_no_entities": 8,
+      "eligible_concepts": 55
+    },
+    {
+      "pmc_id": "6491447",
+      "candidate_entities": 24,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 12
+    },
+    {
+      "pmc_id": "9327653",
+      "candidate_entities": 27,
+      "excluded_no_entities": 0,
+      "eligible_concepts": 9
+    }
+  ]
+}

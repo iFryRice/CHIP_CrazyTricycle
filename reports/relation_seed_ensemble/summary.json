@@ -1,0 +1,220 @@
+{
+  "plan_sha256": "53d4844c2bf5f9cb582b70ea672eee91a6f92a55b80eacddad6707813ea44561",
+  "selected": {
+    "name": "blend_quarter",
+    "neural_weight": 0.25
+  },
+  "seeds": [
+    20260929,
+    20260930,
+    20261001
+  ],
+  "promoted": false,
+  "baseline": {
+    "mention": {
+      "precision": 0.727497789566755,
+      "recall": 0.6932928884395012,
+      "f1": 0.7099836051428078,
+      "tp": 4114,
+      "fp": 1541,
+      "fn": 1820
+    },
+    "document": {
+      "precision": 0.8364136846244593,
+      "recall": 0.7210169491525423,
+      "f1": 0.7744401966138722,
+      "tp": 2127,
+      "fp": 416,
+      "fn": 823
+    },
+    "association_micro": {
+      "precision": 0.6984950700570836,
+      "recall": 0.6199907876554583,
+      "f1": 0.6569058077110785,
+      "tp": 1346,
+      "fp": 581,
+      "fn": 825
+    },
+    "association_macro": {
+      "precision": 0.6347296808354593,
+      "recall": 0.5958367750799103,
+      "f1": 0.5863331905840667,
+      "patients": 209
+    },
+    "score": 0.6819157000129563,
+    "counts": {
+      "documents": 80,
+      "patients": 209
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "metrics": {
+    "mention": {
+      "precision": 0.727497789566755,
+      "recall": 0.6932928884395012,
+      "f1": 0.7099836051428078,
+      "tp": 4114,
+      "fp": 1541,
+      "fn": 1820
+    },
+    "document": {
+      "precision": 0.8364136846244593,
+      "recall": 0.7210169491525423,
+      "f1": 0.7744401966138722,
+      "tp": 2127,
+      "fp": 416,
+      "fn": 823
+    },
+    "association_micro": {
+      "precision": 0.7094558901215002,
+      "recall": 0.6186089359742054,
+      "f1": 0.6609251968503937,
+      "tp": 1343,
+      "fp": 550,
+      "fn": 828
+    },
+    "association_macro": {
+      "precision": 0.6533119052278753,
+      "recall": 0.609009486181069,
+      "f1": 0.6037847948538582,
+      "patients": 209
+    },
+    "score": 0.687283448365233,
+    "counts": {
+      "documents": 80,
+      "patients": 209
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "fold_deltas": [
+    0.003907353275019787,
+    0.021273668682917246,
+    -0.0047982112815363465,
+    0.0020666597508510742,
+    0.00569048111085535
+  ],
+  "confirmation_mean_gain": 0.0009863098600566926,
+  "checks": {
+    "remaining_mean_gain": false,
+    "full_score_gain": true,
+    "nonworse_folds": true,
+    "component_guard": true,
+    "entities_unchanged": true,
+    "positive_bootstrap_lower_bound": true
+  },
+  "bootstrap": {
+    "iterations": 2000,
+    "unit": "document",
+    "seed": 20260929,
+    "interval_95": [
+      0.00024483018011713656,
+      0.010880001390343265
+    ],
+    "fraction_positive": 0.979,
+    "scope": "Descriptive paired bootstrap after model selection, not a selection-adjusted significance test."
+  },
+  "errors": {
+    "gold": 2171,
+    "reachable": 1637,
+    "reachable_fn": 294,
+    "unreachable_fn": 534,
+    "fp": 550,
+    "tp": 1343
+  },
+  "artifacts": {
+    "seed20260929_fold0": {
+      "checkpoint_sha256": "9ee8d8246c48181f60b8c9701c2ee67e07e3f743cb45fe63fe51c1f6c6ba4047",
+      "scores_sha256": "0c71c95a7f37fa55d8738ba5353790e9ea4053909531dd138bd0b9d8eeb5fa38"
+    },
+    "seed20260930_fold0": {
+      "checkpoint_sha256": "708b9d2c9afd760b5d3cd8078b3ed7d852325a4d9859259dbfb014e8b83495c4",
+      "scores_sha256": "39016b66b6c7b62305da06c5ff2c2977c88abe0dfab3da78d3cfab60091a1b13"
+    },
+    "seed20261001_fold0": {
+      "checkpoint_sha256": "aa0210f4a71378021adef472f4704ecf39277069c476769786f92c2c29c79e1e",
+      "scores_sha256": "f25aa6cca892f81b4662963f4ff3623e9f65b5708dee7ac7e881ff17e523558c"
+    },
+    "seed20260929_fold1": {
+      "checkpoint_sha256": "fe53191872b853a31b6c552771901b3ddbb4b89226249c5bcd95fc51095c9bab",
+      "scores_sha256": "fc080486a9177eac6143185dddf2a9754709ee9725aeef44057daf07cd746d8e"
+    },
+    "seed20260930_fold1": {
+      "checkpoint_sha256": "6b830c1baa1edc75460168d6e347f7a84eca74b35f338f960cd4ec3535fc1d59",
+      "scores_sha256": "85963657d6b7a289dc1d31803d9324c8e2c3d4366eefcf9ce04db839bea0ee48"
+    },
+    "seed20261001_fold1": {
+      "checkpoint_sha256": "135ed33ec6a315c7afd986ba07c488f31d633d042ec6a6cfce5d74c5de31bb88",
+      "scores_sha256": "275e77aa2d8fcfb1a8a84c544b6a90ec84dc3c6952711a6570c3f38c4a76ec3f"
+    },
+    "seed20260929_fold2": {
+      "checkpoint_sha256": "310785a2b4710c37f799b8f3e1626ab51b6a275bb4ef77de699172f6e1bce5ae",
+      "scores_sha256": "9afb4fad906f0ed75e1eb988a211137317160a73453bc843cdddef8dfcc680cd"
+    },
+    "seed20260930_fold2": {
+      "checkpoint_sha256": "d342e1988a67c75702c8a7e858d6bdb72a30edd9b5aed144c3bf64509e8d2abf",
+      "scores_sha256": "771156a8a80971b3361cf199e6900f63e9202987928c25f9a56a1feab3f39755"
+    },
+    "seed20261001_fold2": {
+      "checkpoint_sha256": "19ff1ea12e8d869b406554b2f116e4737ef05975ee9b8d43745596765fc37f7f",
+      "scores_sha256": "6fcdd89626a935591f266fab75b10805ce89f0372a7a04077decc09f09f443b0"
+    },
+    "seed20260929_fold3": {
+      "checkpoint_sha256": "728a80ad951c28c62e29ef4aa4921840e0ae78b7c5fa03e29bc35e8b919f633f",
+      "scores_sha256": "6aa6e11e0d963899d1af46d76829f46f37a5da35300726c253b82832109e1c17"
+    },
+    "seed20260930_fold3": {
+      "checkpoint_sha256": "28e8fdab4056370879e4533ff124f912be81c1424d92e4def8b3e37e629b2e4d",
+      "scores_sha256": "1dd41cba3d7a1e94e51c01a77bd9905fd881e8ba1851ae576cc2ffb16763b560"
+    },
+    "seed20261001_fold3": {
+      "checkpoint_sha256": "1e0e3394dfe2405505d504302b92002ee4b40848c1169c84a05334e346d2ee1a",
+      "scores_sha256": "87f2e5e7113f8ac2bed2fd80a9a3d6875c7894fed47f816835a9e31b65ece415"
+    },
+    "seed20260929_fold4": {
+      "checkpoint_sha256": "c0d5fa591ed5fe3b9841bd193e2aea6f71e74a33fbaf5e69cf51f60c4a6b4afc",
+      "scores_sha256": "0c0b72cbe703a8779cb4d537661f27b3b5a5689e48a1c84732e9f5db27ea930a"
+    },
+    "seed20260930_fold4": {
+      "checkpoint_sha256": "89922ced3a61ec80c323a46a3c92efbb6cef8a44f931397ef86a07beba529e67",
+      "scores_sha256": "155b80207383a58da193d73bf24d66292017f347ec7f940dbb29272e31220993"
+    },
+    "seed20261001_fold4": {
+      "checkpoint_sha256": "7f76537f9b0ea1c0078346b0ab1dc49accaef7271d8eda2c1025531b0ae8a5d3",
+      "scores_sha256": "7796ab525cf15dc5b3ce294a8dff7867bd3f61a097f8c2c93ccc3a900a37ec29"
+    }
+  },
+  "validation": {
+    "valid": true,
+    "path": "/home/dcf/chip2026/reports/relation_seed_ensemble/development_oof.jsonl",
+    "bytes": 690691,
+    "limit_bytes_exclusive": 100000000,
+    "sha256": "d9c6eb63d8d4c7b8063aaeaa1ac2d9511ee42bdda4cfdb6e88d36be9f280de6a",
+    "documents": 80,
+    "patients": 209,
+    "entities": 5911,
+    "association_pairs": 1893,
+    "negated_entities": 258,
+    "unmapped_entities": 36,
+    "compound_entities": 2,
+    "document_order_preserved": false,
+    "empty_entity_documents": [],
+    "warnings": [
+      "Document order differs from the source dataset"
+    ]
+  },
+  "scope": "Predeclared three-seed probability mean, no seed or threshold selection. Repeated fivefold development informed by prior errors; not independent confirmation or official B accuracy."
+}

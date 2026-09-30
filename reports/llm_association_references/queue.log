@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/dcf/chip2026/scripts/queue_llm_review.py", line 76, in <module>
+    run(parser.parse_args().plan.resolve())
+  File "/home/dcf/chip2026/scripts/queue_llm_review.py", line 55, in run
+    raise RuntimeError("Inference failed; logs and caches are preserved. No pending folds were launched.")
+RuntimeError: Inference failed; logs and caches are preserved. No pending folds were launched.

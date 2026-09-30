@@ -1,0 +1,192 @@
+{
+  "fold": 0,
+  "baseline_reproduced": true,
+  "baseline": {
+    "mention": {
+      "precision": 0.6980802792321117,
+      "recall": 0.6639004149377593,
+      "f1": 0.680561463207146,
+      "tp": 800,
+      "fp": 346,
+      "fn": 405
+    },
+    "document": {
+      "precision": 0.8252788104089219,
+      "recall": 0.6799387442572741,
+      "f1": 0.7455919395465995,
+      "tp": 444,
+      "fp": 94,
+      "fn": 209
+    },
+    "association_micro": {
+      "precision": 0.7068062827225131,
+      "recall": 0.5421686746987951,
+      "f1": 0.6136363636363636,
+      "tp": 270,
+      "fp": 112,
+      "fn": 228
+    },
+    "association_macro": {
+      "precision": 0.6196377484236625,
+      "recall": 0.521094043090116,
+      "f1": 0.5310258395863774,
+      "patients": 45
+    },
+    "score": 0.6427039014941216,
+    "counts": {
+      "documents": 16,
+      "patients": 45
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "candidate": {
+    "mention": {
+      "precision": 0.6980802792321117,
+      "recall": 0.6639004149377593,
+      "f1": 0.680561463207146,
+      "tp": 800,
+      "fp": 346,
+      "fn": 405
+    },
+    "document": {
+      "precision": 0.8252788104089219,
+      "recall": 0.6799387442572741,
+      "f1": 0.7455919395465995,
+      "tp": 444,
+      "fp": 94,
+      "fn": 209
+    },
+    "association_micro": {
+      "precision": 0.6759259259259259,
+      "recall": 0.5863453815261044,
+      "f1": 0.6279569892473118,
+      "tp": 292,
+      "fp": 140,
+      "fn": 206
+    },
+    "association_macro": {
+      "precision": 0.573940054845852,
+      "recall": 0.5450089133334887,
+      "f1": 0.5243639017657177,
+      "patients": 45
+    },
+    "score": 0.6446185734416937,
+    "counts": {
+      "documents": 16,
+      "patients": 45
+    },
+    "approximations": [
+      "No official scorer is supplied; these are local implementations of the published metrics.",
+      "Main-text filtering excludes explicitly labelled reference/back-matter passages. Titles, abstracts, figures and tables remain eligible because they contain training labels.",
+      "A gold -1 mention matches one prediction at its exact span regardless of predicted ID. Document-level -1 is one concept bucket per document; official handling is unspecified.",
+      "Compound HPO strings are split for both entity and association scoring; unmapped association text is compared exactly, including case.",
+      "Only NO denotes negation. Other gold notes, including D, remain positive. Gold IDs are evaluated as supplied without ontology repair.",
+      "Zero denominators yield zero except a patient's two empty phenotype sets, whose precision, recall and F1 are all one as specified by the competition."
+    ]
+  },
+  "score_delta": 0.0019146719475721108,
+  "baseline_relation_audit": {
+    "gold_relations": 498,
+    "reachable": 361,
+    "reachable_but_missed": 91
+  },
+  "candidate_relation_audit": {
+    "gold_relations": 498,
+    "reachable": 361,
+    "reachable_but_missed": 69
+  },
+  "training_document_ids": [
+    "10313222",
+    "10789033",
+    "11196099",
+    "11221135",
+    "11235872",
+    "11765409",
+    "11826603",
+    "11986149",
+    "12017973",
+    "12078887",
+    "12110755",
+    "12110769",
+    "12118522",
+    "12147048",
+    "12250201",
+    "12334843",
+    "12386172",
+    "12405443",
+    "12444410",
+    "12455887",
+    "12628480",
+    "12646972",
+    "12733031",
+    "12779223",
+    "12798528",
+    "12811285",
+    "12891056",
+    "2964533",
+    "4644339",
+    "4678370",
+    "5023785",
+    "5368377",
+    "5422868",
+    "5425407",
+    "5452357",
+    "5473715",
+    "5537416",
+    "5538066",
+    "5562981",
+    "5574094",
+    "5575846",
+    "5693559",
+    "5773845",
+    "5789735",
+    "5793168",
+    "5866036",
+    "5959423",
+    "5970456",
+    "6036836",
+    "6048891",
+    "6049015",
+    "6057141",
+    "6059678",
+    "6063015",
+    "6096008",
+    "6134758",
+    "6151044",
+    "6219255",
+    "6220403",
+    "6332535",
+    "6338757",
+    "6390251",
+    "6491447",
+    "9327653"
+  ],
+  "validation_document_ids": [
+    "10553122",
+    "11203018",
+    "11871647",
+    "11906559",
+    "11919040",
+    "12059664",
+    "12126309",
+    "12640707",
+    "12652105",
+    "12846941",
+    "2866573",
+    "3563609",
+    "4607013",
+    "4899602",
+    "5415817",
+    "5763540"
+  ],
+  "frozen_source_config_sha256": "0493245f240d8ad7a77a3ffb9948ebec1d6fdc41145967fe5dcb7c6754d33d24",
+  "entities_unchanged": true,
+  "predictions_sha256": "1808077c4c330f4a4b369cb2ffbd5a5597280a6f5d348c95b10c0a9d9b8ec340"
+}

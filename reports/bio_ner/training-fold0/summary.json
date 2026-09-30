@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "ner_family": "bio",
+  "epochs_completed": 5,
+  "configured_epochs": 5,
+  "optimizer_steps": 695,
+  "amp_skips": 0,
+  "training_documents": 64,
+  "validation_documents": 16,
+  "last_metrics": {
+    "tp": 894,
+    "fp": 456,
+    "fn": 327,
+    "precision": 0.6622222222222223,
+    "recall": 0.7321867321867321,
+    "f1": 0.6954492415402567,
+    "scope": "Exact spans only, including negated and nested gold; no HPO or patient score."
+  },
+  "peak_allocated_gib": 6.032850742340088,
+  "elapsed_seconds": 132.5631546974182,
+  "checkpoint_sha256": "ad7a218c903291648f43c824db09888c50b9e7eef3e27d6d5729e86e975bfd40",
+  "plan_sha256": "7e70b86addeff2d47b34872a594e83a8e46ef6d7ee0cfd201f718f3dca6c132e"
+}
